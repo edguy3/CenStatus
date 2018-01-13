@@ -13,7 +13,7 @@ At the top of the file there should be a short introduction and/ or overview tha
 
 | MODULE | Status | Last Pass | Last test fail| Last Build | Last Attempt|
 | --- | --- | --- | --- | ---  | --- |
-| OpenCOG_AtomSpace | ![alt text][jobs/OpenCOG_AtomSpace.svg] |  |  |   |  |
+| OpenCOG_AtomSpace | ![alt text][jobs/OpenCOG_AtomSpace.svg] |  |  |   | 2018-01-13 18:33:15.917952129 -0500 |
 | test | ![alt text][jobs/test.svg] |  |  |   |  |
 | package | ![alt text][jobs/package.svg] |  |  |   |  |
 
