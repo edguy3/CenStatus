@@ -7,6 +7,10 @@ At the top of the file there should be a short introduction and/ or overview tha
 
 ![alt text][jobs/OpenCOG_AtomSpace.svg]
 
+[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
+
+[logo]: jobs/OpenCOG_AtomSpace.svg  " foo fo "
+
 | MODULE | Status | Last Pass | Last test fail| Last Build | Last Attempt|
 | --- | --- | --- | --- | ---  | --- |
 | OpenCOG_AtomSpace | ![alt text][jobs/OpenCOG_AtomSpace.svg] |  |  |   |  |
