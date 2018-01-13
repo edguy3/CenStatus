@@ -16,7 +16,6 @@ At the top of the file there should be a short introduction and/ or overview tha
 | OpenCOG_AtomSpace | ![alt text][jobs/OpenCOG_AtomSpace.svg] |  |  |   |  |
 | test | ![alt text][jobs/test.svg] |  |  |   |  |
 | package | ![alt text][jobs/package.svg] |  |  |   |  |
-| --- | --- | --- | --- | ---  | --- |
 
 ## Contributors
 
