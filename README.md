@@ -5,19 +5,12 @@ At the top of the file there should be a short introduction and/ or overview tha
 
 ## Modules 
 
-```
-
-	MODULE		Status				Last Pass	Last test fail	Last Build	Last Attempt
-
-
-
-	OpenCOG_AtomSpace	[http:jobs/OpenCOG_AtomSpace.svg]							
-
-	test	[http:jobs/test.svg]							
-
-	package	[http:jobs/package.svg]							
-
-```
+| MODULE | Status | Last Pass | Last test fail| Last Build | Last Attempt|
+| --- | --- | --- | --- | ---  | --- |
+| OpenCOG_AtomSpace | ![alt text][jobs/OpenCOG_AtomSpace.svg] |  |  |   |  |
+| test | ![alt text][jobs/test.svg] |  |  |   |  |
+| package | ![alt text][jobs/package.svg] |  |  |   |  |
+| --- | --- | --- | --- | ---  | --- |
 
 ## Contributors
 
