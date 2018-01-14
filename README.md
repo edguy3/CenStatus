@@ -5,17 +5,11 @@ At the top of the file there should be a short introduction and/ or overview tha
 
 ## Modules 
 
-![alt text][jobs/OpenCOG_AtomSpace.svg]
-
-[logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
-
-[logo]: jobs/OpenCOG_AtomSpace.svg  " foo fo "
-
 | MODULE | Status | Last Pass | Last test fail| Last Build | Last Attempt|
 | --- | --- | --- | --- | ---  | --- |
-| OpenCOG_AtomSpace | ![Status](jobs/OpenCOG_AtomSpace.svg) |  |  |   | 2018-01-13 18:33:15 |
-| test | ![Status](jobs/test.svg) |  |  |   |  |
-| package | ![Status](jobs/package.svg) |  |  |   |  |
+| OpenCOG_AtomSpace | ![Status](/edguy3/CenStatus/blob/master/jobs/OpenCOG_AtomSpace.svg) |  |  |   | 2018-01-13 18:33:15 |
+| test | ![Status](/edguy3/CenStatus/blob/master/jobs/test.svg) |  |  |   |  |
+| package | ![Status](/edguy3/CenStatus/blob/master/jobs/package.svg) |  |  |   |  |
 
 ## Contributors
 
