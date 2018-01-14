@@ -1,0 +1,106 @@
+Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/lib/jenkins/workspace/OpenCOG_CogUtil_U1604
+[OpenCOG_CogUtil_U1604] $ /bin/sh -xe /tmp/jenkins2610612195313634807.sh
++ COGDIR=../OpenCOGCI
++ . ../OpenCOGCI/build.docker/docker.env
++ CID=a378399c4a487a1e80a0a9da50723d4496a40efde435b378c75aa72c56bb9119
++ DKRUNROOT=docker exec --user root   a378399c4a487a1e80a0a9da50723d4496a40efde435b378c75aa72c56bb9119
++ DKRUNUSER=docker exec --user jenkins  a378399c4a487a1e80a0a9da50723d4496a40efde435b378c75aa72c56bb9119
++ UID=125
++ GID=132
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_CogUtil_U1604/builds/1/log
++ cat
+
+
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
+*****                                                *****
+*****                  Cogutil TEST                *****
+*****                                                *****
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
+
+
++ echo GIT_COMMIT=
+GIT_COMMIT=
++ echo GIT_BRANCH=
+GIT_BRANCH=
++ echo GIT_URL=
+GIT_URL=
++ WDIR=opencog/dependencies/cogutil
++ JOBDIR=../OpenCOGCI/dependencies
++ cat
++ chmod +x ../OpenCOGCI/dependencies/job1
++ docker exec --user jenkins a378399c4a487a1e80a0a9da50723d4496a40efde435b378c75aa72c56bb9119 bash opencog/dependencies/job1
++ pwd
++ cd opencog/dependencies/cogutil
++ cd build
++ make -j8 test
+/home/opencog
+[ 35%] Built target cogutil
+[ 40%] Built target StringTokenizerUTest
+[ 45%] Built target comprehensionUTest
+[ 50%] Built target functionalUTest
+[ 56%] Built target CounterUTest
+[ 61%] Built target rankingUTest
+[ 66%] Built target KLDUTest
+[ 77%] Built target lru_cacheUTest
+[ 77%] Built target LoggerUTest
+[ 82%] Built target ConfigUTest
+[ 87%] Built target iostreamContainerUTest
+[ 92%] Built target lazy_selectorUTest
+[ 98%] Built target randomUTest
+[ 98%] Built target tests
+[100%] Running tests...
+Test project /home/opencog/opencog/dependencies/cogutil/build/tests
+      Start  1: ConfigUTest
+ 1/12 Test  #1: ConfigUTest ......................   Passed    0.01 sec
+      Start  2: LoggerUTest
+ 2/12 Test  #2: LoggerUTest ......................   Passed    0.20 sec
+      Start  3: StringTokenizerUTest
+ 3/12 Test  #3: StringTokenizerUTest .............   Passed    0.00 sec
+      Start  4: lazy_selectorUTest
+ 4/12 Test  #4: lazy_selectorUTest ...............   Passed    0.00 sec
+      Start  5: lru_cacheUTest
+ 5/12 Test  #5: lru_cacheUTest ...................   Passed    0.00 sec
+      Start  6: iostreamContainerUTest
+ 6/12 Test  #6: iostreamContainerUTest ...........   Passed    0.00 sec
+      Start  7: functionalUTest
+ 7/12 Test  #7: functionalUTest ..................   Passed    0.00 sec
+      Start  8: KLDUTest
+ 8/12 Test  #8: KLDUTest .........................   Passed    3.90 sec
+      Start  9: randomUTest
+ 9/12 Test  #9: randomUTest ......................   Passed    1.45 sec
+      Start 10: comprehensionUTest
+10/12 Test #10: comprehensionUTest ...............   Passed    0.00 sec
+      Start 11: CounterUTest
+11/12 Test #11: CounterUTest .....................   Passed    0.00 sec
+      Start 12: rankingUTest
+12/12 Test #12: rankingUTest .....................   Passed    0.00 sec
+
+100% tests passed, 0 tests failed out of 12
+
+Total Test time (real) =   5.57 sec
+[100%] Built target test
++ DSTATUS=TESTPASS
++ /var/lib/jenkins/status/updateStatus TESTPASS /var/lib/jenkins/jobs/OpenCOG_CogUtil_U1604/builds/1/log OpenCOG_CogUtil_U1604
+From github.com:edguy3/CenStatus
+   e099e32..42631ce  master     -> origin/master
+Removing images/fail.svg
+Removing images/buildok.svg
+Removing images/buildfail.svg
+Merge made by the 'recursive' strategy.
+ images/TESTFAIL.svg  | 2 +-
+ images/TESTPASS.svg  | 2 +-
+ images/buildfail.svg | 1 -
+ images/buildok.svg   | 1 -
+ images/fail.svg      | 1 -
+ 5 files changed, 2 insertions(+), 5 deletions(-)
+ delete mode 100644 images/buildfail.svg
+ delete mode 100644 images/buildok.svg
+ delete mode 100644 images/fail.svg
+~/status/jobs ~/status
