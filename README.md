@@ -1,24 +1,21 @@
 
 ## Synopsis
 
-At the top of the file there should be a short introduction and/ or overview that explains **what** the project is. This description should match descriptions added for package managers (Gemspec, package.json, etc.)
+This file shows the status of public cen.ai tracked projects .
 
 ## Modules 
 
 | MODULE | Status | Last Pass | Last test fail| Last Build | Last Attempt|
 | --- | --- | --- | --- | ---  | --- |
-| OpenCOG_AtomSpace | ![Status](https://raw.githubusercontent.com/edguy3/CenStatus/master//images/TESTFAIL.svg) |  |  |   | 2018-01-13 18:33:15 |
-| OpenCOG_AtomSpace | ![Status](/images/TESTFAIL.svg) |  |  |   | 2018-01-13 18:33:15 |
-| test | ![Status](https://raw.githubusercontent.com/edguy3/CenStatus/master//jobs/test.svg) |  |  |   |  |
-| test | ![Status](/jobs/test.svg) |  |  |   |  |
-| package | ![Status](https://raw.githubusercontent.com/edguy3/CenStatus/master//jobs/package.svg) |  |  |   |  |
-| package | ![Status](/jobs/package.svg) |  |  |   |  |
+| [OpenCOG_AtomSpace]("jobs/OpenCOG_AtomSpace.log") | ![Status](/images/TESTFAIL.svg) |  |  |   | 2018-01-13 18:33:15 |
+| [test]("jobs/test.log") | ![Status](/jobs/test.svg) |  |  |   |  |
+| [package]("jobs/package.log") | ![Status](/jobs/package.svg) |  |  |   |  |
 
 ## Contributors
 
-Let people know how they can dive into the project, include important links to things like issue trackers, irc, twitter accounts if applicable.
+Ed Guy.
 
 ## License
 
-A short snippet describing the license (MIT, Apache, etc.)
+MIT license. 
 
