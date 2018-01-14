@@ -5,12 +5,7 @@ At the top of the file there should be a short introduction and/ or overview tha
 
 ## Modules 
 
-Inline-style: 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
-
-![alt text](jobs/OpenCOG_AtomSpace.svg)
-
-![alt text](jobs/OpenCOG_AtomSpace.svg "ok dokey")
+![alt text][jobs/OpenCOG_AtomSpace.svg]
 
 [logo]: https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 2"
 
@@ -18,9 +13,9 @@ Inline-style:
 
 | MODULE | Status | Last Pass | Last test fail| Last Build | Last Attempt|
 | --- | --- | --- | --- | ---  | --- |
-| OpenCOG_AtomSpace | ![alt text][jobs/OpenCOG_AtomSpace.svg] |  |  |   | 2018-01-13 18:33:15 |
-| test | ![alt text][jobs/test.svg] |  |  |   |  |
-| package | ![alt text][jobs/package.svg] |  |  |   |  |
+| OpenCOG_AtomSpace | ![Status](jobs/OpenCOG_AtomSpace.svg) |  |  |   | 2018-01-13 18:33:15 |
+| test | ![Status](jobs/test.svg) |  |  |   |  |
+| package | ![Status](jobs/package.svg) |  |  |   |  |
 
 ## Contributors
 
