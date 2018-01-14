@@ -14,7 +14,7 @@ Checking out Revision bee166a63e0c1f5df30a3e89f20f0be3befe6711 (refs/remotes/ori
  > git checkout -f bee166a63e0c1f5df30a3e89f20f0be3befe6711
 Commit message: "Revert an earlier change"
  > git rev-list --no-walk bee166a63e0c1f5df30a3e89f20f0be3befe6711 # timeout=10
-[OpenCOGCI] $ /bin/sh -xe /tmp/jenkins5061298168669887665.sh
+[OpenCOGCI] $ /bin/sh -xe /tmp/jenkins5291831498599870581.sh
 + pwd
 /var/lib/jenkins/workspace/OpenCOGCI
 + whoami
@@ -73,51 +73,32 @@ Successfully built e11f8d3e328c
 + echo ******  CID=
 ******  CID=
 + CIDFILENAME=/tmp/OpenCOGCI.cid
++ cleanupDockerContainers /tmp/OpenCOGCI.cid
++ CIDFILENAME=/tmp/OpenCOGCI.cid
 + [ -e /tmp/OpenCOGCI.cid ]
 + cat /tmp/OpenCOGCI.cid
-+ cleanupDockerContainers 2d74b24364de7e167c7668e625c3bb4f5202386ad40e4347373d5445a73d030e
-+ CID=2d74b24364de7e167c7668e625c3bb4f5202386ad40e4347373d5445a73d030e
-+ echo cleanupDockerContainers 2d74b24364de7e167c7668e625c3bb4f5202386ad40e4347373d5445a73d030e
-cleanupDockerContainers 2d74b24364de7e167c7668e625c3bb4f5202386ad40e4347373d5445a73d030e
-+ cat container.pid
-cat: container.pid: No such file or directory
-+ docker container kill
-"docker container kill" requires at least 1 argument(s).
-See 'docker container kill --help'.
-
-Usage:  docker container kill [OPTIONS] CONTAINER [CONTAINER...]
-
-Kill one or more running containers
-+ echo not killed
-not killed
-+ cat container.pid
-cat: container.pid: No such file or directory
-+ docker container rm
-"docker container rm" requires at least 1 argument(s).
-See 'docker container rm --help'.
-
-Usage:  docker container rm [OPTIONS] CONTAINER [CONTAINER...]
-
-Remove one or more containers
-+ echo not rmd
-not rmd
++ CID=8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c
++ docker container kill 8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c
+8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c
++ docker container rm 8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c
+8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c
 + rm -f /tmp/OpenCOGCI.cid
 + cd ..
 + pwd
 + docker run --cidfile /tmp/OpenCOGCI.cid -v /var/lib/jenkins/workspace/OpenCOGCI:/home/opencog/opencog -w /home/opencog -d edguy/ocdock:latest tail -f /dev/null
-8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c
+24ac0458087b243a293ae83b51177b0ea49268378ba052021c1ecf63f747d257
 + cat /tmp/OpenCOGCI.cid
-+ CID=8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c
-+ DKRUN=docker exec 8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c 
-+ docker exec 8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c ifconfig
++ CID=24ac0458087b243a293ae83b51177b0ea49268378ba052021c1ecf63f747d257
++ DKRUN=docker exec 24ac0458087b243a293ae83b51177b0ea49268378ba052021c1ecf63f747d257 
++ docker exec 24ac0458087b243a293ae83b51177b0ea49268378ba052021c1ecf63f747d257 ifconfig
 eth0      Link encap:Ethernet  HWaddr 02:42:ac:11:00:07  
           inet addr:172.17.0.7  Bcast:0.0.0.0  Mask:255.255.0.0
           inet6 addr: fe80::42:acff:fe11:7/64 Scope:Link
           UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
           RX packets:1 errors:0 dropped:0 overruns:0 frame:0
-          TX packets:2 errors:0 dropped:0 overruns:0 carrier:0
+          TX packets:1 errors:0 dropped:0 overruns:0 carrier:0
           collisions:0 txqueuelen:0 
-          RX bytes:90 (90.0 B)  TX bytes:180 (180.0 B)
+          RX bytes:90 (90.0 B)  TX bytes:90 (90.0 B)
 
 lo        Link encap:Local Loopback  
           inet addr:127.0.0.1  Mask:255.0.0.0
@@ -128,15 +109,15 @@ lo        Link encap:Local Loopback
           collisions:0 txqueuelen:1000 
           RX bytes:0 (0.0 B)  TX bytes:0 (0.0 B)
 
-+ docker exec 8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c ifconfig
++ docker exec 24ac0458087b243a293ae83b51177b0ea49268378ba052021c1ecf63f747d257 ifconfig
 eth0      Link encap:Ethernet  HWaddr 02:42:ac:11:00:07  
           inet addr:172.17.0.7  Bcast:0.0.0.0  Mask:255.255.0.0
           inet6 addr: fe80::42:acff:fe11:7/64 Scope:Link
           UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
-          RX packets:1 errors:0 dropped:0 overruns:0 frame:0
+          RX packets:3 errors:0 dropped:0 overruns:0 frame:0
           TX packets:2 errors:0 dropped:0 overruns:0 carrier:0
           collisions:0 txqueuelen:0 
-          RX bytes:90 (90.0 B)  TX bytes:180 (180.0 B)
+          RX bytes:266 (266.0 B)  TX bytes:176 (176.0 B)
 
 lo        Link encap:Local Loopback  
           inet addr:127.0.0.1  Mask:255.0.0.0
@@ -154,11 +135,11 @@ lo        Link encap:Local Loopback
 + awk -F: {print $4}
 + GID=132
 + cat
-[OpenCOGCI] $ /bin/sh -xe /tmp/jenkins3843838172970101942.sh
+[OpenCOGCI] $ /bin/sh -xe /tmp/jenkins735856644703478212.sh
 + . build.docker/docker.env
-+ CID=8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c
-+ DKRUNROOT=docker exec --user root   8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c
-+ DKRUNUSER=docker exec --user jenkins  8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c
++ CID=24ac0458087b243a293ae83b51177b0ea49268378ba052021c1ecf63f747d257
++ DKRUNROOT=docker exec --user root   24ac0458087b243a293ae83b51177b0ea49268378ba052021c1ecf63f747d257
++ DKRUNUSER=docker exec --user jenkins  24ac0458087b243a293ae83b51177b0ea49268378ba052021c1ecf63f747d257
 + UID=125
 + GID=132
 + cat
@@ -176,8 +157,8 @@ lo        Link encap:Local Loopback
 
 + echo **** 
 **** 
-+ echo ****  8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c
-****  8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c
++ echo ****  24ac0458087b243a293ae83b51177b0ea49268378ba052021c1ecf63f747d257
+****  24ac0458087b243a293ae83b51177b0ea49268378ba052021c1ecf63f747d257
 + test -e dependencies
 + rm -fr dependencies/atomspace
 + git clone git@github.com:opencog/atomspace.git dependencies/atomspace
@@ -185,11 +166,11 @@ Cloning into 'dependencies/atomspace'...
 + rm -fr dependencies/cogutil
 + git clone git@github.com:opencog/cogutil.git dependencies/cogutil
 Cloning into 'dependencies/cogutil'...
-[OpenCOGCI] $ /bin/sh -xe /tmp/jenkins4536745649330623970.sh
+[OpenCOGCI] $ /bin/sh -xe /tmp/jenkins4566616189343018056.sh
 + . build.docker/docker.env
-+ CID=8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c
-+ DKRUNROOT=docker exec --user root   8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c
-+ DKRUNUSER=docker exec --user jenkins  8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c
++ CID=24ac0458087b243a293ae83b51177b0ea49268378ba052021c1ecf63f747d257
++ DKRUNROOT=docker exec --user root   24ac0458087b243a293ae83b51177b0ea49268378ba052021c1ecf63f747d257
++ DKRUNUSER=docker exec --user jenkins  24ac0458087b243a293ae83b51177b0ea49268378ba052021c1ecf63f747d257
 + UID=125
 + GID=132
 + cat
@@ -206,15 +187,12 @@ Cloning into 'dependencies/cogutil'...
 **********************************************************
 
 + WDIR=opencog/dependencies/cogutil
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOGCI/builds/70/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOGCI/builds/71/log
 + cat
 + cat
 + chmod +x dependencies/job1
 + chmod +x dependencies/job2
-+ docker exec --user jenkins 8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c bash opencog/dependencies/job1
-/home/opencog
-octool
-opencog
++ docker exec --user jenkins 24ac0458087b243a293ae83b51177b0ea49268378ba052021c1ecf63f747d257 bash opencog/dependencies/job1
 + pwd
 + ls
 + cd opencog/dependencies/cogutil
@@ -222,6 +200,9 @@ opencog
 + mkdir build
 + cd build
 + cmake ..
+/home/opencog
+octool
+opencog
 -- The C compiler identification is GNU 5.4.0
 -- The CXX compiler identification is GNU 5.4.0
 -- Check for working C compiler: /usr/bin/cc
@@ -285,14 +266,14 @@ The following components WILL NOT be built:
 -- Build files have been written to: /home/opencog/opencog/dependencies/cogutil/build
 + make -j8
 Scanning dependencies of target cogutil
-[ 10%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/files.cc.o
-[ 10%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/Config.cc.o
-[ 15%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/ansi.cc.o
-[ 20%] Building C object opencog/util/CMakeFiles/cogutil.dir/cluster.c.o
-[ 25%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_random_selector.cc.o
-[ 30%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_normal_selector.cc.o
-[ 35%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/exceptions.cc.o
-[ 40%] Building C object opencog/util/CMakeFiles/cogutil.dir/backtrace-symbols.c.o
+[ 10%] Building C object opencog/util/CMakeFiles/cogutil.dir/backtrace-symbols.c.o
+[ 10%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/ansi.cc.o
+[ 20%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/Config.cc.o
+[ 15%] Building C object opencog/util/CMakeFiles/cogutil.dir/cluster.c.o
+[ 30%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/exceptions.cc.o
+[ 30%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/files.cc.o
+[ 35%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_normal_selector.cc.o
+[ 40%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_random_selector.cc.o
 [ 45%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_selector.cc.o
 [ 50%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/log_prog_name.cc.o
 [ 55%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/Logger.cc.o
@@ -307,7 +288,7 @@ Scanning dependencies of target cogutil
 [100%] Linking CXX shared library libcogutil.so
 [100%] Built target cogutil
 + DSTATUS=BUILDPASS
-+ docker exec --user root 8c2bd1d6564c1712ac42656317187d05cf9904fe1d442e70fa3cc36c9ddd3f4c bash opencog/dependencies/job2
++ docker exec --user root 24ac0458087b243a293ae83b51177b0ea49268378ba052021c1ecf63f747d257 bash opencog/dependencies/job2
 + cd opencog/dependencies/cogutil
 + cd build
 + make install
@@ -368,6 +349,6 @@ Install the project...
 -- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean.h
 -- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean_mirror.h
 + DSTATUS=BUILDPASS
-+ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOGCI/builds/70/log OpenCOG_CogUtil_U1604
++ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOGCI/builds/71/log OpenCOG_CogUtil_U1604
 Already up-to-date.
 ~/status/jobs ~/status
