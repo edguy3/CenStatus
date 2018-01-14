@@ -14,7 +14,7 @@ pushd jobs
 rm -f "${JOB_BASE_NAME}.svg"
 ln -s ../images/$DSTATUS.svg "${JOB_BASE_NAME}.svg"
 touch "${JOB_BASE_NAME}.$DSTATUS"
-[ -s $LOGFILE ] || cp $LOGFILE "${JOB_BASE_NAME}.log"
+[ -s $LOGFILE ] && cp $LOGFILE "${JOB_BASE_NAME}.log"
 git add "${JOB_BASE_NAME}.*"
 
 popd
@@ -42,8 +42,9 @@ do
     BP=$([ -e "jobs/$JOBNAME.BUILDPASS" ] && stat -c %y "jobs/$JOBNAME.BUILDPASS"| sed 's/\..*$//')
     BD=$([ -e "jobs/$JOBNAME.svg"       ] && stat -c %y "jobs/$JOBNAME.svg"| sed 's/\..*$//')
     MF=$(readlink -f "jobs/$JOBNAME.svg" | sed "s|$(pwd)||")
+    LF=$([ -e jobs/$JOBNAME.log ] && echo "[$JOBNAME](jobs/$JOBNAME.log)" || echo "$JOBNAME")
 cat >>README.md<<YYY
-| [$JOBNAME](jobs/$JOBNAME.log) | ![Status]($MF) | $TP | $TF | $BP  | $BD |
+| $LF | ![Status]($MF) | $TP | $TF | $BP  | $BD |
 YYY
 
 
