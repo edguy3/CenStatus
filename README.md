@@ -7,9 +7,9 @@ At the top of the file there should be a short introduction and/ or overview tha
 
 | MODULE | Status | Last Pass | Last test fail| Last Build | Last Attempt|
 | --- | --- | --- | --- | ---  | --- |
-| OpenCOG_AtomSpace | ![Status](/jobs/OpenCOG_AtomSpace.svg) |  |  |   | 2018-01-13 18:33:15 |
-| test | ![Status](/jobs/test.svg) |  |  |   |  |
-| package | ![Status](/jobs/package.svg) |  |  |   |  |
+| OpenCOG_AtomSpace | ![Status](https://raw.githubusercontent.com/edguy3/CenStatus/master/jobs/OpenCOG_AtomSpace.svg) |  |  |   | 2018-01-13 18:33:15 |
+| test | ![Status](https://raw.githubusercontent.com/edguy3/CenStatus/master/jobs/test.svg) |  |  |   |  |
+| package | ![Status](https://raw.githubusercontent.com/edguy3/CenStatus/master/jobs/package.svg) |  |  |   |  |
 
 ## Contributors
 
