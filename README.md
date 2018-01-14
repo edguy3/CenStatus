@@ -7,9 +7,7 @@ This file shows the status of public cen.ai tracked projects .
 
 | MODULE | Status | Last Pass | Last test fail| Last Build | Last Attempt|
 | --- | --- | --- | --- | ---  | --- |
-| [OpenCOG_AtomSpace]("jobs/OpenCOG_AtomSpace.log") | ![Status](/images/TESTFAIL.svg) |  |  |   | 2018-01-13 18:33:15 |
-| [test]("jobs/test.log") | ![Status](/jobs/test.svg) |  |  |   |  |
-| [package]("jobs/package.log") | ![Status](/jobs/package.svg) |  |  |   |  |
+| [OpenCOG_AtomSpace](jobs/OpenCOG_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) |  | 2018-01-13 21:49:39 |   | 2018-01-13 21:49:39 |
 
 ## Contributors
 

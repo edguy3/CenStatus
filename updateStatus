@@ -1,0 +1,66 @@
+#!/bin/bash
+
+#${JENKINS_HOME}/status/updateStatus $DSTATUS $LOGFILE ${JOB_BASE_NAME}
+
+XDIR=$(dirname $0)
+cd $XDIR
+DSTATUS=$1; shift
+LOGFILE=$1; shift
+JOB_BASE_NAME=$*
+
+git pull
+pushd jobs
+
+rm -f "${JOB_BASE_NAME}.svg"
+ln -s ../images/$DSTATUS.svg "${JOB_BASE_NAME}.svg"
+touch "${JOB_BASE_NAME}.$DSTATUS"
+[ -s $LOGFILE ] || cp $LOGFILE "${JOB_BASE_NAME}.log"
+git add "${JOB_BASE_NAME}.*"
+
+popd
+
+## rewrite readme. 
+JOBS=$( cd jobs ; ls -1 *.svg| sed 's/.svg//' )
+
+cat >README.md<<XXX
+
+## Synopsis
+
+This file shows the status of public cen.ai tracked projects .
+
+## Modules 
+
+| MODULE | Status | Last Pass | Last test fail| Last Build | Last Attempt|
+| --- | --- | --- | --- | ---  | --- |
+XXX
+
+
+for JOBNAME in $JOBS
+do
+    TP=$([ -e "jobs/$JOBNAME.TESTPASS"  ] && stat -c %y "jobs/$JOBNAME.TESTPASS"| sed 's/\..*$//')
+    TF=$([ -e "jobs/$JOBNAME.TESTFAIL"  ] && stat -c %y "jobs/$JOBNAME.TESTFAIL"| sed 's/\..*$//')
+    BP=$([ -e "jobs/$JOBNAME.BUILDPASS" ] && stat -c %y "jobs/$JOBNAME.BUILDPASS"| sed 's/\..*$//')
+    BD=$([ -e "jobs/$JOBNAME.svg"       ] && stat -c %y "jobs/$JOBNAME.svg"| sed 's/\..*$//')
+    MF=$(readlink -f "jobs/$JOBNAME.svg" | sed "s|$(pwd)||")
+cat >>README.md<<YYY
+| [$JOBNAME](jobs/$JOBNAME.log) | ![Status]($MF) | $TP | $TF | $BP  | $BD |
+YYY
+
+
+done
+
+cat >>README.md <<ZZZ
+
+## Contributors
+
+Ed Guy.
+
+## License
+
+MIT license. 
+
+ZZZ
+
+git commit -am "${JOB_BASE_NAME} $DSTATUS "
+git push
+
