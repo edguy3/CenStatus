@@ -30,7 +30,8 @@ This file shows the status of public cen.ai tracked projects as of $(date).
 
 ## Modules 
 
-| MODULE | Status | Last Pass | Last test fail| Last Build | Last Attempt|
+| MODULE | Status | Last      | Last     | Last  | Last |
+| MODULE | Status | Test Pass | Test Fail| Build | Attempt|
 | --- | --- | --- | --- | ---  | --- |
 XXX
 
