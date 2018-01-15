@@ -35,10 +35,13 @@ This file shows the status of public cen.ai tracked projects as of $(date).
 XXX
 
 
+TODAY=$(date +'%Y-%m-%d ')
+
 for JOBNAME in $JOBS
 do
+
     # get time stamps on each file
-    TP=$([ -e "jobs/$JOBNAME.TESTPASS"  ] && stat -c %y "jobs/$JOBNAME.TESTPASS"| sed 's/:..\..*$//')
+    TP=$([ -e "jobs/$JOBNAME.TESTPASS"  ] && stat -c %y "jobs/$JOBNAME.TESTPASS"| sed 's/:..\..*$//'| sed "s/$TODAY//;s/ .*//")
     TF=$([ -e "jobs/$JOBNAME.TESTFAIL"  ] && stat -c %y "jobs/$JOBNAME.TESTFAIL"| sed 's/:..\..*$//')
     BP=$([ -e "jobs/$JOBNAME.BUILDPASS" ] && stat -c %y "jobs/$JOBNAME.BUILDPASS"| sed 's/:..\..*$//')
     BD=$([ -e "jobs/$JOBNAME.svg"       ] && stat -c %y "jobs/$JOBNAME.svg"| sed 's/:..\..*$//')
@@ -50,13 +53,14 @@ do
 
     # print
 cat >>README.md<<YYY
-| $LF $LM| ![Status]($MF) | $TP | $TF | $BP  | $BD |
+| $LF | ![Status]($MF) | $LM | $TP | $TF | $BP  | $BD |
 YYY
 
 
 done
 
 cat >>README.md <<ZZZ
+( Times are currently EST/EDT GMT-5/-4) 
 
 ## Contributors
 
