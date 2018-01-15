@@ -30,8 +30,8 @@ This file shows the status of public cen.ai tracked projects as of $(date).
 
 ## Modules 
 
-| MODULE & Logfile | Status | Test Pass | Test Fail| Build | Attempt|
-| --- | --- | --- | --- | ---  | --- |
+| MODULE & Logfile | Status | detail | Test Pass | Test Fail| Build | Attempt|
+| --- | --- | --- | --- | ---  | --- | --- | 
 XXX
 
 
@@ -60,6 +60,7 @@ YYY
 done
 
 cat >>README.md <<ZZZ
+
 ( Times are currently EST/EDT GMT-5/-4) 
 
 ## Contributors
