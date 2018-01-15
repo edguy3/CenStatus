@@ -30,32 +30,38 @@ This file shows the status of public cen.ai tracked projects as of $(date).
 
 ## Modules 
 
-| MODULE | Status | Test Pass | Test Fail| Build | Attempt|
-| --- | --- | --- | --- | ---  | --- |
+| MODULE & Logfile | Status | Detail | Test Pass | Test Fail| Build | Attempt|
+| --- | --- | --- | --- | ---  | --- | --- | 
 XXX
 
 
+TODAY=$(date +'%Y-%m-%d ')
+
 for JOBNAME in $JOBS
 do
+
     # get time stamps on each file
-    TP=$([ -e "jobs/$JOBNAME.TESTPASS"  ] && stat -c %y "jobs/$JOBNAME.TESTPASS"| sed 's/:..\..*$//')
-    TF=$([ -e "jobs/$JOBNAME.TESTFAIL"  ] && stat -c %y "jobs/$JOBNAME.TESTFAIL"| sed 's/:..\..*$//')
-    BP=$([ -e "jobs/$JOBNAME.BUILDPASS" ] && stat -c %y "jobs/$JOBNAME.BUILDPASS"| sed 's/:..\..*$//')
-    BD=$([ -e "jobs/$JOBNAME.svg"       ] && stat -c %y "jobs/$JOBNAME.svg"| sed 's/:..\..*$//')
+    TP=$([ -e "jobs/$JOBNAME.TESTPASS"  ] && stat -c %y "jobs/$JOBNAME.TESTPASS"| sed 's/:..\..*$//'| sed "s/$TODAY//;s/ .*$//")
+    TF=$([ -e "jobs/$JOBNAME.TESTFAIL"  ] && stat -c %y "jobs/$JOBNAME.TESTFAIL"| sed 's/:..\..*$//'| sed "s/$TODAY//;s/ .*$//")
+    BP=$([ -e "jobs/$JOBNAME.BUILDPASS" ] && stat -c %y "jobs/$JOBNAME.BUILDPASS"| sed 's/:..\..*$//'| sed "s/$TODAY//;s/ .*$//")
+    BD=$([ -e "jobs/$JOBNAME.svg"       ] && stat -c %y "jobs/$JOBNAME.svg"| sed 's/:..\..*$//'| sed "s/$TODAY//;s/ .*$//")
     # get real file
     MF=$(readlink -f "jobs/$JOBNAME.svg" | sed "s|$(pwd)||")
     # get formatting for log file
     LF=$([ -e jobs/$JOBNAME.log ] && echo "[$JOBNAME](jobs/$JOBNAME.log)" || echo "$JOBNAME")
+    LM=$([ -e "jobs/$JOBNAME.log"       ] && grep 'tests passed' "jobs/$JOBNAME.log" | tail -1) 
 
     # print
 cat >>README.md<<YYY
-| $LF | ![Status]($MF) | $TP | $TF | $BP  | $BD |
+| $LF | ![Status]($MF) | $LM | $TP | $TF | $BP  | $BD |
 YYY
 
 
 done
 
 cat >>README.md <<ZZZ
+
+( Times are currently EST/EDT GMT-5/-4) 
 
 ## Contributors
 

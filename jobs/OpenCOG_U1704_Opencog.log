@@ -1,0 +1,50 @@
+Started by upstream project "[8mha:////4IQFYGe8WbWo5oNJDJ6M381hL3c7goPidUIwVPoaXZGNAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3/gtQ8Z3/3+FBDcwMTfQDxmhqwyAAAAA==[0mOpenCOG_U1704" build number [8mha:////4HAtECOF0pWavHCkthwP1Tkfix0l2v9UFuHszocLJBfrAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBhH9rPwkff+C1Dxnf/f4UENzAxN9UwAH11ecyQAAAA==[0m5
+originally caused by:
+ Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1704_Opencog
+[OpenCOG_U1704_Opencog] $ /bin/sh -xe /tmp/jenkins7379967591419244683.sh
++ COGDIR=../OpenCOG_U1704
++ . ../OpenCOG_U1704/build.docker/docker.env
++ CID=cf0147353494436a39db46b10d77b54547f4582094f5a76e06548d89243f192d
++ DKRUNROOT=docker exec --user root   cf0147353494436a39db46b10d77b54547f4582094f5a76e06548d89243f192d
++ DKRUNUSER=docker exec --user jenkins  cf0147353494436a39db46b10d77b54547f4582094f5a76e06548d89243f192d
++ UID=125
++ GID=132
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1704_Opencog/builds/2/log
++ cat
+
+
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
+*****                                                *****
+*****                  Opencog TEST                *****
+*****                                                *****
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
+
+
++ echo GIT_COMMIT=
+GIT_COMMIT=
++ echo GIT_BRANCH=
+GIT_BRANCH=
++ echo GIT_URL=
+GIT_URL=
++ WDIR=opencog/
++ JOBDIR=../OpenCOG_U1704/dependencies
++ cat
++ chmod +x ../OpenCOG_U1704/dependencies/job1
++ docker exec --user jenkins cf0147353494436a39db46b10d77b54547f4582094f5a76e06548d89243f192d bash opencog/dependencies/job1
+/home/opencog
++ pwd
++ cd opencog/
++ cd build
++ make -j8 test
+make: *** No rule to make target 'test'.  Stop.
++ DSTATUS=TESTFAIL
++ /var/lib/jenkins/status/updateStatus TESTFAIL /var/lib/jenkins/jobs/OpenCOG_U1704_Opencog/builds/2/log OpenCOG_U1704_Opencog
+Already up-to-date.
+~/status/jobs ~/status

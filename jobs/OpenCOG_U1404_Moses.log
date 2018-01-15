@@ -1,0 +1,308 @@
+Started by upstream project "[8mha:////4HYLKC3QWnNL8UcNtRMb3SIghDGZXRDiSIrVjCiet8BaAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3/gtQ8Z3/3+FBDEwMTfQAfNa+iyAAAAA==[0mOpenCOG_U1404" build number [8mha:////4Gtv7xbHV9kdDJT+9OoJcmJbQZDi/ffa5ksqx33lsGsXAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBhH9rPwkff+C1Dxnf/f4UEMTAxN9CwBq0UalyQAAAA==[0m8
+originally caused by:
+ Started by an SCM change
+Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1404_Moses
+[OpenCOG_U1404_Moses] $ /bin/sh -xe /tmp/jenkins96928495022886701.sh
++ COGDIR=../OpenCOG_U1404
++ . ../OpenCOG_U1404/build.docker/docker.env
++ CID=45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49
++ DKRUNROOT=docker exec --user root   45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49
++ DKRUNUSER=docker exec --user jenkins  45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49
++ UID=125
++ GID=132
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404_Moses/builds/3/log
++ cat
+
+
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
+*****                                                *****
+*****                  MOSES TEST                    *****
+*****                                                *****
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
+
+
++ echo GIT_COMMIT=
+GIT_COMMIT=
++ echo GIT_BRANCH=
+GIT_BRANCH=
++ echo GIT_URL=
+GIT_URL=
++ WDIR=opencog/dependencies/moses
++ JOBDIR=../OpenCOG_U1404/dependencies
++ cat
++ chmod +x ../OpenCOG_U1404/dependencies/job1
++ docker exec --user jenkins 45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49 bash opencog/dependencies/job1
++ pwd
++ cd opencog/dependencies/moses
++ cd build
++ make -j8 test
+/home/opencog
+Scanning dependencies of target ant_scoring
+[  3%] [  6%] Built target feature_selection
+[  7%] Built target moses_exec
+Building CXX object examples/example-ant/CMakeFiles/ant_scoring.dir/ant_scoring.cc.o
+[ 33%] Built target comboreduct
+[ 35%] Generating annUTest.cpp
+[ 37%] Built target comboant
+[ 37%] [ 40%] [ 40%] [ 41%] Generating messageUTest.cpp
+Generating listUTest.cpp
+Generating similarityUTest.cpp
+[ 42%] Generating vertexUTest.cpp
+Generating procedure_callUTest.cpp
+Scanning dependencies of target annUTest
+[ 64%] Built target moses
+Scanning dependencies of target similarityUTest
+Scanning dependencies of target vertexUTest
+[ 64%] [ 66%] Scanning dependencies of target messageUTest
+[ 66%] [ 67%] Building CXX object tests/comboreduct/combo/CMakeFiles/annUTest.dir/annUTest.cpp.o
+Generating procedure_repositoryUTest.cpp
+Building CXX object tests/comboreduct/combo/CMakeFiles/vertexUTest.dir/vertexUTest.cpp.o
+Scanning dependencies of target listUTest
+Scanning dependencies of target procedure_callUTest
+Building CXX object tests/comboreduct/combo/CMakeFiles/similarityUTest.dir/similarityUTest.cpp.o
+[ 67%] Building CXX object tests/comboreduct/combo/CMakeFiles/messageUTest.dir/messageUTest.cpp.o
+[ 67%] [ 67%] Building CXX object tests/comboreduct/combo/CMakeFiles/listUTest.dir/listUTest.cpp.o
+Building CXX object tests/comboreduct/combo/CMakeFiles/procedure_callUTest.dir/procedure_callUTest.cpp.o
+Scanning dependencies of target procedure_repositoryUTest
+[ 67%] Building CXX object tests/comboreduct/combo/CMakeFiles/procedure_repositoryUTest.dir/procedure_repositoryUTest.cpp.o
+Linking CXX executable annUTest
+[ 67%] Built target annUTest
+[ 68%] Generating interpreterUTest.cpp
+Linking CXX executable similarityUTest
+Scanning dependencies of target interpreterUTest
+[ 68%] Building CXX object tests/comboreduct/combo/CMakeFiles/interpreterUTest.dir/interpreterUTest.cpp.o
+Linking CXX static library libant_scoring.a
+[ 68%] Built target similarityUTest
+[ 70%] Generating iostream_comboUTest.cpp
+[ 70%] Built target ant_scoring
+[ 71%] Generating BooleanReductUTest.cpp
+Scanning dependencies of target iostream_comboUTest
+[ 71%] Building CXX object tests/comboreduct/combo/CMakeFiles/iostream_comboUTest.dir/iostream_comboUTest.cpp.o
+Scanning dependencies of target BooleanReductUTest
+[ 71%] Building CXX object tests/comboreduct/reduct/CMakeFiles/BooleanReductUTest.dir/BooleanReductUTest.cpp.o
+Linking CXX executable vertexUTest
+[ 71%] Built target vertexUTest
+[ 72%] Generating BooleanFullUTest.cpp
+Scanning dependencies of target BooleanFullUTest
+[ 72%] Building CXX object tests/comboreduct/reduct/CMakeFiles/BooleanFullUTest.dir/BooleanFullUTest.cpp.o
+Linking CXX executable messageUTest
+[ 72%] Built target messageUTest
+[ 74%] Generating ContinReductUTest.cpp
+Scanning dependencies of target ContinReductUTest
+[ 74%] Building CXX object tests/comboreduct/reduct/CMakeFiles/ContinReductUTest.dir/ContinReductUTest.cpp.o
+Linking CXX executable listUTest
+[ 74%] Built target listUTest
+[ 75%] Generating FullReductUTest.cpp
+Scanning dependencies of target FullReductUTest
+[ 75%] Building CXX object tests/comboreduct/reduct/CMakeFiles/FullReductUTest.dir/FullReductUTest.cpp.o
+Linking CXX executable procedure_callUTest
+[ 75%] Built target procedure_callUTest
+[ 75%] Linking CXX executable procedure_repositoryUTest
+Generating MixedReductUTest.cpp
+Scanning dependencies of target MixedReductUTest
+[ 76%] Building CXX object tests/comboreduct/reduct/CMakeFiles/MixedReductUTest.dir/MixedReductUTest.cpp.o
+[ 76%] Built target procedure_repositoryUTest
+[ 76%] Generating ANNReductUTest.cpp
+Scanning dependencies of target ANNReductUTest
+[ 76%] Building CXX object tests/comboreduct/reduct/CMakeFiles/ANNReductUTest.dir/ANNReductUTest.cpp.o
+Linking CXX executable iostream_comboUTest
+[ 76%] Built target iostream_comboUTest
+[ 77%] Generating FoldReductUTest.cpp
+Scanning dependencies of target FoldReductUTest
+[ 77%] Building CXX object tests/comboreduct/reduct/CMakeFiles/FoldReductUTest.dir/FoldReductUTest.cpp.o
+Linking CXX executable BooleanReductUTest
+[ 77%] Built target BooleanReductUTest
+[ 79%] Generating tableUTest.cpp
+Scanning dependencies of target tableUTest
+[ 79%] Building CXX object tests/comboreduct/table/CMakeFiles/tableUTest.dir/tableUTest.cpp.o
+Linking CXX executable interpreterUTest
+[ 79%] Built target interpreterUTest
+[ 79%] Generating type_treeUTest.cpp
+Linking CXX executable BooleanFullUTest
+Scanning dependencies of target type_treeUTest
+[ 80%] Building CXX object tests/comboreduct/type_checker/CMakeFiles/type_treeUTest.dir/type_treeUTest.cpp.o
+[ 80%] Built target BooleanFullUTest
+[ 81%] Generating iostream_scored_combo_treeUTest.cpp
+Scanning dependencies of target iostream_scored_combo_treeUTest
+[ 81%] Building CXX object tests/moses/CMakeFiles/iostream_scored_combo_treeUTest.dir/iostream_scored_combo_treeUTest.cpp.o
+Linking CXX executable ContinReductUTest
+[ 81%] Built target ContinReductUTest
+[ 81%] Generating KnobTurningUTest.cpp
+Linking CXX executable FullReductUTest
+Scanning dependencies of target KnobTurningUTest
+[ 83%] Building CXX object tests/moses/CMakeFiles/KnobTurningUTest.dir/KnobTurningUTest.cpp.o
+[ 83%] Built target FullReductUTest
+[ 83%] Generating NeighborSamplingUTest.cpp
+Scanning dependencies of target NeighborSamplingUTest
+[ 84%] Building CXX object tests/moses/CMakeFiles/NeighborSamplingUTest.dir/NeighborSamplingUTest.cpp.o
+Linking CXX executable ANNReductUTest
+[ 84%] Built target ANNReductUTest
+[ 85%] Generating FieldSetUTest.cpp
+Scanning dependencies of target FieldSetUTest
+[ 85%] Building CXX object tests/moses/CMakeFiles/FieldSetUTest.dir/FieldSetUTest.cpp.o
+Linking CXX executable MixedReductUTest
+[ 85%] Built target MixedReductUTest
+[ 85%] Generating representationUTest.cpp
+Scanning dependencies of target representationUTest
+[ 87%] Building CXX object tests/moses/CMakeFiles/representationUTest.dir/representationUTest.cpp.o
+Linking CXX executable FoldReductUTest
+[ 87%] Built target FoldReductUTest
+[ 87%] Generating scoringUTest.cpp
+Scanning dependencies of target scoringUTest
+[ 88%] Building CXX object tests/moses/CMakeFiles/scoringUTest.dir/scoringUTest.cpp.o
+Linking CXX executable FieldSetUTest
+[ 88%] Built target FieldSetUTest
+[ 89%] Generating metapopulationUTest.cpp
+Scanning dependencies of target metapopulationUTest
+[ 89%] Building CXX object tests/moses/CMakeFiles/metapopulationUTest.dir/metapopulationUTest.cpp.o
+Linking CXX executable KnobTurningUTest
+Linking CXX executable type_treeUTest
+Linking CXX executable iostream_scored_combo_treeUTest
+[ 89%] Built target type_treeUTest
+[ 89%] Generating optimizationUTest.cpp
+[ 89%] Built target KnobTurningUTest
+[ 89%] Generating MOSESUTest.cpp
+Scanning dependencies of target optimizationUTest
+[ 89%] Built target iostream_scored_combo_treeUTest
+[ 90%] [ 90%] Building CXX object tests/moses/CMakeFiles/optimizationUTest.dir/optimizationUTest.cpp.o
+Generating weightedUTest.cpp
+Scanning dependencies of target MOSESUTest
+[ 92%] Building CXX object tests/moses/CMakeFiles/MOSESUTest.dir/MOSESUTest.cpp.o
+Scanning dependencies of target weightedUTest
+[ 93%] Building CXX object tests/moses/CMakeFiles/weightedUTest.dir/weightedUTest.cpp.o
+Linking CXX executable NeighborSamplingUTest
+[ 93%] Built target NeighborSamplingUTest
+[ 93%] Generating mixedUTest.cpp
+Scanning dependencies of target mixedUTest
+[ 94%] Building CXX object tests/moses/CMakeFiles/mixedUTest.dir/mixedUTest.cpp.o
+Linking CXX executable representationUTest
+[ 94%] Built target representationUTest
+[ 96%] Generating irisUTest.cpp
+Scanning dependencies of target irisUTest
+[ 96%] Building CXX object tests/moses/CMakeFiles/irisUTest.dir/irisUTest.cpp.o
+Linking CXX executable tableUTest
+[ 96%] Built target tableUTest
+[ 96%] Generating selectionUTest.cpp
+Scanning dependencies of target selectionUTest
+[ 96%] Building CXX object tests/moses/CMakeFiles/selectionUTest.dir/selectionUTest.cpp.o
+Linking CXX executable scoringUTest
+[ 96%] Built target scoringUTest
+[ 96%] Generating dynFeatSelUTest.cpp
+Scanning dependencies of target dynFeatSelUTest
+[ 96%] Building CXX object tests/moses/CMakeFiles/dynFeatSelUTest.dir/dynFeatSelUTest.cpp.o
+Linking CXX executable metapopulationUTest
+[ 96%] Built target metapopulationUTest
+[ 97%] Generating AntUTest.cpp
+Scanning dependencies of target AntUTest
+[ 97%] Building CXX object tests/moses/CMakeFiles/AntUTest.dir/AntUTest.cpp.o
+Linking CXX executable optimizationUTest
+[ 97%] Built target optimizationUTest
+[ 98%] Generating feature_selectionUTest.cpp
+Scanning dependencies of target feature_selectionUTest
+[ 98%] Building CXX object tests/feature-selection/CMakeFiles/feature_selectionUTest.dir/feature_selectionUTest.cpp.o
+Linking CXX executable weightedUTest
+[ 98%] Built target weightedUTest
+Linking CXX executable MOSESUTest
+[ 98%] Built target MOSESUTest
+Linking CXX executable mixedUTest
+[ 98%] Built target mixedUTest
+Linking CXX executable irisUTest
+[ 98%] Built target irisUTest
+Linking CXX executable selectionUTest
+[ 98%] Built target selectionUTest
+Linking CXX executable dynFeatSelUTest
+[ 98%] Built target dynFeatSelUTest
+Linking CXX executable AntUTest
+[ 98%] Built target AntUTest
+Linking CXX executable feature_selectionUTest
+[ 98%] Built target feature_selectionUTest
+Scanning dependencies of target tests
+[ 98%] Built target tests
+Scanning dependencies of target test
+[100%] Running tests...
+Test project /home/opencog/opencog/dependencies/moses/build/tests
+      Start  1: vertexUTest
+ 1/35 Test  #1: vertexUTest .......................   Passed    0.01 sec
+      Start  2: messageUTest
+ 2/35 Test  #2: messageUTest ......................   Passed    0.01 sec
+      Start  3: listUTest
+ 3/35 Test  #3: listUTest .........................   Passed    0.00 sec
+      Start  4: similarityUTest
+ 4/35 Test  #4: similarityUTest ...................   Passed    0.00 sec
+      Start  5: annUTest
+ 5/35 Test  #5: annUTest ..........................   Passed    0.00 sec
+      Start  6: procedure_callUTest
+ 6/35 Test  #6: procedure_callUTest ...............   Passed    0.00 sec
+      Start  7: procedure_repositoryUTest
+ 7/35 Test  #7: procedure_repositoryUTest .........   Passed    0.00 sec
+      Start  8: interpreterUTest
+ 8/35 Test  #8: interpreterUTest ..................   Passed    0.00 sec
+      Start  9: iostream_comboUTest
+ 9/35 Test  #9: iostream_comboUTest ...............   Passed    0.00 sec
+      Start 10: BooleanReductUTest
+10/35 Test #10: BooleanReductUTest ................   Passed    0.00 sec
+      Start 11: BooleanFullUTest
+11/35 Test #11: BooleanFullUTest ..................   Passed    0.10 sec
+      Start 12: ContinReductUTest
+12/35 Test #12: ContinReductUTest .................   Passed    0.01 sec
+      Start 13: FullReductUTest
+13/35 Test #13: FullReductUTest ...................   Passed    0.01 sec
+      Start 14: MixedReductUTest
+14/35 Test #14: MixedReductUTest ..................   Passed    0.06 sec
+      Start 15: ANNReductUTest
+15/35 Test #15: ANNReductUTest ....................   Passed    0.00 sec
+      Start 16: FoldReductUTest
+16/35 Test #16: FoldReductUTest ...................   Passed    0.00 sec
+      Start 17: tableUTest
+17/35 Test #17: tableUTest ........................   Passed    0.01 sec
+      Start 18: type_treeUTest
+18/35 Test #18: type_treeUTest ....................   Passed    0.13 sec
+      Start 19: iostream_scored_combo_treeUTest
+19/35 Test #19: iostream_scored_combo_treeUTest ...   Passed    0.01 sec
+      Start 20: KnobTurningUTest
+20/35 Test #20: KnobTurningUTest ..................   Passed    0.01 sec
+      Start 21: NeighborSamplingUTest
+21/35 Test #21: NeighborSamplingUTest .............   Passed    0.06 sec
+      Start 22: FieldSetUTest
+22/35 Test #22: FieldSetUTest .....................   Passed    0.09 sec
+      Start 23: representationUTest
+23/35 Test #23: representationUTest ...............   Passed    0.17 sec
+      Start 24: scoringUTest
+24/35 Test #24: scoringUTest ......................   Passed    0.01 sec
+      Start 25: metapopulationUTest
+25/35 Test #25: metapopulationUTest ...............   Passed    0.01 sec
+      Start 26: optimizationUTest
+26/35 Test #26: optimizationUTest .................   Passed    0.02 sec
+      Start 27: MOSESUTest
+27/35 Test #27: MOSESUTest ........................   Passed   27.94 sec
+      Start 28: weightedUTest
+28/35 Test #28: weightedUTest .....................   Passed   40.27 sec
+      Start 29: mixedUTest
+29/35 Test #29: mixedUTest ........................   Passed   16.75 sec
+      Start 30: irisUTest
+30/35 Test #30: irisUTest .........................   Passed   81.84 sec
+      Start 31: selectionUTest
+31/35 Test #31: selectionUTest ....................   Passed  121.47 sec
+      Start 32: dynFeatSelUTest
+32/35 Test #32: dynFeatSelUTest ...................   Passed   24.73 sec
+      Start 33: AntUTest
+33/35 Test #33: AntUTest ..........................   Passed    0.07 sec
+      Start 34: feature_selectionUTest
+34/35 Test #34: feature_selectionUTest ............   Passed    6.07 sec
+      Start 35: CythonMoses
+35/35 Test #35: CythonMoses .......................   Passed    4.12 sec
+
+100% tests passed, 0 tests failed out of 35
+
+Total Test time (real) = 324.03 sec
+[100%] Built target test
++ DSTATUS=TESTPASS
++ /var/lib/jenkins/status/updateStatus TESTPASS /var/lib/jenkins/jobs/OpenCOG_U1404_Moses/builds/3/log OpenCOG_U1404_Moses
+Already up-to-date.
+~/status/jobs ~/status

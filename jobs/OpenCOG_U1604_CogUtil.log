@@ -1,16 +1,16 @@
-Started by upstream project "[8mha:////4O0HWh3uHmnYHSU8SsRMvLcls4XMRCnrOZ6qUgecG7tGAAAAmx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgZ+/az8JH3/gtQ8Z393Z099AB+XwwrEAAAA[0mOpenCOGCI" build number [8mha:////4AIIf/xC3cWYX39YawILzltvbPUyrD0hYf3LgTqDTWoJAAAAnR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZB/az8JH3/gtQ8Z393Z099cyMA9SRa08YAAAA=[0m72
+Started by upstream project "[8mha:////4MnuFN63gwBm2tDyl2kQsSiQZRO2630PQVL7jYvS/YEaAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3/gtQ8Z3/3+FBDMwMTfQCU/aYIyAAAAA==[0mOpenCOG_U1604" build number [8mha:////4CXZSdRdvdraNGIWiWFKX26quISuVGJ8nUgTWUPd4hQTAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZR/az8JH3/gtQ8Z3/3+FBDMwMTfXNzAELr6C/KAAAA[0m77
 originally caused by:
- Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+ Started by an SCM change
 Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1604_CogUtil
-[OpenCOG_U1604_CogUtil] $ /bin/sh -xe /tmp/jenkins4458718413476425119.sh
-+ COGDIR=../OpenCOGCI
-+ . ../OpenCOGCI/build.docker/docker.env
-+ CID=33c8747ec151d10f168ac160aa1caa094e56abddd8d1b02fc6b2309b0bb3a749
-+ DKRUNROOT=docker exec --user root   33c8747ec151d10f168ac160aa1caa094e56abddd8d1b02fc6b2309b0bb3a749
-+ DKRUNUSER=docker exec --user jenkins  33c8747ec151d10f168ac160aa1caa094e56abddd8d1b02fc6b2309b0bb3a749
+[OpenCOG_U1604_CogUtil] $ /bin/sh -xe /tmp/jenkins1949137667865494418.sh
++ COGDIR=../OpenCOG_U1604
++ . ../OpenCOG_U1604/build.docker/docker.env
++ CID=6428aefa2491245a7ef00eb3384c852415ecfa162f0e6c14064afe2d925d5a33
++ DKRUNROOT=docker exec --user root   6428aefa2491245a7ef00eb3384c852415ecfa162f0e6c14064afe2d925d5a33
++ DKRUNUSER=docker exec --user jenkins  6428aefa2491245a7ef00eb3384c852415ecfa162f0e6c14064afe2d925d5a33
 + UID=125
 + GID=132
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/6/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/11/log
 + cat
 
 
@@ -34,40 +34,40 @@ GIT_BRANCH=
 + echo GIT_URL=
 GIT_URL=
 + WDIR=opencog/dependencies/cogutil
-+ JOBDIR=../OpenCOGCI/dependencies
++ JOBDIR=../OpenCOG_U1604/dependencies
 + cat
-+ chmod +x ../OpenCOGCI/dependencies/job1
-+ docker exec --user jenkins 33c8747ec151d10f168ac160aa1caa094e56abddd8d1b02fc6b2309b0bb3a749 bash opencog/dependencies/job1
++ chmod +x ../OpenCOG_U1604/dependencies/job1
++ docker exec --user jenkins 6428aefa2491245a7ef00eb3384c852415ecfa162f0e6c14064afe2d925d5a33 bash opencog/dependencies/job1
 /home/opencog
 + pwd
 + cd opencog/dependencies/cogutil
 + cd build
 + make -j8 test
 [ 35%] Built target cogutil
-[ 38%] Generating LoggerUTest.cpp
 [ 38%] Generating comprehensionUTest.cpp
-[ 40%] Generating functionalUTest.cpp
-[ 42%] Generating CounterUTest.cpp
-[ 43%] Generating StringTokenizerUTest.cpp
-[ 45%] Generating lru_cacheUTest.cpp
-[ 47%] Generating rankingUTest.cpp
-[ 49%] Generating KLDUTest.cpp
-Scanning dependencies of target CounterUTest
+[ 38%] Generating functionalUTest.cpp
+[ 40%] Generating LoggerUTest.cpp
+[ 42%] Generating StringTokenizerUTest.cpp
+[ 43%] Generating lru_cacheUTest.cpp
+[ 45%] Generating KLDUTest.cpp
+[ 47%] Generating CounterUTest.cpp
+[ 49%] Generating rankingUTest.cpp
+Scanning dependencies of target LoggerUTest
+Scanning dependencies of target KLDUTest
+Scanning dependencies of target StringTokenizerUTest
 Scanning dependencies of target functionalUTest
 Scanning dependencies of target comprehensionUTest
-Scanning dependencies of target rankingUTest
-Scanning dependencies of target KLDUTest
+Scanning dependencies of target CounterUTest
 Scanning dependencies of target lru_cacheUTest
-Scanning dependencies of target LoggerUTest
-[ 50%] Building CXX object tests/util/CMakeFiles/KLDUTest.dir/KLDUTest.cpp.o
-[ 52%] Building CXX object tests/util/CMakeFiles/functionalUTest.dir/functionalUTest.cpp.o
-[ 54%] Building CXX object tests/util/CMakeFiles/lru_cacheUTest.dir/lru_cacheUTest.cpp.o
-[ 56%] Building CXX object tests/util/CMakeFiles/comprehensionUTest.dir/comprehensionUTest.cpp.o
+[ 50%] Building CXX object tests/util/CMakeFiles/LoggerUTest.dir/LoggerUTest.cpp.o
+Scanning dependencies of target rankingUTest
+[ 52%] Building CXX object tests/util/CMakeFiles/KLDUTest.dir/KLDUTest.cpp.o
+[ 54%] Building CXX object tests/util/CMakeFiles/functionalUTest.dir/functionalUTest.cpp.o
+[ 57%] Building CXX object tests/util/CMakeFiles/comprehensionUTest.dir/comprehensionUTest.cpp.o
+[ 57%] Building CXX object tests/util/CMakeFiles/StringTokenizerUTest.dir/StringTokenizerUTest.cpp.o
 [ 59%] Building CXX object tests/util/CMakeFiles/CounterUTest.dir/CounterUTest.cpp.o
-[ 59%] Building CXX object tests/util/CMakeFiles/rankingUTest.dir/rankingUTest.cpp.o
-Scanning dependencies of target StringTokenizerUTest
-[ 61%] Building CXX object tests/util/CMakeFiles/LoggerUTest.dir/LoggerUTest.cpp.o
-[ 63%] Building CXX object tests/util/CMakeFiles/StringTokenizerUTest.dir/StringTokenizerUTest.cpp.o
+[ 61%] Building CXX object tests/util/CMakeFiles/lru_cacheUTest.dir/lru_cacheUTest.cpp.o
+[ 63%] Building CXX object tests/util/CMakeFiles/rankingUTest.dir/rankingUTest.cpp.o
 [ 64%] Linking CXX executable StringTokenizerUTest
 [ 64%] Built target StringTokenizerUTest
 [ 66%] Generating iostreamContainerUTest.cpp
@@ -94,12 +94,12 @@ Scanning dependencies of target lazy_selectorUTest
 [ 87%] Built target KLDUTest
 [ 89%] Linking CXX executable ConfigUTest
 [ 89%] Built target ConfigUTest
-[ 91%] Linking CXX executable comprehensionUTest
-[ 91%] Built target comprehensionUTest
-[ 92%] Linking CXX executable iostreamContainerUTest
-[ 94%] Linking CXX executable lru_cacheUTest
-[ 94%] Built target iostreamContainerUTest
+[ 91%] Linking CXX executable iostreamContainerUTest
+[ 91%] Built target iostreamContainerUTest
+[ 92%] Linking CXX executable lru_cacheUTest
+[ 94%] Linking CXX executable comprehensionUTest
 [ 94%] Built target lru_cacheUTest
+[ 94%] Built target comprehensionUTest
 [ 96%] Linking CXX executable lazy_selectorUTest
 [ 96%] Built target lazy_selectorUTest
 [ 98%] Linking CXX executable randomUTest
@@ -112,7 +112,7 @@ Test project /home/opencog/opencog/dependencies/cogutil/build/tests
       Start  1: ConfigUTest
  1/12 Test  #1: ConfigUTest ......................   Passed    0.00 sec
       Start  2: LoggerUTest
- 2/12 Test  #2: LoggerUTest ......................   Passed    0.36 sec
+ 2/12 Test  #2: LoggerUTest ......................   Passed    0.43 sec
       Start  3: StringTokenizerUTest
  3/12 Test  #3: StringTokenizerUTest .............   Passed    0.00 sec
       Start  4: lazy_selectorUTest
@@ -120,11 +120,11 @@ Test project /home/opencog/opencog/dependencies/cogutil/build/tests
       Start  5: lru_cacheUTest
  5/12 Test  #5: lru_cacheUTest ...................   Passed    0.00 sec
       Start  6: iostreamContainerUTest
- 6/12 Test  #6: iostreamContainerUTest ...........   Passed    0.00 sec
+ 6/12 Test  #6: iostreamContainerUTest ...........   Passed    0.01 sec
       Start  7: functionalUTest
- 7/12 Test  #7: functionalUTest ..................   Passed    0.00 sec
+ 7/12 Test  #7: functionalUTest ..................   Passed    0.01 sec
       Start  8: KLDUTest
- 8/12 Test  #8: KLDUTest .........................   Passed    3.39 sec
+ 8/12 Test  #8: KLDUTest .........................   Passed    3.41 sec
       Start  9: randomUTest
  9/12 Test  #9: randomUTest ......................   Passed    1.44 sec
       Start 10: comprehensionUTest
@@ -136,9 +136,9 @@ Test project /home/opencog/opencog/dependencies/cogutil/build/tests
 
 100% tests passed, 0 tests failed out of 12
 
-Total Test time (real) =   5.21 sec
+Total Test time (real) =   5.31 sec
 [100%] Built target test
 + DSTATUS=TESTPASS
-+ /var/lib/jenkins/status/updateStatus TESTPASS /var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/6/log OpenCOG_U1604_CogUtil
++ /var/lib/jenkins/status/updateStatus TESTPASS /var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/11/log OpenCOG_U1604_CogUtil
 Already up-to-date.
 ~/status/jobs ~/status

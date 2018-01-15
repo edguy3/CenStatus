@@ -1,16 +1,16 @@
-Started by upstream project "[8mha:////4MnuFN63gwBm2tDyl2kQsSiQZRO2630PQVL7jYvS/YEaAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3/gtQ8Z3/3+FBDMwMTfQCU/aYIyAAAAA==[0mOpenCOG_U1604" build number [8mha:////4CXZSdRdvdraNGIWiWFKX26quISuVGJ8nUgTWUPd4hQTAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZR/az8JH3/gtQ8Z3/3+FBDMwMTfXNzAELr6C/KAAAA[0m77
+Started by upstream project "[8mha:////4HYLKC3QWnNL8UcNtRMb3SIghDGZXRDiSIrVjCiet8BaAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3/gtQ8Z3/3+FBDEwMTfQAfNa+iyAAAAA==[0mOpenCOG_U1404" build number [8mha:////4Gtv7xbHV9kdDJT+9OoJcmJbQZDi/ffa5ksqx33lsGsXAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBhH9rPwkff+C1Dxnf/f4UEMTAxN9CwBq0UalyQAAAA==[0m8
 originally caused by:
  Started by an SCM change
-Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1604_Opencog
-[OpenCOG_U1604_Opencog] $ /bin/sh -xe /tmp/jenkins5676539063174908174.sh
-+ COGDIR=../OpenCOG_U1604
-+ . ../OpenCOG_U1604/build.docker/docker.env
-+ CID=6428aefa2491245a7ef00eb3384c852415ecfa162f0e6c14064afe2d925d5a33
-+ DKRUNROOT=docker exec --user root   6428aefa2491245a7ef00eb3384c852415ecfa162f0e6c14064afe2d925d5a33
-+ DKRUNUSER=docker exec --user jenkins  6428aefa2491245a7ef00eb3384c852415ecfa162f0e6c14064afe2d925d5a33
+Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1404_Opencog
+[OpenCOG_U1404_Opencog] $ /bin/sh -xe /tmp/jenkins551123644933377509.sh
++ COGDIR=../OpenCOG_U1404
++ . ../OpenCOG_U1404/build.docker/docker.env
++ CID=45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49
++ DKRUNROOT=docker exec --user root   45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49
++ DKRUNUSER=docker exec --user jenkins  45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49
 + UID=125
 + GID=132
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604_Opencog/builds/9/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404_Opencog/builds/4/log
 + cat
 
 
@@ -34,132 +34,132 @@ GIT_BRANCH=
 + echo GIT_URL=
 GIT_URL=
 + WDIR=opencog/
-+ JOBDIR=../OpenCOG_U1604/dependencies
++ JOBDIR=../OpenCOG_U1404/dependencies
 + cat
-+ chmod +x ../OpenCOG_U1604/dependencies/job1
-+ docker exec --user jenkins 6428aefa2491245a7ef00eb3384c852415ecfa162f0e6c14064afe2d925d5a33 bash opencog/dependencies/job1
-/home/opencog
++ chmod +x ../OpenCOG_U1404/dependencies/job1
++ docker exec --user jenkins 45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49 bash opencog/dependencies/job1
 + pwd
 + cd opencog/
 + cd build
 + make -j8 test
-[  0%] Generating PLNRulesUTest.cpp
-[  0%] Generating MOSESPLNSynergyUTest.cpp
-[  0%] Built target attention_atom_types
-[  1%] Built target atom_octomap
-[  1%] Built target nlp_atom_types
-[  8%] Built target xpatternminer
-[  8%] Built target json_spirit
-[  9%] Built target patternminer_atom_types
+/home/opencog
+[  0%] [  0%] Generating MOSESPLNSynergyUTest.cpp
+Generating PLNRulesUTest.cpp
+[  0%] [  1%] [  4%] [  7%] [ 10%] Built target attention_atom_types
+Built target nlp_atom_types
+Built target json_spirit
+Built target xpatternminer
+Built target atom_octomap
 [ 13%] Built target openpsi
-[ 16%] Built target agent_finder
-[ 18%] Built target py-shell
-[ 19%] Built target statistics
-[ 19%] Built target dimensionalembedding
-[ 22%] Generating XPatternMinerUTest.cpp
-[ 22%] Built target nlp-types
-[ 22%] Built target spacetime_atom_types
-[ 24%] Built target attention-types
-[ 24%] Generating AtomOcTreeUTest.cpp
-[ 24%] Generating TimeSpaceAtomUTest.cpp
-Scanning dependencies of target MOSESPLNSynergyUTest
-[ 32%] Built target patternindex
-[ 34%] Built target atomspacepublishermodule
-[ 34%] Generating OpenPsiSCMUTest.cpp
+[ 15%] Built target agent_finder
+[ 16%] [ 20%] [ 20%] [ 21%] [ 23%] Built target dimensionalembedding
+Built target statistics
+Built target spacetime_atom_types
+Built target patternminer_atom_types
+Built target py-shell
+[ 24%] Generating XPatternMinerUTest.cpp
+[ 24%] Scanning dependencies of target MOSESPLNSynergyUTest
 Scanning dependencies of target PLNRulesUTest
-[ 36%] Generating OpenPsiImplicatorUTest.cpp
-[ 36%] Generating OpenPsiRulesUTest.cpp
-[ 36%] Building CXX object tests/pln/CMakeFiles/MOSESPLNSynergyUTest.dir/MOSESPLNSynergyUTest.cpp.o
-[ 37%] Building CXX object tests/pln/rules/CMakeFiles/PLNRulesUTest.dir/PLNRulesUTest.cpp.o
+[ 26%] [ 27%] [ 29%] [ 30%] Generating AtomOcTreeUTest.cpp
+Built target nlp-types
+[ 40%] Built target attention-types
+Built target atomspacepublishermodule
+Built target patternindex
+Building CXX object tests/pln/CMakeFiles/MOSESPLNSynergyUTest.dir/MOSESPLNSynergyUTest.cpp.o
+[ 41%] [ 43%] Building CXX object tests/pln/rules/CMakeFiles/PLNRulesUTest.dir/PLNRulesUTest.cpp.o
+[ 44%] [ 46%] Generating TimeSpaceAtomUTest.cpp
+[ 47%] Generating OpenPsiSCMUTest.cpp
+Generating OpenPsiImplicatorUTest.cpp
+Generating OpenPsiRulesUTest.cpp
 Scanning dependencies of target AtomOcTreeUTest
+[ 49%] Scanning dependencies of target XPatternMinerUTest
+Building CXX object tests/spacetime/CMakeFiles/AtomOcTreeUTest.dir/AtomOcTreeUTest.cpp.o
 Scanning dependencies of target TimeSpaceAtomUTest
-Scanning dependencies of target XPatternMinerUTest
-[ 39%] Building CXX object tests/spacetime/CMakeFiles/AtomOcTreeUTest.dir/AtomOcTreeUTest.cpp.o
-[ 40%] Building CXX object tests/spacetime/CMakeFiles/TimeSpaceAtomUTest.dir/TimeSpaceAtomUTest.cpp.o
+[ 50%] [ 50%] Building CXX object tests/spacetime/CMakeFiles/TimeSpaceAtomUTest.dir/TimeSpaceAtomUTest.cpp.o
+Building CXX object tests/learning/xpattern-miner/c++-based/CMakeFiles/XPatternMinerUTest.dir/XPatternMinerUTest.cpp.o
 Scanning dependencies of target OpenPsiRulesUTest
-[ 40%] Building CXX object tests/learning/xpattern-miner/c++-based/CMakeFiles/XPatternMinerUTest.dir/XPatternMinerUTest.cpp.o
 Scanning dependencies of target OpenPsiSCMUTest
-Scanning dependencies of target OpenPsiImplicatorUTest
-[ 42%] Building CXX object tests/openpsi/CMakeFiles/OpenPsiSCMUTest.dir/OpenPsiSCMUTest.cpp.o
-[ 42%] Building CXX object tests/openpsi/CMakeFiles/OpenPsiRulesUTest.dir/OpenPsiRulesUTest.cpp.o
-[ 44%] Building CXX object tests/openpsi/CMakeFiles/OpenPsiImplicatorUTest.dir/OpenPsiImplicatorUTest.cpp.o
-[ 45%] Linking CXX executable OpenPsiRulesUTest
-[ 47%] Linking CXX executable MOSESPLNSynergyUTest
-[ 47%] Built target OpenPsiRulesUTest
-[ 49%] Generating StatisticsUTest.cpp
-[ 49%] Built target MOSESPLNSynergyUTest
-[ 50%] Built target patternminer-types
-[ 52%] Generating PatternIndexAPIUTest.cpp
+[ 50%] Scanning dependencies of target OpenPsiImplicatorUTest
+[ 52%] Building CXX object tests/openpsi/CMakeFiles/OpenPsiRulesUTest.dir/OpenPsiRulesUTest.cpp.o
+[ 52%] Building CXX object tests/openpsi/CMakeFiles/OpenPsiSCMUTest.dir/OpenPsiSCMUTest.cpp.o
+Building CXX object tests/openpsi/CMakeFiles/OpenPsiImplicatorUTest.dir/OpenPsiImplicatorUTest.cpp.o
+Linking CXX executable OpenPsiRulesUTest
+Linking CXX executable MOSESPLNSynergyUTest
+Linking CXX executable OpenPsiSCMUTest
+[ 52%] Built target MOSESPLNSynergyUTest
+[ 52%] Built target OpenPsiRulesUTest
+[ 53%] Generating StatisticsUTest.cpp
+Linking CXX executable OpenPsiImplicatorUTest
+[ 55%] Built target patternminer-types
+[ 55%] Generating PatternIndexAPIUTest.cpp
 Scanning dependencies of target StatisticsUTest
-[ 52%] Building CXX object tests/learning/statistics/CMakeFiles/StatisticsUTest.dir/StatisticsUTest.cpp.o
+[ 55%] Building CXX object tests/learning/statistics/CMakeFiles/StatisticsUTest.dir/StatisticsUTest.cpp.o
 Scanning dependencies of target PatternIndexAPIUTest
-[ 52%] Linking CXX executable OpenPsiImplicatorUTest
-[ 52%] Building CXX object tests/learning/pattern-index/CMakeFiles/PatternIndexAPIUTest.dir/PatternIndexAPIUTest.cpp.o
-[ 52%] Built target OpenPsiImplicatorUTest
-[ 52%] Linking CXX executable OpenPsiSCMUTest
-[ 60%] Built target server
-[ 63%] Built target PatternMiner
-[ 73%] Built target attention
-[ 75%] Generating AtomSpacePublisherModuleUTest.cpp
+[ 56%] Building CXX object tests/learning/pattern-index/CMakeFiles/PatternIndexAPIUTest.dir/PatternIndexAPIUTest.cpp.o
+[ 56%] Built target OpenPsiSCMUTest
+[ 56%] Built target OpenPsiImplicatorUTest
+[ 66%] Built target server
+[ 72%] Built target PatternMiner
+[ 72%] Generating AtomSpacePublisherModuleUTest.cpp
+[ 81%] Built target attention
+[ 83%] Generating CogServerUTest.cpp
 Scanning dependencies of target AtomSpacePublisherModuleUTest
-[ 75%] Built target OpenPsiSCMUTest
-[ 75%] Building CXX object tests/persist/zmq/events/CMakeFiles/AtomSpacePublisherModuleUTest.dir/AtomSpacePublisherModuleUTest.cpp.o
-[ 77%] Generating ShellUTest.cpp
-[ 77%] Linking CXX executable AtomOcTreeUTest
+[ 84%] Scanning dependencies of target CogServerUTest
+Building CXX object tests/persist/zmq/events/CMakeFiles/AtomSpacePublisherModuleUTest.dir/AtomSpacePublisherModuleUTest.cpp.o
+[ 84%] Building CXX object tests/server/CMakeFiles/CogServerUTest.dir/CogServerUTest.cpp.o
+Linking CXX executable AtomOcTreeUTest
+[ 84%] Built target AtomOcTreeUTest
+[ 86%] Generating ShellUTest.cpp
 Scanning dependencies of target ShellUTest
-[ 77%] Building CXX object tests/server/CMakeFiles/ShellUTest.dir/ShellUTest.cpp.o
-[ 77%] Built target AtomOcTreeUTest
-[ 77%] Generating CogServerUTest.cpp
-Scanning dependencies of target CogServerUTest
-[ 78%] Building CXX object tests/server/CMakeFiles/CogServerUTest.dir/CogServerUTest.cpp.o
-[ 78%] Linking CXX executable PLNRulesUTest
-[ 78%] Built target PLNRulesUTest
-[ 78%] Generating AgentUTest.cpp
+[ 86%] Building CXX object tests/server/CMakeFiles/ShellUTest.dir/ShellUTest.cpp.o
+Linking CXX executable PLNRulesUTest
+[ 86%] Built target PLNRulesUTest
+[ 86%] Generating AgentUTest.cpp
 Scanning dependencies of target AgentUTest
-[ 78%] Building CXX object tests/server/CMakeFiles/AgentUTest.dir/AgentUTest.cpp.o
-[ 78%] Linking CXX executable TimeSpaceAtomUTest
-[ 78%] Built target TimeSpaceAtomUTest
-[ 81%] Built target PythonModule
-[ 81%] Generating PyEvalUTest.cpp
+[ 87%] Building CXX object tests/server/CMakeFiles/AgentUTest.dir/AgentUTest.cpp.o
+Linking CXX executable TimeSpaceAtomUTest
+[ 87%] Built target TimeSpaceAtomUTest
+[ 90%] Built target PythonModule
+[ 90%] Generating PyEvalUTest.cpp
 Scanning dependencies of target PyEvalUTest
-[ 81%] Building CXX object tests/cython/CMakeFiles/PyEvalUTest.dir/PyEvalUTest.cpp.o
-[ 81%] Linking CXX executable XPatternMinerUTest
-[ 81%] Built target XPatternMinerUTest
-[ 83%] Generating DimEmbedUTest.cpp
+[ 92%] Building CXX object tests/cython/CMakeFiles/PyEvalUTest.dir/PyEvalUTest.cpp.o
+Linking CXX executable StatisticsUTest
+[ 92%] Built target StatisticsUTest
+[ 93%] Generating DimEmbedUTest.cpp
+Linking CXX executable XPatternMinerUTest
 Scanning dependencies of target DimEmbedUTest
-[ 83%] Building CXX object tests/learning/dimensionalembedding/CMakeFiles/DimEmbedUTest.dir/DimEmbedUTest.cpp.o
-[ 85%] Linking CXX executable StatisticsUTest
-[ 85%] Built target StatisticsUTest
-[ 86%] Generating PatternMinerUTest.cpp
+[ 95%] Building CXX object tests/learning/dimensionalembedding/CMakeFiles/DimEmbedUTest.dir/DimEmbedUTest.cpp.o
+[ 95%] Built target XPatternMinerUTest
+[ 95%] Generating PatternMinerUTest.cpp
 Scanning dependencies of target PatternMinerUTest
-[ 86%] Building CXX object tests/learning/PatternMiner/CMakeFiles/PatternMinerUTest.dir/PatternMinerUTest.cpp.o
-[ 88%] Linking CXX executable PatternIndexAPIUTest
+[ 96%] Building CXX object tests/learning/PatternMiner/CMakeFiles/PatternMinerUTest.dir/PatternMinerUTest.cpp.o
+Linking CXX executable PatternIndexAPIUTest
 CMakeFiles/PatternIndexAPIUTest.dir/PatternIndexAPIUTest.cpp.o: In function `PatternIndexAPIUTest::PatternIndexAPIUTest()':
-/home/opencog/opencog/build/tests/learning/pattern-index/../../../../tests/learning/pattern-index/PatternIndexAPIUTest.cxxtest:76: warning: the use of `tmpnam' is dangerous, better use `mkstemp'
-[ 88%] Built target PatternIndexAPIUTest
-[ 88%] Generating AttentionParamQueryUTest.cpp
+/home/opencog/opencog/tests/learning/pattern-index/PatternIndexAPIUTest.cxxtest:76: warning: the use of `tmpnam' is dangerous, better use `mkstemp'
+[ 96%] Built target PatternIndexAPIUTest
+[ 98%] Generating AttentionParamQueryUTest.cpp
 Scanning dependencies of target AttentionParamQueryUTest
-[ 88%] Building CXX object tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.o
-[ 88%] Linking CXX executable ShellUTest
-[ 88%] Built target ShellUTest
-[ 88%] Generating PythonModuleUTest.cpp
+[ 98%] Building CXX object tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.o
+Linking CXX executable ShellUTest
+[ 98%] Built target ShellUTest
+[ 98%] Generating PythonModuleUTest.cpp
 Scanning dependencies of target PythonModuleUTest
-[ 90%] Building CXX object tests/cython/CMakeFiles/PythonModuleUTest.dir/PythonModuleUTest.cpp.o
-[ 91%] Linking CXX executable AgentUTest
-[ 91%] Built target AgentUTest
-[ 91%] Linking CXX executable CogServerUTest
-[ 91%] Built target CogServerUTest
-[ 93%] Linking CXX executable PyEvalUTest
-[ 93%] Built target PyEvalUTest
-[ 95%] Linking CXX executable AttentionParamQueryUTest
-[ 95%] Built target AttentionParamQueryUTest
-[ 96%] Linking CXX executable PatternMinerUTest
-[ 96%] Built target PatternMinerUTest
-[ 98%] Linking CXX executable DimEmbedUTest
-[ 98%] Linking CXX executable PythonModuleUTest
-[ 98%] Built target PythonModuleUTest
-[ 98%] Built target DimEmbedUTest
-[100%] Linking CXX executable AtomSpacePublisherModuleUTest
+[100%] Building CXX object tests/cython/CMakeFiles/PythonModuleUTest.dir/PythonModuleUTest.cpp.o
+Linking CXX executable CogServerUTest
+[100%] Built target CogServerUTest
+Linking CXX executable AgentUTest
+[100%] Built target AgentUTest
+Linking CXX executable PyEvalUTest
+[100%] Built target PyEvalUTest
+Linking CXX executable PatternMinerUTest
+[100%] Built target PatternMinerUTest
+Linking CXX executable AttentionParamQueryUTest
+[100%] Built target AttentionParamQueryUTest
+Linking CXX executable PythonModuleUTest
+[100%] Built target PythonModuleUTest
+Linking CXX executable DimEmbedUTest
+Linking CXX executable AtomSpacePublisherModuleUTest
+[100%] Built target DimEmbedUTest
 [100%] Built target AtomSpacePublisherModuleUTest
 Scanning dependencies of target tests
 [100%] Built target tests
@@ -169,41 +169,13 @@ Test project /home/opencog/opencog/build/tests
       Start  1: AttentionParamQueryUTest
  1/25 Test  #1: AttentionParamQueryUTest .........   Passed    0.00 sec
       Start  2: AtomSpacePublisherModuleUTest
- 2/25 Test  #2: AtomSpacePublisherModuleUTest ....***Exception: Other  5.14 sec
-Running cxxtest tests (1 test)[2018-01-15 11:49:59:936] [INFO] Using config file found at: /home/opencog/opencog/build/tests/persist/zmq/events/../../../../lib/opencog-test.conf
-
-[2018-01-15 11:49:59:936] [DEBUG] [SystemActivityTable] constructor
-[2018-01-15 11:49:59:984] [INFO] [global_python_initialize] Start
-[2018-01-15 11:49:59:989] [INFO] [global_python_initialize] Adding OpenCog sys.path directories
-[2018-01-15 11:49:59:989] [DEBUG] Python 'sys.path' is:
-[2018-01-15 11:49:59:989] [DEBUG]      0 > 
-[2018-01-15 11:49:59:989] [DEBUG]      1 > /usr/local/share/opencog/python
-[2018-01-15 11:49:59:989] [DEBUG]      2 > /usr/lib/python2.7
-[2018-01-15 11:49:59:989] [DEBUG]      3 > /usr/lib/python2.7/plat-x86_64-linux-gnu
-[2018-01-15 11:49:59:989] [DEBUG]      4 > /usr/lib/python2.7/lib-tk
-[2018-01-15 11:49:59:989] [DEBUG]      5 > /usr/lib/python2.7/lib-old
-[2018-01-15 11:49:59:989] [DEBUG]      6 > /usr/lib/python2.7/lib-dynload
-[2018-01-15 11:49:59:989] [DEBUG]      7 > /usr/local/lib/python2.7/dist-packages
-[2018-01-15 11:49:59:989] [DEBUG]      8 > /usr/lib/python2.7/dist-packages
-[2018-01-15 11:49:59:989] [DEBUG]      9 > /usr/lib/python2.7/dist-packages/PILcompat
-[2018-01-15 11:49:59:989] [DEBUG]     10 > /usr/lib/python2.7/dist-packages/gtk-2.0
-[2018-01-15 11:49:59:991] [INFO] [global_python_initialize] Finish
-[2018-01-15 11:49:59:991] [INFO] [global_python_initialize] Start
-[2018-01-15 11:49:59:991] [INFO] PythonEval::initialize_python_objects_and_imports Finished initialising python evaluator.
-[2018-01-15 11:49:59:991] [DEBUG] [SystemActivityTable] init
-[2018-01-15 11:49:59:991] [INFO] Loading module "../../../../opencog/cogserver/modules/events/libatomspacepublishermodule.so"
-[2018-01-15 11:49:59:993] [INFO] [AtomSpacePublisherModule] constructor
-[2018-01-15 11:49:59:993] [DEBUG] registering opencog::Request "publisher-enable-signals"
-[2018-01-15 11:49:59:993] [DEBUG] registering opencog::Request "publisher-disable-signals"
-[2018-01-15 11:49:59:993] [INFO] Initializing AtomSpacePublisherModule.
-AtomSpacePublisherModuleUTest: /usr/include/zmq.hpp:406: zmq::context_t::~context_t(): Assertion `rc == 0' failed.
-
+ 2/25 Test  #2: AtomSpacePublisherModuleUTest ....   Passed    5.08 sec
       Start  3: CogServerUTest
- 3/25 Test  #3: CogServerUTest ...................   Passed    0.71 sec
+ 3/25 Test  #3: CogServerUTest ...................   Passed    0.75 sec
       Start  4: ShellUTest
- 4/25 Test  #4: ShellUTest .......................   Passed  118.43 sec
+ 4/25 Test  #4: ShellUTest .......................   Passed  118.72 sec
       Start  5: AgentUTest
- 5/25 Test  #5: AgentUTest .......................   Passed    0.06 sec
+ 5/25 Test  #5: AgentUTest .......................   Passed    0.07 sec
       Start  6: AtomOcTreeUTest
  6/25 Test  #6: AtomOcTreeUTest ..................***Exception: SegFault  0.07 sec
 Running cxxtest tests (1 test)
@@ -215,7 +187,7 @@ Running cxxtest tests (1 test)
 generating example map
 
       Start  8: AnaphoraTest
- 8/25 Test  #8: AnaphoraTest .....................***Failed    1.22 sec
+ 8/25 Test  #8: AnaphoraTest .....................***Failed    1.48 sec
 Testing the bfs function ... ;;; note: auto-compilation is enabled, set GUILE_AUTO_COMPILE=0
 ;;;       or pass the --no-auto-compile argument to disable.
 ;;; compiling /usr/local/share/opencog/scm/opencog/atom-types.scm
@@ -226,6 +198,7 @@ Testing the bfs function ... ;;; note: auto-compilation is enabled, set GUILE_AU
 ;;; compiling /usr/local/share/opencog/scm/opencog/nlp/nlp-utils.scm
 ;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/usr/local/share/opencog/scm/opencog/nlp/nlp-utils.scm.go
 ;;; compiling /usr/local/share/opencog/scm/opencog/nlp/relex-utils.scm
+;;; opencog/nlp/relex-utils.scm:474:17: warning: possibly unbound variable `exact-integer?'
 ;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/usr/local/share/opencog/scm/opencog/nlp/relex-utils.scm.go
 ;;; compiling /usr/local/share/opencog/scm/opencog/nlp/processing-utils.scm
 ;;; opencog/nlp/processing-utils.scm:214:32: warning: possibly unbound variable `nlp-parse'
@@ -289,8 +262,7 @@ Testing the bfs function ... ;;; note: auto-compilation is enabled, set GUILE_AU
 ;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#12.scm.go
 ;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#13.scm
 ;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#13.scm.go
-;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#14.scm
-;;;ERROR
+;;; compiling /home/opERROR
 test_conjunctions (test_anaphora.AnaphoraUnitTester) ... ERROR
 Testing the getWords function ... ERROR
 test_pleonastic_if (test_anaphora.AnaphoraUnitTester) ... ERROR
@@ -310,29 +282,29 @@ Traceback (most recent call last):
     exe.execution()
   File "/home/opencog/opencog/opencog/nlp/anaphora/agents/hobbs.py", line 81, in execution
     response = scheme_eval(self.atomspace, self.command)
-  File "opencog/scheme_wrapper.pyx", line 35, in opencog.scheme_wrapper.scheme_eval (/home/opencog/opencog/dependencies/atomspace/build/opencog/cython/opencog/scheme_wrapper.cpp:935)
+  File "scheme_wrapper.pyx", line 35, in opencog.scheme_wrapper.scheme_eval (/home/opencog/opencog/dependencies/atomspace/build/opencog/cython/opencog/scheme_wrapper.cpp:1006)
 RuntimeError: Scheme: Failed to execute '(cog-execute! getWords)'
 Backtrace:
 In ice-9/boot-9.scm:
- 157: 10 [catch #t #<catch-closure 2886460> ...]
+ 157: 10 [catch #t #<catch-closure 201a860> ...]
 In unknown file:
-   ?: 9 [apply-smob/1 #<catch-closure 2886460>]
+   ?: 9 [apply-smob/1 #<catch-closure 201a860>]
 In ice-9/boot-9.scm:
- 157: 8 [catch #t #<catch-closure 28862a0> ...]
+ 157: 8 [catch #t #<catch-closure 201a6a0> ...]
 In unknown file:
-   ?: 7 [apply-smob/1 #<catch-closure 28862a0>]
+   ?: 7 [apply-smob/1 #<catch-closure 201a6a0>]
    ?: 6 [call-with-input-string "(cog-execute! getWords)" ...]
 In ice-9/boot-9.scm:
-2401: 5 [save-module-excursion #<procedure 2885d20 at ice-9/eval-string.scm:65:9 ()>]
+2320: 5 [save-module-excursion #<procedure 2002d50 at ice-9/eval-string.scm:65:9 ()>]
 In ice-9/eval-string.scm:
-  44: 4 [read-and-eval #<input: string 28b35b0> #:lang ...]
+  44: 4 [read-and-eval #<input: string 199d750> #:lang ...]
   37: 3 [lp (cog-execute! getWords)]
 In unknown file:
    ?: 2 [opencog-extension cog-execute! ({#<Invalid handle>})]
 In ice-9/boot-9.scm:
- 102: 1 [#<procedure 28cb900 at ice-9/boot-9.scm:97:6 (thrown-k . args)> wrong-type-arg ...]
+ 102: 1 [#<procedure 2017c00 at ice-9/boot-9.scm:97:6 (thrown-k . args)> wrong-type-arg ...]
 In unknown file:
-   ?: 0 [apply-smob/1 #<catch-closure 2886240> wrong-type-arg ...]
+   ?: 0 [apply-smob/1 #<catch-closure 201a640> wrong-type-arg ...]
 
 ERROR: In procedure apply-smob/1:
 ERROR: In procedure cog-execute!: Wrong type (expecting opencog atom): #<Invalid handle>
@@ -353,29 +325,29 @@ Traceback (most recent call last):
     exe.execution()
   File "/home/opencog/opencog/opencog/nlp/anaphora/agents/hobbs.py", line 81, in execution
     response = scheme_eval(self.atomspace, self.command)
-  File "opencog/scheme_wrapper.pyx", line 35, in opencog.scheme_wrapper.scheme_eval (/home/opencog/opencog/dependencies/atomspace/build/opencog/cython/opencog/scheme_wrapper.cpp:935)
+  File "scheme_wrapper.pyx", line 35, in opencog.scheme_wrapper.scheme_eval (/home/opencog/opencog/dependencies/atomspace/build/opencog/cython/opencog/scheme_wrapper.cpp:1006)
 RuntimeError: Scheme: Failed to execute '(cog-execute! getWords)'
 Backtrace:
 In ice-9/boot-9.scm:
- 157: 10 [catch #t #<catch-closure 2888f00> ...]
+ 157: 10 [catch #t #<catch-closure 201b260> ...]
 In unknown file:
-   ?: 9 [apply-smob/1 #<catch-closure 2888f00>]
+   ?: 9 [apply-smob/1 #<catch-closure 201b260>]
 In ice-9/boot-9.scm:
- 157: 8 [catch #t #<catch-closure 2888de0> ...]
+ 157: 8 [catch #t #<catch-closure 201b0a0> ...]
 In unknown file:
-   ?: 7 [apply-smob/1 #<catch-closure 2888de0>]
+   ?: 7 [apply-smob/1 #<catch-closure 201b0a0>]
    ?: 6 [call-with-input-string "(cog-execute! getWords)" ...]
 In ice-9/boot-9.scm:
-2401: 5 [save-module-excursion #<procedure 288a690 at ice-9/eval-string.scm:65:9 ()>]
+2320: 5 [save-module-excursion #<procedure 2002090 at ice-9/eval-string.scm:65:9 ()>]
 In ice-9/eval-string.scm:
-  44: 4 [read-and-eval #<input: string 24d9820> #:lang ...]
+  44: 4 [read-and-eval #<input: string 1c818f0> #:lang ...]
   37: 3 [lp (cog-execute! getWords)]
 In unknown file:
    ?: 2 [opencog-extension cog-execute! ({#<Invalid handle>})]
 In ice-9/boot-9.scm:
- 102: 1 [#<procedure 2880700 at ice-9/boot-9.scm:97:6 (thrown-k . args)> wrong-type-arg ...]
+ 102: 1 [#<procedure 2017500 at ice-9/boot-9.scm:97:6 (thrown-k . args)> wrong-type-arg ...]
 In unknown file:
-   ?: 0 [apply-smob/1 #<catch-closure 2888da0> wrong-type-arg ...]
+   ?: 0 [apply-smob/1 #<catch-closure 201b060> wrong-type-arg ...]
 
 ERROR: In procedure apply-smob/1:
 ERROR: In procedure cog-execute!: Wrong type (expecting opencog atom): #<Invalid handle>
@@ -396,29 +368,29 @@ Traceback (most recent call last):
     exe.execution()
   File "/home/opencog/opencog/opencog/nlp/anaphora/agents/hobbs.py", line 81, in execution
     response = scheme_eval(self.atomspace, self.command)
-  File "opencog/scheme_wrapper.pyx", line 35, in opencog.scheme_wrapper.scheme_eval (/home/opencog/opencog/dependencies/atomspace/build/opencog/cython/opencog/scheme_wrapper.cpp:935)
+  File "scheme_wrapper.pyx", line 35, in opencog.scheme_wrapper.scheme_eval (/home/opencog/opencog/dependencies/atomspace/build/opencog/cython/opencog/scheme_wrapper.cpp:1006)
 RuntimeError: Scheme: Failed to execute '(cog-execute! getWords)'
 Backtrace:
 In ice-9/boot-9.scm:
- 157: 10 [catch #t #<catch-closure 2888aa0> ...]
+ 157: 10 [catch #t #<catch-closure 201ed20> ...]
 In unknown file:
-   ?: 9 [apply-smob/1 #<catch-closure 2888aa0>]
+   ?: 9 [apply-smob/1 #<catch-closure 201ed20>]
 In ice-9/boot-9.scm:
- 157: 8 [catch #t #<catch-closure 2888980> ...]
+ 157: 8 [catch #t #<catch-closure 201ebe0> ...]
 In unknown file:
-   ?: 7 [apply-smob/1 #<catch-closure 2888980>]
+   ?: 7 [apply-smob/1 #<catch-closure 201ebe0>]
    ?: 6 [call-with-input-string "(cog-execute! getWords)" ...]
 In ice-9/boot-9.scm:
-2401: 5 [save-module-excursion #<procedure 288a600 at ice-9/eval-string.scm:65:9 ()>]
+2320: 5 [save-module-excursion #<procedure 2002030 at ice-9/eval-string.scm:65:9 ()>]
 In ice-9/eval-string.scm:
-  44: 4 [read-and-eval #<input: string 2889000> #:lang ...]
+  44: 4 [read-and-eval #<input: string 1c81410> #:lang ...]
   37: 3 [lp (cog-execute! getWords)]
 In unknown file:
    ?: 2 [opencog-extension cog-execute! ({#<Invalid handle>})]
 In ice-9/boot-9.scm:
- 102: 1 [#<procedure 2880dc0 at ice-9/boot-9.scm:97:6 (thrown-k . args)> wrong-type-arg ...]
+ 102: 1 [#<procedure 2017d80 at ice-9/boot-9.scm:97:6 (thrown-k . args)> wrong-type-arg ...]
 In unknown file:
-   ?: 0 [apply-smob/1 #<catch-closure 2888940> wrong-type-arg ...]
+   ?: 0 [apply-smob/1 #<catch-closure 201eba0> wrong-type-arg ...]
 
 ERROR: In procedure apply-smob/1:
 ERROR: In procedure cog-execute!: Wrong type (expecting opencog atom): #<Invalid handle>
@@ -439,29 +411,30 @@ Traceback (most recent call last):
     exe.execution()
   File "/home/opencog/opencog/opencog/nlp/anaphora/agents/hobbs.py", line 81, in execution
     response = scheme_eval(self.atomspace, self.command)
-  File "opencog/scheme_wrapper.pyx", line 35, in opencog.scheme_wrapper.scheme_eval (/home/opencog/opencog/dependencies/atomspace/build/opencog/cython/opencog/scheme_wrapper.cpp:935)
+  File "scheme_wrapper.pyx", line 35, in opencog.scheme_wrapper.scheme_eval (/home/opencog/opencog/dependencies/atomspace/build/opencog/cython/opencog/scheme_wrapper.cpp:1006)
 RuntimeError: Scheme: Failed to execute '(cog-execute! getWords)'
 Backtrace:
 In ice-9/boot-9.scm:
- 157: 10 [catch #t #<catch-closure 28887a0> ...]
+ 157: 10 [catch #t #<catch-closure 202d5c0> ...]
 In unknown file:
-   ?: 9 [apply-smob/1 #<catch-closure 28887a0>]
+   ?: 9 [apply-smob/1 #<catch-closure 202d5c0>]
 In ice-9/boot-9.scm:
- 157: 8 [catch #t #<catch-closure 2888660> ...]
+Testing filter #1...
+ 157: 8 [catch #t #<catch-closure 202d3c0> ...]
 In unknown file:
-   ?: 7 [apply-smob/1 #<catch-closure 2888660>]
+   ?: 7 [apply-smob/1 #<catch-closure 202d3c0>]
    ?: 6 [call-with-input-string "(cog-execute! getWords)" ...]
 In ice-9/boot-9.scm:
-2401: 5 [save-module-excursion #<procedure 288a600 at ice-9/eval-string.scm:65:9 ()>]
+2320: 5 [save-module-excursion #<procedure 2002060 at ice-9/eval-string.scm:65:9 ()>]
 In ice-9/eval-string.scm:
-  44: 4 [read-and-eval #<input: string 24d9680> #:lang ...]
+  44: 4 [read-and-eval #<input: string 1c81ea0> #:lang ...]
   37: 3 [lp (cog-execute! getWords)]
 In unknown file:
    ?: 2 [opencog-extension cog-execute! ({#<Invalid handle>})]
 In ice-9/boot-9.scm:
- 102: 1 [#<procedure 28804c0 at ice-9/boot-9.scm:97:6 (thrown-k . args)> wrong-type-arg ...]
+ 102: 1 [#<procedure 2017e00 at ice-9/boot-9.scm:97:6 (thrown-k . args)> wrong-type-arg ...]
 In unknown file:
-   ?: 0 [apply-smob/1 #<catch-closure 28884e0> wrong-type-arg ...]
+   ?: 0 [apply-smob/1 #<catch-closure 202d380> wrong-type-arg ...]
 
 ERROR: In procedure apply-smob/1:
 ERROR: In procedure cog-execute!: Wrong type (expecting opencog atom): #<Invalid handle>
@@ -484,29 +457,29 @@ Traceback (most recent call last):
     exe.execution()
   File "/home/opencog/opencog/opencog/nlp/anaphora/agents/hobbs.py", line 81, in execution
     response = scheme_eval(self.atomspace, self.command)
-  File "opencog/scheme_wrapper.pyx", line 35, in opencog.scheme_wrapper.scheme_eval (/home/opencog/opencog/dependencies/atomspace/build/opencog/cython/opencog/scheme_wrapper.cpp:935)
+  File "scheme_wrapper.pyx", line 35, in opencog.scheme_wrapper.scheme_eval (/home/opencog/opencog/dependencies/atomspace/build/opencog/cython/opencog/scheme_wrapper.cpp:1006)
 RuntimeError: Scheme: Failed to execute '(cog-execute! getWords)'
 Backtrace:
 In ice-9/boot-9.scm:
- 157: 10 [catch #t #<catch-closure 2888180> ...]
+ 157: 10 [catch #t #<catch-closure 202df20> ...]
 In unknown file:
-   ?: 9 [apply-smob/1 #<catch-closure 2888180>]
+   ?: 9 [apply-smob/1 #<catch-closure 202df20>]
 In ice-9/boot-9.scm:
- 157: 8 [catch #t #<catch-closure 2890d40> ...]
+ 157: 8 [catch #t #<catch-closure 202dcc0> ...]
 In unknown file:
-   ?: 7 [apply-smob/1 #<catch-closure 2890d40>]
+   ?: 7 [apply-smob/1 #<catch-closure 202dcc0>]
    ?: 6 [call-with-input-string "(cog-execute! getWords)" ...]
 In ice-9/boot-9.scm:
-2401: 5 [save-module-excursion #<procedure 288a600 at ice-9/eval-string.scm:65:9 ()>]
+2320: 5 [save-module-excursion #<procedure 2002030 at ice-9/eval-string.scm:65:9 ()>]
 In ice-9/eval-string.scm:
-  44: 4 [read-and-eval #<input: string 24d9680> #:lang ...]
+  44: 4 [read-and-eval #<input: string 1c818f0> #:lang ...]
   37: 3 [lp (cog-execute! getWords)]
 In unknown file:
    ?: 2 [opencog-extension cog-execute! ({#<Invalid handle>})]
 In ice-9/boot-9.scm:
- 102: 1 [#<procedure 28804c0 at ice-9/boot-9.scm:97:6 (thrown-k . args)> wrong-type-arg ...]
+ 102: 1 [#<procedure 2017d80 at ice-9/boot-9.scm:97:6 (thrown-k . args)> wrong-type-arg ...]
 In unknown file:
-   ?: 0 [apply-smob/1 #<catch-closure 2890d00> wrong-type-arg ...]
+   ?: 0 [apply-smob/1 #<catch-closure 202dc80> wrong-type-arg ...]
 
 ERROR: In procedure apply-smob/1:
 ERROR: In procedure cog-execute!: Wrong type (expecting opencog atom): #<Invalid handle>
@@ -514,11 +487,11 @@ ABORT: wrong-type-arg
  (/home/opencog/opencog/dependencies/atomspace/opencog/cython/opencog/PyScheme.cc:41)
 
 ----------------------------------------------------------------------
-Ran 5 tests in 1.128s
+Ran 5 tests in 1.429s
 
 FAILED (errors=5)
-Testing filter #1...
- compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#14.scm.go
+encog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#14.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#14.scm.go
 ;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#15.scm
 ;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#15.scm.go
 ;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#16.scm
@@ -549,15 +522,15 @@ Testing filter #1...
 ;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/tests/nlp/anaphora/data/propose/filter-#1/data_#1.scm.go
 
       Start  9: MOSESPLNSynergyUTest
- 9/25 Test  #9: MOSESPLNSynergyUTest .............   Passed    8.06 sec
+ 9/25 Test  #9: MOSESPLNSynergyUTest .............   Passed    8.28 sec
       Start 10: PLNRulesUTest
-10/25 Test #10: PLNRulesUTest ....................   Passed    0.27 sec
+10/25 Test #10: PLNRulesUTest ....................   Passed    0.25 sec
       Start 11: PythonPLNTest
-11/25 Test #11: PythonPLNTest ....................   Passed    0.09 sec
+11/25 Test #11: PythonPLNTest ....................   Passed    0.05 sec
       Start 12: OpenPsiRulesUTest
-12/25 Test #12: OpenPsiRulesUTest ................***Failed    0.49 sec
-Running cxxtest tests (3 tests)[2018-01-15 11:52:14:110] [INFO] ##### Finished setting up to run a test #####
-[2018-01-15 11:52:14:110] [INFO] BEGIN TEST: test_add_rule_and_is_rule
+12/25 Test #12: OpenPsiRulesUTest ................***Failed    0.57 sec
+Running cxxtest tests (3 tests)[2018-01-15 12:03:35:950] [INFO] ##### Finished setting up to run a test #####
+[2018-01-15 12:03:35:950] [INFO] BEGIN TEST: test_add_rule_and_is_rule
 ;;; note: auto-compilation is enabled, set GUILE_AUTO_COMPILE=0
 ;;;       or pass the --no-auto-compile argument to disable.
 ;;; compiling /home/opencog/opencog/tests/openpsi/rules.scm
@@ -598,7 +571,7 @@ Running cxxtest tests (3 tests)[2018-01-15 11:52:14:110] [INFO] ##### Finished s
 ;;; /home/opencog/opencog/tests/openpsi/rules.scm:245:19: warning: possibly unbound variable `psi-component'
 ;;; /home/opencog/opencog/tests/openpsi/rules.scm:273:4: warning: possibly unbound variable `psi-rule'
 ;;; /home/opencog/opencog/tests/openpsi/rules.scm:306:19: warning: possibly unbound variable `psi-get-action'
-;;; /home/opencog/opencog/tests/openpsi/rules.scm:310:31: [2018-01-15 11:52:14:146] [ERROR] Invalid Atom syntax: (SequentialAndLink
+[2018-01-15 12:03:35:984] [ERROR] Invalid Atom syntax: (SequentialAndLink
   (ListLink
     (VariableNode "x1") ; [3075323803585289292][1]
     (VariableNode "y1") ; [4509367321611461855][1]
@@ -622,65 +595,65 @@ Running cxxtest tests (3 tests)[2018-01-15 11:52:14:110] [INFO] ##### Finished s
 ) ; [13999116603184941779][-1]
  (/home/opencog/opencog/dependencies/atomspace/opencog/atoms/base/ClassServer.cc:154)
 	Stack Trace:
-	2: Logger.cc:481	  opencog::Logger::logva(opencog::Logger::Level, char const*, __va_list_tag*)
+	2: basic_string.h:293	  std::string::_M_data() const
 	3: Logger.cc:493	  opencog::Logger::Error::operator()(char const*, ...)
 	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
 	6: exceptions.cc:167	  opencog::SyntaxException::SyntaxException(char const*, char const*, ...)
-	7: ClassServer.cc:156	validating_factory()
+	7: basic_string.h:539	~basic_string()
 	8: ClassServer.cc:223	  opencog::ClassServer::factory(opencog::Handle const&) const
-	9: shared_ptr_base.h:658	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-	10: shared_ptr_base.h:933	  std::__shared_ptr<opencog::Atom, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<opencog::Atom, (__gnu_cxx::_Lock_policy)2>&&)
+	9: shared_ptr_base.h:545	~__shared_count()
+	10: shared_ptr_base.h:790	__shared_ptr()
 	11: SchemeSmobNew.cc:511	  opencog::SchemeSmob::ss_new_link(scm_unused_struct*, scm_unused_struct*)
-	12: [0xefd33] ??() ??:0
-	13: [0x5c107] ??() ??:0
-	14: [0xefd33] ??() ??:0
-	15: [0x5c21e] ??() ??:0
-	16: [0xefd33] ??() ??:0
-	17: [0x5c283] ??() ??:0
+	12: [0xecc00] ??() ??:0
+	13: [0x64747] ??() ??:0
+	14: [0xecc00] ??() ??:0
+	15: [0x6481e] ??() ??:0
+	16: [0xecc00] ??() ??:0
+	17: [0x64863] ??() ??:0
 	18: SchemeEval.cc:772	  opencog::SchemeEval::do_scm_eval(scm_unused_struct*, scm_unused_struct* (*)(void*))
-	19: SchemeEval.cc:864	  opencog::SchemeEval::c_wrap_eval_v(void*)
-	20: [0x5258a] ??() ??:0
-	21: [0xefd33] ??() ??:0
-	22: [0x5c283] ??() ??:0
-	23: [0x52d21] ??() ??:0
-	24: [0x52e05] ??() ??:0
-	25: [0x21c97] ??() ??:0
-	26: [0xd2c01] ??() ??:0
-	27: [0x1bc62] ??() ??:0
-	28: [0xd2fe8] ??() ??:0
-	29: SchemeEval.cc:911	  opencog::SchemeEval::eval_v(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-	30: SchemeEval.h:170	  opencog::SchemeEval::eval_h(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-	31: OpenPsiRulesUTest.cxxtest:113	  OpenPsiRulesUTest::test_add_rule_and_is_rule()
-	32: RealDescriptions.cpp:125	  CxxTest::RealTestDescription::run()
-	33: TestRunner.h:104	  CxxTest::TestRunner::runTest(CxxTest::TestDescription&)
-	34: OpenPsiRulesUTest.cpp:20	main()
-	35: [0x20830] ??() ??:0
-	36: [0x40c509] ??() ??:0
+	19: SchemeEval.cc:867	  opencog::SchemeEval::c_wrap_eval_v(void*)
+	20: [0x5b2ca] ??() ??:0
+	21: [0xecc00] ??() ??:0
+	22: [0x64863] ??() ??:0
+	23: [0x5b9ff] ??() ??:0
+	24: [0x5ba95] ??() ??:0
+	25: [0x1ed30] ??() ??:0
+	26: [0xd47d1] ??() ??:0
+	27: [0x192c2] ??() ??:0
+	28: [0xd4b48] ??() ??:0
+	29: SchemeEval.cc:911	  opencog::SchemeEval::eval_v(std::string const&)
+	30: shared_ptr.h:449	  OpenPsiRulesUTest::test_add_rule_and_is_rule()
+	31: RealDescriptions.cpp:125	  CxxTest::RealTestDescription::run()
+	32: TestRunner.h:104	  CxxTest::TestRunner::runTest(CxxTest::TestDescription&)
+	33: TestTracker.h:130	tracker()
+	34: ErrorPrinter.h:46	main()
+	35: [0x21f45] ??() ??:0
+	36: [0x40c7bb] ??() ??:0
 
-[2018-01-15 11:52:14:214] [ERROR] Backtrace:
+[2018-01-15 12:03:36:087] [ERROR] Backtrace:
 In ice-9/boot-9.scm:
- 157: 11 [catch #t #<catch-closure 301d1a0> ...]
+ 157: 11 [catch #t #<catch-closure 34e93a0> ...]
 In unknown file:
-   ?: 10 [apply-smob/1 #<catch-closure 301d1a0>]
+   ?: 10 [apply-smob/1 #<catch-closure 34e93a0>]
 In ice-9/boot-9.scm:
- 157: 9 [catch #t #<catch-closure 301d080> ...]
+ 157: 9 [catch #t #<catch-closure 34e9120> ...]
 In unknown file:
-   ?: 8 [apply-smob/1 #<catch-closure 301d080>]
+   ?: 8 [apply-smob/1 #<catch-closure 34e9120>]
    ?: 7 [call-with-input-string "(rule-1-cpp)" ...]
 In ice-9/boot-9.scm:
-2401: 6 [save-module-excursion #<procedure 2b71600 at ice-9/eval-string.scm:65:9 ()>]
+2320: 6 [save-module-excursion #<procedure 2f213c0 at ice-9/eval-string.scm:65:9 ()>]
 In ice-9/eval-string.scm:
-  44: 5 [read-and-eval #<input: string 30458f0> #:lang ...]
+  44: 5 [read-and-eval #<input: string 3494ea0> #:lang ...]
   37: 4 [lp (rule-1-cpp)]
 In /home/opencog/opencog/tests/openpsi/rules.scm:
   57: 3 [rule-1-cpp]
 In unknown file:
    ?: 2 [cog-new-link 41 # # ...]
 In ice-9/boot-9.scm:
- 102: 1 [#<procedure 3084d80 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
+ 102: 1 [#<procedure 355d240 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
 In unknown file:
-   ?: 0 [apply-smob/1 #<catch-closure 301d040> C++-EXCEPTION ...]
+   ?: 0 [apply-smob/1 #<catch-closure 34e90a0> C++-EXCEPTION ...]
 
 ERROR: In procedure apply-smob/1:
 ERROR: In procedure cog-new-link: Invalid Atom syntax: (SequentialAndLink
@@ -715,45 +688,45 @@ Function args:
 )
  (I
 	Stack Trace:
-	2: Logger.cc:481	  opencog::Logger::logva(opencog::Logger::Level, char const*, __va_list_tag*)
+	2: basic_string.h:293	  std::string::_M_data() const
 	3: Logger.cc:493	  opencog::Logger::Error::operator()(char const*, ...)
 	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
 	6: exceptions.cc:150	  opencog::RuntimeException::RuntimeException(char const*, char const*, ...)
-	7: SchemeEval.cc:912	  opencog::SchemeEval::eval_v(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-	8: SchemeEval.h:170	  opencog::SchemeEval::eval_h(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-	9: OpenPsiRulesUTest.cxxtest:113	  OpenPsiRulesUTest::test_add_rule_and_is_rule()
-	10: RealDescriptions.cpp:125	  CxxTest::RealTestDescription::run()
-	11: TestRunner.h:104	  CxxTest::TestRunner::runTest(CxxTest::TestDescription&)
-	12: OpenPsiRulesUTest.cpp:20	main()
-	13: [0x20830] ??() ??:0
-	14: [0x40c509] ??() ??:0
+	7: SchemeEval.cc:912	  opencog::SchemeEval::eval_v(std::string const&)
+	8: shared_ptr.h:449	  OpenPsiRulesUTest::test_add_rule_and_is_rule()
+	9: RealDescriptions.cpp:125	  CxxTest::RealTestDescription::run()
+	10: TestRunner.h:104	  CxxTest::TestRunner::runTest(CxxTest::TestDescription&)
+	11: TestTracker.h:130	tracker()
+	12: ErrorPrinter.h:46	main()
+	13: [0x21f45] ??() ??:0
+	14: [0x40c7bb] ??() ??:0
 
 
 In OpenPsiRulesUTest::test_add_rule_and_is_rule:
 /home/opencog/opencog/tests/openpsi/OpenPsiRulesUTest.cxxtest:96: Error: Test failed: Backtrace:
 In ice-9/boot-9.scm:
- 157: 11 [catch #t #<catch-closure 301d1a0> ...]
+ 157: 11 [catch #t #<catch-closure 34e93a0> ...]
 In unknown file:
-   ?: 10 [apply-smob/1 #<catch-closure 301d1a0>]
+   ?: 10 [apply-smob/1 #<catch-closure 34e93a0>]
 In ice-9/boot-9.scm:
- 157: 9 [catch #t #<catch-closure 301d080> ...]
+ 157: 9 [catch #t #<catch-closure 34e9120> ...]
 In unknown file:
-   ?: 8 [apply-smob/1 #<catch-closure 301d080>]
+   ?: 8 [apply-smob/1 #<catch-closure 34e9120>]
    ?: 7 [call-with-input-string "(rule-1-cpp)" ...]
 In ice-9/boot-9.scm:
-2401: 6 [save-module-excursion #<procedure 2b71600 at ice-9/eval-string.scm:65:9 ()>]
+2320: 6 [save-module-excursion #<procedure 2f213c0 at ice-9/eval-string.scm:65:9 ()>]
 In ice-9/eval-string.scm:
-  44: 5 [read-and-eval #<input: string 30458f0> #:lang ...]
+  44: 5 [read-and-eval #<input: string 3494ea0> #:lang ...]
   37: 4 [lp (rule-1-cpp)]
 In /home/opencog/opencog/tests/openpsi/rules.scm:
   57: 3 [rule-1-cpp]
 In unknown file:
    ?: 2 [cog-new-link 41 # # ...]
 In ice-9/boot-9.scm:
- 102: 1 [#<procedure 3084d80 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
+ 102: 1 [#<procedure 355d240 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
 In unknown file:
-   ?: 0 [apply-smob/1 #<catch-closure 301d040> C++-EXCEPTION ...]
+   ?: 0 [apply-smob/1 #<catch-closure 34e90a0> C++-EXCEPTION ...]
 
 ERROR: In procedure apply-smob/1:
 ERROR: In procedure cog-new-link: Invalid Atom syntax: (SequentialAndLink
@@ -787,9 +760,9 @@ Function args:
    (VariableNode "z1")
 )
  (I
-[2018-01-15 11:52:14:254] [INFO] ##### Finished setting up to run a test #####
-[2018-01-15 11:52:14:254] [INFO] BEGIN TEST: test_rule_get_functions
-[2018-01-15 11:52:14:430] [ERROR] Invalid Atom syntax: (SequentialAndLink
+[2018-01-15 12:03:36:134] [INFO] ##### Finished setting up to run a test #####
+[2018-01-15 12:03:36:134] [INFO] BEGIN TEST: test_rule_get_functions
+[2018-01-15 12:03:36:301] [ERROR] Invalid Atom syntax: (SequentialAndLink
   (ListLink
     (VariableNode "x2") ; [3192685903628534664][2]
     (ConceptNode "Required constant for DualLink-2") ; [6892650863178474209][2]
@@ -814,65 +787,66 @@ Function args:
 ) ; [11325344088001200582][-1]
  (/home/opencog/opencog/dependencies/atomspace/opencog/atoms/base/ClassServer.cc:154)
 	Stack Trace:
-	2: Logger.cc:481	  opencog::Logger::logva(opencog::Logger::Level, char const*, __va_list_tag*)
+	2: basic_string.h:293	  std::string::_M_data() const
 	3: Logger.cc:493	  opencog::Logger::Error::operator()(char const*, ...)
 	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
 	6: exceptions.cc:167	  opencog::SyntaxException::SyntaxException(char const*, char const*, ...)
-	7: ClassServer.cc:156	validating_factory()
+	7: basic_string.h:539	~basic_string()
 	8: ClassServer.cc:223	  opencog::ClassServer::factory(opencog::Handle const&) const
-	9: shared_ptr_base.h:658	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-	10: shared_ptr_base.h:933	  std::__shared_ptr<opencog::Atom, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<opencog::Atom, (__gnu_cxx::_Lock_policy)2>&&)
+	9: shared_ptr_base.h:545	~__shared_count()
+	10: shared_ptr_base.h:790	__shared_ptr()
 	11: SchemeSmobNew.cc:511	  opencog::SchemeSmob::ss_new_link(scm_unused_struct*, scm_unused_struct*)
-	12: [0xefd33] ??() ??:0
-	13: [0x5c107] ??() ??:0
-	14: [0xefd33] ??() ??:0
-	15: [0x5c21e] ??() ??:0
-	16: [0xefd33] ??() ??:0
-	17: [0x5c283] ??() ??:0
+	12: [0xecc00] ??() ??:0
+	13: [0x64747] ??() ??:0
+	14: [0xecc00] ??() ??:0
+	15: [0x6481e] ??() ??:0
+	16: [0xecc00] ??() ??:0
+	17: [0x64863] ??() ??:0
 	18: SchemeEval.cc:772	  opencog::SchemeEval::do_scm_eval(scm_unused_struct*, scm_unused_struct* (*)(void*))
-	19: SchemeEval.cc:864	  opencog::SchemeEval::c_wrap_eval_v(void*)
-	20: [0x5258a] ??() ??:0
-	21: [0xefd33] ??() ??:0
-	22: [0x5c283] ??() ??:0
-	23: [0x52d21] ??() ??:0
-	24: [0x52e05] ??() ??:0
-	25: [0x21c97] ??() ??:0
-	26: [0xd2c01] ??() ??:0
-	27: [0x1bc62] ??() ??:0
-	28: [0xd2fe8] ??() ??:0
-	29: SchemeEval.cc:911	  opencog::SchemeEval::eval_v(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-	30: SchemeEval.h:170	  opencog::SchemeEval::eval_h(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-	31: OpenPsiRulesUTest.cxxtest:147	  OpenPsiRulesUTest::test_rule_get_functions()
+	19: SchemeEval.cc:867	  opencog::SchemeEval::c_wrap_eval_v(void*)
+	20: [0x5b2ca] ??() ??:0
+	21: [0xecc00] ??() ??:0
+	22: [0x64863] ??() ??:0
+	23: [0x5b9ff] ??() ??:0
+	24: [0x5ba95] ??() ??:0
+	25: [0x1ed30] ??() ??:0
+	26: [0xd47d1] ??() ??:0
+	27: [0x192c2] ??() ??:0
+	28: [0xd4b48] ??() ??:0
+	29: SchemeEval.cc:911	  opencog::SchemeEval::eval_v(std::string const&)
+	30: shared_ptr.h:449	  opencog::SchemeEval::eval_h(std::string const&)
+	31: basic_string.h:539	  OpenPsiRulesUTest::test_rule_get_functions()
 	32: RealDescriptions.cpp:125	  CxxTest::RealTestDescription::run()
 	33: TestRunner.h:104	  CxxTest::TestRunner::runTest(CxxTest::TestDescription&)
-	34: OpenPsiRulesUTest.cpp:20	main()
-	35: [0x20830] ??() ??:0
-	36: [0x40c509] ??() ??:0
+	34: TestTracker.h:130	tracker()
+	35: ErrorPrinter.h:46	main()
+	36: [0x21f45] ??() ??:0
+	37: [0x40c7bb] ??() ??:0
 
-[2018-01-15 11:52:14:496] [ERROR] Backtrace:
+[2018-01-15 12:03:36:412] [ERROR] Backtrace:
 In ice-9/boot-9.scm:
- 157: 11 [catch #t #<catch-closure 29d2da0> ...]
+ 157: 11 [catch #t #<catch-closure 2b1e900> ...]
 In unknown file:
-   ?: 10 [apply-smob/1 #<catch-closure 29d2da0>]
+   ?: 10 [apply-smob/1 #<catch-closure 2b1e900>]
 In ice-9/boot-9.scm:
- 157: 9 [catch #t #<catch-closure 29d2c80> ...]
+ 157: 9 [catch #t #<catch-closure 2b27be0> ...]
 In unknown file:
-   ?: 8 [apply-smob/1 #<catch-closure 29d2c80>]
+   ?: 8 [apply-smob/1 #<catch-closure 2b27be0>]
    ?: 7 [call-with-input-string "(rule-2-cpp)" ...]
 In ice-9/boot-9.scm:
-2401: 6 [save-module-excursion #<procedure 2c58690 at ice-9/eval-string.scm:65:9 ()>]
+2320: 6 [save-module-excursion #<procedure 3bf9510 at ice-9/eval-string.scm:65:9 ()>]
 In ice-9/eval-string.scm:
-  44: 5 [read-and-eval #<input: string 21764e0> #:lang ...]
+  44: 5 [read-and-eval #<input: string 354c1a0> #:lang ...]
   37: 4 [lp (rule-2-cpp)]
 In /home/opencog/opencog/tests/openpsi/rules.scm:
  129: 3 [rule-2-cpp]
 In unknown file:
    ?: 2 [cog-new-link 41 # # ...]
 In ice-9/boot-9.scm:
- 102: 1 [#<procedure 2c75c00 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
+ 102: 1 [#<procedure 3430dc0 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
 In unknown file:
-   ?: 0 [apply-smob/1 #<catch-closure 29d2c40> C++-EXCEPTION ...]
+   ?: 0 [apply-smob/1 #<catch-closure 2b27b80> C++-EXCEPTION ...]
 
 ERROR: In procedure apply-smob/1:
 ERROR: In procedure cog-new-link: Invalid Atom syntax: (SequentialAndLink
@@ -908,44 +882,45 @@ Function args:
  (InheritanceLink
    (Varia
 	Stack Trace:
-	2: Logger.cc:481	  opencog::Logger::logva(opencog::Logger::Level, char const*, __va_list_tag*)
+	2: basic_string.h:293	  std::string::_M_data() const
 	3: Logger.cc:493	  opencog::Logger::Error::operator()(char const*, ...)
 	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
 	6: exceptions.cc:150	  opencog::RuntimeException::RuntimeException(char const*, char const*, ...)
-	7: SchemeEval.cc:912	  opencog::SchemeEval::eval_v(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-	8: SchemeEval.h:170	  opencog::SchemeEval::eval_h(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-	9: OpenPsiRulesUTest.cxxtest:147	  OpenPsiRulesUTest::test_rule_get_functions()
+	7: SchemeEval.cc:912	  opencog::SchemeEval::eval_v(std::string const&)
+	8: shared_ptr.h:449	  opencog::SchemeEval::eval_h(std::string const&)
+	9: basic_string.h:539	  OpenPsiRulesUTest::test_rule_get_functions()
 	10: RealDescriptions.cpp:125	  CxxTest::RealTestDescription::run()
 	11: TestRunner.h:104	  CxxTest::TestRunner::runTest(CxxTest::TestDescription&)
-	12: OpenPsiRulesUTest.cpp:20	main()
-	13: [0x20830] ??() ??:0
-	14: [0x40c509] ??() ??:0
+	12: TestTracker.h:130	tracker()
+	13: ErrorPrinter.h:46	main()
+	14: [0x21f45] ??() ??:0
+	15: [0x40c7bb] ??() ??:0
 
 In OpenPsiRulesUTest::test_rule_get_functions:
 /home/opencog/opencog/tests/openpsi/OpenPsiRulesUTest.cxxtest:134: Error: Test failed: Backtrace:
 In ice-9/boot-9.scm:
- 157: 11 [catch #t #<catch-closure 29d2da0> ...]
+ 157: 11 [catch #t #<catch-closure 2b1e900> ...]
 In unknown file:
-   ?: 10 [apply-smob/1 #<catch-closure 29d2da0>]
+   ?: 10 [apply-smob/1 #<catch-closure 2b1e900>]
 In ice-9/boot-9.scm:
- 157: 9 [catch #t #<catch-closure 29d2c80> ...]
+ 157: 9 [catch #t #<catch-closure 2b27be0> ...]
 In unknown file:
-   ?: 8 [apply-smob/1 #<catch-closure 29d2c80>]
+   ?: 8 [apply-smob/1 #<catch-closure 2b27be0>]
    ?: 7 [call-with-input-string "(rule-2-cpp)" ...]
 In ice-9/boot-9.scm:
-2401: 6 [save-module-excursion #<procedure 2c58690 at ice-9/eval-string.scm:65:9 ()>]
+2320: 6 [save-module-excursion #<procedure 3bf9510 at ice-9/eval-string.scm:65:9 ()>]
 In ice-9/eval-string.scm:
-  44: 5 [read-and-eval #<input: string 21764e0> #:lang ...]
+  44: 5 [read-and-eval #<input: string 354c1a0> #:lang ...]
   37: 4 [lp (rule-2-cpp)]
 In /home/opencog/opencog/tests/openpsi/rules.scm:
  129: 3 [rule-2-cpp]
 In unknown file:
    ?: 2 [cog-new-link 41 # # ...]
 In ice-9/boot-9.scm:
- 102: 1 [#<procedure 2c75c00 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
+ 102: 1 [#<procedure 3430dc0 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
 In unknown file:
-   ?: 0 [apply-smob/1 #<catch-closure 29d2c40> C++-EXCEPTION ...]
+   ?: 0 [apply-smob/1 #<catch-closure 2b27b80> C++-EXCEPTION ...]
 
 ERROR: In procedure apply-smob/1:
 ERROR: In procedure cog-new-link: Invalid Atom syntax: (SequentialAndLink
@@ -980,13 +955,13 @@ Function args:
 )
  (InheritanceLink
    (Varia
-[2018-01-15 11:52:14:535] [INFO] ##### Finished setting up to run a test #####
-[2018-01-15 11:52:14:535] [INFO] BEGIN TEST: test_get_query
-[2018-01-15 11:52:14:545] [INFO] END TEST: test_get_query
+[2018-01-15 12:03:36:456] [INFO] ##### Finished setting up to run a test #####
+[2018-01-15 12:03:36:456] [INFO] BEGIN TEST: test_get_query
+[2018-01-15 12:03:36:464] [INFO] END TEST: test_get_query
 .
 Failed 2 and Skipped 0 of 3 tests
 Success rate: 33%
-warning: possibly unbound variable `psi-get-context'
+;;; /home/opencog/opencog/tests/openpsi/rules.scm:310:31: warning: possibly unbound variable `psi-get-context'
 ;;; /home/opencog/opencog/tests/openpsi/rules.scm:314:17: warning: possibly unbound variable `psi-get-goal'
 ;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/tests/openpsi/rules.scm.go
 ;;; compiling /usr/local/share/opencog/scm/opencog/openpsi.scm
@@ -1025,11 +1000,11 @@ warning: possibly unbound variable `psi-get-context'
 ;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/tests/openpsi/psi-implicator.scm.go
 
       Start 13: OpenPsiImplicatorUTest
-13/25 Test #13: OpenPsiImplicatorUTest ...........   Passed    0.17 sec
+13/25 Test #13: OpenPsiImplicatorUTest ...........   Passed    0.18 sec
       Start 14: OpenPsiSCMUTest
-14/25 Test #14: OpenPsiSCMUTest ..................***Failed    8.79 sec
-Running cxxtest tests (8 tests)[2018-01-15 11:52:14:793] [INFO] BEGIN TEST: test_psi_get_action
-[2018-01-15 11:52:14:794] [ERROR] Invalid Atom syntax: (SequentialAndLink
+14/25 Test #14: OpenPsiSCMUTest ..................***Failed    9.04 sec
+Running cxxtest tests (8 tests)[2018-01-15 12:03:36:727] [INFO] BEGIN TEST: test_psi_get_action
+[2018-01-15 12:03:36:727] [ERROR] Invalid Atom syntax: (SequentialAndLink
   (ListLink
     (VariableNode "x1") ; [3075323803585289292][1]
     (VariableNode "y1") ; [4509367321611461855][1]
@@ -1053,55 +1028,56 @@ Running cxxtest tests (8 tests)[2018-01-15 11:52:14:793] [INFO] BEGIN TEST: test
 ) ; [13999116603184941779][-1]
  (/home/opencog/opencog/dependencies/atomspace/opencog/atoms/base/ClassServer.cc:154)
 	Stack Trace:
-	2: Logger.cc:481	  opencog::Logger::logva(opencog::Logger::Level, char const*, __va_list_tag*)
+	2: basic_string.h:293	  std::string::_M_data() const
 	3: Logger.cc:493	  opencog::Logger::Error::operator()(char const*, ...)
 	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
 	6: exceptions.cc:167	  opencog::SyntaxException::SyntaxException(char const*, char const*, ...)
-	7: ClassServer.cc:156	validating_factory()
+	7: basic_string.h:539	~basic_string()
 	8: ClassServer.cc:223	  opencog::ClassServer::factory(opencog::Handle const&) const
-	9: shared_ptr_base.h:658	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-	10: shared_ptr_base.h:933	  std::__shared_ptr<opencog::Atom, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<opencog::Atom, (__gnu_cxx::_Lock_policy)2>&&)
-	11: shared_ptr_base.h:663	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&)
-	12: shared_ptr_base.h:658	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-	13: SchemePrimitive.h:311	  opencog::Handle opencog::SchemePrimitiveBase<opencog::Handle, opencog::OpenPsiSCM, std::vector<opencog::Handle, std::allocator<opencog::Handle> > const&, opencog::Handle const&, opencog::Handle const&, std::shared_ptr<opencog::TruthValue const>, opencog::Handle const&>::conv_call_method<0ul, 1ul, 2ul, 3ul, 4ul>(scm_unused_struct*, std::integer_sequence<unsigned long, 0ul, 1ul, 2ul, 3ul, 4ul>)
+	9: shared_ptr_base.h:545	~__shared_count()
+	10: shared_ptr_base.h:790	__shared_ptr()
+	11: shared_ptr_base.h:779	__shared_ptr()
+	12: shared_ptr_base.h:545	~__shared_count()
+	13: stl_vector.h:416	~vector()
 	14: SchemePrimitive.h:357	  opencog::SchemePrimitive<opencog::Handle, opencog::OpenPsiSCM, std::vector<opencog::Handle, std::allocator<opencog::Handle> > const&, opencog::Handle const&, opencog::Handle const&, std::shared_ptr<opencog::TruthValue const>, opencog::Handle const&>::scm_from(opencog::Handle const&)
 	15: SchemePrimitive.cc:162	  opencog::PrimitiveEnviron::do_call(scm_unused_struct*, scm_unused_struct*)
-	16: [0xefd33] ??() ??:0
-	17: [0x5c107] ??() ??:0
-	18: [0xefd33] ??() ??:0
-	19: [0x5c21e] ??() ??:0
-	20: [0xefd33] ??() ??:0
-	21: [0x5c283] ??() ??:0
-	22: SchemeEval.cc:573	  opencog::SchemeEval::do_eval(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+	16: [0xecc00] ??() ??:0
+	17: [0x64747] ??() ??:0
+	18: [0xecc00] ??() ??:0
+	19: [0x6481e] ??() ??:0
+	20: [0xecc00] ??() ??:0
+	21: [0x64863] ??() ??:0
+	22: SchemeEval.cc:573	  opencog::SchemeEval::do_eval(std::string const&)
 	23: SchemeEval.cc:503	  opencog::SchemeEval::c_wrap_eval(void*)
-	24: [0x5258a] ??() ??:0
-	25: [0xefd33] ??() ??:0
-	26: [0x5c283] ??() ??:0
-	27: [0x52d21] ??() ??:0
-	28: [0x52e05] ??() ??:0
-	29: [0x21c97] ??() ??:0
-	30: [0xd2c01] ??() ??:0
-	31: [0x1bc62] ??() ??:0
-	32: [0xd2fe8] ??() ??:0
-	33: SchemeEval.cc:474	  opencog::SchemeEval::eval_expr(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-	34: SchemeEval.h:161	  opencog::SchemeEval::eval(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+	24: [0x5b2ca] ??() ??:0
+	25: [0xecc00] ??() ??:0
+	26: [0x64863] ??() ??:0
+	27: [0x5b9ff] ??() ??:0
+	28: [0x5ba95] ??() ??:0
+	29: [0x1ed30] ??() ??:0
+	30: [0xd47d1] ??() ??:0
+	31: [0x192c2] ??() ??:0
+	32: [0xd4b48] ??() ??:0
+	33: SchemeEval.cc:474	  opencog::SchemeEval::eval_expr(std::string const&)
+	34: SchemeEval.h:161	  opencog::SchemeEval::eval(std::string const&)
 	35: RealDescriptions.cpp:125	  CxxTest::RealTestDescription::run()
 	36: TestRunner.h:104	  CxxTest::TestRunner::runTest(CxxTest::TestDescription&)
-	37: OpenPsiSCMUTest.cpp:20	main()
-	38: [0x20830] ??() ??:0
-	39: [0x40c029] ??() ??:0
+	37: TestTracker.h:130	tracker()
+	38: ErrorPrinter.h:46	main()
+	39: [0x21f45] ??() ??:0
+	40: [0x40c096] ??() ??:0
 
 
 In OpenPsiSCMUTest::test_psi_get_action:
-/home/opencog/opencog/build/tests/openpsi/../../../tests/openpsi/OpenPsiSCMUTest.cxxtest:97: Error: Test failed: Caught scm error during eval
-/home/opencog/opencog/build/tests/openpsi/../../../tests/openpsi/OpenPsiSCMUTest.cxxtest:97: Error: Assertion failed: (false == _scm->eval_error())
-/home/opencog/opencog/build/tests/openpsi/../../../tests/openpsi/OpenPsiSCMUTest.cxxtest:98: Error: Test failed: Expected `#t`
-/home/opencog/opencog/build/tests/openpsi/../../../tests/openpsi/OpenPsiSCMUTest.cxxtest:98: Error: Expected ("#t\n" == result_1), found (#t
- != "Backtrace:\nIn ice-9/boot-9.scm:\n 157: 11 [catch #t #<catch-closure 2babac0> ...]\nIn unknown file:\n   ?: 10 [apply-smob/1 #<catch-closure 2babac0>]\nIn ice-9/boot-9.scm:\n 157: 9 [catch #t #<catch-closure 2bab340> ...]\nIn unknown file:\n   ?: 8 [apply-smob/1 #<catch-closure 2bab340>]\n   ?: 7 [call-with-input-string \"(test_psi_get_action_1)\" ...]\nIn ice-9/boot-9.scm:\n2401: 6 [save-module-excursion #<procedure 2dfbd80 at ice-9/eval-string.scm:65:9 ()>]\nIn ice-9/eval-string.scm:\n  44: 5 [read-and-eval #<input: string 2b20a90> #:lang ...]\n  37: 4 [lp (test_psi_get_action_1)]\nIn /home/opencog/opencog/tests/openpsi/rules.scm:\n 306: 3 [test_psi_get_action_1]\nIn unknown file:\n   ?: 2 [opencog-extension psi-rule (# # # # ...)]\nIn ice-9/boot-9.scm:\n 102: 1 [#<procedure 2ac1800 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]\nIn unknown file:\n   ?: 0 [apply-smob/1 #<catch-closure 2bab1c0> C++-EXCEPTION ...]\n\nERROR: In procedure apply-smob/1:\nERROR: In procedure psi-rule: Invalid Atom syntax: (SequentialAndLink\n  (ListLink\n    (VariableNode \"x1\") ; [3075323803585289292][1]\n    (VariableNode \"y1\") ; [4509367321611461855][1]\n    (ConceptNode \"Required constant for DualLink-1\") ; [6513693279266664590][1]\n    (VariableNode \"z1\") ; [7789363738438131875][1]\n  ) ; [9388949669725827865][1]\n  (InheritanceLink\n    (VariableNode \"x1\") ; [3075323803585289292][1]\n    (VariableNode \"z1\") ; [7789363738438131875][1]\n  ) ; [17616065606263674561][1]\n  (EqualLink\n    (VariableNode \"x1\") ; [3075323803585289292][1]\n    (VariableNode \"y1\") ; [4509367321611461855][1]\n  ) ; [15983647781205433047][1]\n  (ExecutionOutputLink\n    (GroundedSchemaNode \"scm: act-1\") ; [8243146992274771593][1]\n    (ListLink\n      (VariableNode \"$abc\") ; [7271483180827655747][1]\n    ) ; [16510529855447670304][1]\n  ) ; [14093850585902958211][1]\n) ; [13999116603184941779][-1]\n (/home/opencog/opencog/dependencies/atomspace/opencog/atoms/base/ClassServer.cc:154)\nFunction args:\n(((ListLink\n   (VariableNode \"x1\")\n   (VariableNode \"y1\")\n   (ConceptNode \"Required constant for DualLink-1\")\n   (VariableNode \"z1\")\n)\n (InheritanceLink\n   (VariableNode \"x1\")\n   (VariableNode \"z1\")\n)\n (EqualLink\n   (VariableNode \"x1\")\n   (VariableNode \"y1\")\n)\n) (ExecutionOutputLink\n   (GroundedSchemaNode \"scm: act-1\")\n   (ListLink\n      (VariableNode \"$abc\")\n   )\n)\n (ConceptNode \"goal-1\")\n (stv 1.000000 1.000000) (ConceptNode \"demand-1\")\n)\nABORT: C++-EXCEPTION\n")
-[2018-01-15 11:52:14:876] [INFO] END TEST: test_psi_get_action
-[2018-01-15 11:52:14:878] [INFO] BEGIN TEST: test_psi_get_context
-[2018-01-15 11:52:14:878] [ERROR] Invalid Atom syntax: (SequentialAndLink
+/home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:97: Error: Test failed: Caught scm error during eval
+/home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:97: Error: Assertion failed: (false == _scm->eval_error())
+/home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:98: Error: Test failed: Expected `#t`
+/home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:98: Error: Expected ("#t\n" == result_1), found (#t
+ != "Backtrace:\nIn ice-9/boot-9.scm:\n 157: 11 [catch #t #<catch-closure 2f2e780> ...]\nIn unknown file:\n   ?: 10 [apply-smob/1 #<catch-closure 2f2e780>]\nIn ice-9/boot-9.scm:\n 157: 9 [catch #t #<catch-closure 2f2e660> ...]\nIn unknown file:\n   ?: 8 [apply-smob/1 #<catch-closure 2f2e660>]\n   ?: 7 [call-with-input-string \"(test_psi_get_action_1)\" ...]\nIn ice-9/boot-9.scm:\n2320: 6 [save-module-excursion #<procedure 2f1c060 at ice-9/eval-string.scm:65:9 ()>]\nIn ice-9/eval-string.scm:\n  44: 5 [read-and-eval #<input: string 2bb4a90> #:lang ...]\n  37: 4 [lp (test_psi_get_action_1)]\nIn /home/opencog/opencog/tests/openpsi/rules.scm:\n 306: 3 [test_psi_get_action_1]\nIn unknown file:\n   ?: 2 [opencog-extension psi-rule (# # # # ...)]\nIn ice-9/boot-9.scm:\n 102: 1 [#<procedure 2f163c0 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]\nIn unknown file:\n   ?: 0 [apply-smob/1 #<catch-closure 2f2e620> C++-EXCEPTION ...]\n\nERROR: In procedure apply-smob/1:\nERROR: In procedure psi-rule: Invalid Atom syntax: (SequentialAndLink\n  (ListLink\n    (VariableNode \"x1\") ; [3075323803585289292][1]\n    (VariableNode \"y1\") ; [4509367321611461855][1]\n    (ConceptNode \"Required constant for DualLink-1\") ; [6513693279266664590][1]\n    (VariableNode \"z1\") ; [7789363738438131875][1]\n  ) ; [9388949669725827865][1]\n  (InheritanceLink\n    (VariableNode \"x1\") ; [3075323803585289292][1]\n    (VariableNode \"z1\") ; [7789363738438131875][1]\n  ) ; [17616065606263674561][1]\n  (EqualLink\n    (VariableNode \"x1\") ; [3075323803585289292][1]\n    (VariableNode \"y1\") ; [4509367321611461855][1]\n  ) ; [15983647781205433047][1]\n  (ExecutionOutputLink\n    (GroundedSchemaNode \"scm: act-1\") ; [8243146992274771593][1]\n    (ListLink\n      (VariableNode \"$abc\") ; [7271483180827655747][1]\n    ) ; [16510529855447670304][1]\n  ) ; [14093850585902958211][1]\n) ; [13999116603184941779][-1]\n (/home/opencog/opencog/dependencies/atomspace/opencog/atoms/base/ClassServer.cc:154)\nFunction args:\n(((ListLink\n   (VariableNode \"x1\")\n   (VariableNode \"y1\")\n   (ConceptNode \"Required constant for DualLink-1\")\n   (VariableNode \"z1\")\n)\n (InheritanceLink\n   (VariableNode \"x1\")\n   (VariableNode \"z1\")\n)\n (EqualLink\n   (VariableNode \"x1\")\n   (VariableNode \"y1\")\n)\n) (ExecutionOutputLink\n   (GroundedSchemaNode \"scm: act-1\")\n   (ListLink\n      (VariableNode \"$abc\")\n   )\n)\n (ConceptNode \"goal-1\")\n (stv 1.000000 1.000000) (ConceptNode \"demand-1\")\n)\nABORT: C++-EXCEPTION\n")
+[2018-01-15 12:03:36:841] [INFO] END TEST: test_psi_get_action
+[2018-01-15 12:03:36:846] [INFO] BEGIN TEST: test_psi_get_context
+[2018-01-15 12:03:36:846] [ERROR] Invalid Atom syntax: (SequentialAndLink
   (ListLink
     (VariableNode "x1") ; [3075323803585289292][2]
     (VariableNode "y1") ; [4509367321611461855][2]
@@ -1125,54 +1101,55 @@ In OpenPsiSCMUTest::test_psi_get_action:
 ) ; [13999116603184941779][-1]
  (/home/opencog/opencog/dependencies/atomspace/opencog/atoms/base/ClassServer.cc:154)
 	Stack Trace:
-	2: Logger.cc:481	  opencog::Logger::logva(opencog::Logger::Level, char const*, __va_list_tag*)
+	2: basic_string.h:293	  std::string::_M_data() const
 	3: Logger.cc:493	  opencog::Logger::Error::operator()(char const*, ...)
 	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
 	6: exceptions.cc:167	  opencog::SyntaxException::SyntaxException(char const*, char const*, ...)
-	7: ClassServer.cc:156	validating_factory()
+	7: basic_string.h:539	~basic_string()
 	8: ClassServer.cc:223	  opencog::ClassServer::factory(opencog::Handle const&) const
-	9: shared_ptr_base.h:658	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-	10: shared_ptr_base.h:933	  std::__shared_ptr<opencog::Atom, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<opencog::Atom, (__gnu_cxx::_Lock_policy)2>&&)
-	11: shared_ptr_base.h:663	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&)
-	12: shared_ptr_base.h:658	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-	13: SchemePrimitive.h:311	  opencog::Handle opencog::SchemePrimitiveBase<opencog::Handle, opencog::OpenPsiSCM, std::vector<opencog::Handle, std::allocator<opencog::Handle> > const&, opencog::Handle const&, opencog::Handle const&, std::shared_ptr<opencog::TruthValue const>, opencog::Handle const&>::conv_call_method<0ul, 1ul, 2ul, 3ul, 4ul>(scm_unused_struct*, std::integer_sequence<unsigned long, 0ul, 1ul, 2ul, 3ul, 4ul>)
+	9: shared_ptr_base.h:545	~__shared_count()
+	10: shared_ptr_base.h:790	__shared_ptr()
+	11: shared_ptr_base.h:779	__shared_ptr()
+	12: shared_ptr_base.h:545	~__shared_count()
+	13: stl_vector.h:416	~vector()
 	14: SchemePrimitive.h:357	  opencog::SchemePrimitive<opencog::Handle, opencog::OpenPsiSCM, std::vector<opencog::Handle, std::allocator<opencog::Handle> > const&, opencog::Handle const&, opencog::Handle const&, std::shared_ptr<opencog::TruthValue const>, opencog::Handle const&>::scm_from(opencog::Handle const&)
 	15: SchemePrimitive.cc:162	  opencog::PrimitiveEnviron::do_call(scm_unused_struct*, scm_unused_struct*)
-	16: [0xefd33] ??() ??:0
-	17: [0x5c107] ??() ??:0
-	18: [0xefd33] ??() ??:0
-	19: [0x5c21e] ??() ??:0
-	20: [0xefd33] ??() ??:0
-	21: [0x5c283] ??() ??:0
-	22: SchemeEval.cc:573	  opencog::SchemeEval::do_eval(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+	16: [0xecc00] ??() ??:0
+	17: [0x64747] ??() ??:0
+	18: [0xecc00] ??() ??:0
+	19: [0x6481e] ??() ??:0
+	20: [0xecc00] ??() ??:0
+	21: [0x64863] ??() ??:0
+	22: SchemeEval.cc:573	  opencog::SchemeEval::do_eval(std::string const&)
 	23: SchemeEval.cc:503	  opencog::SchemeEval::c_wrap_eval(void*)
-	24: [0x5258a] ??() ??:0
-	25: [0xefd33] ??() ??:0
-	26: [0x5c283] ??() ??:0
-	27: [0x52d21] ??() ??:0
-	28: [0x52e05] ??() ??:0
-	29: [0x21c97] ??() ??:0
-	30: [0xd2c01] ??() ??:0
-	31: [0x1bc62] ??() ??:0
-	32: [0xd2fe8] ??() ??:0
-	33: SchemeEval.cc:474	  opencog::SchemeEval::eval_expr(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-	34: SchemeEval.h:161	  opencog::SchemeEval::eval(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+	24: [0x5b2ca] ??() ??:0
+	25: [0xecc00] ??() ??:0
+	26: [0x64863] ??() ??:0
+	27: [0x5b9ff] ??() ??:0
+	28: [0x5ba95] ??() ??:0
+	29: [0x1ed30] ??() ??:0
+	30: [0xd47d1] ??() ??:0
+	31: [0x192c2] ??() ??:0
+	32: [0xd4b48] ??() ??:0
+	33: SchemeEval.cc:474	  opencog::SchemeEval::eval_expr(std::string const&)
+	34: SchemeEval.h:161	  opencog::SchemeEval::eval(std::string const&)
 	35: RealDescriptions.cpp:125	  CxxTest::RealTestDescription::run()
 	36: TestRunner.h:104	  CxxTest::TestRunner::runTest(CxxTest::TestDescription&)
-	37: OpenPsiSCMUTest.cpp:20	main()
-	38: [0x20830] ??() ??:0
-	39: [0x40c029] ??() ??:0
+	37: TestTracker.h:130	tracker()
+	38: ErrorPrinter.h:46	main()
+	39: [0x21f45] ??() ??:0
+	40: [0x40c096] ??() ??:0
 
 In OpenPsiSCMUTest::test_psi_get_context:
-/home/opencog/opencog/build/tests/openpsi/../../../tests/openpsi/OpenPsiSCMUTest.cxxtest:111: Error: Test failed: Caught scm error during eval
-/home/opencog/opencog/build/tests/openpsi/../../../tests/openpsi/OpenPsiSCMUTest.cxxtest:111: Error: Assertion failed: (false == _scm->eval_error())
-/home/opencog/opencog/build/tests/openpsi/../../../tests/openpsi/OpenPsiSCMUTest.cxxtest:112: Error: Test failed: Expected `#t`
-/home/opencog/opencog/build/tests/openpsi/../../../tests/openpsi/OpenPsiSCMUTest.cxxtest:112: Error: Expected ("#t\n" == result_1), found (#t
- != "Backtrace:\nIn ice-9/boot-9.scm:\n 157: 11 [catch #t #<catch-closure 359f020> ...]\nIn unknown file:\n   ?: 10 [apply-smob/1 #<catch-closure 359f020>]\nIn ice-9/boot-9.scm:\n 157: 9 [catch #t #<catch-closure 35a7f00> ...]\nIn unknown file:\n   ?: 8 [apply-smob/1 #<catch-closure 35a7f00>]\n   ?: 7 [call-with-input-string \"(test_psi_get_context_1)\" ...]\nIn ice-9/boot-9.scm:\n2401: 6 [save-module-excursion #<procedure 35de900 at ice-9/eval-string.scm:65:9 ()>]\nIn ice-9/eval-string.scm:\n  44: 5 [read-and-eval #<input: string 36055b0> #:lang ...]\n  37: 4 [lp (test_psi_get_context_1)]\nIn /home/opencog/opencog/tests/openpsi/rules.scm:\n 310: 3 [test_psi_get_context_1]\nIn unknown file:\n   ?: 2 [opencog-extension psi-rule (# # # # ...)]\nIn ice-9/boot-9.scm:\n 102: 1 [#<procedure 35f6ec0 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]\nIn unknown file:\n   ?: 0 [apply-smob/1 #<catch-closure 35a7ec0> C++-EXCEPTION ...]\n\nERROR: In procedure apply-smob/1:\nERROR: In procedure psi-rule: Invalid Atom syntax: (SequentialAndLink\n  (ListLink\n    (VariableNode \"x1\") ; [3075323803585289292][2]\n    (VariableNode \"y1\") ; [4509367321611461855][2]\n    (ConceptNode \"Required constant for DualLink-1\") ; [6513693279266664590][2]\n    (VariableNode \"z1\") ; [7789363738438131875][2]\n  ) ; [9388949669725827865][2]\n  (InheritanceLink\n    (VariableNode \"x1\") ; [3075323803585289292][2]\n    (VariableNode \"z1\") ; [7789363738438131875][2]\n  ) ; [17616065606263674561][2]\n  (EqualLink\n    (VariableNode \"x1\") ; [3075323803585289292][2]\n    (VariableNode \"y1\") ; [4509367321611461855][2]\n  ) ; [15983647781205433047][2]\n  (ExecutionOutputLink\n    (GroundedSchemaNode \"scm: act-1\") ; [8243146992274771593][2]\n    (ListLink\n      (VariableNode \"$abc\") ; [7271483180827655747][2]\n    ) ; [16510529855447670304][2]\n  ) ; [14093850585902958211][2]\n) ; [13999116603184941779][-1]\n (/home/opencog/opencog/dependencies/atomspace/opencog/atoms/base/ClassServer.cc:154)\nFunction args:\n(((ListLink\n   (VariableNode \"x1\")\n   (VariableNode \"y1\")\n   (ConceptNode \"Required constant for DualLink-1\")\n   (VariableNode \"z1\")\n)\n (InheritanceLink\n   (VariableNode \"x1\")\n   (VariableNode \"z1\")\n)\n (EqualLink\n   (VariableNode \"x1\")\n   (VariableNode \"y1\")\n)\n) (ExecutionOutputLink\n   (GroundedSchemaNode \"scm: act-1\")\n   (ListLink\n      (VariableNode \"$abc\")\n   )\n)\n (ConceptNode \"goal-1\")\n (stv 1.000000 1.000000) (ConceptNode \"demand-1\")\n)\nABORT: C++-EXCEPTION\n")
-[2018-01-15 11:52:14:956] [INFO] END TEST: test_psi_get_context
-[2018-01-15 11:52:14:958] [INFO] BEGIN TEST: test_psi_get_goal
-[2018-01-15 11:52:14:958] [ERROR] Invalid Atom syntax: (SequentialAndLink
+/home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:111: Error: Test failed: Caught scm error during eval
+/home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:111: Error: Assertion failed: (false == _scm->eval_error())
+/home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:112: Error: Test failed: Expected `#t`
+/home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:112: Error: Expected ("#t\n" == result_1), found (#t
+ != "Backtrace:\nIn ice-9/boot-9.scm:\n 157: 11 [catch #t #<catch-closure 2c06d20> ...]\nIn unknown file:\n   ?: 10 [apply-smob/1 #<catch-closure 2c06d20>]\nIn ice-9/boot-9.scm:\n 157: 9 [catch #t #<catch-closure 2c06b60> ...]\nIn unknown file:\n   ?: 8 [apply-smob/1 #<catch-closure 2c06b60>]\n   ?: 7 [call-with-input-string \"(test_psi_get_context_1)\" ...]\nIn ice-9/boot-9.scm:\n2320: 6 [save-module-excursion #<procedure 302b360 at ice-9/eval-string.scm:65:9 ()>]\nIn ice-9/eval-string.scm:\n  44: 5 [read-and-eval #<input: string 30265b0> #:lang ...]\n  37: 4 [lp (test_psi_get_context_1)]\nIn /home/opencog/opencog/tests/openpsi/rules.scm:\n 310: 3 [test_psi_get_context_1]\nIn unknown file:\n   ?: 2 [opencog-extension psi-rule (# # # # ...)]\nIn ice-9/boot-9.scm:\n 102: 1 [#<procedure 2d26980 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]\nIn unknown file:\n   ?: 0 [apply-smob/1 #<catch-closure 2c06b20> C++-EXCEPTION ...]\n\nERROR: In procedure apply-smob/1:\nERROR: In procedure psi-rule: Invalid Atom syntax: (SequentialAndLink\n  (ListLink\n    (VariableNode \"x1\") ; [3075323803585289292][2]\n    (VariableNode \"y1\") ; [4509367321611461855][2]\n    (ConceptNode \"Required constant for DualLink-1\") ; [6513693279266664590][2]\n    (VariableNode \"z1\") ; [7789363738438131875][2]\n  ) ; [9388949669725827865][2]\n  (InheritanceLink\n    (VariableNode \"x1\") ; [3075323803585289292][2]\n    (VariableNode \"z1\") ; [7789363738438131875][2]\n  ) ; [17616065606263674561][2]\n  (EqualLink\n    (VariableNode \"x1\") ; [3075323803585289292][2]\n    (VariableNode \"y1\") ; [4509367321611461855][2]\n  ) ; [15983647781205433047][2]\n  (ExecutionOutputLink\n    (GroundedSchemaNode \"scm: act-1\") ; [8243146992274771593][2]\n    (ListLink\n      (VariableNode \"$abc\") ; [7271483180827655747][2]\n    ) ; [16510529855447670304][2]\n  ) ; [14093850585902958211][2]\n) ; [13999116603184941779][-1]\n (/home/opencog/opencog/dependencies/atomspace/opencog/atoms/base/ClassServer.cc:154)\nFunction args:\n(((ListLink\n   (VariableNode \"x1\")\n   (VariableNode \"y1\")\n   (ConceptNode \"Required constant for DualLink-1\")\n   (VariableNode \"z1\")\n)\n (InheritanceLink\n   (VariableNode \"x1\")\n   (VariableNode \"z1\")\n)\n (EqualLink\n   (VariableNode \"x1\")\n   (VariableNode \"y1\")\n)\n) (ExecutionOutputLink\n   (GroundedSchemaNode \"scm: act-1\")\n   (ListLink\n      (VariableNode \"$abc\")\n   )\n)\n (ConceptNode \"goal-1\")\n (stv 1.000000 1.000000) (ConceptNode \"demand-1\")\n)\nABORT: C++-EXCEPTION\n")
+[2018-01-15 12:03:36:957] [INFO] END TEST: test_psi_get_context
+[2018-01-15 12:03:36:961] [INFO] BEGIN TEST: test_psi_get_goal
+[2018-01-15 12:03:36:961] [ERROR] Invalid Atom syntax: (SequentialAndLink
   (ListLink
     (VariableNode "x1") ; [3075323803585289292][3]
     (VariableNode "y1") ; [4509367321611461855][3]
@@ -1196,54 +1173,55 @@ In OpenPsiSCMUTest::test_psi_get_context:
 ) ; [13999116603184941779][-1]
  (/home/opencog/opencog/dependencies/atomspace/opencog/atoms/base/ClassServer.cc:154)
 	Stack Trace:
-	2: Logger.cc:481	  opencog::Logger::logva(opencog::Logger::Level, char const*, __va_list_tag*)
+	2: basic_string.h:293	  std::string::_M_data() const
 	3: Logger.cc:493	  opencog::Logger::Error::operator()(char const*, ...)
 	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
 	6: exceptions.cc:167	  opencog::SyntaxException::SyntaxException(char const*, char const*, ...)
-	7: ClassServer.cc:156	validating_factory()
+	7: basic_string.h:539	~basic_string()
 	8: ClassServer.cc:223	  opencog::ClassServer::factory(opencog::Handle const&) const
-	9: shared_ptr_base.h:658	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-	10: shared_ptr_base.h:933	  std::__shared_ptr<opencog::Atom, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<opencog::Atom, (__gnu_cxx::_Lock_policy)2>&&)
-	11: shared_ptr_base.h:663	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&)
-	12: shared_ptr_base.h:658	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-	13: SchemePrimitive.h:311	  opencog::Handle opencog::SchemePrimitiveBase<opencog::Handle, opencog::OpenPsiSCM, std::vector<opencog::Handle, std::allocator<opencog::Handle> > const&, opencog::Handle const&, opencog::Handle const&, std::shared_ptr<opencog::TruthValue const>, opencog::Handle const&>::conv_call_method<0ul, 1ul, 2ul, 3ul, 4ul>(scm_unused_struct*, std::integer_sequence<unsigned long, 0ul, 1ul, 2ul, 3ul, 4ul>)
+	9: shared_ptr_base.h:545	~__shared_count()
+	10: shared_ptr_base.h:790	__shared_ptr()
+	11: shared_ptr_base.h:779	__shared_ptr()
+	12: shared_ptr_base.h:545	~__shared_count()
+	13: stl_vector.h:416	~vector()
 	14: SchemePrimitive.h:357	  opencog::SchemePrimitive<opencog::Handle, opencog::OpenPsiSCM, std::vector<opencog::Handle, std::allocator<opencog::Handle> > const&, opencog::Handle const&, opencog::Handle const&, std::shared_ptr<opencog::TruthValue const>, opencog::Handle const&>::scm_from(opencog::Handle const&)
 	15: SchemePrimitive.cc:162	  opencog::PrimitiveEnviron::do_call(scm_unused_struct*, scm_unused_struct*)
-	16: [0xefd33] ??() ??:0
-	17: [0x5c107] ??() ??:0
-	18: [0xefd33] ??() ??:0
-	19: [0x5c21e] ??() ??:0
-	20: [0xefd33] ??() ??:0
-	21: [0x5c283] ??() ??:0
-	22: SchemeEval.cc:573	  opencog::SchemeEval::do_eval(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+	16: [0xecc00] ??() ??:0
+	17: [0x64747] ??() ??:0
+	18: [0xecc00] ??() ??:0
+	19: [0x6481e] ??() ??:0
+	20: [0xecc00] ??() ??:0
+	21: [0x64863] ??() ??:0
+	22: SchemeEval.cc:573	  opencog::SchemeEval::do_eval(std::string const&)
 	23: SchemeEval.cc:503	  opencog::SchemeEval::c_wrap_eval(void*)
-	24: [0x5258a] ??() ??:0
-	25: [0xefd33] ??() ??:0
-	26: [0x5c283] ??() ??:0
-	27: [0x52d21] ??() ??:0
-	28: [0x52e05] ??() ??:0
-	29: [0x21c97] ??() ??:0
-	30: [0xd2c01] ??() ??:0
-	31: [0x1bc62] ??() ??:0
-	32: [0xd2fe8] ??() ??:0
-	33: SchemeEval.cc:474	  opencog::SchemeEval::eval_expr(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-	34: SchemeEval.h:161	  opencog::SchemeEval::eval(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+	24: [0x5b2ca] ??() ??:0
+	25: [0xecc00] ??() ??:0
+	26: [0x64863] ??() ??:0
+	27: [0x5b9ff] ??() ??:0
+	28: [0x5ba95] ??() ??:0
+	29: [0x1ed30] ??() ??:0
+	30: [0xd47d1] ??() ??:0
+	31: [0x192c2] ??() ??:0
+	32: [0xd4b48] ??() ??:0
+	33: SchemeEval.cc:474	  opencog::SchemeEval::eval_expr(std::string const&)
+	34: SchemeEval.h:161	  opencog::SchemeEval::eval(std::string const&)
 	35: RealDescriptions.cpp:125	  CxxTest::RealTestDescription::run()
 	36: TestRunner.h:104	  CxxTest::TestRunner::runTest(CxxTest::TestDescription&)
-	37: OpenPsiSCMUTest.cpp:20	main()
-	38: [0x20830] ??() ??:0
-	39: [0x40c029] ??() ??:0
+	37: TestTracker.h:130	tracker()
+	38: ErrorPrinter.h:46	main()
+	39: [0x21f45] ??() ??:0
+	40: [0x40c096] ??() ??:0
 
 In OpenPsiSCMUTest::test_psi_get_goal:
-/home/opencog/opencog/build/tests/openpsi/../../../tests/openpsi/OpenPsiSCMUTest.cxxtest:125: Error: Test failed: Caught scm error during eval
-/home/opencog/opencog/build/tests/openpsi/../../../tests/openpsi/OpenPsiSCMUTest.cxxtest:125: Error: Assertion failed: (false == _scm->eval_error())
-/home/opencog/opencog/build/tests/openpsi/../../../tests/openpsi/OpenPsiSCMUTest.cxxtest:126: Error: Test failed: Expected `#t`
-/home/opencog/opencog/build/tests/openpsi/../../../tests/openpsi/OpenPsiSCMUTest.cxxtest:126: Error: Expected ("#t\n" == result_1), found (#t
- != "Backtrace:\nIn ice-9/boot-9.scm:\n 157: 11 [catch #t #<catch-closure 35a7240> ...]\nIn unknown file:\n   ?: 10 [apply-smob/1 #<catch-closure 35a7240>]\nIn ice-9/boot-9.scm:\n 157: 9 [catch #t #<catch-closure 35a7120> ...]\nIn unknown file:\n   ?: 8 [apply-smob/1 #<catch-closure 35a7120>]\n   ?: 7 [call-with-input-string \"(test_psi_get_goal_1)\" ...]\nIn ice-9/boot-9.scm:\n2401: 6 [save-module-excursion #<procedure 35de8a0 at ice-9/eval-string.scm:65:9 ()>]\nIn ice-9/eval-string.scm:\n  44: 5 [read-and-eval #<input: string 3574dd0> #:lang ...]\n  37: 4 [lp (test_psi_get_goal_1)]\nIn /home/opencog/opencog/tests/openpsi/rules.scm:\n 314: 3 [test_psi_get_goal_1]\nIn unknown file:\n   ?: 2 [opencog-extension psi-rule (# # # # ...)]\nIn ice-9/boot-9.scm:\n 102: 1 [#<procedure 35f6ec0 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]\nIn unknown file:\n   ?: 0 [apply-smob/1 #<catch-closure 35a70e0> C++-EXCEPTION ...]\n\nERROR: In procedure apply-smob/1:\nERROR: In procedure psi-rule: Invalid Atom syntax: (SequentialAndLink\n  (ListLink\n    (VariableNode \"x1\") ; [3075323803585289292][3]\n    (VariableNode \"y1\") ; [4509367321611461855][3]\n    (ConceptNode \"Required constant for DualLink-1\") ; [6513693279266664590][3]\n    (VariableNode \"z1\") ; [7789363738438131875][3]\n  ) ; [9388949669725827865][3]\n  (InheritanceLink\n    (VariableNode \"x1\") ; [3075323803585289292][3]\n    (VariableNode \"z1\") ; [7789363738438131875][3]\n  ) ; [17616065606263674561][3]\n  (EqualLink\n    (VariableNode \"x1\") ; [3075323803585289292][3]\n    (VariableNode \"y1\") ; [4509367321611461855][3]\n  ) ; [15983647781205433047][3]\n  (ExecutionOutputLink\n    (GroundedSchemaNode \"scm: act-1\") ; [8243146992274771593][3]\n    (ListLink\n      (VariableNode \"$abc\") ; [7271483180827655747][3]\n    ) ; [16510529855447670304][3]\n  ) ; [14093850585902958211][3]\n) ; [13999116603184941779][-1]\n (/home/opencog/opencog/dependencies/atomspace/opencog/atoms/base/ClassServer.cc:154)\nFunction args:\n(((ListLink\n   (VariableNode \"x1\")\n   (VariableNode \"y1\")\n   (ConceptNode \"Required constant for DualLink-1\")\n   (VariableNode \"z1\")\n)\n (InheritanceLink\n   (VariableNode \"x1\")\n   (VariableNode \"z1\")\n)\n (EqualLink\n   (VariableNode \"x1\")\n   (VariableNode \"y1\")\n)\n) (ExecutionOutputLink\n   (GroundedSchemaNode \"scm: act-1\")\n   (ListLink\n      (VariableNode \"$abc\")\n   )\n)\n (ConceptNode \"goal-1\")\n (stv 1.000000 1.000000) (ConceptNode \"demand-1\")\n)\nABORT: C++-EXCEPTION\n")
-[2018-01-15 11:52:15:036] [INFO] END TEST: test_psi_get_goal
-[2018-01-15 11:52:15:039] [INFO] BEGIN TEST: test_psi_satisfiable__predicate
-[2018-01-15 11:52:15:039] [ERROR] Invalid Atom syntax: (SequentialAndLink
+/home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:125: Error: Test failed: Caught scm error during eval
+/home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:125: Error: Assertion failed: (false == _scm->eval_error())
+/home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:126: Error: Test failed: Expected `#t`
+/home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:126: Error: Expected ("#t\n" == result_1), found (#t
+ != "Backtrace:\nIn ice-9/boot-9.scm:\n 157: 11 [catch #t #<catch-closure 2c06e40> ...]\nIn unknown file:\n   ?: 10 [apply-smob/1 #<catch-closure 2c06e40>]\nIn ice-9/boot-9.scm:\n 157: 9 [catch #t #<catch-closure 2c06d20> ...]\nIn unknown file:\n   ?: 8 [apply-smob/1 #<catch-closure 2c06d20>]\n   ?: 7 [call-with-input-string \"(test_psi_get_goal_1)\" ...]\nIn ice-9/boot-9.scm:\n2320: 6 [save-module-excursion #<procedure 2c81e70 at ice-9/eval-string.scm:65:9 ()>]\nIn ice-9/eval-string.scm:\n  44: 5 [read-and-eval #<input: string 2d384e0> #:lang ...]\n  37: 4 [lp (test_psi_get_goal_1)]\nIn /home/opencog/opencog/tests/openpsi/rules.scm:\n 314: 3 [test_psi_get_goal_1]\nIn unknown file:\n   ?: 2 [opencog-extension psi-rule (# # # # ...)]\nIn ice-9/boot-9.scm:\n 102: 1 [#<procedure 2d26d80 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]\nIn unknown file:\n   ?: 0 [apply-smob/1 #<catch-closure 2c06c40> C++-EXCEPTION ...]\n\nERROR: In procedure apply-smob/1:\nERROR: In procedure psi-rule: Invalid Atom syntax: (SequentialAndLink\n  (ListLink\n    (VariableNode \"x1\") ; [3075323803585289292][3]\n    (VariableNode \"y1\") ; [4509367321611461855][3]\n    (ConceptNode \"Required constant for DualLink-1\") ; [6513693279266664590][3]\n    (VariableNode \"z1\") ; [7789363738438131875][3]\n  ) ; [9388949669725827865][3]\n  (InheritanceLink\n    (VariableNode \"x1\") ; [3075323803585289292][3]\n    (VariableNode \"z1\") ; [7789363738438131875][3]\n  ) ; [17616065606263674561][3]\n  (EqualLink\n    (VariableNode \"x1\") ; [3075323803585289292][3]\n    (VariableNode \"y1\") ; [4509367321611461855][3]\n  ) ; [15983647781205433047][3]\n  (ExecutionOutputLink\n    (GroundedSchemaNode \"scm: act-1\") ; [8243146992274771593][3]\n    (ListLink\n      (VariableNode \"$abc\") ; [7271483180827655747][3]\n    ) ; [16510529855447670304][3]\n  ) ; [14093850585902958211][3]\n) ; [13999116603184941779][-1]\n (/home/opencog/opencog/dependencies/atomspace/opencog/atoms/base/ClassServer.cc:154)\nFunction args:\n(((ListLink\n   (VariableNode \"x1\")\n   (VariableNode \"y1\")\n   (ConceptNode \"Required constant for DualLink-1\")\n   (VariableNode \"z1\")\n)\n (InheritanceLink\n   (VariableNode \"x1\")\n   (VariableNode \"z1\")\n)\n (EqualLink\n   (VariableNode \"x1\")\n   (VariableNode \"y1\")\n)\n) (ExecutionOutputLink\n   (GroundedSchemaNode \"scm: act-1\")\n   (ListLink\n      (VariableNode \"$abc\")\n   )\n)\n (ConceptNode \"goal-1\")\n (stv 1.000000 1.000000) (ConceptNode \"demand-1\")\n)\nABORT: C++-EXCEPTION\n")
+[2018-01-15 12:03:37:071] [INFO] END TEST: test_psi_get_goal
+[2018-01-15 12:03:37:075] [INFO] BEGIN TEST: test_psi_satisfiable__predicate
+[2018-01-15 12:03:37:076] [ERROR] Invalid Atom syntax: (SequentialAndLink
   (ListLink
     (VariableNode "x1") ; [3075323803585289292][4]
     (VariableNode "y1") ; [4509367321611461855][4]
@@ -1267,68 +1245,69 @@ In OpenPsiSCMUTest::test_psi_get_goal:
 ) ; [13999116603184941779][-1]
  (/home/opencog/opencog/dependencies/atomspace/opencog/atoms/base/ClassServer.cc:154)
 	Stack Trace:
-	2: Logger.cc:481	  opencog::Logger::logva(opencog::Logger::Level, char const*, __va_list_tag*)
+	2: basic_string.h:293	  std::string::_M_data() const
 	3: Logger.cc:493	  opencog::Logger::Error::operator()(char const*, ...)
 	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
 	6: exceptions.cc:167	  opencog::SyntaxException::SyntaxException(char const*, char const*, ...)
-	7: ClassServer.cc:156	validating_factory()
+	7: basic_string.h:539	~basic_string()
 	8: ClassServer.cc:223	  opencog::ClassServer::factory(opencog::Handle const&) const
-	9: shared_ptr_base.h:658	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-	10: shared_ptr_base.h:933	  std::__shared_ptr<opencog::Atom, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<opencog::Atom, (__gnu_cxx::_Lock_policy)2>&&)
-	11: shared_ptr_base.h:663	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&)
-	12: shared_ptr_base.h:658	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-	13: SchemePrimitive.h:311	  opencog::Handle opencog::SchemePrimitiveBase<opencog::Handle, opencog::OpenPsiSCM, std::vector<opencog::Handle, std::allocator<opencog::Handle> > const&, opencog::Handle const&, opencog::Handle const&, std::shared_ptr<opencog::TruthValue const>, opencog::Handle const&>::conv_call_method<0ul, 1ul, 2ul, 3ul, 4ul>(scm_unused_struct*, std::integer_sequence<unsigned long, 0ul, 1ul, 2ul, 3ul, 4ul>)
+	9: shared_ptr_base.h:545	~__shared_count()
+	10: shared_ptr_base.h:790	__shared_ptr()
+	11: shared_ptr_base.h:779	__shared_ptr()
+	12: shared_ptr_base.h:545	~__shared_count()
+	13: stl_vector.h:416	~vector()
 	14: SchemePrimitive.h:357	  opencog::SchemePrimitive<opencog::Handle, opencog::OpenPsiSCM, std::vector<opencog::Handle, std::allocator<opencog::Handle> > const&, opencog::Handle const&, opencog::Handle const&, std::shared_ptr<opencog::TruthValue const>, opencog::Handle const&>::scm_from(opencog::Handle const&)
 	15: SchemePrimitive.cc:162	  opencog::PrimitiveEnviron::do_call(scm_unused_struct*, scm_unused_struct*)
-	16: [0xefd33] ??() ??:0
-	17: [0x5c107] ??() ??:0
-	18: [0xefd33] ??() ??:0
-	19: [0x5c21e] ??() ??:0
-	20: [0xefd33] ??() ??:0
-	21: [0x5c283] ??() ??:0
+	16: [0xecc00] ??() ??:0
+	17: [0x64747] ??() ??:0
+	18: [0xecc00] ??() ??:0
+	19: [0x6481e] ??() ??:0
+	20: [0xecc00] ??() ??:0
+	21: [0x64863] ??() ??:0
 	22: SchemeEval.cc:772	  opencog::SchemeEval::do_scm_eval(scm_unused_struct*, scm_unused_struct* (*)(void*))
-	23: SchemeEval.cc:864	  opencog::SchemeEval::c_wrap_eval_v(void*)
-	24: [0x5258a] ??() ??:0
-	25: [0xefd33] ??() ??:0
-	26: [0x5c283] ??() ??:0
-	27: [0x52d21] ??() ??:0
-	28: [0x52e05] ??() ??:0
-	29: [0x21c97] ??() ??:0
-	30: [0xd2c01] ??() ??:0
-	31: [0x1bc62] ??() ??:0
-	32: [0xd2fe8] ??() ??:0
-	33: SchemeEval.cc:911	  opencog::SchemeEval::eval_v(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-	34: SchemeEval.h:174	  opencog::SchemeEval::eval_tv(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+	23: SchemeEval.cc:867	  opencog::SchemeEval::c_wrap_eval_v(void*)
+	24: [0x5b2ca] ??() ??:0
+	25: [0xecc00] ??() ??:0
+	26: [0x64863] ??() ??:0
+	27: [0x5b9ff] ??() ??:0
+	28: [0x5ba95] ??() ??:0
+	29: [0x1ed30] ??() ??:0
+	30: [0xd47d1] ??() ??:0
+	31: [0x192c2] ??() ??:0
+	32: [0xd4b48] ??() ??:0
+	33: SchemeEval.cc:911	  opencog::SchemeEval::eval_v(std::string const&)
+	34: shared_ptr.h:449	  OpenPsiSCMUTest::test_psi_satisfiable__predicate()
 	35: RealDescriptions.cpp:125	  CxxTest::RealTestDescription::run()
 	36: TestRunner.h:104	  CxxTest::TestRunner::runTest(CxxTest::TestDescription&)
-	37: OpenPsiSCMUTest.cpp:20	main()
-	38: [0x20830] ??() ??:0
-	39: [0x40c029] ??() ??:0
+	37: TestTracker.h:130	tracker()
+	38: ErrorPrinter.h:46	main()
+	39: [0x21f45] ??() ??:0
+	40: [0x40c096] ??() ??:0
 
-[2018-01-15 11:52:15:118] [ERROR] Backtrace:
+[2018-01-15 12:03:37:186] [ERROR] Backtrace:
 In ice-9/boot-9.scm:
- 157: 11 [catch #t #<catch-closure 35a77e0> ...]
+ 157: 11 [catch #t #<catch-closure 3033760> ...]
 In unknown file:
-   ?: 10 [apply-smob/1 #<catch-closure 35a77e0>]
+   ?: 10 [apply-smob/1 #<catch-closure 3033760>]
 In ice-9/boot-9.scm:
- 157: 9 [catch #t #<catch-closure 35a76c0> ...]
+ 157: 9 [catch #t #<catch-closure 3033640> ...]
 In unknown file:
-   ?: 8 [apply-smob/1 #<catch-closure 35a76c0>]
+   ?: 8 [apply-smob/1 #<catch-closure 3033640>]
    ?: 7 [call-with-input-string "(psi-satisfiable? (rule-1))" ...]
 In ice-9/boot-9.scm:
-2401: 6 [save-module-excursion #<procedure 35de690 at ice-9/eval-string.scm:65:9 ()>]
+2320: 6 [save-module-excursion #<procedure 2c817b0 at ice-9/eval-string.scm:65:9 ()>]
 In ice-9/eval-string.scm:
-  44: 5 [read-and-eval #<input: string 3572a90> #:lang ...]
+  44: 5 [read-and-eval #<input: string 30084e0> #:lang ...]
   37: 4 [lp (psi-satisfiable? (rule-1))]
 In ice-9/eval.scm:
  387: 3 [eval # ()]
 In unknown file:
    ?: 2 [opencog-extension psi-rule (# # # # ...)]
 In ice-9/boot-9.scm:
- 102: 1 [#<procedure 35f6bc0 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
+ 102: 1 [#<procedure 2d26740 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
 In unknown file:
-   ?: 0 [apply-smob/1 #<catch-closure 35a7640> C++-EXCEPTION ...]
+   ?: 0 [apply-smob/1 #<catch-closure 3033600> C++-EXCEPTION ...]
 
 ERROR: In procedure apply-smob/1:
 ERROR: In procedure psi-rule: Invalid Atom syntax: (SequentialAndLink
@@ -1361,43 +1340,44 @@ Function args:
    (ConceptNode "Required constant for DualLink-1")
    (VariableNode
 	Stack Trace:
-	2: Logger.cc:481	  opencog::Logger::logva(opencog::Logger::Level, char const*, __va_list_tag*)
+	2: basic_string.h:293	  std::string::_M_data() const
 	3: Logger.cc:493	  opencog::Logger::Error::operator()(char const*, ...)
 	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
 	6: exceptions.cc:150	  opencog::RuntimeException::RuntimeException(char const*, char const*, ...)
-	7: SchemeEval.cc:912	  opencog::SchemeEval::eval_v(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-	8: SchemeEval.h:174	  opencog::SchemeEval::eval_tv(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+	7: SchemeEval.cc:912	  opencog::SchemeEval::eval_v(std::string const&)
+	8: shared_ptr.h:449	  OpenPsiSCMUTest::test_psi_satisfiable__predicate()
 	9: RealDescriptions.cpp:125	  CxxTest::RealTestDescription::run()
 	10: TestRunner.h:104	  CxxTest::TestRunner::runTest(CxxTest::TestDescription&)
-	11: OpenPsiSCMUTest.cpp:20	main()
-	12: [0x20830] ??() ??:0
-	13: [0x40c029] ??() ??:0
+	11: TestTracker.h:130	tracker()
+	12: ErrorPrinter.h:46	main()
+	13: [0x21f45] ??() ??:0
+	14: [0x40c096] ??() ??:0
 
 In OpenPsiSCMUTest::test_psi_satisfiable__predicate:
 /home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:133: Error: Test failed: Backtrace:
 In ice-9/boot-9.scm:
- 157: 11 [catch #t #<catch-closure 35a77e0> ...]
+ 157: 11 [catch #t #<catch-closure 3033760> ...]
 In unknown file:
-   ?: 10 [apply-smob/1 #<catch-closure 35a77e0>]
+   ?: 10 [apply-smob/1 #<catch-closure 3033760>]
 In ice-9/boot-9.scm:
- 157: 9 [catch #t #<catch-closure 35a76c0> ...]
+ 157: 9 [catch #t #<catch-closure 3033640> ...]
 In unknown file:
-   ?: 8 [apply-smob/1 #<catch-closure 35a76c0>]
+   ?: 8 [apply-smob/1 #<catch-closure 3033640>]
    ?: 7 [call-with-input-string "(psi-satisfiable? (rule-1))" ...]
 In ice-9/boot-9.scm:
-2401: 6 [save-module-excursion #<procedure 35de690 at ice-9/eval-string.scm:65:9 ()>]
+2320: 6 [save-module-excursion #<procedure 2c817b0 at ice-9/eval-string.scm:65:9 ()>]
 In ice-9/eval-string.scm:
-  44: 5 [read-and-eval #<input: string 3572a90> #:lang ...]
+  44: 5 [read-and-eval #<input: string 30084e0> #:lang ...]
   37: 4 [lp (psi-satisfiable? (rule-1))]
 In ice-9/eval.scm:
  387: 3 [eval # ()]
 In unknown file:
    ?: 2 [opencog-extension psi-rule (# # # # ...)]
 In ice-9/boot-9.scm:
- 102: 1 [#<procedure 35f6bc0 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
+ 102: 1 [#<procedure 2d26740 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
 In unknown file:
-   ?: 0 [apply-smob/1 #<catch-closure 35a7640> C++-EXCEPTION ...]
+   ?: 0 [apply-smob/1 #<catch-closure 3033600> C++-EXCEPTION ...]
 
 ERROR: In procedure apply-smob/1:
 ERROR: In procedure psi-rule: Invalid Atom syntax: (SequentialAndLink
@@ -1429,8 +1409,8 @@ Function args:
    (VariableNode "y1")
    (ConceptNode "Required constant for DualLink-1")
    (VariableNode
-[2018-01-15 11:52:15:154] [INFO] BEGIN TEST: test_psi_select_rules
-[2018-01-15 11:52:15:154] [ERROR] Invalid Atom syntax: (SequentialAndLink
+[2018-01-15 12:03:37:224] [INFO] BEGIN TEST: test_psi_select_rules
+[2018-01-15 12:03:37:225] [ERROR] Invalid Atom syntax: (SequentialAndLink
   (ListLink
     (VariableNode "x1") ; [3075323803585289292][5]
     (VariableNode "y1") ; [4509367321611461855][5]
@@ -1454,66 +1434,67 @@ Function args:
 ) ; [13999116603184941779][-1]
  (/home/opencog/opencog/dependencies/atomspace/opencog/atoms/base/ClassServer.cc:154)
 	Stack Trace:
-	2: Logger.cc:481	  opencog::Logger::logva(opencog::Logger::Level, char const*, __va_list_tag*)
+	2: basic_string.h:293	  std::string::_M_data() const
 	3: Logger.cc:493	  opencog::Logger::Error::operator()(char const*, ...)
 	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
 	6: exceptions.cc:167	  opencog::SyntaxException::SyntaxException(char const*, char const*, ...)
-	7: ClassServer.cc:156	validating_factory()
+	7: basic_string.h:539	~basic_string()
 	8: ClassServer.cc:223	  opencog::ClassServer::factory(opencog::Handle const&) const
-	9: shared_ptr_base.h:658	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-	10: shared_ptr_base.h:933	  std::__shared_ptr<opencog::Atom, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<opencog::Atom, (__gnu_cxx::_Lock_policy)2>&&)
-	11: shared_ptr_base.h:663	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&)
-	12: shared_ptr_base.h:658	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-	13: SchemePrimitive.h:311	  opencog::Handle opencog::SchemePrimitiveBase<opencog::Handle, opencog::OpenPsiSCM, std::vector<opencog::Handle, std::allocator<opencog::Handle> > const&, opencog::Handle const&, opencog::Handle const&, std::shared_ptr<opencog::TruthValue const>, opencog::Handle const&>::conv_call_method<0ul, 1ul, 2ul, 3ul, 4ul>(scm_unused_struct*, std::integer_sequence<unsigned long, 0ul, 1ul, 2ul, 3ul, 4ul>)
+	9: shared_ptr_base.h:545	~__shared_count()
+	10: shared_ptr_base.h:790	__shared_ptr()
+	11: shared_ptr_base.h:779	__shared_ptr()
+	12: shared_ptr_base.h:545	~__shared_count()
+	13: stl_vector.h:416	~vector()
 	14: SchemePrimitive.h:357	  opencog::SchemePrimitive<opencog::Handle, opencog::OpenPsiSCM, std::vector<opencog::Handle, std::allocator<opencog::Handle> > const&, opencog::Handle const&, opencog::Handle const&, std::shared_ptr<opencog::TruthValue const>, opencog::Handle const&>::scm_from(opencog::Handle const&)
 	15: SchemePrimitive.cc:162	  opencog::PrimitiveEnviron::do_call(scm_unused_struct*, scm_unused_struct*)
-	16: [0xefd33] ??() ??:0
-	17: [0x5c107] ??() ??:0
-	18: [0xefd33] ??() ??:0
-	19: [0x5c21e] ??() ??:0
-	20: [0xefd33] ??() ??:0
-	21: [0x5c283] ??() ??:0
+	16: [0xecc00] ??() ??:0
+	17: [0x64747] ??() ??:0
+	18: [0xecc00] ??() ??:0
+	19: [0x6481e] ??() ??:0
+	20: [0xecc00] ??() ??:0
+	21: [0x64863] ??() ??:0
 	22: SchemeEval.cc:772	  opencog::SchemeEval::do_scm_eval(scm_unused_struct*, scm_unused_struct* (*)(void*))
-	23: SchemeEval.cc:864	  opencog::SchemeEval::c_wrap_eval_v(void*)
-	24: [0x5258a] ??() ??:0
-	25: [0xefd33] ??() ??:0
-	26: [0x5c283] ??() ??:0
-	27: [0x52d21] ??() ??:0
-	28: [0x52e05] ??() ??:0
-	29: [0x21c97] ??() ??:0
-	30: [0xd2c01] ??() ??:0
-	31: [0x1bc62] ??() ??:0
-	32: [0xd2fe8] ??() ??:0
-	33: SchemeEval.cc:911	  opencog::SchemeEval::eval_v(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-	34: SchemeEval.h:170	  opencog::SchemeEval::eval_h(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+	23: SchemeEval.cc:867	  opencog::SchemeEval::c_wrap_eval_v(void*)
+	24: [0x5b2ca] ??() ??:0
+	25: [0xecc00] ??() ??:0
+	26: [0x64863] ??() ??:0
+	27: [0x5b9ff] ??() ??:0
+	28: [0x5ba95] ??() ??:0
+	29: [0x1ed30] ??() ??:0
+	30: [0xd47d1] ??() ??:0
+	31: [0x192c2] ??() ??:0
+	32: [0xd4b48] ??() ??:0
+	33: SchemeEval.cc:911	  opencog::SchemeEval::eval_v(std::string const&)
+	34: shared_ptr.h:449	  OpenPsiSCMUTest::test_psi_select_rules()
 	35: RealDescriptions.cpp:125	  CxxTest::RealTestDescription::run()
 	36: TestRunner.h:104	  CxxTest::TestRunner::runTest(CxxTest::TestDescription&)
-	37: OpenPsiSCMUTest.cpp:20	main()
-	38: [0x20830] ??() ??:0
-	39: [0x40c029] ??() ??:0
+	37: TestTracker.h:130	tracker()
+	38: ErrorPrinter.h:46	main()
+	39: [0x21f45] ??() ??:0
+	40: [0x40c096] ??() ??:0
 
-[2018-01-15 11:52:15:233] [ERROR] Backtrace:
+[2018-01-15 12:03:37:335] [ERROR] Backtrace:
 In ice-9/boot-9.scm:
- 157: 10 [catch #t #<catch-closure 35a73e0> ...]
+ 157: 10 [catch #t #<catch-closure 2c06f80> ...]
 In unknown file:
-   ?: 9 [apply-smob/1 #<catch-closure 35a73e0>]
+   ?: 9 [apply-smob/1 #<catch-closure 2c06f80>]
 In ice-9/boot-9.scm:
- 157: 8 [catch #t #<catch-closure 35a7280> ...]
+ 157: 8 [catch #t #<catch-closure 2c06da0> ...]
 In unknown file:
-   ?: 7 [apply-smob/1 #<catch-closure 35a7280>]
+   ?: 7 [apply-smob/1 #<catch-closure 2c06da0>]
    ?: 6 [call-with-input-string "(rule-1)" ...]
 In ice-9/boot-9.scm:
-2401: 5 [save-module-excursion #<procedure 35d12a0 at ice-9/eval-string.scm:65:9 ()>]
+2320: 5 [save-module-excursion #<procedure 2c725a0 at ice-9/eval-string.scm:65:9 ()>]
 In ice-9/eval-string.scm:
-  44: 4 [read-and-eval #<input: string 35728f0> #:lang ...]
+  44: 4 [read-and-eval #<input: string 3008d00> #:lang ...]
   37: 3 [lp (rule-1)]
 In unknown file:
    ?: 2 [opencog-extension psi-rule (# # # # ...)]
 In ice-9/boot-9.scm:
- 102: 1 [#<procedure 35f67c0 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
+ 102: 1 [#<procedure 2d26640 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
 In unknown file:
-   ?: 0 [apply-smob/1 #<catch-closure 35a7240> C++-EXCEPTION ...]
+   ?: 0 [apply-smob/1 #<catch-closure 2c06d60> C++-EXCEPTION ...]
 
 ERROR: In procedure apply-smob/1:
 ERROR: In procedure psi-rule: Invalid Atom syntax: (SequentialAndLink
@@ -1552,41 +1533,42 @@ Function args:
 )
  (E
 	Stack Trace:
-	2: Logger.cc:481	  opencog::Logger::logva(opencog::Logger::Level, char const*, __va_list_tag*)
+	2: basic_string.h:293	  std::string::_M_data() const
 	3: Logger.cc:493	  opencog::Logger::Error::operator()(char const*, ...)
 	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
 	6: exceptions.cc:150	  opencog::RuntimeException::RuntimeException(char const*, char const*, ...)
-	7: SchemeEval.cc:912	  opencog::SchemeEval::eval_v(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-	8: SchemeEval.h:170	  opencog::SchemeEval::eval_h(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+	7: SchemeEval.cc:912	  opencog::SchemeEval::eval_v(std::string const&)
+	8: shared_ptr.h:449	  OpenPsiSCMUTest::test_psi_select_rules()
 	9: RealDescriptions.cpp:125	  CxxTest::RealTestDescription::run()
 	10: TestRunner.h:104	  CxxTest::TestRunner::runTest(CxxTest::TestDescription&)
-	11: OpenPsiSCMUTest.cpp:20	main()
-	12: [0x20830] ??() ??:0
-	13: [0x40c029] ??() ??:0
+	11: TestTracker.h:130	tracker()
+	12: ErrorPrinter.h:46	main()
+	13: [0x21f45] ??() ??:0
+	14: [0x40c096] ??() ??:0
 
 In OpenPsiSCMUTest::test_psi_select_rules:
 /home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:195: Error: Test failed: Backtrace:
 In ice-9/boot-9.scm:
- 157: 10 [catch #t #<catch-closure 35a73e0> ...]
+ 157: 10 [catch #t #<catch-closure 2c06f80> ...]
 In unknown file:
-   ?: 9 [apply-smob/1 #<catch-closure 35a73e0>]
+   ?: 9 [apply-smob/1 #<catch-closure 2c06f80>]
 In ice-9/boot-9.scm:
- 157: 8 [catch #t #<catch-closure 35a7280> ...]
+ 157: 8 [catch #t #<catch-closure 2c06da0> ...]
 In unknown file:
-   ?: 7 [apply-smob/1 #<catch-closure 35a7280>]
+   ?: 7 [apply-smob/1 #<catch-closure 2c06da0>]
    ?: 6 [call-with-input-string "(rule-1)" ...]
 In ice-9/boot-9.scm:
-2401: 5 [save-module-excursion #<procedure 35d12a0 at ice-9/eval-string.scm:65:9 ()>]
+2320: 5 [save-module-excursion #<procedure 2c725a0 at ice-9/eval-string.scm:65:9 ()>]
 In ice-9/eval-string.scm:
-  44: 4 [read-and-eval #<input: string 35728f0> #:lang ...]
+  44: 4 [read-and-eval #<input: string 3008d00> #:lang ...]
   37: 3 [lp (rule-1)]
 In unknown file:
    ?: 2 [opencog-extension psi-rule (# # # # ...)]
 In ice-9/boot-9.scm:
- 102: 1 [#<procedure 35f67c0 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
+ 102: 1 [#<procedure 2d26640 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
 In unknown file:
-   ?: 0 [apply-smob/1 #<catch-closure 35a7240> C++-EXCEPTION ...]
+   ?: 0 [apply-smob/1 #<catch-closure 2c06d60> C++-EXCEPTION ...]
 
 ERROR: In procedure apply-smob/1:
 ERROR: In procedure psi-rule: Invalid Atom syntax: (SequentialAndLink
@@ -1624,8 +1606,8 @@ Function args:
    (VariableNode "z1")
 )
  (E
-[2018-01-15 11:52:15:269] [INFO] BEGIN TEST: test_psi_get_satisfiable_rules
-[2018-01-15 11:52:15:270] [ERROR] Invalid Atom syntax: (SequentialAndLink
+[2018-01-15 12:03:37:373] [INFO] BEGIN TEST: test_psi_get_satisfiable_rules
+[2018-01-15 12:03:37:373] [ERROR] Invalid Atom syntax: (SequentialAndLink
   (ListLink
     (VariableNode "x1") ; [3075323803585289292][6]
     (VariableNode "y1") ; [4509367321611461855][6]
@@ -1649,66 +1631,67 @@ Function args:
 ) ; [13999116603184941779][-1]
  (/home/opencog/opencog/dependencies/atomspace/opencog/atoms/base/ClassServer.cc:154)
 	Stack Trace:
-	2: Logger.cc:481	  opencog::Logger::logva(opencog::Logger::Level, char const*, __va_list_tag*)
+	2: basic_string.h:293	  std::string::_M_data() const
 	3: Logger.cc:493	  opencog::Logger::Error::operator()(char const*, ...)
 	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
 	6: exceptions.cc:167	  opencog::SyntaxException::SyntaxException(char const*, char const*, ...)
-	7: ClassServer.cc:156	validating_factory()
+	7: basic_string.h:539	~basic_string()
 	8: ClassServer.cc:223	  opencog::ClassServer::factory(opencog::Handle const&) const
-	9: shared_ptr_base.h:658	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-	10: shared_ptr_base.h:933	  std::__shared_ptr<opencog::Atom, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<opencog::Atom, (__gnu_cxx::_Lock_policy)2>&&)
-	11: shared_ptr_base.h:663	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&)
-	12: shared_ptr_base.h:658	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-	13: SchemePrimitive.h:311	  opencog::Handle opencog::SchemePrimitiveBase<opencog::Handle, opencog::OpenPsiSCM, std::vector<opencog::Handle, std::allocator<opencog::Handle> > const&, opencog::Handle const&, opencog::Handle const&, std::shared_ptr<opencog::TruthValue const>, opencog::Handle const&>::conv_call_method<0ul, 1ul, 2ul, 3ul, 4ul>(scm_unused_struct*, std::integer_sequence<unsigned long, 0ul, 1ul, 2ul, 3ul, 4ul>)
+	9: shared_ptr_base.h:545	~__shared_count()
+	10: shared_ptr_base.h:790	__shared_ptr()
+	11: shared_ptr_base.h:779	__shared_ptr()
+	12: shared_ptr_base.h:545	~__shared_count()
+	13: stl_vector.h:416	~vector()
 	14: SchemePrimitive.h:357	  opencog::SchemePrimitive<opencog::Handle, opencog::OpenPsiSCM, std::vector<opencog::Handle, std::allocator<opencog::Handle> > const&, opencog::Handle const&, opencog::Handle const&, std::shared_ptr<opencog::TruthValue const>, opencog::Handle const&>::scm_from(opencog::Handle const&)
 	15: SchemePrimitive.cc:162	  opencog::PrimitiveEnviron::do_call(scm_unused_struct*, scm_unused_struct*)
-	16: [0xefd33] ??() ??:0
-	17: [0x5c107] ??() ??:0
-	18: [0xefd33] ??() ??:0
-	19: [0x5c21e] ??() ??:0
-	20: [0xefd33] ??() ??:0
-	21: [0x5c283] ??() ??:0
+	16: [0xecc00] ??() ??:0
+	17: [0x64747] ??() ??:0
+	18: [0xecc00] ??() ??:0
+	19: [0x6481e] ??() ??:0
+	20: [0xecc00] ??() ??:0
+	21: [0x64863] ??() ??:0
 	22: SchemeEval.cc:772	  opencog::SchemeEval::do_scm_eval(scm_unused_struct*, scm_unused_struct* (*)(void*))
-	23: SchemeEval.cc:864	  opencog::SchemeEval::c_wrap_eval_v(void*)
-	24: [0x5258a] ??() ??:0
-	25: [0xefd33] ??() ??:0
-	26: [0x5c283] ??() ??:0
-	27: [0x52d21] ??() ??:0
-	28: [0x52e05] ??() ??:0
-	29: [0x21c97] ??() ??:0
-	30: [0xd2c01] ??() ??:0
-	31: [0x1bc62] ??() ??:0
-	32: [0xd2fe8] ??() ??:0
-	33: SchemeEval.cc:911	  opencog::SchemeEval::eval_v(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-	34: SchemeEval.h:170	  opencog::SchemeEval::eval_h(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+	23: SchemeEval.cc:867	  opencog::SchemeEval::c_wrap_eval_v(void*)
+	24: [0x5b2ca] ??() ??:0
+	25: [0xecc00] ??() ??:0
+	26: [0x64863] ??() ??:0
+	27: [0x5b9ff] ??() ??:0
+	28: [0x5ba95] ??() ??:0
+	29: [0x1ed30] ??() ??:0
+	30: [0xd47d1] ??() ??:0
+	31: [0x192c2] ??() ??:0
+	32: [0xd4b48] ??() ??:0
+	33: SchemeEval.cc:911	  opencog::SchemeEval::eval_v(std::string const&)
+	34: shared_ptr.h:449	  OpenPsiSCMUTest::test_psi_get_satisfiable_rules()
 	35: RealDescriptions.cpp:125	  CxxTest::RealTestDescription::run()
 	36: TestRunner.h:104	  CxxTest::TestRunner::runTest(CxxTest::TestDescription&)
-	37: OpenPsiSCMUTest.cpp:20	main()
-	38: [0x20830] ??() ??:0
-	39: [0x40c029] ??() ??:0
+	37: TestTracker.h:130	tracker()
+	38: ErrorPrinter.h:46	main()
+	39: [0x21f45] ??() ??:0
+	40: [0x40c096] ??() ??:0
 
-[2018-01-15 11:52:15:348] [ERROR] Backtrace:
+[2018-01-15 12:03:37:483] [ERROR] Backtrace:
 In ice-9/boot-9.scm:
- 157: 10 [catch #t #<catch-closure 3606b00> ...]
+ 157: 10 [catch #t #<catch-closure 2c06600> ...]
 In unknown file:
-   ?: 9 [apply-smob/1 #<catch-closure 3606b00>]
+   ?: 9 [apply-smob/1 #<catch-closure 2c06600>]
 In ice-9/boot-9.scm:
- 157: 8 [catch #t #<catch-closure 36069e0> ...]
+ 157: 8 [catch #t #<catch-closure 2c064a0> ...]
 In unknown file:
-   ?: 7 [apply-smob/1 #<catch-closure 36069e0>]
+   ?: 7 [apply-smob/1 #<catch-closure 2c064a0>]
    ?: 6 [call-with-input-string "(rule-1) (rule-2) (rule-3)" ...]
 In ice-9/boot-9.scm:
-2401: 5 [save-module-excursion #<procedure 360ac30 at ice-9/eval-string.scm:65:9 ()>]
+2320: 5 [save-module-excursion #<procedure 2ca5f00 at ice-9/eval-string.scm:65:9 ()>]
 In ice-9/eval-string.scm:
-  44: 4 [read-and-eval #<input: string 2a9b1a0> #:lang ...]
+  44: 4 [read-and-eval #<input: string 3008820> #:lang ...]
   37: 3 [lp (rule-1)]
 In unknown file:
    ?: 2 [opencog-extension psi-rule (# # # # ...)]
 In ice-9/boot-9.scm:
- 102: 1 [#<procedure 35f6540 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
+ 102: 1 [#<procedure 2d26e40 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
 In unknown file:
-   ?: 0 [apply-smob/1 #<catch-closure 36069a0> C++-EXCEPTION ...]
+   ?: 0 [apply-smob/1 #<catch-closure 2c06460> C++-EXCEPTION ...]
 
 ERROR: In procedure apply-smob/1:
 ERROR: In procedure psi-rule: Invalid Atom syntax: (SequentialAndLink
@@ -1745,41 +1728,42 @@ Function args:
    (VariableNode "x1")
    (Variab
 	Stack Trace:
-	2: Logger.cc:481	  opencog::Logger::logva(opencog::Logger::Level, char const*, __va_list_tag*)
+	2: basic_string.h:293	  std::string::_M_data() const
 	3: Logger.cc:493	  opencog::Logger::Error::operator()(char const*, ...)
 	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
 	6: exceptions.cc:150	  opencog::RuntimeException::RuntimeException(char const*, char const*, ...)
-	7: SchemeEval.cc:912	  opencog::SchemeEval::eval_v(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-	8: SchemeEval.h:170	  opencog::SchemeEval::eval_h(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+	7: SchemeEval.cc:912	  opencog::SchemeEval::eval_v(std::string const&)
+	8: shared_ptr.h:449	  OpenPsiSCMUTest::test_psi_get_satisfiable_rules()
 	9: RealDescriptions.cpp:125	  CxxTest::RealTestDescription::run()
 	10: TestRunner.h:104	  CxxTest::TestRunner::runTest(CxxTest::TestDescription&)
-	11: OpenPsiSCMUTest.cpp:20	main()
-	12: [0x20830] ??() ??:0
-	13: [0x40c029] ??() ??:0
+	11: TestTracker.h:130	tracker()
+	12: ErrorPrinter.h:46	main()
+	13: [0x21f45] ??() ??:0
+	14: [0x40c096] ??() ??:0
 
 In OpenPsiSCMUTest::test_psi_get_satisfiable_rules:
 /home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:267: Error: Test failed: Backtrace:
 In ice-9/boot-9.scm:
- 157: 10 [catch #t #<catch-closure 3606b00> ...]
+ 157: 10 [catch #t #<catch-closure 2c06600> ...]
 In unknown file:
-   ?: 9 [apply-smob/1 #<catch-closure 3606b00>]
+   ?: 9 [apply-smob/1 #<catch-closure 2c06600>]
 In ice-9/boot-9.scm:
- 157: 8 [catch #t #<catch-closure 36069e0> ...]
+ 157: 8 [catch #t #<catch-closure 2c064a0> ...]
 In unknown file:
-   ?: 7 [apply-smob/1 #<catch-closure 36069e0>]
+   ?: 7 [apply-smob/1 #<catch-closure 2c064a0>]
    ?: 6 [call-with-input-string "(rule-1) (rule-2) (rule-3)" ...]
 In ice-9/boot-9.scm:
-2401: 5 [save-module-excursion #<procedure 360ac30 at ice-9/eval-string.scm:65:9 ()>]
+2320: 5 [save-module-excursion #<procedure 2ca5f00 at ice-9/eval-string.scm:65:9 ()>]
 In ice-9/eval-string.scm:
-  44: 4 [read-and-eval #<input: string 2a9b1a0> #:lang ...]
+  44: 4 [read-and-eval #<input: string 3008820> #:lang ...]
   37: 3 [lp (rule-1)]
 In unknown file:
    ?: 2 [opencog-extension psi-rule (# # # # ...)]
 In ice-9/boot-9.scm:
- 102: 1 [#<procedure 35f6540 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
+ 102: 1 [#<procedure 2d26e40 at ice-9/boot-9.scm:97:6 (thrown-k . args)> C++-EXCEPTION ...]
 In unknown file:
-   ?: 0 [apply-smob/1 #<catch-closure 36069a0> C++-EXCEPTION ...]
+   ?: 0 [apply-smob/1 #<catch-closure 2c06460> C++-EXCEPTION ...]
 
 ERROR: In procedure apply-smob/1:
 ERROR: In procedure psi-rule: Invalid Atom syntax: (SequentialAndLink
@@ -1815,8 +1799,8 @@ Function args:
  (InheritanceLink
    (VariableNode "x1")
    (Variab
-[2018-01-15 11:52:15:385] [INFO] BEGIN TEST: test_psi_step_1
-[2018-01-15 11:52:15:385] [ERROR] Invalid Atom syntax: (SequentialAndLink
+[2018-01-15 12:03:37:533] [INFO] BEGIN TEST: test_psi_step_1
+[2018-01-15 12:03:37:533] [ERROR] Invalid Atom syntax: (SequentialAndLink
   (ListLink
     (VariableNode "x1") ; [3075323803585289292][7]
     (VariableNode "y1") ; [4509367321611461855][7]
@@ -1840,80 +1824,80 @@ Function args:
 ) ; [13999116603184941779][-1]
  (/home/opencog/opencog/dependencies/atomspace/opencog/atoms/base/ClassServer.cc:154)
 	Stack Trace:
-	2: Logger.cc:481	  opencog::Logger::logva(opencog::Logger::Level, char const*, __va_list_tag*)
+	2: basic_string.h:293	  std::string::_M_data() const
 	3: Logger.cc:493	  opencog::Logger::Error::operator()(char const*, ...)
 	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
 	6: exceptions.cc:167	  opencog::SyntaxException::SyntaxException(char const*, char const*, ...)
-	7: ClassServer.cc:156	validating_factory()
+	7: basic_string.h:539	~basic_string()
 	8: ClassServer.cc:223	  opencog::ClassServer::factory(opencog::Handle const&) const
-	9: shared_ptr_base.h:658	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-	10: shared_ptr_base.h:933	  std::__shared_ptr<opencog::Atom, (__gnu_cxx::_Lock_policy)2>::__shared_ptr(std::__shared_ptr<opencog::Atom, (__gnu_cxx::_Lock_policy)2>&&)
-	11: shared_ptr_base.h:663	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::__shared_count(std::__shared_count<(__gnu_cxx::_Lock_policy)2> const&)
-	12: shared_ptr_base.h:658	  std::__shared_count<(__gnu_cxx::_Lock_policy)2>::~__shared_count()
-	13: SchemePrimitive.h:311	  opencog::Handle opencog::SchemePrimitiveBase<opencog::Handle, opencog::OpenPsiSCM, std::vector<opencog::Handle, std::allocator<opencog::Handle> > const&, opencog::Handle const&, opencog::Handle const&, std::shared_ptr<opencog::TruthValue const>, opencog::Handle const&>::conv_call_method<0ul, 1ul, 2ul, 3ul, 4ul>(scm_unused_struct*, std::integer_sequence<unsigned long, 0ul, 1ul, 2ul, 3ul, 4ul>)
+	9: shared_ptr_base.h:545	~__shared_count()
+	10: shared_ptr_base.h:790	__shared_ptr()
+	11: shared_ptr_base.h:779	__shared_ptr()
+	12: shared_ptr_base.h:545	~__shared_count()
+	13: stl_vector.h:416	~vector()
 	14: SchemePrimitive.h:357	  opencog::SchemePrimitive<opencog::Handle, opencog::OpenPsiSCM, std::vector<opencog::Handle, std::allocator<opencog::Handle> > const&, opencog::Handle const&, opencog::Handle const&, std::shared_ptr<opencog::TruthValue const>, opencog::Handle const&>::scm_from(opencog::Handle const&)
 	15: SchemePrimitive.cc:162	  opencog::PrimitiveEnviron::do_call(scm_unused_struct*, scm_unused_struct*)
-	16: [0xefd33] ??() ??:0
-	17: [0x5c107] ??() ??:0
-	18: [0xefd33] ??() ??:0
-	19: [0x5c21e] ??() ??:0
-	20: [0xefd33] ??() ??:0
-	21: [0x5c283] ??() ??:0
-	22: SchemeEval.cc:573	  opencog::SchemeEval::do_eval(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+	16: [0xecc00] ??() ??:0
+	17: [0x64747] ??() ??:0
+	18: [0xecc00] ??() ??:0
+	19: [0x6481e] ??() ??:0
+	20: [0xecc00] ??() ??:0
+	21: [0x64863] ??() ??:0
+	22: SchemeEval.cc:573	  opencog::SchemeEval::do_eval(std::string const&)
 	23: SchemeEval.cc:503	  opencog::SchemeEval::c_wrap_eval(void*)
-	24: [0x5258a] ??() ??:0
-	25: [0xefd33] ??() ??:0
-	26: [0x5c283] ??() ??:0
-	27: [0x52d21] ??() ??:0
-	28: [0x52e05] ??() ??:0
-	29: [0x21c97] ??() ??:0
-	30: [0xd2c01] ??() ??:0
-	31: [0x1bc62] ??() ??:0
-	32: [0xd2fe8] ??() ??:0
-	33: SchemeEval.cc:474	  opencog::SchemeEval::eval_expr(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-	34: SchemeEval.h:161	  opencog::SchemeEval::eval(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
-	35: OpenPsiSCMUTest.cxxtest:321	  OpenPsiSCMUTest::test_psi_step_1()
-	36: RealDescriptions.cpp:125	  CxxTest::RealTestDescription::run()
-	37: TestRunner.h:104	  CxxTest::TestRunner::runTest(CxxTest::TestDescription&)
-	38: OpenPsiSCMUTest.cpp:20	main()
-	39: [0x20830] ??() ??:0
-	40: [0x40c029] ??() ??:0
+	24: [0x5b2ca] ??() ??:0
+	25: [0xecc00] ??() ??:0
+	26: [0x64863] ??() ??:0
+	27: [0x5b9ff] ??() ??:0
+	28: [0x5ba95] ??() ??:0
+	29: [0x1ed30] ??() ??:0
+	30: [0xd47d1] ??() ??:0
+	31: [0x192c2] ??() ??:0
+	32: [0xd4b48] ??() ??:0
+	33: SchemeEval.cc:474	  opencog::SchemeEval::eval_expr(std::string const&)
+	34: SchemeEval.h:161	  opencog::SchemeEval::eval(std::string const&)
+	35: RealDescriptions.cpp:125	  CxxTest::RealTestDescription::run()
+	36: TestRunner.h:104	  CxxTest::TestRunner::runTest(CxxTest::TestDescription&)
+	37: TestTracker.h:130	tracker()
+	38: ErrorPrinter.h:46	main()
+	39: [0x21f45] ??() ??:0
+	40: [0x40c096] ??() ??:0
 
 In OpenPsiSCMUTest::test_psi_step_1:
-/home/opencog/opencog/build/tests/openpsi/../../../tests/openpsi/OpenPsiSCMUTest.cxxtest:322: Error: Test failed: Caught scm error during eval
-/home/opencog/opencog/build/tests/openpsi/../../../tests/openpsi/OpenPsiSCMUTest.cxxtest:322: Error: Assertion failed: (false == _scm->eval_error())
-/home/opencog/opencog/build/tests/openpsi/../../../tests/openpsi/OpenPsiSCMUTest.cxxtest:349: Error: Expected ("#t\n" == result_2_1), found (#t
+/home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:322: Error: Test failed: Caught scm error during eval
+/home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:322: Error: Assertion failed: (false == _scm->eval_error())
+/home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:349: Error: Expected ("#t\n" == result_2_1), found (#t
  != "#f\n")
-/home/opencog/opencog/build/tests/openpsi/../../../tests/openpsi/OpenPsiSCMUTest.cxxtest:366: Error: Expected ("#t\n" == result_3_1), found (#t
+/home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:366: Error: Expected ("#t\n" == result_3_1), found (#t
  != "#f\n")
-/home/opencog/opencog/build/tests/openpsi/../../../tests/openpsi/OpenPsiSCMUTest.cxxtest:371: Error: Expected ("#t\n" == result_3_2), found (#t
+/home/opencog/opencog/tests/openpsi/OpenPsiSCMUTest.cxxtest:371: Error: Expected ("#t\n" == result_3_2), found (#t
  != "#f\n")
-[2018-01-15 11:52:15:477] [INFO] END TEST: test_psi_step_1
-[2018-01-15 11:52:15:481] [INFO] BEGIN TEST: test_psi_run_and_psi_halt
-[2018-01-15 11:52:23:499] [INFO] END TEST: test_psi_run_and_psi_halt
+[2018-01-15 12:03:37:654] [INFO] END TEST: test_psi_step_1
+[2018-01-15 12:03:37:658] [INFO] BEGIN TEST: test_psi_run_and_psi_halt
+[2018-01-15 12:03:45:678] [INFO] END TEST: test_psi_run_and_psi_halt
 .
 Failed 7 and Skipped 0 of 8 tests
 Success rate: 12%
 
       Start 15: PythonModuleUTest
-15/25 Test #15: PythonModuleUTest ................   Passed    0.12 sec
+15/25 Test #15: PythonModuleUTest ................   Passed    0.13 sec
       Start 16: PyEvalUTest
 16/25 Test #16: PyEvalUTest ......................   Passed    0.07 sec
       Start 17: CythonServer
-17/25 Test #17: CythonServer .....................   Passed    0.09 sec
+17/25 Test #17: CythonServer .....................   Passed    0.05 sec
       Start 18: CythonStatistics
-18/25 Test #18: CythonStatistics .................   Passed    0.08 sec
+18/25 Test #18: CythonStatistics .................   Passed    0.05 sec
       Start 19: RestApiTest
-19/25 Test #19: RestApiTest ......................   Passed    0.32 sec
+19/25 Test #19: RestApiTest ......................   Passed    0.21 sec
       Start 20: BlendingTest
-20/25 Test #20: BlendingTest .....................   Passed    0.10 sec
+20/25 Test #20: BlendingTest .....................   Passed    0.09 sec
       Start 21: DimEmbedUTest
-21/25 Test #21: DimEmbedUTest ....................   Passed    0.06 sec
+21/25 Test #21: DimEmbedUTest ....................   Passed    0.07 sec
       Start 22: StatisticsUTest
 22/25 Test #22: StatisticsUTest ..................   Passed    0.00 sec
       Start 23: PatternMinerUTest
-23/25 Test #23: PatternMinerUTest ................***Failed    1.97 sec
+23/25 Test #23: PatternMinerUTest ................***Failed    2.07 sec
 Running cxxtest tests (5 tests)
 Error: output_pattern_quoted_linktype :  in config file doesn't exist!
 
@@ -2055,22 +2039,22 @@ Cannot find Node Type:  in config file.
 Cannot find Node Type:  in config file.
 
 Cannot find Node Type:  in config file.
-[INFO] BEGIN TEST: test_PatternMiner_AB_AC
 Debug: PatternMiner init finished! 
 
 Debug: PatternMining start! Max gram = 4, mode = Depth_First
 Using 4 threads. 
 Corpus size: 2 links in total. 
 
+[INFO] BEGIN TEST: test_PatternMiner_AB_AC
+
+Start thread 1: will process Link number from 0 to (excluded) 0
 
 Start thread 0: will process Link number from 0 to (excluded) 0
 
-Start thread 1: will process Link number from 0 to (excluded) 0
-100% completed in Thread 0.
 Start thread 2: will process Link number from 0 to (excluded) 0
-100% completed in Thread 1.100% completed in Thread 2.
+
 Start thread 3: will process Link number from 0 to (excluded) 2
-0% completed in Thread 3.50% completed in Thread 3.100% completed in Thread 3.
+100% completed in Thread 0.100% completed in Thread 1.100% completed in Thread 2.0% completed in Thread 3.50% completed in Thread 3.100% completed in Thread 3.
 Finished mining 1~4 gram patterns.
 
 totalLinkNum = 2, actualProcessedLinkNum = 2
@@ -2117,13 +2101,13 @@ Debug: PatternMiner: writing  (gram = 4) frequent patterns to file FrequentPatte
 
 
 Pattern Mining Finished! Total time: 0 seconds. 
-.[INFO] The result top 1-gram pattern: 
+[INFO] The result top 1-gram pattern: 
 (InheritanceLink )
   (ConceptNode A)
   (PatternVariableNode $var_1)
 
 
-[INFO] BEGIN TEST: test_PatternMiner_SodaDrinker
+.[INFO] BEGIN TEST: test_PatternMiner_SodaDrinker
 
 Error: output_pattern_quoted_linktype :  in config file doesn't exist!
 
@@ -2141,14 +2125,14 @@ Using 4 threads.
 Corpus size: 60 links in total. 
 
 
-Start thread 2: will process Link number from 30 to (excluded) 45
-
-Start thread 
-Start thread 0: will process Link number from 0 to (excluded) 315
-0% completed in Thread 2.: will process Link number from 45 to (excluded) 60
-
 Start thread 1: will process Link number from 15 to (excluded) 30
-0% completed in Thread 3.0% completed in Thread 0.0% completed in Thread 1.6.66667% completed in Thread 3.6.66667% completed in Thread 0.13.3333% completed in Thread 3.6.66667% completed in Thread 2.6.66667% completed in Thread 1.13.3333% completed in Thread 1.13.3333% completed in Thread 2.20% completed in Thread 2.26.6667% completed in Thread 2.20% completed in Thread 3.13.3333% completed in Thread 0.26.6667% completed in Thread 3.20% completed in Thread 1.33.3333% completed in Thread 3.20% completed in Thread 0.33.3333% completed in Thread 2.40% completed in Thread 3.26.6667% completed in Thread 1.46.6667% completed in Thread 3.26.6667% completed in Thread 0.40% completed in Thread 2.46.6667% completed in Thread 2.53.3333% completed in Thread 2.60% completed in Thread 2.33.3333% completed in Thread 0.66.6667% completed in Thread 2.33.3333% completed in Thread 1.40% completed in Thread 0.53.3333% completed in Thread 3.40% completed in Thread 1.60% completed in Thread 3.46.6667% completed in Thread 0.66.6667% completed in Thread 3.53.3333% completed in Thread 0.73.3333% completed in Thread 3.73.3333% completed in Thread 2.46.6667% completed in Thread 1.60% completed in Thread 0.80% completed in Thread 3.80% completed in Thread 2.66.6667% completed in Thread 0.86.6667% completed in Thread 3.86.6667% completed in Thread 2.93.3333% completed in Thread 3.53.3333% completed in Thread 1.100% completed in Thread 3.60% completed in Thread 1.93.3333% completed in Thread 2.73.3333% completed in Thread 0.100% completed in Thread 2.80% completed in Thread 0.66.6667% completed in Thread 1.86.6667% completed in Thread 0.73.3333% completed in Thread 1.93.3333% completed in Thread 0.100% completed in Thread 0.80% completed in Thread 1.86.6667% completed in Thread 1.93.3333% completed in Thread 1.100% completed in Thread 1.
+0% completed in Thread 1.
+Start thread 0: will process Link number from 0 to (excluded) 15
+
+Start thread 0% completed in Thread 0.
+Start thread 3: will process Link number from 45 to (excluded) 60
+2: will process Link number from 30 to (excluded) 45
+0% completed in Thread 3.0% completed in Thread 2.6.66667% completed in Thread 0.6.66667% completed in Thread 1.6.66667% completed in Thread 2.6.66667% completed in Thread 3.13.3333% completed in Thread 2.13.3333% completed in Thread 3.20% completed in Thread 2.20% completed in Thread 3.13.3333% completed in Thread 0.26.6667% completed in Thread 3.33.3333% completed in Thread 3.13.3333% completed in Thread 1.40% completed in Thread 3.20% completed in Thread 1.26.6667% completed in Thread 1.26.6667% completed in Thread 2.33.3333% completed in Thread 1.46.6667% completed in Thread 3.20% completed in Thread 0.40% completed in Thread 1.53.3333% completed in Thread 3.33.3333% completed in Thread 2.46.6667% completed in Thread 1.26.6667% completed in Thread 0.60% completed in Thread 3.66.6667% completed in Thread 3.40% completed in Thread 2.53.3333% completed in Thread 1.73.3333% completed in Thread 3.80% completed in Thread 3.86.6667% completed in Thread 3.33.3333% completed in Thread 0.40% completed in Thread 0.93.3333% completed in Thread 3.60% completed in Thread 1.46.6667% completed in Thread 2.46.6667% completed in Thread 0.53.3333% completed in Thread 2.100% completed in Thread 3.60% completed in Thread 2.66.6667% completed in Thread 1.53.3333% completed in Thread 0.73.3333% completed in Thread 1.66.6667% completed in Thread 2.60% completed in Thread 0.73.3333% completed in Thread 2.80% completed in Thread 1.80% completed in Thread 2.66.6667% completed in Thread 0.86.6667% completed in Thread 2.86.6667% completed in Thread 1.73.3333% completed in Thread 0.93.3333% completed in Thread 2.100% completed in Thread 2.93.3333% completed in Thread 1.80% completed in Thread 0.100% completed in Thread 1.86.6667% completed in Thread 0.93.3333% completed in Thread 0.100% completed in Thread 0.
 Finished mining 1~4 gram patterns.
 
 totalLinkNum = 60, actualProcessedLinkNum = 60
@@ -2208,19 +2192,18 @@ Debug: PatternMiner: writing  (gram = 4) frequent patterns to file FrequentPatte
 Pattern Mining Finished! Total time: 2 seconds. 
 
 In PatternMinerUTest::test_PatternMiner_SodaDrinker:
-/home/opencog/opencog/build/tests/learning/PatternMiner/../../../../tests/learning/PatternMiner/PatternMinerUTest.cxxtest:345: Error: Test failed: The result top 3-gram pattern is wrong!
-/home/opencog/opencog/build/tests/learning/PatternMiner/../../../../tests/learning/PatternMiner/PatternMinerUTest.cxxtest:351: Error: Test failed: The result top 3-gram pattern count is wrong!
+/home/opencog/opencog/tests/learning/PatternMiner/PatternMinerUTest.cxxtest:345: Error: Test failed: The result top 3-gram pattern is wrong!
 [INFO] The result top 3-gram pattern: 
 (InheritanceLink )
-  (ConceptNode Abe)
-  (PatternVariableNode $var_1)
-
-(InheritanceLink )
-  (ConceptNode Allen)
+  (ConceptNode Cason)
   (PatternVariableNode $var_1)
 
 (InheritanceLink )
   (ConceptNode Davion)
+  (PatternVariableNode $var_1)
+
+(InheritanceLink )
+  (ConceptNode Hessley)
   (PatternVariableNode $var_1)
 
 
@@ -2238,7 +2221,6 @@ In PatternMinerUTest::test_PatternMiner_SodaDrinker:
   (ConceptNode ugly)
 
 
-[INFO] Failed: The result top 3-gram pattern count is wrong!
 [INFO] End TEST: test_PatternMiner_SodaDrinker
 Failed 1 and Skipped 0 of 5 tests
 Success rate: 80%
@@ -2248,16 +2230,15 @@ Success rate: 80%
 ;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/learning/PatternMiner/ugly_male_soda-drinker_corpus.scm.go
 
       Start 24: PatternIndexAPIUTest
-24/25 Test #24: PatternIndexAPIUTest .............   Passed    0.37 sec
+24/25 Test #24: PatternIndexAPIUTest .............   Passed    0.28 sec
       Start 25: XPatternMinerUTest
-25/25 Test #25: XPatternMinerUTest ...............   Passed   11.05 sec
+25/25 Test #25: XPatternMinerUTest ...............   Passed   11.59 sec
 
-72% tests passed, 7 tests failed out of 25
+76% tests passed, 6 tests failed out of 25
 
-Total Test time (real) = 157.82 sec
+Total Test time (real) = 159.26 sec
 
 The following tests FAILED:
-	  2 - AtomSpacePublisherModuleUTest (OTHER_FAULT)
 	  6 - AtomOcTreeUTest (SEGFAULT)
 	  7 - TimeSpaceAtomUTest (SEGFAULT)
 	  8 - AnaphoraTest (Failed)
@@ -2267,13 +2248,9 @@ The following tests FAILED:
 Errors while running CTest
 make[3]: *** [CMakeFiles/test] Error 8
 make[2]: *** [CMakeFiles/test.dir/all] Error 2
-CMakeFiles/test.dir/build.make:57: recipe for target 'CMakeFiles/test' failed
-CMakeFiles/Makefile2:99: recipe for target 'CMakeFiles/test.dir/all' failed
-CMakeFiles/Makefile2:106: recipe for target 'CMakeFiles/test.dir/rule' failed
 make[1]: *** [CMakeFiles/test.dir/rule] Error 2
 make: *** [test] Error 2
-Makefile:197: recipe for target 'test' failed
 + DSTATUS=TESTFAIL
-+ /var/lib/jenkins/status/updateStatus TESTFAIL /var/lib/jenkins/jobs/OpenCOG_U1604_Opencog/builds/9/log OpenCOG_U1604_Opencog
++ /var/lib/jenkins/status/updateStatus TESTFAIL /var/lib/jenkins/jobs/OpenCOG_U1404_Opencog/builds/4/log OpenCOG_U1404_Opencog
 Already up-to-date.
 ~/status/jobs ~/status
