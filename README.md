@@ -1,13 +1,13 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Sun Jan 14 23:56:15 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Sun Jan 14 23:58:20 EST 2018.
 
 ## Modules 
 
 | MODULE & Logfile | Status | detail | Test Pass | Test Fail| Build | Attempt|
 | --- | --- | --- | --- | ---  | --- | --- | 
-| [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 23:41  | 23:41 |
+| [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | 98% tests passed, 2 tests failed out of 111 |  | 23:58 | 23:41  | 23:58 |
 | [OpenCOG_U1404_CogUtil](jobs/OpenCOG_U1404_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 23:40  | 23:40 |
 | [OpenCOG_U1404_Core_Build](jobs/OpenCOG_U1404_Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 23:44  | 23:44 |
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 23:56 |  | 23:43  | 23:56 |
