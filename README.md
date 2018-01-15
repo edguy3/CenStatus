@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Sun Jan 14 23:50:07 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Sun Jan 14 23:50:11 EST 2018.
 
 ## Modules 
 
@@ -14,6 +14,7 @@ This file shows the status of public cen.ai tracked projects as of Sun Jan 14 23
 | [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 23:44  | 23:44 |
 | [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 23:47  | 23:47 |
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 23:46  | 23:46 |
+| [OpenCOG_U1604_Core_Build](jobs/OpenCOG_U1604_Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 23:50  | 23:50 |
 | [OpenCOG_U1604_Moses](jobs/OpenCOG_U1604_Moses.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 23:49  | 23:49 |
 | [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 23:50  | 23:50 |
 
