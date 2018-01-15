@@ -41,7 +41,7 @@ for JOBNAME in $JOBS
 do
 
     # get time stamps on each file
-    TP=$([ -e "jobs/$JOBNAME.TESTPASS"  ] && stat -c %y "jobs/$JOBNAME.TESTPASS"| sed 's/:..\..*$//'| sed "s/$TODAY//;s/ .*//")
+    TP=$([ -e "jobs/$JOBNAME.TESTPASS"  ] && stat -c %y "jobs/$JOBNAME.TESTPASS"| sed 's/:..\..*$//'| sed "s/$TODAY//;s/ .*$$//")
     TF=$([ -e "jobs/$JOBNAME.TESTFAIL"  ] && stat -c %y "jobs/$JOBNAME.TESTFAIL"| sed 's/:..\..*$//')
     BP=$([ -e "jobs/$JOBNAME.BUILDPASS" ] && stat -c %y "jobs/$JOBNAME.BUILDPASS"| sed 's/:..\..*$//')
     BD=$([ -e "jobs/$JOBNAME.svg"       ] && stat -c %y "jobs/$JOBNAME.svg"| sed 's/:..\..*$//')

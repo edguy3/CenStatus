@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Sun Jan 14 23:34:07 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Sun Jan 14 23:35:35 EST 2018.
 
 ## Modules 
 
@@ -22,6 +22,8 @@ This file shows the status of public cen.ai tracked projects as of Sun Jan 14 23
 | [OpenCOG_U1604_Core_Build](jobs/OpenCOG_U1604_Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 2018-01-14 21:59  | 2018-01-14 21:59 |
 | [OpenCOG_U1604_Moses](jobs/OpenCOG_U1604_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 22:07 |  | 2018-01-14 21:59  | 2018-01-14 22:07 |
 | [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) | ![Status](/images/TESTFAIL.svg) | 72% tests passed, 7 tests failed out of 25 |  | 2018-01-14 22:09 | 2018-01-14 21:59  | 2018-01-14 22:09 |
+| test | ![Status](/jobs/test.svg) |  |  |  |   |  |
+| package | ![Status](/jobs/package.svg) |  |  |  |   |  |
 ( Times are currently EST/EDT GMT-5/-4) 
 
 ## Contributors
