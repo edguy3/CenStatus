@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Mon Jan 15 10:22:41 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Mon Jan 15 10:22:44 EST 2018.
 
 ## Modules 
 
@@ -20,6 +20,7 @@ This file shows the status of public cen.ai tracked projects as of Mon Jan 15 10
 | [OpenCOG_U1704_AtomSpace](jobs/OpenCOG_U1704_AtomSpace.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   |  |
 | [OpenCOG_U1704_CogUtil](jobs/OpenCOG_U1704_CogUtil.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   |  |
 | [OpenCOG_U1704_Moses](jobs/OpenCOG_U1704_Moses.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   |  |
+| [OpenCOG_U1704_Opencog](jobs/OpenCOG_U1704_Opencog.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   |  |
 
 ( Times are currently EST/EDT GMT-5/-4) 
 
