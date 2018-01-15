@@ -41,10 +41,10 @@ for JOBNAME in $JOBS
 do
 
     # get time stamps on each file
-    TP=$([ -e "jobs/$JOBNAME.TESTPASS"  ] && stat -c %y "jobs/$JOBNAME.TESTPASS"| sed 's/:..\..*$//'| sed "s/$TODAY//;s/ .*$$//")
-    TF=$([ -e "jobs/$JOBNAME.TESTFAIL"  ] && stat -c %y "jobs/$JOBNAME.TESTFAIL"| sed 's/:..\..*$//'| sed "s/$TODAY//;s/ .*$$//")
-    BP=$([ -e "jobs/$JOBNAME.BUILDPASS" ] && stat -c %y "jobs/$JOBNAME.BUILDPASS"| sed 's/:..\..*$//'| sed "s/$TODAY//;s/ .*$$//")
-    BD=$([ -e "jobs/$JOBNAME.svg"       ] && stat -c %y "jobs/$JOBNAME.svg"| sed 's/:..\..*$//'| sed "s/$TODAY//;s/ .*$$//")
+    TP=$([ -e "jobs/$JOBNAME.TESTPASS"  ] && stat -c %y "jobs/$JOBNAME.TESTPASS"| sed 's/:..\..*$//'| sed "s/$TODAY//;s/ .*$//")
+    TF=$([ -e "jobs/$JOBNAME.TESTFAIL"  ] && stat -c %y "jobs/$JOBNAME.TESTFAIL"| sed 's/:..\..*$//'| sed "s/$TODAY//;s/ .*$//")
+    BP=$([ -e "jobs/$JOBNAME.BUILDPASS" ] && stat -c %y "jobs/$JOBNAME.BUILDPASS"| sed 's/:..\..*$//'| sed "s/$TODAY//;s/ .*$//")
+    BD=$([ -e "jobs/$JOBNAME.svg"       ] && stat -c %y "jobs/$JOBNAME.svg"| sed 's/:..\..*$//'| sed "s/$TODAY//;s/ .*$//")
     # get real file
     MF=$(readlink -f "jobs/$JOBNAME.svg" | sed "s|$(pwd)||")
     # get formatting for log file
