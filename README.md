@@ -1,12 +1,13 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Mon Jan 15 11:54:18 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Mon Jan 15 11:54:21 EST 2018.
 
 ## Modules 
 
 | MODULE & Logfile | Status | Detail | Test Pass | Test Fail| Build | Attempt|
 | --- | --- | --- | --- | ---  | --- | --- | 
+| [OpenCOG_DebOld_AtomSpace](jobs/OpenCOG_DebOld_AtomSpace.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   | 11:54 |
 | [OpenCOG_DebOld_CogUtil](jobs/OpenCOG_DebOld_CogUtil.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   | 11:54 |
 | [OpenCOG_DebStab_AtomSpace](jobs/OpenCOG_DebStab_AtomSpace.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   | 10:34 |
 | [OpenCOG_DebStab_CogUtil](jobs/OpenCOG_DebStab_CogUtil.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   | 10:34 |
