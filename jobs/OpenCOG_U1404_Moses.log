@@ -1,1663 +1,308 @@
-Started by an SCM change
-Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1404
- > git rev-parse --is-inside-work-tree # timeout=10
-Fetching changes from the remote Git repository
- > git config remote.origin.url git@github.com:opencog/opencog.git # timeout=10
-Fetching upstream changes from git@github.com:opencog/opencog.git
- > git --version # timeout=10
-using GIT_SSH to set credentials 103jenk
- > git fetch --tags --progress git@github.com:opencog/opencog.git +refs/heads/*:refs/remotes/origin/*
- > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
- > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
-Checking out Revision c544225f5e1233e4820a89cd2319b54439ba6505 (refs/remotes/origin/master)
- > git config core.sparsecheckout # timeout=10
- > git checkout -f c544225f5e1233e4820a89cd2319b54439ba6505
-Commit message: "Remove bad abort prompt; this screws up telnet processing!"
- > git rev-list --no-walk d01234c9996032d74b58430343f85b46c596a167 # timeout=10
-[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins9062572776166813128.sh
-+ pwd
-/var/lib/jenkins/workspace/OpenCOG_U1404
-+ whoami
-jenkins
-+ rm -fr build.docker
-+ mkdir build.docker
-+ cd build.docker
-+ cp /home/edguy/OCDOCK/DOCKER.OpenCOG_U1404 docker.buildfile
-+ docker build -f docker.buildfile -t edguy/ocdock:latest .
-Sending build context to Docker daemon 3.584 kB
-Step 1/15 : FROM ubuntu:14.04
- ---> 67759a80360c
-Step 2/15 : MAINTAINER Ed Guy "edguy@eguy.org"
- ---> Using cache
- ---> 5a54eeef2fa0
-Step 3/15 : ENV DEBIAN_FRONTEND noninteractive
- ---> Using cache
- ---> 3e97998de43b
-Step 4/15 : ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
- ---> Using cache
- ---> c29f4a1c13d0
-Step 5/15 : RUN apt-get -y update
- ---> Using cache
- ---> de530b426d20
-Step 6/15 : RUN apt-get -y upgrade
- ---> Using cache
- ---> 914d800e4b20
-Step 7/15 : RUN apt-get -y install screen telnet netcat-openbsd byobu wget vim unzip gcc g++ make sudo lsb-release net-tools
- ---> Using cache
- ---> 752eacfef87e
-Step 8/15 : RUN apt-get -y install openjdk-7-jdk ant libcommons-logging-java
- ---> Using cache
- ---> 3f061a6f205b
-Step 9/15 : RUN test -e /usr/local/share/java || mkdir /usr/local/share/java
- ---> Using cache
- ---> babff5fc3f3c
-Step 10/15 : WORKDIR /home/opencog
- ---> Using cache
- ---> 7ff3433ee83d
-Step 11/15 : RUN wget http://raw.github.com/opencog/ocpkg/master/ocpkg -O octool && chmod +rx octool
- ---> Using cache
- ---> b5c285e11c6d
-Step 12/15 : RUN ./octool -rdp
- ---> Using cache
- ---> ec91c1859034
-Step 13/15 : RUN useradd -ms /bin/bash  jenkins --uid 125
- ---> Using cache
- ---> 15e28b1a74a7
-Step 14/15 : USER jenkins
- ---> Using cache
- ---> db670dfb80a8
-Step 15/15 : CMD tail -f /dev/null
- ---> Using cache
- ---> 87eb7e802bfb
-Successfully built 87eb7e802bfb
-+ echo ******  CID=
-******  CID=
-+ CIDFILENAME=/tmp/OpenCOG_U1404.cid
-+ cleanupDockerContainers /tmp/OpenCOG_U1404.cid
-+ CIDFILENAME=/tmp/OpenCOG_U1404.cid
-+ [ -e /tmp/OpenCOG_U1404.cid ]
-+ cat /tmp/OpenCOG_U1404.cid
-+ CID=45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49
-+ docker container kill 45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49
-Error response from daemon: Cannot kill container 45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49: No such container: 45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49
-+ echo not killed
-not killed
-+ docker container rm 45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49
-Error response from daemon: No such container: 45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49
-+ echo not rmd
-not rmd
-+ rm -f /tmp/OpenCOG_U1404.cid
-+ cd ..
-+ pwd
-+ docker run --cidfile /tmp/OpenCOG_U1404.cid -v /var/lib/jenkins/workspace/OpenCOG_U1404:/home/opencog/opencog -w /home/opencog -d edguy/ocdock:latest tail -f /dev/null
-5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
-+ cat /tmp/OpenCOG_U1404.cid
-+ CID=5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
-+ DKRUN=docker exec 5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42 
-+ grep jenkins /etc/passwd
-+ awk -F: {print $3}
-+ UID=125
-+ grep jenkins /etc/passwd
-+ awk -F: {print $4}
-+ GID=132
-+ cat
-[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins50896761321328467.sh
-+ . build.docker/docker.env
+Started by upstream project "[8mha:////4HYLKC3QWnNL8UcNtRMb3SIghDGZXRDiSIrVjCiet8BaAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3/gtQ8Z3/3+FBDEwMTfQAfNa+iyAAAAA==[0mOpenCOG_U1404" build number [8mha:////4K5Hd1Vhi54/VPZ6BmOqgIGb9k4lvKe3yRlSn61H9KaAAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBhH9rPwkff+C1Dxnf/f4UEMTAxN9SwD84UHSyQAAAA==[0m9
+originally caused by:
+ Started by an SCM change
+Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1404_Moses
+[OpenCOG_U1404_Moses] $ /bin/sh -xe /tmp/jenkins2127083690224297167.sh
++ COGDIR=../OpenCOG_U1404
++ . ../OpenCOG_U1404/build.docker/docker.env
 + CID=5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
 + DKRUNROOT=docker exec --user root   5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
 + DKRUNUSER=docker exec --user jenkins  5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
 + UID=125
 + GID=132
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404_Moses/builds/4/log
 + cat
+
+
 **********************************************************
 **********************************************************
 **********************************************************
 **********************************************************
-*****
-*****  opencog Setup 
-*****
+*****                                                *****
+*****                  MOSES TEST                    *****
+*****                                                *****
 **********************************************************
 **********************************************************
 **********************************************************
 **********************************************************
 
-+ echo **** 
-**** 
-+ echo ****  5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
-****  5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
-+ test -e dependencies
-+ rm -fr dependencies/atomspace
-+ git clone git@github.com:opencog/atomspace.git dependencies/atomspace
-Cloning into 'dependencies/atomspace'...
-+ rm -fr dependencies/cogutil
-+ git clone git@github.com:opencog/cogutil.git dependencies/cogutil
-Cloning into 'dependencies/cogutil'...
-+ rm -fr dependencies/moses
-+ git clone git@github.com:opencog/moses.git dependencies/moses
-Cloning into 'dependencies/moses'...
-[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins6626759566688551988.sh
-+ . build.docker/docker.env
-+ CID=5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
-+ DKRUNROOT=docker exec --user root   5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
-+ DKRUNUSER=docker exec --user jenkins  5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
-+ UID=125
-+ GID=132
-+ cat
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-*****
-*****  cogutil
-*****
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
 
-+ WDIR=opencog/dependencies/cogutil
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/9/log
-+ cat
-+ cat
-+ chmod +x dependencies/job1
-+ chmod +x dependencies/job2
-+ docker exec --user jenkins 5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42 bash opencog/dependencies/job1
-/home/opencog
-octool
-opencog
-+ pwd
-+ ls
-+ cd opencog/dependencies/cogutil
-+ rm -fr build
-+ mkdir build
-+ cd build
-+ cmake ..
--- The C compiler identification is GNU 4.8.4
--- The CXX compiler identification is GNU 4.8.4
--- Check for working C compiler: /usr/bin/cc
--- Check for working C compiler: /usr/bin/cc -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working CXX compiler: /usr/bin/c++
--- Check for working CXX compiler: /usr/bin/c++ -- works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Build type: Release
--- Looking for include file bfd.h
--- Looking for include file bfd.h - found
--- Found libbfd: /usr/lib/libbfd.so
--- Binutils found.
--- Boost version: 1.54.0
--- Found the following Boost libraries:
---   date_time
---   filesystem
---   program_options
---   regex
---   serialization
---   system
---   thread
--- Boost version 105400 found.
--- Found PythonInterp: /usr/bin/python (found version "2.7.6") 
--- Looking for include file libiberty.h
--- Looking for include file libiberty.h - found
--- Found libiberty: /usr/lib/x86_64-linux-gnu/libiberty.a
--- Libiberty found.
--- Could NOT find Doxygen (missing:  DOXYGEN_EXECUTABLE) 
--- Doxygen not found, you won't be able to generate API documentation.
-
-The following components will be built:
------------------------------------------------
-   StackPrint  - Pretty printing of stack traces.
-   Unit tests  - Unit tests.
-   Util        - General utility library.
-
-The following components WILL NOT be built:
------------------------------------------------
-   Doxygen     - Code documentation.
-
--- Configuring done
--- Generating done
--- Build files have been written to: /home/opencog/opencog/dependencies/cogutil/build
-+ make -j8
-Scanning dependencies of target cogutil
-[ 10%] [ 10%] [ 15%] [ 26%] [ 36%] [ 36%] [ 36%] [ 42%] Building C object opencog/util/CMakeFiles/cogutil.dir/backtrace-symbols.c.o
-Building CXX object opencog/util/CMakeFiles/cogutil.dir/ansi.cc.o
-Building CXX object opencog/util/CMakeFiles/cogutil.dir/Config.cc.o
-Building CXX object opencog/util/CMakeFiles/cogutil.dir/files.cc.o
-Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_normal_selector.cc.o
-Building C object opencog/util/CMakeFiles/cogutil.dir/cluster.c.o
-Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_random_selector.cc.o
-Building CXX object opencog/util/CMakeFiles/cogutil.dir/exceptions.cc.o
-[ 47%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_selector.cc.o
-[ 52%] [ 57%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/log_prog_name.cc.o
-Building CXX object opencog/util/CMakeFiles/cogutil.dir/Logger.cc.o
-[ 63%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/misc.cc.o
-[ 68%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/mt19937ar.cc.o
-[ 73%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/oc_assert.cc.o
-[ 78%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/oc_omp.cc.o
-[ 84%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/octime.cc.o
-[ 89%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/platform.cc.o
-[ 94%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/StringTokenizer.cc.o
-[100%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/tree.cc.o
-Linking CXX shared library libcogutil.so
-[100%] Built target cogutil
-+ DSTATUS=BUILDPASS
-+ docker exec --user root 5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42 bash opencog/dependencies/job2
-+ cd opencog/dependencies/cogutil
-+ cd build
-+ make install
-[100%] Built target cogutil
-Install the project...
--- Install configuration: "Release"
--- Installing: /usr/local/include/opencog/util/ansi.h
--- Installing: /usr/local/include/opencog/util/algorithm.h
--- Installing: /usr/local/include/opencog/util/async_buffer.h
--- Installing: /usr/local/include/opencog/util/async_method_caller.h
--- Installing: /usr/local/include/opencog/util/backtrace-symbols.h
--- Installing: /usr/local/include/opencog/util/based_variant.h
--- Installing: /usr/local/include/opencog/util/cluster.h
--- Installing: /usr/local/include/opencog/util/cogutil.h
--- Installing: /usr/local/include/opencog/util/comprehension.h
--- Installing: /usr/local/include/opencog/util/Config.h
--- Installing: /usr/local/include/opencog/util/Counter.h
--- Installing: /usr/local/include/opencog/util/Cover_Tree.h
--- Installing: /usr/local/include/opencog/util/concurrent_queue.h
--- Installing: /usr/local/include/opencog/util/concurrent_set.h
--- Installing: /usr/local/include/opencog/util/concurrent_stack.h
--- Installing: /usr/local/include/opencog/util/digraph.h
--- Installing: /usr/local/include/opencog/util/dorepeat.h
--- Installing: /usr/local/include/opencog/util/exceptions.h
--- Installing: /usr/local/include/opencog/util/files.h
--- Installing: /usr/local/include/opencog/util/functional.h
--- Installing: /usr/local/include/opencog/util/hashing.h
--- Installing: /usr/local/include/opencog/util/iostreamContainer.h
--- Installing: /usr/local/include/opencog/util/KLD.h
--- Installing: /usr/local/include/opencog/util/lazy_normal_selector.h
--- Installing: /usr/local/include/opencog/util/lazy_random_selector.h
--- Installing: /usr/local/include/opencog/util/lazy_selector.h
--- Installing: /usr/local/include/opencog/util/log_prog_name.h
--- Installing: /usr/local/include/opencog/util/Logger.h
--- Installing: /usr/local/include/opencog/util/lru_cache.h
--- Installing: /usr/local/include/opencog/util/macros.h
--- Installing: /usr/local/include/opencog/util/MannWhitneyU.h
--- Installing: /usr/local/include/opencog/util/misc.h
--- Installing: /usr/local/include/opencog/util/mt19937ar.h
--- Installing: /usr/local/include/opencog/util/numeric.h
--- Installing: /usr/local/include/opencog/util/jaccard_index.h
--- Installing: /usr/local/include/opencog/util/oc_assert.h
--- Installing: /usr/local/include/opencog/util/oc_omp.h
--- Installing: /usr/local/include/opencog/util/octime.h
--- Installing: /usr/local/include/opencog/util/platform.h
--- Installing: /usr/local/include/opencog/util/pool.h
--- Installing: /usr/local/include/opencog/util/RandGen.h
--- Installing: /usr/local/include/opencog/util/random.h
--- Installing: /usr/local/include/opencog/util/ranking.h
--- Installing: /usr/local/include/opencog/util/recent_val.h
--- Installing: /usr/local/include/opencog/util/selection.h
--- Installing: /usr/local/include/opencog/util/sigslot.h
--- Installing: /usr/local/include/opencog/util/StringTokenizer.h
--- Installing: /usr/local/include/opencog/util/tbb.h
--- Installing: /usr/local/include/opencog/util/tree.h
--- Installing: /usr/local/lib/libcogutil.so
--- Set runtime path of "/usr/local/lib/libcogutil.so" to "/usr/local/lib/opencog"
--- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean.h
--- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean_mirror.h
-+ DSTATUS=BUILDPASS
-+ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1404/builds/9/log OpenCOG_U1404_CogUtil
-Already up-to-date.
-~/status/jobs ~/status
-~/status
-[master 7417d64] OpenCOG_U1404_CogUtil BUILDPASS
- 3 files changed, 311 insertions(+), 147 deletions(-)
- rewrite jobs/OpenCOG_U1404_CogUtil.log (89%)
-To git@github.com:edguy3/CenStatus.git
-   5f3e2c1..7417d64  master -> master
-[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins371575367173425018.sh
-+ . build.docker/docker.env
-+ CID=5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
-+ DKRUNROOT=docker exec --user root   5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
-+ DKRUNUSER=docker exec --user jenkins  5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
-+ UID=125
-+ GID=132
-+ cat
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-*****
-*****  atomspace
-*****
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-
-+ WDIR=opencog/dependencies/atomspace
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/9/log
-+ cat
-+ cat
-+ chmod +x dependencies/job1
-+ chmod +x dependencies/job2
-+ docker exec --user jenkins 5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42 bash opencog/dependencies/job1
-+ pwd
-+ ls
-+ cd opencog/dependencies/atomspace
-+ rm -fr build
-+ mkdir build
-+ cd build
-+ cmake ..
-/home/opencog
-octool
-opencog
--- The C compiler identification is GNU 4.8.4
--- The CXX compiler identification is GNU 4.8.4
--- Check for working C compiler: /usr/bin/cc
--- Check for working C compiler: /usr/bin/cc -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working CXX compiler: /usr/bin/c++
--- Check for working CXX compiler: /usr/bin/c++ -- works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Build type: Release
--- Boost version: 1.54.0
--- Found the following Boost libraries:
---   date_time
---   filesystem
---   program_options
---   regex
---   serialization
---   system
---   thread
--- Boost version 105400 found.
--- Looking for include file opencog/util/cogutil.h
--- Looking for include file opencog/util/cogutil.h - found
--- Found CogUtil version 2.0.2 at /usr/local/lib/libcogutil.so
--- CogUtil found.
--- Found PythonInterp: /usr/bin/python (found version "2.7.6") 
--- CxxTest found.
--- Gearman found.
--- Guile (2.0.9 >= 2.0.9) was found.
--- HyperTable was not found. Make sure HYPERTABLE_LIBRARY and HYPERTABLE_INCLUDE_DIR are set.
--- Hypertable not found; the experimental distributed persistence DB needs it.
--- Found these protobuf libs: /usr/lib/x86_64-linux-gnu/libprotobuf.so
--- Found PROTOBUF: /usr/lib/x86_64-linux-gnu/libprotobuf.so  
--- Protobuf was found.
--- Found PythonInterp: /usr/bin/python (found suitable version "2.7.6", minimum required is "2.7") 
--- Python 2.7.6 interpreter found.
--- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython2.7.so (found suitable version "2.7.6", minimum required is "2.7") 
--- Python 2.7.6 libraries found.
--- Found PythonInterp: /usr/bin/python (found version "2.7.6") 
--- Found Cython: /usr/bin/cython (Required is at least version "0.19.0") 
--- Cython ( 0.20.1 >= 0.19.0) found.
--- Python destination dir found: /usr/lib/python2.7/dist-packages
--- Stack was not found. Haskell bindings will not be built.
--- UnixODBC was found.
--- PGSQL was found.
--- Valgrind Prefix: 
--- Could NOT find VALGRIND (missing:  VALGRIND_INCLUDE_DIR VALGRIND_PROGRAM) 
--- VALGRIND missing: needed for thread debugging.
--- Found ZeroMQ library: /usr/lib/x86_64-linux-gnu/libzmq.so
--- Detected ZeroMQ version number: 4.0.4
--- ZeroMQ was found.
-CMake Warning at tests/persist/sql/multi-driver/CMakeLists.txt:46 (MESSAGE):
-  /usr/bin/psql: psql: could not connect to server: No such file or directory
-
-  	Is the server running locally and accepting
-
-  	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
-
-
-
-CMake Warning at tests/persist/sql/multi-driver/CMakeLists.txt:80 (MESSAGE):
-  Postgres database not configured for unit tests! See the README!
-
-
-CMake Warning at tests/persist/gearman/CMakeLists.txt:25 (MESSAGE):
-  gearman-job-server is not running; will not run the GearmanUTest
-
-
--- Could NOT find Doxygen (missing:  DOXYGEN_EXECUTABLE) 
--- Doxygen not found, you won't be able to generate API documentation.
-
-The following components will be built:
------------------------------------------------
-   AtomSpace              - A weighted and typed hypergraph database.
-   Gearman                - Distributed processing capability.
-   Python bindings        - Python (cython) bindings.
-   Python tests           - Python bindings nose tests.
-   Scheme bindings        - Scheme bindings and shell.
-   SQL ODBC bindings      - Save/Restore of AtomSpace to database via ODBC.
-   SQL Postgres bindings  - Save/Restore of AtomSpace to Postgres database.
-   ZeroMQ persistence     - Save/Restore of AtomSpace to ZeroMQ server.
-   Unit tests             - Unit tests.
-
-The following components WILL NOT be built:
------------------------------------------------
-   Doxygen                - Code documentation.
-   Haskell bindings       - Haskell bindings.
-   Hypertable             - HyperTable for scalable persistance (experimental).
-
--- Configuring done
--- Generating done
--- Build files have been written to: /home/opencog/opencog/dependencies/atomspace/build
-+ make -j8
-[  0%] Scanning dependencies of target opencog_atom_types
-Scanning dependencies of target persist-odbc
-Scanning dependencies of target persist-pg
-Cythonizing logger.pyx
-[  0%] [  0%] [  2%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-odbc.dir/odbcxx.cc.o
-Generating opencog types
-Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-pg.dir/ll-pg-cxx.cc.o
--- Atom type name: Notype Notype
--- Atom type name: Value Value
--- Atom type name: FloatValue FloatValue
--- Atom type name: StringValue StringValue
--- Atom type name: LinkValue LinkValue
--- Atom type name: Valuation Valuation
--- Atom type name: TruthValue TruthValue
--- Atom type name: SimpleTruthValue SimpleTruthValue
--- Atom type name: CountTruthValue CountTruthValue
--- Atom type name: IndefiniteTruthValue IndefiniteTruthValue
--- Atom type name: FuzzyTruthValue FuzzyTruthValue
--- Atom type name: ProbabilisticTruthValue ProbabilisticTruthValue
--- Atom type name: EvidenceCountTruthValue EvidenceCountTruthValue
--- Atom type name: AttentionValue AttentionValue
--- Atom type name: Atom Atom
--- Atom type name: Node 
--- Atom type name: Link 
--- Atom type name: ConceptNode Concept
--- Atom type name: NumberNode Number
--- Atom type name: OrderedLink Ordered
--- Atom type name: UnorderedLink Unordered
--- Atom type name: EvaluatableLink Evaluatable
--- Atom type name: BooleanLink Boolean
--- Atom type name: NumericLink Numeric
--- Atom type name: NumericOutputLink NumericOutput
--- Atom type name: TypeLink Type
--- Atom type name: TypeOutputLink TypeOutput
--- Atom type name: SetLink Set
--- Atom type name: ListLink List
--- Atom type name: MemberLink Member
--- Atom type name: ContextLink Context
--- Atom type name: InheritanceLink Inheritance
--- Atom type name: SubsetLink Subset
--- Atom type name: IntensionalInheritanceLink IntensionalInheritance
--- Atom type name: SimilarityLink Similarity
--- Atom type name: ExtensionalSimilarityLink ExtensionalSimilarity
--- Atom type name: IntensionalSimilarityLink IntensionalSimilarity
--- Atom type name: TrueLink True
--- Atom type name: FalseLink False
--- Atom type name: AndLink And
--- Atom type name: OrLink Or
--- Atom type name: NotLink Not
--- Atom type name: SequentialAndLink SequentialAnd
--- Atom type name: SequentialOrLink SequentialOr
--- Atom type name: ChoiceLink Choice
--- Atom type name: PresentLink Present
--- Atom type name: AbsentLink Absent
--- Atom type name: ParallelLink Parallel
--- Atom type name: JoinLink Join
--- Atom type name: VariableNode Variable
--- Atom type name: VariableList VariableList
--- Atom type name: GlobNode Glob
--- Atom type name: QuoteLink Quote
--- Atom type name: UnquoteLink Unquote
--- Atom type name: LocalQuoteLink LocalQuote
--- Atom type name: DontExecLink DontExec
--- Atom type name: FreeLink Free
--- Atom type name: DeleteLink Delete
--- Atom type name: UniqueLink Unique
--- Atom type name: StateLink State
--- Atom type name: DefineLink Define
--- Atom type name: ScopeLink Scope
--- Atom type name: RewriteLink Rewrite
--- Atom type name: PrenexLink Prenex
--- Atom type name: LambdaLink Lambda
--- Atom type name: PutLink Put
--- Atom type name: PatternLink Pattern
--- Atom type name: SatisfactionLink Satisfaction
--- Atom type name: SatisfyingLink Satisfying
--- Atom type name: GetLink Get
--- Atom type name: BindLink Bind
--- Atom type name: DualLink Dual
--- Custom atom type name specified: "ForAllLink"
--- Atom type name: ForAllLink ForAll
--- Atom type name: ExistsLink Exists
--- Atom type name: SatisfyingSetScopeLink SatisfyingSetScope
--- Atom type name: SatisfyingSetLink SatisfyingSet
--- Atom type name: ImplicationScopeLink ImplicationScope
--- Atom type name: IntensionalImplicationScopeLink IntensionalImplicationScope
--- Atom type name: ExtensionalImplicationScopeLink ExtensionalImplicationScope
--- Atom type name: EquivalenceScopeLink EquivalenceScope
--- Atom type name: IntensionalEquivalenceScopeLink IntensionalEquivalenceScope
--- Atom type name: ExtensionalEquivalenceScopeLink ExtensionalEquivalenceScope
--- Atom type name: ImplicationLink Implication
--- Atom type name: IntensionalImplicationLink IntensionalImplication
--- Atom type name: ExtensionalImplicationLink ExtensionalImplication
--- Atom type name: EquivalenceLink Equivalence
--- Atom type name: IntensionalEquivalenceLink IntensionalEquivalence
--- Atom type name: ExtensionalEquivalenceLink ExtensionalEquivalence
--- Atom type name: AssociativeLink Associative
--- Atom type name: AttractionLink Attraction
--- Atom type name: EvaluationLink Evaluation
--- Atom type name: ExecutionLink Execution
--- Atom type name: ProcedureNode Procedure
--- Atom type name: GroundedProcedureNode GroundedProcedure
--- Atom type name: SchemaNode Schema
--- Atom type name: DefinedSchemaNode DefinedSchema
--- Atom type name: GroundedSchemaNode GroundedSchema
--- Atom type name: PredicateNode Predicate
--- Atom type name: DefinedPredicateNode DefinedPredicate
--- Atom type name: GroundedPredicateNode GroundedPredicate
--- Atom type name: TypeNode Type
--- Atom type name: TypeInhNode TypeInh
--- Atom type name: TypeCoInhNode TypeCoInh
--- Atom type name: DefinedTypeNode DefinedType
--- Atom type name: TypeChoice TypeChoice
--- Atom type name: TypeSetLink TypeSet
--- Atom type name: ArrowLink Arrow
--- Atom type name: SignatureLink Signature
--- Atom type name: FuzzyLink Fuzzy
--- Atom type name: TypedVariableLink TypedVariable
-Scanning dependencies of target logger_cython
--- Atom type name: TypedAtomLink TypedAtom
--- Atom type name: AnchorNode Anchor
--- Atom type name: IntervalLink Interval
-[  2%] -- Atom type name: QuantityLink Quantity
--- Atom type name: VirtualLink Virtual
-Building CXX object opencog/cython/opencog/CMakeFiles/logger_cython.dir/logger.cpp.o
--- Atom type name: GreaterThanLink GreaterThan
--- Atom type name: IdenticalLink Identical
--- Atom type name: EqualLink Equal
--- Atom type name: FunctionLink Function
--- Atom type name: ExecutionOutputLink ExecutionOutput
--- Atom type name: FoldLink Fold
--- Atom type name: ArithmeticLink Arithmetic
--- Atom type name: PlusLink Plus
--- Atom type name: MinusLink Minus
--- Atom type name: TimesLink Times
--- Atom type name: DivideLink Divide
--- Atom type name: RandomNumberLink RandomNumber
--- Atom type name: ArityLink Arity
--- Atom type name: RandomChoiceLink RandomChoice
--- Atom type name: TimeLink Time
--- Atom type name: SleepLink Sleep
--- Atom type name: MapLink Map
--- Atom type name: ComposeLink Compose
--- Atom type name: ProjectLink Project
--- Atom type name: Connector Connector
--- Custom atom type name specified: "ConnectorDir"
--- Atom type name: ConnectorDir ConnectorDir
--- Atom type name: ConnectorSeq ConnectorSeq
--- Atom type name: Section Section
-[  2%] Built target opencog_atom_types
-Scanning dependencies of target truthvalue
-[  4%] [  4%] [  4%] [  4%] [  6%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/FuzzyTruthValue.cc.o
-Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/EvidenceCountTruthValue.cc.o
-Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/AttentionValue.cc.o
-Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/CountTruthValue.cc.o
-Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/IndefiniteTruthValue.cc.o
-Linking CXX shared library libpersist-pg.so
-Linking CXX shared library libpersist-odbc.so
-[  6%] Built target persist-pg
-[  6%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/ProbabilisticTruthValue.cc.o
-[  6%] Built target persist-odbc
-[  6%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/SimpleTruthValue.cc.o
-Linking CXX shared library logger.so
-[  6%] Built target logger_cython
-[  6%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/TruthValue.cc.o
-Linking CXX shared library libtruthvalue.so
-[  6%] Built target truthvalue
-Scanning dependencies of target atombase
-[  6%] [  6%] [  6%] [  9%] [  9%] [  9%] [  9%] [ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Handle.cc.o
-Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Atom.cc.o
-Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/atom_types_init.cc.o
-Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/FloatValue.cc.o
-Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/ClassServer.cc.o
-Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Link.cc.o
-Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/LinkValue.cc.o
-Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Node.cc.o
-[ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/StringValue.cc.o
-[ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Valuation.cc.o
-Linking CXX shared library libatombase.so
-[ 11%] Built target atombase
-Scanning dependencies of target attentionbank
-Scanning dependencies of target atomutils
-[ 11%] [ 13%] [ 13%] [ 15%] [ 15%] [ 15%] [ 15%] [ 13%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/AtomUtils.cc.o
-Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FuzzyMatch.cc.o
-Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AttentionBank.cc.o
-Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FindUtils.cc.o
-Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AtomBins.cc.o
-Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/StochasticImportanceDiffusion.cc.o
-Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AVUtils.cc.o
-Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/ImportanceIndex.cc.o
-[ 15%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FuzzyMatchBasic.cc.o
-[ 18%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/Neighbors.cc.o
-[ 18%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/TypeUtils.cc.o
-Linking CXX shared library libattentionbank.so
-[ 18%] Built target attentionbank
-Linking CXX shared library libatomutils.so
-[ 18%] Built target atomutils
-Scanning dependencies of target atomcore
-[ 20%] [ 20%] [ 20%] [ 22%] [ 22%] [ 22%] [ 22%] [ 20%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ComposeLink.cc.o
-Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ArityLink.cc.o
-Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/DeleteLink.cc.o
-Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/Checkers.cc.o
-Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/DefineLink.cc.o
-Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/Context.cc.o
-Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/FreeLink.cc.o
-Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/FunctionLink.cc.o
-[ 25%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ImplicationScopeLink.cc.o
-[ 25%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/LambdaLink.cc.o
-[ 25%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/NumberNode.cc.o
-[ 25%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/PrenexLink.cc.o
-[ 27%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/PresentLink.cc.o
-[ 27%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/PutLink.cc.o
-[ 27%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/Quotation.cc.o
-[ 27%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/RandomChoice.cc.o
-[ 29%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/RandomNumber.cc.o
-[ 29%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/RewriteLink.cc.o
-[ 29%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ScopeLink.cc.o
-[ 31%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/SleepLink.cc.o
-[ 31%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/StateLink.cc.o
-[ 31%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/TimeLink.cc.o
-[ 31%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/TypedAtomLink.cc.o
-[ 34%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/TypeNode.cc.o
-[ 34%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/UniqueLink.cc.o
-[ 34%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/UnorderedLink.cc.o
-[ 34%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/Variables.cc.o
-[ 36%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/VariableList.cc.o
-Linking CXX shared library libatomcore.so
-[ 36%] Built target atomcore
-Scanning dependencies of target clearbox
-Scanning dependencies of target atomspace
-[ 36%] [ 36%] [ 38%] [ 38%] [ 38%] [ 40%] [ 40%] Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/DivideLink.cc.o
-[ 40%] Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/ArithmeticLink.cc.o
-Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/FoldLink.cc.o
-Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/PlusLink.cc.o
-Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/MinusLink.cc.o
-Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/TimesLink.cc.o
-Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/AtomSpaceInit.cc.o
-Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/AtomSpace.cc.o
-[ 40%] Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/AtomTable.cc.o
-[ 43%] Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/BackingStore.cc.o
-[ 43%] Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/FixedIntegerIndex.cc.o
-[ 43%] Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/TypeIndex.cc.o
-Linking CXX shared library libclearbox.so
-[ 43%] Built target clearbox
-Linking CXX shared library libatomspace.so
-[ 43%] Built target atomspace
-[ 45%] Cythonizing type_constructors.pyx
-Scanning dependencies of target atomspaceutils
-Scanning dependencies of target lambda
-[ 45%] [ 45%] [ 45%] [ 47%] [ 47%] [ 47%] Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/AtomSpaceUtils.cc.o
-Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/RandomAtomGenerator.cc.o
-Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/BindLink.cc.o
-Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/DualLink.cc.o
-Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/TLB.cc.o
-Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/PatternLink.cc.o
-Scanning dependencies of target sql-support
-[ 47%] Building CXX object opencog/persist/sql/CMakeFiles/sql-support.dir/AtomStorage.cc.o
-Scanning dependencies of target type_constructors
-[ 47%] Building CXX object opencog/cython/opencog/CMakeFiles/type_constructors.dir/type_constructors.cpp.o
-[ 50%] Building CXX object opencog/persist/sql/CMakeFiles/sql-support.dir/SQLBackingStore.cc.o
-[ 50%] Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/PatternTerm.cc.o
-[ 52%] Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/PatternUtils.cc.o
-Linking CXX shared library libatomspaceutils.so
-[ 52%] Built target atomspaceutils
-[ 52%] Cythonizing atomspace.pyx
-Linking CXX shared library libsql-support.so
-[ 52%] Built target sql-support
-Scanning dependencies of target atomspace_cython
-[ 52%] [ 54%] Building CXX object opencog/cython/opencog/CMakeFiles/atomspace_cython.dir/Cast.cc.o
-Building CXX object opencog/cython/opencog/CMakeFiles/atomspace_cython.dir/atomspace.cpp.o
-Linking CXX shared library type_constructors.so
-Linking CXX shared library liblambda.so
-[ 54%] Built target type_constructors
-[ 54%] Built target lambda
-Scanning dependencies of target unify
-[ 54%] Building CXX object opencog/unify/CMakeFiles/unify.dir/Unify.cc.o
-Scanning dependencies of target smob
-[ 54%] [ 54%] [ 54%] [ 56%] [ 56%] [ 56%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemePrimitive.cc.o
-Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAtom.cc.o
-Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeModule.cc.o
-Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeEval.cc.o
-Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmob.cc.o
-Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAF.cc.o
-[ 56%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAS.cc.o
-[ 59%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAV.cc.o
-[ 59%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobGC.cc.o
-[ 59%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobNew.cc.o
-[ 59%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobTV.cc.o
-[ 61%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobValue.cc.o
-[ 61%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobLogger.cc.o
-Linking CXX shared library atomspace.so
-[ 61%] Built target atomspace_cython
-Linking CXX shared library libunify.so
-[ 61%] Built target unify
-Linking CXX shared library libsmob.so
-[ 61%] Built target smob
-[ 61%] Serializing with protobuf
-Scanning dependencies of target persist
-Scanning dependencies of target dist-gearman
-Scanning dependencies of target randgen
-Scanning dependencies of target persist-sql
-[ 61%] [ 61%] Scanning dependencies of target atomspace_bm
-[ 63%] Building CXX object opencog/guile/CMakeFiles/randgen.dir/RandGenSCM.cc.o
-Building CXX object opencog/persist/gearman/CMakeFiles/dist-gearman.dir/DistSCM.cc.o
-Scanning dependencies of target PythonEval
-Scanning dependencies of target query
-[ 63%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-sql.dir/llapi.cc.o
-[ 63%] [ 65%] Building CXX object opencog/persist/guile/CMakeFiles/persist.dir/PersistSCM.cc.o
-[ 65%] Building CXX object opencog/cython/CMakeFiles/PythonEval.dir/PythonEval.cc.o
-Building CXX object opencog/query/CMakeFiles/query.dir/AttentionalFocusCB.cc.o
-Building CXX object opencog/benchmark/CMakeFiles/atomspace_bm.dir/AtomSpaceBenchmark.cc.o
-Scanning dependencies of target zmqatoms
-[ 68%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQMessages.pb.cc.o
-[ 68%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-sql.dir/SQLAtomStorage.cc.o
-Linking CXX shared library librandgen.so
-[ 68%] Built target randgen
-[ 68%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-sql.dir/SQLPersistSCM.cc.o
-Linking CXX shared library libpersist.so
-Linking CXX shared library libdist-gearman.so
-[ 68%] Built target persist
-[ 70%] Building CXX object opencog/cython/CMakeFiles/PythonEval.dir/load-file.cc.o
-[ 70%] Built target dist-gearman
-[ 70%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ProtocolBufferSerializer.cc.o
-[ 70%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQClient.cc.o
-[ 70%] Building CXX object opencog/query/CMakeFiles/query.dir/DefaultPatternMatchCB.cc.o
-[ 70%] Building CXX object opencog/query/CMakeFiles/query.dir/Implicator.cc.o
-Linking CXX shared library libPythonEval.so
-[ 72%] Building CXX object opencog/query/CMakeFiles/query.dir/DefaultImplicator.cc.o
-[ 72%] Built target PythonEval
-[ 72%] Building CXX object opencog/query/CMakeFiles/query.dir/InitiateSearchCB.cc.o
-[ 75%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQPersistSCM.cc.o
-[ 75%] Building CXX object opencog/benchmark/CMakeFiles/atomspace_bm.dir/atomspace_bm.cc.o
-[ 75%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternMatch.cc.o
-Linking CXX shared library libpersist-sql.so
-[ 75%] Built target persist-sql
-Scanning dependencies of target PythonSCM
-[ 75%] Building CXX object opencog/cython/CMakeFiles/PythonSCM.dir/PythonSCM.cc.o
-[ 75%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternMatchEngine.cc.o
-Linking CXX shared library libzmqatoms.so
-[ 75%] Built target zmqatoms
-[ 77%] Cythonizing utilities.pyx
-Linking CXX executable atomspace_bm
-[ 77%] Built target atomspace_bm
-[ 79%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternSCM.cc.o
-Scanning dependencies of target utilities_cython
-[ 79%] Building CXX object opencog/cython/opencog/CMakeFiles/utilities_cython.dir/Utilities.cc.o
-[ 79%] Building CXX object opencog/query/CMakeFiles/query.dir/Recognizer.cc.o
-[ 79%] Building CXX object opencog/query/CMakeFiles/query.dir/Satisfier.cc.o
-Linking CXX shared library libPythonSCM.so
-[ 79%] Built target PythonSCM
-Scanning dependencies of target sniff
-[ 79%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/sniff.dir/sniff.cc.o
-[ 79%] Building CXX object opencog/cython/opencog/CMakeFiles/utilities_cython.dir/utilities.cpp.o
-Linking CXX executable sniff
-[ 79%] Built target sniff
-Linking CXX shared library utilities.so
-[ 79%] Built target utilities_cython
-Linking CXX shared library libquery.so
-[ 79%] Built target query
-Scanning dependencies of target execution
-[ 79%] [ 81%] [ 81%] [ 81%] [ 81%] [ 81%] Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/Force.cc.o
-Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/ExecutionOutputLink.cc.o
-Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/EvaluationLink.cc.o
-Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/ExecSCM.cc.o
-Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/Instantiator.cc.o
-Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/MapLink.cc.o
-Linking CXX shared library libexecution.so
-[ 81%] Built target execution
-[ 81%] [ 81%] Cythonizing scheme_wrapper.pyx
-Cythonizing bindlink.pyx
-Scanning dependencies of target atomspace-cwrapper
-Scanning dependencies of target profile_bindlink
-[ 81%] [ 84%] [ 84%] [ 84%] Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/AtomSpace_CWrapper.cpp.o
-[ 84%] Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/TruthValue_CWrapper.cpp.o
-Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/Exec_CWrapper.cpp.o
-Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/PatternMatcher_CWrapper.cpp.o
-Building CXX object opencog/benchmark/CMakeFiles/profile_bindlink.dir/profile_bindlink.cc.o
-Scanning dependencies of target ruleengine
-[ 86%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/BackwardChainer.cc.o
-Scanning dependencies of target scheme_wrapper
-[ 86%] Building CXX object opencog/cython/opencog/CMakeFiles/scheme_wrapper.dir/PyScheme.cc.o
-Scanning dependencies of target bindlink_cython
-[ 88%] Building CXX object opencog/cython/opencog/CMakeFiles/bindlink_cython.dir/BindlinkStub.cc.o
-Linking CXX executable profile_bindlink
-[ 90%] [ 90%] Building CXX object opencog/cython/opencog/CMakeFiles/scheme_wrapper.dir/scheme_wrapper.cpp.o
-Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/Value_CWrapper.cpp.o
-[ 90%] Built target profile_bindlink
-[ 90%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/TraceRecorder.cc.o
-[ 90%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/ControlPolicy.cc.o
-[ 90%] Building CXX object opencog/cython/opencog/CMakeFiles/bindlink_cython.dir/bindlink.cpp.o
-[ 90%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/MixtureModel.cc.o
-[ 93%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/ActionSelection.cc.o
-Linking CXX shared library libatomspace-cwrapper.so
-[ 93%] Built target atomspace-cwrapper
-[ 93%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/BetaDistribution.cc.o
-Linking CXX shared library scheme_wrapper.so
-[ 93%] Built target scheme_wrapper
-[ 93%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/BackwardChainerPMCB.cc.o
-[ 93%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/BIT.cc.o
-[ 95%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/Fitness.cc.o
-Linking CXX shared library bindlink.so
-[ 95%] Built target bindlink_cython
-[ 95%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/forwardchainer/FCStat.cc.o
-[ 95%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/forwardchainer/ForwardChainer.cc.o
-[ 97%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/URELogger.cc.o
-[ 97%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/ChainerUtils.cc.o
-[ 97%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/InferenceSCM.cc.o
-[ 97%] [100%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/Rule.cc.o
-Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/URECommons.cc.o
-[100%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/UREConfig.cc.o
-Linking CXX shared library libruleengine.so
-[100%] Built target ruleengine
-Scanning dependencies of target logger
-[100%] Building CXX object opencog/guile/CMakeFiles/logger.dir/LoggerSCM.cc.o
-Linking CXX shared library liblogger.so
-[100%] Built target logger
-+ DSTATUS=BUILDPASS
-+ docker exec --user root 5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42 bash opencog/dependencies/job2
-+ cd opencog/dependencies/atomspace
-+ cd build
-+ make install
-[  2%] Built target opencog_atom_types
-[  6%] Built target truthvalue
-[ 11%] Built target atombase
-[ 15%] Built target atomutils
-[ 34%] Built target atomcore
-[ 38%] Built target clearbox
-[ 40%] Built target attentionbank
-[ 43%] Built target atomspace
-[ 43%] Built target atomspaceutils
-[ 45%] Built target atomspace_cython
-[ 50%] Built target lambda
-[ 56%] Built target smob
-[ 59%] Built target PythonEval
-[ 63%] Built target query
-[ 65%] Built target execution
-[ 68%] Built target atomspace_bm
-[ 68%] Built target profile_bindlink
-[ 68%] Built target dist-gearman
-[ 68%] Built target persist
-[ 70%] Built target sql-support
-[ 70%] Built target persist-odbc
-[ 70%] Built target persist-pg
-[ 72%] Built target persist-sql
-[ 72%] Built target sniff
-[ 77%] Built target zmqatoms
-[ 77%] Built target unify
-[ 88%] Built target ruleengine
-[ 88%] Built target logger
-[ 88%] Built target randgen
-[ 88%] Built target PythonSCM
-[ 90%] Built target bindlink_cython
-[ 90%] Built target logger_cython
-[ 93%] Built target scheme_wrapper
-[ 95%] Built target type_constructors
-[ 97%] Built target utilities_cython
-[100%] Built target atomspace-cwrapper
-Install the project...
--- Install configuration: "Release"
--- Installing: /usr/local/lib/opencog/libatombase.so
--- Set runtime path of "/usr/local/lib/opencog/libatombase.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/include/opencog/atoms/base/Atom.h
--- Installing: /usr/local/include/opencog/atoms/base/atom_types.h
--- Installing: /usr/local/include/opencog/atoms/base/atom_types.cc
--- Installing: /usr/local/include/opencog/atoms/base/ClassServer.h
--- Installing: /usr/local/include/opencog/atoms/base/FloatValue.h
--- Installing: /usr/local/include/opencog/atoms/base/Handle.h
--- Installing: /usr/local/include/opencog/atoms/base/Link.h
--- Installing: /usr/local/include/opencog/atoms/base/LinkValue.h
--- Installing: /usr/local/include/opencog/atoms/base/Node.h
--- Installing: /usr/local/include/opencog/atoms/base/ProtoAtom.h
--- Installing: /usr/local/include/opencog/atoms/base/StringValue.h
--- Installing: /usr/local/include/opencog/atoms/base/types.h
--- Installing: /usr/local/include/opencog/atoms/base/Valuation.h
--- Installing: /usr/local/share/opencog/scm/opencog/base/core_types.scm
--- Installing: /usr/local/lib/opencog/libatomcore.so
--- Set runtime path of "/usr/local/lib/opencog/libatomcore.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/include/opencog/atoms/core/ArityLink.h
--- Installing: /usr/local/include/opencog/atoms/core/ComposeLink.h
--- Installing: /usr/local/include/opencog/atoms/core/Context.h
--- Installing: /usr/local/include/opencog/atoms/core/DefineLink.h
--- Installing: /usr/local/include/opencog/atoms/core/DeleteLink.h
--- Installing: /usr/local/include/opencog/atoms/core/FreeLink.h
--- Installing: /usr/local/include/opencog/atoms/core/FunctionLink.h
--- Installing: /usr/local/include/opencog/atoms/core/LambdaLink.h
--- Installing: /usr/local/include/opencog/atoms/core/NumberNode.h
--- Installing: /usr/local/include/opencog/atoms/core/PrenexLink.h
--- Installing: /usr/local/include/opencog/atoms/core/PresentLink.h
--- Installing: /usr/local/include/opencog/atoms/core/PutLink.h
--- Installing: /usr/local/include/opencog/atoms/core/Quotation.h
--- Installing: /usr/local/include/opencog/atoms/core/RandomChoice.h
--- Installing: /usr/local/include/opencog/atoms/core/RandomNumber.h
--- Installing: /usr/local/include/opencog/atoms/core/RewriteLink.h
--- Installing: /usr/local/include/opencog/atoms/core/ScopeLink.h
--- Installing: /usr/local/include/opencog/atoms/core/SleepLink.h
--- Installing: /usr/local/include/opencog/atoms/core/StateLink.h
--- Installing: /usr/local/include/opencog/atoms/core/TimeLink.h
--- Installing: /usr/local/include/opencog/atoms/core/TypedAtomLink.h
--- Installing: /usr/local/include/opencog/atoms/core/TypeNode.h
--- Installing: /usr/local/include/opencog/atoms/core/UniqueLink.h
--- Installing: /usr/local/include/opencog/atoms/core/UnorderedLink.h
--- Installing: /usr/local/include/opencog/atoms/core/Variables.h
--- Installing: /usr/local/include/opencog/atoms/core/VariableList.h
--- Installing: /usr/local/lib/opencog/libexecution.so
--- Set runtime path of "/usr/local/lib/opencog/libexecution.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/include/opencog/atoms/execution/Force.h
--- Installing: /usr/local/include/opencog/atoms/execution/EvaluationLink.h
--- Installing: /usr/local/include/opencog/atoms/execution/ExecutionOutputLink.h
--- Installing: /usr/local/include/opencog/atoms/execution/Instantiator.h
--- Installing: /usr/local/include/opencog/atoms/core/MapLink.h
--- Installing: /usr/local/lib/opencog/liblambda.so
--- Set runtime path of "/usr/local/lib/opencog/liblambda.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/include/opencog/atoms/pattern/BindLink.h
--- Installing: /usr/local/include/opencog/atoms/pattern/DualLink.h
--- Installing: /usr/local/include/opencog/atoms/pattern/PatternLink.h
--- Installing: /usr/local/include/opencog/atoms/pattern/Pattern.h
--- Installing: /usr/local/include/opencog/atoms/pattern/PatternTerm.h
--- Installing: /usr/local/include/opencog/atoms/pattern/PatternUtils.h
--- Installing: /usr/local/lib/opencog/libclearbox.so
--- Set runtime path of "/usr/local/lib/opencog/libclearbox.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/include/opencog/atoms/reduct/ArithmeticLink.h
--- Installing: /usr/local/include/opencog/atoms/reduct/DivideLink.h
--- Installing: /usr/local/include/opencog/atoms/reduct/FoldLink.h
--- Installing: /usr/local/include/opencog/atoms/reduct/MinusLink.h
--- Installing: /usr/local/include/opencog/atoms/reduct/PlusLink.h
--- Installing: /usr/local/include/opencog/atoms/reduct/TimesLink.h
--- Installing: /usr/local/lib/opencog/libatomspace.so
--- Set runtime path of "/usr/local/lib/opencog/libatomspace.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/include/opencog/atomspace/AtomSpace.h
--- Installing: /usr/local/include/opencog/atomspace/AtomTable.h
--- Installing: /usr/local/include/opencog/atomspace/BackingStore.h
--- Installing: /usr/local/include/opencog/atomspace/FixedIntegerIndex.h
--- Installing: /usr/local/include/opencog/atomspace/TypeIndex.h
--- Installing: /usr/local/include/opencog/atomspace/version.h
--- Installing: /usr/local/lib/opencog/libatomspaceutils.so
--- Set runtime path of "/usr/local/lib/opencog/libatomspaceutils.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/include/opencog/atomspaceutils/AtomSpaceUtils.h
--- Installing: /usr/local/include/opencog/atomspaceutils/TLB.h
--- Installing: /usr/local/lib/opencog/libatomutils.so
--- Set runtime path of "/usr/local/lib/opencog/libatomutils.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/include/opencog/atomutils/AtomUtils.h
--- Installing: /usr/local/include/opencog/atomutils/FindUtils.h
--- Installing: /usr/local/include/opencog/atomutils/FollowLink.h
--- Installing: /usr/local/include/opencog/atomutils/ForeachChaseLink.h
--- Installing: /usr/local/include/opencog/atomutils/FuzzyMatch.h
--- Installing: /usr/local/include/opencog/atomutils/FuzzyMatchBasic.h
--- Installing: /usr/local/include/opencog/atomutils/ThreadSafeHandleMap.h
--- Installing: /usr/local/include/opencog/atomutils/Neighbors.h
--- Installing: /usr/local/include/opencog/atomutils/Substitutor.h
--- Installing: /usr/local/include/opencog/atomutils/TypeUtils.h
--- Installing: /usr/local/lib/opencog/libattentionbank.so
--- Set runtime path of "/usr/local/lib/opencog/libattentionbank.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/include/opencog/attentionbank/AtomBins.h
--- Installing: /usr/local/include/opencog/attentionbank/AttentionBank.h
--- Installing: /usr/local/include/opencog/attentionbank/AVUtils.h
--- Installing: /usr/local/include/opencog/attentionbank/ImportanceIndex.h
--- Installing: /usr/local/include/opencog/attentionbank/StochasticImportanceDiffusion.h
--- Installing: /usr/local/include/opencog/eval/GenericEval.h
--- Installing: /usr/local/lib/opencog/libquery.so
--- Set runtime path of "/usr/local/lib/opencog/libquery.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/include/opencog/query/AttentionalFocusCB.h
--- Installing: /usr/local/include/opencog/query/BindLinkAPI.h
--- Installing: /usr/local/include/opencog/query/DefaultImplicator.h
--- Installing: /usr/local/include/opencog/query/DefaultPatternMatchCB.h
--- Installing: /usr/local/include/opencog/query/Implicator.h
--- Installing: /usr/local/include/opencog/query/InitiateSearchCB.h
--- Installing: /usr/local/include/opencog/query/PatternMatchCallback.h
--- Installing: /usr/local/include/opencog/query/PatternMatchEngine.h
--- Installing: /usr/local/include/opencog/query/Satisfier.h
--- Installing: /usr/local/lib/opencog/libdist-gearman.so
--- Set runtime path of "/usr/local/lib/opencog/libdist-gearman.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/lib/opencog/libpersist.so
--- Set runtime path of "/usr/local/lib/opencog/libpersist.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/include/opencog/persist/guile/PersistSCM.h
--- Installing: /usr/local/include/opencog/persist/sql/AtomStorage.h
--- Installing: /usr/local/include/opencog/persist/sql/SQLBackingStore.h
--- Installing: /usr/local/lib/opencog/libsql-support.so
--- Set runtime path of "/usr/local/lib/opencog/libsql-support.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/lib/opencog/libpersist-odbc.so
--- Set runtime path of "/usr/local/lib/opencog/libpersist-odbc.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog"
--- Installing: /usr/local/lib/opencog/libpersist-pg.so
--- Set runtime path of "/usr/local/lib/opencog/libpersist-pg.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog"
--- Installing: /usr/local/lib/opencog/libpersist-sql.so
--- Set runtime path of "/usr/local/lib/opencog/libpersist-sql.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/include/opencog/persist/sql/multi-driver/llapi.h
--- Installing: /usr/local/include/opencog/persist/sql/multi-driver/SQLAtomStorage.h
--- Installing: /usr/local/include/opencog/persist/sql/multi-driver/SQLPersistSCM.h
--- Installing: /usr/local/lib/opencog/libzmqatoms.so
--- Set runtime path of "/usr/local/lib/opencog/libzmqatoms.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/include/opencog/persist/zmq/atomspace/ZMQMessages.pb.h
--- Installing: /usr/local/include/opencog/persist/zmq/atomspace/ProtocolBufferSerializer.h
--- Installing: /usr/local/include/opencog/persist/zmq/atomspace/ZMQClient.h
--- Installing: /usr/local/include/opencog/persist/zmq/atomspace/ZMQPersistSCM.h
--- Installing: /usr/local/lib/opencog/libruleengine.so
--- Set runtime path of "/usr/local/lib/opencog/libruleengine.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/include/opencog/rule-engine/UREConfig.h
--- Installing: /usr/local/include/opencog/rule-engine/URECommons.h
--- Installing: /usr/local/include/opencog/rule-engine/URELogger.h
--- Installing: /usr/local/include/opencog/rule-engine/Rule.h
--- Up-to-date: /usr/local/include/opencog/rule-engine/UREConfig.h
--- Installing: /usr/local/include/opencog/rule-engine/forwardchainer/FCStat.h
--- Installing: /usr/local/include/opencog/rule-engine/forwardchainer/ForwardChainer.h
--- Installing: /usr/local/include/opencog/rule-engine/backwardchainer/BackwardChainer.h
--- Installing: /usr/local/include/opencog/rule-engine/backwardchainer/TraceRecorder.h
--- Installing: /usr/local/include/opencog/rule-engine/backwardchainer/ControlPolicy.h
--- Installing: /usr/local/include/opencog/rule-engine/backwardchainer/MixtureModel.h
--- Installing: /usr/local/include/opencog/rule-engine/backwardchainer/ActionSelection.h
--- Installing: /usr/local/include/opencog/rule-engine/backwardchainer/BetaDistribution.h
--- Installing: /usr/local/include/opencog/rule-engine/backwardchainer/BackwardChainerPMCB.h
--- Installing: /usr/local/include/opencog/rule-engine/backwardchainer/BIT.h
--- Installing: /usr/local/include/opencog/rule-engine/backwardchainer/Fitness.h
--- Installing: /usr/local/lib/opencog/libtruthvalue.so
--- Set runtime path of "/usr/local/lib/opencog/libtruthvalue.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/include/opencog/truthvalue/AttentionValue.h
--- Installing: /usr/local/include/opencog/truthvalue/CountTruthValue.h
--- Installing: /usr/local/include/opencog/truthvalue/FuzzyTruthValue.h
--- Installing: /usr/local/include/opencog/truthvalue/IndefiniteTruthValue.h
--- Installing: /usr/local/include/opencog/truthvalue/ProbabilisticTruthValue.h
--- Installing: /usr/local/include/opencog/truthvalue/SimpleTruthValue.h
--- Installing: /usr/local/include/opencog/truthvalue/EvidenceCountTruthValue.h
--- Installing: /usr/local/include/opencog/truthvalue/TruthValue.h
--- Installing: /usr/local/lib/opencog/libunify.so
--- Set runtime path of "/usr/local/lib/opencog/libunify.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/include/opencog/unify/Unify.h
--- Installing: /usr/local/lib/opencog/libsmob.so
--- Set runtime path of "/usr/local/lib/opencog/libsmob.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/lib/opencog/liblogger.so
--- Set runtime path of "/usr/local/lib/opencog/liblogger.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/lib/opencog/librandgen.so
--- Set runtime path of "/usr/local/lib/opencog/librandgen.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/include/opencog/guile/SchemeEval.h
--- Installing: /usr/local/include/opencog/guile/SchemeModule.h
--- Installing: /usr/local/include/opencog/guile/SchemePrimitive.h
--- Installing: /usr/local/include/opencog/guile/SchemeSmob.h
--- Installing: /usr/local/share/opencog/scm/opencog.scm
--- Installing: /usr/local/share/opencog/scm/opencog/base/apply.scm
--- Installing: /usr/local/share/opencog/scm/opencog/base/atom-cache.scm
--- Installing: /usr/local/share/opencog/scm/opencog/base/av-tv.scm
--- Installing: /usr/local/share/opencog/scm/opencog/base/core-docs.scm
--- Installing: /usr/local/share/opencog/scm/opencog/base/debug-trace.scm
--- Installing: /usr/local/share/opencog/scm/opencog/base/file-utils.scm
--- Installing: /usr/local/share/opencog/scm/opencog/base/repl-shell.scm
--- Installing: /usr/local/share/opencog/scm/opencog/base/utilities.scm
--- Installing: /usr/local/share/opencog/scm/opencog/exec.scm
--- Installing: /usr/local/share/opencog/scm/opencog/extension.scm
--- Installing: /usr/local/share/opencog/scm/opencog/logger.scm
--- Installing: /usr/local/share/opencog/scm/opencog/randgen.scm
--- Installing: /usr/local/share/opencog/scm/opencog/persist.scm
--- Installing: /usr/local/share/opencog/scm/opencog/query.scm
--- Installing: /usr/local/share/opencog/scm/opencog/rule-engine.scm
--- Installing: /usr/local/share/opencog/scm/opencog/dist-gearman.scm
--- Installing: /usr/local/share/opencog/scm/opencog/persist-sql.scm
--- Installing: /usr/local/share/opencog/scm/opencog/python.scm
--- Installing: /usr/local/share/opencog/scm/opencog/persist-zmq.scm
--- Installing: /usr/local/share/opencog/scm/opencog/rule-engine/rule-engine-utils.scm
--- Installing: /usr/local/share/opencog/scm/opencog/matrix.scm
--- Installing: /usr/local/share/opencog/scm/opencog/matrix/bin-count.scm
--- Installing: /usr/local/share/opencog/scm/opencog/matrix/compute-mi.scm
--- Installing: /usr/local/share/opencog/scm/opencog/matrix/cosine.scm
--- Installing: /usr/local/share/opencog/scm/opencog/matrix/dynamic.scm
--- Installing: /usr/local/share/opencog/scm/opencog/matrix/entropy.scm
--- Installing: /usr/local/share/opencog/scm/opencog/matrix/filter.scm
--- Installing: /usr/local/share/opencog/scm/opencog/matrix/fold-api.scm
--- Installing: /usr/local/share/opencog/scm/opencog/matrix/loop-api.scm
--- Installing: /usr/local/share/opencog/scm/opencog/matrix/object-api.scm
--- Installing: /usr/local/share/opencog/scm/opencog/matrix/similarity-api.scm
--- Installing: /usr/local/share/opencog/scm/opencog/matrix/support.scm
--- Installing: /usr/local/share/opencog/scm/opencog/matrix/report-api.scm
--- Installing: /usr/local/share/opencog/scm/opencog/matrix/thresh-pca.scm
--- Installing: /usr/local/share/opencog/scm/opencog/sheaf.scm
--- Installing: /usr/local/share/opencog/scm/opencog/sheaf/make-section.scm
--- Installing: /usr/local/share/opencog/scm/opencog/sheaf/mst-parser.scm
--- Installing: /usr/local/share/opencog/scm/opencog/sheaf/sections.scm
--- Installing: /usr/local/share/opencog/scm/opencog/sheaf/vo-graph.scm
--- Installing: /usr/local/lib/opencog/libPythonEval.so
--- Set runtime path of "/usr/local/lib/opencog/libPythonEval.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/include/opencog/cython/PythonEval.h
--- Installing: /usr/local/include/opencog/cython/PyIncludeWrapper.h
--- Installing: /usr/local/lib/opencog/libPythonSCM.so
--- Set runtime path of "/usr/local/lib/opencog/libPythonSCM.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/include/opencog/cython/opencog/__init__.py
--- Installing: /usr/local/include/opencog/cython/opencog/atomspace.pxd
--- Installing: /usr/local/include/opencog/cython/opencog/Cast.h
--- Installing: /usr/local/lib/python2.7/dist-packages/opencog/atomspace.so
--- Set runtime path of "/usr/local/lib/python2.7/dist-packages/opencog/atomspace.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/lib/python2.7/dist-packages/opencog/bindlink.so
--- Set runtime path of "/usr/local/lib/python2.7/dist-packages/opencog/bindlink.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/lib/python2.7/dist-packages/opencog/logger.so
--- Set runtime path of "/usr/local/lib/python2.7/dist-packages/opencog/logger.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/lib/python2.7/dist-packages/opencog/type_constructors.so
--- Set runtime path of "/usr/local/lib/python2.7/dist-packages/opencog/type_constructors.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/lib/python2.7/dist-packages/opencog/utilities.so
--- Set runtime path of "/usr/local/lib/python2.7/dist-packages/opencog/utilities.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/lib/python2.7/dist-packages/opencog/scheme_wrapper.so
--- Set runtime path of "/usr/local/lib/python2.7/dist-packages/opencog/scheme_wrapper.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
--- Installing: /usr/local/lib/python2.7/dist-packages/opencog/__init__.py
--- Installing: /usr/local/lib/opencog/libatomspace-cwrapper.so
--- Set runtime path of "/usr/local/lib/opencog/libatomspace-cwrapper.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
-+ DSTATUS=BUILDPASS
-+ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1404/builds/9/log OpenCOG_U1404_AtomSpace
-Already up-to-date.
-~/status/jobs ~/status
-~/status
-[master 23a0f43] OpenCOG_U1404_AtomSpace BUILDPASS
- 3 files changed, 1149 insertions(+), 916 deletions(-)
- rewrite jobs/OpenCOG_U1404_AtomSpace.log (97%)
-To git@github.com:edguy3/CenStatus.git
-   7417d64..23a0f43  master -> master
-[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins4103681137701250206.sh
-+ . build.docker/docker.env
-+ CID=5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
-+ DKRUNROOT=docker exec --user root   5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
-+ DKRUNUSER=docker exec --user jenkins  5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
-+ UID=125
-+ GID=132
-+ cat
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-*****
-*****  MOSES
-*****
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-
++ echo GIT_COMMIT=
+GIT_COMMIT=
++ echo GIT_BRANCH=
+GIT_BRANCH=
++ echo GIT_URL=
+GIT_URL=
 + WDIR=opencog/dependencies/moses
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/9/log
++ JOBDIR=../OpenCOG_U1404/dependencies
 + cat
-+ cat
-+ chmod +x dependencies/job1
-+ chmod +x dependencies/job2
++ chmod +x ../OpenCOG_U1404/dependencies/job1
 + docker exec --user jenkins 5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42 bash opencog/dependencies/job1
 + pwd
-+ ls
 + cd opencog/dependencies/moses
-+ rm -fr build
-+ mkdir build
 + cd build
-+ cmake -DCMAKE_BUILD_TYPE=Release ..
++ make -j8 test
 /home/opencog
-octool
-opencog
--- The C compiler identification is GNU 4.8.4
--- The CXX compiler identification is GNU 4.8.4
--- Check for working C compiler: /usr/bin/cc
--- Check for working C compiler: /usr/bin/cc -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working CXX compiler: /usr/bin/c++
--- Check for working CXX compiler: /usr/bin/c++ -- works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Build type: Release
--- Boost version: 1.54.0
--- Found the following Boost libraries:
---   date_time
---   filesystem
---   program_options
---   regex
---   serialization
---   system
---   thread
--- Boost version 105400 found.
--- Found Boost::program_options
--- Found Boost::math
--- Found PythonInterp: /usr/bin/python (found version "2.7.6") 
--- Found CxxTest.
--- Looking for include file opencog/util/cogutil.h
--- Looking for include file opencog/util/cogutil.h - found
--- Found CogUtil version 2.0.2 at /usr/local/lib/libcogutil.so
--- CogUtil found.
--- Could NOT find MPI_C (missing:  MPI_C_LIBRARIES MPI_C_INCLUDE_PATH) 
--- Could NOT find MPI_CXX (missing:  MPI_CXX_LIBRARIES MPI_CXX_INCLUDE_PATH) 
--- MPI missing: needed for MPI-MOSES.
--- Valgrind Prefix: 
--- Could NOT find VALGRIND (missing:  VALGRIND_INCLUDE_DIR VALGRIND_PROGRAM) 
--- VALGRIND missing: needed for thread debugging.
--- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython2.7.so (found suitable version "2.7.6", minimum required is "2.7") 
--- Python libs found.
--- Found Cython: /usr/bin/cython (Required is at least version "0.19.0") 
--- Cython ( 0.20.1 >= 0.19.0) found.
--- Python destination dir found: /usr/lib/python2.7/dist-packages
-fatal: No names found, cannot describe anything.
--- Could NOT find Doxygen (missing:  DOXYGEN_EXECUTABLE) 
--- Doxygen not found, you won't be able to generate API documentation.
+Scanning dependencies of target ant_scoring
+[  1%] [  3%] Built target moses_exec
+[  7%] Building CXX object examples/example-ant/CMakeFiles/ant_scoring.dir/ant_scoring.cc.o
+Built target feature_selection
+[ 33%] Built target comboreduct
+[ 35%] Generating annUTest.cpp
+[ 37%] Built target comboant
+[ 38%] [ 40%] [ 40%] [ 41%] [ 42%] Generating messageUTest.cpp
+Generating similarityUTest.cpp
+Generating vertexUTest.cpp
+Generating listUTest.cpp
+Generating procedure_callUTest.cpp
+Scanning dependencies of target annUTest
+[ 42%] [ 64%] Built target moses
+Scanning dependencies of target similarityUTest
+Building CXX object tests/comboreduct/combo/CMakeFiles/annUTest.dir/annUTest.cpp.o
+Scanning dependencies of target vertexUTest
+Scanning dependencies of target messageUTest
+[ 64%] [ 66%] [ 67%] [ 67%] Scanning dependencies of target listUTest
+Scanning dependencies of target procedure_callUTest
+Building CXX object tests/comboreduct/combo/CMakeFiles/similarityUTest.dir/similarityUTest.cpp.o
+Generating procedure_repositoryUTest.cpp
+Building CXX object tests/comboreduct/combo/CMakeFiles/messageUTest.dir/messageUTest.cpp.o
+Building CXX object tests/comboreduct/combo/CMakeFiles/vertexUTest.dir/vertexUTest.cpp.o
+[ 67%] [ 67%] Building CXX object tests/comboreduct/combo/CMakeFiles/listUTest.dir/listUTest.cpp.o
+Building CXX object tests/comboreduct/combo/CMakeFiles/procedure_callUTest.dir/procedure_callUTest.cpp.o
+Scanning dependencies of target procedure_repositoryUTest
+[ 67%] Building CXX object tests/comboreduct/combo/CMakeFiles/procedure_repositoryUTest.dir/procedure_repositoryUTest.cpp.o
+Linking CXX executable annUTest
+[ 67%] Built target annUTest
+[ 68%] Generating interpreterUTest.cpp
+Linking CXX executable similarityUTest
+Scanning dependencies of target interpreterUTest
+[ 68%] Building CXX object tests/comboreduct/combo/CMakeFiles/interpreterUTest.dir/interpreterUTest.cpp.o
+[ 68%] Built target similarityUTest
+[ 70%] Generating iostream_comboUTest.cpp
+Linking CXX static library libant_scoring.a
+Scanning dependencies of target iostream_comboUTest
+[ 70%] Building CXX object tests/comboreduct/combo/CMakeFiles/iostream_comboUTest.dir/iostream_comboUTest.cpp.o
+[ 70%] Built target ant_scoring
+[ 71%] Generating BooleanReductUTest.cpp
+Scanning dependencies of target BooleanReductUTest
+[ 71%] Building CXX object tests/comboreduct/reduct/CMakeFiles/BooleanReductUTest.dir/BooleanReductUTest.cpp.o
+Linking CXX executable vertexUTest
+[ 71%] Built target vertexUTest
+[ 72%] Generating BooleanFullUTest.cpp
+Scanning dependencies of target BooleanFullUTest
+[ 72%] Building CXX object tests/comboreduct/reduct/CMakeFiles/BooleanFullUTest.dir/BooleanFullUTest.cpp.o
+Linking CXX executable messageUTest
+[ 72%] Built target messageUTest
+[ 74%] Generating ContinReductUTest.cpp
+Scanning dependencies of target ContinReductUTest
+[ 74%] Building CXX object tests/comboreduct/reduct/CMakeFiles/ContinReductUTest.dir/ContinReductUTest.cpp.o
+Linking CXX executable listUTest
+[ 74%] Built target listUTest
+[ 75%] Generating FullReductUTest.cpp
+Scanning dependencies of target FullReductUTest
+[ 75%] Building CXX object tests/comboreduct/reduct/CMakeFiles/FullReductUTest.dir/FullReductUTest.cpp.o
+Linking CXX executable procedure_callUTest
+Linking CXX executable procedure_repositoryUTest
+[ 75%] Built target procedure_callUTest
+[ 75%] Generating MixedReductUTest.cpp
+Scanning dependencies of target MixedReductUTest
+[ 76%] Building CXX object tests/comboreduct/reduct/CMakeFiles/MixedReductUTest.dir/MixedReductUTest.cpp.o
+[ 76%] Built target procedure_repositoryUTest
+[ 76%] Generating ANNReductUTest.cpp
+Scanning dependencies of target ANNReductUTest
+[ 76%] Building CXX object tests/comboreduct/reduct/CMakeFiles/ANNReductUTest.dir/ANNReductUTest.cpp.o
+Linking CXX executable iostream_comboUTest
+[ 76%] Built target iostream_comboUTest
+[ 77%] Generating FoldReductUTest.cpp
+Scanning dependencies of target FoldReductUTest
+[ 77%] Building CXX object tests/comboreduct/reduct/CMakeFiles/FoldReductUTest.dir/FoldReductUTest.cpp.o
+Linking CXX executable BooleanReductUTest
+[ 77%] Built target BooleanReductUTest
+[ 79%] Generating tableUTest.cpp
+Scanning dependencies of target tableUTest
+[ 79%] Building CXX object tests/comboreduct/table/CMakeFiles/tableUTest.dir/tableUTest.cpp.o
+Linking CXX executable interpreterUTest
+Linking CXX executable BooleanFullUTest
+[ 79%] Built target interpreterUTest
+[ 79%] Generating type_treeUTest.cpp
+Scanning dependencies of target type_treeUTest
+[ 80%] Building CXX object tests/comboreduct/type_checker/CMakeFiles/type_treeUTest.dir/type_treeUTest.cpp.o
+[ 80%] Built target BooleanFullUTest
+[ 81%] Generating iostream_scored_combo_treeUTest.cpp
+Scanning dependencies of target iostream_scored_combo_treeUTest
+[ 81%] Building CXX object tests/moses/CMakeFiles/iostream_scored_combo_treeUTest.dir/iostream_scored_combo_treeUTest.cpp.o
+Linking CXX executable ContinReductUTest
+[ 81%] Built target ContinReductUTest
+[ 81%] Generating KnobTurningUTest.cpp
+Scanning dependencies of target KnobTurningUTest
+[ 83%] Building CXX object tests/moses/CMakeFiles/KnobTurningUTest.dir/KnobTurningUTest.cpp.o
+Linking CXX executable FullReductUTest
+[ 83%] Built target FullReductUTest
+[ 83%] Generating NeighborSamplingUTest.cpp
+Scanning dependencies of target NeighborSamplingUTest
+[ 84%] Building CXX object tests/moses/CMakeFiles/NeighborSamplingUTest.dir/NeighborSamplingUTest.cpp.o
+Linking CXX executable ANNReductUTest
+[ 84%] Built target ANNReductUTest
+[ 85%] Generating FieldSetUTest.cpp
+Scanning dependencies of target FieldSetUTest
+[ 85%] Building CXX object tests/moses/CMakeFiles/FieldSetUTest.dir/FieldSetUTest.cpp.o
+Linking CXX executable MixedReductUTest
+[ 85%] Built target MixedReductUTest
+[ 85%] Generating representationUTest.cpp
+Scanning dependencies of target representationUTest
+[ 87%] Building CXX object tests/moses/CMakeFiles/representationUTest.dir/representationUTest.cpp.o
+Linking CXX executable FoldReductUTest
+[ 87%] Built target FoldReductUTest
+[ 87%] Generating scoringUTest.cpp
+Scanning dependencies of target scoringUTest
+[ 88%] Building CXX object tests/moses/CMakeFiles/scoringUTest.dir/scoringUTest.cpp.o
+Linking CXX executable FieldSetUTest
+[ 88%] Built target FieldSetUTest
+[ 89%] Generating metapopulationUTest.cpp
+Scanning dependencies of target metapopulationUTest
+[ 89%] Building CXX object tests/moses/CMakeFiles/metapopulationUTest.dir/metapopulationUTest.cpp.o
+Linking CXX executable iostream_scored_combo_treeUTest
+Linking CXX executable KnobTurningUTest
+[ 89%] Built target iostream_scored_combo_treeUTest
+[ 89%] Generating optimizationUTest.cpp
+Linking CXX executable type_treeUTest
+Scanning dependencies of target optimizationUTest
+[ 90%] Building CXX object tests/moses/CMakeFiles/optimizationUTest.dir/optimizationUTest.cpp.o
+[ 90%] Built target KnobTurningUTest
+[ 90%] Generating MOSESUTest.cpp
+[ 90%] Scanning dependencies of target MOSESUTest
+Built target type_treeUTest
+[ 92%] [ 92%] Generating weightedUTest.cpp
+Building CXX object tests/moses/CMakeFiles/MOSESUTest.dir/MOSESUTest.cpp.o
+Scanning dependencies of target weightedUTest
+[ 93%] Building CXX object tests/moses/CMakeFiles/weightedUTest.dir/weightedUTest.cpp.o
+Linking CXX executable NeighborSamplingUTest
+[ 93%] Built target NeighborSamplingUTest
+[ 93%] Generating mixedUTest.cpp
+Scanning dependencies of target mixedUTest
+[ 94%] Building CXX object tests/moses/CMakeFiles/mixedUTest.dir/mixedUTest.cpp.o
+Linking CXX executable representationUTest
+[ 94%] Built target representationUTest
+[ 96%] Generating irisUTest.cpp
+Scanning dependencies of target irisUTest
+[ 96%] Building CXX object tests/moses/CMakeFiles/irisUTest.dir/irisUTest.cpp.o
+Linking CXX executable tableUTest
+[ 96%] Built target tableUTest
+[ 96%] Generating selectionUTest.cpp
+Scanning dependencies of target selectionUTest
+[ 96%] Building CXX object tests/moses/CMakeFiles/selectionUTest.dir/selectionUTest.cpp.o
+Linking CXX executable scoringUTest
+[ 96%] Built target scoringUTest
+[ 96%] Generating dynFeatSelUTest.cpp
+Scanning dependencies of target dynFeatSelUTest
+[ 96%] Building CXX object tests/moses/CMakeFiles/dynFeatSelUTest.dir/dynFeatSelUTest.cpp.o
+Linking CXX executable metapopulationUTest
+[ 96%] Built target metapopulationUTest
+[ 97%] Generating AntUTest.cpp
+Scanning dependencies of target AntUTest
+[ 97%] Building CXX object tests/moses/CMakeFiles/AntUTest.dir/AntUTest.cpp.o
+Linking CXX executable optimizationUTest
+[ 97%] Built target optimizationUTest
+[ 98%] Generating feature_selectionUTest.cpp
+Scanning dependencies of target feature_selectionUTest
+[ 98%] Building CXX object tests/feature-selection/CMakeFiles/feature_selectionUTest.dir/feature_selectionUTest.cpp.o
+Linking CXX executable weightedUTest
+[ 98%] Built target weightedUTest
+Linking CXX executable MOSESUTest
+[ 98%] Built target MOSESUTest
+Linking CXX executable mixedUTest
+[ 98%] Built target mixedUTest
+Linking CXX executable irisUTest
+[ 98%] Built target irisUTest
+Linking CXX executable selectionUTest
+[ 98%] Built target selectionUTest
+Linking CXX executable dynFeatSelUTest
+[ 98%] Built target dynFeatSelUTest
+Linking CXX executable AntUTest
+[ 98%] Built target AntUTest
+Linking CXX executable feature_selectionUTest
+[ 98%] Built target feature_selectionUTest
+Scanning dependencies of target tests
+[ 98%] Built target tests
+Scanning dependencies of target test
+[100%] Running tests...
+Test project /home/opencog/opencog/dependencies/moses/build/tests
+      Start  1: vertexUTest
+ 1/35 Test  #1: vertexUTest .......................   Passed    0.01 sec
+      Start  2: messageUTest
+ 2/35 Test  #2: messageUTest ......................   Passed    0.00 sec
+      Start  3: listUTest
+ 3/35 Test  #3: listUTest .........................   Passed    0.00 sec
+      Start  4: similarityUTest
+ 4/35 Test  #4: similarityUTest ...................   Passed    0.00 sec
+      Start  5: annUTest
+ 5/35 Test  #5: annUTest ..........................   Passed    0.00 sec
+      Start  6: procedure_callUTest
+ 6/35 Test  #6: procedure_callUTest ...............   Passed    0.00 sec
+      Start  7: procedure_repositoryUTest
+ 7/35 Test  #7: procedure_repositoryUTest .........   Passed    0.00 sec
+      Start  8: interpreterUTest
+ 8/35 Test  #8: interpreterUTest ..................   Passed    0.00 sec
+      Start  9: iostream_comboUTest
+ 9/35 Test  #9: iostream_comboUTest ...............   Passed    0.00 sec
+      Start 10: BooleanReductUTest
+10/35 Test #10: BooleanReductUTest ................   Passed    0.00 sec
+      Start 11: BooleanFullUTest
+11/35 Test #11: BooleanFullUTest ..................   Passed    0.09 sec
+      Start 12: ContinReductUTest
+12/35 Test #12: ContinReductUTest .................   Passed    0.01 sec
+      Start 13: FullReductUTest
+13/35 Test #13: FullReductUTest ...................   Passed    0.01 sec
+      Start 14: MixedReductUTest
+14/35 Test #14: MixedReductUTest ..................   Passed    0.06 sec
+      Start 15: ANNReductUTest
+15/35 Test #15: ANNReductUTest ....................   Passed    0.00 sec
+      Start 16: FoldReductUTest
+16/35 Test #16: FoldReductUTest ...................   Passed    0.00 sec
+      Start 17: tableUTest
+17/35 Test #17: tableUTest ........................   Passed    0.02 sec
+      Start 18: type_treeUTest
+18/35 Test #18: type_treeUTest ....................   Passed    0.12 sec
+      Start 19: iostream_scored_combo_treeUTest
+19/35 Test #19: iostream_scored_combo_treeUTest ...   Passed    0.00 sec
+      Start 20: KnobTurningUTest
+20/35 Test #20: KnobTurningUTest ..................   Passed    0.00 sec
+      Start 21: NeighborSamplingUTest
+21/35 Test #21: NeighborSamplingUTest .............   Passed    0.02 sec
+      Start 22: FieldSetUTest
+22/35 Test #22: FieldSetUTest .....................   Passed    0.09 sec
+      Start 23: representationUTest
+23/35 Test #23: representationUTest ...............   Passed    0.16 sec
+      Start 24: scoringUTest
+24/35 Test #24: scoringUTest ......................   Passed    0.01 sec
+      Start 25: metapopulationUTest
+25/35 Test #25: metapopulationUTest ...............   Passed    0.01 sec
+      Start 26: optimizationUTest
+26/35 Test #26: optimizationUTest .................   Passed    0.01 sec
+      Start 27: MOSESUTest
+27/35 Test #27: MOSESUTest ........................   Passed   28.24 sec
+      Start 28: weightedUTest
+28/35 Test #28: weightedUTest .....................   Passed   40.12 sec
+      Start 29: mixedUTest
+29/35 Test #29: mixedUTest ........................   Passed   16.82 sec
+      Start 30: irisUTest
+30/35 Test #30: irisUTest .........................   Passed   82.82 sec
+      Start 31: selectionUTest
+31/35 Test #31: selectionUTest ....................   Passed  121.35 sec
+      Start 32: dynFeatSelUTest
+32/35 Test #32: dynFeatSelUTest ...................   Passed   24.81 sec
+      Start 33: AntUTest
+33/35 Test #33: AntUTest ..........................   Passed    0.07 sec
+      Start 34: feature_selectionUTest
+34/35 Test #34: feature_selectionUTest ............   Passed    6.06 sec
+      Start 35: CythonMoses
+35/35 Test #35: CythonMoses .......................   Passed    3.92 sec
 
-The following components will be built:
------------------------------------------------
-   ComboReduct        - Library for reduction of combo program trees.
-   Feature selection  - MOSES based feature selection tool.
-   MOSES              - Meta-Optimizing Semantic Evolutionary Search.
-   Python bindings    - Python (cython) bindings.
-   Python tests       - Python bindings nose tests.
-   Unit tests         - Unit tests.
+100% tests passed, 0 tests failed out of 35
 
-The following components WILL NOT be built:
------------------------------------------------
-   Doxygen            - Code documentation.
-
--- Configuring done
--- Generating done
--- Build files have been written to: /home/opencog/opencog/dependencies/moses/build
-+ make -j8
-Scanning dependencies of target combo-man
-Scanning dependencies of target moses-man
-Scanning dependencies of target feature-man
-[  1%] [  1%] [  3%] Generating feature-selection.1.gz
-Generating eval-table.1.gz
-Generating moses.1.gz
-Scanning dependencies of target feature_selection
-Scanning dependencies of target moses_exec
-[  3%] [  3%] [  3%] Built target combo-man
-Built target feature-man
-Built target moses-man
-[  3%] [  5%] [  5%] [  5%] [  5%] [  7%] [  8%] Scanning dependencies of target comboreduct
-Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/deme_optimize.cc.o
-Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/problem.cc.o
-Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/problem-params.cc.o
-Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/incremental.cc.o
-Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/demo-problems.cc.o
-Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/random.cc.o
-Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/simple.cc.o
-[  8%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/crutil/exception.cc.o
-[ 10%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/action.cc.o
-[ 12%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/moses_exec.cc.o
-[ 12%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/stochastic_max_dependency.cc.o
-[ 14%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/scorers/moses_optim.cc.o
-[ 14%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/action_symbol.cc.o
-[ 14%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/main/feature-selection.cc.o
-[ 15%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/assumption.cc.o
-[ 15%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/builtin_action.cc.o
-[ 15%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/moses_exec_def.cc.o
-[ 15%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/table-problems.cc.o
-[ 17%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/definite_object.cc.o
-[ 17%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/descriptions.cc.o
-[ 19%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/enum_type.cc.o
-[ 19%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/indefinite_object.cc.o
-[ 21%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/iostream_combo.cc.o
-[ 21%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/message.cc.o
-[ 22%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/perception.cc.o
-[ 22%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/procedure_call.cc.o
-[ 24%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/procedure_repository.cc.o
-[ 24%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/similarity.cc.o
-[ 24%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/simple_nn.cc.o
-[ 26%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/vertex.cc.o
-[ 26%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/table/table.cc.o
-[ 28%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/table/table_io.cc.o
-[ 28%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/interpreter/interpreter.cc.o
-Linking CXX shared library libfeature_selection.so
-[ 28%] Built target feature_selection
-[ 29%] [ 29%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/interpreter/eval.cc.o
-Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/type_checker/type_tree_def.cc.o
-[ 31%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/type_checker/type_tree.cc.o
-In file included from /usr/include/boost/variant.hpp:17:0,
-                 from /home/opencog/opencog/dependencies/moses/moses/comboreduct/interpreter/../combo/vertex.h:29,
-                 from /home/opencog/opencog/dependencies/moses/moses/comboreduct/interpreter/interpreter.h:27,
-                 from /home/opencog/opencog/dependencies/moses/moses/comboreduct/interpreter/interpreter.cc:23:
-/usr/include/boost/variant/variant.hpp: In instantiation of 'boost::variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>::variant(T&&, typename boost::enable_if<boost::is_rvalue_reference<T&&> >::type*) [with T = const boost::variant<double, opencog::combo::enum_t, opencog::combo::id::builtin, opencog::combo::id::wild_card, opencog::combo::argument, opencog::combo::id::action, const opencog::combo::builtin_action_base*, const opencog::combo::perception_base*, std::basic_string<char>, const opencog::combo::indefinite_object_base*, opencog::combo::message, const opencog::combo::procedure_call_base*, const opencog::combo::action_symbol_base*, opencog::combo::ann_type>; T0_ = double; T1 = opencog::combo::enum_t; T2 = opencog::combo::id::builtin; T3 = opencog::combo::id::wild_card; T4 = opencog::combo::argument; T5 = opencog::combo::id::action; T6 = const opencog::combo::builtin_action_base*; T7 = const opencog::combo::perception_base*; T8 = std::basic_string<char>; T9 = const opencog::combo::indefinite_object_base*; T10 = opencog::combo::message; T11 = const opencog::combo::procedure_call_base*; T12 = const opencog::combo::action_symbol_base*; T13 = opencog::combo::ann_type; T14 = boost::detail::variant::void_; T15 = boost::detail::variant::void_; T16 = boost::detail::variant::void_; T17 = boost::detail::variant::void_; T18 = boost::detail::variant::void_; T19 = boost::detail::variant::void_; typename boost::enable_if<boost::is_rvalue_reference<T&&> >::type = void]':
-/home/opencog/opencog/dependencies/moses/moses/comboreduct/interpreter/interpreter.cc:291:52:   required from here
-/usr/include/boost/variant/variant.hpp:1677:10: note: candidate 1: void boost::variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>::convert_construct(const boost::variant<U0, U1, U2, U3, U4, U5, U6, U7, U8, U9, U10, U11, U12, U13, U14, U15, U16, U17, U18, U19>&, long int) [with U0 = double; U1 = opencog::combo::enum_t; U2 = opencog::combo::id::builtin; U3 = opencog::combo::id::wild_card; U4 = opencog::combo::argument; U5 = opencog::combo::id::action; U6 = const opencog::combo::builtin_action_base*; U7 = const opencog::combo::perception_base*; U8 = std::basic_string<char>; U9 = const opencog::combo::indefinite_object_base*; U10 = opencog::combo::message; U11 = const opencog::combo::procedure_call_base*; U12 = const opencog::combo::action_symbol_base*; U13 = opencog::combo::ann_type; U14 = boost::detail::variant::void_; U15 = boost::detail::variant::void_; U16 = boost::detail::variant::void_; U17 = boost::detail::variant::void_; U18 = boost::detail::variant::void_; U19 = boost::detail::variant::void_; T0_ = double; T1 = opencog::combo::enum_t; T2 = opencog::combo::id::builtin; T3 = opencog::combo::id::wild_card; T4 = opencog::combo::argument; T5 = opencog::combo::id::action; T6 = const opencog::combo::builtin_action_base*; T7 = const opencog::combo::perception_base*; T8 = std::basic_string<char>; T9 = const opencog::combo::indefinite_object_base*; T10 = opencog::combo::message; T11 = const opencog::combo::procedure_call_base*; T12 = const opencog::combo::action_symbol_base*; T13 = opencog::combo::ann_type; T14 = boost::detail::variant::void_; T15 = boost::detail::variant::void_; T16 = boost::detail::variant::void_; T17 = boost::detail::variant::void_; T18 = boost::detail::variant::void_; T19 = boost::detail::variant::void_]
-     void convert_construct(
-          ^
-/usr/include/boost/variant/variant.hpp:1563:71: note: candidate 2: typename boost::enable_if<boost::is_rvalue_reference<T&&> >::type boost::variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>::convert_construct(T&&, int, mpl_::false_) [with T = const boost::variant<double, opencog::combo::enum_t, opencog::combo::id::builtin, opencog::combo::id::wild_card, opencog::combo::argument, opencog::combo::id::action, const opencog::combo::builtin_action_base*, const opencog::combo::perception_base*, std::basic_string<char>, const opencog::combo::indefinite_object_base*, opencog::combo::message, const opencog::combo::procedure_call_base*, const opencog::combo::action_symbol_base*, opencog::combo::ann_type>; T0_ = double; T1 = opencog::combo::enum_t; T2 = opencog::combo::id::builtin; T3 = opencog::combo::id::wild_card; T4 = opencog::combo::argument; T5 = opencog::combo::id::action; T6 = const opencog::combo::builtin_action_base*; T7 = const opencog::combo::perception_base*; T8 = std::basic_string<char>; T9 = const opencog::combo::indefinite_object_base*; T10 = opencog::combo::message; T11 = const opencog::combo::procedure_call_base*; T12 = const opencog::combo::action_symbol_base*; T13 = opencog::combo::ann_type; T14 = boost::detail::variant::void_; T15 = boost::detail::variant::void_; T16 = boost::detail::variant::void_; T17 = boost::detail::variant::void_; T18 = boost::detail::variant::void_; T19 = boost::detail::variant::void_; typename boost::enable_if<boost::is_rvalue_reference<T&&> >::type = void; mpl_::false_ = mpl_::bool_<false>]
-     typename boost::enable_if<boost::is_rvalue_reference<T&&> >::type convert_construct(
-                                                                       ^
-Linking CXX shared library libmoses_exec.so
-[ 31%] Built target moses_exec
-[ 31%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/action_reduction.cc.o
-[ 33%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/action_rules.cc.o
-In file included from /usr/include/boost/variant.hpp:17:0,
-                 from /home/opencog/opencog/dependencies/moses/moses/comboreduct/interpreter/../combo/vertex.h:29,
-                 from /home/opencog/opencog/dependencies/moses/moses/comboreduct/interpreter/eval.h:35,
-                 from /home/opencog/opencog/dependencies/moses/moses/comboreduct/interpreter/eval.cc:25:
-/usr/include/boost/variant/variant.hpp: In instantiation of 'boost::variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>::variant(T&&, typename boost::enable_if<boost::is_rvalue_reference<T&&> >::type*) [with T = const boost::variant<double, opencog::combo::enum_t, opencog::combo::id::builtin, opencog::combo::id::wild_card, opencog::combo::argument, opencog::combo::id::action, const opencog::combo::builtin_action_base*, const opencog::combo::perception_base*, std::basic_string<char>, const opencog::combo::indefinite_object_base*, opencog::combo::message, const opencog::combo::procedure_call_base*, const opencog::combo::action_symbol_base*, opencog::combo::ann_type>; T0_ = double; T1 = opencog::combo::enum_t; T2 = opencog::combo::id::builtin; T3 = opencog::combo::id::wild_card; T4 = opencog::combo::argument; T5 = opencog::combo::id::action; T6 = const opencog::combo::builtin_action_base*; T7 = const opencog::combo::perception_base*; T8 = std::basic_string<char>; T9 = const opencog::combo::indefinite_object_base*; T10 = opencog::combo::message; T11 = const opencog::combo::procedure_call_base*; T12 = const opencog::combo::action_symbol_base*; T13 = opencog::combo::ann_type; T14 = boost::detail::variant::void_; T15 = boost::detail::variant::void_; T16 = boost::detail::variant::void_; T17 = boost::detail::variant::void_; T18 = boost::detail::variant::void_; T19 = boost::detail::variant::void_; typename boost::enable_if<boost::is_rvalue_reference<T&&> >::type = void]':
-/home/opencog/opencog/dependencies/moses/moses/comboreduct/interpreter/eval.cc:124:69:   required from here
-/usr/include/boost/variant/variant.hpp:1677:10: note: candidate 1: void boost::variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>::convert_construct(const boost::variant<U0, U1, U2, U3, U4, U5, U6, U7, U8, U9, U10, U11, U12, U13, U14, U15, U16, U17, U18, U19>&, long int) [with U0 = double; U1 = opencog::combo::enum_t; U2 = opencog::combo::id::builtin; U3 = opencog::combo::id::wild_card; U4 = opencog::combo::argument; U5 = opencog::combo::id::action; U6 = const opencog::combo::builtin_action_base*; U7 = const opencog::combo::perception_base*; U8 = std::basic_string<char>; U9 = const opencog::combo::indefinite_object_base*; U10 = opencog::combo::message; U11 = const opencog::combo::procedure_call_base*; U12 = const opencog::combo::action_symbol_base*; U13 = opencog::combo::ann_type; U14 = boost::detail::variant::void_; U15 = boost::detail::variant::void_; U16 = boost::detail::variant::void_; U17 = boost::detail::variant::void_; U18 = boost::detail::variant::void_; U19 = boost::detail::variant::void_; T0_ = double; T1 = opencog::combo::enum_t; T2 = opencog::combo::id::builtin; T3 = opencog::combo::id::wild_card; T4 = opencog::combo::argument; T5 = opencog::combo::id::action; T6 = const opencog::combo::builtin_action_base*; T7 = const opencog::combo::perception_base*; T8 = std::basic_string<char>; T9 = const opencog::combo::indefinite_object_base*; T10 = opencog::combo::message; T11 = const opencog::combo::procedure_call_base*; T12 = const opencog::combo::action_symbol_base*; T13 = opencog::combo::ann_type; T14 = boost::detail::variant::void_; T15 = boost::detail::variant::void_; T16 = boost::detail::variant::void_; T17 = boost::detail::variant::void_; T18 = boost::detail::variant::void_; T19 = boost::detail::variant::void_]
-     void convert_construct(
-          ^
-/usr/include/boost/variant/variant.hpp:1563:71: note: candidate 2: typename boost::enable_if<boost::is_rvalue_reference<T&&> >::type boost::variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>::convert_construct(T&&, int, mpl_::false_) [with T = const boost::variant<double, opencog::combo::enum_t, opencog::combo::id::builtin, opencog::combo::id::wild_card, opencog::combo::argument, opencog::combo::id::action, const opencog::combo::builtin_action_base*, const opencog::combo::perception_base*, std::basic_string<char>, const opencog::combo::indefinite_object_base*, opencog::combo::message, const opencog::combo::procedure_call_base*, const opencog::combo::action_symbol_base*, opencog::combo::ann_type>; T0_ = double; T1 = opencog::combo::enum_t; T2 = opencog::combo::id::builtin; T3 = opencog::combo::id::wild_card; T4 = opencog::combo::argument; T5 = opencog::combo::id::action; T6 = const opencog::combo::builtin_action_base*; T7 = const opencog::combo::perception_base*; T8 = std::basic_string<char>; T9 = const opencog::combo::indefinite_object_base*; T10 = opencog::combo::message; T11 = const opencog::combo::procedure_call_base*; T12 = const opencog::combo::action_symbol_base*; T13 = opencog::combo::ann_type; T14 = boost::detail::variant::void_; T15 = boost::detail::variant::void_; T16 = boost::detail::variant::void_; T17 = boost::detail::variant::void_; T18 = boost::detail::variant::void_; T19 = boost::detail::variant::void_; typename boost::enable_if<boost::is_rvalue_reference<T&&> >::type = void; mpl_::false_ = mpl_::bool_<false>]
-     typename boost::enable_if<boost::is_rvalue_reference<T&&> >::type convert_construct(
-                                                                       ^
-[ 33%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/branch_rules.cc.o
-[ 35%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/clean_reduction.cc.o
-[ 35%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/contin_reduction.cc.o
-[ 36%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/contin_rules.cc.o
-[ 36%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/flat_normal_form.cc.o
-[ 36%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/full_reduction.cc.o
-[ 38%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/general_rules.cc.o
-[ 38%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/logical_reduction.cc.o
-[ 40%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/ann_reduction.cc.o
-[ 40%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/logical_rules.cc.o
-[ 42%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/fold_reduction.cc.o
-[ 42%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/fold_rules.cc.o
-[ 43%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/meta_rules.cc.o
-[ 43%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/mixed_reduction.cc.o
-[ 45%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/mixed_rules.cc.o
-[ 45%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/perception_reduction.cc.o
-[ 47%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/perception_rules.cc.o
-[ 47%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/reduct.cc.o
-Linking CXX shared library libcomboreduct.so
-[ 47%] Built target comboreduct
-Scanning dependencies of target comboant
-[ 49%] [ 49%] [ 49%] [ 49%] [ 50%] Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_perception.cc.o
-Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_combo_vocabulary.cc.o
-Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_action_symbol.cc.o
-Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_builtin_action.cc.o
-Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_indefinite_object.cc.o
-Linking CXX shared library libcomboant.so
-[ 50%] Built target comboant
-Scanning dependencies of target gen-disj-conj
-Scanning dependencies of target combo-fmt-converter
-Scanning dependencies of target full-reductor
-Scanning dependencies of target contin-reductor
-Scanning dependencies of target eval-table
-Scanning dependencies of target gen-table
-Scanning dependencies of target interactive-reductor
-Scanning dependencies of target action-reductor
-[ 50%] [ 50%] [ 52%] [ 54%] [ 56%] [ 56%] Building CXX object moses/comboreduct/main/CMakeFiles/combo-fmt-converter.dir/combo-fmt-converter.cc.o
-[ 57%] [ 57%] Building CXX object moses/comboreduct/main/CMakeFiles/eval-table.dir/eval-table.cc.o
-Building CXX object moses/comboreduct/main/CMakeFiles/full-reductor.dir/full-reductor.cc.o
-Building CXX object moses/comboreduct/main/CMakeFiles/contin-reductor.dir/contin-reductor.cc.o
-Building CXX object moses/comboreduct/main/CMakeFiles/gen-disj-conj.dir/gen-disj-conj.cc.o
-Building CXX object moses/comboreduct/main/CMakeFiles/interactive-reductor.dir/interactive-reductor.cc.o
-Building CXX object moses/comboreduct/main/CMakeFiles/action-reductor.dir/action-reductor.cc.o
-Building CXX object moses/comboreduct/main/CMakeFiles/gen-table.dir/gen-table.cc.o
-In file included from /usr/include/boost/variant.hpp:17:0,
-                 from /home/opencog/opencog/dependencies/moses/moses/comboreduct/combo/vertex.h:29,
-                 from /home/opencog/opencog/dependencies/moses/moses/comboreduct/main/../combo/iostream_combo.h:33,
-                 from /home/opencog/opencog/dependencies/moses/moses/comboreduct/main/gen-disj-conj.cc:35:
-/usr/include/boost/variant/variant.hpp: In instantiation of 'boost::variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>::variant(T&&, typename boost::enable_if<boost::is_rvalue_reference<T&&> >::type*) [with T = const boost::variant<double, opencog::combo::enum_t, opencog::combo::id::builtin, opencog::combo::id::wild_card, opencog::combo::argument, opencog::combo::id::action, const opencog::combo::builtin_action_base*, const opencog::combo::perception_base*, std::basic_string<char>, const opencog::combo::indefinite_object_base*, opencog::combo::message, const opencog::combo::procedure_call_base*, const opencog::combo::action_symbol_base*, opencog::combo::ann_type>; T0_ = double; T1 = opencog::combo::enum_t; T2 = opencog::combo::id::builtin; T3 = opencog::combo::id::wild_card; T4 = opencog::combo::argument; T5 = opencog::combo::id::action; T6 = const opencog::combo::builtin_action_base*; T7 = const opencog::combo::perception_base*; T8 = std::basic_string<char>; T9 = const opencog::combo::indefinite_object_base*; T10 = opencog::combo::message; T11 = const opencog::combo::procedure_call_base*; T12 = const opencog::combo::action_symbol_base*; T13 = opencog::combo::ann_type; T14 = boost::detail::variant::void_; T15 = boost::detail::variant::void_; T16 = boost::detail::variant::void_; T17 = boost::detail::variant::void_; T18 = boost::detail::variant::void_; T19 = boost::detail::variant::void_; typename boost::enable_if<boost::is_rvalue_reference<T&&> >::type = void]':
-/home/opencog/opencog/dependencies/moses/moses/comboreduct/main/gen-disj-conj.cc:133:82:   required from here
-/usr/include/boost/variant/variant.hpp:1677:10: note: candidate 1: void boost::variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>::convert_construct(const boost::variant<U0, U1, U2, U3, U4, U5, U6, U7, U8, U9, U10, U11, U12, U13, U14, U15, U16, U17, U18, U19>&, long int) [with U0 = double; U1 = opencog::combo::enum_t; U2 = opencog::combo::id::builtin; U3 = opencog::combo::id::wild_card; U4 = opencog::combo::argument; U5 = opencog::combo::id::action; U6 = const opencog::combo::builtin_action_base*; U7 = const opencog::combo::perception_base*; U8 = std::basic_string<char>; U9 = const opencog::combo::indefinite_object_base*; U10 = opencog::combo::message; U11 = const opencog::combo::procedure_call_base*; U12 = const opencog::combo::action_symbol_base*; U13 = opencog::combo::ann_type; U14 = boost::detail::variant::void_; U15 = boost::detail::variant::void_; U16 = boost::detail::variant::void_; U17 = boost::detail::variant::void_; U18 = boost::detail::variant::void_; U19 = boost::detail::variant::void_; T0_ = double; T1 = opencog::combo::enum_t; T2 = opencog::combo::id::builtin; T3 = opencog::combo::id::wild_card; T4 = opencog::combo::argument; T5 = opencog::combo::id::action; T6 = const opencog::combo::builtin_action_base*; T7 = const opencog::combo::perception_base*; T8 = std::basic_string<char>; T9 = const opencog::combo::indefinite_object_base*; T10 = opencog::combo::message; T11 = const opencog::combo::procedure_call_base*; T12 = const opencog::combo::action_symbol_base*; T13 = opencog::combo::ann_type; T14 = boost::detail::variant::void_; T15 = boost::detail::variant::void_; T16 = boost::detail::variant::void_; T17 = boost::detail::variant::void_; T18 = boost::detail::variant::void_; T19 = boost::detail::variant::void_]
-     void convert_construct(
-          ^
-/usr/include/boost/variant/variant.hpp:1563:71: note: candidate 2: typename boost::enable_if<boost::is_rvalue_reference<T&&> >::type boost::variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>::convert_construct(T&&, int, mpl_::false_) [with T = const boost::variant<double, opencog::combo::enum_t, opencog::combo::id::builtin, opencog::combo::id::wild_card, opencog::combo::argument, opencog::combo::id::action, const opencog::combo::builtin_action_base*, const opencog::combo::perception_base*, std::basic_string<char>, const opencog::combo::indefinite_object_base*, opencog::combo::message, const opencog::combo::procedure_call_base*, const opencog::combo::action_symbol_base*, opencog::combo::ann_type>; T0_ = double; T1 = opencog::combo::enum_t; T2 = opencog::combo::id::builtin; T3 = opencog::combo::id::wild_card; T4 = opencog::combo::argument; T5 = opencog::combo::id::action; T6 = const opencog::combo::builtin_action_base*; T7 = const opencog::combo::perception_base*; T8 = std::basic_string<char>; T9 = const opencog::combo::indefinite_object_base*; T10 = opencog::combo::message; T11 = const opencog::combo::procedure_call_base*; T12 = const opencog::combo::action_symbol_base*; T13 = opencog::combo::ann_type; T14 = boost::detail::variant::void_; T15 = boost::detail::variant::void_; T16 = boost::detail::variant::void_; T17 = boost::detail::variant::void_; T18 = boost::detail::variant::void_; T19 = boost::detail::variant::void_; typename boost::enable_if<boost::is_rvalue_reference<T&&> >::type = void; mpl_::false_ = mpl_::bool_<false>]
-     typename boost::enable_if<boost::is_rvalue_reference<T&&> >::type convert_construct(
-                                                                       ^
-Linking CXX executable combo-fmt-converter
-[ 57%] Built target combo-fmt-converter
-Scanning dependencies of target logical-reductor
-[ 57%] Building CXX object moses/comboreduct/main/CMakeFiles/logical-reductor.dir/logical-reductor.cc.o
-Linking CXX executable contin-reductor
-Linking CXX executable full-reductor
-Linking CXX executable gen-disj-conj
-[ 57%] Built target contin-reductor
-Scanning dependencies of target mixed-reductor
-[ 59%] Building CXX object moses/comboreduct/main/CMakeFiles/mixed-reductor.dir/mixed-reductor.cc.o
-Linking CXX executable action-reductor
-[ 59%] Built target full-reductor
-[ 59%] Built target gen-disj-conj
-Scanning dependencies of target perception-reductor
-Scanning dependencies of target repl
-[ 59%] [ 61%] Building CXX object moses/comboreduct/main/CMakeFiles/perception-reductor.dir/perception-reductor.cc.o
-Building CXX object moses/comboreduct/main/CMakeFiles/repl.dir/repl.cc.o
-[ 61%] Built target action-reductor
-Scanning dependencies of target tree-sim
-[ 61%] Building CXX object moses/comboreduct/main/CMakeFiles/tree-sim.dir/tree-sim.cc.o
-Linking CXX executable interactive-reductor
-[ 61%] Built target interactive-reductor
-Scanning dependencies of target tree_gen
-[ 63%] Building CXX object moses/comboreduct/main/CMakeFiles/tree_gen.dir/tree_gen.cc.o
-Linking CXX executable gen-table
-[ 63%] Built target gen-table
-Scanning dependencies of target moses
-[ 63%] Building CXX object moses/moses/CMakeFiles/moses.dir/deme/deme_expander.cc.o
-Linking CXX executable eval-table
-[ 63%] Built target eval-table
-[ 64%] Building CXX object moses/moses/CMakeFiles/moses.dir/deme/feature_selector.cc.o
-Linking CXX executable tree-sim
-[ 64%] Built target tree-sim
-Scanning dependencies of target eval-features
-[ 64%] Building CXX object moses/feature-selection/main/CMakeFiles/eval-features.dir/eval-features.cc.o
-Linking CXX executable logical-reductor
-[ 64%] Built target logical-reductor
-[ 64%] Building CXX object moses/moses/CMakeFiles/moses.dir/eda/initialization.cc.o
-Linking CXX executable perception-reductor
-[ 64%] Built target perception-reductor
-[ 66%] Building CXX object moses/moses/CMakeFiles/moses.dir/eda/local_structure.cc.o
-Linking CXX executable mixed-reductor
-[ 66%] Built target mixed-reductor
-[ 66%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/diversity.cc.o
-Linking CXX executable tree_gen
-[ 66%] Built target tree_gen
-[ 68%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/domination.cc.o
-Linking CXX executable repl
-[ 68%] Built target repl
-[ 68%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/ensemble.cc.o
-[ 70%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/merging.cc.o
-[ 70%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/metapopulation.cc.o
-[ 70%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/metapop_params.cc.o
-[ 71%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/subsample.cc.o
-[ 71%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/complexity.cc.o
-[ 73%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/distributed_moses.cc.o
-Linking CXX executable eval-features
-[ 73%] Built target eval-features
-[ 73%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/local_moses.cc.o
-[ 75%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/moses_main.cc.o
-[ 75%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/mpi_moses.cc.o
-[ 77%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/neighborhood_sampling.cc.o
-[ 77%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/partial.cc.o
-[ 78%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/types.cc.o
-[ 78%] Building CXX object moses/moses/CMakeFiles/moses.dir/optimization/hill-climbing.cc.o
-[ 80%] Building CXX object moses/moses/CMakeFiles/moses.dir/optimization/optimization.cc.o
-[ 80%] Building CXX object moses/moses/CMakeFiles/moses.dir/optimization/star-anneal.cc.o
-[ 82%] Building CXX object moses/moses/CMakeFiles/moses.dir/optimization/univariate.cc.o
-[ 82%] Building CXX object moses/moses/CMakeFiles/moses.dir/optimization/particle-swarm.cc.o
-[ 84%] Building CXX object moses/moses/CMakeFiles/moses.dir/representation/build_knobs.cc.o
-[ 84%] Building CXX object moses/moses/CMakeFiles/moses.dir/representation/field_set.cc.o
-[ 84%] [ 85%] Building CXX object moses/moses/CMakeFiles/moses.dir/representation/knobs.cc.o
-Building CXX object moses/moses/CMakeFiles/moses.dir/representation/representation.cc.o
-[ 85%] Building CXX object moses/moses/CMakeFiles/moses.dir/scoring/behave_cscore.cc.o
-[ 87%] Building CXX object moses/moses/CMakeFiles/moses.dir/scoring/bscores.cc.o
-[ 87%] Building CXX object moses/moses/CMakeFiles/moses.dir/scoring/discriminating_bscore.cc.o
-[ 89%] Building CXX object moses/moses/CMakeFiles/moses.dir/scoring/precision_bscore.cc.o
-[ 89%] Building CXX object moses/moses/CMakeFiles/moses.dir/scoring/time_dispersion.cc.o
-[ 91%] Building CXX object moses/moses/CMakeFiles/moses.dir/scoring/ss_bscore.cc.o
-[ 91%] Building CXX object moses/moses/CMakeFiles/moses.dir/scoring/scoring_base.cc.o
-[ 92%] Building CXX object moses/moses/CMakeFiles/moses.dir/scoring/select_bscore.cc.o
-Linking CXX shared library libmoses.so
-[ 92%] Built target moses
-[ 92%] Scanning dependencies of target moses-exec
-Cythonizing pymoses.pyx
-[ 94%] Scanning dependencies of target eval-candidate-likelihood
-Scanning dependencies of target fs-main
-Scanning dependencies of target eval-candidate
-Scanning dependencies of target eval-diversity
-Building CXX object moses/moses/main/CMakeFiles/moses-exec.dir/moses-exec.cc.o
-[ 94%] [ 96%] [ 96%] Building CXX object moses/moses/main/CMakeFiles/eval-candidate-likelihood.dir/eval-candidate-likelihood.cc.o
-[ 98%] Building CXX object moses/feature-selection/main/CMakeFiles/fs-main.dir/fs-main.cc.o
-Building CXX object moses/moses/main/CMakeFiles/eval-diversity.dir/eval-diversity.cc.o
-Building CXX object moses/moses/main/CMakeFiles/eval-candidate.dir/eval-candidate.cc.o
-Linking CXX executable moses
-Scanning dependencies of target moses_cython
-[100%] Building CXX object moses/cython/opencog/CMakeFiles/moses_cython.dir/pymoses.cpp.o
-[100%] Built target moses-exec
-Linking CXX shared library pymoses.so
-[100%] Built target moses_cython
-Linking CXX executable eval-candidate-likelihood
-[100%] Built target eval-candidate-likelihood
-Linking CXX executable eval-diversity
-Linking CXX executable eval-candidate
-[100%] Built target eval-candidate
-[100%] Built target eval-diversity
-Linking CXX executable feature-selection
-[100%] Built target fs-main
-+ DSTATUS=BUILDPASS
-+ docker exec --user root 5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42 bash opencog/dependencies/job2
-+ cd opencog/dependencies/moses
-+ cd build
-+ make install
-[ 35%] Built target comboreduct
-[ 38%] Built target comboant
-[ 38%] Built target action-reductor
-[ 38%] Built target combo-fmt-converter
-[ 40%] Built target contin-reductor
-[ 42%] Built target eval-table
-[ 43%] Built target full-reductor
-[ 43%] Built target gen-disj-conj
-[ 45%] Built target gen-table
-[ 45%] Built target interactive-reductor
-[ 45%] Built target logical-reductor
-[ 47%] Built target mixed-reductor
-[ 47%] Built target perception-reductor
-[ 49%] Built target repl
-[ 49%] Built target tree-sim
-[ 50%] Built target tree_gen
-[ 52%] Built target combo-man
-[ 57%] Built target feature_selection
-[ 87%] Built target moses
-[ 89%] Built target eval-candidate
-[ 89%] Built target eval-candidate-likelihood
-[ 91%] Built target eval-diversity
-[ 94%] Built target moses_exec
-[ 96%] Built target moses-exec
-[ 96%] Built target moses-man
-[ 96%] Built target eval-features
-[ 96%] Built target fs-main
-[ 98%] Built target feature-man
-[100%] Built target moses_cython
-Install the project...
--- Install configuration: "Release"
--- Installing: /usr/local/lib/libcomboreduct.so
--- Set runtime path of "/usr/local/lib/libcomboreduct.so" to "/usr/local/lib/moses:/usr/local/lib"
--- Installing: /usr/local/lib/libcomboant.so
--- Set runtime path of "/usr/local/lib/libcomboant.so" to "/usr/local/lib/moses:/usr/local/lib"
--- Installing: /usr/local/include/moses/comboreduct/combo/action.h
--- Installing: /usr/local/include/moses/comboreduct/combo/action_symbol.h
--- Installing: /usr/local/include/moses/comboreduct/combo/ann.h
--- Installing: /usr/local/include/moses/comboreduct/combo/argument.h
--- Installing: /usr/local/include/moses/comboreduct/combo/assumption.h
--- Installing: /usr/local/include/moses/comboreduct/combo/builtin_action.h
--- Installing: /usr/local/include/moses/comboreduct/combo/combo.h
--- Installing: /usr/local/include/moses/comboreduct/combo/common_def.h
--- Installing: /usr/local/include/moses/comboreduct/combo/convert_ann_combo.h
--- Installing: /usr/local/include/moses/comboreduct/combo/definite_object.h
--- Installing: /usr/local/include/moses/comboreduct/combo/enum_type.h
--- Installing: /usr/local/include/moses/comboreduct/combo/indefinite_object.h
--- Installing: /usr/local/include/moses/comboreduct/combo/iostream_combo.h
--- Installing: /usr/local/include/moses/comboreduct/combo/message.h
--- Installing: /usr/local/include/moses/comboreduct/combo/operator_base.h
--- Installing: /usr/local/include/moses/comboreduct/combo/perception.h
--- Installing: /usr/local/include/moses/comboreduct/combo/procedure_call.h
--- Installing: /usr/local/include/moses/comboreduct/combo/procedure_repository.h
--- Installing: /usr/local/include/moses/comboreduct/combo/simple_nn.h
--- Installing: /usr/local/include/moses/comboreduct/combo/vertex.h
--- Installing: /usr/local/include/moses/comboreduct/interpreter/interpreter.h
--- Installing: /usr/local/include/moses/comboreduct/type_checker/type_tree.h
--- Installing: /usr/local/include/moses/comboreduct/type_checker/type_tree_def.h
--- Installing: /usr/local/include/moses/comboreduct/table/table.h
--- Installing: /usr/local/include/moses/comboreduct/table/table_io.h
--- Installing: /usr/local/include/moses/comboreduct/reduct/action_rules.h
--- Installing: /usr/local/include/moses/comboreduct/reduct/branch_rules.h
--- Installing: /usr/local/include/moses/comboreduct/reduct/contin_rules.h
--- Installing: /usr/local/include/moses/comboreduct/reduct/flat_normal_form.h
--- Installing: /usr/local/include/moses/comboreduct/reduct/general_rules.h
--- Installing: /usr/local/include/moses/comboreduct/reduct/logical_rules.h
--- Installing: /usr/local/include/moses/comboreduct/reduct/meta_rules.h
--- Installing: /usr/local/include/moses/comboreduct/reduct/mixed_rules.h
--- Installing: /usr/local/include/moses/comboreduct/reduct/perception_rules.h
--- Installing: /usr/local/include/moses/comboreduct/reduct/fold_rules.h
--- Installing: /usr/local/include/moses/comboreduct/reduct/reduct.h
--- Installing: /usr/local/include/moses/comboreduct/ant_combo_vocabulary/ant_builtin_action.h
--- Installing: /usr/local/include/moses/comboreduct/ant_combo_vocabulary/ant_perception.h
--- Installing: /usr/local/include/moses/comboreduct/ant_combo_vocabulary/ant_action_symbol.h
--- Installing: /usr/local/include/moses/comboreduct/ant_combo_vocabulary/ant_indefinite_object.h
--- Installing: /usr/local/include/moses/comboreduct/ant_combo_vocabulary/ant_combo_vocabulary.h
--- Installing: /usr/local/include/moses/comboreduct/ant_combo_vocabulary/ant_operator.h
--- Installing: /usr/local/bin/eval-table
--- Set runtime path of "/usr/local/bin/eval-table" to "/usr/local/lib/moses:/usr/local/lib"
--- Installing: /usr/local/bin/gen-table
--- Set runtime path of "/usr/local/bin/gen-table" to "/usr/local/lib/moses:/usr/local/lib"
--- Installing: /usr/local/bin/gen-disj-conj
--- Set runtime path of "/usr/local/bin/gen-disj-conj" to "/usr/local/lib/moses:/usr/local/lib"
--- Installing: /usr/local/bin/combo-fmt-converter
--- Set runtime path of "/usr/local/bin/combo-fmt-converter" to "/usr/local/lib/moses:/usr/local/lib"
--- Installing: /usr/local/include/moses/comboreduct/main/tree_generation.h
--- Installing: /usr/local/share/man/man1/eval-table.1.gz
--- Installing: /usr/local/include/moses/comboreduct/crutil/exception.h
--- Installing: /usr/local/lib/libmoses.so
--- Set runtime path of "/usr/local/lib/libmoses.so" to "/usr/local/lib/moses:/usr/local/lib"
--- Installing: /usr/local/include/moses/moses/moses/complexity.h
--- Installing: /usr/local/include/moses/moses/moses/distributed_moses.h
--- Installing: /usr/local/include/moses/moses/moses/neighborhood_sampling.h
--- Installing: /usr/local/include/moses/moses/moses/local_moses.h
--- Installing: /usr/local/include/moses/moses/moses/moses_main.h
--- Installing: /usr/local/include/moses/moses/moses/moses_params.h
--- Installing: /usr/local/include/moses/moses/moses/mpi_moses.h
--- Installing: /usr/local/include/moses/moses/moses/partial.h
--- Installing: /usr/local/include/moses/moses/moses/types.h
--- Installing: /usr/local/include/moses/moses/scoring/behave_cscore.h
--- Installing: /usr/local/include/moses/moses/scoring/bscores.h
--- Installing: /usr/local/include/moses/moses/scoring/discriminating_bscore.h
--- Installing: /usr/local/include/moses/moses/scoring/precision_bscore.h
--- Installing: /usr/local/include/moses/moses/scoring/scoring_base.h
--- Installing: /usr/local/include/moses/moses/scoring/time_dispersion.h
--- Installing: /usr/local/include/moses/moses/scoring/ss_bscore.h
--- Installing: /usr/local/include/moses/moses/scoring/select_bscore.h
--- Installing: /usr/local/include/moses/moses/metapopulation/ensemble.h
--- Installing: /usr/local/include/moses/moses/metapopulation/ensemble_params.h
--- Installing: /usr/local/include/moses/moses/metapopulation/metapopulation.h
--- Installing: /usr/local/include/moses/moses/metapopulation/metapop_params.h
--- Installing: /usr/local/include/moses/moses/deme/deme_expander.h
--- Installing: /usr/local/include/moses/moses/deme/deme_params.h
--- Installing: /usr/local/include/moses/moses/deme/feature_selector.h
--- Installing: /usr/local/include/moses/moses/representation/field_set.h
--- Installing: /usr/local/include/moses/moses/representation/instance.h
--- Installing: /usr/local/include/moses/moses/representation/scored_instance.h
--- Installing: /usr/local/include/moses/moses/representation/instance_scorer.h
--- Installing: /usr/local/include/moses/moses/representation/instance_set.h
--- Installing: /usr/local/include/moses/moses/representation/build_knobs.h
--- Installing: /usr/local/include/moses/moses/representation/knob_mapper.h
--- Installing: /usr/local/include/moses/moses/representation/knobs.h
--- Installing: /usr/local/include/moses/moses/representation/representation.h
--- Installing: /usr/local/include/moses/moses/optimization/hill-climbing.h
--- Installing: /usr/local/include/moses/moses/optimization/optimization.h
--- Installing: /usr/local/include/moses/moses/optimization/star-anneal.h
--- Installing: /usr/local/include/moses/moses/optimization/univariate.h
--- Installing: /usr/local/include/moses/moses/optimization/particle-swarm.h
--- Installing: /usr/local/include/moses/moses/eda/initialization.h
--- Installing: /usr/local/include/moses/moses/eda/local_structure.h
--- Installing: /usr/local/include/moses/moses/eda/logging.h
--- Installing: /usr/local/include/moses/moses/eda/optimize.h
--- Installing: /usr/local/include/moses/moses/eda/replacement.h
--- Installing: /usr/local/include/moses/moses/eda/termination.h
--- Installing: /usr/local/bin/moses
--- Set runtime path of "/usr/local/bin/moses" to "/usr/local/lib/moses:/usr/local/lib"
--- Installing: /usr/local/bin/eval-diversity
--- Set runtime path of "/usr/local/bin/eval-diversity" to "/usr/local/lib/moses:/usr/local/lib"
--- Installing: /usr/local/bin/eval-candidate
--- Set runtime path of "/usr/local/bin/eval-candidate" to "/usr/local/lib/moses:/usr/local/lib"
--- Installing: /usr/local/bin/eval-candidate-likelihood
--- Set runtime path of "/usr/local/bin/eval-candidate-likelihood" to "/usr/local/lib/moses:/usr/local/lib"
--- Installing: /usr/local/lib/libmoses_exec.so
--- Set runtime path of "/usr/local/lib/libmoses_exec.so" to "/usr/local/lib/moses"
--- Installing: /usr/local/include/moses/moses/main/moses_exec.h
--- Installing: /usr/local/include/moses/moses/main/moses_exec_def.h
--- Installing: /usr/local/share/man/man1/moses.1.gz
--- Installing: /usr/local/lib/libfeature_selection.so
--- Set runtime path of "/usr/local/lib/libfeature_selection.so" to "/usr/local/lib/moses"
--- Installing: /usr/local/include/moses/feature-selection/scorers/fs_scorer_base.h
--- Installing: /usr/local/include/moses/feature-selection/scorers/mutual_info.h
--- Installing: /usr/local/include/moses/feature-selection/scorers/moses_optim.h
--- Installing: /usr/local/include/moses/feature-selection/scorers/moses_matrix.h
--- Installing: /usr/local/include/moses/feature-selection/main/feature-selection.h
--- Installing: /usr/local/bin/feature-selection
--- Set runtime path of "/usr/local/bin/feature-selection" to "/usr/local/lib/moses:/usr/local/lib"
--- Installing: /usr/local/bin/eval-features
--- Set runtime path of "/usr/local/bin/eval-features" to "/usr/local/lib/moses:/usr/local/lib"
--- Installing: /usr/local/share/man/man1/feature-selection.1.gz
--- Installing: /usr/local/share/moses/python/moses/pymoses.so
--- Set runtime path of "/usr/local/share/moses/python/moses/pymoses.so" to "/usr/local/lib/moses:/usr/local/lib"
--- Installing: /usr/local/share/moses/python/moses/__init__.py
-+ DSTATUS=BUILDPASS
-+ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1404/builds/9/log OpenCOG_U1404_Moses
+Total Test time (real) = 324.87 sec
+[100%] Built target test
++ DSTATUS=TESTPASS
++ /var/lib/jenkins/status/updateStatus TESTPASS /var/lib/jenkins/jobs/OpenCOG_U1404_Moses/builds/4/log OpenCOG_U1404_Moses
 Already up-to-date.
 ~/status/jobs ~/status
