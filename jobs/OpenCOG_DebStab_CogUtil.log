@@ -1,48 +1,287 @@
-Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
-Building in workspace /var/lib/jenkins/workspace/OpenCOG_DebStab_CogUtil
-[OpenCOG_DebStab_CogUtil] $ /bin/sh -xe /tmp/jenkins2590015291237501360.sh
-+ COGDIR=../OpenCOG_DebStab
-+ . ../OpenCOG_DebStab/build.docker/docker.env
+Started by an SCM change
+Building in workspace /var/lib/jenkins/workspace/OpenCOG_DebStab
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@github.com:opencog/opencog.git # timeout=10
+Fetching upstream changes from git@github.com:opencog/opencog.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 103jenk
+ > git fetch --tags --progress git@github.com:opencog/opencog.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision c544225f5e1233e4820a89cd2319b54439ba6505 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f c544225f5e1233e4820a89cd2319b54439ba6505
+Commit message: "Remove bad abort prompt; this screws up telnet processing!"
+ > git rev-list --no-walk d01234c9996032d74b58430343f85b46c596a167 # timeout=10
+[OpenCOG_DebStab] $ /bin/sh -xe /tmp/jenkins5060171486994471871.sh
++ pwd
+/var/lib/jenkins/workspace/OpenCOG_DebStab
++ whoami
+jenkins
++ rm -fr build.docker
++ mkdir build.docker
++ cd build.docker
++ cp /home/edguy/OCDOCK/DOCKER.OpenCOG_DebStab docker.buildfile
++ docker build -f docker.buildfile -t edguy/ocdock:latest .
+Sending build context to Docker daemon 3.584 kB
+Step 1/16 : FROM debian:stable
+ ---> e03ce33c6fd7
+Step 2/16 : MAINTAINER Ed Guy "edguy@eguy.org"
+ ---> Using cache
+ ---> 8e1b6473b76d
+Step 3/16 : ENV DEBIAN_FRONTEND noninteractive
+ ---> Using cache
+ ---> 565c665ad164
+Step 4/16 : ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+ ---> Using cache
+ ---> c085b26aeb61
+Step 5/16 : RUN apt-get -y update
+ ---> Using cache
+ ---> 529f5aae26a7
+Step 6/16 : RUN apt-get -y upgrade
+ ---> Using cache
+ ---> 574b71dfa6cc
+Step 7/16 : RUN apt-get -y install screen telnet netcat-openbsd byobu wget vim unzip gcc g++ make sudo lsb-release net-tools dirmngr python-setuptools python-dev build-essential cmake
+ ---> Using cache
+ ---> 8845fdc82886
+Step 8/16 : RUN easy_install pip
+ ---> Using cache
+ ---> e60be8d75eac
+Step 9/16 : RUN apt-get -y install openjdk-8-jdk ant libcommons-logging-java
+ ---> Using cache
+ ---> a78e3ddd47b1
+Step 10/16 : RUN test -e /usr/local/share/java || mkdir /usr/local/share/java
+ ---> Using cache
+ ---> 6718f9ab4544
+Step 11/16 : WORKDIR /home/opencog
+ ---> Using cache
+ ---> da1a8702c8c0
+Step 12/16 : RUN wget http://raw.github.com/opencog/ocpkg/master/ocpkg -O octool && chmod +rx octool
+ ---> Using cache
+ ---> 228e77004566
+Step 13/16 : RUN ./octool -rdp
+ ---> Using cache
+ ---> 4563aa950616
+Step 14/16 : RUN useradd -ms /bin/bash  jenkins --uid 125
+ ---> Using cache
+ ---> 293205a6e324
+Step 15/16 : USER jenkins
+ ---> Using cache
+ ---> 0fc9e408f2ef
+Step 16/16 : CMD tail -f /dev/null
+ ---> Using cache
+ ---> e2ef04e10192
+Successfully built e2ef04e10192
++ echo ******  CID=
+******  CID=
++ CIDFILENAME=/tmp/OpenCOG_DebStab.cid
++ cleanupDockerContainers /tmp/OpenCOG_DebStab.cid
++ CIDFILENAME=/tmp/OpenCOG_DebStab.cid
++ [ -e /tmp/OpenCOG_DebStab.cid ]
++ cat /tmp/OpenCOG_DebStab.cid
 + CID=718e72e59c725f6ba9a0f66700a1ea69c62fd7bdb7b333088b2ce54dc376421a
-+ DKRUNROOT=docker exec --user root   718e72e59c725f6ba9a0f66700a1ea69c62fd7bdb7b333088b2ce54dc376421a
-+ DKRUNUSER=docker exec --user jenkins  718e72e59c725f6ba9a0f66700a1ea69c62fd7bdb7b333088b2ce54dc376421a
++ docker container kill 718e72e59c725f6ba9a0f66700a1ea69c62fd7bdb7b333088b2ce54dc376421a
+718e72e59c725f6ba9a0f66700a1ea69c62fd7bdb7b333088b2ce54dc376421a
++ docker container rm 718e72e59c725f6ba9a0f66700a1ea69c62fd7bdb7b333088b2ce54dc376421a
+718e72e59c725f6ba9a0f66700a1ea69c62fd7bdb7b333088b2ce54dc376421a
++ rm -f /tmp/OpenCOG_DebStab.cid
++ cd ..
++ pwd
++ docker run --cidfile /tmp/OpenCOG_DebStab.cid -v /var/lib/jenkins/workspace/OpenCOG_DebStab:/home/opencog/opencog -w /home/opencog -d edguy/ocdock:latest tail -f /dev/null
+a8a458239368dd20ce6e14e10a153b2302ee81478fa76b5f33c3262fc986797a
++ cat /tmp/OpenCOG_DebStab.cid
++ CID=a8a458239368dd20ce6e14e10a153b2302ee81478fa76b5f33c3262fc986797a
++ DKRUN=docker exec a8a458239368dd20ce6e14e10a153b2302ee81478fa76b5f33c3262fc986797a 
++ grep jenkins /etc/passwd
++ awk -F: {print $3}
++ UID=125
++ grep jenkins /etc/passwd
++ awk -F: {print $4}
++ GID=132
++ cat
+[OpenCOG_DebStab] $ /bin/sh -xe /tmp/jenkins1679283601314059544.sh
++ . build.docker/docker.env
++ CID=a8a458239368dd20ce6e14e10a153b2302ee81478fa76b5f33c3262fc986797a
++ DKRUNROOT=docker exec --user root   a8a458239368dd20ce6e14e10a153b2302ee81478fa76b5f33c3262fc986797a
++ DKRUNUSER=docker exec --user jenkins  a8a458239368dd20ce6e14e10a153b2302ee81478fa76b5f33c3262fc986797a
 + UID=125
 + GID=132
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_DebStab_CogUtil/builds/1/log
 + cat
-
-
 **********************************************************
 **********************************************************
 **********************************************************
 **********************************************************
-*****                                                *****
-*****                  Cogutil TEST                *****
-*****                                                *****
+*****
+*****  opencog Setup 
+*****
 **********************************************************
 **********************************************************
 **********************************************************
 **********************************************************
 
++ echo **** 
+**** 
++ echo ****  a8a458239368dd20ce6e14e10a153b2302ee81478fa76b5f33c3262fc986797a
+****  a8a458239368dd20ce6e14e10a153b2302ee81478fa76b5f33c3262fc986797a
++ test -e dependencies
++ rm -fr dependencies/atomspace
++ git clone git@github.com:opencog/atomspace.git dependencies/atomspace
+Cloning into 'dependencies/atomspace'...
++ rm -fr dependencies/cogutil
++ git clone git@github.com:opencog/cogutil.git dependencies/cogutil
+Cloning into 'dependencies/cogutil'...
++ rm -fr dependencies/moses
++ git clone git@github.com:opencog/moses.git dependencies/moses
+Cloning into 'dependencies/moses'...
+[OpenCOG_DebStab] $ /bin/sh -xe /tmp/jenkins1047465584658201748.sh
++ . build.docker/docker.env
++ CID=a8a458239368dd20ce6e14e10a153b2302ee81478fa76b5f33c3262fc986797a
++ DKRUNROOT=docker exec --user root   a8a458239368dd20ce6e14e10a153b2302ee81478fa76b5f33c3262fc986797a
++ DKRUNUSER=docker exec --user jenkins  a8a458239368dd20ce6e14e10a153b2302ee81478fa76b5f33c3262fc986797a
++ UID=125
++ GID=132
++ cat
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
+*****
+*****  cogutil
+*****
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
 
-+ echo GIT_COMMIT=
-GIT_COMMIT=
-+ echo GIT_BRANCH=
-GIT_BRANCH=
-+ echo GIT_URL=
-GIT_URL=
 + WDIR=opencog/dependencies/cogutil
-+ JOBDIR=../OpenCOG_DebStab/dependencies
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_DebStab/builds/3/log
 + cat
-+ chmod +x ../OpenCOG_DebStab/dependencies/job1
-+ docker exec --user jenkins 718e72e59c725f6ba9a0f66700a1ea69c62fd7bdb7b333088b2ce54dc376421a bash opencog/dependencies/job1
-/home/opencog
++ cat
++ chmod +x dependencies/job1
++ chmod +x dependencies/job2
++ docker exec --user jenkins a8a458239368dd20ce6e14e10a153b2302ee81478fa76b5f33c3262fc986797a bash opencog/dependencies/job1
 + pwd
++ ls
++ cd opencog/dependencies/cogutil
++ rm -fr build
++ mkdir build
++ cd build
++ cmake ..
+/home/opencog
+octool
+opencog
+-- The C compiler identification is GNU 6.3.0
+-- The CXX compiler identification is GNU 6.3.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Build type: Release
+-- Looking for include file bfd.h
+-- Looking for include file bfd.h - not found
+-- BFD not found
+-- Binutils-dev missing: No pretty stack-trace printing.
+CMake Warning at /usr/share/cmake-3.7/Modules/FindBoost.cmake:761 (message):
+  Imported targets not available for Boost version
+Call Stack (most recent call first):
+  /usr/share/cmake-3.7/Modules/FindBoost.cmake:865 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.7/Modules/FindBoost.cmake:1470 (_Boost_MISSING_DEPENDENCIES)
+  CMakeLists.txt:158 (FIND_PACKAGE)
+
+
+CMake Warning at /usr/share/cmake-3.7/Modules/FindBoost.cmake:761 (message):
+  Imported targets not available for Boost version
+Call Stack (most recent call first):
+  /usr/share/cmake-3.7/Modules/FindBoost.cmake:865 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.7/Modules/FindBoost.cmake:1470 (_Boost_MISSING_DEPENDENCIES)
+  CMakeLists.txt:158 (FIND_PACKAGE)
+
+
+CMake Warning at /usr/share/cmake-3.7/Modules/FindBoost.cmake:761 (message):
+  Imported targets not available for Boost version
+Call Stack (most recent call first):
+  /usr/share/cmake-3.7/Modules/FindBoost.cmake:865 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.7/Modules/FindBoost.cmake:1470 (_Boost_MISSING_DEPENDENCIES)
+  CMakeLists.txt:158 (FIND_PACKAGE)
+
+
+CMake Warning at /usr/share/cmake-3.7/Modules/FindBoost.cmake:761 (message):
+  Imported targets not available for Boost version
+Call Stack (most recent call first):
+  /usr/share/cmake-3.7/Modules/FindBoost.cmake:865 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.7/Modules/FindBoost.cmake:1470 (_Boost_MISSING_DEPENDENCIES)
+  CMakeLists.txt:158 (FIND_PACKAGE)
+
+
+CMake Warning at /usr/share/cmake-3.7/Modules/FindBoost.cmake:761 (message):
+  Imported targets not available for Boost version
+Call Stack (most recent call first):
+  /usr/share/cmake-3.7/Modules/FindBoost.cmake:865 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.7/Modules/FindBoost.cmake:1470 (_Boost_MISSING_DEPENDENCIES)
+  CMakeLists.txt:158 (FIND_PACKAGE)
+
+
+CMake Warning at /usr/share/cmake-3.7/Modules/FindBoost.cmake:761 (message):
+  Imported targets not available for Boost version
+Call Stack (most recent call first):
+  /usr/share/cmake-3.7/Modules/FindBoost.cmake:865 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.7/Modules/FindBoost.cmake:1470 (_Boost_MISSING_DEPENDENCIES)
+  CMakeLists.txt:158 (FIND_PACKAGE)
+
+
+CMake Warning at /usr/share/cmake-3.7/Modules/FindBoost.cmake:761 (message):
+  Imported targets not available for Boost version
+Call Stack (most recent call first):
+  /usr/share/cmake-3.7/Modules/FindBoost.cmake:865 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.7/Modules/FindBoost.cmake:1470 (_Boost_MISSING_DEPENDENCIES)
+  CMakeLists.txt:158 (FIND_PACKAGE)
+
+
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+CMake Error at /usr/share/cmake-3.7/Modules/FindBoost.cmake:1831 (message):
+  Unable to find the requested Boost libraries.
+
+  Unable to find the Boost header files.  Please set BOOST_ROOT to the root
+  directory containing Boost or BOOST_INCLUDEDIR to the directory containing
+  Boost's headers.
+Call Stack (most recent call first):
+  CMakeLists.txt:158 (FIND_PACKAGE)
+
+
+CMake Error at CMakeLists.txt:167 (MESSAGE):
+  Boost 1.46 or newer (package libboost-all-dev if using Ubuntu) is needed to
+  build OpenCog!
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/opencog/opencog/dependencies/cogutil/build/CMakeFiles/CMakeOutput.log".
+See also "/home/opencog/opencog/dependencies/cogutil/build/CMakeFiles/CMakeError.log".
++ make -j8
+make: *** No targets specified and no makefile found.  Stop.
++ DSTATUS=BUILDFAIL
++ docker exec --user root a8a458239368dd20ce6e14e10a153b2302ee81478fa76b5f33c3262fc986797a bash opencog/dependencies/job2
 + cd opencog/dependencies/cogutil
 + cd build
-+ make -j8 test
-make: *** No rule to make target 'test'.  Stop.
-+ DSTATUS=TESTFAIL
-+ /var/lib/jenkins/status/updateStatus TESTFAIL /var/lib/jenkins/jobs/OpenCOG_DebStab_CogUtil/builds/1/log OpenCOG_DebStab_CogUtil
++ make install
+make: *** No rule to make target 'install'.  Stop.
++ DSTATUS=INSTALLFAIL
++ /var/lib/jenkins/status/updateStatus INSTALLFAIL /var/lib/jenkins/jobs/OpenCOG_DebStab/builds/3/log OpenCOG_DebStab_CogUtil
 Already up-to-date.
 ~/status/jobs ~/status
