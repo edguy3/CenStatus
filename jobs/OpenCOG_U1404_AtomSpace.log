@@ -1,913 +1,1146 @@
-Started by upstream project "[8mha:////4HYLKC3QWnNL8UcNtRMb3SIghDGZXRDiSIrVjCiet8BaAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3/gtQ8Z3/3+FBDEwMTfQAfNa+iyAAAAA==[0mOpenCOG_U1404" build number [8mha:////4Gtv7xbHV9kdDJT+9OoJcmJbQZDi/ffa5ksqx33lsGsXAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBhH9rPwkff+C1Dxnf/f4UEMTAxN9CwBq0UalyQAAAA==[0m8
-originally caused by:
- Started by an SCM change
-Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1404_AtomSpace
-[OpenCOG_U1404_AtomSpace] $ /bin/sh -xe /tmp/jenkins7719510053260323040.sh
-+ COGDIR=../OpenCOG_U1404
-+ . ../OpenCOG_U1404/build.docker/docker.env
+Started by an SCM change
+Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1404
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@github.com:opencog/opencog.git # timeout=10
+Fetching upstream changes from git@github.com:opencog/opencog.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 103jenk
+ > git fetch --tags --progress git@github.com:opencog/opencog.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision c544225f5e1233e4820a89cd2319b54439ba6505 (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f c544225f5e1233e4820a89cd2319b54439ba6505
+Commit message: "Remove bad abort prompt; this screws up telnet processing!"
+ > git rev-list --no-walk d01234c9996032d74b58430343f85b46c596a167 # timeout=10
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins9062572776166813128.sh
++ pwd
+/var/lib/jenkins/workspace/OpenCOG_U1404
++ whoami
+jenkins
++ rm -fr build.docker
++ mkdir build.docker
++ cd build.docker
++ cp /home/edguy/OCDOCK/DOCKER.OpenCOG_U1404 docker.buildfile
++ docker build -f docker.buildfile -t edguy/ocdock:latest .
+Sending build context to Docker daemon 3.584 kB
+Step 1/15 : FROM ubuntu:14.04
+ ---> 67759a80360c
+Step 2/15 : MAINTAINER Ed Guy "edguy@eguy.org"
+ ---> Using cache
+ ---> 5a54eeef2fa0
+Step 3/15 : ENV DEBIAN_FRONTEND noninteractive
+ ---> Using cache
+ ---> 3e97998de43b
+Step 4/15 : ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+ ---> Using cache
+ ---> c29f4a1c13d0
+Step 5/15 : RUN apt-get -y update
+ ---> Using cache
+ ---> de530b426d20
+Step 6/15 : RUN apt-get -y upgrade
+ ---> Using cache
+ ---> 914d800e4b20
+Step 7/15 : RUN apt-get -y install screen telnet netcat-openbsd byobu wget vim unzip gcc g++ make sudo lsb-release net-tools
+ ---> Using cache
+ ---> 752eacfef87e
+Step 8/15 : RUN apt-get -y install openjdk-7-jdk ant libcommons-logging-java
+ ---> Using cache
+ ---> 3f061a6f205b
+Step 9/15 : RUN test -e /usr/local/share/java || mkdir /usr/local/share/java
+ ---> Using cache
+ ---> babff5fc3f3c
+Step 10/15 : WORKDIR /home/opencog
+ ---> Using cache
+ ---> 7ff3433ee83d
+Step 11/15 : RUN wget http://raw.github.com/opencog/ocpkg/master/ocpkg -O octool && chmod +rx octool
+ ---> Using cache
+ ---> b5c285e11c6d
+Step 12/15 : RUN ./octool -rdp
+ ---> Using cache
+ ---> ec91c1859034
+Step 13/15 : RUN useradd -ms /bin/bash  jenkins --uid 125
+ ---> Using cache
+ ---> 15e28b1a74a7
+Step 14/15 : USER jenkins
+ ---> Using cache
+ ---> db670dfb80a8
+Step 15/15 : CMD tail -f /dev/null
+ ---> Using cache
+ ---> 87eb7e802bfb
+Successfully built 87eb7e802bfb
++ echo ******  CID=
+******  CID=
++ CIDFILENAME=/tmp/OpenCOG_U1404.cid
++ cleanupDockerContainers /tmp/OpenCOG_U1404.cid
++ CIDFILENAME=/tmp/OpenCOG_U1404.cid
++ [ -e /tmp/OpenCOG_U1404.cid ]
++ cat /tmp/OpenCOG_U1404.cid
 + CID=45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49
-+ DKRUNROOT=docker exec --user root   45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49
-+ DKRUNUSER=docker exec --user jenkins  45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49
++ docker container kill 45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49
+Error response from daemon: Cannot kill container 45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49: No such container: 45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49
++ echo not killed
+not killed
++ docker container rm 45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49
+Error response from daemon: No such container: 45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49
++ echo not rmd
+not rmd
++ rm -f /tmp/OpenCOG_U1404.cid
++ cd ..
++ pwd
++ docker run --cidfile /tmp/OpenCOG_U1404.cid -v /var/lib/jenkins/workspace/OpenCOG_U1404:/home/opencog/opencog -w /home/opencog -d edguy/ocdock:latest tail -f /dev/null
+5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
++ cat /tmp/OpenCOG_U1404.cid
++ CID=5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
++ DKRUN=docker exec 5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42 
++ grep jenkins /etc/passwd
++ awk -F: {print $3}
++ UID=125
++ grep jenkins /etc/passwd
++ awk -F: {print $4}
++ GID=132
++ cat
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins50896761321328467.sh
++ . build.docker/docker.env
++ CID=5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
++ DKRUNROOT=docker exec --user root   5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
++ DKRUNUSER=docker exec --user jenkins  5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
 + UID=125
 + GID=132
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404_AtomSpace/builds/3/log
 + cat
-
-
 **********************************************************
 **********************************************************
 **********************************************************
 **********************************************************
-*****                                                *****
-*****                  Atomspace TEST                *****
-*****                                                *****
+*****
+*****  opencog Setup 
+*****
 **********************************************************
 **********************************************************
 **********************************************************
 **********************************************************
 
-
-+ echo GIT_COMMIT=
-GIT_COMMIT=
-+ echo GIT_BRANCH=
-GIT_BRANCH=
-+ echo GIT_URL=
-GIT_URL=
-+ WDIR=opencog/dependencies/atomspace
-+ JOBDIR=../OpenCOG_U1404/dependencies
++ echo **** 
+**** 
++ echo ****  5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
+****  5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
++ test -e dependencies
++ rm -fr dependencies/atomspace
++ git clone git@github.com:opencog/atomspace.git dependencies/atomspace
+Cloning into 'dependencies/atomspace'...
++ rm -fr dependencies/cogutil
++ git clone git@github.com:opencog/cogutil.git dependencies/cogutil
+Cloning into 'dependencies/cogutil'...
++ rm -fr dependencies/moses
++ git clone git@github.com:opencog/moses.git dependencies/moses
+Cloning into 'dependencies/moses'...
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins6626759566688551988.sh
++ . build.docker/docker.env
++ CID=5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
++ DKRUNROOT=docker exec --user root   5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
++ DKRUNUSER=docker exec --user jenkins  5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
++ UID=125
++ GID=132
 + cat
-+ chmod +x ../OpenCOG_U1404/dependencies/job1
-+ docker exec --user jenkins 45b4d413922ab02f295fb5aacddaea3d3e0309cf599ebb5ceb57d38b2ae25b49 bash opencog/dependencies/job1
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
+*****
+*****  cogutil
+*****
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
+
++ WDIR=opencog/dependencies/cogutil
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/9/log
++ cat
++ cat
++ chmod +x dependencies/job1
++ chmod +x dependencies/job2
++ docker exec --user jenkins 5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42 bash opencog/dependencies/job1
 /home/opencog
+octool
+opencog
 + pwd
++ ls
++ cd opencog/dependencies/cogutil
++ rm -fr build
++ mkdir build
++ cd build
++ cmake ..
+-- The C compiler identification is GNU 4.8.4
+-- The CXX compiler identification is GNU 4.8.4
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Build type: Release
+-- Looking for include file bfd.h
+-- Looking for include file bfd.h - found
+-- Found libbfd: /usr/lib/libbfd.so
+-- Binutils found.
+-- Boost version: 1.54.0
+-- Found the following Boost libraries:
+--   date_time
+--   filesystem
+--   program_options
+--   regex
+--   serialization
+--   system
+--   thread
+-- Boost version 105400 found.
+-- Found PythonInterp: /usr/bin/python (found version "2.7.6") 
+-- Looking for include file libiberty.h
+-- Looking for include file libiberty.h - found
+-- Found libiberty: /usr/lib/x86_64-linux-gnu/libiberty.a
+-- Libiberty found.
+-- Could NOT find Doxygen (missing:  DOXYGEN_EXECUTABLE) 
+-- Doxygen not found, you won't be able to generate API documentation.
+
+The following components will be built:
+-----------------------------------------------
+   StackPrint  - Pretty printing of stack traces.
+   Unit tests  - Unit tests.
+   Util        - General utility library.
+
+The following components WILL NOT be built:
+-----------------------------------------------
+   Doxygen     - Code documentation.
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/opencog/opencog/dependencies/cogutil/build
++ make -j8
+Scanning dependencies of target cogutil
+[ 10%] [ 10%] [ 15%] [ 26%] [ 36%] [ 36%] [ 36%] [ 42%] Building C object opencog/util/CMakeFiles/cogutil.dir/backtrace-symbols.c.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/ansi.cc.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/Config.cc.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/files.cc.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_normal_selector.cc.o
+Building C object opencog/util/CMakeFiles/cogutil.dir/cluster.c.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_random_selector.cc.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/exceptions.cc.o
+[ 47%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_selector.cc.o
+[ 52%] [ 57%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/log_prog_name.cc.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/Logger.cc.o
+[ 63%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/misc.cc.o
+[ 68%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/mt19937ar.cc.o
+[ 73%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/oc_assert.cc.o
+[ 78%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/oc_omp.cc.o
+[ 84%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/octime.cc.o
+[ 89%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/platform.cc.o
+[ 94%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/StringTokenizer.cc.o
+[100%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/tree.cc.o
+Linking CXX shared library libcogutil.so
+[100%] Built target cogutil
++ DSTATUS=BUILDPASS
++ docker exec --user root 5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42 bash opencog/dependencies/job2
++ cd opencog/dependencies/cogutil
++ cd build
++ make install
+[100%] Built target cogutil
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /usr/local/include/opencog/util/ansi.h
+-- Installing: /usr/local/include/opencog/util/algorithm.h
+-- Installing: /usr/local/include/opencog/util/async_buffer.h
+-- Installing: /usr/local/include/opencog/util/async_method_caller.h
+-- Installing: /usr/local/include/opencog/util/backtrace-symbols.h
+-- Installing: /usr/local/include/opencog/util/based_variant.h
+-- Installing: /usr/local/include/opencog/util/cluster.h
+-- Installing: /usr/local/include/opencog/util/cogutil.h
+-- Installing: /usr/local/include/opencog/util/comprehension.h
+-- Installing: /usr/local/include/opencog/util/Config.h
+-- Installing: /usr/local/include/opencog/util/Counter.h
+-- Installing: /usr/local/include/opencog/util/Cover_Tree.h
+-- Installing: /usr/local/include/opencog/util/concurrent_queue.h
+-- Installing: /usr/local/include/opencog/util/concurrent_set.h
+-- Installing: /usr/local/include/opencog/util/concurrent_stack.h
+-- Installing: /usr/local/include/opencog/util/digraph.h
+-- Installing: /usr/local/include/opencog/util/dorepeat.h
+-- Installing: /usr/local/include/opencog/util/exceptions.h
+-- Installing: /usr/local/include/opencog/util/files.h
+-- Installing: /usr/local/include/opencog/util/functional.h
+-- Installing: /usr/local/include/opencog/util/hashing.h
+-- Installing: /usr/local/include/opencog/util/iostreamContainer.h
+-- Installing: /usr/local/include/opencog/util/KLD.h
+-- Installing: /usr/local/include/opencog/util/lazy_normal_selector.h
+-- Installing: /usr/local/include/opencog/util/lazy_random_selector.h
+-- Installing: /usr/local/include/opencog/util/lazy_selector.h
+-- Installing: /usr/local/include/opencog/util/log_prog_name.h
+-- Installing: /usr/local/include/opencog/util/Logger.h
+-- Installing: /usr/local/include/opencog/util/lru_cache.h
+-- Installing: /usr/local/include/opencog/util/macros.h
+-- Installing: /usr/local/include/opencog/util/MannWhitneyU.h
+-- Installing: /usr/local/include/opencog/util/misc.h
+-- Installing: /usr/local/include/opencog/util/mt19937ar.h
+-- Installing: /usr/local/include/opencog/util/numeric.h
+-- Installing: /usr/local/include/opencog/util/jaccard_index.h
+-- Installing: /usr/local/include/opencog/util/oc_assert.h
+-- Installing: /usr/local/include/opencog/util/oc_omp.h
+-- Installing: /usr/local/include/opencog/util/octime.h
+-- Installing: /usr/local/include/opencog/util/platform.h
+-- Installing: /usr/local/include/opencog/util/pool.h
+-- Installing: /usr/local/include/opencog/util/RandGen.h
+-- Installing: /usr/local/include/opencog/util/random.h
+-- Installing: /usr/local/include/opencog/util/ranking.h
+-- Installing: /usr/local/include/opencog/util/recent_val.h
+-- Installing: /usr/local/include/opencog/util/selection.h
+-- Installing: /usr/local/include/opencog/util/sigslot.h
+-- Installing: /usr/local/include/opencog/util/StringTokenizer.h
+-- Installing: /usr/local/include/opencog/util/tbb.h
+-- Installing: /usr/local/include/opencog/util/tree.h
+-- Installing: /usr/local/lib/libcogutil.so
+-- Set runtime path of "/usr/local/lib/libcogutil.so" to "/usr/local/lib/opencog"
+-- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean.h
+-- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean_mirror.h
++ DSTATUS=BUILDPASS
++ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1404/builds/9/log OpenCOG_U1404_CogUtil
+Already up-to-date.
+~/status/jobs ~/status
+~/status
+[master 7417d64] OpenCOG_U1404_CogUtil BUILDPASS
+ 3 files changed, 311 insertions(+), 147 deletions(-)
+ rewrite jobs/OpenCOG_U1404_CogUtil.log (89%)
+To git@github.com:edguy3/CenStatus.git
+   5f3e2c1..7417d64  master -> master
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins371575367173425018.sh
++ . build.docker/docker.env
++ CID=5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
++ DKRUNROOT=docker exec --user root   5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
++ DKRUNUSER=docker exec --user jenkins  5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42
++ UID=125
++ GID=132
++ cat
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
+*****
+*****  atomspace
+*****
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
+
++ WDIR=opencog/dependencies/atomspace
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/9/log
++ cat
++ cat
++ chmod +x dependencies/job1
++ chmod +x dependencies/job2
++ docker exec --user jenkins 5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42 bash opencog/dependencies/job1
++ pwd
++ ls
++ cd opencog/dependencies/atomspace
++ rm -fr build
++ mkdir build
++ cd build
++ cmake ..
+/home/opencog
+octool
+opencog
+-- The C compiler identification is GNU 4.8.4
+-- The CXX compiler identification is GNU 4.8.4
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Build type: Release
+-- Boost version: 1.54.0
+-- Found the following Boost libraries:
+--   date_time
+--   filesystem
+--   program_options
+--   regex
+--   serialization
+--   system
+--   thread
+-- Boost version 105400 found.
+-- Looking for include file opencog/util/cogutil.h
+-- Looking for include file opencog/util/cogutil.h - found
+-- Found CogUtil version 2.0.2 at /usr/local/lib/libcogutil.so
+-- CogUtil found.
+-- Found PythonInterp: /usr/bin/python (found version "2.7.6") 
+-- CxxTest found.
+-- Gearman found.
+-- Guile (2.0.9 >= 2.0.9) was found.
+-- HyperTable was not found. Make sure HYPERTABLE_LIBRARY and HYPERTABLE_INCLUDE_DIR are set.
+-- Hypertable not found; the experimental distributed persistence DB needs it.
+-- Found these protobuf libs: /usr/lib/x86_64-linux-gnu/libprotobuf.so
+-- Found PROTOBUF: /usr/lib/x86_64-linux-gnu/libprotobuf.so  
+-- Protobuf was found.
+-- Found PythonInterp: /usr/bin/python (found suitable version "2.7.6", minimum required is "2.7") 
+-- Python 2.7.6 interpreter found.
+-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython2.7.so (found suitable version "2.7.6", minimum required is "2.7") 
+-- Python 2.7.6 libraries found.
+-- Found PythonInterp: /usr/bin/python (found version "2.7.6") 
+-- Found Cython: /usr/bin/cython (Required is at least version "0.19.0") 
+-- Cython ( 0.20.1 >= 0.19.0) found.
+-- Python destination dir found: /usr/lib/python2.7/dist-packages
+-- Stack was not found. Haskell bindings will not be built.
+-- UnixODBC was found.
+-- PGSQL was found.
+-- Valgrind Prefix: 
+-- Could NOT find VALGRIND (missing:  VALGRIND_INCLUDE_DIR VALGRIND_PROGRAM) 
+-- VALGRIND missing: needed for thread debugging.
+-- Found ZeroMQ library: /usr/lib/x86_64-linux-gnu/libzmq.so
+-- Detected ZeroMQ version number: 4.0.4
+-- ZeroMQ was found.
+CMake Warning at tests/persist/sql/multi-driver/CMakeLists.txt:46 (MESSAGE):
+  /usr/bin/psql: psql: could not connect to server: No such file or directory
+
+  	Is the server running locally and accepting
+
+  	connections on Unix domain socket "/var/run/postgresql/.s.PGSQL.5432"?
+
+
+
+CMake Warning at tests/persist/sql/multi-driver/CMakeLists.txt:80 (MESSAGE):
+  Postgres database not configured for unit tests! See the README!
+
+
+CMake Warning at tests/persist/gearman/CMakeLists.txt:25 (MESSAGE):
+  gearman-job-server is not running; will not run the GearmanUTest
+
+
+-- Could NOT find Doxygen (missing:  DOXYGEN_EXECUTABLE) 
+-- Doxygen not found, you won't be able to generate API documentation.
+
+The following components will be built:
+-----------------------------------------------
+   AtomSpace              - A weighted and typed hypergraph database.
+   Gearman                - Distributed processing capability.
+   Python bindings        - Python (cython) bindings.
+   Python tests           - Python bindings nose tests.
+   Scheme bindings        - Scheme bindings and shell.
+   SQL ODBC bindings      - Save/Restore of AtomSpace to database via ODBC.
+   SQL Postgres bindings  - Save/Restore of AtomSpace to Postgres database.
+   ZeroMQ persistence     - Save/Restore of AtomSpace to ZeroMQ server.
+   Unit tests             - Unit tests.
+
+The following components WILL NOT be built:
+-----------------------------------------------
+   Doxygen                - Code documentation.
+   Haskell bindings       - Haskell bindings.
+   Hypertable             - HyperTable for scalable persistance (experimental).
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/opencog/opencog/dependencies/atomspace/build
++ make -j8
+[  0%] Scanning dependencies of target opencog_atom_types
+Scanning dependencies of target persist-odbc
+Scanning dependencies of target persist-pg
+Cythonizing logger.pyx
+[  0%] [  0%] [  2%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-odbc.dir/odbcxx.cc.o
+Generating opencog types
+Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-pg.dir/ll-pg-cxx.cc.o
+-- Atom type name: Notype Notype
+-- Atom type name: Value Value
+-- Atom type name: FloatValue FloatValue
+-- Atom type name: StringValue StringValue
+-- Atom type name: LinkValue LinkValue
+-- Atom type name: Valuation Valuation
+-- Atom type name: TruthValue TruthValue
+-- Atom type name: SimpleTruthValue SimpleTruthValue
+-- Atom type name: CountTruthValue CountTruthValue
+-- Atom type name: IndefiniteTruthValue IndefiniteTruthValue
+-- Atom type name: FuzzyTruthValue FuzzyTruthValue
+-- Atom type name: ProbabilisticTruthValue ProbabilisticTruthValue
+-- Atom type name: EvidenceCountTruthValue EvidenceCountTruthValue
+-- Atom type name: AttentionValue AttentionValue
+-- Atom type name: Atom Atom
+-- Atom type name: Node 
+-- Atom type name: Link 
+-- Atom type name: ConceptNode Concept
+-- Atom type name: NumberNode Number
+-- Atom type name: OrderedLink Ordered
+-- Atom type name: UnorderedLink Unordered
+-- Atom type name: EvaluatableLink Evaluatable
+-- Atom type name: BooleanLink Boolean
+-- Atom type name: NumericLink Numeric
+-- Atom type name: NumericOutputLink NumericOutput
+-- Atom type name: TypeLink Type
+-- Atom type name: TypeOutputLink TypeOutput
+-- Atom type name: SetLink Set
+-- Atom type name: ListLink List
+-- Atom type name: MemberLink Member
+-- Atom type name: ContextLink Context
+-- Atom type name: InheritanceLink Inheritance
+-- Atom type name: SubsetLink Subset
+-- Atom type name: IntensionalInheritanceLink IntensionalInheritance
+-- Atom type name: SimilarityLink Similarity
+-- Atom type name: ExtensionalSimilarityLink ExtensionalSimilarity
+-- Atom type name: IntensionalSimilarityLink IntensionalSimilarity
+-- Atom type name: TrueLink True
+-- Atom type name: FalseLink False
+-- Atom type name: AndLink And
+-- Atom type name: OrLink Or
+-- Atom type name: NotLink Not
+-- Atom type name: SequentialAndLink SequentialAnd
+-- Atom type name: SequentialOrLink SequentialOr
+-- Atom type name: ChoiceLink Choice
+-- Atom type name: PresentLink Present
+-- Atom type name: AbsentLink Absent
+-- Atom type name: ParallelLink Parallel
+-- Atom type name: JoinLink Join
+-- Atom type name: VariableNode Variable
+-- Atom type name: VariableList VariableList
+-- Atom type name: GlobNode Glob
+-- Atom type name: QuoteLink Quote
+-- Atom type name: UnquoteLink Unquote
+-- Atom type name: LocalQuoteLink LocalQuote
+-- Atom type name: DontExecLink DontExec
+-- Atom type name: FreeLink Free
+-- Atom type name: DeleteLink Delete
+-- Atom type name: UniqueLink Unique
+-- Atom type name: StateLink State
+-- Atom type name: DefineLink Define
+-- Atom type name: ScopeLink Scope
+-- Atom type name: RewriteLink Rewrite
+-- Atom type name: PrenexLink Prenex
+-- Atom type name: LambdaLink Lambda
+-- Atom type name: PutLink Put
+-- Atom type name: PatternLink Pattern
+-- Atom type name: SatisfactionLink Satisfaction
+-- Atom type name: SatisfyingLink Satisfying
+-- Atom type name: GetLink Get
+-- Atom type name: BindLink Bind
+-- Atom type name: DualLink Dual
+-- Custom atom type name specified: "ForAllLink"
+-- Atom type name: ForAllLink ForAll
+-- Atom type name: ExistsLink Exists
+-- Atom type name: SatisfyingSetScopeLink SatisfyingSetScope
+-- Atom type name: SatisfyingSetLink SatisfyingSet
+-- Atom type name: ImplicationScopeLink ImplicationScope
+-- Atom type name: IntensionalImplicationScopeLink IntensionalImplicationScope
+-- Atom type name: ExtensionalImplicationScopeLink ExtensionalImplicationScope
+-- Atom type name: EquivalenceScopeLink EquivalenceScope
+-- Atom type name: IntensionalEquivalenceScopeLink IntensionalEquivalenceScope
+-- Atom type name: ExtensionalEquivalenceScopeLink ExtensionalEquivalenceScope
+-- Atom type name: ImplicationLink Implication
+-- Atom type name: IntensionalImplicationLink IntensionalImplication
+-- Atom type name: ExtensionalImplicationLink ExtensionalImplication
+-- Atom type name: EquivalenceLink Equivalence
+-- Atom type name: IntensionalEquivalenceLink IntensionalEquivalence
+-- Atom type name: ExtensionalEquivalenceLink ExtensionalEquivalence
+-- Atom type name: AssociativeLink Associative
+-- Atom type name: AttractionLink Attraction
+-- Atom type name: EvaluationLink Evaluation
+-- Atom type name: ExecutionLink Execution
+-- Atom type name: ProcedureNode Procedure
+-- Atom type name: GroundedProcedureNode GroundedProcedure
+-- Atom type name: SchemaNode Schema
+-- Atom type name: DefinedSchemaNode DefinedSchema
+-- Atom type name: GroundedSchemaNode GroundedSchema
+-- Atom type name: PredicateNode Predicate
+-- Atom type name: DefinedPredicateNode DefinedPredicate
+-- Atom type name: GroundedPredicateNode GroundedPredicate
+-- Atom type name: TypeNode Type
+-- Atom type name: TypeInhNode TypeInh
+-- Atom type name: TypeCoInhNode TypeCoInh
+-- Atom type name: DefinedTypeNode DefinedType
+-- Atom type name: TypeChoice TypeChoice
+-- Atom type name: TypeSetLink TypeSet
+-- Atom type name: ArrowLink Arrow
+-- Atom type name: SignatureLink Signature
+-- Atom type name: FuzzyLink Fuzzy
+-- Atom type name: TypedVariableLink TypedVariable
+Scanning dependencies of target logger_cython
+-- Atom type name: TypedAtomLink TypedAtom
+-- Atom type name: AnchorNode Anchor
+-- Atom type name: IntervalLink Interval
+[  2%] -- Atom type name: QuantityLink Quantity
+-- Atom type name: VirtualLink Virtual
+Building CXX object opencog/cython/opencog/CMakeFiles/logger_cython.dir/logger.cpp.o
+-- Atom type name: GreaterThanLink GreaterThan
+-- Atom type name: IdenticalLink Identical
+-- Atom type name: EqualLink Equal
+-- Atom type name: FunctionLink Function
+-- Atom type name: ExecutionOutputLink ExecutionOutput
+-- Atom type name: FoldLink Fold
+-- Atom type name: ArithmeticLink Arithmetic
+-- Atom type name: PlusLink Plus
+-- Atom type name: MinusLink Minus
+-- Atom type name: TimesLink Times
+-- Atom type name: DivideLink Divide
+-- Atom type name: RandomNumberLink RandomNumber
+-- Atom type name: ArityLink Arity
+-- Atom type name: RandomChoiceLink RandomChoice
+-- Atom type name: TimeLink Time
+-- Atom type name: SleepLink Sleep
+-- Atom type name: MapLink Map
+-- Atom type name: ComposeLink Compose
+-- Atom type name: ProjectLink Project
+-- Atom type name: Connector Connector
+-- Custom atom type name specified: "ConnectorDir"
+-- Atom type name: ConnectorDir ConnectorDir
+-- Atom type name: ConnectorSeq ConnectorSeq
+-- Atom type name: Section Section
+[  2%] Built target opencog_atom_types
+Scanning dependencies of target truthvalue
+[  4%] [  4%] [  4%] [  4%] [  6%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/FuzzyTruthValue.cc.o
+Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/EvidenceCountTruthValue.cc.o
+Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/AttentionValue.cc.o
+Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/CountTruthValue.cc.o
+Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/IndefiniteTruthValue.cc.o
+Linking CXX shared library libpersist-pg.so
+Linking CXX shared library libpersist-odbc.so
+[  6%] Built target persist-pg
+[  6%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/ProbabilisticTruthValue.cc.o
+[  6%] Built target persist-odbc
+[  6%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/SimpleTruthValue.cc.o
+Linking CXX shared library logger.so
+[  6%] Built target logger_cython
+[  6%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/TruthValue.cc.o
+Linking CXX shared library libtruthvalue.so
+[  6%] Built target truthvalue
+Scanning dependencies of target atombase
+[  6%] [  6%] [  6%] [  9%] [  9%] [  9%] [  9%] [ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Handle.cc.o
+Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Atom.cc.o
+Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/atom_types_init.cc.o
+Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/FloatValue.cc.o
+Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/ClassServer.cc.o
+Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Link.cc.o
+Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/LinkValue.cc.o
+Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Node.cc.o
+[ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/StringValue.cc.o
+[ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Valuation.cc.o
+Linking CXX shared library libatombase.so
+[ 11%] Built target atombase
+Scanning dependencies of target attentionbank
+Scanning dependencies of target atomutils
+[ 11%] [ 13%] [ 13%] [ 15%] [ 15%] [ 15%] [ 15%] [ 13%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/AtomUtils.cc.o
+Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FuzzyMatch.cc.o
+Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AttentionBank.cc.o
+Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FindUtils.cc.o
+Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AtomBins.cc.o
+Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/StochasticImportanceDiffusion.cc.o
+Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AVUtils.cc.o
+Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/ImportanceIndex.cc.o
+[ 15%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FuzzyMatchBasic.cc.o
+[ 18%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/Neighbors.cc.o
+[ 18%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/TypeUtils.cc.o
+Linking CXX shared library libattentionbank.so
+[ 18%] Built target attentionbank
+Linking CXX shared library libatomutils.so
+[ 18%] Built target atomutils
+Scanning dependencies of target atomcore
+[ 20%] [ 20%] [ 20%] [ 22%] [ 22%] [ 22%] [ 22%] [ 20%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ComposeLink.cc.o
+Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ArityLink.cc.o
+Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/DeleteLink.cc.o
+Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/Checkers.cc.o
+Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/DefineLink.cc.o
+Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/Context.cc.o
+Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/FreeLink.cc.o
+Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/FunctionLink.cc.o
+[ 25%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ImplicationScopeLink.cc.o
+[ 25%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/LambdaLink.cc.o
+[ 25%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/NumberNode.cc.o
+[ 25%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/PrenexLink.cc.o
+[ 27%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/PresentLink.cc.o
+[ 27%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/PutLink.cc.o
+[ 27%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/Quotation.cc.o
+[ 27%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/RandomChoice.cc.o
+[ 29%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/RandomNumber.cc.o
+[ 29%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/RewriteLink.cc.o
+[ 29%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ScopeLink.cc.o
+[ 31%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/SleepLink.cc.o
+[ 31%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/StateLink.cc.o
+[ 31%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/TimeLink.cc.o
+[ 31%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/TypedAtomLink.cc.o
+[ 34%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/TypeNode.cc.o
+[ 34%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/UniqueLink.cc.o
+[ 34%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/UnorderedLink.cc.o
+[ 34%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/Variables.cc.o
+[ 36%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/VariableList.cc.o
+Linking CXX shared library libatomcore.so
+[ 36%] Built target atomcore
+Scanning dependencies of target clearbox
+Scanning dependencies of target atomspace
+[ 36%] [ 36%] [ 38%] [ 38%] [ 38%] [ 40%] [ 40%] Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/DivideLink.cc.o
+[ 40%] Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/ArithmeticLink.cc.o
+Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/FoldLink.cc.o
+Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/PlusLink.cc.o
+Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/MinusLink.cc.o
+Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/TimesLink.cc.o
+Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/AtomSpaceInit.cc.o
+Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/AtomSpace.cc.o
+[ 40%] Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/AtomTable.cc.o
+[ 43%] Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/BackingStore.cc.o
+[ 43%] Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/FixedIntegerIndex.cc.o
+[ 43%] Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/TypeIndex.cc.o
+Linking CXX shared library libclearbox.so
+[ 43%] Built target clearbox
+Linking CXX shared library libatomspace.so
+[ 43%] Built target atomspace
+[ 45%] Cythonizing type_constructors.pyx
+Scanning dependencies of target atomspaceutils
+Scanning dependencies of target lambda
+[ 45%] [ 45%] [ 45%] [ 47%] [ 47%] [ 47%] Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/AtomSpaceUtils.cc.o
+Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/RandomAtomGenerator.cc.o
+Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/BindLink.cc.o
+Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/DualLink.cc.o
+Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/TLB.cc.o
+Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/PatternLink.cc.o
+Scanning dependencies of target sql-support
+[ 47%] Building CXX object opencog/persist/sql/CMakeFiles/sql-support.dir/AtomStorage.cc.o
+Scanning dependencies of target type_constructors
+[ 47%] Building CXX object opencog/cython/opencog/CMakeFiles/type_constructors.dir/type_constructors.cpp.o
+[ 50%] Building CXX object opencog/persist/sql/CMakeFiles/sql-support.dir/SQLBackingStore.cc.o
+[ 50%] Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/PatternTerm.cc.o
+[ 52%] Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/PatternUtils.cc.o
+Linking CXX shared library libatomspaceutils.so
+[ 52%] Built target atomspaceutils
+[ 52%] Cythonizing atomspace.pyx
+Linking CXX shared library libsql-support.so
+[ 52%] Built target sql-support
+Scanning dependencies of target atomspace_cython
+[ 52%] [ 54%] Building CXX object opencog/cython/opencog/CMakeFiles/atomspace_cython.dir/Cast.cc.o
+Building CXX object opencog/cython/opencog/CMakeFiles/atomspace_cython.dir/atomspace.cpp.o
+Linking CXX shared library type_constructors.so
+Linking CXX shared library liblambda.so
+[ 54%] Built target type_constructors
+[ 54%] Built target lambda
+Scanning dependencies of target unify
+[ 54%] Building CXX object opencog/unify/CMakeFiles/unify.dir/Unify.cc.o
+Scanning dependencies of target smob
+[ 54%] [ 54%] [ 54%] [ 56%] [ 56%] [ 56%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemePrimitive.cc.o
+Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAtom.cc.o
+Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeModule.cc.o
+Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeEval.cc.o
+Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmob.cc.o
+Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAF.cc.o
+[ 56%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAS.cc.o
+[ 59%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAV.cc.o
+[ 59%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobGC.cc.o
+[ 59%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobNew.cc.o
+[ 59%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobTV.cc.o
+[ 61%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobValue.cc.o
+[ 61%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobLogger.cc.o
+Linking CXX shared library atomspace.so
+[ 61%] Built target atomspace_cython
+Linking CXX shared library libunify.so
+[ 61%] Built target unify
+Linking CXX shared library libsmob.so
+[ 61%] Built target smob
+[ 61%] Serializing with protobuf
+Scanning dependencies of target persist
+Scanning dependencies of target dist-gearman
+Scanning dependencies of target randgen
+Scanning dependencies of target persist-sql
+[ 61%] [ 61%] Scanning dependencies of target atomspace_bm
+[ 63%] Building CXX object opencog/guile/CMakeFiles/randgen.dir/RandGenSCM.cc.o
+Building CXX object opencog/persist/gearman/CMakeFiles/dist-gearman.dir/DistSCM.cc.o
+Scanning dependencies of target PythonEval
+Scanning dependencies of target query
+[ 63%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-sql.dir/llapi.cc.o
+[ 63%] [ 65%] Building CXX object opencog/persist/guile/CMakeFiles/persist.dir/PersistSCM.cc.o
+[ 65%] Building CXX object opencog/cython/CMakeFiles/PythonEval.dir/PythonEval.cc.o
+Building CXX object opencog/query/CMakeFiles/query.dir/AttentionalFocusCB.cc.o
+Building CXX object opencog/benchmark/CMakeFiles/atomspace_bm.dir/AtomSpaceBenchmark.cc.o
+Scanning dependencies of target zmqatoms
+[ 68%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQMessages.pb.cc.o
+[ 68%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-sql.dir/SQLAtomStorage.cc.o
+Linking CXX shared library librandgen.so
+[ 68%] Built target randgen
+[ 68%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-sql.dir/SQLPersistSCM.cc.o
+Linking CXX shared library libpersist.so
+Linking CXX shared library libdist-gearman.so
+[ 68%] Built target persist
+[ 70%] Building CXX object opencog/cython/CMakeFiles/PythonEval.dir/load-file.cc.o
+[ 70%] Built target dist-gearman
+[ 70%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ProtocolBufferSerializer.cc.o
+[ 70%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQClient.cc.o
+[ 70%] Building CXX object opencog/query/CMakeFiles/query.dir/DefaultPatternMatchCB.cc.o
+[ 70%] Building CXX object opencog/query/CMakeFiles/query.dir/Implicator.cc.o
+Linking CXX shared library libPythonEval.so
+[ 72%] Building CXX object opencog/query/CMakeFiles/query.dir/DefaultImplicator.cc.o
+[ 72%] Built target PythonEval
+[ 72%] Building CXX object opencog/query/CMakeFiles/query.dir/InitiateSearchCB.cc.o
+[ 75%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQPersistSCM.cc.o
+[ 75%] Building CXX object opencog/benchmark/CMakeFiles/atomspace_bm.dir/atomspace_bm.cc.o
+[ 75%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternMatch.cc.o
+Linking CXX shared library libpersist-sql.so
+[ 75%] Built target persist-sql
+Scanning dependencies of target PythonSCM
+[ 75%] Building CXX object opencog/cython/CMakeFiles/PythonSCM.dir/PythonSCM.cc.o
+[ 75%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternMatchEngine.cc.o
+Linking CXX shared library libzmqatoms.so
+[ 75%] Built target zmqatoms
+[ 77%] Cythonizing utilities.pyx
+Linking CXX executable atomspace_bm
+[ 77%] Built target atomspace_bm
+[ 79%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternSCM.cc.o
+Scanning dependencies of target utilities_cython
+[ 79%] Building CXX object opencog/cython/opencog/CMakeFiles/utilities_cython.dir/Utilities.cc.o
+[ 79%] Building CXX object opencog/query/CMakeFiles/query.dir/Recognizer.cc.o
+[ 79%] Building CXX object opencog/query/CMakeFiles/query.dir/Satisfier.cc.o
+Linking CXX shared library libPythonSCM.so
+[ 79%] Built target PythonSCM
+Scanning dependencies of target sniff
+[ 79%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/sniff.dir/sniff.cc.o
+[ 79%] Building CXX object opencog/cython/opencog/CMakeFiles/utilities_cython.dir/utilities.cpp.o
+Linking CXX executable sniff
+[ 79%] Built target sniff
+Linking CXX shared library utilities.so
+[ 79%] Built target utilities_cython
+Linking CXX shared library libquery.so
+[ 79%] Built target query
+Scanning dependencies of target execution
+[ 79%] [ 81%] [ 81%] [ 81%] [ 81%] [ 81%] Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/Force.cc.o
+Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/ExecutionOutputLink.cc.o
+Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/EvaluationLink.cc.o
+Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/ExecSCM.cc.o
+Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/Instantiator.cc.o
+Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/MapLink.cc.o
+Linking CXX shared library libexecution.so
+[ 81%] Built target execution
+[ 81%] [ 81%] Cythonizing scheme_wrapper.pyx
+Cythonizing bindlink.pyx
+Scanning dependencies of target atomspace-cwrapper
+Scanning dependencies of target profile_bindlink
+[ 81%] [ 84%] [ 84%] [ 84%] Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/AtomSpace_CWrapper.cpp.o
+[ 84%] Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/TruthValue_CWrapper.cpp.o
+Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/Exec_CWrapper.cpp.o
+Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/PatternMatcher_CWrapper.cpp.o
+Building CXX object opencog/benchmark/CMakeFiles/profile_bindlink.dir/profile_bindlink.cc.o
+Scanning dependencies of target ruleengine
+[ 86%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/BackwardChainer.cc.o
+Scanning dependencies of target scheme_wrapper
+[ 86%] Building CXX object opencog/cython/opencog/CMakeFiles/scheme_wrapper.dir/PyScheme.cc.o
+Scanning dependencies of target bindlink_cython
+[ 88%] Building CXX object opencog/cython/opencog/CMakeFiles/bindlink_cython.dir/BindlinkStub.cc.o
+Linking CXX executable profile_bindlink
+[ 90%] [ 90%] Building CXX object opencog/cython/opencog/CMakeFiles/scheme_wrapper.dir/scheme_wrapper.cpp.o
+Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/Value_CWrapper.cpp.o
+[ 90%] Built target profile_bindlink
+[ 90%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/TraceRecorder.cc.o
+[ 90%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/ControlPolicy.cc.o
+[ 90%] Building CXX object opencog/cython/opencog/CMakeFiles/bindlink_cython.dir/bindlink.cpp.o
+[ 90%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/MixtureModel.cc.o
+[ 93%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/ActionSelection.cc.o
+Linking CXX shared library libatomspace-cwrapper.so
+[ 93%] Built target atomspace-cwrapper
+[ 93%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/BetaDistribution.cc.o
+Linking CXX shared library scheme_wrapper.so
+[ 93%] Built target scheme_wrapper
+[ 93%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/BackwardChainerPMCB.cc.o
+[ 93%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/BIT.cc.o
+[ 95%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/Fitness.cc.o
+Linking CXX shared library bindlink.so
+[ 95%] Built target bindlink_cython
+[ 95%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/forwardchainer/FCStat.cc.o
+[ 95%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/forwardchainer/ForwardChainer.cc.o
+[ 97%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/URELogger.cc.o
+[ 97%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/ChainerUtils.cc.o
+[ 97%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/InferenceSCM.cc.o
+[ 97%] [100%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/Rule.cc.o
+Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/URECommons.cc.o
+[100%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/UREConfig.cc.o
+Linking CXX shared library libruleengine.so
+[100%] Built target ruleengine
+Scanning dependencies of target logger
+[100%] Building CXX object opencog/guile/CMakeFiles/logger.dir/LoggerSCM.cc.o
+Linking CXX shared library liblogger.so
+[100%] Built target logger
++ DSTATUS=BUILDPASS
++ docker exec --user root 5296c2af099196136d9514b1360cf118cdcb7d22f8e85b26a793e430cccc2e42 bash opencog/dependencies/job2
 + cd opencog/dependencies/atomspace
 + cd build
-+ make -j8 test
-[  1%] Built target opencog_atom_types
-[  3%] Built target truthvalue
-[  5%] Built target atombase
-[  8%] [  8%] Built target attentionbank
-Built target atomutils
-[ 17%] Built target atomcore
-[ 20%] [ 21%] Built target clearbox
-Built target atomspace
-[ 22%] [ 22%] [ 22%] [ 22%] [ 22%] Generating AttentionValueUTest.cpp
-Generating SimpleTruthValueUTest.cpp
-Generating TVMergeUTest.cpp
-Generating EvidenceCountTruthValueUTest.cpp
-Generating BetaReduceUTest.cpp
-[ 23%] [ 24%] Built target atomspaceutils
-Built target lambda
-[ 24%] [ 25%] [ 25%] Built target type_constructors
-Generating DefineLinkUTest.cpp
-Generating VariablesUTest.cpp
-[ 25%] Generating ComposeLinkUTest.cpp
-Scanning dependencies of target SimpleTruthValueUTest
-Scanning dependencies of target TVMergeUTest
-Scanning dependencies of target AttentionValueUTest
-Scanning dependencies of target EvidenceCountTruthValueUTest
-Scanning dependencies of target BetaReduceUTest
-[ 25%] [ 25%] [ 25%] Building CXX object tests/truthvalue/CMakeFiles/SimpleTruthValueUTest.dir/SimpleTruthValueUTest.cpp.o
-Building CXX object tests/truthvalue/CMakeFiles/TVMergeUTest.dir/TVMergeUTest.cpp.o
-[ 25%] [ 25%] Building CXX object tests/truthvalue/CMakeFiles/EvidenceCountTruthValueUTest.dir/EvidenceCountTruthValueUTest.cpp.o
-Scanning dependencies of target VariablesUTest
-Scanning dependencies of target DefineLinkUTest
-Building CXX object tests/truthvalue/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.o
-Building CXX object tests/atoms/CMakeFiles/BetaReduceUTest.dir/BetaReduceUTest.cpp.o
-[ 25%] [ 26%] Building CXX object tests/atoms/CMakeFiles/DefineLinkUTest.dir/DefineLinkUTest.cpp.o
-Building CXX object tests/atoms/CMakeFiles/VariablesUTest.dir/VariablesUTest.cpp.o
-Scanning dependencies of target ComposeLinkUTest
-[ 26%] Building CXX object tests/atoms/CMakeFiles/ComposeLinkUTest.dir/ComposeLinkUTest.cpp.o
-Linking CXX executable EvidenceCountTruthValueUTest
-[ 26%] Built target EvidenceCountTruthValueUTest
-[ 26%] Built target unify
-[ 26%] Generating AtomSpaceUtilsUTest.cpp
-Linking CXX executable SimpleTruthValueUTest
-Scanning dependencies of target AtomSpaceUtilsUTest
-[ 27%] Building CXX object tests/atomspaceutils/CMakeFiles/AtomSpaceUtilsUTest.dir/AtomSpaceUtilsUTest.cpp.o
-[ 27%] Built target SimpleTruthValueUTest
-[ 27%] Generating AttentionUTest.cpp
-Scanning dependencies of target AttentionUTest
-[ 28%] Building CXX object tests/attentionbank/CMakeFiles/AttentionUTest.dir/AttentionUTest.cpp.o
-Linking CXX executable TVMergeUTest
-[ 28%] Built target TVMergeUTest
-[ 32%] Built target smob
-[ 33%] Built target atomspace_cython
-[ 35%] Built target query
-[ 35%] Generating AtomTableUTest.cpp
-Scanning dependencies of target AtomTableUTest
-[ 35%] Building CXX object tests/atomspace/CMakeFiles/AtomTableUTest.dir/AtomTableUTest.cpp.o
-Linking CXX executable DefineLinkUTest
-Linking CXX executable ComposeLinkUTest
-[ 35%] Built target DefineLinkUTest
-[ 36%] Generating ClassServerUTest.cpp
-[ 36%] Built target ComposeLinkUTest
-[ 36%] Generating AtomUTest.cpp
-Scanning dependencies of target ClassServerUTest
-[ 36%] Building CXX object tests/atomspace/CMakeFiles/ClassServerUTest.dir/ClassServerUTest.cpp.o
-Scanning dependencies of target AtomUTest
-[ 37%] Building CXX object tests/atomspace/CMakeFiles/AtomUTest.dir/AtomUTest.cpp.o
-Linking CXX executable VariablesUTest
-Linking CXX executable BetaReduceUTest
-[ 37%] Built target VariablesUTest
-[ 37%] Generating NodeUTest.cpp
-Scanning dependencies of target NodeUTest
-[ 37%] Built target BetaReduceUTest
-[ 38%] [ 38%] Building CXX object tests/atomspace/CMakeFiles/NodeUTest.dir/NodeUTest.cpp.o
-Generating LinkUTest.cpp
-Scanning dependencies of target LinkUTest
-[ 40%] Building CXX object tests/atomspace/CMakeFiles/LinkUTest.dir/LinkUTest.cpp.o
-Linking CXX executable AttentionValueUTest
-[ 40%] Built target AttentionValueUTest
-[ 40%] Generating TLBUTest.cpp
-Scanning dependencies of target TLBUTest
-[ 41%] Building CXX object tests/atomspace/CMakeFiles/TLBUTest.dir/TLBUTest.cpp.o
-Linking CXX executable AtomSpaceUtilsUTest
-Linking CXX executable AttentionUTest
-[ 41%] Built target AtomSpaceUtilsUTest
-[ 41%] Built target AttentionUTest
-[ 41%] Generating AtomSpaceImplUTest.cpp
-[ 41%] Generating AtomSpaceUTest.cpp
-Scanning dependencies of target AtomSpaceImplUTest
-Scanning dependencies of target AtomSpaceUTest
-[ 42%] [ 42%] Building CXX object tests/atomspace/CMakeFiles/AtomSpaceImplUTest.dir/AtomSpaceImplUTest.cpp.o
-Building CXX object tests/atomspace/CMakeFiles/AtomSpaceUTest.dir/AtomSpaceUTest.cpp.o
-Linking CXX executable NodeUTest
-[ 42%] Built target NodeUTest
-[ 42%] Generating AtomSpaceAsyncUTest.cpp
-Scanning dependencies of target AtomSpaceAsyncUTest
-[ 42%] Building CXX object tests/atomspace/CMakeFiles/AtomSpaceAsyncUTest.dir/AtomSpaceAsyncUTest.cpp.o
-Linking CXX executable ClassServerUTest
-[ 42%] Built target ClassServerUTest
-[ 42%] Generating UseCountUTest.cpp
-Scanning dependencies of target UseCountUTest
-[ 43%] Building CXX object tests/atomspace/CMakeFiles/UseCountUTest.dir/UseCountUTest.cpp.o
-Linking CXX executable LinkUTest
-[ 43%] Built target LinkUTest
-[ 43%] Generating MultiSpaceUTest.cpp
-Scanning dependencies of target MultiSpaceUTest
-[ 44%] Building CXX object tests/atomspace/CMakeFiles/MultiSpaceUTest.dir/MultiSpaceUTest.cpp.o
-Linking CXX executable TLBUTest
-Linking CXX executable AtomTableUTest
-[ 44%] Built target TLBUTest
-[ 44%] Generating RemoveUTest.cpp
-Scanning dependencies of target RemoveUTest
-[ 44%] [ 44%] Built target AtomTableUTest
-Building CXX object tests/atomspace/CMakeFiles/RemoveUTest.dir/RemoveUTest.cpp.o
-[ 44%] Generating ThreadSafeHandleMapUTest.cpp
-Linking CXX executable AtomUTest
-Scanning dependencies of target ThreadSafeHandleMapUTest
-[ 45%] Building CXX object tests/atomspace/CMakeFiles/ThreadSafeHandleMapUTest.dir/ThreadSafeHandleMapUTest.cpp.o
-[ 45%] Built target AtomUTest
-[ 45%] Generating FreeLinkUTest.cpp
-Scanning dependencies of target FreeLinkUTest
-[ 46%] Building CXX object tests/atoms/CMakeFiles/FreeLinkUTest.dir/FreeLinkUTest.cpp.o
-Linking CXX executable UseCountUTest
-[ 46%] Built target UseCountUTest
-[ 47%] Generating RewriteLinkUTest.cpp
-Scanning dependencies of target RewriteLinkUTest
-[ 47%] Building CXX object tests/atoms/CMakeFiles/RewriteLinkUTest.dir/RewriteLinkUTest.cpp.o
-Linking CXX executable FreeLinkUTest
-Linking CXX executable ThreadSafeHandleMapUTest
-[ 47%] Built target FreeLinkUTest
-[ 47%] Generating ScopeLinkUTest.cpp
-[ 47%] Scanning dependencies of target ScopeLinkUTest
-Built target ThreadSafeHandleMapUTest
-[ 47%] [ 47%] Building CXX object tests/atoms/CMakeFiles/ScopeLinkUTest.dir/ScopeLinkUTest.cpp.o
-Generating AlphaConvertUTest.cpp
-Scanning dependencies of target AlphaConvertUTest
-[ 47%] Building CXX object tests/atoms/CMakeFiles/AlphaConvertUTest.dir/AlphaConvertUTest.cpp.o
-Linking CXX executable AtomSpaceAsyncUTest
-[ 47%] Built target AtomSpaceAsyncUTest
-[ 47%] Generating AtomUtilsUTest.cpp
-Scanning dependencies of target AtomUtilsUTest
-[ 47%] Building CXX object tests/atomutils/CMakeFiles/AtomUtilsUTest.dir/AtomUtilsUTest.cpp.o
-Linking CXX executable MultiSpaceUTest
-Linking CXX executable RemoveUTest
-[ 47%] Built target MultiSpaceUTest
-[ 47%] Generating FindUtilsUTest.cpp
-[ 47%] Built target RemoveUTest
-[ 47%] Generating FuzzyUTest.cpp
-Scanning dependencies of target FindUtilsUTest
-[ 47%] Building CXX object tests/atomutils/CMakeFiles/FindUtilsUTest.dir/FindUtilsUTest.cpp.o
-Scanning dependencies of target FuzzyUTest
-[ 47%] Building CXX object tests/atomutils/CMakeFiles/FuzzyUTest.dir/FuzzyUTest.cpp.o
-Linking CXX executable AtomSpaceImplUTest
-[ 47%] Built target AtomSpaceImplUTest
-[ 47%] Generating NeighborUTest.cpp
-Scanning dependencies of target NeighborUTest
-[ 48%] Building CXX object tests/atomutils/CMakeFiles/NeighborUTest.dir/NeighborUTest.cpp.o
-Linking CXX executable AtomSpaceUTest
-[ 48%] Built target AtomSpaceUTest
-[ 48%] Generating UnifyUTest.cpp
-Linking CXX executable RewriteLinkUTest
-Scanning dependencies of target UnifyUTest
-[ 48%] Building CXX object tests/unify/CMakeFiles/UnifyUTest.dir/UnifyUTest.cpp.o
-[ 48%] Built target RewriteLinkUTest
-[ 50%] Built target PythonEval
-[ 51%] Built target utilities_cython
-[ 52%] Built target execution
-[ 53%] Generating PythonUtilitiesUTest.cpp
-Scanning dependencies of target PythonUtilitiesUTest
-[ 53%] Building CXX object tests/cython/CMakeFiles/PythonUtilitiesUTest.dir/PythonUtilitiesUTest.cpp.o
-Linking CXX executable ScopeLinkUTest
-[ 53%] Built target ScopeLinkUTest
-[ 53%] Linking CXX executable AlphaConvertUTest
-Generating MapLinkUTest.cpp
-Scanning dependencies of target MapLinkUTest
-[ 53%] Building CXX object tests/atoms/CMakeFiles/MapLinkUTest.dir/MapLinkUTest.cpp.o
-[ 53%] Built target AlphaConvertUTest
-[ 53%] Generating ParallelUTest.cpp
-Scanning dependencies of target ParallelUTest
-[ 53%] Building CXX object tests/atoms/CMakeFiles/ParallelUTest.dir/ParallelUTest.cpp.o
-Linking CXX executable AtomUtilsUTest
-Linking CXX executable FuzzyUTest
-Linking CXX executable FindUtilsUTest
-[ 53%] Built target AtomUtilsUTest
-[ 54%] Generating RandomUTest.cpp
-[ 54%] Built target FuzzyUTest
-[ 55%] Generating ReductUTest.cpp
-Scanning dependencies of target RandomUTest
-[ 55%] [ 55%] Built target FindUtilsUTest
-Building CXX object tests/atoms/CMakeFiles/RandomUTest.dir/RandomUTest.cpp.o
-Scanning dependencies of target ReductUTest
-[ 55%] [ 55%] Generating DeleteLinkUTest.cpp
-Building CXX object tests/atoms/CMakeFiles/ReductUTest.dir/ReductUTest.cpp.o
-Scanning dependencies of target DeleteLinkUTest
-[ 55%] Building CXX object tests/atoms/CMakeFiles/DeleteLinkUTest.dir/DeleteLinkUTest.cpp.o
-Linking CXX executable NeighborUTest
-[ 55%] Built target NeighborUTest
-[ 55%] Generating EqualLinkUTest.cpp
-Scanning dependencies of target EqualLinkUTest
-[ 55%] Building CXX object tests/atoms/CMakeFiles/EqualLinkUTest.dir/EqualLinkUTest.cpp.o
-Linking CXX executable PythonUtilitiesUTest
-[ 55%] Built target PythonUtilitiesUTest
-[ 56%] Generating PutLinkUTest.cpp
-Scanning dependencies of target PutLinkUTest
-[ 56%] Building CXX object tests/atoms/CMakeFiles/PutLinkUTest.dir/PutLinkUTest.cpp.o
-Linking CXX executable ParallelUTest
-[ 56%] Built target ParallelUTest
-[ 57%] Generating StateLinkUTest.cpp
-Scanning dependencies of target StateLinkUTest
-[ 57%] Building CXX object tests/atoms/CMakeFiles/StateLinkUTest.dir/StateLinkUTest.cpp.o
-Linking CXX executable MapLinkUTest
-[ 57%] Built target MapLinkUTest
-[ 57%] Generating BasicSCMUTest.cpp
-Scanning dependencies of target BasicSCMUTest
-[ 57%] Building CXX object tests/scm/CMakeFiles/BasicSCMUTest.dir/BasicSCMUTest.cpp.o
-Linking CXX executable RandomUTest
-[ 57%] Built target RandomUTest
-[ 57%] Generating SCMPrimitiveUTest.cpp
-Scanning dependencies of target SCMPrimitiveUTest
-[ 57%] Building CXX object tests/scm/CMakeFiles/SCMPrimitiveUTest.dir/SCMPrimitiveUTest.cpp.o
-Linking CXX executable DeleteLinkUTest
-[ 57%] Built target DeleteLinkUTest
-[ 57%] Generating MultiAtomSpaceUTest.cpp
-Scanning dependencies of target MultiAtomSpaceUTest
-[ 57%] Building CXX object tests/scm/CMakeFiles/MultiAtomSpaceUTest.dir/MultiAtomSpaceUTest.cpp.o
-Linking CXX executable ReductUTest
-Linking CXX executable EqualLinkUTest
-[ 57%] Built target ReductUTest
-[ 57%] Generating MultiThreadUTest.cpp
-Scanning dependencies of target MultiThreadUTest
-[ 57%] [ 57%] Built target EqualLinkUTest
-Building CXX object tests/scm/CMakeFiles/MultiThreadUTest.dir/MultiThreadUTest.cpp.o
-[ 58%] Generating SCMUtilsUTest.cpp
-Scanning dependencies of target SCMUtilsUTest
-[ 58%] Building CXX object tests/scm/CMakeFiles/SCMUtilsUTest.dir/SCMUtilsUTest.cpp.o
-Linking CXX executable SCMPrimitiveUTest
-[ 58%] Built target SCMPrimitiveUTest
-[ 60%] Generating SCMExecutionOutputUTest.cpp
-Scanning dependencies of target SCMExecutionOutputUTest
-[ 60%] Building CXX object tests/scm/CMakeFiles/SCMExecutionOutputUTest.dir/SCMExecutionOutputUTest.cpp.o
-Linking CXX executable StateLinkUTest
-[ 60%] Built target StateLinkUTest
-[ 60%] Generating PatternUTest.cpp
-Scanning dependencies of target PatternUTest
-[ 60%] Building CXX object tests/query/CMakeFiles/PatternUTest.dir/PatternUTest.cpp.o
-Linking CXX executable SCMUtilsUTest
-Linking CXX executable MultiThreadUTest
-[ 60%] Built target SCMUtilsUTest
-[ 60%] [ 60%] Built target MultiThreadUTest
-Generating StackUTest.cpp
-[ 60%] Generating BigPatternUTest.cpp
-Scanning dependencies of target BigPatternUTest
-[ 61%] Scanning dependencies of target StackUTest
-Building CXX object tests/query/CMakeFiles/BigPatternUTest.dir/BigPatternUTest.cpp.o
-[ 61%] Building CXX object tests/query/CMakeFiles/StackUTest.dir/StackUTest.cpp.o
-Linking CXX executable BasicSCMUTest
-[ 61%] Built target BasicSCMUTest
-[ 61%] Generating BiggerPatternUTest.cpp
-Scanning dependencies of target BiggerPatternUTest
-[ 61%] Building CXX object tests/query/CMakeFiles/BiggerPatternUTest.dir/BiggerPatternUTest.cpp.o
-Linking CXX executable MultiAtomSpaceUTest
-[ 61%] Built target MultiAtomSpaceUTest
-[ 61%] Linking CXX executable PutLinkUTest
-Generating LoopPatternUTest.cpp
-Scanning dependencies of target LoopPatternUTest
-[ 62%] Building CXX object tests/query/CMakeFiles/LoopPatternUTest.dir/LoopPatternUTest.cpp.o
-[ 62%] Built target PutLinkUTest
-[ 62%] Generating BooleanUTest.cpp
-Scanning dependencies of target BooleanUTest
-[ 62%] Building CXX object tests/query/CMakeFiles/BooleanUTest.dir/BooleanUTest.cpp.o
-Linking CXX executable UnifyUTest
-[ 62%] Built target UnifyUTest
-[ 62%] Generating Boolean2NotUTest.cpp
-Scanning dependencies of target Boolean2NotUTest
-[ 63%] Building CXX object tests/query/CMakeFiles/Boolean2NotUTest.dir/Boolean2NotUTest.cpp.o
-Linking CXX executable StackUTest
-Linking CXX executable SCMExecutionOutputUTest
-[ 63%] Built target StackUTest
-[ 63%] Built target SCMExecutionOutputUTest
-[ 64%] [ 64%] Generating ConstantClausesUTest.cpp
-Generating PatternCrashUTest.cpp
-Scanning dependencies of target ConstantClausesUTest
-Scanning dependencies of target PatternCrashUTest
-[ 64%] [ 65%] Building CXX object tests/query/CMakeFiles/ConstantClausesUTest.dir/ConstantClausesUTest.cpp.o
-Building CXX object tests/query/CMakeFiles/PatternCrashUTest.dir/PatternCrashUTest.cpp.o
-Linking CXX executable BigPatternUTest
-[ 65%] Built target BigPatternUTest
-[ 66%] Generating DisconnectedUTest.cpp
-Scanning dependencies of target DisconnectedUTest
-[ 66%] Building CXX object tests/query/CMakeFiles/DisconnectedUTest.dir/DisconnectedUTest.cpp.o
-Linking CXX executable PatternUTest
-[ 66%] Built target PatternUTest
-[ 66%] Generating ImplicationUTest.cpp
-Scanning dependencies of target ImplicationUTest
-[ 66%] Building CXX object tests/query/CMakeFiles/ImplicationUTest.dir/ImplicationUTest.cpp.o
-Linking CXX executable LoopPatternUTest
-[ 66%] Built target LoopPatternUTest
-[ 67%] Generating ExecutionOutputUTest.cpp
-Scanning dependencies of target ExecutionOutputUTest
-[ 67%] Building CXX object tests/query/CMakeFiles/ExecutionOutputUTest.dir/ExecutionOutputUTest.cpp.o
-Linking CXX executable BiggerPatternUTest
-[ 67%] Built target BiggerPatternUTest
-[ 67%] Generating BuggyStackUTest.cpp
-Scanning dependencies of target BuggyStackUTest
-[ 67%] Building CXX object tests/query/CMakeFiles/BuggyStackUTest.dir/BuggyStackUTest.cpp.o
-Linking CXX executable BooleanUTest
-[ 67%] Built target BooleanUTest
-[ 67%] Generating VarTypeNotUTest.cpp
-Scanning dependencies of target VarTypeNotUTest
-[ 67%] Building CXX object tests/query/CMakeFiles/VarTypeNotUTest.dir/VarTypeNotUTest.cpp.o
-Linking CXX executable DisconnectedUTest
-[ 67%] Built target DisconnectedUTest
-[ 68%] Linking CXX executable ConstantClausesUTest
-Generating BuggyNotUTest.cpp
-Scanning dependencies of target BuggyNotUTest
-[ 68%] Building CXX object tests/query/CMakeFiles/BuggyNotUTest.dir/BuggyNotUTest.cpp.o
-[ 68%] Built target ConstantClausesUTest
-[ 68%] Generating MatchLinkUTest.cpp
-Scanning dependencies of target MatchLinkUTest
-[ 70%] Building CXX object tests/query/CMakeFiles/MatchLinkUTest.dir/MatchLinkUTest.cpp.o
-Linking CXX executable PatternCrashUTest
-[ 70%] Built target PatternCrashUTest
-[ 70%] Generating UnorderedUTest.cpp
-Scanning dependencies of target UnorderedUTest
-[ 71%] Building CXX object tests/query/CMakeFiles/UnorderedUTest.dir/UnorderedUTest.cpp.o
-Linking CXX executable Boolean2NotUTest
-[ 71%] Built target Boolean2NotUTest
-[ 72%] Generating StackMoreUTest.cpp
-Scanning dependencies of target StackMoreUTest
-[ 72%] Building CXX object tests/query/CMakeFiles/StackMoreUTest.dir/StackMoreUTest.cpp.o
-Linking CXX executable BuggyStackUTest
-Linking CXX executable ImplicationUTest
-[ 72%] Built target BuggyStackUTest
-[ 72%] Generating GlobUTest.cpp
-[ 72%] Built target ImplicationUTest
-Scanning dependencies of target GlobUTest
-[ 72%] Generating RecognizerUTest.cpp
-[ 73%] Building CXX object tests/query/CMakeFiles/GlobUTest.dir/GlobUTest.cpp.o
-Linking CXX executable VarTypeNotUTest
-Scanning dependencies of target RecognizerUTest
-[ 73%] Building CXX object tests/query/CMakeFiles/RecognizerUTest.dir/RecognizerUTest.cpp.o
-[ 73%] Built target VarTypeNotUTest
-[ 73%] Generating ArcanaUTest.cpp
-Scanning dependencies of target ArcanaUTest
-[ 74%] Building CXX object tests/query/CMakeFiles/ArcanaUTest.dir/ArcanaUTest.cpp.o
-Linking CXX executable ExecutionOutputUTest
-[ 74%] Built target ExecutionOutputUTest
-[ 74%] Generating SubstitutionUTest.cpp
-Scanning dependencies of target SubstitutionUTest
-[ 74%] Building CXX object tests/query/CMakeFiles/SubstitutionUTest.dir/SubstitutionUTest.cpp.o
-Linking CXX executable BuggyNotUTest
-[ 74%] Built target BuggyNotUTest
-[ 74%] Generating GetLinkUTest.cpp
-Scanning dependencies of target GetLinkUTest
-[ 75%] Building CXX object tests/query/CMakeFiles/GetLinkUTest.dir/GetLinkUTest.cpp.o
-Linking CXX executable MatchLinkUTest
-[ 75%] Built target MatchLinkUTest
-[ 75%] Generating GetStateUTest.cpp
-Scanning dependencies of target GetStateUTest
-[ 75%] Building CXX object tests/query/CMakeFiles/GetStateUTest.dir/GetStateUTest.cpp.o
-Linking CXX executable UnorderedUTest
-Linking CXX executable StackMoreUTest
-[ 75%] Built target UnorderedUTest
-[ 76%] Generating DeepTypeUTest.cpp
-Scanning dependencies of target DeepTypeUTest
-[ 76%] Building CXX object tests/query/CMakeFiles/DeepTypeUTest.dir/DeepTypeUTest.cpp.o
-[ 76%] Built target StackMoreUTest
-[ 76%] Generating GreaterThanUTest.cpp
-Scanning dependencies of target GreaterThanUTest
-[ 77%] Building CXX object tests/query/CMakeFiles/GreaterThanUTest.dir/GreaterThanUTest.cpp.o
-Linking CXX executable RecognizerUTest
-[ 77%] Built target RecognizerUTest
-[ 77%] Generating GreaterComputeUTest.cpp
-Scanning dependencies of target GreaterComputeUTest
-[ 77%] Building CXX object tests/query/CMakeFiles/GreaterComputeUTest.dir/GreaterComputeUTest.cpp.o
-Linking CXX executable GlobUTest
-Linking CXX executable ArcanaUTest
-[ 77%] Built target GlobUTest
-[ 77%] Generating SequenceUTest.cpp
-Scanning dependencies of target SequenceUTest
-[ 77%] Building CXX object tests/query/CMakeFiles/SequenceUTest.dir/SequenceUTest.cpp.o
-[ 77%] Built target ArcanaUTest
-[ 78%] Generating EvaluationUTest.cpp
-Scanning dependencies of target EvaluationUTest
-[ 78%] Building CXX object tests/query/CMakeFiles/EvaluationUTest.dir/EvaluationUTest.cpp.o
-Linking CXX executable SubstitutionUTest
-[ 78%] Built target SubstitutionUTest
-[ 78%] Generating DontExecUTest.cpp
-Scanning dependencies of target DontExecUTest
-[ 78%] Building CXX object tests/query/CMakeFiles/DontExecUTest.dir/DontExecUTest.cpp.o
-Linking CXX executable GetStateUTest
-Linking CXX executable GetLinkUTest
-[ 78%] Built target GetStateUTest
-[ 78%] Generating QuoteUTest.cpp
-[ 78%] Built target GetLinkUTest
-[ 78%] Generating UnquoteUTest.cpp
-Scanning dependencies of target QuoteUTest
-[ 78%] Building CXX object tests/query/CMakeFiles/QuoteUTest.dir/QuoteUTest.cpp.o
-Scanning dependencies of target UnquoteUTest
-[ 78%] Building CXX object tests/query/CMakeFiles/UnquoteUTest.dir/UnquoteUTest.cpp.o
-Linking CXX executable GreaterThanUTest
-[ 78%] Built target GreaterThanUTest
-[ 78%] Generating LocalQuoteUTest.cpp
-Linking CXX executable DeepTypeUTest
-Scanning dependencies of target LocalQuoteUTest
-[ 78%] Building CXX object tests/query/CMakeFiles/LocalQuoteUTest.dir/LocalQuoteUTest.cpp.o
-[ 78%] Built target DeepTypeUTest
-[ 78%] Generating BuggyLinkUTest.cpp
-Scanning dependencies of target BuggyLinkUTest
-[ 78%] Building CXX object tests/query/CMakeFiles/BuggyLinkUTest.dir/BuggyLinkUTest.cpp.o
-Linking CXX executable GreaterComputeUTest
-[ 78%] Built target GreaterComputeUTest
-[ 78%] Generating BuggyQuoteUTest.cpp
-Scanning dependencies of target BuggyQuoteUTest
-[ 78%] Building CXX object tests/query/CMakeFiles/BuggyQuoteUTest.dir/BuggyQuoteUTest.cpp.o
-Linking CXX executable EvaluationUTest
-Linking CXX executable SequenceUTest
-[ 78%] Built target EvaluationUTest
-[ 78%] Generating BuggyEqualUTest.cpp
-[ 78%] Built target SequenceUTest
-[ 80%] Generating BuggySelfGroundUTest.cpp
-Scanning dependencies of target BuggyEqualUTest
-[ 81%] Scanning dependencies of target BuggySelfGroundUTest
-Building CXX object tests/query/CMakeFiles/BuggyEqualUTest.dir/BuggyEqualUTest.cpp.o
-[ 81%] Building CXX object tests/query/CMakeFiles/BuggySelfGroundUTest.dir/BuggySelfGroundUTest.cpp.o
-Linking CXX executable DontExecUTest
-[ 81%] Built target DontExecUTest
-[ 81%] Generating ChoiceLinkUTest.cpp
-Scanning dependencies of target ChoiceLinkUTest
-[ 81%] Building CXX object tests/query/CMakeFiles/ChoiceLinkUTest.dir/ChoiceLinkUTest.cpp.o
-Linking CXX executable BuggyLinkUTest
-[ 81%] Built target BuggyLinkUTest
-[ 82%] Generating DefineUTest.cpp
-Scanning dependencies of target DefineUTest
-[ 82%] Building CXX object tests/query/CMakeFiles/DefineUTest.dir/DefineUTest.cpp.o
-Linking CXX executable UnquoteUTest
-Linking CXX executable QuoteUTest
-[ 82%] Built target UnquoteUTest
-[ 83%] Generating FiniteStateMachineUTest.cpp
-[ 83%] Built target QuoteUTest
-[ 83%] Generating AbsentUTest.cpp
-Scanning dependencies of target FiniteStateMachineUTest
-[ 83%] Building CXX object tests/query/CMakeFiles/FiniteStateMachineUTest.dir/FiniteStateMachineUTest.cpp.o
-Scanning dependencies of target AbsentUTest
-[ 83%] Building CXX object tests/query/CMakeFiles/AbsentUTest.dir/AbsentUTest.cpp.o
-Linking CXX executable LocalQuoteUTest
-Linking CXX executable BuggyQuoteUTest
-[ 83%] Built target LocalQuoteUTest
-[ 83%] Generating SingleUTest.cpp
-Scanning dependencies of target SingleUTest
-[ 83%] [ 83%] Built target BuggyQuoteUTest
-[ 84%] Building CXX object tests/query/CMakeFiles/SingleUTest.dir/SingleUTest.cpp.o
-Generating ScopeUTest.cpp
-Scanning dependencies of target ScopeUTest
-[ 84%] Building CXX object tests/query/CMakeFiles/ScopeUTest.dir/ScopeUTest.cpp.o
-Linking CXX executable BuggySelfGroundUTest
-Linking CXX executable BuggyEqualUTest
-[ 84%] Built target BuggySelfGroundUTest
-[ 84%] Generating FirstNUTest.cpp
-[ 84%] Scanning dependencies of target FirstNUTest
-Built target BuggyEqualUTest
-[ 85%] [ 85%] Building CXX object tests/query/CMakeFiles/FirstNUTest.dir/FirstNUTest.cpp.o
-Generating AttentionalFocusCBUTest.cpp
-Scanning dependencies of target AttentionalFocusCBUTest
-[ 86%] Building CXX object tests/query/CMakeFiles/AttentionalFocusCBUTest.dir/AttentionalFocusCBUTest.cpp.o
-Linking CXX executable ChoiceLinkUTest
-[ 86%] Built target ChoiceLinkUTest
-[ 87%] Generating SudokuUTest.cpp
-Scanning dependencies of target SudokuUTest
-[ 87%] Building CXX object tests/query/CMakeFiles/SudokuUTest.dir/SudokuUTest.cpp.o
-Linking CXX executable DefineUTest
-[ 87%] Built target DefineUTest
-[ 88%] Generating EinsteinUTest.cpp
-Scanning dependencies of target EinsteinUTest
-[ 88%] Building CXX object tests/query/CMakeFiles/EinsteinUTest.dir/EinsteinUTest.cpp.o
-Linking CXX executable SingleUTest
-[ 88%] Built target SingleUTest
-[ 88%] Generating TypeChoiceUTest.cpp
-Scanning dependencies of target TypeChoiceUTest
-[ 88%] Building CXX object tests/query/CMakeFiles/TypeChoiceUTest.dir/TypeChoiceUTest.cpp.o
-Linking CXX executable FiniteStateMachineUTest
-[ 88%] Built target FiniteStateMachineUTest
-[ 88%] Generating NoExceptionUTest.cpp
-Scanning dependencies of target NoExceptionUTest
-[ 88%] Building CXX object tests/query/CMakeFiles/NoExceptionUTest.dir/NoExceptionUTest.cpp.o
-Linking CXX executable AbsentUTest
-[ 88%] Built target AbsentUTest
-[ 94%] Built target ruleengine
-[ 94%] Generating PythonEvalUTest.cpp
-Linking CXX executable ScopeUTest
-Linking CXX executable AttentionalFocusCBUTest
-Scanning dependencies of target PythonEvalUTest
-[ 94%] Building CXX object tests/cython/CMakeFiles/PythonEvalUTest.dir/PythonEvalUTest.cpp.o
-Linking CXX executable FirstNUTest
-[ 94%] [ 94%] Built target ScopeUTest
-Built target AttentionalFocusCBUTest
-[ 94%] [ 94%] Generating ForwardChainerUTest.cpp
-Generating BetaDistributionUTest.cpp
-Scanning dependencies of target BetaDistributionUTest
-[ 95%] Scanning dependencies of target ForwardChainerUTest
-[ 95%] Built target FirstNUTest
-[ 95%] [ 95%] Building CXX object tests/rule-engine/backwardchainer/CMakeFiles/BetaDistributionUTest.dir/BetaDistributionUTest.cpp.o
-Generating BackwardChainerUTest.cpp
-Building CXX object tests/rule-engine/forwardchainer/CMakeFiles/ForwardChainerUTest.dir/ForwardChainerUTest.cpp.o
-Scanning dependencies of target BackwardChainerUTest
-[ 96%] Building CXX object tests/rule-engine/backwardchainer/CMakeFiles/BackwardChainerUTest.dir/BackwardChainerUTest.cpp.o
-Linking CXX executable SudokuUTest
-[ 96%] Built target SudokuUTest
-[ 96%] Generating ActionSelectionUTest.cpp
-Scanning dependencies of target ActionSelectionUTest
-[ 97%] Building CXX object tests/rule-engine/backwardchainer/CMakeFiles/ActionSelectionUTest.dir/ActionSelectionUTest.cpp.o
-Linking CXX executable NoExceptionUTest
-[ 97%] Built target NoExceptionUTest
-[ 97%] Generating ControlPolicyUTest.cpp
-Scanning dependencies of target ControlPolicyUTest
-[ 97%] Building CXX object tests/rule-engine/backwardchainer/CMakeFiles/ControlPolicyUTest.dir/ControlPolicyUTest.cpp.o
-Linking CXX executable EinsteinUTest
-Linking CXX executable TypeChoiceUTest
-[ 97%] Built target EinsteinUTest
-[ 97%] Generating BITUTest.cpp
-Scanning dependencies of target BITUTest
-[ 97%] Building CXX object tests/rule-engine/backwardchainer/CMakeFiles/BITUTest.dir/BITUTest.cpp.o
-[ 97%] Built target TypeChoiceUTest
-[ 98%] Generating ChainerUtilsUTest.cpp
-Scanning dependencies of target ChainerUtilsUTest
-[ 98%] Building CXX object tests/rule-engine/CMakeFiles/ChainerUtilsUTest.dir/ChainerUtilsUTest.cpp.o
-Linking CXX executable PythonEvalUTest
-[ 98%] Built target PythonEvalUTest
-[ 98%] Generating UREConfigUTest.cpp
-Scanning dependencies of target UREConfigUTest
-[100%] Building CXX object tests/rule-engine/CMakeFiles/UREConfigUTest.dir/UREConfigUTest.cpp.o
-Linking CXX executable BetaDistributionUTest
-[100%] Built target BetaDistributionUTest
-[100%] Generating RuleUTest.cpp
-Scanning dependencies of target RuleUTest
-[100%] Building CXX object tests/rule-engine/CMakeFiles/RuleUTest.dir/RuleUTest.cpp.o
-Linking CXX executable ForwardChainerUTest
-[100%] Built target ForwardChainerUTest
-Linking CXX executable ActionSelectionUTest
-[100%] Built target ActionSelectionUTest
-Linking CXX executable BackwardChainerUTest
-Linking CXX executable ChainerUtilsUTest
-[100%] Built target BackwardChainerUTest
-[100%] Built target ChainerUtilsUTest
-Linking CXX executable ControlPolicyUTest
-Linking CXX executable UREConfigUTest
-[100%] Built target ControlPolicyUTest
-[100%] Built target UREConfigUTest
-Linking CXX executable BITUTest
-[100%] Built target BITUTest
-Linking CXX executable RuleUTest
-[100%] Built target RuleUTest
-Scanning dependencies of target tests
-[100%] Built target tests
-Scanning dependencies of target test
-[100%] Running tests...
-Test project /home/opencog/opencog/dependencies/atomspace/build/tests
-        Start   1: SimpleTruthValueUTest
-  1/111 Test   #1: SimpleTruthValueUTest ............   Passed    0.00 sec
-        Start   2: EvidenceCountTruthValueUTest
-  2/111 Test   #2: EvidenceCountTruthValueUTest .....   Passed    0.00 sec
-        Start   3: TVMergeUTest
-  3/111 Test   #3: TVMergeUTest .....................   Passed    0.00 sec
-        Start   4: AttentionValueUTest
-  4/111 Test   #4: AttentionValueUTest ..............   Passed    0.01 sec
-        Start   5: AtomTableUTest
-  5/111 Test   #5: AtomTableUTest ...................   Passed    0.93 sec
-        Start   6: ClassServerUTest
-  6/111 Test   #6: ClassServerUTest .................   Passed    0.00 sec
-        Start   7: AtomUTest
-  7/111 Test   #7: AtomUTest ........................   Passed    0.00 sec
-        Start   8: NodeUTest
-  8/111 Test   #8: NodeUTest ........................   Passed    0.00 sec
-        Start   9: LinkUTest
-  9/111 Test   #9: LinkUTest ........................   Passed    0.00 sec
-        Start  10: TLBUTest
- 10/111 Test  #10: TLBUTest .........................   Passed    0.00 sec
-        Start  11: AtomSpaceUTest
- 11/111 Test  #11: AtomSpaceUTest ...................   Passed    0.01 sec
-        Start  12: AtomSpaceImplUTest
- 12/111 Test  #12: AtomSpaceImplUTest ...............   Passed    0.01 sec
-        Start  13: AtomSpaceAsyncUTest
- 13/111 Test  #13: AtomSpaceAsyncUTest ..............   Passed    5.34 sec
-        Start  14: UseCountUTest
- 14/111 Test  #14: UseCountUTest ....................   Passed    3.93 sec
-        Start  15: MultiSpaceUTest
- 15/111 Test  #15: MultiSpaceUTest ..................   Passed    0.01 sec
-        Start  16: RemoveUTest
- 16/111 Test  #16: RemoveUTest ......................   Passed    0.02 sec
-        Start  17: ThreadSafeHandleMapUTest
- 17/111 Test  #17: ThreadSafeHandleMapUTest .........   Passed    0.37 sec
-        Start  18: FreeLinkUTest
- 18/111 Test  #18: FreeLinkUTest ....................   Passed    0.06 sec
-        Start  19: MapLinkUTest
- 19/111 Test  #19: MapLinkUTest .....................   Passed    0.15 sec
-        Start  20: ParallelUTest
- 20/111 Test  #20: ParallelUTest ....................   Passed   11.10 sec
-        Start  21: RandomUTest
- 21/111 Test  #21: RandomUTest ......................   Passed    0.44 sec
-        Start  22: ReductUTest
- 22/111 Test  #22: ReductUTest ......................   Passed    0.07 sec
-        Start  23: RewriteLinkUTest
- 23/111 Test  #23: RewriteLinkUTest .................   Passed    0.06 sec
-        Start  24: ScopeLinkUTest
- 24/111 Test  #24: ScopeLinkUTest ...................   Passed    0.12 sec
-        Start  25: AlphaConvertUTest
- 25/111 Test  #25: AlphaConvertUTest ................   Passed    0.01 sec
-        Start  26: BetaReduceUTest
- 26/111 Test  #26: BetaReduceUTest ..................   Passed    0.01 sec
-        Start  27: DefineLinkUTest
- 27/111 Test  #27: DefineLinkUTest ..................   Passed    0.08 sec
-        Start  28: DeleteLinkUTest
- 28/111 Test  #28: DeleteLinkUTest ..................   Passed    0.01 sec
-        Start  29: EqualLinkUTest
- 29/111 Test  #29: EqualLinkUTest ...................   Passed    0.01 sec
-        Start  30: PutLinkUTest
- 30/111 Test  #30: PutLinkUTest .....................   Passed    0.24 sec
-        Start  31: StateLinkUTest
- 31/111 Test  #31: StateLinkUTest ...................   Passed    0.01 sec
-        Start  32: VariablesUTest
- 32/111 Test  #32: VariablesUTest ...................   Passed    0.00 sec
-        Start  33: ComposeLinkUTest
- 33/111 Test  #33: ComposeLinkUTest .................   Passed    0.00 sec
-        Start  34: AtomUtilsUTest
- 34/111 Test  #34: AtomUtilsUTest ...................   Passed    0.00 sec
-        Start  35: FindUtilsUTest
- 35/111 Test  #35: FindUtilsUTest ...................   Passed    0.00 sec
-        Start  36: FuzzyUTest
- 36/111 Test  #36: FuzzyUTest .......................   Passed    0.01 sec
-        Start  37: NeighborUTest
- 37/111 Test  #37: NeighborUTest ....................   Passed    0.00 sec
-        Start  38: UnifyUTest
- 38/111 Test  #38: UnifyUTest .......................   Passed    8.05 sec
-        Start  39: AtomSpaceUtilsUTest
- 39/111 Test  #39: AtomSpaceUtilsUTest ..............   Passed    0.00 sec
-        Start  40: AttentionUTest
- 40/111 Test  #40: AttentionUTest ...................   Passed    0.01 sec
-        Start  41: BasicSCMUTest
- 41/111 Test  #41: BasicSCMUTest ....................***Failed    0.19 sec
-Running cxxtest tests (15 tests)[2018-01-15 12:00:10:366] [DEBUG] BEGIN TEST: test_utf8
-
-In BasicSCMUTest::test_utf8:
-/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:150: Error: Test failed: Failed to eval a UTF-8 string
-/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:150: Error: Assertion failed: !eval_err
-/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:155: Error: Test failed: Failed to eval a UTF-8 string
-/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:155: Error: Assertion failed: !eval_err
-[2018-01-15 12:00:10:380] [DEBUG] BEGIN TEST: test_single_atom
-typedefs now loaded!
-check_node(Node,ola amigos,0.200000,0.300000)
-check node (Node "ola amigos" (stv 0.200000 0.300000))
-check_node(SentenceNode,Watashi mo sou ooimasu,0.520000,0.543300)
-check node (SentenceNode "Watashi mo sou ooimasu" (stv 0.520000 0.543300))
-check_node(DocumentNode,Blamoo yadda,0.852000,0.954330)
-check node (DocumentNode "Blamoo yadda" (stv 0.852000 0.954330))
-check_node(WordNode,The Bird is the Word,0.765200,0.115400)
-check node (WordNode "The Bird is the Word" (stv 0.765200 0.115400))
-check_node(LemmaNode,When life gives you lemmas, make conjugations,0.476500,0.611540)
-check node (LemmaNode "When life gives you lemmas, make conjugations" (stv 0.476500 0.611540))
-check_node(PartOfSpeechNode,はにがうりだそうであってるのかはちょっと不安ですが翻訳ソフトでやくし てみました。,0.347650,0.336110)
-check node (PartOfSpeechNode "はにがうりだそうであってるのかはちょっと不安ですが翻訳ソフトでやくし てみました。" (stv 0.347650 0.336110))
-In BasicSCMUTest::test_single_atom:
-/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:169: Error: Test failed: Failed to create a node
-/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:169: Error: Assertion failed: !eval_err
-/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:173: Error: Test failed: Failed to find handle
-/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:173: Error: Assertion failed: h != nullptr
-/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:176: Error: Test failed: Failed to find node
-/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:176: Error: Assertion failed: n != nullptr
-[2018-01-15 12:00:10:447] [DEBUG] END TEST: test_single_atom
-[2018-01-15 12:00:10:450] [DEBUG] BEGIN TEST: test_extract
-[2018-01-15 12:00:10:451] [DEBUG] END TEST: test_extract
-.[2018-01-15 12:00:10:454] [DEBUG] BEGIN TEST: test_clear
-rs = 
-.[2018-01-15 12:00:10:458] [DEBUG] BEGIN TEST: test_extract_hypergraph
-rs = 
-.[2018-01-15 12:00:10:461] [DEBUG] BEGIN TEST: test_link_tv_setting
-[2018-01-15 12:00:10:461] [DEBUG] END TEST: test_link_tv_setting
-.check_link(ReferenceLink,WordInstanceNode,WordNode,0.650000,0.450000)
-[2018-01-15 12:00:10:465] [DEBUG] BEGIN TEST: test_reference_link
-check_link (ReferenceLink (stv 0.650000 0.450000) (WordInstanceNode "the@401c28c2-9de3-453f-b6d8-1b56061d127e") (WordNode "the") )
-[2018-01-15 12:00:10:465] [DEBUG] END TEST: test_reference_link
-.check_link(WordInstanceLink,WordInstanceNode,ParseNode,1.000000,1.000000)
-[2018-01-15 12:00:10:468] [DEBUG] BEGIN TEST: test_word_instance_link
-check_link (WordInstanceLink (stv 1.000000 1.000000) (WordInstanceNode "the@401c28c2-9de3-453f-b6d8-1b56061d127e") (ParseNode "sentence@8c13ec38-0295-4632-9205-e095035e4364_parse_0") )
-[2018-01-15 12:00:10:468] [DEBUG] END TEST: test_word_instance_link
-.check_link(InheritanceLink,WordInstanceNode,DefinedLinguisticConceptNode,1.000000,1.000000)
-[2018-01-15 12:00:10:471] [DEBUG] BEGIN TEST: test_inheritance_link
-check_link (InheritanceLink (stv 1.000000 1.000000) (WordInstanceNode "blue@6fdd848e-a69c-4b6c-a9a2-376e09789096") (DefinedLinguisticConceptNode "hyp") )
-[2018-01-15 12:00:10:471] [DEBUG] END TEST: test_inheritance_link
-.[2018-01-15 12:00:10:475] [DEBUG] BEGIN TEST: test_values
-.[2018-01-15 12:00:10:479] [DEBUG] BEGIN TEST: test_value_list
-.[2018-01-15 12:00:10:483] [DEBUG] BEGIN TEST: test_truth_value
-.check_parse_link(ParseLink,ParseNode,SentenceNode,1.000000,1.000000)
-[2018-01-15 12:00:10:487] [DEBUG] BEGIN TEST: test_parse_link
-[2018-01-15 12:00:10:487] [DEBUG] END TEST: test_parse_link
-.check_parse_link(LemmaLink,WordInstanceNode,WordNode,1.000000,1.000000)
-[2018-01-15 12:00:10:490] [DEBUG] BEGIN TEST: test_lemma_link
-[2018-01-15 12:00:10:490] [DEBUG] END TEST: test_lemma_link
-.check_link(PartOfSpeechLink,WordInstanceNode,DefinedLinguisticConceptNode,1.000000,1.000000)
-[2018-01-15 12:00:10:493] [DEBUG] BEGIN TEST: test_part_of_speech_link
-check_link (PartOfSpeechLink (stv 1.000000 1.000000) (WordInstanceNode "blue@6fdd848e-a69c-4b6c-a9a2-376e09789096") (DefinedLinguisticConceptNode "adj") )
-[2018-01-15 12:00:10:493] [DEBUG] END TEST: test_part_of_speech_link
-.
-Failed 2 and Skipped 0 of 15 tests
-Success rate: 86%
-;;; note: auto-compilation is enabled, set GUILE_AUTO_COMPILE=0
-;;;       or pass the --no-auto-compile argument to disable.
-;;; compiling ../../../tests/scm/typedefs.scm
-;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/dependencies/atomspace/tests/scm/typedefs.scm.go
-
-        Start  42: SCMPrimitiveUTest
- 42/111 Test  #42: SCMPrimitiveUTest ................   Passed    0.56 sec
-        Start  43: MultiAtomSpaceUTest
- 43/111 Test  #43: MultiAtomSpaceUTest ..............   Passed    0.50 sec
-        Start  44: MultiThreadUTest
- 44/111 Test  #44: MultiThreadUTest .................   Passed   12.87 sec
-        Start  45: SCMUtilsUTest
- 45/111 Test  #45: SCMUtilsUTest ....................   Passed    0.08 sec
-        Start  46: SCMExecutionOutputUTest
- 46/111 Test  #46: SCMExecutionOutputUTest ..........   Passed    0.22 sec
-        Start  47: PatternUTest
- 47/111 Test  #47: PatternUTest .....................   Passed    0.01 sec
-        Start  48: StackUTest
- 48/111 Test  #48: StackUTest .......................   Passed    0.01 sec
-        Start  49: BigPatternUTest
- 49/111 Test  #49: BigPatternUTest ..................   Passed    0.01 sec
-        Start  50: BiggerPatternUTest
- 50/111 Test  #50: BiggerPatternUTest ...............   Passed    0.01 sec
-        Start  51: LoopPatternUTest
- 51/111 Test  #51: LoopPatternUTest .................   Passed    0.01 sec
-        Start  52: BooleanUTest
- 52/111 Test  #52: BooleanUTest .....................   Passed    0.01 sec
-        Start  53: Boolean2NotUTest
- 53/111 Test  #53: Boolean2NotUTest .................   Passed    0.01 sec
-        Start  54: ConstantClausesUTest
- 54/111 Test  #54: ConstantClausesUTest .............   Passed    0.09 sec
-        Start  55: PatternCrashUTest
- 55/111 Test  #55: PatternCrashUTest ................   Passed    0.08 sec
-        Start  56: DisconnectedUTest
- 56/111 Test  #56: DisconnectedUTest ................   Passed    0.17 sec
-        Start  57: ImplicationUTest
- 57/111 Test  #57: ImplicationUTest .................   Passed    0.07 sec
-        Start  58: ExecutionOutputUTest
- 58/111 Test  #58: ExecutionOutputUTest .............   Passed    0.06 sec
-        Start  59: BuggyStackUTest
- 59/111 Test  #59: BuggyStackUTest ..................   Passed    0.08 sec
-        Start  60: VarTypeNotUTest
- 60/111 Test  #60: VarTypeNotUTest ..................   Passed    0.08 sec
-        Start  61: BuggyNotUTest
- 61/111 Test  #61: BuggyNotUTest ....................   Passed    0.10 sec
-        Start  62: MatchLinkUTest
- 62/111 Test  #62: MatchLinkUTest ...................   Passed    0.08 sec
-        Start  63: UnorderedUTest
- 63/111 Test  #63: UnorderedUTest ...................   Passed    0.12 sec
-        Start  64: StackMoreUTest
- 64/111 Test  #64: StackMoreUTest ...................   Passed    0.28 sec
-        Start  65: GlobUTest
- 65/111 Test  #65: GlobUTest ........................   Passed    0.16 sec
-        Start  66: RecognizerUTest
- 66/111 Test  #66: RecognizerUTest ..................   Passed    0.10 sec
-        Start  67: ArcanaUTest
- 67/111 Test  #67: ArcanaUTest ......................   Passed    4.18 sec
-        Start  68: SubstitutionUTest
- 68/111 Test  #68: SubstitutionUTest ................   Passed    0.08 sec
-        Start  69: GetLinkUTest
- 69/111 Test  #69: GetLinkUTest .....................   Passed    0.08 sec
-        Start  70: GetStateUTest
- 70/111 Test  #70: GetStateUTest ....................   Passed    1.61 sec
-        Start  71: DeepTypeUTest
- 71/111 Test  #71: DeepTypeUTest ....................   Passed    0.08 sec
-        Start  72: GreaterThanUTest
- 72/111 Test  #72: GreaterThanUTest .................   Passed    0.08 sec
-        Start  73: GreaterComputeUTest
- 73/111 Test  #73: GreaterComputeUTest ..............   Passed    0.08 sec
-        Start  74: SequenceUTest
- 74/111 Test  #74: SequenceUTest ....................   Passed    0.09 sec
-        Start  75: EvaluationUTest
- 75/111 Test  #75: EvaluationUTest ..................   Passed    0.10 sec
-        Start  76: DontExecUTest
- 76/111 Test  #76: DontExecUTest ....................   Passed    0.14 sec
-        Start  77: QuoteUTest
- 77/111 Test  #77: QuoteUTest .......................   Passed    0.17 sec
-        Start  78: UnquoteUTest
- 78/111 Test  #78: UnquoteUTest .....................   Passed    0.02 sec
-        Start  79: LocalQuoteUTest
- 79/111 Test  #79: LocalQuoteUTest ..................   Passed    0.01 sec
-        Start  80: BuggyLinkUTest
- 80/111 Test  #80: BuggyLinkUTest ...................   Passed    0.06 sec
-        Start  81: BuggyQuoteUTest
- 81/111 Test  #81: BuggyQuoteUTest ..................   Passed    0.07 sec
-        Start  82: BuggyEqualUTest
- 82/111 Test  #82: BuggyEqualUTest ..................   Passed    0.07 sec
-        Start  83: BuggySelfGroundUTest
- 83/111 Test  #83: BuggySelfGroundUTest .............   Passed    0.07 sec
-        Start  84: ChoiceLinkUTest
- 84/111 Test  #84: ChoiceLinkUTest ..................   Passed    0.18 sec
-        Start  85: DefineUTest
- 85/111 Test  #85: DefineUTest ......................   Passed    0.10 sec
-        Start  86: FiniteStateMachineUTest
- 86/111 Test  #86: FiniteStateMachineUTest ..........   Passed    0.07 sec
-        Start  87: AbsentUTest
- 87/111 Test  #87: AbsentUTest ......................   Passed    0.10 sec
-        Start  88: SingleUTest
- 88/111 Test  #88: SingleUTest ......................   Passed    0.07 sec
-        Start  89: ScopeUTest
- 89/111 Test  #89: ScopeUTest .......................   Passed    0.16 sec
-        Start  90: FirstNUTest
- 90/111 Test  #90: FirstNUTest ......................   Passed    0.11 sec
-        Start  91: AttentionalFocusCBUTest
- 91/111 Test  #91: AttentionalFocusCBUTest ..........   Passed    0.06 sec
-        Start  92: SudokuUTest
- 92/111 Test  #92: SudokuUTest ......................   Passed    0.08 sec
-        Start  93: EinsteinUTest
- 93/111 Test  #93: EinsteinUTest ....................   Passed    6.53 sec
-        Start  94: TypeChoiceUTest
- 94/111 Test  #94: TypeChoiceUTest ..................   Passed    0.02 sec
-        Start  95: NoExceptionUTest
- 95/111 Test  #95: NoExceptionUTest .................   Passed    0.08 sec
-        Start  96: ChainerUtilsUTest
- 96/111 Test  #96: ChainerUtilsUTest ................   Passed    0.06 sec
-        Start  97: UREConfigUTest
- 97/111 Test  #97: UREConfigUTest ...................   Passed    0.08 sec
-        Start  98: RuleUTest
- 98/111 Test  #98: RuleUTest ........................   Passed    0.16 sec
-        Start  99: ForwardChainerUTest
- 99/111 Test  #99: ForwardChainerUTest ..............   Passed    1.03 sec
-        Start 100: BetaDistributionUTest
-100/111 Test #100: BetaDistributionUTest ............   Passed    0.02 sec
-        Start 101: BackwardChainerUTest
-101/111 Test #101: BackwardChainerUTest .............   Passed    3.50 sec
-        Start 102: ActionSelectionUTest
-102/111 Test #102: ActionSelectionUTest .............   Passed    0.01 sec
-        Start 103: ControlPolicyUTest
-103/111 Test #103: ControlPolicyUTest ...............   Passed    0.08 sec
-        Start 104: BITUTest
-104/111 Test #104: BITUTest .........................   Passed    0.17 sec
-        Start 105: PythonEvalUTest
-105/111 Test #105: PythonEvalUTest ..................   Passed    0.12 sec
-        Start 106: PythonUtilitiesUTest
-106/111 Test #106: PythonUtilitiesUTest .............   Passed    0.02 sec
-        Start 107: Cython
-107/111 Test #107: Cython ...........................   Passed    1.70 sec
-        Start 108: CythonAtomSpace
-108/111 Test #108: CythonAtomSpace ..................   Passed    1.07 sec
-        Start 109: CythonUtilities
-109/111 Test #109: CythonUtilities ..................   Passed    0.06 sec
-        Start 110: CythonBindlink
-110/111 Test #110: CythonBindlink ...................   Passed    0.06 sec
-        Start 111: CythonGuile
-111/111 Test #111: CythonGuile ......................***Exception: SegFault  0.17 sec
-test_a_load_core_types (test_pattern.SchemeTest) ... ok
-test_b_load_file (test_pattern.SchemeTest) ... ok
-test_c_eval (test_pattern.SchemeTest) ... ok
-test_unifier (test_pattern.SchemeTest) ... 
-
-
-98% tests passed, 2 tests failed out of 111
-
-Total Test time (real) =  69.91 sec
-
-The following tests FAILED:
-	 41 - BasicSCMUTest (Failed)
-	111 - CythonGuile (SEGFAULT)
-Errors while running CTest
-make[3]: *** [CMakeFiles/test] Error 8
-make[2]: *** [CMakeFiles/test.dir/all] Error 2
-make[1]: *** [CMakeFiles/test.dir/rule] Error 2
-make: *** [test] Error 2
-+ DSTATUS=TESTFAIL
-+ /var/lib/jenkins/status/updateStatus TESTFAIL /var/lib/jenkins/jobs/OpenCOG_U1404_AtomSpace/builds/3/log OpenCOG_U1404_AtomSpace
++ make install
+[  2%] Built target opencog_atom_types
+[  6%] Built target truthvalue
+[ 11%] Built target atombase
+[ 15%] Built target atomutils
+[ 34%] Built target atomcore
+[ 38%] Built target clearbox
+[ 40%] Built target attentionbank
+[ 43%] Built target atomspace
+[ 43%] Built target atomspaceutils
+[ 45%] Built target atomspace_cython
+[ 50%] Built target lambda
+[ 56%] Built target smob
+[ 59%] Built target PythonEval
+[ 63%] Built target query
+[ 65%] Built target execution
+[ 68%] Built target atomspace_bm
+[ 68%] Built target profile_bindlink
+[ 68%] Built target dist-gearman
+[ 68%] Built target persist
+[ 70%] Built target sql-support
+[ 70%] Built target persist-odbc
+[ 70%] Built target persist-pg
+[ 72%] Built target persist-sql
+[ 72%] Built target sniff
+[ 77%] Built target zmqatoms
+[ 77%] Built target unify
+[ 88%] Built target ruleengine
+[ 88%] Built target logger
+[ 88%] Built target randgen
+[ 88%] Built target PythonSCM
+[ 90%] Built target bindlink_cython
+[ 90%] Built target logger_cython
+[ 93%] Built target scheme_wrapper
+[ 95%] Built target type_constructors
+[ 97%] Built target utilities_cython
+[100%] Built target atomspace-cwrapper
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /usr/local/lib/opencog/libatombase.so
+-- Set runtime path of "/usr/local/lib/opencog/libatombase.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/include/opencog/atoms/base/Atom.h
+-- Installing: /usr/local/include/opencog/atoms/base/atom_types.h
+-- Installing: /usr/local/include/opencog/atoms/base/atom_types.cc
+-- Installing: /usr/local/include/opencog/atoms/base/ClassServer.h
+-- Installing: /usr/local/include/opencog/atoms/base/FloatValue.h
+-- Installing: /usr/local/include/opencog/atoms/base/Handle.h
+-- Installing: /usr/local/include/opencog/atoms/base/Link.h
+-- Installing: /usr/local/include/opencog/atoms/base/LinkValue.h
+-- Installing: /usr/local/include/opencog/atoms/base/Node.h
+-- Installing: /usr/local/include/opencog/atoms/base/ProtoAtom.h
+-- Installing: /usr/local/include/opencog/atoms/base/StringValue.h
+-- Installing: /usr/local/include/opencog/atoms/base/types.h
+-- Installing: /usr/local/include/opencog/atoms/base/Valuation.h
+-- Installing: /usr/local/share/opencog/scm/opencog/base/core_types.scm
+-- Installing: /usr/local/lib/opencog/libatomcore.so
+-- Set runtime path of "/usr/local/lib/opencog/libatomcore.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/include/opencog/atoms/core/ArityLink.h
+-- Installing: /usr/local/include/opencog/atoms/core/ComposeLink.h
+-- Installing: /usr/local/include/opencog/atoms/core/Context.h
+-- Installing: /usr/local/include/opencog/atoms/core/DefineLink.h
+-- Installing: /usr/local/include/opencog/atoms/core/DeleteLink.h
+-- Installing: /usr/local/include/opencog/atoms/core/FreeLink.h
+-- Installing: /usr/local/include/opencog/atoms/core/FunctionLink.h
+-- Installing: /usr/local/include/opencog/atoms/core/LambdaLink.h
+-- Installing: /usr/local/include/opencog/atoms/core/NumberNode.h
+-- Installing: /usr/local/include/opencog/atoms/core/PrenexLink.h
+-- Installing: /usr/local/include/opencog/atoms/core/PresentLink.h
+-- Installing: /usr/local/include/opencog/atoms/core/PutLink.h
+-- Installing: /usr/local/include/opencog/atoms/core/Quotation.h
+-- Installing: /usr/local/include/opencog/atoms/core/RandomChoice.h
+-- Installing: /usr/local/include/opencog/atoms/core/RandomNumber.h
+-- Installing: /usr/local/include/opencog/atoms/core/RewriteLink.h
+-- Installing: /usr/local/include/opencog/atoms/core/ScopeLink.h
+-- Installing: /usr/local/include/opencog/atoms/core/SleepLink.h
+-- Installing: /usr/local/include/opencog/atoms/core/StateLink.h
+-- Installing: /usr/local/include/opencog/atoms/core/TimeLink.h
+-- Installing: /usr/local/include/opencog/atoms/core/TypedAtomLink.h
+-- Installing: /usr/local/include/opencog/atoms/core/TypeNode.h
+-- Installing: /usr/local/include/opencog/atoms/core/UniqueLink.h
+-- Installing: /usr/local/include/opencog/atoms/core/UnorderedLink.h
+-- Installing: /usr/local/include/opencog/atoms/core/Variables.h
+-- Installing: /usr/local/include/opencog/atoms/core/VariableList.h
+-- Installing: /usr/local/lib/opencog/libexecution.so
+-- Set runtime path of "/usr/local/lib/opencog/libexecution.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/include/opencog/atoms/execution/Force.h
+-- Installing: /usr/local/include/opencog/atoms/execution/EvaluationLink.h
+-- Installing: /usr/local/include/opencog/atoms/execution/ExecutionOutputLink.h
+-- Installing: /usr/local/include/opencog/atoms/execution/Instantiator.h
+-- Installing: /usr/local/include/opencog/atoms/core/MapLink.h
+-- Installing: /usr/local/lib/opencog/liblambda.so
+-- Set runtime path of "/usr/local/lib/opencog/liblambda.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/include/opencog/atoms/pattern/BindLink.h
+-- Installing: /usr/local/include/opencog/atoms/pattern/DualLink.h
+-- Installing: /usr/local/include/opencog/atoms/pattern/PatternLink.h
+-- Installing: /usr/local/include/opencog/atoms/pattern/Pattern.h
+-- Installing: /usr/local/include/opencog/atoms/pattern/PatternTerm.h
+-- Installing: /usr/local/include/opencog/atoms/pattern/PatternUtils.h
+-- Installing: /usr/local/lib/opencog/libclearbox.so
+-- Set runtime path of "/usr/local/lib/opencog/libclearbox.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/include/opencog/atoms/reduct/ArithmeticLink.h
+-- Installing: /usr/local/include/opencog/atoms/reduct/DivideLink.h
+-- Installing: /usr/local/include/opencog/atoms/reduct/FoldLink.h
+-- Installing: /usr/local/include/opencog/atoms/reduct/MinusLink.h
+-- Installing: /usr/local/include/opencog/atoms/reduct/PlusLink.h
+-- Installing: /usr/local/include/opencog/atoms/reduct/TimesLink.h
+-- Installing: /usr/local/lib/opencog/libatomspace.so
+-- Set runtime path of "/usr/local/lib/opencog/libatomspace.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/include/opencog/atomspace/AtomSpace.h
+-- Installing: /usr/local/include/opencog/atomspace/AtomTable.h
+-- Installing: /usr/local/include/opencog/atomspace/BackingStore.h
+-- Installing: /usr/local/include/opencog/atomspace/FixedIntegerIndex.h
+-- Installing: /usr/local/include/opencog/atomspace/TypeIndex.h
+-- Installing: /usr/local/include/opencog/atomspace/version.h
+-- Installing: /usr/local/lib/opencog/libatomspaceutils.so
+-- Set runtime path of "/usr/local/lib/opencog/libatomspaceutils.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/include/opencog/atomspaceutils/AtomSpaceUtils.h
+-- Installing: /usr/local/include/opencog/atomspaceutils/TLB.h
+-- Installing: /usr/local/lib/opencog/libatomutils.so
+-- Set runtime path of "/usr/local/lib/opencog/libatomutils.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/include/opencog/atomutils/AtomUtils.h
+-- Installing: /usr/local/include/opencog/atomutils/FindUtils.h
+-- Installing: /usr/local/include/opencog/atomutils/FollowLink.h
+-- Installing: /usr/local/include/opencog/atomutils/ForeachChaseLink.h
+-- Installing: /usr/local/include/opencog/atomutils/FuzzyMatch.h
+-- Installing: /usr/local/include/opencog/atomutils/FuzzyMatchBasic.h
+-- Installing: /usr/local/include/opencog/atomutils/ThreadSafeHandleMap.h
+-- Installing: /usr/local/include/opencog/atomutils/Neighbors.h
+-- Installing: /usr/local/include/opencog/atomutils/Substitutor.h
+-- Installing: /usr/local/include/opencog/atomutils/TypeUtils.h
+-- Installing: /usr/local/lib/opencog/libattentionbank.so
+-- Set runtime path of "/usr/local/lib/opencog/libattentionbank.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/include/opencog/attentionbank/AtomBins.h
+-- Installing: /usr/local/include/opencog/attentionbank/AttentionBank.h
+-- Installing: /usr/local/include/opencog/attentionbank/AVUtils.h
+-- Installing: /usr/local/include/opencog/attentionbank/ImportanceIndex.h
+-- Installing: /usr/local/include/opencog/attentionbank/StochasticImportanceDiffusion.h
+-- Installing: /usr/local/include/opencog/eval/GenericEval.h
+-- Installing: /usr/local/lib/opencog/libquery.so
+-- Set runtime path of "/usr/local/lib/opencog/libquery.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/include/opencog/query/AttentionalFocusCB.h
+-- Installing: /usr/local/include/opencog/query/BindLinkAPI.h
+-- Installing: /usr/local/include/opencog/query/DefaultImplicator.h
+-- Installing: /usr/local/include/opencog/query/DefaultPatternMatchCB.h
+-- Installing: /usr/local/include/opencog/query/Implicator.h
+-- Installing: /usr/local/include/opencog/query/InitiateSearchCB.h
+-- Installing: /usr/local/include/opencog/query/PatternMatchCallback.h
+-- Installing: /usr/local/include/opencog/query/PatternMatchEngine.h
+-- Installing: /usr/local/include/opencog/query/Satisfier.h
+-- Installing: /usr/local/lib/opencog/libdist-gearman.so
+-- Set runtime path of "/usr/local/lib/opencog/libdist-gearman.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/lib/opencog/libpersist.so
+-- Set runtime path of "/usr/local/lib/opencog/libpersist.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/include/opencog/persist/guile/PersistSCM.h
+-- Installing: /usr/local/include/opencog/persist/sql/AtomStorage.h
+-- Installing: /usr/local/include/opencog/persist/sql/SQLBackingStore.h
+-- Installing: /usr/local/lib/opencog/libsql-support.so
+-- Set runtime path of "/usr/local/lib/opencog/libsql-support.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/lib/opencog/libpersist-odbc.so
+-- Set runtime path of "/usr/local/lib/opencog/libpersist-odbc.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog"
+-- Installing: /usr/local/lib/opencog/libpersist-pg.so
+-- Set runtime path of "/usr/local/lib/opencog/libpersist-pg.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog"
+-- Installing: /usr/local/lib/opencog/libpersist-sql.so
+-- Set runtime path of "/usr/local/lib/opencog/libpersist-sql.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/include/opencog/persist/sql/multi-driver/llapi.h
+-- Installing: /usr/local/include/opencog/persist/sql/multi-driver/SQLAtomStorage.h
+-- Installing: /usr/local/include/opencog/persist/sql/multi-driver/SQLPersistSCM.h
+-- Installing: /usr/local/lib/opencog/libzmqatoms.so
+-- Set runtime path of "/usr/local/lib/opencog/libzmqatoms.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/include/opencog/persist/zmq/atomspace/ZMQMessages.pb.h
+-- Installing: /usr/local/include/opencog/persist/zmq/atomspace/ProtocolBufferSerializer.h
+-- Installing: /usr/local/include/opencog/persist/zmq/atomspace/ZMQClient.h
+-- Installing: /usr/local/include/opencog/persist/zmq/atomspace/ZMQPersistSCM.h
+-- Installing: /usr/local/lib/opencog/libruleengine.so
+-- Set runtime path of "/usr/local/lib/opencog/libruleengine.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/include/opencog/rule-engine/UREConfig.h
+-- Installing: /usr/local/include/opencog/rule-engine/URECommons.h
+-- Installing: /usr/local/include/opencog/rule-engine/URELogger.h
+-- Installing: /usr/local/include/opencog/rule-engine/Rule.h
+-- Up-to-date: /usr/local/include/opencog/rule-engine/UREConfig.h
+-- Installing: /usr/local/include/opencog/rule-engine/forwardchainer/FCStat.h
+-- Installing: /usr/local/include/opencog/rule-engine/forwardchainer/ForwardChainer.h
+-- Installing: /usr/local/include/opencog/rule-engine/backwardchainer/BackwardChainer.h
+-- Installing: /usr/local/include/opencog/rule-engine/backwardchainer/TraceRecorder.h
+-- Installing: /usr/local/include/opencog/rule-engine/backwardchainer/ControlPolicy.h
+-- Installing: /usr/local/include/opencog/rule-engine/backwardchainer/MixtureModel.h
+-- Installing: /usr/local/include/opencog/rule-engine/backwardchainer/ActionSelection.h
+-- Installing: /usr/local/include/opencog/rule-engine/backwardchainer/BetaDistribution.h
+-- Installing: /usr/local/include/opencog/rule-engine/backwardchainer/BackwardChainerPMCB.h
+-- Installing: /usr/local/include/opencog/rule-engine/backwardchainer/BIT.h
+-- Installing: /usr/local/include/opencog/rule-engine/backwardchainer/Fitness.h
+-- Installing: /usr/local/lib/opencog/libtruthvalue.so
+-- Set runtime path of "/usr/local/lib/opencog/libtruthvalue.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/include/opencog/truthvalue/AttentionValue.h
+-- Installing: /usr/local/include/opencog/truthvalue/CountTruthValue.h
+-- Installing: /usr/local/include/opencog/truthvalue/FuzzyTruthValue.h
+-- Installing: /usr/local/include/opencog/truthvalue/IndefiniteTruthValue.h
+-- Installing: /usr/local/include/opencog/truthvalue/ProbabilisticTruthValue.h
+-- Installing: /usr/local/include/opencog/truthvalue/SimpleTruthValue.h
+-- Installing: /usr/local/include/opencog/truthvalue/EvidenceCountTruthValue.h
+-- Installing: /usr/local/include/opencog/truthvalue/TruthValue.h
+-- Installing: /usr/local/lib/opencog/libunify.so
+-- Set runtime path of "/usr/local/lib/opencog/libunify.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/include/opencog/unify/Unify.h
+-- Installing: /usr/local/lib/opencog/libsmob.so
+-- Set runtime path of "/usr/local/lib/opencog/libsmob.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/lib/opencog/liblogger.so
+-- Set runtime path of "/usr/local/lib/opencog/liblogger.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/lib/opencog/librandgen.so
+-- Set runtime path of "/usr/local/lib/opencog/librandgen.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/include/opencog/guile/SchemeEval.h
+-- Installing: /usr/local/include/opencog/guile/SchemeModule.h
+-- Installing: /usr/local/include/opencog/guile/SchemePrimitive.h
+-- Installing: /usr/local/include/opencog/guile/SchemeSmob.h
+-- Installing: /usr/local/share/opencog/scm/opencog.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/base/apply.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/base/atom-cache.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/base/av-tv.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/base/core-docs.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/base/debug-trace.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/base/file-utils.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/base/repl-shell.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/base/utilities.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/exec.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/extension.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/logger.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/randgen.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/persist.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/query.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/rule-engine.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/dist-gearman.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/persist-sql.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/python.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/persist-zmq.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/rule-engine/rule-engine-utils.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/matrix.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/matrix/bin-count.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/matrix/compute-mi.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/matrix/cosine.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/matrix/dynamic.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/matrix/entropy.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/matrix/filter.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/matrix/fold-api.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/matrix/loop-api.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/matrix/object-api.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/matrix/similarity-api.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/matrix/support.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/matrix/report-api.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/matrix/thresh-pca.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/sheaf.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/sheaf/make-section.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/sheaf/mst-parser.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/sheaf/sections.scm
+-- Installing: /usr/local/share/opencog/scm/opencog/sheaf/vo-graph.scm
+-- Installing: /usr/local/lib/opencog/libPythonEval.so
+-- Set runtime path of "/usr/local/lib/opencog/libPythonEval.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/include/opencog/cython/PythonEval.h
+-- Installing: /usr/local/include/opencog/cython/PyIncludeWrapper.h
+-- Installing: /usr/local/lib/opencog/libPythonSCM.so
+-- Set runtime path of "/usr/local/lib/opencog/libPythonSCM.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/include/opencog/cython/opencog/__init__.py
+-- Installing: /usr/local/include/opencog/cython/opencog/atomspace.pxd
+-- Installing: /usr/local/include/opencog/cython/opencog/Cast.h
+-- Installing: /usr/local/lib/python2.7/dist-packages/opencog/atomspace.so
+-- Set runtime path of "/usr/local/lib/python2.7/dist-packages/opencog/atomspace.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/lib/python2.7/dist-packages/opencog/bindlink.so
+-- Set runtime path of "/usr/local/lib/python2.7/dist-packages/opencog/bindlink.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/lib/python2.7/dist-packages/opencog/logger.so
+-- Set runtime path of "/usr/local/lib/python2.7/dist-packages/opencog/logger.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/lib/python2.7/dist-packages/opencog/type_constructors.so
+-- Set runtime path of "/usr/local/lib/python2.7/dist-packages/opencog/type_constructors.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/lib/python2.7/dist-packages/opencog/utilities.so
+-- Set runtime path of "/usr/local/lib/python2.7/dist-packages/opencog/utilities.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/lib/python2.7/dist-packages/opencog/scheme_wrapper.so
+-- Set runtime path of "/usr/local/lib/python2.7/dist-packages/opencog/scheme_wrapper.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
+-- Installing: /usr/local/lib/python2.7/dist-packages/opencog/__init__.py
+-- Installing: /usr/local/lib/opencog/libatomspace-cwrapper.so
+-- Set runtime path of "/usr/local/lib/opencog/libatomspace-cwrapper.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
++ DSTATUS=BUILDPASS
++ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1404/builds/9/log OpenCOG_U1404_AtomSpace
 Already up-to-date.
 ~/status/jobs ~/status
