@@ -52,7 +52,8 @@ do
     if egrep -q '\*\*\*(Failed|Exception)' "jobs/$JOBNAME.log" 
     then
         LM=$(grep 'tests passed' "jobs/$JOBNAME.log" | tail -1) 
-	LM=$(echo '['$LM'](#'$JOBNAME')')
+        ANCHOR=$(echo '#'$JOBNAME|tr A-Z a-z)
+	LM=$(echo '['$LM']('$ANCHOR')')
     else
         LM=$([ -e "jobs/$JOBNAME.log"       ] && grep 'tests passed' "jobs/$JOBNAME.log" | tail -1) 
     fi
