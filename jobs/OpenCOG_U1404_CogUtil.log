@@ -14,7 +14,7 @@ Checking out Revision 172b087603d4b43af643b59b1e9eea8d35c1dd5e (refs/remotes/ori
  > git checkout -f 172b087603d4b43af643b59b1e9eea8d35c1dd5e
 Commit message: "Merge pull request #2976 from leungmanhin/psi"
  > git rev-list --no-walk 172b087603d4b43af643b59b1e9eea8d35c1dd5e # timeout=10
-[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins1526259470170584147.sh
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins4124248899615541602.sh
 + pwd
 /var/lib/jenkins/workspace/OpenCOG_U1404
 + whoami
@@ -77,19 +77,19 @@ Successfully built ecbac339682c
 + CIDFILENAME=/tmp/OpenCOG_U1404.cid
 + [ -e /tmp/OpenCOG_U1404.cid ]
 + cat /tmp/OpenCOG_U1404.cid
-+ CID=f6b215e78ed60142146e043a196ff80ae1894a5412ae3872cb3b75f94f7b0a17
-+ docker container kill f6b215e78ed60142146e043a196ff80ae1894a5412ae3872cb3b75f94f7b0a17
-f6b215e78ed60142146e043a196ff80ae1894a5412ae3872cb3b75f94f7b0a17
-+ docker container rm f6b215e78ed60142146e043a196ff80ae1894a5412ae3872cb3b75f94f7b0a17
-f6b215e78ed60142146e043a196ff80ae1894a5412ae3872cb3b75f94f7b0a17
++ CID=d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e
++ docker container kill d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e
+d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e
++ docker container rm d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e
+d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e
 + rm -f /tmp/OpenCOG_U1404.cid
 + cd ..
 + pwd
 + docker run --cidfile /tmp/OpenCOG_U1404.cid -v /var/lib/jenkins/workspace/OpenCOG_U1404:/home/opencog/opencog -w /home/opencog -d edguy/ocdock:latest tail -f /dev/null
-d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e
+ece45b4d8f480b7435925b7ffb736b67496e621f2b97a8079c9d890fad27c673
 + cat /tmp/OpenCOG_U1404.cid
-+ CID=d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e
-+ DKRUN=docker exec d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e 
++ CID=ece45b4d8f480b7435925b7ffb736b67496e621f2b97a8079c9d890fad27c673
++ DKRUN=docker exec ece45b4d8f480b7435925b7ffb736b67496e621f2b97a8079c9d890fad27c673 
 + grep jenkins /etc/passwd
 + awk -F: {print $3}
 + UID=125
@@ -97,11 +97,11 @@ d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e
 + awk -F: {print $4}
 + GID=132
 + cat
-[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins3799158698127553878.sh
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins7632620998330039174.sh
 + . build.docker/docker.env
-+ CID=d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e
-+ DKRUNROOT=docker exec --user root   d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e
-+ DKRUNUSER=docker exec --user jenkins  d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e
++ CID=ece45b4d8f480b7435925b7ffb736b67496e621f2b97a8079c9d890fad27c673
++ DKRUNROOT=docker exec --user root   ece45b4d8f480b7435925b7ffb736b67496e621f2b97a8079c9d890fad27c673
++ DKRUNUSER=docker exec --user jenkins  ece45b4d8f480b7435925b7ffb736b67496e621f2b97a8079c9d890fad27c673
 + UID=125
 + GID=132
 + cat
@@ -119,11 +119,11 @@ d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e
 
 + echo **** 
 **** 
-+ echo ****  d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e
-****  d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e
++ echo ****  ece45b4d8f480b7435925b7ffb736b67496e621f2b97a8079c9d890fad27c673
+****  ece45b4d8f480b7435925b7ffb736b67496e621f2b97a8079c9d890fad27c673
 + test -e dependencies
-+ date
-+ mv dependencies dependencies.Wed Jan 17 15:42:25 EST 2018
++ date +%s
++ mv dependencies dependencies.1516222187
 + mkdir dependencies
 + rm -fr dependencies/atomspace
 + git clone git@github.com:opencog/atomspace.git dependencies/atomspace
@@ -148,16 +148,16 @@ Cloning into 'dependencies/moses'...
 **********************************************************
 
 + WDIR=opencog/dependencies/cogutil
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/34/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/35/log
 + cat
 + cat
 + chmod +x dependencies/job1
 + chmod +x dependencies/job2
-[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins3067246982481336560.sh
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins8106097099838641146.sh
 + . build.docker/docker.env
-+ CID=d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e
-+ DKRUNROOT=docker exec --user root   d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e
-+ DKRUNUSER=docker exec --user jenkins  d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e
++ CID=ece45b4d8f480b7435925b7ffb736b67496e621f2b97a8079c9d890fad27c673
++ DKRUNROOT=docker exec --user root   ece45b4d8f480b7435925b7ffb736b67496e621f2b97a8079c9d890fad27c673
++ DKRUNUSER=docker exec --user jenkins  ece45b4d8f480b7435925b7ffb736b67496e621f2b97a8079c9d890fad27c673
 + UID=125
 + GID=132
 + cat
@@ -174,12 +174,15 @@ Cloning into 'dependencies/moses'...
 **********************************************************
 
 + WDIR=opencog/dependencies/cogutil
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/34/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/35/log
 + cat
 + cat
 + chmod +x dependencies/job1
 + chmod +x dependencies/job2
-+ docker exec --user jenkins d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e bash opencog/dependencies/job1
++ docker exec --user jenkins ece45b4d8f480b7435925b7ffb736b67496e621f2b97a8079c9d890fad27c673 bash opencog/dependencies/job1
+/home/opencog
+octool
+opencog
 + pwd
 + ls
 + cd opencog/dependencies/cogutil
@@ -187,9 +190,6 @@ Cloning into 'dependencies/moses'...
 + mkdir build
 + cd build
 + cmake ..
-/home/opencog
-octool
-opencog
 -- The C compiler identification is GNU 4.8.4
 -- The CXX compiler identification is GNU 4.8.4
 -- Check for working C compiler: /usr/bin/cc
@@ -238,17 +238,17 @@ The following components WILL NOT be built:
 -- Build files have been written to: /home/opencog/opencog/dependencies/cogutil/build
 + make -j8
 Scanning dependencies of target cogutil
-[ 10%] [ 10%] [ 15%] [ 21%] [ 26%] [ 31%] [ 36%] [ 42%] Building C object opencog/util/CMakeFiles/cogutil.dir/backtrace-symbols.c.o
-Building CXX object opencog/util/CMakeFiles/cogutil.dir/ansi.cc.o
+[  5%] [ 21%] [ 21%] [ 21%] [ 26%] [ 31%] [ 36%] [ 42%] Building C object opencog/util/CMakeFiles/cogutil.dir/backtrace-symbols.c.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_normal_selector.cc.o
 Building C object opencog/util/CMakeFiles/cogutil.dir/cluster.c.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/files.cc.o
 Building CXX object opencog/util/CMakeFiles/cogutil.dir/Config.cc.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/ansi.cc.o
 Building CXX object opencog/util/CMakeFiles/cogutil.dir/exceptions.cc.o
 Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_random_selector.cc.o
-Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_normal_selector.cc.o
-Building CXX object opencog/util/CMakeFiles/cogutil.dir/files.cc.o
 [ 47%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_selector.cc.o
-[ 52%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/log_prog_name.cc.o
-[ 57%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/Logger.cc.o
+[ 52%] [ 57%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/Logger.cc.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/log_prog_name.cc.o
 [ 63%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/misc.cc.o
 [ 68%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/mt19937ar.cc.o
 [ 73%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/oc_assert.cc.o
@@ -260,7 +260,7 @@ Building CXX object opencog/util/CMakeFiles/cogutil.dir/files.cc.o
 Linking CXX shared library libcogutil.so
 [100%] Built target cogutil
 + DSTATUS=BUILDPASS
-+ docker exec --user root d60d7fe0ee681f5ae4cb9e2109080d45c77010932721c302e05e2c3403d1f01e bash opencog/dependencies/job2
++ docker exec --user root ece45b4d8f480b7435925b7ffb736b67496e621f2b97a8079c9d890fad27c673 bash opencog/dependencies/job2
 + cd opencog/dependencies/cogutil
 + cd build
 + make install
@@ -321,6 +321,6 @@ Install the project...
 -- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean.h
 -- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean_mirror.h
 + DSTATUS=BUILDPASS
-+ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1404/builds/34/log OpenCOG_U1404_CogUtil
++ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1404/builds/35/log OpenCOG_U1404_CogUtil
 Already up-to-date.
 ~/status/jobs ~/status
