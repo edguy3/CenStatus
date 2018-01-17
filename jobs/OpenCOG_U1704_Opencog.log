@@ -1,351 +1,50 @@
-Started by an SCM change
-Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1704
- > git rev-parse --is-inside-work-tree # timeout=10
-Fetching changes from the remote Git repository
- > git config remote.origin.url git@github.com:opencog/opencog.git # timeout=10
-Fetching upstream changes from git@github.com:opencog/opencog.git
- > git --version # timeout=10
-using GIT_SSH to set credentials 103jenk
- > git fetch --tags --progress git@github.com:opencog/opencog.git +refs/heads/*:refs/remotes/origin/*
- > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
- > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
-Checking out Revision 56a9612f54dc0eaca84c82787c00e27cd9c4f0a7 (refs/remotes/origin/master)
- > git config core.sparsecheckout # timeout=10
- > git checkout -f 56a9612f54dc0eaca84c82787c00e27cd9c4f0a7
-Commit message: "Merge pull request #2973 from linas/abrt"
- > git rev-list --no-walk c544225f5e1233e4820a89cd2319b54439ba6505 # timeout=10
-[OpenCOG_U1704] $ /bin/sh -xe /tmp/jenkins8732899574213521620.sh
-+ pwd
-/var/lib/jenkins/workspace/OpenCOG_U1704
-+ whoami
-jenkins
-+ rm -fr build.docker
-+ mkdir build.docker
-+ cd build.docker
-+ cp /home/edguy/OCDOCK/DOCKER.OpenCOG_U1704 docker.buildfile
-+ docker build -f docker.buildfile -t edguy/ocdock:latest .
-Sending build context to Docker daemon 3.584 kB
-Step 1/16 : FROM ubuntu:17.04
- ---> fe1cc5b91830
-Step 2/16 : MAINTAINER Ed Guy "edguy@eguy.org"
- ---> Using cache
- ---> db86ec96cacd
-Step 3/16 : ENV DEBIAN_FRONTEND noninteractive
- ---> Using cache
- ---> 7a0ef40772f2
-Step 4/16 : ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
- ---> Using cache
- ---> 488359484929
-Step 5/16 : RUN apt-get -y update
- ---> Using cache
- ---> 969141f67cc6
-Step 6/16 : RUN apt-get -y upgrade
- ---> Using cache
- ---> 2d1703fb1a7e
-Step 7/16 : RUN apt-get -y install screen telnet netcat-openbsd byobu wget vim unzip gcc g++ make sudo lsb-release net-tools dirmngr python-setuptools python-dev build-essential
- ---> Using cache
- ---> 5a8337496a0f
-Step 8/16 : RUN easy_install pip
- ---> Using cache
- ---> 8799e47fc0e3
-Step 9/16 : RUN apt-get -y install openjdk-8-jdk ant libcommons-logging-java
- ---> Using cache
- ---> f9afdffdcefc
-Step 10/16 : RUN test -e /usr/local/share/java || mkdir /usr/local/share/java
- ---> Using cache
- ---> 3b91e5e9816c
-Step 11/16 : WORKDIR /home/opencog
- ---> Using cache
- ---> f7bea930214b
-Step 12/16 : RUN wget http://raw.github.com/opencog/ocpkg/master/ocpkg -O octool && chmod +rx octool
- ---> Using cache
- ---> b782a415e4d8
-Step 13/16 : RUN ./octool -rdp
- ---> Using cache
- ---> d92978d6da44
-Step 14/16 : RUN useradd -ms /bin/bash  jenkins --uid 125
- ---> Using cache
- ---> 0a50a11ecbc8
-Step 15/16 : USER jenkins
- ---> Using cache
- ---> 964141c22c4c
-Step 16/16 : CMD tail -f /dev/null
- ---> Using cache
- ---> 128f81a0495f
-Successfully built 128f81a0495f
-+ echo ******  CID=
-******  CID=
-+ CIDFILENAME=/tmp/OpenCOG_U1704.cid
-+ cleanupDockerContainers /tmp/OpenCOG_U1704.cid
-+ CIDFILENAME=/tmp/OpenCOG_U1704.cid
-+ [ -e /tmp/OpenCOG_U1704.cid ]
-+ cat /tmp/OpenCOG_U1704.cid
-+ CID=da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
-+ docker container kill da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
-da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
-+ docker container rm da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
-da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
-+ rm -f /tmp/OpenCOG_U1704.cid
-+ cd ..
-+ pwd
-+ docker run --cidfile /tmp/OpenCOG_U1704.cid -v /var/lib/jenkins/workspace/OpenCOG_U1704:/home/opencog/opencog -w /home/opencog -d edguy/ocdock:latest tail -f /dev/null
-696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
-+ cat /tmp/OpenCOG_U1704.cid
-+ CID=696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
-+ DKRUN=docker exec 696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702 
-+ grep jenkins /etc/passwd
-+ awk -F: {print $3}
-+ UID=125
-+ grep jenkins /etc/passwd
-+ awk -F: {print $4}
-+ GID=132
-+ cat
-[OpenCOG_U1704] $ /bin/sh -xe /tmp/jenkins7649652968389253364.sh
-+ . build.docker/docker.env
+Started by upstream project "[8mha:////4IQFYGe8WbWo5oNJDJ6M381hL3c7goPidUIwVPoaXZGNAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3/gtQ8Z3/3+FBDcwMTfQDxmhqwyAAAAA==[0mOpenCOG_U1704" build number [8mha:////4JDPiDGQFPu9LcO0LMD0nfY6XdCwp1bhGAdUWCJ9W6tMAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBhH9rPwkff+C1Dxnf/f4UENzAxN9cwArtllyyQAAAA==[0m7
+originally caused by:
+ Started by an SCM change
+Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1704_Opencog
+[OpenCOG_U1704_Opencog] $ /bin/sh -xe /tmp/jenkins386876769795956552.sh
++ COGDIR=../OpenCOG_U1704
++ . ../OpenCOG_U1704/build.docker/docker.env
 + CID=696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
 + DKRUNROOT=docker exec --user root   696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
 + DKRUNUSER=docker exec --user jenkins  696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
 + UID=125
 + GID=132
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1704_Opencog/builds/4/log
 + cat
+
+
 **********************************************************
 **********************************************************
 **********************************************************
 **********************************************************
-*****
-*****  opencog Setup 
-*****
+*****                                                *****
+*****                  Opencog TEST                *****
+*****                                                *****
 **********************************************************
 **********************************************************
 **********************************************************
 **********************************************************
 
-+ echo **** 
-**** 
-+ echo ****  696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
-****  696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
-+ test -e dependencies
-+ rm -fr dependencies/atomspace
-+ git clone git@github.com:opencog/atomspace.git dependencies/atomspace
-Cloning into 'dependencies/atomspace'...
-+ rm -fr dependencies/cogutil
-+ git clone git@github.com:opencog/cogutil.git dependencies/cogutil
-Cloning into 'dependencies/cogutil'...
-+ rm -fr dependencies/moses
-+ git clone git@github.com:opencog/moses.git dependencies/moses
-Cloning into 'dependencies/moses'...
-[OpenCOG_U1704] $ /bin/sh -xe /tmp/jenkins4419507616921594817.sh
-+ . build.docker/docker.env
-+ CID=696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
-+ DKRUNROOT=docker exec --user root   696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
-+ DKRUNUSER=docker exec --user jenkins  696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
-+ UID=125
-+ GID=132
-+ cat
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-*****
-*****  cogutil
-*****
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
 
-+ WDIR=opencog/dependencies/cogutil
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1704/builds/7/log
-+ cat
-+ cat
-+ chmod +x dependencies/job1
-+ chmod +x dependencies/job2
-+ docker exec --user jenkins 696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702 bash opencog/dependencies/job1
-/home/opencog
-octool
-opencog
-+ pwd
-+ ls
-+ cd opencog/dependencies/cogutil
-+ rm -fr build
-+ mkdir build
-+ cd build
-+ cmake ..
-opencog/dependencies/job1: line 8: cmake: command not found
-+ make -j8
-make: *** No targets specified and no makefile found.  Stop.
-+ DSTATUS=BUILDFAIL
-+ docker exec --user root 696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702 bash opencog/dependencies/job2
-+ cd opencog/dependencies/cogutil
-+ cd build
-+ make install
-make: *** No rule to make target 'install'.  Stop.
-+ DSTATUS=INSTALLFAIL
-+ /var/lib/jenkins/status/updateStatus INSTALLFAIL /var/lib/jenkins/jobs/OpenCOG_U1704/builds/7/log OpenCOG_U1704_CogUtil
-Already up-to-date.
-~/status/jobs ~/status
-~/status
-[master 7f76ac5] OpenCOG_U1704_CogUtil INSTALLFAIL
- 2 files changed, 32 insertions(+), 32 deletions(-)
-To git@github.com:edguy3/CenStatus.git
-   cdbbc3d..7f76ac5  master -> master
-[OpenCOG_U1704] $ /bin/sh -xe /tmp/jenkins6733982930605712671.sh
-+ . build.docker/docker.env
-+ CID=696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
-+ DKRUNROOT=docker exec --user root   696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
-+ DKRUNUSER=docker exec --user jenkins  696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
-+ UID=125
-+ GID=132
-+ cat
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-*****
-*****  atomspace
-*****
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-
-+ WDIR=opencog/dependencies/atomspace
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1704/builds/7/log
-+ cat
-+ cat
-+ chmod +x dependencies/job1
-+ chmod +x dependencies/job2
-+ docker exec --user jenkins 696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702 bash opencog/dependencies/job1
-+ pwd
-+ ls
-+ cd opencog/dependencies/atomspace
-+ rm -fr build
-+ mkdir build
-+ cd build
-+ cmake ..
-opencog/dependencies/job1: line 8: cmake: command not found
-+ make -j8
-make: *** No targets specified and no makefile found.  Stop.
-/home/opencog
-octool
-opencog
-+ DSTATUS=BUILDFAIL
-+ docker exec --user root 696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702 bash opencog/dependencies/job2
-+ cd opencog/dependencies/atomspace
-+ cd build
-+ make install
-make: *** No rule to make target 'install'.  Stop.
-+ DSTATUS=INSTALLFAIL
-+ /var/lib/jenkins/status/updateStatus INSTALLFAIL /var/lib/jenkins/jobs/OpenCOG_U1704/builds/7/log OpenCOG_U1704_AtomSpace
-Already up-to-date.
-~/status/jobs ~/status
-~/status
-[master 181c42e] OpenCOG_U1704_AtomSpace INSTALLFAIL
- 2 files changed, 46 insertions(+), 47 deletions(-)
-To git@github.com:edguy3/CenStatus.git
-   7f76ac5..181c42e  master -> master
-[OpenCOG_U1704] $ /bin/sh -xe /tmp/jenkins7873328830602617815.sh
-+ . build.docker/docker.env
-+ CID=696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
-+ DKRUNROOT=docker exec --user root   696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
-+ DKRUNUSER=docker exec --user jenkins  696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
-+ UID=125
-+ GID=132
-+ cat
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-*****
-*****  MOSES
-*****
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-
-+ WDIR=opencog/dependencies/moses
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1704/builds/7/log
-+ cat
-+ cat
-+ chmod +x dependencies/job1
-+ chmod +x dependencies/job2
-+ docker exec --user jenkins 696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702 bash opencog/dependencies/job1
-/home/opencog
-octool
-opencog
-+ pwd
-+ ls
-+ cd opencog/dependencies/moses
-+ rm -fr build
-+ mkdir build
-+ cd build
-+ cmake -DCMAKE_BUILD_TYPE=Release ..
-opencog/dependencies/job1: line 8: cmake: command not found
-+ make -j8
-make: *** No targets specified and no makefile found.  Stop.
-+ DSTATUS=BUILDFAIL
-+ docker exec --user root 696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702 bash opencog/dependencies/job2
-+ cd opencog/dependencies/moses
-+ cd build
-+ make install
-make: *** No rule to make target 'install'.  Stop.
-+ DSTATUS=INSTALLFAIL
-+ /var/lib/jenkins/status/updateStatus INSTALLFAIL /var/lib/jenkins/jobs/OpenCOG_U1704/builds/7/log OpenCOG_U1704_Moses
-Already up-to-date.
-~/status/jobs ~/status
-~/status
-[master 73be021] OpenCOG_U1704_Moses INSTALLFAIL
- 2 files changed, 60 insertions(+), 62 deletions(-)
-To git@github.com:edguy3/CenStatus.git
-   181c42e..73be021  master -> master
-[OpenCOG_U1704] $ /bin/sh -xe /tmp/jenkins5939503531199316747.sh
-+ . build.docker/docker.env
-+ CID=696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
-+ DKRUNROOT=docker exec --user root   696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
-+ DKRUNUSER=docker exec --user jenkins  696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
-+ UID=125
-+ GID=132
-+ cat
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-*****
-*****  opencog
-*****
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-
++ echo GIT_COMMIT=
+GIT_COMMIT=
++ echo GIT_BRANCH=
+GIT_BRANCH=
++ echo GIT_URL=
+GIT_URL=
 + WDIR=opencog/
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1704/builds/7/log
++ JOBDIR=../OpenCOG_U1704/dependencies
 + cat
-+ cat
-+ chmod +x dependencies/job1
-+ chmod +x dependencies/job2
++ chmod +x ../OpenCOG_U1704/dependencies/job1
 + docker exec --user jenkins 696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702 bash opencog/dependencies/job1
-/home/opencog
-octool
-opencog
 + pwd
-+ ls
 + cd opencog/
-+ rm -fr build
-+ mkdir build
+/home/opencog
 + cd build
-+ cmake ..
-opencog/dependencies/job1: line 8: cmake: command not found
-+ make -j8
-make: *** No targets specified and no makefile found.  Stop.
-+ DSTATUS=BUILDFAIL
-+ docker exec --user root 696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702 bash opencog/dependencies/job2
-+ cd opencog/
-+ cd build
-+ make install
-make: *** No rule to make target 'install'.  Stop.
-+ DSTATUS=INSTALLFAIL
-+ /var/lib/jenkins/status/updateStatus INSTALLFAIL /var/lib/jenkins/jobs/OpenCOG_U1704/builds/7/log OpenCOG_U1704_Opencog
++ make -j8 test
+make: *** No rule to make target 'test'.  Stop.
++ DSTATUS=TESTFAIL
++ /var/lib/jenkins/status/updateStatus TESTFAIL /var/lib/jenkins/jobs/OpenCOG_U1704_Opencog/builds/4/log OpenCOG_U1704_Opencog
 Already up-to-date.
 ~/status/jobs ~/status
