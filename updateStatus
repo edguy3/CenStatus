@@ -69,10 +69,15 @@ ZZZ
 
 for JOBNAME in $JOBS
 do
-   echo >>README.md
-   echo -n '### ' $JOBNAME >>README.md
-   [ -e "jobs/$JOBNAME.log"       ] && egrep '(***Failed|***Exception)' "jobs/$JOBNAME.log" | tail -20 | pr -dt >>README.md
-   echo >>README.md
+   if egrep -q '(***Failed|***Exception)' "jobs/$JOBNAME.log" 
+   then
+       echo >>README.md
+       echo -n '### ' $JOBNAME >>README.md
+       echo '```' >>README.md
+       egrep '(***Failed|***Exception)' "jobs/$JOBNAME.log" | tail -20 | pr -dt >>README.md
+       echo '```' >>README.md
+       echo >>README.md
+   fi
 done
 
 cat >>README.md <<ZZZ4

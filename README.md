@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Tue Jan 16 21:45:56 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Tue Jan 16 21:48:50 EST 2018.
 
 ## Modules 
 
@@ -26,7 +26,7 @@ This file shows the status of public cen.ai tracked projects as of Tue Jan 16 21
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 21:43 |  | 21:21  | 21:43 |
 | [OpenCOG_U1604__Core_Build](jobs/OpenCOG_U1604__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 21:25  | 21:25 |
 | [OpenCOG_U1604_Moses](jobs/OpenCOG_U1604_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 21:43 |  | 21:24  | 21:43 |
-| [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 21:11 | 21:25  | 21:25 |
+| [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) | ![Status](/images/TESTFAIL.svg) | 76% tests passed, 6 tests failed out of 25 |  | 21:48 | 21:25  | 21:48 |
 | [OpenCOG_U1704_AtomSpace](jobs/OpenCOG_U1704_AtomSpace.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   | 21:18 |
 | [OpenCOG_U1704_CogUtil](jobs/OpenCOG_U1704_CogUtil.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   | 21:18 |
 | [OpenCOG_U1704__Core_Build](jobs/OpenCOG_U1704__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 21:18  | 21:18 |
@@ -38,27 +38,8 @@ This file shows the status of public cen.ai tracked projects as of Tue Jan 16 21
 ## Error Detail
 
 
-###  OpenCOG_DebOld_AtomSpace
-
-###  OpenCOG_DebOld_CogUtil
-
-###  OpenCOG_DebOld__Core_Build
-
-###  OpenCOG_DebOld_Moses
-
-###  OpenCOG_DebOld_Opencog
-
-###  OpenCOG_DebStab_AtomSpace
-
-###  OpenCOG_DebStab_CogUtil
-
-###  OpenCOG_DebStab__Core_Build
-
-###  OpenCOG_DebStab_Moses
-
-###  OpenCOG_DebStab_Opencog
-
-###  OpenCOG_U1404_AtomSpace[ 88%] Generating NoExceptionUTest.cpp
+###  OpenCOG_U1404_AtomSpace```
+[ 88%] Generating NoExceptionUTest.cpp
 
 Scanning dependencies of target NoExceptionUTest
 
@@ -90,15 +71,11 @@ Failed 2 and Skipped 0 of 15 tests
 
 	 41 - BasicSCMUTest (Failed)
 
+```
 
 
-###  OpenCOG_U1404_CogUtil
-
-###  OpenCOG_U1404__Core_Build
-
-###  OpenCOG_U1404_Moses
-
-###  OpenCOG_U1404_Opencog	6: exceptions.cc:150	  opencog::RuntimeException::RuntimeException(char const*, char const*, ...)
+###  OpenCOG_U1404_Opencog```
+	6: exceptions.cc:150	  opencog::RuntimeException::RuntimeException(char const*, char const*, ...)
 
 	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
 
@@ -138,9 +115,11 @@ Failed 7 and Skipped 0 of 8 tests
 
 	 14 - OpenPsiSCMUTest (Failed)
 
+```
 
 
-###  OpenCOG_U1604_AtomSpace[ 55%] Generating NoExceptionUTest.cpp
+###  OpenCOG_U1604_AtomSpace```
+[ 55%] Generating NoExceptionUTest.cpp
 
 Scanning dependencies of target NoExceptionUTest
 
@@ -172,25 +151,52 @@ Failed 2 and Skipped 0 of 15 tests
 
 	 41 - BasicSCMUTest (Failed)
 
+```
 
 
-###  OpenCOG_U1604_CogUtil
+###  OpenCOG_U1604_Opencog```
+	6: exceptions.cc:150	  opencog::RuntimeException::RuntimeException(char const*, char const*, ...)
 
-###  OpenCOG_U1604__Core_Build
+	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
 
-###  OpenCOG_U1604_Moses
+	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
 
-###  OpenCOG_U1604_Opencog
+	6: exceptions.cc:167	  opencog::SyntaxException::SyntaxException(char const*, char const*, ...)
 
-###  OpenCOG_U1704_AtomSpace
+	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
 
-###  OpenCOG_U1704_CogUtil
+	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
 
-###  OpenCOG_U1704__Core_Build
+	6: exceptions.cc:150	  opencog::RuntimeException::RuntimeException(char const*, char const*, ...)
 
-###  OpenCOG_U1704_Moses
+	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
 
-###  OpenCOG_U1704_Opencog
+	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+
+	6: exceptions.cc:167	  opencog::SyntaxException::SyntaxException(char const*, char const*, ...)
+
+	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
+
+	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+
+	6: exceptions.cc:150	  opencog::RuntimeException::RuntimeException(char const*, char const*, ...)
+
+	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
+
+	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+
+	6: exceptions.cc:167	  opencog::SyntaxException::SyntaxException(char const*, char const*, ...)
+
+Failed 7 and Skipped 0 of 8 tests
+
+	  8 - AnaphoraTest (Failed)
+
+	 12 - OpenPsiRulesUTest (Failed)
+
+	 14 - OpenPsiSCMUTest (Failed)
+
+```
+
 
 ## Contributors
 
