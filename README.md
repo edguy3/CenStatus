@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Tue Jan 16 21:48:50 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Tue Jan 16 21:50:26 EST 2018.
 
 ## Modules 
 
@@ -18,7 +18,7 @@ This file shows the status of public cen.ai tracked projects as of Tue Jan 16 21
 | [OpenCOG_DebStab_Moses](jobs/OpenCOG_DebStab_Moses.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   | 21:19 |
 | [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   | 21:19 |
 | [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | 98% tests passed, 2 tests failed out of 111 |  | 21:27 | 21:13  | 21:27 |
-| [OpenCOG_U1404_CogUtil](jobs/OpenCOG_U1404_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 21:33 |  | 21:12  | 21:33 |
+| [OpenCOG_U1404_CogUtil](jobs/OpenCOG_U1404_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 21:33 |  | 21:50  | 21:50 |
 | [OpenCOG_U1404__Core_Build](jobs/OpenCOG_U1404__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 21:16  | 21:16 |
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 21:33 |  | 21:15  | 21:33 |
 | [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/TESTFAIL.svg) | 80% tests passed, 5 tests failed out of 25 |  | 21:36 | 21:16  | 21:36 |
@@ -38,162 +38,52 @@ This file shows the status of public cen.ai tracked projects as of Tue Jan 16 21
 ## Error Detail
 
 
-###  OpenCOG_U1404_AtomSpace```
-[ 88%] Generating NoExceptionUTest.cpp
-
-Scanning dependencies of target NoExceptionUTest
-
-[ 88%] Building CXX object tests/query/CMakeFiles/NoExceptionUTest.dir/NoExceptionUTest.cpp.o
-
-Linking CXX executable NoExceptionUTest
-
-[ 97%] Built target NoExceptionUTest
-
+###  OpenCOG_U1404_AtomSpace
+```
  41/111 Test  #41: BasicSCMUTest ....................***Failed    0.19 sec
-
-/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:150: Error: Test failed: Failed to eval a UTF-8 string
-
-/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:155: Error: Test failed: Failed to eval a UTF-8 string
-
-/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:169: Error: Test failed: Failed to create a node
-
-/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:173: Error: Test failed: Failed to find handle
-
-/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:176: Error: Test failed: Failed to find node
-
-Failed 2 and Skipped 0 of 15 tests
-
-        Start  95: NoExceptionUTest
-
- 95/111 Test  #95: NoExceptionUTest .................   Passed    0.07 sec
 
 111/111 Test #111: CythonGuile ......................***Exception: SegFault  0.17 sec
 
-	 41 - BasicSCMUTest (Failed)
+```
+
+
+###  OpenCOG_U1404_Opencog
+```
+ 6/25 Test  #6: AtomOcTreeUTest ..................***Exception: SegFault  0.07 sec
+
+ 7/25 Test  #7: TimeSpaceAtomUTest ...............***Exception: SegFault  0.07 sec
+
+ 8/25 Test  #8: AnaphoraTest .....................***Failed    1.47 sec
+
+12/25 Test #12: OpenPsiRulesUTest ................***Failed    0.56 sec
+
+14/25 Test #14: OpenPsiSCMUTest ..................***Failed    9.07 sec
 
 ```
 
 
-###  OpenCOG_U1404_Opencog```
-	6: exceptions.cc:150	  opencog::RuntimeException::RuntimeException(char const*, char const*, ...)
-
-	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-
-	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
-
-	6: exceptions.cc:167	  opencog::SyntaxException::SyntaxException(char const*, char const*, ...)
-
-	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-
-	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
-
-	6: exceptions.cc:150	  opencog::RuntimeException::RuntimeException(char const*, char const*, ...)
-
-	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-
-	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
-
-	6: exceptions.cc:167	  opencog::SyntaxException::SyntaxException(char const*, char const*, ...)
-
-	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-
-	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
-
-	6: exceptions.cc:150	  opencog::RuntimeException::RuntimeException(char const*, char const*, ...)
-
-	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-
-	5: exceptions.cc:81	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
-
-	6: exceptions.cc:167	  opencog::SyntaxException::SyntaxException(char const*, char const*, ...)
-
-Failed 7 and Skipped 0 of 8 tests
-
-	  8 - AnaphoraTest (Failed)
-
-	 12 - OpenPsiRulesUTest (Failed)
-
-	 14 - OpenPsiSCMUTest (Failed)
-
+###  OpenCOG_U1604_AtomSpace
 ```
-
-
-###  OpenCOG_U1604_AtomSpace```
-[ 55%] Generating NoExceptionUTest.cpp
-
-Scanning dependencies of target NoExceptionUTest
-
-[ 55%] Building CXX object tests/query/CMakeFiles/NoExceptionUTest.dir/NoExceptionUTest.cpp.o
-
-[ 58%] Linking CXX executable NoExceptionUTest
-
-[ 58%] Built target NoExceptionUTest
-
  41/111 Test  #41: BasicSCMUTest ....................***Failed    0.17 sec
-
-/home/opencog/opencog/dependencies/atomspace/build/tests/scm/../../../tests/scm/BasicSCMUTest.cxxtest:150: Error: Test failed: Failed to eval a UTF-8 string
-
-/home/opencog/opencog/dependencies/atomspace/build/tests/scm/../../../tests/scm/BasicSCMUTest.cxxtest:155: Error: Test failed: Failed to eval a UTF-8 string
-
-/home/opencog/opencog/dependencies/atomspace/build/tests/scm/../../../tests/scm/BasicSCMUTest.cxxtest:169: Error: Test failed: Failed to create a node
-
-/home/opencog/opencog/dependencies/atomspace/build/tests/scm/../../../tests/scm/BasicSCMUTest.cxxtest:173: Error: Test failed: Failed to find handle
-
-/home/opencog/opencog/dependencies/atomspace/build/tests/scm/../../../tests/scm/BasicSCMUTest.cxxtest:176: Error: Test failed: Failed to find node
-
-Failed 2 and Skipped 0 of 15 tests
-
-        Start  95: NoExceptionUTest
-
- 95/111 Test  #95: NoExceptionUTest .................   Passed    0.07 sec
 
 111/111 Test #111: CythonGuile ......................***Exception: SegFault  0.21 sec
 
-	 41 - BasicSCMUTest (Failed)
-
 ```
 
 
-###  OpenCOG_U1604_Opencog```
-	6: exceptions.cc:150	  opencog::RuntimeException::RuntimeException(char const*, char const*, ...)
+###  OpenCOG_U1604_Opencog
+```
+ 2/25 Test  #2: AtomSpacePublisherModuleUTest ....***Exception: Other  5.14 sec
 
-	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
+ 6/25 Test  #6: AtomOcTreeUTest ..................***Exception: SegFault  0.07 sec
 
-	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
+ 7/25 Test  #7: TimeSpaceAtomUTest ...............***Exception: SegFault  0.07 sec
 
-	6: exceptions.cc:167	  opencog::SyntaxException::SyntaxException(char const*, char const*, ...)
+ 8/25 Test  #8: AnaphoraTest .....................***Failed    1.22 sec
 
-	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
+12/25 Test #12: OpenPsiRulesUTest ................***Failed    0.49 sec
 
-	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
-
-	6: exceptions.cc:150	  opencog::RuntimeException::RuntimeException(char const*, char const*, ...)
-
-	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-
-	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
-
-	6: exceptions.cc:167	  opencog::SyntaxException::SyntaxException(char const*, char const*, ...)
-
-	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-
-	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
-
-	6: exceptions.cc:150	  opencog::RuntimeException::RuntimeException(char const*, char const*, ...)
-
-	4: exceptions.cc:55	  opencog::StandardException::parse_error_message(char const*, __va_list_tag*, bool)
-
-	5: exceptions.cc:82	  opencog::StandardException::parse_error_message(char const*, char const*, __va_list_tag*, bool)
-
-	6: exceptions.cc:167	  opencog::SyntaxException::SyntaxException(char const*, char const*, ...)
-
-Failed 7 and Skipped 0 of 8 tests
-
-	  8 - AnaphoraTest (Failed)
-
-	 12 - OpenPsiRulesUTest (Failed)
-
-	 14 - OpenPsiSCMUTest (Failed)
+14/25 Test #14: OpenPsiSCMUTest ..................***Failed    8.84 sec
 
 ```
 

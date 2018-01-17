@@ -72,9 +72,9 @@ do
    if egrep -q '(***Failed|***Exception)' "jobs/$JOBNAME.log" 
    then
        echo >>README.md
-       echo -n '### ' $JOBNAME >>README.md
+       echo '### ' $JOBNAME >>README.md
        echo '```' >>README.md
-       egrep '(***Failed|***Exception)' "jobs/$JOBNAME.log" | tail -20 | pr -dt >>README.md
+       egrep '\*\*\*(Failed|Exception)' "jobs/$JOBNAME.log" | tail -20 | pr -dt >>README.md
        echo '```' >>README.md
        echo >>README.md
    fi
