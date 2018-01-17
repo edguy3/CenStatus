@@ -57,9 +57,6 @@ do
     else
         LM=$([ -e "jobs/$JOBNAME.log"       ] && grep 'tests passed' "jobs/$JOBNAME.log" | tail -1) 
     fi
-
-https://github.com/edguy3/CenStatus#opencog_u1404_atomspace
-
     # print
 cat >>README.md<<YYY
 | $LF | ![Status]($MF) | $LM | $TP | $TF | $BP  | $BD |

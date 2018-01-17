@@ -1,6 +1,6 @@
 Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
 Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1404_CogUtil
-[OpenCOG_U1404_CogUtil] $ /bin/sh -xe /tmp/jenkins8792379681799122296.sh
+[OpenCOG_U1404_CogUtil] $ /bin/sh -xe /tmp/jenkins9089547170763616807.sh
 + COGDIR=../OpenCOG_U1404
 + . ../OpenCOG_U1404/build.docker/docker.env
 + CID=db6cb0ec491ecd7da84e786672904e3b181ba8211136e778141e153c78e5e337
@@ -8,7 +8,7 @@ Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1404_CogUtil
 + DKRUNUSER=docker exec --user jenkins  db6cb0ec491ecd7da84e786672904e3b181ba8211136e778141e153c78e5e337
 + UID=125
 + GID=132
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404_CogUtil/builds/11/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404_CogUtil/builds/12/log
 + cat
 
 
@@ -42,25 +42,25 @@ GIT_URL=
 + make -j8 test
 /home/opencog
 [ 43%] Built target cogutil
-[ 65%] [ 65%] [ 65%] [ 65%] [ 72%] [ 75%] [ 75%] [ 79%] Built target LoggerUTest
-Built target rankingUTest
-Built target ConfigUTest
-Built target lazy_selectorUTest
+[ 50%] [ 52%] [ 56%] [ 61%] [ 65%] Built target LoggerUTest
 Built target StringTokenizerUTest
-Built target iostreamContainerUTest
+[ 70%] Built target rankingUTest
+[ 75%] Built target functionalUTest
 Built target lru_cacheUTest
-Built target functionalUTest
-[ 88%] [ 88%] [ 93%] Built target CounterUTest
+Built target ConfigUTest
+Built target iostreamContainerUTest
+[ 79%] Built target lazy_selectorUTest
+[ 84%] [ 88%] Built target KLDUTest
 Built target randomUTest
-[ 97%] Built target comprehensionUTest
-Built target KLDUTest
+[ 93%] Built target comprehensionUTest
+[ 97%] Built target CounterUTest
 [ 97%] Built target tests
 [100%] Running tests...
 Test project /home/opencog/opencog/dependencies/cogutil/build/tests
       Start  1: ConfigUTest
- 1/12 Test  #1: ConfigUTest ......................   Passed    0.00 sec
+ 1/12 Test  #1: ConfigUTest ......................   Passed    0.01 sec
       Start  2: LoggerUTest
- 2/12 Test  #2: LoggerUTest ......................   Passed    0.20 sec
+ 2/12 Test  #2: LoggerUTest ......................   Passed    0.17 sec
       Start  3: StringTokenizerUTest
  3/12 Test  #3: StringTokenizerUTest .............   Passed    0.01 sec
       Start  4: lazy_selectorUTest
@@ -72,9 +72,9 @@ Test project /home/opencog/opencog/dependencies/cogutil/build/tests
       Start  7: functionalUTest
  7/12 Test  #7: functionalUTest ..................   Passed    0.00 sec
       Start  8: KLDUTest
- 8/12 Test  #8: KLDUTest .........................   Passed    3.40 sec
+ 8/12 Test  #8: KLDUTest .........................   Passed    3.38 sec
       Start  9: randomUTest
- 9/12 Test  #9: randomUTest ......................   Passed    1.34 sec
+ 9/12 Test  #9: randomUTest ......................   Passed    1.35 sec
       Start 10: comprehensionUTest
 10/12 Test #10: comprehensionUTest ...............   Passed    0.00 sec
       Start 11: CounterUTest
@@ -84,9 +84,9 @@ Test project /home/opencog/opencog/dependencies/cogutil/build/tests
 
 100% tests passed, 0 tests failed out of 12
 
-Total Test time (real) =   5.01 sec
+Total Test time (real) =   4.97 sec
 [100%] Built target test
 + DSTATUS=TESTPASS
-+ /var/lib/jenkins/status/updateStatus TESTPASS /var/lib/jenkins/jobs/OpenCOG_U1404_CogUtil/builds/11/log OpenCOG_U1404_CogUtil
++ /var/lib/jenkins/status/updateStatus TESTPASS /var/lib/jenkins/jobs/OpenCOG_U1404_CogUtil/builds/12/log OpenCOG_U1404_CogUtil
 Already up-to-date.
 ~/status/jobs ~/status
