@@ -65,11 +65,15 @@ cat >>README.md <<ZZZ
 
 ## Error Detail
 
+ZZZ
+
 for JOBNAME in $JOBS
 do
    echo -n '### ' $JOBNAME
    [ -e "jobs/$JOBNAME.log"       ] && egrep '***(Failed|Exception)' "jobs/$JOBNAME.log" | tail -20 | pr -dt
 done
+
+cat >>README.md <<ZZZ4
 
 ## Contributors
 
@@ -79,7 +83,7 @@ Ed Guy.
 
 MIT license. 
 
-ZZZ
+ZZZ4
 
 git commit -am "${JOB_BASE_NAME} $DSTATUS "
 git push
