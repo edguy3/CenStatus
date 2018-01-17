@@ -14,7 +14,7 @@ Checking out Revision 172b087603d4b43af643b59b1e9eea8d35c1dd5e (refs/remotes/ori
  > git checkout -f 172b087603d4b43af643b59b1e9eea8d35c1dd5e
 Commit message: "Merge pull request #2976 from leungmanhin/psi"
  > git rev-list --no-walk 172b087603d4b43af643b59b1e9eea8d35c1dd5e # timeout=10
-[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins5862647387833864866.sh
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins5956463374177127699.sh
 + pwd
 /var/lib/jenkins/workspace/OpenCOG_U1404
 + whoami
@@ -77,19 +77,19 @@ Successfully built ecbac339682c
 + CIDFILENAME=/tmp/OpenCOG_U1404.cid
 + [ -e /tmp/OpenCOG_U1404.cid ]
 + cat /tmp/OpenCOG_U1404.cid
-+ CID=ece45b4d8f480b7435925b7ffb736b67496e621f2b97a8079c9d890fad27c673
-+ docker container kill ece45b4d8f480b7435925b7ffb736b67496e621f2b97a8079c9d890fad27c673
-ece45b4d8f480b7435925b7ffb736b67496e621f2b97a8079c9d890fad27c673
-+ docker container rm ece45b4d8f480b7435925b7ffb736b67496e621f2b97a8079c9d890fad27c673
-ece45b4d8f480b7435925b7ffb736b67496e621f2b97a8079c9d890fad27c673
++ CID=f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
++ docker container kill f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
+f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
++ docker container rm f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
+f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
 + rm -f /tmp/OpenCOG_U1404.cid
 + cd ..
 + pwd
 + docker run --cidfile /tmp/OpenCOG_U1404.cid -v /var/lib/jenkins/workspace/OpenCOG_U1404:/home/opencog/opencog -w /home/opencog -d edguy/ocdock:latest tail -f /dev/null
-f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
+ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64
 + cat /tmp/OpenCOG_U1404.cid
-+ CID=f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
-+ DKRUN=docker exec f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574 
++ CID=ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64
++ DKRUN=docker exec ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64 
 + grep jenkins /etc/passwd
 + awk -F: {print $3}
 + UID=125
@@ -97,11 +97,11 @@ f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
 + awk -F: {print $4}
 + GID=132
 + cat
-[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins7288994064342030261.sh
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins7313512976256786114.sh
 + . build.docker/docker.env
-+ CID=f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
-+ DKRUNROOT=docker exec --user root   f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
-+ DKRUNUSER=docker exec --user jenkins  f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
++ CID=ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64
++ DKRUNROOT=docker exec --user root   ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64
++ DKRUNUSER=docker exec --user jenkins  ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64
 + UID=125
 + GID=132
 + cat
@@ -119,11 +119,11 @@ f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
 
 + echo **** 
 **** 
-+ echo ****  f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
-****  f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
++ echo ****  ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64
+****  ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64
 + test -e dependencies
 + date +%s
-+ mv dependencies dependencies.1516222452
++ mv dependencies dependencies.1516222921
 + mkdir dependencies
 + rm -fr dependencies/atomspace
 + git clone git@github.com:opencog/atomspace.git dependencies/atomspace
@@ -148,16 +148,16 @@ Cloning into 'dependencies/moses'...
 **********************************************************
 
 + WDIR=opencog/dependencies/cogutil
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/36/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/37/log
 + cat
 + cat
 + chmod +x dependencies/job1
 + chmod +x dependencies/job2
-[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins4774263774148127121.sh
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins780819789840904756.sh
 + . build.docker/docker.env
-+ CID=f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
-+ DKRUNROOT=docker exec --user root   f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
-+ DKRUNUSER=docker exec --user jenkins  f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
++ CID=ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64
++ DKRUNROOT=docker exec --user root   ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64
++ DKRUNUSER=docker exec --user jenkins  ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64
 + UID=125
 + GID=132
 + cat
@@ -174,15 +174,12 @@ Cloning into 'dependencies/moses'...
 **********************************************************
 
 + WDIR=opencog/dependencies/cogutil
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/36/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/37/log
 + cat
 + cat
 + chmod +x dependencies/job1
 + chmod +x dependencies/job2
-+ docker exec --user jenkins f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574 bash opencog/dependencies/job1
-/home/opencog
-octool
-opencog
++ docker exec --user jenkins ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64 bash opencog/dependencies/job1
 + pwd
 + ls
 + cd opencog/dependencies/cogutil
@@ -190,6 +187,9 @@ opencog
 + mkdir build
 + cd build
 + cmake ..
+/home/opencog
+octool
+opencog
 -- The C compiler identification is GNU 4.8.4
 -- The CXX compiler identification is GNU 4.8.4
 -- Check for working C compiler: /usr/bin/cc
@@ -238,17 +238,17 @@ The following components WILL NOT be built:
 -- Build files have been written to: /home/opencog/opencog/dependencies/cogutil/build
 + make -j8
 Scanning dependencies of target cogutil
-[ 21%] [ 21%] [ 21%] [ 21%] [ 26%] [ 31%] [ 36%] [ 42%] Building C object opencog/util/CMakeFiles/cogutil.dir/backtrace-symbols.c.o
+[ 10%] [ 10%] [ 15%] [ 21%] [ 26%] [ 31%] [ 36%] [ 42%] Building C object opencog/util/CMakeFiles/cogutil.dir/backtrace-symbols.c.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/Config.cc.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/ansi.cc.o
 Building C object opencog/util/CMakeFiles/cogutil.dir/cluster.c.o
 Building CXX object opencog/util/CMakeFiles/cogutil.dir/exceptions.cc.o
-Building CXX object opencog/util/CMakeFiles/cogutil.dir/Config.cc.o
-Building CXX object opencog/util/CMakeFiles/cogutil.dir/files.cc.o
-Building CXX object opencog/util/CMakeFiles/cogutil.dir/ansi.cc.o
 Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_normal_selector.cc.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/files.cc.o
 Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_random_selector.cc.o
 [ 47%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_selector.cc.o
-[ 52%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/log_prog_name.cc.o
-[ 57%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/Logger.cc.o
+[ 52%] [ 57%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/Logger.cc.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/log_prog_name.cc.o
 [ 63%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/misc.cc.o
 [ 68%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/mt19937ar.cc.o
 [ 73%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/oc_assert.cc.o
@@ -260,7 +260,7 @@ Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_random_selector.cc.
 Linking CXX shared library libcogutil.so
 [100%] Built target cogutil
 + DSTATUS=BUILDPASS
-+ docker exec --user root f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574 bash opencog/dependencies/job2
++ docker exec --user root ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64 bash opencog/dependencies/job2
 + cd opencog/dependencies/cogutil
 + cd build
 + make install
@@ -321,26 +321,27 @@ Install the project...
 -- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean.h
 -- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean_mirror.h
 + DSTATUS=BUILDPASS
-+ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1404/builds/36/log OpenCOG_U1404_CogUtil
++ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1404/builds/37/log OpenCOG_U1404_CogUtil
 Already up-to-date.
 ~/status/jobs ~/status
 ~/status
-[master e9961ef] OpenCOG_U1404_CogUtil BUILDPASS
- 2 files changed, 33 insertions(+), 33 deletions(-)
+[master 86671b2] OpenCOG_U1404_CogUtil BUILDPASS
+ 3 files changed, 329 insertions(+), 145 deletions(-)
+ rewrite jobs/OpenCOG_U1404_CogUtil.log (84%)
 To git@github.com:edguy3/CenStatus.git
-   824bf39..e9961ef  master -> master
+   06717f4..86671b2  master -> master
 + echo DSTATUS is BUILDPASS
 DSTATUS is BUILDPASS
 + [ BUILDPASS = BUILDPASS ]
-+ curl --insecure --netrc https://10.0.0.103:8480/job/OpenCOG_U1404_CogUtil/build
++ curl -X POST --insecure --netrc https://10.0.0.103:8480/job/OpenCOG_U1404_CogUtil/build
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  7180  100  7180    0     0  97468      0 --:--:-- --:--:-- --:--:-- 98356
-[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins4438938453634822078.sh
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins1154473277493844767.sh
 + . build.docker/docker.env
-+ CID=f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
-+ DKRUNROOT=docker exec --user root   f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
-+ DKRUNUSER=docker exec --user jenkins  f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574
++ CID=ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64
++ DKRUNROOT=docker exec --user root   ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64
++ DKRUNUSER=docker exec --user jenkins  ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64
 + UID=125
 + GID=132
 + cat
@@ -357,12 +358,12 @@ DSTATUS is BUILDPASS
 **********************************************************
 
 + WDIR=opencog/dependencies/atomspace
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/36/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/37/log
 + cat
 + cat
 + chmod +x dependencies/job1
 + chmod +x dependencies/job2
-+ docker exec --user jenkins f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574 bash opencog/dependencies/job1
++ docker exec --user jenkins ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64 bash opencog/dependencies/job1
 /home/opencog
 octool
 opencog
@@ -467,12 +468,12 @@ The following components WILL NOT be built:
 -- Build files have been written to: /home/opencog/opencog/dependencies/atomspace/build
 + make -j8
 [  0%] Scanning dependencies of target opencog_atom_types
-Scanning dependencies of target persist-odbc
 Scanning dependencies of target persist-pg
+Scanning dependencies of target persist-odbc
 Cythonizing logger.pyx
-[  2%] [  2%] [  2%] Generating opencog types
+[  2%] Generating opencog types
+[  2%] [  2%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-pg.dir/ll-pg-cxx.cc.o
 Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-odbc.dir/odbcxx.cc.o
-Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-pg.dir/ll-pg-cxx.cc.o
 -- Atom type name: Notype Notype
 -- Atom type name: Value Value
 -- Atom type name: FloatValue FloatValue
@@ -561,18 +562,18 @@ Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-pg.dir/l
 -- Atom type name: ExtensionalImplicationLink ExtensionalImplication
 -- Atom type name: EquivalenceLink Equivalence
 -- Atom type name: IntensionalEquivalenceLink IntensionalEquivalence
+Scanning dependencies of target logger_cython
 -- Atom type name: ExtensionalEquivalenceLink ExtensionalEquivalence
 -- Atom type name: AssociativeLink Associative
 -- Atom type name: AttractionLink Attraction
--- Atom type name: EvaluationLink Evaluation
-Scanning dependencies of target logger_cython
+[  2%] -- Atom type name: EvaluationLink Evaluation
 -- Atom type name: ExecutionLink Execution
 -- Atom type name: ProcedureNode Procedure
+Building CXX object opencog/cython/opencog/CMakeFiles/logger_cython.dir/logger.cpp.o
 -- Atom type name: GroundedProcedureNode GroundedProcedure
 -- Atom type name: SchemaNode Schema
-[  2%] -- Atom type name: DefinedSchemaNode DefinedSchema
+-- Atom type name: DefinedSchemaNode DefinedSchema
 -- Atom type name: GroundedSchemaNode GroundedSchema
-Building CXX object opencog/cython/opencog/CMakeFiles/logger_cython.dir/logger.cpp.o
 -- Atom type name: PredicateNode Predicate
 -- Atom type name: DefinedPredicateNode DefinedPredicate
 -- Atom type name: GroundedPredicateNode GroundedPredicate
@@ -617,11 +618,11 @@ Building CXX object opencog/cython/opencog/CMakeFiles/logger_cython.dir/logger.c
 -- Atom type name: Section Section
 [  2%] Built target opencog_atom_types
 Scanning dependencies of target truthvalue
-[  2%] [  2%] [  4%] [  4%] [  6%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/FuzzyTruthValue.cc.o
-Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/IndefiniteTruthValue.cc.o
-Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/CountTruthValue.cc.o
-Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/EvidenceCountTruthValue.cc.o
+[  4%] [  4%] [  4%] [  4%] [  6%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/CountTruthValue.cc.o
 Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/AttentionValue.cc.o
+Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/FuzzyTruthValue.cc.o
+Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/EvidenceCountTruthValue.cc.o
+Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/IndefiniteTruthValue.cc.o
 Linking CXX shared library libpersist-pg.so
 [  6%] Built target persist-pg
 [  6%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/ProbabilisticTruthValue.cc.o
@@ -634,44 +635,44 @@ Linking CXX shared library logger.so
 Linking CXX shared library libtruthvalue.so
 [  6%] Built target truthvalue
 Scanning dependencies of target atombase
-[  6%] [  6%] [  9%] [  9%] [  9%] [  9%] [ 11%] [ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Atom.cc.o
+[  6%] [  6%] [  6%] [  9%] [  9%] [  9%] [ 11%] [ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/ClassServer.cc.o
+Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Atom.cc.o
 Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/atom_types_init.cc.o
 Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Handle.cc.o
-Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/LinkValue.cc.o
-Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Link.cc.o
-Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/ClassServer.cc.o
 Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/FloatValue.cc.o
 Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Node.cc.o
+Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Link.cc.o
+Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/LinkValue.cc.o
 [ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/StringValue.cc.o
 [ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Valuation.cc.o
 Linking CXX shared library libatombase.so
 [ 11%] Built target atombase
 Scanning dependencies of target attentionbank
 Scanning dependencies of target atomutils
-[ 11%] [ 13%] [ 13%] [ 13%] [ 13%] [ 15%] [ 18%] [ 18%] Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AtomBins.cc.o
-Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FindUtils.cc.o
+[ 13%] [ 13%] [ 13%] [ 15%] [ 15%] [ 15%] [ 15%] [ 15%] Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AVUtils.cc.o
+Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/ImportanceIndex.cc.o
 Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FuzzyMatch.cc.o
+Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AtomBins.cc.o
 Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AttentionBank.cc.o
 Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/AtomUtils.cc.o
-Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FuzzyMatchBasic.cc.o
-Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/Neighbors.cc.o
-Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AVUtils.cc.o
-[ 18%] Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/ImportanceIndex.cc.o
-[ 18%] Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/StochasticImportanceDiffusion.cc.o
+Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FindUtils.cc.o
+Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/StochasticImportanceDiffusion.cc.o
+[ 15%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FuzzyMatchBasic.cc.o
+[ 18%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/Neighbors.cc.o
 [ 18%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/TypeUtils.cc.o
 Linking CXX shared library libattentionbank.so
 [ 18%] Built target attentionbank
 Linking CXX shared library libatomutils.so
 [ 18%] Built target atomutils
 Scanning dependencies of target atomcore
-[ 20%] [ 20%] [ 20%] [ 20%] [ 22%] [ 22%] [ 22%] [ 22%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ArityLink.cc.o
-Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/Checkers.cc.o
-Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/Context.cc.o
-Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ComposeLink.cc.o
+[ 20%] [ 20%] [ 20%] [ 20%] [ 22%] [ 22%] [ 22%] [ 22%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/Checkers.cc.o
 Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/DefineLink.cc.o
-Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/FreeLink.cc.o
+Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ComposeLink.cc.o
+Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ArityLink.cc.o
+Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/Context.cc.o
 Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/DeleteLink.cc.o
 Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/FunctionLink.cc.o
+Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/FreeLink.cc.o
 [ 25%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ImplicationScopeLink.cc.o
 [ 25%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/LambdaLink.cc.o
 [ 25%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/NumberNode.cc.o
@@ -696,13 +697,13 @@ Linking CXX shared library libatomcore.so
 [ 36%] Built target atomcore
 Scanning dependencies of target clearbox
 Scanning dependencies of target atomspace
-[ 36%] [ 38%] [ 38%] [ 38%] [ 40%] [ 40%] [ 40%] [ 40%] Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/PlusLink.cc.o
-Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/ArithmeticLink.cc.o
+[ 36%] [ 36%] [ 38%] [ 38%] [ 38%] [ 38%] [ 40%] Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/ArithmeticLink.cc.o
+[ 40%] Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/MinusLink.cc.o
 Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/DivideLink.cc.o
-Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/TimesLink.cc.o
 Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/FoldLink.cc.o
-Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/MinusLink.cc.o
 Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/AtomSpace.cc.o
+Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/PlusLink.cc.o
+Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/TimesLink.cc.o
 Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/AtomSpaceInit.cc.o
 [ 40%] Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/AtomTable.cc.o
 [ 43%] Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/BackingStore.cc.o
@@ -713,136 +714,136 @@ Linking CXX shared library libclearbox.so
 Linking CXX shared library libatomspace.so
 [ 43%] Built target atomspace
 [ 45%] Cythonizing type_constructors.pyx
-Scanning dependencies of target lambda
 Scanning dependencies of target atomspaceutils
-[ 45%] [ 47%] [ 47%] [ 47%] [ 50%] [ 50%] Scanning dependencies of target sql-support
+Scanning dependencies of target lambda
+[ 45%] [ 45%] Scanning dependencies of target sql-support
+[ 45%] [ 47%] Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/AtomSpaceUtils.cc.o
+Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/RandomAtomGenerator.cc.o
+Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/TLB.cc.o
 Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/BindLink.cc.o
-Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/PatternTerm.cc.o
-Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/AtomSpaceUtils.cc.o
-Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/DualLink.cc.o
+[ 47%] [ 47%] [ 47%] Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/DualLink.cc.o
 Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/PatternLink.cc.o
-[ 50%] Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/PatternUtils.cc.o
 Building CXX object opencog/persist/sql/CMakeFiles/sql-support.dir/AtomStorage.cc.o
 Scanning dependencies of target type_constructors
-[ 50%] Building CXX object opencog/cython/opencog/CMakeFiles/type_constructors.dir/type_constructors.cpp.o
-[ 52%] Building CXX object opencog/persist/sql/CMakeFiles/sql-support.dir/SQLBackingStore.cc.o
-[ 52%] Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/RandomAtomGenerator.cc.o
-[ 52%] Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/TLB.cc.o
-Linking CXX shared library libsql-support.so
-[ 52%] Built target sql-support
+[ 47%] Building CXX object opencog/cython/opencog/CMakeFiles/type_constructors.dir/type_constructors.cpp.o
+[ 50%] Building CXX object opencog/persist/sql/CMakeFiles/sql-support.dir/SQLBackingStore.cc.o
+[ 50%] Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/PatternTerm.cc.o
+[ 52%] Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/PatternUtils.cc.o
 Linking CXX shared library libatomspaceutils.so
 [ 52%] Built target atomspaceutils
 [ 52%] Cythonizing atomspace.pyx
-Linking CXX shared library liblambda.so
+Scanning dependencies of target atomspace_cython
+[ 52%] [ 54%] Building CXX object opencog/cython/opencog/CMakeFiles/atomspace_cython.dir/Cast.cc.o
+Building CXX object opencog/cython/opencog/CMakeFiles/atomspace_cython.dir/atomspace.cpp.o
+Linking CXX shared library libsql-support.so
+[ 54%] Built target sql-support
 Linking CXX shared library type_constructors.so
-[ 52%] Built target lambda
+[ 54%] Built target type_constructors
+Linking CXX shared library liblambda.so
+[ 54%] Built target lambda
 Scanning dependencies of target unify
-[ 52%] Building CXX object opencog/unify/CMakeFiles/unify.dir/Unify.cc.o
-[ 52%] Built target type_constructors
+[ 54%] Building CXX object opencog/unify/CMakeFiles/unify.dir/Unify.cc.o
 Scanning dependencies of target smob
-[ 52%] [ 54%] [ 54%] [ 54%] [ 54%] [ 54%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeModule.cc.o
+[ 54%] [ 54%] [ 54%] [ 56%] [ 56%] [ 56%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeModule.cc.o
 Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeEval.cc.o
+Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemePrimitive.cc.o
+Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAF.cc.o
 Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAtom.cc.o
 Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmob.cc.o
-Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAF.cc.o
-Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemePrimitive.cc.o
-Scanning dependencies of target atomspace_cython
-[ 54%] Building CXX object opencog/cython/opencog/CMakeFiles/atomspace_cython.dir/Cast.cc.o
-[ 56%] Building CXX object opencog/cython/opencog/CMakeFiles/atomspace_cython.dir/atomspace.cpp.o
-[ 56%] [ 59%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAV.cc.o
-Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAS.cc.o
+[ 56%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAS.cc.o
+[ 59%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAV.cc.o
 [ 59%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobGC.cc.o
 [ 59%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobNew.cc.o
 [ 59%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobTV.cc.o
+Linking CXX shared library atomspace.so
+[ 59%] Built target atomspace_cython
 [ 61%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobValue.cc.o
 [ 61%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobLogger.cc.o
-Linking CXX shared library libunify.so
-[ 61%] Built target unify
 Linking CXX shared library libsmob.so
 [ 61%] Built target smob
 [ 61%] Serializing with protobuf
 Scanning dependencies of target persist
 Scanning dependencies of target dist-gearman
-Scanning dependencies of target randgen
-Scanning dependencies of target persist-sql
-[ 61%] [ 61%] [ 61%] Building CXX object opencog/persist/guile/CMakeFiles/persist.dir/PersistSCM.cc.o
-Building CXX object opencog/guile/CMakeFiles/randgen.dir/RandGenSCM.cc.o
-Scanning dependencies of target query
-Building CXX object opencog/persist/gearman/CMakeFiles/dist-gearman.dir/DistSCM.cc.o
-[ 63%] [ 63%] Scanning dependencies of target zmqatoms
-Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-sql.dir/llapi.cc.o
-[ 63%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-sql.dir/SQLAtomStorage.cc.o
-[ 65%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQMessages.pb.cc.o
-Building CXX object opencog/query/CMakeFiles/query.dir/AttentionalFocusCB.cc.o
-Linking CXX shared library atomspace.so
-[ 65%] Built target atomspace_cython
-[ 65%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ProtocolBufferSerializer.cc.o
-[ 65%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-sql.dir/SQLPersistSCM.cc.o
-Linking CXX shared library librandgen.so
-[ 65%] Built target randgen
+[ 61%] Scanning dependencies of target persist-sql
+[ 61%] Building CXX object opencog/persist/guile/CMakeFiles/persist.dir/PersistSCM.cc.o
 Scanning dependencies of target PythonEval
-[ 65%] Building CXX object opencog/cython/CMakeFiles/PythonEval.dir/PythonEval.cc.o
+Scanning dependencies of target atomspace_bm
+Building CXX object opencog/persist/gearman/CMakeFiles/dist-gearman.dir/DistSCM.cc.o
+[ 63%] Scanning dependencies of target zmqatoms
+Linking CXX shared library libunify.so
+Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-sql.dir/llapi.cc.o
+[ 63%] [ 65%] [ 68%] Scanning dependencies of target query
+Building CXX object opencog/cython/CMakeFiles/PythonEval.dir/PythonEval.cc.o
+Building CXX object opencog/benchmark/CMakeFiles/atomspace_bm.dir/AtomSpaceBenchmark.cc.o
+Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQMessages.pb.cc.o
+[ 68%] Building CXX object opencog/query/CMakeFiles/query.dir/AttentionalFocusCB.cc.o
+[ 68%] Built target unify
+[ 68%] Building CXX object opencog/query/CMakeFiles/query.dir/DefaultPatternMatchCB.cc.o
+[ 68%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-sql.dir/SQLAtomStorage.cc.o
 Linking CXX shared library libpersist.so
 Linking CXX shared library libdist-gearman.so
-[ 65%] Built target persist
-Scanning dependencies of target atomspace_bm
-[ 68%] [ 68%] Built target dist-gearman
-Building CXX object opencog/benchmark/CMakeFiles/atomspace_bm.dir/AtomSpaceBenchmark.cc.o
+[ 68%] Built target persist
+Scanning dependencies of target randgen
+[ 68%] Building CXX object opencog/guile/CMakeFiles/randgen.dir/RandGenSCM.cc.o
+[ 68%] Built target dist-gearman
 [ 68%] Building CXX object opencog/benchmark/CMakeFiles/atomspace_bm.dir/atomspace_bm.cc.o
-[ 68%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQClient.cc.o
-[ 70%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQPersistSCM.cc.o
-[ 70%] Building CXX object opencog/query/CMakeFiles/query.dir/DefaultPatternMatchCB.cc.o
-[ 70%] Building CXX object opencog/query/CMakeFiles/query.dir/Implicator.cc.o
-[ 72%] Building CXX object opencog/query/CMakeFiles/query.dir/DefaultImplicator.cc.o
+[ 68%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ProtocolBufferSerializer.cc.o
+[ 68%] Building CXX object opencog/query/CMakeFiles/query.dir/Implicator.cc.o
+[ 70%] Building CXX object opencog/query/CMakeFiles/query.dir/DefaultImplicator.cc.o
+[ 72%] Building CXX object opencog/cython/CMakeFiles/PythonEval.dir/load-file.cc.o
+Linking CXX shared library librandgen.so
+[ 72%] Built target randgen
 [ 72%] Building CXX object opencog/query/CMakeFiles/query.dir/InitiateSearchCB.cc.o
-Linking CXX shared library libpersist-sql.so
-Linking CXX shared library libzmqatoms.so
-[ 72%] Built target persist-sql
-[ 72%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternMatch.cc.o
-[ 72%] Built target zmqatoms
-[ 72%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternMatchEngine.cc.o
-[ 75%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternSCM.cc.o
-[ 77%] Building CXX object opencog/cython/CMakeFiles/PythonEval.dir/load-file.cc.o
-[ 77%] Building CXX object opencog/query/CMakeFiles/query.dir/Recognizer.cc.o
-[ 77%] Building CXX object opencog/query/CMakeFiles/query.dir/Satisfier.cc.o
+[ 72%] [ 72%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQClient.cc.o
+Building CXX object opencog/query/CMakeFiles/query.dir/PatternMatch.cc.o
 Linking CXX executable atomspace_bm
-[ 77%] Built target atomspace_bm
-Scanning dependencies of target sniff
-[ 77%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/sniff.dir/sniff.cc.o
+[ 72%] Built target atomspace_bm
+[ 72%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternMatchEngine.cc.o
+[ 72%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-sql.dir/SQLPersistSCM.cc.o
 Linking CXX shared library libPythonEval.so
-[ 77%] Built target PythonEval
+[ 75%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternSCM.cc.o
+[ 75%] Built target PythonEval
 Scanning dependencies of target PythonSCM
-[ 77%] Building CXX object opencog/cython/CMakeFiles/PythonSCM.dir/PythonSCM.cc.o
+[ 75%] Building CXX object opencog/cython/CMakeFiles/PythonSCM.dir/PythonSCM.cc.o
+[ 75%] Building CXX object opencog/query/CMakeFiles/query.dir/Recognizer.cc.o
+[ 77%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQPersistSCM.cc.o
+Linking CXX shared library libpersist-sql.so
+[ 77%] Built target persist-sql
 [ 79%] Cythonizing utilities.pyx
 Scanning dependencies of target utilities_cython
 [ 79%] Building CXX object opencog/cython/opencog/CMakeFiles/utilities_cython.dir/Utilities.cc.o
-[ 79%] Building CXX object opencog/cython/opencog/CMakeFiles/utilities_cython.dir/utilities.cpp.o
-Linking CXX executable sniff
-[ 79%] Built target sniff
 Linking CXX shared library libPythonSCM.so
 [ 79%] Built target PythonSCM
+Scanning dependencies of target sniff
+[ 79%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/sniff.dir/sniff.cc.o
+[ 79%] Building CXX object opencog/query/CMakeFiles/query.dir/Satisfier.cc.o
+[ 79%] Building CXX object opencog/cython/opencog/CMakeFiles/utilities_cython.dir/utilities.cpp.o
+Linking CXX shared library libzmqatoms.so
+[ 79%] Built target zmqatoms
+Linking CXX executable sniff
+[ 79%] Built target sniff
 Linking CXX shared library utilities.so
 [ 79%] Built target utilities_cython
 Linking CXX shared library libquery.so
 [ 79%] Built target query
 Scanning dependencies of target execution
-[ 79%] [ 79%] [ 79%] [ 79%] [ 81%] [ 81%] Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/Force.cc.o
+[ 79%] [ 79%] [ 79%] [ 81%] [ 81%] [ 81%] Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/Force.cc.o
+Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/EvaluationLink.cc.o
 Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/MapLink.cc.o
+Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/ExecSCM.cc.o
 Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/Instantiator.cc.o
 Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/ExecutionOutputLink.cc.o
-Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/ExecSCM.cc.o
-Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/EvaluationLink.cc.o
 Linking CXX shared library libexecution.so
 [ 81%] Built target execution
+[ 81%] [ 81%] Cythonizing bindlink.pyx
+Cythonizing scheme_wrapper.pyx
+Scanning dependencies of target profile_bindlink
 Scanning dependencies of target atomspace-cwrapper
-[ 81%] [ 81%] [ 81%] [ 84%] [ 84%] Cythonizing scheme_wrapper.pyx
-[ 84%] Cythonizing bindlink.pyx
-Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/PatternMatcher_CWrapper.cpp.o
-Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/AtomSpace_CWrapper.cpp.o
+[ 81%] [ 84%] [ 84%] [ 84%] [ 84%] Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/AtomSpace_CWrapper.cpp.o
 Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/Exec_CWrapper.cpp.o
 Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/TruthValue_CWrapper.cpp.o
-Scanning dependencies of target profile_bindlink
-[ 84%] Building CXX object opencog/benchmark/CMakeFiles/profile_bindlink.dir/profile_bindlink.cc.o
+Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/PatternMatcher_CWrapper.cpp.o
+Building CXX object opencog/benchmark/CMakeFiles/profile_bindlink.dir/profile_bindlink.cc.o
 Scanning dependencies of target ruleengine
 [ 86%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/BackwardChainer.cc.o
 
@@ -867,9 +868,9 @@ Scanning dependencies of target bindlink_cython
 [ 88%] Building CXX object opencog/cython/opencog/CMakeFiles/bindlink_cython.dir/BindlinkStub.cc.o
 Linking CXX executable profile_bindlink
 [ 88%] Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/Value_CWrapper.cpp.o
-[ 88%] Built target profile_bindlink
-[ 88%] [ 88%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/ControlPolicy.cc.o
-Building CXX object opencog/cython/opencog/CMakeFiles/bindlink_cython.dir/bindlink.cpp.o
+[ 88%] [ 88%] Built target profile_bindlink
+Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/ControlPolicy.cc.o
+[ 88%] Building CXX object opencog/cython/opencog/CMakeFiles/bindlink_cython.dir/bindlink.cpp.o
 [ 88%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/MixtureModel.cc.o
 [ 90%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/ActionSelection.cc.o
 [ 90%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/BetaDistribution.cc.o
@@ -885,14 +886,14 @@ Linking CXX shared library bindlink.so
 [ 95%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/URELogger.cc.o
 [ 95%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/ChainerUtils.cc.o
 [ 95%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/InferenceSCM.cc.o
-[ 95%] [ 97%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/Rule.cc.o
-Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/URECommons.cc.o
+[ 95%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/Rule.cc.o
+[ 97%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/URECommons.cc.o
 [ 97%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/UREConfig.cc.o
 Linking CXX shared library libruleengine.so
 [ 97%] Built target ruleengine
 make: *** [all] Error 2
 + DSTATUS=BUILDFAIL
-+ docker exec --user root f76faeef78792f4d7434207f25ba9073640e5ca6c41ce51849eeef0b9ea6b574 bash opencog/dependencies/job2
++ docker exec --user root ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64 bash opencog/dependencies/job2
 + cd opencog/dependencies/atomspace
 + cd build
 + make install
@@ -950,6 +951,6 @@ make[2]: *** [opencog/cython/opencog/scheme_wrapper.cpp] Error 1
 make[1]: *** [opencog/cython/opencog/CMakeFiles/scheme_wrapper.dir/all] Error 2
 make: *** [all] Error 2
 + DSTATUS=INSTALLFAIL
-+ /var/lib/jenkins/status/updateStatus INSTALLFAIL /var/lib/jenkins/jobs/OpenCOG_U1404/builds/36/log OpenCOG_U1404_AtomSpace
++ /var/lib/jenkins/status/updateStatus INSTALLFAIL /var/lib/jenkins/jobs/OpenCOG_U1404/builds/37/log OpenCOG_U1404_AtomSpace
 Already up-to-date.
 ~/status/jobs ~/status
