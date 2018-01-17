@@ -9,12 +9,12 @@ using GIT_SSH to set credentials 103jenk
  > git fetch --tags --progress git@github.com:opencog/opencog.git +refs/heads/*:refs/remotes/origin/*
  > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
  > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
-Checking out Revision 56a9612f54dc0eaca84c82787c00e27cd9c4f0a7 (refs/remotes/origin/master)
+Checking out Revision 16d3359d97378587f21e27462f67f475014e7ed9 (refs/remotes/origin/master)
  > git config core.sparsecheckout # timeout=10
- > git checkout -f 56a9612f54dc0eaca84c82787c00e27cd9c4f0a7
-Commit message: "Merge pull request #2973 from linas/abrt"
- > git rev-list --no-walk c544225f5e1233e4820a89cd2319b54439ba6505 # timeout=10
-[OpenCOG_DebStab] $ /bin/sh -xe /tmp/jenkins7259792222248889311.sh
+ > git checkout -f 16d3359d97378587f21e27462f67f475014e7ed9
+Commit message: "Merge pull request #2974 from ngeiswei/fix-pattern-miner-utest"
+ > git rev-list --no-walk 56a9612f54dc0eaca84c82787c00e27cd9c4f0a7 # timeout=10
+[OpenCOG_DebStab] $ /bin/sh -xe /tmp/jenkins3747045042122539747.sh
 + pwd
 /var/lib/jenkins/workspace/OpenCOG_DebStab
 + whoami
@@ -80,19 +80,19 @@ Successfully built e2ef04e10192
 + CIDFILENAME=/tmp/OpenCOG_DebStab.cid
 + [ -e /tmp/OpenCOG_DebStab.cid ]
 + cat /tmp/OpenCOG_DebStab.cid
-+ CID=a8a458239368dd20ce6e14e10a153b2302ee81478fa76b5f33c3262fc986797a
-+ docker container kill a8a458239368dd20ce6e14e10a153b2302ee81478fa76b5f33c3262fc986797a
-a8a458239368dd20ce6e14e10a153b2302ee81478fa76b5f33c3262fc986797a
-+ docker container rm a8a458239368dd20ce6e14e10a153b2302ee81478fa76b5f33c3262fc986797a
-a8a458239368dd20ce6e14e10a153b2302ee81478fa76b5f33c3262fc986797a
++ CID=b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
++ docker container kill b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
+b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
++ docker container rm b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
+b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
 + rm -f /tmp/OpenCOG_DebStab.cid
 + cd ..
 + pwd
 + docker run --cidfile /tmp/OpenCOG_DebStab.cid -v /var/lib/jenkins/workspace/OpenCOG_DebStab:/home/opencog/opencog -w /home/opencog -d edguy/ocdock:latest tail -f /dev/null
-b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
+246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44
 + cat /tmp/OpenCOG_DebStab.cid
-+ CID=b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
-+ DKRUN=docker exec b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b 
++ CID=246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44
++ DKRUN=docker exec 246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44 
 + grep jenkins /etc/passwd
 + awk -F: {print $3}
 + UID=125
@@ -100,11 +100,11 @@ b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
 + awk -F: {print $4}
 + GID=132
 + cat
-[OpenCOG_DebStab] $ /bin/sh -xe /tmp/jenkins7406128296596270279.sh
+[OpenCOG_DebStab] $ /bin/sh -xe /tmp/jenkins1481010262725455945.sh
 + . build.docker/docker.env
-+ CID=b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
-+ DKRUNROOT=docker exec --user root   b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
-+ DKRUNUSER=docker exec --user jenkins  b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
++ CID=246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44
++ DKRUNROOT=docker exec --user root   246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44
++ DKRUNUSER=docker exec --user jenkins  246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44
 + UID=125
 + GID=132
 + cat
@@ -122,8 +122,8 @@ b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
 
 + echo **** 
 **** 
-+ echo ****  b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
-****  b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
++ echo ****  246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44
+****  246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44
 + test -e dependencies
 + rm -fr dependencies/atomspace
 + git clone git@github.com:opencog/atomspace.git dependencies/atomspace
@@ -134,11 +134,11 @@ Cloning into 'dependencies/cogutil'...
 + rm -fr dependencies/moses
 + git clone git@github.com:opencog/moses.git dependencies/moses
 Cloning into 'dependencies/moses'...
-[OpenCOG_DebStab] $ /bin/sh -xe /tmp/jenkins2273611773811744088.sh
+[OpenCOG_DebStab] $ /bin/sh -xe /tmp/jenkins4219070025837752562.sh
 + . build.docker/docker.env
-+ CID=b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
-+ DKRUNROOT=docker exec --user root   b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
-+ DKRUNUSER=docker exec --user jenkins  b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
++ CID=246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44
++ DKRUNROOT=docker exec --user root   246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44
++ DKRUNUSER=docker exec --user jenkins  246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44
 + UID=125
 + GID=132
 + cat
@@ -155,12 +155,15 @@ Cloning into 'dependencies/moses'...
 **********************************************************
 
 + WDIR=opencog/dependencies/cogutil
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_DebStab/builds/4/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_DebStab/builds/5/log
 + cat
 + cat
 + chmod +x dependencies/job1
 + chmod +x dependencies/job2
-+ docker exec --user jenkins b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b bash opencog/dependencies/job1
++ docker exec --user jenkins 246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44 bash opencog/dependencies/job1
+/home/opencog
+octool
+opencog
 + pwd
 + ls
 + cd opencog/dependencies/cogutil
@@ -168,9 +171,6 @@ Cloning into 'dependencies/moses'...
 + mkdir build
 + cd build
 + cmake ..
-/home/opencog
-octool
-opencog
 -- The C compiler identification is GNU 6.3.0
 -- The CXX compiler identification is GNU 6.3.0
 -- Check for working C compiler: /usr/bin/cc
@@ -276,26 +276,26 @@ See also "/home/opencog/opencog/dependencies/cogutil/build/CMakeFiles/CMakeError
 + make -j8
 make: *** No targets specified and no makefile found.  Stop.
 + DSTATUS=BUILDFAIL
-+ docker exec --user root b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b bash opencog/dependencies/job2
++ docker exec --user root 246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44 bash opencog/dependencies/job2
 + cd opencog/dependencies/cogutil
 + cd build
 + make install
 make: *** No rule to make target 'install'.  Stop.
 + DSTATUS=INSTALLFAIL
-+ /var/lib/jenkins/status/updateStatus INSTALLFAIL /var/lib/jenkins/jobs/OpenCOG_DebStab/builds/4/log OpenCOG_DebStab_CogUtil
++ /var/lib/jenkins/status/updateStatus INSTALLFAIL /var/lib/jenkins/jobs/OpenCOG_DebStab/builds/5/log OpenCOG_DebStab_CogUtil
 Already up-to-date.
 ~/status/jobs ~/status
 ~/status
-[master 4f4e179] OpenCOG_DebStab_CogUtil INSTALLFAIL
+[master 23915ef] OpenCOG_DebStab_CogUtil INSTALLFAIL
  3 files changed, 290 insertions(+), 53 deletions(-)
  rewrite jobs/OpenCOG_DebStab_CogUtil.log (69%)
 To git@github.com:edguy3/CenStatus.git
-   1734761..4f4e179  master -> master
-[OpenCOG_DebStab] $ /bin/sh -xe /tmp/jenkins5266317932770122191.sh
+   f36c6dc..23915ef  master -> master
+[OpenCOG_DebStab] $ /bin/sh -xe /tmp/jenkins793632359197142808.sh
 + . build.docker/docker.env
-+ CID=b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
-+ DKRUNROOT=docker exec --user root   b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
-+ DKRUNUSER=docker exec --user jenkins  b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
++ CID=246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44
++ DKRUNROOT=docker exec --user root   246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44
++ DKRUNUSER=docker exec --user jenkins  246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44
 + UID=125
 + GID=132
 + cat
@@ -312,15 +312,12 @@ To git@github.com:edguy3/CenStatus.git
 **********************************************************
 
 + WDIR=opencog/dependencies/atomspace
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_DebStab/builds/4/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_DebStab/builds/5/log
 + cat
 + cat
 + chmod +x dependencies/job1
 + chmod +x dependencies/job2
-+ docker exec --user jenkins b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b bash opencog/dependencies/job1
-/home/opencog
-octool
-opencog
++ docker exec --user jenkins 246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44 bash opencog/dependencies/job1
 + pwd
 + ls
 + cd opencog/dependencies/atomspace
@@ -328,6 +325,9 @@ opencog
 + mkdir build
 + cd build
 + cmake ..
+/home/opencog
+octool
+opencog
 -- The C compiler identification is GNU 6.3.0
 -- The CXX compiler identification is GNU 6.3.0
 -- Check for working C compiler: /usr/bin/cc
@@ -428,25 +428,25 @@ See also "/home/opencog/opencog/dependencies/atomspace/build/CMakeFiles/CMakeErr
 + make -j8
 make: *** No targets specified and no makefile found.  Stop.
 + DSTATUS=BUILDFAIL
-+ docker exec --user root b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b bash opencog/dependencies/job2
++ docker exec --user root 246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44 bash opencog/dependencies/job2
 + cd opencog/dependencies/atomspace
 + cd build
 + make install
 make: *** No rule to make target 'install'.  Stop.
 + DSTATUS=INSTALLFAIL
-+ /var/lib/jenkins/status/updateStatus INSTALLFAIL /var/lib/jenkins/jobs/OpenCOG_DebStab/builds/4/log OpenCOG_DebStab_AtomSpace
++ /var/lib/jenkins/status/updateStatus INSTALLFAIL /var/lib/jenkins/jobs/OpenCOG_DebStab/builds/5/log OpenCOG_DebStab_AtomSpace
 Already up-to-date.
 ~/status/jobs ~/status
 ~/status
-[master 4f22bca] OpenCOG_DebStab_AtomSpace INSTALLFAIL
- 2 files changed, 41 insertions(+), 41 deletions(-)
+[master cc41eab] OpenCOG_DebStab_AtomSpace INSTALLFAIL
+ 2 files changed, 45 insertions(+), 45 deletions(-)
 To git@github.com:edguy3/CenStatus.git
-   4f4e179..4f22bca  master -> master
-[OpenCOG_DebStab] $ /bin/sh -xe /tmp/jenkins2465728906601229697.sh
+   23915ef..cc41eab  master -> master
+[OpenCOG_DebStab] $ /bin/sh -xe /tmp/jenkins479274879847258593.sh
 + . build.docker/docker.env
-+ CID=b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
-+ DKRUNROOT=docker exec --user root   b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
-+ DKRUNUSER=docker exec --user jenkins  b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
++ CID=246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44
++ DKRUNROOT=docker exec --user root   246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44
++ DKRUNUSER=docker exec --user jenkins  246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44
 + UID=125
 + GID=132
 + cat
@@ -463,12 +463,12 @@ To git@github.com:edguy3/CenStatus.git
 **********************************************************
 
 + WDIR=opencog/dependencies/moses
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_DebStab/builds/4/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_DebStab/builds/5/log
 + cat
 + cat
 + chmod +x dependencies/job1
 + chmod +x dependencies/job2
-+ docker exec --user jenkins b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b bash opencog/dependencies/job1
++ docker exec --user jenkins 246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44 bash opencog/dependencies/job1
 + pwd
 + ls
 + cd opencog/dependencies/moses
@@ -579,25 +579,25 @@ See also "/home/opencog/opencog/dependencies/moses/build/CMakeFiles/CMakeError.l
 + make -j8
 make: *** No targets specified and no makefile found.  Stop.
 + DSTATUS=BUILDFAIL
-+ docker exec --user root b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b bash opencog/dependencies/job2
++ docker exec --user root 246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44 bash opencog/dependencies/job2
 + cd opencog/dependencies/moses
 + cd build
 + make install
 make: *** No rule to make target 'install'.  Stop.
 + DSTATUS=INSTALLFAIL
-+ /var/lib/jenkins/status/updateStatus INSTALLFAIL /var/lib/jenkins/jobs/OpenCOG_DebStab/builds/4/log OpenCOG_DebStab_Moses
++ /var/lib/jenkins/status/updateStatus INSTALLFAIL /var/lib/jenkins/jobs/OpenCOG_DebStab/builds/5/log OpenCOG_DebStab_Moses
 Already up-to-date.
 ~/status/jobs ~/status
 ~/status
-[master dabbba0] OpenCOG_DebStab_Moses INSTALLFAIL
- 2 files changed, 52 insertions(+), 53 deletions(-)
+[master c288283] OpenCOG_DebStab_Moses INSTALLFAIL
+ 2 files changed, 56 insertions(+), 56 deletions(-)
 To git@github.com:edguy3/CenStatus.git
-   4f22bca..dabbba0  master -> master
-[OpenCOG_DebStab] $ /bin/sh -xe /tmp/jenkins5564913121916550345.sh
+   cc41eab..c288283  master -> master
+[OpenCOG_DebStab] $ /bin/sh -xe /tmp/jenkins4894378777442858441.sh
 + . build.docker/docker.env
-+ CID=b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
-+ DKRUNROOT=docker exec --user root   b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
-+ DKRUNUSER=docker exec --user jenkins  b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b
++ CID=246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44
++ DKRUNROOT=docker exec --user root   246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44
++ DKRUNUSER=docker exec --user jenkins  246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44
 + UID=125
 + GID=132
 + cat
@@ -614,15 +614,12 @@ To git@github.com:edguy3/CenStatus.git
 **********************************************************
 
 + WDIR=opencog/
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_DebStab/builds/4/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_DebStab/builds/5/log
 + cat
 + cat
 + chmod +x dependencies/job1
 + chmod +x dependencies/job2
-+ docker exec --user jenkins b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b bash opencog/dependencies/job1
-/home/opencog
-octool
-opencog
++ docker exec --user jenkins 246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44 bash opencog/dependencies/job1
 + pwd
 + ls
 + cd opencog/
@@ -630,6 +627,9 @@ opencog
 + mkdir build
 + cd build
 + cmake ..
+/home/opencog
+octool
+opencog
 -- The C compiler identification is GNU 6.3.0
 -- The CXX compiler identification is GNU 6.3.0
 -- Check for working C compiler: /usr/bin/cc
@@ -658,23 +658,23 @@ See also "/home/opencog/opencog/build/CMakeFiles/CMakeError.log".
 + make -j8
 make: *** No targets specified and no makefile found.  Stop.
 + DSTATUS=BUILDFAIL
-+ docker exec --user root b887f224febbfc15e77506f66396be3ec6ed610a1426bd2616a6d3a52301c64b bash opencog/dependencies/job2
++ docker exec --user root 246837dcb1699e4ee80beb63eefd986f2be15471d4ae095e5f9bb839fb386d44 bash opencog/dependencies/job2
 + cd opencog/
 + cd build
 + make install
 make: *** No rule to make target 'install'.  Stop.
 + DSTATUS=INSTALLFAIL
-+ /var/lib/jenkins/status/updateStatus INSTALLFAIL /var/lib/jenkins/jobs/OpenCOG_DebStab/builds/4/log OpenCOG_DebStab_Opencog
++ /var/lib/jenkins/status/updateStatus INSTALLFAIL /var/lib/jenkins/jobs/OpenCOG_DebStab/builds/5/log OpenCOG_DebStab_Opencog
 Already up-to-date.
 ~/status/jobs ~/status
 ~/status
-[master 3b318e8] OpenCOG_DebStab_Opencog INSTALLFAIL
- 2 files changed, 63 insertions(+), 65 deletions(-)
+[master a2420e2] OpenCOG_DebStab_Opencog INSTALLFAIL
+ 2 files changed, 70 insertions(+), 70 deletions(-)
 To git@github.com:edguy3/CenStatus.git
-   dabbba0..3b318e8  master -> master
-[OpenCOG_DebStab] $ /bin/sh -xe /tmp/jenkins3532093934865707497.sh
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_DebStab/builds/4/log
+   c288283..a2420e2  master -> master
+[OpenCOG_DebStab] $ /bin/sh -xe /tmp/jenkins4858434198636766515.sh
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_DebStab/builds/5/log
 + DSTATUS=BUILDPASS
-+ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_DebStab/builds/4/log OpenCOG_DebStab__Core_Build
++ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_DebStab/builds/5/log OpenCOG_DebStab__Core_Build
 Already up-to-date.
 ~/status/jobs ~/status
