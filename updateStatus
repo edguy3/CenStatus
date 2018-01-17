@@ -69,7 +69,7 @@ ZZZ
 
 for JOBNAME in $JOBS
 do
-   if egrep -q '(***Failed|***Exception)' "jobs/$JOBNAME.log" 
+   if egrep -q '\*\*\*(Failed|Exception)' "jobs/$JOBNAME.log" 
    then
        echo >>README.md
        echo '### ' $JOBNAME >>README.md
