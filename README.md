@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Tue Jan 16 21:16:43 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Tue Jan 16 21:18:06 EST 2018.
 
 ## Modules 
 
@@ -28,12 +28,45 @@ This file shows the status of public cen.ai tracked projects as of Tue Jan 16 21
 | [OpenCOG_U1604_Moses](jobs/OpenCOG_U1604_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 21:06 |  | 20:58  | 21:06 |
 | [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) | ![Status](/images/TESTFAIL.svg) | 68% tests passed, 8 tests failed out of 25 |  | 21:11 | 20:59  | 21:11 |
 | [OpenCOG_U1704_AtomSpace](jobs/OpenCOG_U1704_AtomSpace.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   | 20:53 |
-| [OpenCOG_U1704_CogUtil](jobs/OpenCOG_U1704_CogUtil.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   | 20:53 |
+| [OpenCOG_U1704_CogUtil](jobs/OpenCOG_U1704_CogUtil.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   | 21:18 |
 | [OpenCOG_U1704__Core_Build](jobs/OpenCOG_U1704__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 20:53  | 20:53 |
 | [OpenCOG_U1704_Moses](jobs/OpenCOG_U1704_Moses.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   | 20:53 |
 | [OpenCOG_U1704_Opencog](jobs/OpenCOG_U1704_Opencog.log) | ![Status](/images/TESTFAIL.svg) |  |  | 20:59 |   | 20:59 |
 
 ( Times are currently EST/EDT GMT-5/-4) 
+
+## Error Detail
+
+for JOBNAME in OpenCOG_DebOld_AtomSpace
+OpenCOG_DebOld_CogUtil
+OpenCOG_DebOld__Core_Build
+OpenCOG_DebOld_Moses
+OpenCOG_DebOld_Opencog
+OpenCOG_DebStab_AtomSpace
+OpenCOG_DebStab_CogUtil
+OpenCOG_DebStab__Core_Build
+OpenCOG_DebStab_Moses
+OpenCOG_DebStab_Opencog
+OpenCOG_U1404_AtomSpace
+OpenCOG_U1404_CogUtil
+OpenCOG_U1404__Core_Build
+OpenCOG_U1404_Moses
+OpenCOG_U1404_Opencog
+OpenCOG_U1604_AtomSpace
+OpenCOG_U1604_CogUtil
+OpenCOG_U1604__Core_Build
+OpenCOG_U1604_Moses
+OpenCOG_U1604_Opencog
+OpenCOG_U1704_AtomSpace
+OpenCOG_U1704_CogUtil
+OpenCOG_U1704__Core_Build
+OpenCOG_U1704_Moses
+OpenCOG_U1704_Opencog
+do
+   echo -n '### ' OpenCOG_U1704_Opencog
+#   [ -e "jobs/OpenCOG_U1704_Opencog.log"       ] && grep 'tests passed' "jobs/OpenCOG_U1704_Opencog.log" | tail -20
+
+done
 
 ## Contributors
 

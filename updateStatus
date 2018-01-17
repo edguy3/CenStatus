@@ -63,6 +63,15 @@ cat >>README.md <<ZZZ
 
 ( Times are currently EST/EDT GMT-5/-4) 
 
+## Error Detail
+
+for JOBNAME in $JOBS
+do
+   echo -n '### ' $JOBNAME
+#   [ -e "jobs/$JOBNAME.log"       ] && grep 'tests passed' "jobs/$JOBNAME.log" | tail -20
+
+done
+
 ## Contributors
 
 Ed Guy.
