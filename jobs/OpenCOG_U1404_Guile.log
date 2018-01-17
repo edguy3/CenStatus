@@ -1,0 +1,236 @@
+Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1404
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@github.com:opencog/opencog.git # timeout=10
+Fetching upstream changes from git@github.com:opencog/opencog.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 103jenk
+ > git fetch --tags --progress git@github.com:opencog/opencog.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 172b087603d4b43af643b59b1e9eea8d35c1dd5e (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 172b087603d4b43af643b59b1e9eea8d35c1dd5e
+Commit message: "Merge pull request #2976 from leungmanhin/psi"
+ > git rev-list --no-walk 172b087603d4b43af643b59b1e9eea8d35c1dd5e # timeout=10
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins4587065702712644627.sh
++ pwd
+/var/lib/jenkins/workspace/OpenCOG_U1404
++ whoami
+jenkins
++ rm -fr build.docker
++ mkdir build.docker
++ cd build.docker
++ cp /home/edguy/OCDOCK/DOCKER.OpenCOG_U1404 docker.buildfile
++ docker build -f docker.buildfile -t edguy/ocdock:latest .
+Sending build context to Docker daemon 4.096 kB
+Step 1/15 : FROM ubuntu:14.04
+ ---> 67759a80360c
+Step 2/15 : MAINTAINER Ed Guy "edguy@eguy.org"
+ ---> Using cache
+ ---> 5a54eeef2fa0
+Step 3/15 : ENV DEBIAN_FRONTEND noninteractive
+ ---> Using cache
+ ---> 3e97998de43b
+Step 4/15 : ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+ ---> Using cache
+ ---> c29f4a1c13d0
+Step 5/15 : RUN apt-get -y update
+ ---> Using cache
+ ---> de530b426d20
+Step 6/15 : RUN apt-get -y upgrade
+ ---> Using cache
+ ---> 914d800e4b20
+Step 7/15 : RUN apt-get update && apt-get -y install screen telnet netcat-openbsd byobu wget vim unzip gcc g++ make sudo lsb-release net-tools
+ ---> Using cache
+ ---> 11dd64a2235d
+Step 8/15 : RUN apt-get update && apt-get -y install openjdk-7-jdk ant libcommons-logging-java
+ ---> Using cache
+ ---> ee70b614beab
+Step 9/15 : RUN test -e /usr/local/share/java || mkdir /usr/local/share/java
+ ---> Using cache
+ ---> 85f243317279
+Step 10/15 : WORKDIR /home/opencog
+ ---> Using cache
+ ---> 6a62167e1bee
+Step 11/15 : RUN wget http://raw.github.com/opencog/ocpkg/master/ocpkg -O octool && chmod +rx octool
+ ---> Using cache
+ ---> 7e93d2b431e4
+Step 12/15 : RUN ./octool -rdp
+ ---> Using cache
+ ---> 751ed584bed2
+Step 13/15 : RUN useradd -ms /bin/bash  jenkins --uid 125
+ ---> Using cache
+ ---> b77def1e932f
+Step 14/15 : USER jenkins
+ ---> Using cache
+ ---> ae10a739e433
+Step 15/15 : CMD tail -f /dev/null
+ ---> Using cache
+ ---> ecbac339682c
+Successfully built ecbac339682c
++ echo ******  CID=
+******  CID=
++ CIDFILENAME=/tmp/OpenCOG_U1404.cid
++ cleanupDockerContainers /tmp/OpenCOG_U1404.cid
++ CIDFILENAME=/tmp/OpenCOG_U1404.cid
++ [ -e /tmp/OpenCOG_U1404.cid ]
++ cat /tmp/OpenCOG_U1404.cid
++ CID=ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64
++ docker container kill ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64
+ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64
++ docker container rm ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64
+ec6fb4b91be553056af4fff03111954cac2f271de976436ece38721d84899c64
++ rm -f /tmp/OpenCOG_U1404.cid
++ cd ..
++ pwd
++ docker run --cidfile /tmp/OpenCOG_U1404.cid -v /var/lib/jenkins/workspace/OpenCOG_U1404:/home/opencog/opencog -w /home/opencog -d edguy/ocdock:latest tail -f /dev/null
+763e6f3aff75ae3347c898022f792b6fc6cf41fda8d78e40f22a1c2e9df5713e
++ cat /tmp/OpenCOG_U1404.cid
++ CID=763e6f3aff75ae3347c898022f792b6fc6cf41fda8d78e40f22a1c2e9df5713e
++ DKRUN=docker exec 763e6f3aff75ae3347c898022f792b6fc6cf41fda8d78e40f22a1c2e9df5713e 
++ grep jenkins /etc/passwd
++ awk -F: {print $3}
++ UID=125
++ grep jenkins /etc/passwd
++ awk -F: {print $4}
++ GID=132
++ cat
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins8677660486278036269.sh
++ . build.docker/docker.env
++ CID=763e6f3aff75ae3347c898022f792b6fc6cf41fda8d78e40f22a1c2e9df5713e
++ DKRUNROOT=docker exec --user root   763e6f3aff75ae3347c898022f792b6fc6cf41fda8d78e40f22a1c2e9df5713e
++ DKRUNUSER=docker exec --user jenkins  763e6f3aff75ae3347c898022f792b6fc6cf41fda8d78e40f22a1c2e9df5713e
++ UID=125
++ GID=132
++ cat
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
+*****
+*****  opencog Setup 
+*****
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
+
++ echo **** 
+**** 
++ echo ****  763e6f3aff75ae3347c898022f792b6fc6cf41fda8d78e40f22a1c2e9df5713e
+****  763e6f3aff75ae3347c898022f792b6fc6cf41fda8d78e40f22a1c2e9df5713e
++ date +%s
++ DDIR=dependencies.1516223379
++ test -e dependencies
++ mv dependencies dependencies.1516223379
++ rm -fr dependencies.1516223379
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/95': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/94': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/72': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/71': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/75': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/85': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/86': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/77': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/88': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/38': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/87': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/74': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/93': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/59': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/70': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/61': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/100': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/79': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/80': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/63': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/58': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/65': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/81': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/64': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/91': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/count.txt': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/56': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/83': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/66': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/69': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/89': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/57': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/78': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/68': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/96': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/60': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/62': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/73': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/92': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/99': Permission denied
+rm: cannot remove 'dependencies.1516223379/atomspace/build/CMakeFiles/Progress/84': Permission denied
++ echo must cleanup later.
+must cleanup later.
++ mkdir dependencies
++ rm -fr dependencies/atomspace
++ git clone git@github.com:opencog/atomspace.git dependencies/atomspace
+Cloning into 'dependencies/atomspace'...
++ rm -fr dependencies/cogutil
++ git clone git@github.com:opencog/cogutil.git dependencies/cogutil
+Cloning into 'dependencies/cogutil'...
++ rm -fr dependencies/moses
++ git clone git@github.com:opencog/moses.git dependencies/moses
+Cloning into 'dependencies/moses'...
++ cat
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
+*****
+*****  guile Setup 
+*****
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
+
++ WDIR=opencog/dependencies/cogutil
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/38/log
++ cat
++ cat
++ chmod +x dependencies/job1
++ chmod +x dependencies/job2
++ docker exec --user jenkins 763e6f3aff75ae3347c898022f792b6fc6cf41fda8d78e40f22a1c2e9df5713e bash opencog/dependencies/job1
++ mkdir -p guile
+mkdir: cannot create directory 'guile': Permission denied
++ pushd guile
+opencog/dependencies/job1: line 4: pushd: guile: No such file or directory
++ rm -rf 'guile-2.2.2*'
++ wget https://ftp.gnu.org/gnu/guile/guile-2.2.2.tar.gz
+--2018-01-17 21:10:48--  https://ftp.gnu.org/gnu/guile/guile-2.2.2.tar.gz
+Resolving ftp.gnu.org (ftp.gnu.org)... 208.118.235.20, 2001:4830:134:3::b
+Connecting to ftp.gnu.org (ftp.gnu.org)|208.118.235.20|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 17970504 (17M) [application/x-gzip]
+guile-2.2.2.tar.gz: Permission denied
+
+Cannot write to 'guile-2.2.2.tar.gz' (Success).
++ tar -xvf guile-2.2.2.tar.gz
+tar: guile-2.2.2.tar.gz: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
++ cd guile-2.2.2
+opencog/dependencies/job1: line 9: cd: guile-2.2.2: No such file or directory
++ mkdir build
+mkdir: cannot create directory 'build': Permission denied
++ cd build
+opencog/dependencies/job1: line 11: cd: build: No such file or directory
++ ../configure
+opencog/dependencies/job1: line 12: ../configure: No such file or directory
++ make -j8
+make: *** No targets specified and no makefile found.  Stop.
++ popd
+opencog/dependencies/job1: line 14: popd: directory stack empty
++ DSTATUS=BUILDFAIL
++ [ BUILDFAIL = BUILDPASS ]
++ DSTATUS=INSTALLFAIL
++ /var/lib/jenkins/status/updateStatus INSTALLFAIL /var/lib/jenkins/jobs/OpenCOG_U1404/builds/38/log OpenCOG_U1404_Guile
+Already up-to-date.
+~/status/jobs ~/status
