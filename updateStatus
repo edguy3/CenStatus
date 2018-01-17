@@ -74,7 +74,7 @@ do
        echo >>README.md
        echo '### ' $JOBNAME >>README.md
        echo '```' >>README.md
-       egrep '\*\*\*(Failed|Exception)' "jobs/$JOBNAME.log" | tail -20 | pr -dt >>README.md
+       egrep '\*\*\*(Failed|Exception)' "jobs/$JOBNAME.log" | tail -20  >>README.md
        echo '```' >>README.md
        echo >>README.md
    fi

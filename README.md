@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Tue Jan 16 21:54:19 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Tue Jan 16 21:56:27 EST 2018.
 
 ## Modules 
 
@@ -17,7 +17,7 @@ This file shows the status of public cen.ai tracked projects as of Tue Jan 16 21
 | [OpenCOG_DebStab__Core_Build](jobs/OpenCOG_DebStab__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 21:19  | 21:19 |
 | [OpenCOG_DebStab_Moses](jobs/OpenCOG_DebStab_Moses.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   | 21:19 |
 | [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   | 21:19 |
-| [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  |  | 21:27 | 21:51  | 21:51 |
+| [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | 98% tests passed, 2 tests failed out of 111 |  | 21:56 | 21:51  | 21:56 |
 | [OpenCOG_U1404_CogUtil](jobs/OpenCOG_U1404_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 21:33 |  | 21:50  | 21:50 |
 | [OpenCOG_U1404__Core_Build](jobs/OpenCOG_U1404__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 21:54  | 21:54 |
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 21:33 |  | 21:53  | 21:53 |
@@ -38,29 +38,28 @@ This file shows the status of public cen.ai tracked projects as of Tue Jan 16 21
 ## Error Detail
 
 
+###  OpenCOG_U1404_AtomSpace
+```
+ 41/111 Test  #41: BasicSCMUTest ....................***Failed    0.20 sec
+111/111 Test #111: CythonGuile ......................***Exception: SegFault  0.17 sec
+```
+
+
 ###  OpenCOG_U1604_AtomSpace
 ```
  41/111 Test  #41: BasicSCMUTest ....................***Failed    0.17 sec
-
 111/111 Test #111: CythonGuile ......................***Exception: SegFault  0.21 sec
-
 ```
 
 
 ###  OpenCOG_U1604_Opencog
 ```
  2/25 Test  #2: AtomSpacePublisherModuleUTest ....***Exception: Other  5.14 sec
-
  6/25 Test  #6: AtomOcTreeUTest ..................***Exception: SegFault  0.07 sec
-
  7/25 Test  #7: TimeSpaceAtomUTest ...............***Exception: SegFault  0.07 sec
-
  8/25 Test  #8: AnaphoraTest .....................***Failed    1.22 sec
-
 12/25 Test #12: OpenPsiRulesUTest ................***Failed    0.49 sec
-
 14/25 Test #14: OpenPsiSCMUTest ..................***Failed    8.84 sec
-
 ```
 
 
