@@ -9,12 +9,12 @@ using GIT_SSH to set credentials 103jenk
  > git fetch --tags --progress git@github.com:opencog/opencog.git +refs/heads/*:refs/remotes/origin/*
  > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
  > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
-Checking out Revision c544225f5e1233e4820a89cd2319b54439ba6505 (refs/remotes/origin/master)
+Checking out Revision 56a9612f54dc0eaca84c82787c00e27cd9c4f0a7 (refs/remotes/origin/master)
  > git config core.sparsecheckout # timeout=10
- > git checkout -f c544225f5e1233e4820a89cd2319b54439ba6505
-Commit message: "Remove bad abort prompt; this screws up telnet processing!"
- > git rev-list --no-walk d01234c9996032d74b58430343f85b46c596a167 # timeout=10
-[OpenCOG_U1704] $ /bin/sh -xe /tmp/jenkins4413138727717307782.sh
+ > git checkout -f 56a9612f54dc0eaca84c82787c00e27cd9c4f0a7
+Commit message: "Merge pull request #2973 from linas/abrt"
+ > git rev-list --no-walk c544225f5e1233e4820a89cd2319b54439ba6505 # timeout=10
+[OpenCOG_U1704] $ /bin/sh -xe /tmp/jenkins8732899574213521620.sh
 + pwd
 /var/lib/jenkins/workspace/OpenCOG_U1704
 + whoami
@@ -80,19 +80,19 @@ Successfully built 128f81a0495f
 + CIDFILENAME=/tmp/OpenCOG_U1704.cid
 + [ -e /tmp/OpenCOG_U1704.cid ]
 + cat /tmp/OpenCOG_U1704.cid
-+ CID=cf0147353494436a39db46b10d77b54547f4582094f5a76e06548d89243f192d
-+ docker container kill cf0147353494436a39db46b10d77b54547f4582094f5a76e06548d89243f192d
-cf0147353494436a39db46b10d77b54547f4582094f5a76e06548d89243f192d
-+ docker container rm cf0147353494436a39db46b10d77b54547f4582094f5a76e06548d89243f192d
-cf0147353494436a39db46b10d77b54547f4582094f5a76e06548d89243f192d
++ CID=da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
++ docker container kill da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
+da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
++ docker container rm da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
+da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
 + rm -f /tmp/OpenCOG_U1704.cid
 + cd ..
 + pwd
 + docker run --cidfile /tmp/OpenCOG_U1704.cid -v /var/lib/jenkins/workspace/OpenCOG_U1704:/home/opencog/opencog -w /home/opencog -d edguy/ocdock:latest tail -f /dev/null
-da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
+696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
 + cat /tmp/OpenCOG_U1704.cid
-+ CID=da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
-+ DKRUN=docker exec da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03 
++ CID=696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
++ DKRUN=docker exec 696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702 
 + grep jenkins /etc/passwd
 + awk -F: {print $3}
 + UID=125
@@ -100,11 +100,11 @@ da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
 + awk -F: {print $4}
 + GID=132
 + cat
-[OpenCOG_U1704] $ /bin/sh -xe /tmp/jenkins5607264966621915929.sh
+[OpenCOG_U1704] $ /bin/sh -xe /tmp/jenkins7649652968389253364.sh
 + . build.docker/docker.env
-+ CID=da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
-+ DKRUNROOT=docker exec --user root   da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
-+ DKRUNUSER=docker exec --user jenkins  da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
++ CID=696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
++ DKRUNROOT=docker exec --user root   696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
++ DKRUNUSER=docker exec --user jenkins  696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
 + UID=125
 + GID=132
 + cat
@@ -122,8 +122,8 @@ da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
 
 + echo **** 
 **** 
-+ echo ****  da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
-****  da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
++ echo ****  696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
+****  696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
 + test -e dependencies
 + rm -fr dependencies/atomspace
 + git clone git@github.com:opencog/atomspace.git dependencies/atomspace
@@ -134,11 +134,11 @@ Cloning into 'dependencies/cogutil'...
 + rm -fr dependencies/moses
 + git clone git@github.com:opencog/moses.git dependencies/moses
 Cloning into 'dependencies/moses'...
-[OpenCOG_U1704] $ /bin/sh -xe /tmp/jenkins8954779420259288106.sh
+[OpenCOG_U1704] $ /bin/sh -xe /tmp/jenkins4419507616921594817.sh
 + . build.docker/docker.env
-+ CID=da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
-+ DKRUNROOT=docker exec --user root   da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
-+ DKRUNUSER=docker exec --user jenkins  da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03
++ CID=696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
++ DKRUNROOT=docker exec --user root   696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
++ DKRUNUSER=docker exec --user jenkins  696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702
 + UID=125
 + GID=132
 + cat
@@ -155,12 +155,15 @@ Cloning into 'dependencies/moses'...
 **********************************************************
 
 + WDIR=opencog/dependencies/cogutil
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1704/builds/6/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1704/builds/7/log
 + cat
 + cat
 + chmod +x dependencies/job1
 + chmod +x dependencies/job2
-+ docker exec --user jenkins da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03 bash opencog/dependencies/job1
++ docker exec --user jenkins 696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702 bash opencog/dependencies/job1
+/home/opencog
+octool
+opencog
 + pwd
 + ls
 + cd opencog/dependencies/cogutil
@@ -171,16 +174,13 @@ Cloning into 'dependencies/moses'...
 opencog/dependencies/job1: line 8: cmake: command not found
 + make -j8
 make: *** No targets specified and no makefile found.  Stop.
-/home/opencog
-octool
-opencog
 + DSTATUS=BUILDFAIL
-+ docker exec --user root da0c3dfaea1a6854e7068a69e9bacd560bf549a99e0cdc2dba443304ef48dd03 bash opencog/dependencies/job2
++ docker exec --user root 696ae56a2dcdc35ae300f464e2cd4e4d104e567031d4db6f77b2293ba58e1702 bash opencog/dependencies/job2
 + cd opencog/dependencies/cogutil
 + cd build
 + make install
 make: *** No rule to make target 'install'.  Stop.
 + DSTATUS=INSTALLFAIL
-+ /var/lib/jenkins/status/updateStatus INSTALLFAIL /var/lib/jenkins/jobs/OpenCOG_U1704/builds/6/log OpenCOG_U1704_CogUtil
++ /var/lib/jenkins/status/updateStatus INSTALLFAIL /var/lib/jenkins/jobs/OpenCOG_U1704/builds/7/log OpenCOG_U1704_CogUtil
 Already up-to-date.
 ~/status/jobs ~/status
