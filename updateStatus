@@ -49,7 +49,15 @@ do
     MF=$(readlink -f "jobs/$JOBNAME.svg" | sed "s|$(pwd)||")
     # get formatting for log file
     LF=$([ -e jobs/$JOBNAME.log ] && echo "[$JOBNAME](jobs/$JOBNAME.log)" || echo "$JOBNAME")
-    LM=$([ -e "jobs/$JOBNAME.log"       ] && grep 'tests passed' "jobs/$JOBNAME.log" | tail -1) 
+    if egrep -q '\*\*\*(Failed|Exception)' "jobs/$JOBNAME.log" 
+    then
+        LM=$(grep 'tests passed' "jobs/$JOBNAME.log" | tail -1) 
+	LM=$(echo '['$LM'](#'$JOBNAME')')
+    else
+        LM=$([ -e "jobs/$JOBNAME.log"       ] && grep 'tests passed' "jobs/$JOBNAME.log" | tail -1) 
+    fi
+
+https://github.com/edguy3/CenStatus#opencog_u1404_atomspace
 
     # print
 cat >>README.md<<YYY
