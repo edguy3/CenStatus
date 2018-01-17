@@ -1,144 +1,326 @@
-Started by upstream project "[8mha:////4HYLKC3QWnNL8UcNtRMb3SIghDGZXRDiSIrVjCiet8BaAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3/gtQ8Z3/3+FBDEwMTfQAfNa+iyAAAAA==[0mOpenCOG_U1404" build number [8mha:////4C13bx5GZ0CdCi3kdaSrbAkBg8lSl6VUONb3wLh0ihE5AAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZR/az8JH3/gtQ8Z3/3+FBDEwMTfSNTACDfWfHKAAAA[0m25
-originally caused by:
- Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
-Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1404_CogUtil
-[OpenCOG_U1404_CogUtil] $ /bin/sh -xe /tmp/jenkins1356938437438205630.sh
-+ COGDIR=../OpenCOG_U1404
-+ . ../OpenCOG_U1404/build.docker/docker.env
-+ CID=8e5b23cb3005a942deb994bc5a4cf624c00985588293b40afeb1c39643f1115f
-+ DKRUNROOT=docker exec --user root   8e5b23cb3005a942deb994bc5a4cf624c00985588293b40afeb1c39643f1115f
-+ DKRUNUSER=docker exec --user jenkins  8e5b23cb3005a942deb994bc5a4cf624c00985588293b40afeb1c39643f1115f
+Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1404
+ > git rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > git config remote.origin.url git@github.com:opencog/opencog.git # timeout=10
+Fetching upstream changes from git@github.com:opencog/opencog.git
+ > git --version # timeout=10
+using GIT_SSH to set credentials 103jenk
+ > git fetch --tags --progress git@github.com:opencog/opencog.git +refs/heads/*:refs/remotes/origin/*
+ > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
+ > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
+Checking out Revision 172b087603d4b43af643b59b1e9eea8d35c1dd5e (refs/remotes/origin/master)
+ > git config core.sparsecheckout # timeout=10
+ > git checkout -f 172b087603d4b43af643b59b1e9eea8d35c1dd5e
+Commit message: "Merge pull request #2976 from leungmanhin/psi"
+ > git rev-list --no-walk 172b087603d4b43af643b59b1e9eea8d35c1dd5e # timeout=10
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins1821434325235950330.sh
++ pwd
+/var/lib/jenkins/workspace/OpenCOG_U1404
++ whoami
+jenkins
++ rm -fr build.docker
++ mkdir build.docker
++ cd build.docker
++ cp /home/edguy/OCDOCK/DOCKER.OpenCOG_U1404 docker.buildfile
++ docker build -f docker.buildfile -t edguy/ocdock:latest .
+Sending build context to Docker daemon 4.096 kB
+Step 1/16 : FROM ubuntu:14.04
+ ---> 67759a80360c
+Step 2/16 : MAINTAINER Ed Guy "edguy@eguy.org"
+ ---> Using cache
+ ---> 5a54eeef2fa0
+Step 3/16 : ENV DEBIAN_FRONTEND noninteractive
+ ---> Using cache
+ ---> 3e97998de43b
+Step 4/16 : ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+ ---> Using cache
+ ---> c29f4a1c13d0
+Step 5/16 : RUN apt-get -y update
+ ---> Using cache
+ ---> de530b426d20
+Step 6/16 : RUN apt-get -y upgrade
+ ---> Using cache
+ ---> 914d800e4b20
+Step 7/16 : RUN apt-get update && apt-get -y install screen telnet netcat-openbsd byobu wget vim unzip gcc g++ make sudo lsb-release net-tools
+ ---> Using cache
+ ---> 11dd64a2235d
+Step 8/16 : RUN apt-get update && apt-get -y install libpq-dev  unixodbc-dev odbc-postgresql postgresql-9.3 libunistring-dev
+ ---> Using cache
+ ---> 444ec47f8654
+Step 9/16 : RUN apt-get update && apt-get -y install openjdk-7-jdk ant libcommons-logging-java
+ ---> Using cache
+ ---> 632395e03c1b
+Step 10/16 : RUN test -e /usr/local/share/java || mkdir /usr/local/share/java
+ ---> Using cache
+ ---> e75dece0f166
+Step 11/16 : WORKDIR /home/opencog
+ ---> Using cache
+ ---> fc9e9f5cbb28
+Step 12/16 : RUN wget http://raw.github.com/opencog/ocpkg/master/ocpkg -O octool && chmod +rx octool
+ ---> Using cache
+ ---> 36c065a7f6d8
+Step 13/16 : RUN ./octool -rdp
+ ---> Using cache
+ ---> c25da910ddd9
+Step 14/16 : RUN useradd -ms /bin/bash  jenkins --uid 125
+ ---> Using cache
+ ---> b26f1162431e
+Step 15/16 : USER jenkins
+ ---> Using cache
+ ---> 22ef44b0ea42
+Step 16/16 : CMD tail -f /dev/null
+ ---> Using cache
+ ---> 03f8547218cf
+Successfully built 03f8547218cf
++ echo ******  CID=
+******  CID=
++ CIDFILENAME=/tmp/OpenCOG_U1404.cid
++ cleanupDockerContainers /tmp/OpenCOG_U1404.cid
++ CIDFILENAME=/tmp/OpenCOG_U1404.cid
++ [ -e /tmp/OpenCOG_U1404.cid ]
++ cat /tmp/OpenCOG_U1404.cid
++ CID=b4e897e7499a5073cc324abe53ae79467c1661b9d7753340fc8888761750813f
++ docker container kill b4e897e7499a5073cc324abe53ae79467c1661b9d7753340fc8888761750813f
+b4e897e7499a5073cc324abe53ae79467c1661b9d7753340fc8888761750813f
++ docker container rm b4e897e7499a5073cc324abe53ae79467c1661b9d7753340fc8888761750813f
+b4e897e7499a5073cc324abe53ae79467c1661b9d7753340fc8888761750813f
++ rm -f /tmp/OpenCOG_U1404.cid
++ cd ..
++ pwd
++ docker run --cidfile /tmp/OpenCOG_U1404.cid -v /var/lib/jenkins/workspace/OpenCOG_U1404:/home/opencog/opencog -w /home/opencog -d edguy/ocdock:latest tail -f /dev/null
+579bb8c40a268e0f94d009e13949796b50974159bbf7e442608da59917deda53
++ cat /tmp/OpenCOG_U1404.cid
++ CID=579bb8c40a268e0f94d009e13949796b50974159bbf7e442608da59917deda53
++ DKRUN=docker exec 579bb8c40a268e0f94d009e13949796b50974159bbf7e442608da59917deda53 
++ grep jenkins /etc/passwd
++ awk -F: {print $3}
++ UID=125
++ grep jenkins /etc/passwd
++ awk -F: {print $4}
++ GID=132
++ cat
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins3804338630433731885.sh
++ . build.docker/docker.env
++ CID=579bb8c40a268e0f94d009e13949796b50974159bbf7e442608da59917deda53
++ DKRUNROOT=docker exec --user root   579bb8c40a268e0f94d009e13949796b50974159bbf7e442608da59917deda53
++ DKRUNUSER=docker exec --user jenkins  579bb8c40a268e0f94d009e13949796b50974159bbf7e442608da59917deda53
 + UID=125
 + GID=132
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404_CogUtil/builds/13/log
 + cat
-
-
 **********************************************************
 **********************************************************
 **********************************************************
 **********************************************************
-*****                                                *****
-*****                  Cogutil TEST                *****
-*****                                                *****
+*****
+*****  opencog Setup 
+*****
 **********************************************************
 **********************************************************
 **********************************************************
 **********************************************************
 
++ echo **** 
+**** 
++ echo ****  579bb8c40a268e0f94d009e13949796b50974159bbf7e442608da59917deda53
+****  579bb8c40a268e0f94d009e13949796b50974159bbf7e442608da59917deda53
++ test -e dependencies
++ rm -fr dependencies/atomspace
++ git clone git@github.com:opencog/atomspace.git dependencies/atomspace
+Cloning into 'dependencies/atomspace'...
++ rm -fr dependencies/cogutil
++ git clone git@github.com:opencog/cogutil.git dependencies/cogutil
+Cloning into 'dependencies/cogutil'...
++ rm -fr dependencies/moses
++ git clone git@github.com:opencog/moses.git dependencies/moses
+Cloning into 'dependencies/moses'...
++ cat
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
+*****
+*****  guile Setup 
+*****
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
 
-+ echo GIT_COMMIT=
-GIT_COMMIT=
-+ echo GIT_BRANCH=
-GIT_BRANCH=
-+ echo GIT_URL=
-GIT_URL=
 + WDIR=opencog/dependencies/cogutil
-+ JOBDIR=../OpenCOG_U1404/dependencies
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/27/log
 + cat
-+ chmod +x ../OpenCOG_U1404/dependencies/job1
-+ docker exec --user jenkins 8e5b23cb3005a942deb994bc5a4cf624c00985588293b40afeb1c39643f1115f bash opencog/dependencies/job1
++ cat
++ chmod +x dependencies/job1
++ chmod +x dependencies/job2
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins1285078542193858642.sh
++ . build.docker/docker.env
++ CID=579bb8c40a268e0f94d009e13949796b50974159bbf7e442608da59917deda53
++ DKRUNROOT=docker exec --user root   579bb8c40a268e0f94d009e13949796b50974159bbf7e442608da59917deda53
++ DKRUNUSER=docker exec --user jenkins  579bb8c40a268e0f94d009e13949796b50974159bbf7e442608da59917deda53
++ UID=125
++ GID=132
++ cat
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
+*****
+*****  cogutil
+*****
+**********************************************************
+**********************************************************
+**********************************************************
+**********************************************************
+
++ WDIR=opencog/dependencies/cogutil
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/27/log
++ cat
++ cat
++ chmod +x dependencies/job1
++ chmod +x dependencies/job2
++ docker exec --user jenkins 579bb8c40a268e0f94d009e13949796b50974159bbf7e442608da59917deda53 bash opencog/dependencies/job1
+/home/opencog
+octool
+opencog
 + pwd
++ ls
++ cd opencog/dependencies/cogutil
++ rm -fr build
++ mkdir build
++ cd build
++ cmake ..
+-- The C compiler identification is GNU 4.8.4
+-- The CXX compiler identification is GNU 4.8.4
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Build type: Release
+-- Looking for include file bfd.h
+-- Looking for include file bfd.h - found
+-- Found libbfd: /usr/lib/libbfd.so
+-- Binutils found.
+-- Boost version: 1.54.0
+-- Found the following Boost libraries:
+--   date_time
+--   filesystem
+--   program_options
+--   regex
+--   serialization
+--   system
+--   thread
+-- Boost version 105400 found.
+-- Found PythonInterp: /usr/bin/python (found version "2.7.6") 
+-- Looking for include file libiberty.h
+-- Looking for include file libiberty.h - found
+-- Found libiberty: /usr/lib/x86_64-linux-gnu/libiberty.a
+-- Libiberty found.
+-- Could NOT find Doxygen (missing:  DOXYGEN_EXECUTABLE) 
+-- Doxygen not found, you won't be able to generate API documentation.
+
+The following components will be built:
+-----------------------------------------------
+   StackPrint  - Pretty printing of stack traces.
+   Unit tests  - Unit tests.
+   Util        - General utility library.
+
+The following components WILL NOT be built:
+-----------------------------------------------
+   Doxygen     - Code documentation.
+
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/opencog/opencog/dependencies/cogutil/build
++ make -j8
+Scanning dependencies of target cogutil
+[  5%] [ 15%] [ 15%] [ 21%] [ 26%] [ 31%] [ 36%] [ 42%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_normal_selector.cc.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/exceptions.cc.o
+Building C object opencog/util/CMakeFiles/cogutil.dir/backtrace-symbols.c.o
+Building C object opencog/util/CMakeFiles/cogutil.dir/cluster.c.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/ansi.cc.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/Config.cc.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_random_selector.cc.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/files.cc.o
+[ 47%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_selector.cc.o
+[ 52%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/log_prog_name.cc.o
+[ 57%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/Logger.cc.o
+[ 63%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/misc.cc.o
+[ 68%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/mt19937ar.cc.o
+[ 73%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/oc_assert.cc.o
+[ 78%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/oc_omp.cc.o
+[ 84%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/octime.cc.o
+[ 89%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/platform.cc.o
+[ 94%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/StringTokenizer.cc.o
+[100%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/tree.cc.o
+Linking CXX shared library libcogutil.so
+[100%] Built target cogutil
++ DSTATUS=BUILDPASS
++ docker exec --user root 579bb8c40a268e0f94d009e13949796b50974159bbf7e442608da59917deda53 bash opencog/dependencies/job2
 + cd opencog/dependencies/cogutil
 + cd build
-+ make -j8 test
-/home/opencog
-[ 43%] Built target cogutil
-[ 45%] [ 47%] [ 50%] [ 59%] [ 59%] [ 59%] [ 59%] [ 61%] Generating StringTokenizerUTest.cpp
-Generating lru_cacheUTest.cpp
-Generating iostreamContainerUTest.cpp
-Generating LoggerUTest.cpp
-Generating functionalUTest.cpp
-Generating rankingUTest.cpp
-Generating ConfigUTest.cpp
-Generating lazy_selectorUTest.cpp
-Scanning dependencies of target StringTokenizerUTest
-Scanning dependencies of target iostreamContainerUTest
-Scanning dependencies of target rankingUTest
-Scanning dependencies of target functionalUTest
-Scanning dependencies of target LoggerUTest
-Scanning dependencies of target ConfigUTest
-Scanning dependencies of target lazy_selectorUTest
-[ 63%] Scanning dependencies of target lru_cacheUTest
-[ 65%] [ 68%] Building CXX object tests/util/CMakeFiles/StringTokenizerUTest.dir/StringTokenizerUTest.cpp.o
-[ 70%] [ 72%] [ 77%] [ 77%] Building CXX object tests/util/CMakeFiles/iostreamContainerUTest.dir/iostreamContainerUTest.cpp.o
-[ 79%] Building CXX object tests/util/CMakeFiles/rankingUTest.dir/rankingUTest.cpp.o
-Building CXX object tests/util/CMakeFiles/functionalUTest.dir/functionalUTest.cpp.o
-Building CXX object tests/util/CMakeFiles/lazy_selectorUTest.dir/lazy_selectorUTest.cpp.o
-Building CXX object tests/util/CMakeFiles/ConfigUTest.dir/ConfigUTest.cpp.o
-Building CXX object tests/util/CMakeFiles/LoggerUTest.dir/LoggerUTest.cpp.o
-Building CXX object tests/util/CMakeFiles/lru_cacheUTest.dir/lru_cacheUTest.cpp.o
-Linking CXX executable StringTokenizerUTest
-[ 79%] Built target StringTokenizerUTest
-[ 81%] Generating KLDUTest.cpp
-Scanning dependencies of target KLDUTest
-[ 84%] Building CXX object tests/util/CMakeFiles/KLDUTest.dir/KLDUTest.cpp.o
-Linking CXX executable lazy_selectorUTest
-[ 84%] Built target lazy_selectorUTest
-[ 86%] Generating randomUTest.cpp
-Scanning dependencies of target randomUTest
-[ 88%] Building CXX object tests/util/CMakeFiles/randomUTest.dir/randomUTest.cpp.o
-Linking CXX executable ConfigUTest
-Linking CXX executable LoggerUTest
-[ 88%] Built target ConfigUTest
-[ 90%] Generating comprehensionUTest.cpp
-[ 90%] Built target LoggerUTest
-Scanning dependencies of target comprehensionUTest
-[ 93%] [ 95%] Generating CounterUTest.cpp
-Building CXX object tests/util/CMakeFiles/comprehensionUTest.dir/comprehensionUTest.cpp.o
-Scanning dependencies of target CounterUTest
-[ 97%] Building CXX object tests/util/CMakeFiles/CounterUTest.dir/CounterUTest.cpp.o
-Linking CXX executable rankingUTest
-[ 97%] Built target rankingUTest
-Linking CXX executable iostreamContainerUTest
-[ 97%] Built target iostreamContainerUTest
-Linking CXX executable functionalUTest
-[ 97%] Built target functionalUTest
-Linking CXX executable CounterUTest
-[ 97%] Built target CounterUTest
-Linking CXX executable KLDUTest
-[ 97%] Built target KLDUTest
-Linking CXX executable lru_cacheUTest
-[ 97%] Built target lru_cacheUTest
-Linking CXX executable randomUTest
-[ 97%] Built target randomUTest
-Linking CXX executable comprehensionUTest
-[ 97%] Built target comprehensionUTest
-Scanning dependencies of target tests
-[ 97%] Built target tests
-Scanning dependencies of target test
-[100%] Running tests...
-Test project /home/opencog/opencog/dependencies/cogutil/build/tests
-      Start  1: ConfigUTest
- 1/12 Test  #1: ConfigUTest ......................   Passed    0.00 sec
-      Start  2: LoggerUTest
- 2/12 Test  #2: LoggerUTest ......................   Passed    0.26 sec
-      Start  3: StringTokenizerUTest
- 3/12 Test  #3: StringTokenizerUTest .............   Passed    0.00 sec
-      Start  4: lazy_selectorUTest
- 4/12 Test  #4: lazy_selectorUTest ...............   Passed    0.00 sec
-      Start  5: lru_cacheUTest
- 5/12 Test  #5: lru_cacheUTest ...................   Passed    0.02 sec
-      Start  6: iostreamContainerUTest
- 6/12 Test  #6: iostreamContainerUTest ...........   Passed    0.00 sec
-      Start  7: functionalUTest
- 7/12 Test  #7: functionalUTest ..................   Passed    0.00 sec
-      Start  8: KLDUTest
- 8/12 Test  #8: KLDUTest .........................   Passed    3.40 sec
-      Start  9: randomUTest
- 9/12 Test  #9: randomUTest ......................   Passed    1.34 sec
-      Start 10: comprehensionUTest
-10/12 Test #10: comprehensionUTest ...............   Passed    0.00 sec
-      Start 11: CounterUTest
-11/12 Test #11: CounterUTest .....................   Passed    0.00 sec
-      Start 12: rankingUTest
-12/12 Test #12: rankingUTest .....................   Passed    0.00 sec
-
-100% tests passed, 0 tests failed out of 12
-
-Total Test time (real) =   5.05 sec
-[100%] Built target test
-+ DSTATUS=TESTPASS
-+ /var/lib/jenkins/status/updateStatus TESTPASS /var/lib/jenkins/jobs/OpenCOG_U1404_CogUtil/builds/13/log OpenCOG_U1404_CogUtil
++ make install
+[100%] Built target cogutil
+Install the project...
+-- Install configuration: "Release"
+-- Installing: /usr/local/include/opencog/util/ansi.h
+-- Installing: /usr/local/include/opencog/util/algorithm.h
+-- Installing: /usr/local/include/opencog/util/async_buffer.h
+-- Installing: /usr/local/include/opencog/util/async_method_caller.h
+-- Installing: /usr/local/include/opencog/util/backtrace-symbols.h
+-- Installing: /usr/local/include/opencog/util/based_variant.h
+-- Installing: /usr/local/include/opencog/util/cluster.h
+-- Installing: /usr/local/include/opencog/util/cogutil.h
+-- Installing: /usr/local/include/opencog/util/comprehension.h
+-- Installing: /usr/local/include/opencog/util/Config.h
+-- Installing: /usr/local/include/opencog/util/Counter.h
+-- Installing: /usr/local/include/opencog/util/Cover_Tree.h
+-- Installing: /usr/local/include/opencog/util/concurrent_queue.h
+-- Installing: /usr/local/include/opencog/util/concurrent_set.h
+-- Installing: /usr/local/include/opencog/util/concurrent_stack.h
+-- Installing: /usr/local/include/opencog/util/digraph.h
+-- Installing: /usr/local/include/opencog/util/dorepeat.h
+-- Installing: /usr/local/include/opencog/util/exceptions.h
+-- Installing: /usr/local/include/opencog/util/files.h
+-- Installing: /usr/local/include/opencog/util/functional.h
+-- Installing: /usr/local/include/opencog/util/hashing.h
+-- Installing: /usr/local/include/opencog/util/iostreamContainer.h
+-- Installing: /usr/local/include/opencog/util/KLD.h
+-- Installing: /usr/local/include/opencog/util/lazy_normal_selector.h
+-- Installing: /usr/local/include/opencog/util/lazy_random_selector.h
+-- Installing: /usr/local/include/opencog/util/lazy_selector.h
+-- Installing: /usr/local/include/opencog/util/log_prog_name.h
+-- Installing: /usr/local/include/opencog/util/Logger.h
+-- Installing: /usr/local/include/opencog/util/lru_cache.h
+-- Installing: /usr/local/include/opencog/util/macros.h
+-- Installing: /usr/local/include/opencog/util/MannWhitneyU.h
+-- Installing: /usr/local/include/opencog/util/misc.h
+-- Installing: /usr/local/include/opencog/util/mt19937ar.h
+-- Installing: /usr/local/include/opencog/util/numeric.h
+-- Installing: /usr/local/include/opencog/util/jaccard_index.h
+-- Installing: /usr/local/include/opencog/util/oc_assert.h
+-- Installing: /usr/local/include/opencog/util/oc_omp.h
+-- Installing: /usr/local/include/opencog/util/octime.h
+-- Installing: /usr/local/include/opencog/util/platform.h
+-- Installing: /usr/local/include/opencog/util/pool.h
+-- Installing: /usr/local/include/opencog/util/RandGen.h
+-- Installing: /usr/local/include/opencog/util/random.h
+-- Installing: /usr/local/include/opencog/util/ranking.h
+-- Installing: /usr/local/include/opencog/util/recent_val.h
+-- Installing: /usr/local/include/opencog/util/selection.h
+-- Installing: /usr/local/include/opencog/util/sigslot.h
+-- Installing: /usr/local/include/opencog/util/StringTokenizer.h
+-- Installing: /usr/local/include/opencog/util/tbb.h
+-- Installing: /usr/local/include/opencog/util/tree.h
+-- Installing: /usr/local/lib/libcogutil.so
+-- Set runtime path of "/usr/local/lib/libcogutil.so" to "/usr/local/lib/opencog"
+-- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean.h
+-- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean_mirror.h
++ DSTATUS=BUILDPASS
++ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1404/builds/27/log OpenCOG_U1404_CogUtil
 Already up-to-date.
 ~/status/jobs ~/status
