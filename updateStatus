@@ -68,8 +68,7 @@ cat >>README.md <<ZZZ
 for JOBNAME in $JOBS
 do
    echo -n '### ' $JOBNAME
-#   [ -e "jobs/$JOBNAME.log"       ] && grep 'tests passed' "jobs/$JOBNAME.log" | tail -20
-
+   [ -e "jobs/$JOBNAME.log"       ] && egrep '***(Failed|Exception)' "jobs/$JOBNAME.log" | tail -20 | pr -dt
 done
 
 ## Contributors
