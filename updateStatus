@@ -71,7 +71,7 @@ for JOBNAME in $JOBS
 do
    echo >>README.md
    echo -n '### ' $JOBNAME >>README.md
-   [ -e "jobs/$JOBNAME.log"       ] && egrep '***(Failed|Exception)' "jobs/$JOBNAME.log" | tail -20 | pr -dt >>README.md
+   [ -e "jobs/$JOBNAME.log"       ] && egrep '(***Failed|***Exception)' "jobs/$JOBNAME.log" | tail -20 | pr -dt >>README.md
    echo >>README.md
 done
 
