@@ -70,7 +70,7 @@ ZZZ
 for JOBNAME in $JOBS
 do
    echo -n '### ' $JOBNAME
-   [ -e "jobs/$JOBNAME.log"       ] && egrep '***(Failed|Exception)' "jobs/$JOBNAME.log" | tail -20 | pr -dt
+   [ -e "jobs/$JOBNAME.log"       ] && egrep '***(Failed|Exception)' "jobs/$JOBNAME.log" | tail -20 | pr -dt >>README.md
 done
 
 cat >>README.md <<ZZZ4

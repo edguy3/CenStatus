@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Tue Jan 16 21:27:35 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Tue Jan 16 21:33:40 EST 2018.
 
 ## Modules 
 
@@ -20,7 +20,7 @@ This file shows the status of public cen.ai tracked projects as of Tue Jan 16 21
 | [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | 98% tests passed, 2 tests failed out of 111 |  | 21:27 | 21:13  | 21:27 |
 | [OpenCOG_U1404_CogUtil](jobs/OpenCOG_U1404_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 20:47 |  | 21:12  | 21:12 |
 | [OpenCOG_U1404__Core_Build](jobs/OpenCOG_U1404__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 21:16  | 21:16 |
-| [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 20:47 |  | 21:15  | 21:15 |
+| [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 21:33 |  | 21:15  | 21:33 |
 | [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 20:50 | 21:16  | 21:16 |
 | [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  |  | 21:08 | 21:22  | 21:22 |
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 21:06 |  | 21:21  | 21:21 |
@@ -36,6 +36,38 @@ This file shows the status of public cen.ai tracked projects as of Tue Jan 16 21
 ( Times are currently EST/EDT GMT-5/-4) 
 
 ## Error Detail
+
+[ 88%] Generating NoExceptionUTest.cpp
+
+Scanning dependencies of target NoExceptionUTest
+
+[ 88%] Building CXX object tests/query/CMakeFiles/NoExceptionUTest.dir/NoExceptionUTest.cpp.o
+
+Linking CXX executable NoExceptionUTest
+
+[ 97%] Built target NoExceptionUTest
+
+ 41/111 Test  #41: BasicSCMUTest ....................***Failed    0.19 sec
+
+/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:150: Error: Test failed: Failed to eval a UTF-8 string
+
+/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:155: Error: Test failed: Failed to eval a UTF-8 string
+
+/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:169: Error: Test failed: Failed to create a node
+
+/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:173: Error: Test failed: Failed to find handle
+
+/home/opencog/opencog/dependencies/atomspace/tests/scm/BasicSCMUTest.cxxtest:176: Error: Test failed: Failed to find node
+
+Failed 2 and Skipped 0 of 15 tests
+
+        Start  95: NoExceptionUTest
+
+ 95/111 Test  #95: NoExceptionUTest .................   Passed    0.07 sec
+
+111/111 Test #111: CythonGuile ......................***Exception: SegFault  0.17 sec
+
+	 41 - BasicSCMUTest (Failed)
 
 
 ## Contributors
