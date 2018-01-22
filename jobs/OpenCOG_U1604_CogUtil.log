@@ -1,628 +1,143 @@
 Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
-Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1604
- > git rev-parse --is-inside-work-tree # timeout=10
-Fetching changes from the remote Git repository
- > git config remote.origin.url git@github.com:opencog/opencog.git # timeout=10
-Fetching upstream changes from git@github.com:opencog/opencog.git
- > git --version # timeout=10
-using GIT_SSH to set credentials 103jenk
- > git fetch --tags --progress git@github.com:opencog/opencog.git +refs/heads/*:refs/remotes/origin/*
- > git rev-parse refs/remotes/origin/master^{commit} # timeout=10
- > git rev-parse refs/remotes/origin/origin/master^{commit} # timeout=10
-Checking out Revision 1973e4e29a36b9b68d366aefead5b852c8ea5578 (refs/remotes/origin/master)
- > git config core.sparsecheckout # timeout=10
- > git checkout -f 1973e4e29a36b9b68d366aefead5b852c8ea5578
-Commit message: "Merge pull request #2982 from rTreutlein/UpstreamMaster"
- > git rev-list --no-walk 1973e4e29a36b9b68d366aefead5b852c8ea5578 # timeout=10
-[OpenCOG_U1604] $ /bin/sh -xe /tmp/jenkins1804202875772928356.sh
-+ pwd
-/var/lib/jenkins/workspace/OpenCOG_U1604
-+ whoami
-jenkins
-+ rm -fr build.docker
-+ mkdir build.docker
-+ cd build.docker
-+ cp /home/edguy/OCDOCK/DOCKER.OpenCOG_U1604 docker.buildfile
-+ docker build -f docker.buildfile -t edguy/opencog:OpenCOG_U1604 .
-Sending build context to Docker daemon 4.096 kB
-Step 1/21 : FROM ubuntu:16.04
- ---> 2a4cca5ac898
-Step 2/21 : MAINTAINER Ed Guy "edguy@eguy.org"
- ---> Using cache
- ---> 05f1342d5592
-Step 3/21 : ENV DEBIAN_FRONTEND noninteractive
- ---> Using cache
- ---> 8bd6968097fc
-Step 4/21 : ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
- ---> Using cache
- ---> 33046b2f8462
-Step 5/21 : RUN apt-get -y update && apt-get -y upgrade
- ---> Using cache
- ---> 7980d5d3d675
-Step 6/21 : RUN apt-get update && apt-get -y install screen telnet netcat-openbsd byobu wget vim unzip gcc g++ make sudo lsb-release net-tools
- ---> Using cache
- ---> 0e69c62f025f
-Step 7/21 : RUN apt-get update && apt-get -y install openjdk-8-jdk ant libcommons-logging-java
- ---> Using cache
- ---> eb43bbfd4e09
-Step 8/21 : RUN test -e /usr/local/share/java || mkdir /usr/local/share/java
- ---> Using cache
- ---> 0d7225615af5
-Step 9/21 : WORKDIR /home/opencog
- ---> Using cache
- ---> cf00b6c1b721
-Step 10/21 : RUN wget http://raw.github.com/opencog/ocpkg/master/ocpkg -O octool && chmod +rx octool
- ---> Using cache
- ---> 02a25c69d342
-Step 11/21 : RUN apt-get update && apt-get -y install build-essential  cmake  cxxtest  rlwrap  guile-2.0-dev  libiberty-dev  libicu-dev  libbz2-dev  cython  python-dev  python-zmq  python-simplejson  libboost-date-time-dev  libboost-filesystem-dev  libboost-math-dev  libboost-program-options-dev  libboost-regex-dev  libboost-serialization-dev  libboost-thread-dev  libboost-system-dev  libboost-random-dev  libzmq3-dev  libtbb-dev  binutils-dev  unixodbc-dev  libpq-dev uuid-dev  libprotoc-dev  protobuf-compiler  libsdl-gfx1.2-dev  libssl-dev  tcl-dev  tcsh  libfreetype6-dev  libatlas-base-dev  gfortran  gearman  libgearman-dev  ccache  libgsasl7  libldap2-dev  krb5-multidev  wordnet  wordnet-dev  wordnet-sense-index
- ---> Using cache
- ---> 13c9a0cb08bb
-Step 12/21 : RUN apt-get update && apt-get -y install unixodbc odbc-postgresql postgresql-client
- ---> Using cache
- ---> 5a3a35011f9a
-Step 13/21 : RUN apt-get update && apt-get -y install python-pip git
- ---> Using cache
- ---> 202fb711fe3c
-Step 14/21 : RUN apt-get update && apt-get -y install libcpprest  #1604
- ---> Using cache
- ---> 6018486ca0a8
-Step 15/21 : RUN apt-get update && apt-get -y install doxygen
- ---> Using cache
- ---> aafabf13de0f
-Step 16/21 : RUN apt-get update && apt-get -y install fonts-lyx python-cairo python-decorator python-glade2 python-gobject-2 python-gtk2 python-imaging python-matplotlib python-matplotlib-data python-numpy python-pyparsing python-scipy python-tk python-tz
- ---> Using cache
- ---> 2e81d0247b3d
-Step 17/21 : RUN useradd -ms /bin/bash  jenkins --uid 125 && echo "jenkins:jenkins" | chpasswd && adduser jenkins sudo
- ---> Using cache
- ---> 1264d81132b3
-Step 18/21 : RUN echo "jenkins	ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
- ---> Using cache
- ---> 77b5879022b6
-Step 19/21 : RUN chown jenkins:jenkins /home/opencog /home/opencog/octool
- ---> Using cache
- ---> 66e36be38226
-Step 20/21 : USER jenkins
- ---> Using cache
- ---> 43604b973566
-Step 21/21 : CMD tail -f /dev/null
- ---> Using cache
- ---> e3acb8b7b6e5
-Successfully built e3acb8b7b6e5
-+ echo ******  CID=
-******  CID=
-+ CIDFILENAME=/tmp/OpenCOG_U1604.cid
-+ cleanupDockerContainers /tmp/OpenCOG_U1604.cid
-+ CIDFILENAME=/tmp/OpenCOG_U1604.cid
-+ [ -e /tmp/OpenCOG_U1604.cid ]
-+ cat /tmp/OpenCOG_U1604.cid
-+ CID=6c7ea918b56027719dfe81a4604f7249b9600ef2d8d84c28015872150befd149
-+ docker container kill 6c7ea918b56027719dfe81a4604f7249b9600ef2d8d84c28015872150befd149
-6c7ea918b56027719dfe81a4604f7249b9600ef2d8d84c28015872150befd149
-+ docker container rm 6c7ea918b56027719dfe81a4604f7249b9600ef2d8d84c28015872150befd149
-6c7ea918b56027719dfe81a4604f7249b9600ef2d8d84c28015872150befd149
-+ rm -f /tmp/OpenCOG_U1604.cid
-+ docker run --cidfile /tmp/OpenCOG_U1604.cid -v /var/lib/jenkins/workspace/OpenCOG_U1604/dependencies:/home/opencog/dependencies -w /home/opencog -d edguy/opencog:OpenCOG_U1604 tail -f /dev/null
-d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04
-+ cat /tmp/OpenCOG_U1604.cid
-+ CID=d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04
-+ DKRUN=docker exec d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04 
-+ grep jenkins /etc/passwd
-+ awk -F: {print $3}
-+ UID=125
-+ grep jenkins /etc/passwd
-+ awk -F: {print $4}
-+ GID=132
-+ cat
-[OpenCOG_U1604] $ /bin/sh -xe /tmp/jenkins6239822037602476600.sh
-+ . build.docker/docker.env
+Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1604_CogUtil
+[OpenCOG_U1604_CogUtil] $ /bin/sh -xe /tmp/jenkins4319845483381012297.sh
++ COGDIR=../OpenCOG_U1604
++ . ../OpenCOG_U1604/build.docker/docker.env
 + CID=d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04
 + DKRUNROOT=docker exec --user root   d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04
 + DKRUNUSER=docker exec --user jenkins  d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04
 + UID=125
 + GID=132
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/19/log
 + cat
+
+
 **********************************************************
 **********************************************************
 **********************************************************
 **********************************************************
-*****
-*****  Machine Setup 
-*****
+*****                                                *****
+*****                  Cogutil TEST                *****
+*****                                                *****
 **********************************************************
 **********************************************************
 **********************************************************
 **********************************************************
 
-+ cat
-+ chmod +x dependencies/job1
-+ docker exec --user jenkins d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04 bash dependencies/job1
-+ wget http://raw.github.com/opencog/ocpkg/master/ocpkg -O octool
---2018-01-22 03:47:25--  http://raw.github.com/opencog/ocpkg/master/ocpkg
-Resolving raw.github.com (raw.github.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
-Connecting to raw.github.com (raw.github.com)|151.101.0.133|:80... connected.
-HTTP request sent, awaiting response... 301 Moved Permanently
-Location: https://raw.github.com/opencog/ocpkg/master/ocpkg [following]
---2018-01-22 03:47:25--  https://raw.github.com/opencog/ocpkg/master/ocpkg
-Connecting to raw.github.com (raw.github.com)|151.101.0.133|:443... connected.
-HTTP request sent, awaiting response... 301 Moved Permanently
-Location: https://raw.githubusercontent.com/opencog/ocpkg/master/ocpkg [following]
---2018-01-22 03:47:25--  https://raw.githubusercontent.com/opencog/ocpkg/master/ocpkg
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 38387 (37K) [text/plain]
-Saving to: 'octool'
 
-     0K .......... .......... .......... .......              100% 1.79M=0.02s
-
-2018-01-22 03:47:26 (1.79 MB/s) - 'octool' saved [38387/38387]
-
-+ chmod +rx octool
-+ ./octool -rdp
-[1;34m[octool] Adding software repositories...[0m
-Executing: /tmp/tmp.LGtHdTH10I/gpg.1.sh --keyserver
-hkp://ha.pool.sks-keyservers.net:80
---recv-key
-421C365BD9FF1F717815A3895523BAEEB01FA116
-gpg: requesting key B01FA116 from hkp server ha.pool.sks-keyservers.net
-gpg: key B01FA116: public key "ROS Builder <rosbuild@ros.org>" imported
-gpg: Total number processed: 1
-gpg:               imported: 1
-Hit:1 http://security.ubuntu.com/ubuntu xenial-security InRelease
-Hit:2 http://archive.ubuntu.com/ubuntu xenial InRelease
-Hit:3 http://archive.ubuntu.com/ubuntu xenial-updates InRelease
-Get:4 http://packages.ros.org/ros/ubuntu xenial InRelease [4037 B]
-Hit:5 http://archive.ubuntu.com/ubuntu xenial-backports InRelease
-Get:6 http://packages.ros.org/ros/ubuntu xenial/main amd64 Packages [518 kB]
-Fetched 522 kB in 1s (383 kB/s)
-Reading package lists...
-[1;34m[octool] Installing OpenCog build dependencies....[0m
-Reading package lists...
-Building dependency tree...
-Reading state information...
-Skipping build-essential, it is already installed and upgrade is not set.
-Skipping ccache, it is already installed and upgrade is not set.
-Skipping gfortran, it is already installed and upgrade is not set.
-Skipping guile-2.0-dev, it is already installed and upgrade is not set.
-Skipping libboost-program-options-dev, it is already installed and upgrade is not set.
-Skipping libbz2-dev, it is already installed and upgrade is not set.
-Skipping libprotoc-dev, it is already installed and upgrade is not set.
-Skipping protobuf-compiler, it is already installed and upgrade is not set.
-Skipping python-dev, it is already installed and upgrade is not set.
-Skipping python-simplejson, it is already installed and upgrade is not set.
-Skipping tcl-dev, it is already installed and upgrade is not set.
-Skipping unixodbc, it is already installed and upgrade is not set.
-Skipping unixodbc-dev, it is already installed and upgrade is not set.
-Skipping cxxtest, it is already installed and upgrade is not set.
-Skipping cython, it is already installed and upgrade is not set.
-Skipping gearman, it is already installed and upgrade is not set.
-Skipping libatlas-base-dev, it is already installed and upgrade is not set.
-Skipping libboost-date-time-dev, it is already installed and upgrade is not set.
-Skipping libboost-filesystem-dev, it is already installed and upgrade is not set.
-Skipping libboost-math-dev, it is already installed and upgrade is not set.
-Skipping libboost-random-dev, it is already installed and upgrade is not set.
-Skipping libboost-regex-dev, it is already installed and upgrade is not set.
-Skipping libboost-serialization-dev, it is already installed and upgrade is not set.
-Skipping libboost-system-dev, it is already installed and upgrade is not set.
-Skipping libboost-thread-dev, it is already installed and upgrade is not set.
-Skipping libgearman-dev, it is already installed and upgrade is not set.
-Skipping libgsasl7, it is already installed and upgrade is not set.
-Skipping libsdl-gfx1.2-dev, it is already installed and upgrade is not set.
-Skipping libtbb-dev, it is already installed and upgrade is not set.
-Skipping libzmq3-dev, it is already installed and upgrade is not set.
-Skipping odbc-postgresql, it is already installed and upgrade is not set.
-Skipping python-zmq, it is already installed and upgrade is not set.
-Skipping rlwrap, it is already installed and upgrade is not set.
-Skipping tcsh, it is already installed and upgrade is not set.
-Skipping wordnet, it is already installed and upgrade is not set.
-Skipping wordnet-dev, it is already installed and upgrade is not set.
-Skipping wordnet-sense-index, it is already installed and upgrade is not set.
-Skipping binutils-dev, it is already installed and upgrade is not set.
-Skipping cmake, it is already installed and upgrade is not set.
-Skipping git, it is already installed and upgrade is not set.
-Skipping krb5-multidev, it is already installed and upgrade is not set.
-Skipping libfreetype6-dev, it is already installed and upgrade is not set.
-Skipping libiberty-dev, it is already installed and upgrade is not set.
-Skipping libicu-dev, it is already installed and upgrade is not set.
-Skipping libldap2-dev, it is already installed and upgrade is not set.
-Skipping libpq-dev, it is already installed and upgrade is not set.
-Skipping libssl-dev, it is already installed and upgrade is not set.
-Skipping postgresql-client, it is already installed and upgrade is not set.
-Skipping uuid-dev, it is already installed and upgrade is not set.
-Skipping python-pip, it is already installed and upgrade is not set.
-The following additional packages will be installed:
-  liboctomap1.6v5
-The following NEW packages will be installed:
-  liboctomap-dev liboctomap1.6v5
-0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
-Need to get 1078 kB of archives.
-After this operation, 9129 kB of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu xenial/universe amd64 liboctomap1.6v5 amd64 1.6.8+dfsg-2.1 [77.2 kB]
-Get:2 http://archive.ubuntu.com/ubuntu xenial/universe amd64 liboctomap-dev amd64 1.6.8+dfsg-2.1 [1001 kB]
-debconf: delaying package configuration, since apt-utils is not installed
-Fetched 1078 kB in 0s (1265 kB/s)
-Selecting previously unselected package liboctomap1.6v5.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 50384 files and directories currently installed.)
-Preparing to unpack .../liboctomap1.6v5_1.6.8+dfsg-2.1_amd64.deb ...
-Unpacking liboctomap1.6v5 (1.6.8+dfsg-2.1) ...
-Selecting previously unselected package liboctomap-dev.
-Preparing to unpack .../liboctomap-dev_1.6.8+dfsg-2.1_amd64.deb ...
-Unpacking liboctomap-dev (1.6.8+dfsg-2.1) ...
-Setting up liboctomap1.6v5 (1.6.8+dfsg-2.1) ...
-Setting up liboctomap-dev (1.6.8+dfsg-2.1) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Reading package lists...
-Building dependency tree...
-Reading state information...
-libcpprest2.8 is already the newest version (2.8.0-2).
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-[1;34m[octool] Installing python packages....[0m
---2018-01-22 03:47:31--  https://raw.githubusercontent.com/opencog/opencog/master/opencog/python/requirements.txt
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 148 [text/plain]
-Saving to: 'requirements.txt'
-
-     0K                                                       100% 9.77M=0s
-
-2018-01-22 03:47:31 (9.77 MB/s) - 'requirements.txt' saved [148/148]
-
-The directory '/home/jenkins/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
-The directory '/home/jenkins/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
-Collecting pip
-  Downloading pip-9.0.1-py2.py3-none-any.whl (1.3MB)
-Installing collected packages: pip
-  Found existing installation: pip 8.1.1
-    Not uninstalling pip at /usr/lib/python2.7/dist-packages, outside environment /usr
-Successfully installed pip-9.0.1
-The directory '/home/jenkins/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
-The directory '/home/jenkins/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
-Collecting requests==2.2
-  Downloading requests-2.2.0-py2.py3-none-any.whl (623kB)
-Collecting argparse
-  Downloading argparse-1.4.0-py2.py3-none-any.whl
-Collecting nose
-  Downloading nose-1.3.7-py2-none-any.whl (154kB)
-Collecting pyparsing
-  Downloading pyparsing-2.2.0-py2.py3-none-any.whl (56kB)
-Collecting python-dateutil
-  Downloading python_dateutil-2.6.1-py2.py3-none-any.whl (194kB)
-Collecting Flask
-  Downloading Flask-0.12.2-py2.py3-none-any.whl (83kB)
-Collecting flask-restful
-  Downloading Flask_RESTful-0.3.6-py2.py3-none-any.whl
-Collecting flask-restful-swagger
-  Downloading flask-restful-swagger-0.19.tar.gz (162kB)
-Collecting flask-cors
-  Downloading Flask_Cors-3.0.3-py2.py3-none-any.whl
-Collecting mock
-  Downloading mock-2.0.0-py2.py3-none-any.whl (56kB)
-Collecting six
-  Downloading six-1.11.0-py2.py3-none-any.whl
-Collecting graphviz
-  Downloading graphviz-0.8.2-py2.py3-none-any.whl
-Collecting Jinja2>=2.4 (from Flask)
-  Downloading Jinja2-2.10-py2.py3-none-any.whl (126kB)
-Collecting Werkzeug>=0.7 (from Flask)
-  Downloading Werkzeug-0.14.1-py2.py3-none-any.whl (322kB)
-Collecting click>=2.0 (from Flask)
-  Downloading click-6.7-py2.py3-none-any.whl (71kB)
-Collecting itsdangerous>=0.21 (from Flask)
-  Downloading itsdangerous-0.24.tar.gz (46kB)
-Collecting aniso8601>=0.82 (from flask-restful)
-  Downloading aniso8601-2.0.0.tar.gz (61kB)
-Collecting pytz (from flask-restful)
-  Downloading pytz-2017.3-py2.py3-none-any.whl (511kB)
-Collecting pbr>=0.11 (from mock)
-  Downloading pbr-3.1.1-py2.py3-none-any.whl (99kB)
-Collecting funcsigs>=1; python_version < "3.3" (from mock)
-  Downloading funcsigs-1.0.2-py2.py3-none-any.whl
-Collecting MarkupSafe>=0.23 (from Jinja2>=2.4->Flask)
-  Downloading MarkupSafe-1.0.tar.gz
-Installing collected packages: requests, argparse, nose, pyparsing, six, python-dateutil, MarkupSafe, Jinja2, Werkzeug, click, itsdangerous, Flask, aniso8601, pytz, flask-restful, flask-restful-swagger, flask-cors, pbr, funcsigs, mock, graphviz
-  Found existing installation: argparse 1.2.1
-    Not uninstalling argparse at /usr/lib/python2.7, as it is in the standard library.
-  Found existing installation: pyparsing 2.0.3
-    Uninstalling pyparsing-2.0.3:
-      Successfully uninstalled pyparsing-2.0.3
-  Found existing installation: six 1.10.0
-    Uninstalling six-1.10.0:
-      Successfully uninstalled six-1.10.0
-  Found existing installation: python-dateutil 2.4.2
-    Uninstalling python-dateutil-2.4.2:
-      Successfully uninstalled python-dateutil-2.4.2
-  Running setup.py install for MarkupSafe: started
-    Running setup.py install for MarkupSafe: finished with status 'done'
-  Running setup.py install for itsdangerous: started
-    Running setup.py install for itsdangerous: finished with status 'done'
-  Running setup.py install for aniso8601: started
-    Running setup.py install for aniso8601: finished with status 'done'
-  Found existing installation: pytz 2014.10
-    Uninstalling pytz-2014.10:
-      Successfully uninstalled pytz-2014.10
-  Running setup.py install for flask-restful-swagger: started
-    Running setup.py install for flask-restful-swagger: finished with status 'done'
-Successfully installed Flask-0.12.2 Jinja2-2.10 MarkupSafe-1.0 Werkzeug-0.14.1 aniso8601-2.0.0 argparse-1.4.0 click-6.7 flask-cors-3.0.3 flask-restful-0.3.6 flask-restful-swagger-0.19 funcsigs-1.0.2 graphviz-0.8.2 itsdangerous-0.24 mock-2.0.0 nose-1.3.7 pbr-3.1.1 pyparsing-2.2.0 python-dateutil-2.6.1 pytz-2017.3 requests-2.2.0 six-1.11.0
-Reading package lists...
-Building dependency tree...
-Reading state information...
-python is already the newest version (2.7.11-1).
-python set to manually installed.
-python-numpy is already the newest version (1:1.11.0-1ubuntu1).
-python-matplotlib is already the newest version (1.5.1-1ubuntu1).
-python-scipy is already the newest version (0.17.0-1).
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-The directory '/home/jenkins/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
-The directory '/home/jenkins/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
-Collecting pyyaml
-  Downloading PyYAML-3.12.tar.gz (253kB)
-Collecting nltk
-  Downloading nltk-3.2.5.tar.gz (1.2MB)
-Requirement already up-to-date: six in /usr/local/lib/python2.7/dist-packages (from nltk)
-Installing collected packages: pyyaml, nltk
-  Running setup.py install for pyyaml: started
-    Running setup.py install for pyyaml: finished with status 'done'
-  Running setup.py install for nltk: started
-    Running setup.py install for nltk: finished with status 'done'
-Successfully installed nltk-3.2.5 pyyaml-3.12
-[nltk_data] Downloading package punkt to /usr/local/share/nltk_data...
-[nltk_data]   Unzipping tokenizers/punkt.zip.
-[nltk_data] Downloading package averaged_perceptron_tagger to
-[nltk_data]     /usr/local/share/nltk_data...
-[nltk_data]   Unzipping taggers/averaged_perceptron_tagger.zip.
-+ sudo apt-get upgrade
-Reading package lists...
-Building dependency tree...
-Reading state information...
-Calculating upgrade...
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-+ DSTATUS=BUILDPASS
-+ echo DSTATUS is BUILDPASS
-DSTATUS is BUILDPASS
-+ [ BUILDPASS = BUILDPASS ]
-+ cat
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-*****
-*****  opencog Setup 
-*****
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-
-+ echo **** 
-**** 
-+ echo ****  d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04
-****  d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04
-+ cat
-+ docker exec --user jenkins d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04 bash dependencies/job1
-+ git clone https://github.com/opencog/opencog.git
-Cloning into 'opencog'...
-+ git clone https://github.com/opencog/atomspace.git
-Cloning into 'atomspace'...
-+ git clone https://github.com/opencog/cogutil.git
-Cloning into 'cogutil'...
-+ git clone https://github.com/opencog/moses.git
-Cloning into 'moses'...
-+ DSTATUS=BUILDPASS
-+ echo DSTATUS is BUILDPASS
-DSTATUS is BUILDPASS
-+ [ BUILDPASS = BUILDPASS ]
-+ curl -X POST --insecure --netrc https://10.0.0.103:8480/job/OpenCOG_U1604_CogUtil/build
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-+ cat
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-*****
-*****  guile Setup 
-*****
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604/builds/100/log
-+ GUILEVERSION=opencog
-+ cat
-[OpenCOG_U1604] $ /bin/sh -xe /tmp/jenkins4516692919020664996.sh
-+ . build.docker/docker.env
-+ CID=d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04
-+ DKRUNROOT=docker exec --user root   d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04
-+ DKRUNUSER=docker exec --user jenkins  d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04
-+ UID=125
-+ GID=132
-+ cat
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-*****
-*****  cogutil BUILD
-*****
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-
++ echo GIT_COMMIT=
+GIT_COMMIT=
++ echo GIT_BRANCH=
+GIT_BRANCH=
++ echo GIT_URL=
+GIT_URL=
 + WDIR=cogutil
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604/builds/100/log
++ JOBDIR=../OpenCOG_U1604/dependencies
 + cat
-+ chmod +x dependencies/job1
++ chmod +x ../OpenCOG_U1604/dependencies/job1
 + docker exec --user jenkins d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04 bash dependencies/job1
-/home/opencog
-atomspace
-cogutil
-dependencies
-moses
-octool
-opencog
-* master
-commit e8d77ff4a98cfdbb952c0a058a44410bfdce2d7c
-Merge: b79fb16 43af5d6
-Author: ngeiswei <ngeiswei@gmail.com>
-Date:   Tue Jan 16 10:24:56 2018 +0200
-
-    Merge pull request #103 from ngeiswei/fix-forest-ctor
-    
-    Fix forests constructor
-
-commit 43af5d61de97d9c95e9389f16a284aa83b0f18b9
 + pwd
-+ ls
 + cd cogutil
-+ git branch
-+ git log
-+ head
-+ rm -fr build
-+ mkdir build
 + cd build
-+ cmake ..
--- The C compiler identification is GNU 5.4.0
--- The CXX compiler identification is GNU 5.4.0
--- Check for working C compiler: /usr/bin/cc
--- Check for working C compiler: /usr/bin/cc -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: /usr/bin/c++
--- Check for working CXX compiler: /usr/bin/c++ -- works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Build type: Release
--- Looking for include file bfd.h
--- Looking for include file bfd.h - found
--- Found libbfd: /usr/lib/x86_64-linux-gnu/libbfd.so
--- Binutils found.
--- Looking for pthread.h
--- Looking for pthread.h - found
--- Looking for pthread_create
--- Looking for pthread_create - not found
--- Looking for pthread_create in pthreads
--- Looking for pthread_create in pthreads - not found
--- Looking for pthread_create in pthread
--- Looking for pthread_create in pthread - found
--- Found Threads: TRUE  
--- Boost version: 1.58.0
--- Found the following Boost libraries:
---   date_time
---   filesystem
---   program_options
---   regex
---   serialization
---   system
---   thread
---   chrono
---   atomic
--- Boost version 105800 found.
--- Found PythonInterp: /usr/bin/python (found version "2.7.12") 
--- Looking for include file libiberty.h
--- Looking for include file libiberty.h - found
--- Found libiberty: /usr/lib/x86_64-linux-gnu/libiberty.a
--- Libiberty found.
--- Found Doxygen: /usr/bin/doxygen (found version "1.8.11") 
++ make -j8 test
+/home/opencog
+[ 35%] Built target cogutil
+[ 38%] Generating comprehensionUTest.cpp
+[ 38%] Generating StringTokenizerUTest.cpp
+[ 40%] Generating rankingUTest.cpp
+[ 43%] Generating lru_cacheUTest.cpp
+[ 43%] Generating LoggerUTest.cpp
+[ 45%] Generating KLDUTest.cpp
+[ 47%] Generating CounterUTest.cpp
+[ 49%] Generating functionalUTest.cpp
+Scanning dependencies of target rankingUTest
+Scanning dependencies of target lru_cacheUTest
+Scanning dependencies of target KLDUTest
+Scanning dependencies of target functionalUTest
+Scanning dependencies of target comprehensionUTest
+Scanning dependencies of target StringTokenizerUTest
+Scanning dependencies of target LoggerUTest
+Scanning dependencies of target CounterUTest
+[ 50%] Building CXX object tests/util/CMakeFiles/rankingUTest.dir/rankingUTest.cpp.o
+[ 52%] Building CXX object tests/util/CMakeFiles/functionalUTest.dir/functionalUTest.cpp.o
+[ 54%] Building CXX object tests/util/CMakeFiles/comprehensionUTest.dir/comprehensionUTest.cpp.o
+[ 56%] Building CXX object tests/util/CMakeFiles/StringTokenizerUTest.dir/StringTokenizerUTest.cpp.o
+[ 57%] Building CXX object tests/util/CMakeFiles/KLDUTest.dir/KLDUTest.cpp.o
+[ 59%] Building CXX object tests/util/CMakeFiles/LoggerUTest.dir/LoggerUTest.cpp.o
+[ 61%] Building CXX object tests/util/CMakeFiles/lru_cacheUTest.dir/lru_cacheUTest.cpp.o
+[ 63%] Building CXX object tests/util/CMakeFiles/CounterUTest.dir/CounterUTest.cpp.o
+[ 64%] Linking CXX executable StringTokenizerUTest
+[ 64%] Built target StringTokenizerUTest
+[ 66%] Generating iostreamContainerUTest.cpp
+Scanning dependencies of target iostreamContainerUTest
+[ 68%] Building CXX object tests/util/CMakeFiles/iostreamContainerUTest.dir/iostreamContainerUTest.cpp.o
+[ 70%] Linking CXX executable LoggerUTest
+[ 70%] Built target LoggerUTest
+[ 71%] Generating ConfigUTest.cpp
+Scanning dependencies of target ConfigUTest
+[ 73%] Building CXX object tests/util/CMakeFiles/ConfigUTest.dir/ConfigUTest.cpp.o
+[ 75%] Linking CXX executable rankingUTest
+[ 77%] Linking CXX executable CounterUTest
+[ 77%] Built target rankingUTest
+[ 78%] Generating randomUTest.cpp
+Scanning dependencies of target randomUTest
+[ 80%] Building CXX object tests/util/CMakeFiles/randomUTest.dir/randomUTest.cpp.o
+[ 80%] Built target CounterUTest
+[ 82%] Generating lazy_selectorUTest.cpp
+Scanning dependencies of target lazy_selectorUTest
+[ 84%] Building CXX object tests/util/CMakeFiles/lazy_selectorUTest.dir/lazy_selectorUTest.cpp.o
+[ 85%] Linking CXX executable functionalUTest
+[ 85%] Built target functionalUTest
+[ 87%] Linking CXX executable KLDUTest
+[ 87%] Built target KLDUTest
+[ 89%] Linking CXX executable ConfigUTest
+[ 89%] Built target ConfigUTest
+[ 91%] Linking CXX executable lazy_selectorUTest
+[ 92%] Linking CXX executable iostreamContainerUTest
+[ 92%] Built target lazy_selectorUTest
+[ 92%] Built target iostreamContainerUTest
+[ 94%] Linking CXX executable comprehensionUTest
+[ 96%] Linking CXX executable lru_cacheUTest
+[ 96%] Built target comprehensionUTest
+[ 96%] Built target lru_cacheUTest
+[ 98%] Linking CXX executable randomUTest
+[ 98%] Built target randomUTest
+Scanning dependencies of target tests
+[ 98%] Built target tests
+Scanning dependencies of target test
+[100%] Running tests...
+Test project /home/opencog/cogutil/build/tests
+      Start  1: ConfigUTest
+ 1/12 Test  #1: ConfigUTest ......................   Passed    0.00 sec
+      Start  2: LoggerUTest
+ 2/12 Test  #2: LoggerUTest ......................   Passed    0.86 sec
+      Start  3: StringTokenizerUTest
+ 3/12 Test  #3: StringTokenizerUTest .............   Passed    0.00 sec
+      Start  4: lazy_selectorUTest
+ 4/12 Test  #4: lazy_selectorUTest ...............   Passed    0.00 sec
+      Start  5: lru_cacheUTest
+ 5/12 Test  #5: lru_cacheUTest ...................   Passed    0.00 sec
+      Start  6: iostreamContainerUTest
+ 6/12 Test  #6: iostreamContainerUTest ...........   Passed    0.00 sec
+      Start  7: functionalUTest
+ 7/12 Test  #7: functionalUTest ..................   Passed    0.00 sec
+      Start  8: KLDUTest
+ 8/12 Test  #8: KLDUTest .........................   Passed    3.53 sec
+      Start  9: randomUTest
+ 9/12 Test  #9: randomUTest ......................   Passed    1.45 sec
+      Start 10: comprehensionUTest
+10/12 Test #10: comprehensionUTest ...............   Passed    0.00 sec
+      Start 11: CounterUTest
+11/12 Test #11: CounterUTest .....................   Passed    0.00 sec
+      Start 12: rankingUTest
+12/12 Test #12: rankingUTest .....................   Passed    0.00 sec
 
-The following components will be built:
------------------------------------------------
-   Doxygen     - Code documentation.
-   StackPrint  - Pretty printing of stack traces.
-   Unit tests  - Unit tests.
-   Util        - General utility library.
+100% tests passed, 0 tests failed out of 12
 
--- Configuring done
--- Generating done
--- Build files have been written to: /home/opencog/cogutil/build
-+ make -j8
-Scanning dependencies of target cogutil
-[ 15%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/ansi.cc.o
-[ 15%] Building C object opencog/util/CMakeFiles/cogutil.dir/backtrace-symbols.c.o
-[ 15%] Building C object opencog/util/CMakeFiles/cogutil.dir/cluster.c.o
-[ 20%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/Config.cc.o
-[ 25%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/exceptions.cc.o
-[ 30%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_normal_selector.cc.o
-[ 35%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/files.cc.o
-[ 40%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_random_selector.cc.o
-[ 45%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_selector.cc.o
-[ 50%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/log_prog_name.cc.o
-[ 55%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/Logger.cc.o
-[ 60%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/misc.cc.o
-[ 65%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/mt19937ar.cc.o
-[ 70%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/oc_assert.cc.o
-[ 75%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/oc_omp.cc.o
-[ 80%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/octime.cc.o
-[ 85%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/platform.cc.o
-[ 90%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/StringTokenizer.cc.o
-[ 95%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/tree.cc.o
-[100%] Linking CXX shared library libcogutil.so
-[100%] Built target cogutil
-+ sudo make install
-[100%] Built target cogutil
-Install the project...
--- Install configuration: "Release"
--- Installing: /usr/local/include/opencog/util/ansi.h
--- Installing: /usr/local/include/opencog/util/algorithm.h
--- Installing: /usr/local/include/opencog/util/async_buffer.h
--- Installing: /usr/local/include/opencog/util/async_method_caller.h
--- Installing: /usr/local/include/opencog/util/backtrace-symbols.h
--- Installing: /usr/local/include/opencog/util/based_variant.h
--- Installing: /usr/local/include/opencog/util/cluster.h
--- Installing: /usr/local/include/opencog/util/cogutil.h
--- Installing: /usr/local/include/opencog/util/comprehension.h
--- Installing: /usr/local/include/opencog/util/Config.h
--- Installing: /usr/local/include/opencog/util/Counter.h
--- Installing: /usr/local/include/opencog/util/Cover_Tree.h
--- Installing: /usr/local/include/opencog/util/concurrent_queue.h
--- Installing: /usr/local/include/opencog/util/concurrent_set.h
--- Installing: /usr/local/include/opencog/util/concurrent_stack.h
--- Installing: /usr/local/include/opencog/util/digraph.h
--- Installing: /usr/local/include/opencog/util/dorepeat.h
--- Installing: /usr/local/include/opencog/util/exceptions.h
--- Installing: /usr/local/include/opencog/util/files.h
--- Installing: /usr/local/include/opencog/util/functional.h
--- Installing: /usr/local/include/opencog/util/hashing.h
--- Installing: /usr/local/include/opencog/util/iostreamContainer.h
--- Installing: /usr/local/include/opencog/util/KLD.h
--- Installing: /usr/local/include/opencog/util/lazy_normal_selector.h
--- Installing: /usr/local/include/opencog/util/lazy_random_selector.h
--- Installing: /usr/local/include/opencog/util/lazy_selector.h
--- Installing: /usr/local/include/opencog/util/log_prog_name.h
--- Installing: /usr/local/include/opencog/util/Logger.h
--- Installing: /usr/local/include/opencog/util/lru_cache.h
--- Installing: /usr/local/include/opencog/util/macros.h
--- Installing: /usr/local/include/opencog/util/MannWhitneyU.h
--- Installing: /usr/local/include/opencog/util/misc.h
--- Installing: /usr/local/include/opencog/util/mt19937ar.h
--- Installing: /usr/local/include/opencog/util/numeric.h
--- Installing: /usr/local/include/opencog/util/jaccard_index.h
--- Installing: /usr/local/include/opencog/util/oc_assert.h
--- Installing: /usr/local/include/opencog/util/oc_omp.h
--- Installing: /usr/local/include/opencog/util/octime.h
--- Installing: /usr/local/include/opencog/util/platform.h
--- Installing: /usr/local/include/opencog/util/pool.h
--- Installing: /usr/local/include/opencog/util/RandGen.h
--- Installing: /usr/local/include/opencog/util/random.h
--- Installing: /usr/local/include/opencog/util/ranking.h
--- Installing: /usr/local/include/opencog/util/recent_val.h
--- Installing: /usr/local/include/opencog/util/selection.h
--- Installing: /usr/local/include/opencog/util/sigslot.h
--- Installing: /usr/local/include/opencog/util/StringTokenizer.h
--- Installing: /usr/local/include/opencog/util/tbb.h
--- Installing: /usr/local/include/opencog/util/tree.h
--- Installing: /usr/local/lib/libcogutil.so
--- Set runtime path of "/usr/local/lib/libcogutil.so" to "/usr/local/lib/opencog"
--- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean.h
--- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean_mirror.h
-+ DSTATUS=BUILDPASS
-+ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1604/builds/100/log OpenCOG_U1604_CogUtil
+Total Test time (real) =   5.86 sec
+[100%] Built target test
++ DSTATUS=TESTPASS
++ /var/lib/jenkins/status/updateStatus TESTPASS /var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/19/log OpenCOG_U1604_CogUtil
 Already up-to-date.
 ~/status/jobs ~/status
