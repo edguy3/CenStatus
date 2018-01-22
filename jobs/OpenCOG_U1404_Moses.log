@@ -14,7 +14,7 @@ Checking out Revision 1973e4e29a36b9b68d366aefead5b852c8ea5578 (refs/remotes/ori
  > git checkout -f 1973e4e29a36b9b68d366aefead5b852c8ea5578
 Commit message: "Merge pull request #2982 from rTreutlein/UpstreamMaster"
  > git rev-list --no-walk 1973e4e29a36b9b68d366aefead5b852c8ea5578 # timeout=10
-[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins8991795468610805670.sh
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins3265739050292443376.sh
 + pwd
 /var/lib/jenkins/workspace/OpenCOG_U1404
 + whoami
@@ -98,17 +98,17 @@ Successfully built 847a045dbc7b
 + CIDFILENAME=/tmp/OpenCOG_U1404.cid
 + [ -e /tmp/OpenCOG_U1404.cid ]
 + cat /tmp/OpenCOG_U1404.cid
-+ CID=dfed97b36737bc0ff6b01fd65e2f7e78c100127f4bd76f6ff2720e650930cb56
-+ docker container kill dfed97b36737bc0ff6b01fd65e2f7e78c100127f4bd76f6ff2720e650930cb56
-dfed97b36737bc0ff6b01fd65e2f7e78c100127f4bd76f6ff2720e650930cb56
-+ docker container rm dfed97b36737bc0ff6b01fd65e2f7e78c100127f4bd76f6ff2720e650930cb56
-dfed97b36737bc0ff6b01fd65e2f7e78c100127f4bd76f6ff2720e650930cb56
++ CID=ff53fb776db8767fa0ed775163693163f9ca0c9edc3118759c0b6f40b36d5c30
++ docker container kill ff53fb776db8767fa0ed775163693163f9ca0c9edc3118759c0b6f40b36d5c30
+ff53fb776db8767fa0ed775163693163f9ca0c9edc3118759c0b6f40b36d5c30
++ docker container rm ff53fb776db8767fa0ed775163693163f9ca0c9edc3118759c0b6f40b36d5c30
+ff53fb776db8767fa0ed775163693163f9ca0c9edc3118759c0b6f40b36d5c30
 + rm -f /tmp/OpenCOG_U1404.cid
 + docker run --cidfile /tmp/OpenCOG_U1404.cid -v /var/lib/jenkins/workspace/OpenCOG_U1404/dependencies:/home/opencog/dependencies -w /home/opencog -d edguy/opencog:OpenCOG_U1404 tail -f /dev/null
-4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63
+e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c
 + cat /tmp/OpenCOG_U1404.cid
-+ CID=4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63
-+ DKRUN=docker exec 4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63 
++ CID=e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c
++ DKRUN=docker exec e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c 
 + grep jenkins /etc/passwd
 + awk -F: {print $3}
 + UID=125
@@ -116,11 +116,11 @@ dfed97b36737bc0ff6b01fd65e2f7e78c100127f4bd76f6ff2720e650930cb56
 + awk -F: {print $4}
 + GID=132
 + cat
-[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins8178746459529155615.sh
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins1983245945552273175.sh
 + . build.docker/docker.env
-+ CID=4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63
-+ DKRUNROOT=docker exec --user root   4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63
-+ DKRUNUSER=docker exec --user jenkins  4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63
++ CID=e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c
++ DKRUNROOT=docker exec --user root   e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c
++ DKRUNUSER=docker exec --user jenkins  e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c
 + UID=125
 + GID=132
 + cat
@@ -138,52 +138,52 @@ dfed97b36737bc0ff6b01fd65e2f7e78c100127f4bd76f6ff2720e650930cb56
 
 + cat
 + chmod +x dependencies/job1
-+ docker exec --user jenkins 4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63 bash dependencies/job1
++ docker exec --user jenkins e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c bash dependencies/job1
 + wget http://raw.github.com/opencog/ocpkg/master/ocpkg -O octool
---2018-01-22 04:56:36--  http://raw.github.com/opencog/ocpkg/master/ocpkg
+--2018-01-22 05:13:40--  http://raw.github.com/opencog/ocpkg/master/ocpkg
 Resolving raw.github.com (raw.github.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
 Connecting to raw.github.com (raw.github.com)|151.101.0.133|:80... connected.
 HTTP request sent, awaiting response... 301 Moved Permanently
 Location: https://raw.github.com/opencog/ocpkg/master/ocpkg [following]
---2018-01-22 04:56:36--  https://raw.github.com/opencog/ocpkg/master/ocpkg
+--2018-01-22 05:13:41--  https://raw.github.com/opencog/ocpkg/master/ocpkg
 Connecting to raw.github.com (raw.github.com)|151.101.0.133|:443... connected.
 HTTP request sent, awaiting response... 301 Moved Permanently
 Location: https://raw.githubusercontent.com/opencog/ocpkg/master/ocpkg [following]
---2018-01-22 04:56:36--  https://raw.githubusercontent.com/opencog/ocpkg/master/ocpkg
+--2018-01-22 05:13:41--  https://raw.githubusercontent.com/opencog/ocpkg/master/ocpkg
 Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
 Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 38387 (37K) [text/plain]
 Saving to: 'octool'
 
-     0K .......... .......... .......... .......              100% 1.93M=0.02s
+     0K .......... .......... .......... .......              100% 2.05M=0.02s
 
-2018-01-22 04:56:36 (1.93 MB/s) - 'octool' saved [38387/38387]
+2018-01-22 05:13:41 (2.05 MB/s) - 'octool' saved [38387/38387]
 
 + chmod +rx octool
 + ./octool -rdp
 [1;34m[octool] Adding software repositories...[0m
-Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --homedir /tmp/tmp.IEdB9T6x7N --no-auto-check-trustdb --trust-model always --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --homedir /tmp/tmp.rFwuzVCgvZ --no-auto-check-trustdb --trust-model always --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
 gpg: requesting key B01FA116 from hkp server ha.pool.sks-keyservers.net
 gpg: key B01FA116: "ROS Builder <rosbuild@ros.org>" not changed
 gpg: Total number processed: 1
 gpg:              unchanged: 1
-Ign http://archive.ubuntu.com trusty InRelease
 Hit http://security.ubuntu.com trusty-security InRelease
+Ign http://archive.ubuntu.com trusty InRelease
 Hit http://archive.ubuntu.com trusty-updates InRelease
 Hit http://archive.ubuntu.com trusty-backports InRelease
 Hit http://packages.ros.org trusty InRelease
 Hit http://archive.ubuntu.com trusty Release.gpg
 Hit http://archive.ubuntu.com trusty Release
 Hit http://security.ubuntu.com trusty-security/universe Sources
-Hit http://archive.ubuntu.com trusty-updates/universe Sources
 Hit http://security.ubuntu.com trusty-security/main amd64 Packages
-Hit http://archive.ubuntu.com trusty-updates/main amd64 Packages
 Hit http://security.ubuntu.com trusty-security/restricted amd64 Packages
-Hit http://archive.ubuntu.com trusty-updates/restricted amd64 Packages
 Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
-Hit http://archive.ubuntu.com trusty-updates/universe amd64 Packages
 Hit http://security.ubuntu.com trusty-security/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/universe Sources
+Hit http://archive.ubuntu.com trusty-updates/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/universe amd64 Packages
 Hit http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages
 Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
 Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
@@ -253,52 +253,52 @@ Skipping python-pip, it is already installed and upgrade is not set.
 Skipping ros-indigo-octomap, it is already installed and upgrade is not set.
 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 [1;34m[octool] Installing cpprest....[0m
---2018-01-22 04:56:54--  https://github.com/Microsoft/cpprestsdk/archive/v2.9.0.tar.gz
-Resolving github.com (github.com)... 192.30.253.112, 192.30.253.113
-Connecting to github.com (github.com)|192.30.253.112|:443... connected.
+--2018-01-22 05:13:58--  https://github.com/Microsoft/cpprestsdk/archive/v2.9.0.tar.gz
+Resolving github.com (github.com)... 192.30.253.113, 192.30.253.112
+Connecting to github.com (github.com)|192.30.253.113|:443... connected.
 HTTP request sent, awaiting response... 302 Found
 Location: https://codeload.github.com/Microsoft/cpprestsdk/tar.gz/v2.9.0 [following]
---2018-01-22 04:56:54--  https://codeload.github.com/Microsoft/cpprestsdk/tar.gz/v2.9.0
+--2018-01-22 05:13:58--  https://codeload.github.com/Microsoft/cpprestsdk/tar.gz/v2.9.0
 Resolving codeload.github.com (codeload.github.com)... 192.30.253.121, 192.30.253.120
 Connecting to codeload.github.com (codeload.github.com)|192.30.253.121|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: unspecified [application/x-gzip]
+Length: 1616575 (1.5M) [application/x-gzip]
 Saving to: 'v2.9.0.tar.gz'
 
-     0K .......... .......... .......... .......... .......... 1.32M
-    50K .......... .......... .......... .......... .......... 3.01M
-   100K .......... .......... .......... .......... .......... 11.3M
-   150K .......... .......... .......... .......... .......... 1.23M
-   200K .......... .......... .......... .......... .......... 22.7M
-   250K .......... .......... .......... .......... .......... 28.3M
-   300K .......... .......... .......... .......... .......... 22.6M
-   350K .......... .......... .......... .......... .......... 16.2M
-   400K .......... .......... .......... .......... .......... 3.74M
-   450K .......... .......... .......... .......... .......... 12.1M
-   500K .......... .......... .......... .......... .......... 10.0M
-   550K .......... .......... .......... .......... .......... 5.79M
-   600K .......... .......... .......... .......... .......... 10.4M
-   650K .......... .......... .......... .......... .......... 11.1M
-   700K .......... .......... .......... .......... .......... 6.62M
-   750K .......... .......... .......... .......... .......... 10.7M
-   800K .......... .......... .......... .......... .......... 7.93M
-   850K .......... .......... .......... .......... .......... 9.46M
-   900K .......... .......... .......... .......... .......... 10.2M
-   950K .......... .......... .......... .......... .......... 9.72M
-  1000K .......... .......... .......... .......... .......... 9.75M
-  1050K .......... .......... .......... .......... .......... 9.99M
-  1100K .......... .......... .......... .......... .......... 8.69M
-  1150K .......... .......... .......... .......... .......... 9.48M
-  1200K .......... .......... .......... .......... .......... 10.5M
-  1250K .......... .......... .......... .......... .......... 8.13M
-  1300K .......... .......... .......... .......... .......... 8.93M
-  1350K .......... .......... .......... .......... .......... 10.0M
-  1400K .......... .......... .......... .......... .......... 8.20M
-  1450K .......... .......... .......... .......... .......... 11.1M
-  1500K .......... .......... .......... .......... .......... 9.90M
-  1550K .......... .......... ........                         11.4M=0.2s
+     0K .......... .......... .......... .......... ..........  3% 1.46M 1s
+    50K .......... .......... .......... .......... ..........  6% 3.07M 1s
+   100K .......... .......... .......... .......... ..........  9% 11.1M 1s
+   150K .......... .......... .......... .......... .......... 12% 1.87M 1s
+   200K .......... .......... .......... .......... .......... 15% 30.3M 0s
+   250K .......... .......... .......... .......... .......... 19% 3.27M 0s
+   300K .......... .......... .......... .......... .......... 22% 12.2M 0s
+   350K .......... .......... .......... .......... .......... 25% 11.9M 0s
+   400K .......... .......... .......... .......... .......... 28% 3.96M 0s
+   450K .......... .......... .......... .......... .......... 31% 10.6M 0s
+   500K .......... .......... .......... .......... .......... 34% 9.35M 0s
+   550K .......... .......... .......... .......... .......... 38% 7.58M 0s
+   600K .......... .......... .......... .......... .......... 41% 9.08M 0s
+   650K .......... .......... .......... .......... .......... 44% 10.6M 0s
+   700K .......... .......... .......... .......... .......... 47% 6.88M 0s
+   750K .......... .......... .......... .......... .......... 50% 7.12M 0s
+   800K .......... .......... .......... .......... .......... 53% 11.7M 0s
+   850K .......... .......... .......... .......... .......... 57% 9.66M 0s
+   900K .......... .......... .......... .......... .......... 60% 8.78M 0s
+   950K .......... .......... .......... .......... .......... 63% 7.98M 0s
+  1000K .......... .......... .......... .......... .......... 66% 10.5M 0s
+  1050K .......... .......... .......... .......... .......... 69% 7.13M 0s
+  1100K .......... .......... .......... .......... .......... 72% 9.70M 0s
+  1150K .......... .......... .......... .......... .......... 76% 8.17M 0s
+  1200K .......... .......... .......... .......... .......... 79% 8.81M 0s
+  1250K .......... .......... .......... .......... .......... 82% 9.17M 0s
+  1300K .......... .......... .......... .......... .......... 85% 6.99M 0s
+  1350K .......... .......... .......... .......... .......... 88% 11.7M 0s
+  1400K .......... .......... .......... .......... .......... 91% 8.18M 0s
+  1450K .......... .......... .......... .......... .......... 95% 9.13M 0s
+  1500K .......... .......... .......... .......... .......... 98% 9.96M 0s
+  1550K .......... .......... ........                        100% 8.75M=0.2s
 
-2018-01-22 04:56:55 (6.47 MB/s) - 'v2.9.0.tar.gz' saved [1616575]
+2018-01-22 05:13:58 (6.37 MB/s) - 'v2.9.0.tar.gz' saved [1616575/1616575]
 
 cpprestsdk-2.9.0/
 cpprestsdk-2.9.0/.gitignore
@@ -1542,30 +1542,30 @@ cpprestsdk-2.9.0/setup_ps_env_VS2015.ps1
 -- Generating done
 -- Build files have been written to: /tmp/cpprestsdk-2.9.0/Release/build.release
 Scanning dependencies of target unittestpp
-[  0%] [  3%] [  3%] [  3%] [  3%] [  4%] [  5%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/CompositeTestReporter.cpp.o
+[  0%] [  2%] [  2%] [  3%] [  3%] [  4%] [  5%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/CompositeTestReporter.cpp.o
+Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/CurrentTest.cpp.o
 Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/AssertException.cpp.o
 Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/DeferredTestReporter.cpp.o
-Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/DeferredTestResult.cpp.o
 Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/GlobalSettings.cpp.o
 Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/MemoryOutStream.cpp.o
-Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/CurrentTest.cpp.o
+Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/DeferredTestResult.cpp.o
 Scanning dependencies of target cpprest
 [  5%] Building CXX object src/CMakeFiles/cpprest.dir/http/client/http_client.cpp.o
-[  5%] [  6%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/ReportAssert.cpp.o
-Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/Test.cpp.o
+[  5%] [  6%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/Test.cpp.o
+Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/ReportAssert.cpp.o
 [  7%] [  8%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestDetails.cpp.o
 Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestList.cpp.o
-[  8%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestReporter.cpp.o
-[  9%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestReporterStdout.cpp.o
-[ 10%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestResults.cpp.o
-[ 10%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestRunner.cpp.o
-[ 11%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/XmlTestReporter.cpp.o
-[ 12%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/Posix/SignalTranslator.cpp.o
-[ 13%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/Posix/TimeHelpers.cpp.o
-[ 14%] Building CXX object src/CMakeFiles/cpprest.dir/http/client/http_client_msg.cpp.o
-[ 15%] [ 16%] Building CXX object src/CMakeFiles/cpprest.dir/http/client/x509_cert_utilities.cpp.o
+[  9%] Building CXX object src/CMakeFiles/cpprest.dir/http/client/http_client_msg.cpp.o
+[  9%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestReporter.cpp.o
+[ 10%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestReporterStdout.cpp.o
+[ 11%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestResults.cpp.o
+[ 11%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestRunner.cpp.o
+[ 12%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/XmlTestReporter.cpp.o
+[ 13%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/Posix/SignalTranslator.cpp.o
+[ 14%] Building CXX object src/CMakeFiles/cpprest.dir/http/client/x509_cert_utilities.cpp.o
+[ 15%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/Posix/TimeHelpers.cpp.o
 [ 16%] Building CXX object src/CMakeFiles/cpprest.dir/http/common/http_helpers.cpp.o
-Building CXX object src/CMakeFiles/cpprest.dir/http/common/http_msg.cpp.o
+[ 16%] Building CXX object src/CMakeFiles/cpprest.dir/http/common/http_msg.cpp.o
 [ 17%] Building CXX object src/CMakeFiles/cpprest.dir/http/listener/http_listener.cpp.o
 [ 18%] Building CXX object src/CMakeFiles/cpprest.dir/http/listener/http_listener_msg.cpp.o
 Linking CXX shared library ../../../Binaries/libunittestpp.so
@@ -1599,52 +1599,44 @@ Linking CXX executable ../../../Binaries/test_runner
 Linking CXX shared library ../Binaries/libcpprest.so
 [ 35%] Built target cpprest
 Scanning dependencies of target common_utilities
-Scanning dependencies of target oauth1client
+Scanning dependencies of target BingRequest
 Scanning dependencies of target SearchFile
-[ 36%] Scanning dependencies of target BingRequest
-[ 37%] Scanning dependencies of target oauth2client
-Scanning dependencies of target blackjackclient
+[ 36%] Scanning dependencies of target blackjackclient
 Scanning dependencies of target blackjackserver
-[ 38%] Building CXX object tests/common/utilities/CMakeFiles/common_utilities.dir/os_utilities.cpp.o
-[ 38%] Building CXX object tests/common/utilities/CMakeFiles/common_utilities.dir/stdafx.cpp.o
-[ 39%] [ 39%] [ 40%] [ 41%] Building CXX object samples/BingRequest/CMakeFiles/BingRequest.dir/bingrequest.cpp.o
-Building CXX object samples/Oauth1Client/CMakeFiles/oauth1client.dir/Oauth1Client.cpp.o
-Building CXX object samples/SearchFile/CMakeFiles/SearchFile.dir/searchfile.cpp.o
+[ 37%] [ 37%] [ 38%] Scanning dependencies of target oauth2client
+Scanning dependencies of target oauth1client
+Building CXX object tests/common/utilities/CMakeFiles/common_utilities.dir/os_utilities.cpp.o
+[ 39%] Building CXX object samples/SearchFile/CMakeFiles/SearchFile.dir/searchfile.cpp.o
+Building CXX object tests/common/utilities/CMakeFiles/common_utilities.dir/stdafx.cpp.o
+[ 40%] [ 40%] Building CXX object samples/BlackJack/BlackJack_Server/CMakeFiles/blackjackserver.dir/BlackJack_Server.cpp.o
+Building CXX object samples/BingRequest/CMakeFiles/BingRequest.dir/bingrequest.cpp.o
+[ 41%] Building CXX object samples/BlackJack/BlackJack_Client/CMakeFiles/blackjackclient.dir/BlackJackClient.cpp.o
 Building CXX object samples/Oauth2Client/CMakeFiles/oauth2client.dir/Oauth2Client.cpp.o
-Building CXX object samples/BlackJack/BlackJack_Server/CMakeFiles/blackjackserver.dir/BlackJack_Server.cpp.o
-Building CXX object samples/BlackJack/BlackJack_Client/CMakeFiles/blackjackclient.dir/BlackJackClient.cpp.o
-[ 42%] Building CXX object samples/BlackJack/BlackJack_Server/CMakeFiles/blackjackserver.dir/Dealer.cpp.o
+Building CXX object samples/Oauth1Client/CMakeFiles/oauth1client.dir/Oauth1Client.cpp.o
+[ 41%] Building CXX object samples/BlackJack/BlackJack_Client/CMakeFiles/blackjackclient.dir/stdafx.cpp.o
 Linking CXX shared library ../../../Binaries/libcommon_utilities.so
-[ 42%] Built target common_utilities
-[ 43%] Building CXX object samples/BlackJack/BlackJack_Server/CMakeFiles/blackjackserver.dir/stdafx.cpp.o
-/tmp/cpprestsdk-2.9.0/Release/samples/Oauth1Client/Oauth1Client.cpp: In function 'void open_browser(utility::string_t)':
-/tmp/cpprestsdk-2.9.0/Release/samples/Oauth1Client/Oauth1Client.cpp:83:32: warning: ignoring return value of 'int system(const char*)', declared with attribute warn_unused_result [-Wunused-result]
-     system(browser_cmd.c_str());
-                                ^
+[ 41%] Built target common_utilities
+[ 42%] Building CXX object samples/Oauth1Client/CMakeFiles/oauth1client.dir/stdafx.cpp.o
 /tmp/cpprestsdk-2.9.0/Release/samples/Oauth2Client/Oauth2Client.cpp: In function 'void open_browser(utility::string_t)':
 /tmp/cpprestsdk-2.9.0/Release/samples/Oauth2Client/Oauth2Client.cpp:86:32: warning: ignoring return value of 'int system(const char*)', declared with attribute warn_unused_result [-Wunused-result]
      system(browser_cmd.c_str());
                                 ^
-[ 43%] Building CXX object samples/BlackJack/BlackJack_Server/CMakeFiles/blackjackserver.dir/Table.cpp.o
-[ 44%] Building CXX object samples/Oauth2Client/CMakeFiles/oauth2client.dir/stdafx.cpp.o
-[ 44%] Building CXX object samples/BlackJack/BlackJack_Client/CMakeFiles/blackjackclient.dir/stdafx.cpp.o
-Scanning dependencies of target httptest_utilities
-[ 45%] Building CXX object tests/functional/http/utilities/CMakeFiles/httptest_utilities.dir/http_asserts.cpp.o
-[ 46%] [ 47%] Building CXX object samples/Oauth1Client/CMakeFiles/oauth1client.dir/stdafx.cpp.o
-Building CXX object tests/functional/http/utilities/CMakeFiles/httptest_utilities.dir/test_http_client.cpp.o
-Linking CXX executable ../../Binaries/oauth2client
-[ 47%] Built target oauth2client
-[ 48%] Building CXX object tests/functional/http/utilities/CMakeFiles/httptest_utilities.dir/test_http_server.cpp.o
-Linking CXX executable ../../Binaries/BingRequest
-[ 48%] Built target BingRequest
-[ 48%] Building CXX object tests/functional/http/utilities/CMakeFiles/httptest_utilities.dir/test_server_utilities.cpp.o
+/tmp/cpprestsdk-2.9.0/Release/samples/Oauth1Client/Oauth1Client.cpp: In function 'void open_browser(utility::string_t)':
+/tmp/cpprestsdk-2.9.0/Release/samples/Oauth1Client/Oauth1Client.cpp:83:32: warning: ignoring return value of 'int system(const char*)', declared with attribute warn_unused_result [-Wunused-result]
+     system(browser_cmd.c_str());
+                                ^
+[ 43%] Building CXX object samples/BlackJack/BlackJack_Server/CMakeFiles/blackjackserver.dir/Dealer.cpp.o
+[ 44%] Building CXX object samples/BlackJack/BlackJack_Server/CMakeFiles/blackjackserver.dir/stdafx.cpp.o
+[ 44%] Building CXX object samples/BlackJack/BlackJack_Server/CMakeFiles/blackjackserver.dir/Table.cpp.o
 Linking CXX executable ../../../Binaries/blackjackclient
-[ 48%] Built target blackjackclient
+[ 44%] Built target blackjackclient
+[ 45%] Building CXX object samples/Oauth2Client/CMakeFiles/oauth2client.dir/stdafx.cpp.o
+Scanning dependencies of target httptest_utilities
+[ 46%] Building CXX object tests/functional/http/utilities/CMakeFiles/httptest_utilities.dir/http_asserts.cpp.o
+Linking CXX executable ../../Binaries/oauth1client
+[ 46%] Built target oauth1client
 Scanning dependencies of target websockettest_utilities
-[ 49%] Building CXX object tests/functional/websockets/CMakeFiles/websockettest_utilities.dir/utilities/test_websocket_server.cpp.o
-Linking CXX executable ../../Binaries/SearchFile
-[ 49%] Built target SearchFile
-Linking CXX executable ../../../Binaries/blackjackserver
+[ 47%] Building CXX object tests/functional/websockets/CMakeFiles/websockettest_utilities.dir/utilities/test_websocket_server.cpp.o
 In file included from /tmp/cpprestsdk-2.9.0/Release/tests/functional/websockets/utilities/test_websocket_server.cpp:30:0:
 /tmp/cpprestsdk-2.9.0/Release/tests/functional/websockets/utilities/test_websocket_server.h:124:49: warning: 'dllexport' attribute directive ignored [-Wattributes]
      WEBSOCKET_UTILITY_API test_websocket_server();
@@ -1667,108 +1659,116 @@ In file included from /tmp/cpprestsdk-2.9.0/Release/tests/functional/websockets/
 /tmp/cpprestsdk-2.9.0/Release/tests/functional/websockets/utilities/test_websocket_server.h:139:76: warning: 'dllexport' attribute directive ignored [-Wattributes]
      WEBSOCKET_UTILITY_API std::shared_ptr<_test_websocket_server> get_impl();
                                                                             ^
+[ 48%] Building CXX object tests/functional/http/utilities/CMakeFiles/httptest_utilities.dir/test_http_client.cpp.o
+Linking CXX executable ../../Binaries/BingRequest
+[ 48%] Built target BingRequest
+[ 49%] Building CXX object tests/functional/http/utilities/CMakeFiles/httptest_utilities.dir/test_http_server.cpp.o
+Linking CXX executable ../../Binaries/oauth2client
+[ 49%] Built target oauth2client
+[ 49%] Building CXX object tests/functional/http/utilities/CMakeFiles/httptest_utilities.dir/test_server_utilities.cpp.o
+Linking CXX executable ../../Binaries/SearchFile
+[ 49%] Built target SearchFile
+Linking CXX executable ../../../Binaries/blackjackserver
 [ 49%] Built target blackjackserver
-Linking CXX executable ../../Binaries/oauth1client
-[ 49%] Built target oauth1client
+Linking CXX shared library ../../../Binaries/libwebsockettest_utilities.so
+[ 49%] Built target websockettest_utilities
 Linking CXX shared library ../../../../Binaries/libhttptest_utilities.so
 [ 49%] Built target httptest_utilities
 Scanning dependencies of target pplx_test
-[ 50%] Scanning dependencies of target uri_test
 Scanning dependencies of target utils_test
 Scanning dependencies of target json_test
-Scanning dependencies of target streams_test
-Building CXX object tests/functional/pplx/pplx_test/CMakeFiles/pplx_test.dir/pplx_op_test.cpp.o
-[ 51%] [ 52%] [ 52%] [ 53%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/construction_tests.cpp.o
-Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/accessor_tests.cpp.o
-Building CXX object tests/functional/utils/CMakeFiles/utils_test.dir/datetime.cpp.o
+[ 50%] Scanning dependencies of target streams_test
+Scanning dependencies of target uri_test
+[ 51%] Building CXX object tests/functional/pplx/pplx_test/CMakeFiles/pplx_test.dir/pplx_op_test.cpp.o
+Scanning dependencies of target websocketclient_test
+[ 52%] Building CXX object tests/functional/utils/CMakeFiles/utils_test.dir/datetime.cpp.o
+[ 53%] [ 53%] [ 53%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/construction_tests.cpp.o
 Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/fstreambuf_tests.cpp.o
+Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/accessor_tests.cpp.o
+Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/authentication_tests.cpp.o
 Scanning dependencies of target httplistener_test
 [ 54%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/building_response_tests.cpp.o
 Scanning dependencies of target httpclient_test
 [ 54%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/authentication_tests.cpp.o
 [ 55%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/combining_tests.cpp.o
 [ 55%] Building CXX object tests/functional/utils/CMakeFiles/utils_test.dir/base64.cpp.o
-Linking CXX shared library ../../../Binaries/libwebsockettest_utilities.so
-[ 55%] Built target websockettest_utilities
-[ 56%] Building CXX object tests/functional/utils/CMakeFiles/utils_test.dir/strings.cpp.o
-[ 57%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/constructor_tests.cpp.o
-[ 58%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/negative_parsing_tests.cpp.o
-[ 59%] Building CXX object tests/functional/utils/CMakeFiles/utils_test.dir/macro_test.cpp.o
-[ 60%] Building CXX object tests/functional/pplx/pplx_test/CMakeFiles/pplx_test.dir/pplx_task_options.cpp.o
-[ 61%] Building CXX object tests/functional/utils/CMakeFiles/utils_test.dir/nonce_generator_tests.cpp.o
-[ 61%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/conversions_tests.cpp.o
-[ 61%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/parsing_tests.cpp.o
-[ 62%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/to_as_and_operators_tests.cpp.o
-[ 63%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/connections_and_errors.cpp.o
-[ 64%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/diagnostic_tests.cpp.o
+[ 56%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/constructor_tests.cpp.o
+[ 57%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/negative_parsing_tests.cpp.o
+[ 58%] Building CXX object tests/functional/utils/CMakeFiles/utils_test.dir/strings.cpp.o
+[ 59%] Building CXX object tests/functional/pplx/pplx_test/CMakeFiles/pplx_test.dir/pplx_task_options.cpp.o
+[ 60%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/client_construction.cpp.o
+[ 60%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/conversions_tests.cpp.o
+[ 60%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/parsing_tests.cpp.o
+[ 61%] Building CXX object tests/functional/utils/CMakeFiles/utils_test.dir/macro_test.cpp.o
+[ 62%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/connections_and_errors.cpp.o
+[ 63%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/diagnostic_tests.cpp.o
+[ 64%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/encoding_tests.cpp.o
+[ 65%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/building_request_tests.cpp.o
+[ 66%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/to_as_and_operators_tests.cpp.o
+[ 67%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/close_tests.cpp.o
+[ 68%] Building CXX object tests/functional/utils/CMakeFiles/utils_test.dir/nonce_generator_tests.cpp.o
+[ 69%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/operator_tests.cpp.o
 Linking CXX shared library ../../../Binaries/libutils_test.so
-[ 64%] Built target utils_test
-[ 65%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/encoding_tests.cpp.o
-[ 66%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/operator_tests.cpp.o
-[ 67%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/building_request_tests.cpp.o
-[ 68%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/iterator_tests.cpp.o
-[ 68%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/splitting_tests.cpp.o
-[ 69%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/json_numbers_tests.cpp.o
+[ 69%] Built target utils_test
+[ 69%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/splitting_tests.cpp.o
+[ 69%] Building CXX object tests/functional/pplx/pplx_test/CMakeFiles/pplx_test.dir/pplxtask_tests.cpp.o
+[ 69%] Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/istream_tests.cpp.o
 [ 70%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/uri_builder_tests.cpp.o
-[ 71%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/client_construction.cpp.o
-[ 71%] Building CXX object tests/functional/pplx/pplx_test/CMakeFiles/pplx_test.dir/pplxtask_tests.cpp.o
-[ 71%] Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/istream_tests.cpp.o
-[ 71%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/fuzz_tests.cpp.o
-[ 72%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/header_tests.cpp.o
+[ 70%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/error_tests.cpp.o
+[ 71%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/iterator_tests.cpp.o
+[ 72%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/json_numbers_tests.cpp.o
 Linking CXX shared library ../../../Binaries/liburi_test.so
 [ 72%] Built target uri_test
-[ 72%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/listener_construction_tests.cpp.o
+[ 72%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/fuzz_tests.cpp.o
+[ 73%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/receive_msg_tests.cpp.o
+[ 74%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/header_tests.cpp.o
+[ 74%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/listener_construction_tests.cpp.o
 Linking CXX shared library ../../../Binaries/libjson_test.so
-[ 72%] Built target json_test
-[ 73%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/reply_helper_tests.cpp.o
-[ 74%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/request_extract_tests.cpp.o
-[ 75%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/connections_and_errors.cpp.o
-[ 75%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/request_handler_tests.cpp.o
-[ 75%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/header_tests.cpp.o
-[ 76%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/request_relative_uri_tests.cpp.o
-[ 77%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/request_stream_tests.cpp.o
-[ 78%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/requests_tests.cpp.o
-[ 79%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/http_client_tests.cpp.o
-[ 80%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/http_methods_tests.cpp.o
-[ 80%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/response_stream_tests.cpp.o
-[ 81%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/status_code_reason_phrase_tests.cpp.o
-[ 81%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/multiple_requests.cpp.o
-[ 82%] Building CXX object tests/functional/pplx/pplx_test/CMakeFiles/pplx_test.dir/stdafx.cpp.o
-[ 83%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/to_string_tests.cpp.o
-[ 83%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/stdafx.cpp.o
-[ 84%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/oauth1_tests.cpp.o
+[ 74%] Built target json_test
+[ 75%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/reply_helper_tests.cpp.o
+[ 76%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/client_construction.cpp.o
+[ 77%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/send_msg_tests.cpp.o
+[ 78%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/request_extract_tests.cpp.o
+[ 78%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/request_handler_tests.cpp.o
+[ 79%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/connections_and_errors.cpp.o
+[ 80%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/request_relative_uri_tests.cpp.o
+[ 81%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/request_stream_tests.cpp.o
+Linking CXX shared library ../../../../Binaries/libwebsocketclient_test.so
+[ 81%] Built target websocketclient_test
+[ 82%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/requests_tests.cpp.o
+[ 82%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/response_stream_tests.cpp.o
+[ 83%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/status_code_reason_phrase_tests.cpp.o
+[ 84%] Building CXX object tests/functional/pplx/pplx_test/CMakeFiles/pplx_test.dir/stdafx.cpp.o
 Linking CXX shared library ../../../../Binaries/libpplx_test.so
 [ 84%] Built target pplx_test
-Scanning dependencies of target websocketclient_test
-[ 84%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/authentication_tests.cpp.o
-[ 85%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/client_construction.cpp.o
-[ 86%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/close_tests.cpp.o
-[ 87%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/oauth2_tests.cpp.o
-[ 88%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/outside_tests.cpp.o
-[ 88%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/error_tests.cpp.o
-[ 89%] Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/memstream_tests.cpp.o
+[ 84%] [ 85%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/header_tests.cpp.o
+Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/to_string_tests.cpp.o
+[ 85%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/stdafx.cpp.o
+[ 86%] Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/memstream_tests.cpp.o
+[ 87%] Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/ostream_tests.cpp.o
+[ 88%] Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/stdstream_tests.cpp.o
+[ 88%] Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/fuzz_tests.cpp.o
+[ 89%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/http_client_tests.cpp.o
+[ 90%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/http_methods_tests.cpp.o
+[ 90%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/multiple_requests.cpp.o
 Linking CXX shared library ../../../../Binaries/libhttplistener_test.so
-[ 89%] Built target httplistener_test
-[ 90%] Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/ostream_tests.cpp.o
-[ 91%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/receive_msg_tests.cpp.o
-[ 91%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/pipeline_stage_tests.cpp.o
-[ 92%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/send_msg_tests.cpp.o
-[ 93%] Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/stdstream_tests.cpp.o
+[ 90%] Built target httplistener_test
+[ 91%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/oauth1_tests.cpp.o
+[ 92%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/oauth2_tests.cpp.o
+[ 93%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/outside_tests.cpp.o
+[ 93%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/pipeline_stage_tests.cpp.o
 [ 94%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/progress_handler_tests.cpp.o
 [ 95%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/proxy_tests.cpp.o
 [ 95%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/request_helper_tests.cpp.o
 [ 96%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/request_stream_tests.cpp.o
-Linking CXX shared library ../../../../Binaries/libwebsocketclient_test.so
-[ 96%] Built target websocketclient_test
 [ 97%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/request_uri_tests.cpp.o
 [ 98%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/response_extract_tests.cpp.o
 [ 98%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/response_stream_tests.cpp.o
+Linking CXX shared library ../../../Binaries/libstreams_test.so
+[ 98%] Built target streams_test
 [ 99%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/status_code_reason_phrase_tests.cpp.o
 [100%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/to_string_tests.cpp.o
-[100%] Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/fuzz_tests.cpp.o
 [100%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/http_client_fuzz_tests.cpp.o
-Linking CXX shared library ../../../Binaries/libstreams_test.so
-[100%] Built target streams_test
 Linking CXX shared library ../../../../Binaries/libhttpclient_test.so
 [100%] Built target httpclient_test
 [ 20%] Built target cpprest
@@ -1840,16 +1840,16 @@ Install the project...
 -- Installing: /usr/local/lib/libcpprest.so.2.9
 -- Installing: /usr/local/lib/libcpprest.so
 [1;34m[octool] Installing python packages....[0m
---2018-01-22 04:59:17--  https://raw.githubusercontent.com/opencog/opencog/master/opencog/python/requirements.txt
+--2018-01-22 05:16:21--  https://raw.githubusercontent.com/opencog/opencog/master/opencog/python/requirements.txt
 Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
 Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 148 [text/plain]
 Saving to: 'requirements.txt'
 
-     0K                                                       100% 12.1M=0s
+     0K                                                       100% 10.4M=0s
 
-2018-01-22 04:59:17 (12.1 MB/s) - 'requirements.txt' saved [148/148]
+2018-01-22 05:16:22 (10.4 MB/s) - 'requirements.txt' saved [148/148]
 
 Downloading/unpacking pip from https://pypi.python.org/packages/b6/ac/7015eb97dc749283ffdec1c3a88ddb8ae03b8fad0f0e611408f196358da3/pip-9.0.1-py2.py3-none-any.whl#md5=297dbd16ef53bcef0447d245815f5144
 Installing collected packages: pip
@@ -1920,8 +1920,8 @@ Installing collected packages: requests, argparse, nose, pyparsing, six, python-
     Uninstalling pyparsing-2.0.1:
       Successfully uninstalled pyparsing-2.0.1
   Found existing installation: six 1.5.2
-    DEPRECATION: Uninstalling a distutils installed project (six) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
     Uninstalling six-1.5.2:
+    DEPRECATION: Uninstalling a distutils installed project (six) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
       Successfully uninstalled six-1.5.2
   Found existing installation: python-dateutil 1.5
     Uninstalling python-dateutil-1.5:
@@ -1997,10 +1997,10 @@ DSTATUS is BUILDPASS
 
 + echo **** 
 **** 
-+ echo ****  4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63
-****  4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63
++ echo ****  e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c
+****  e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c
 + cat
-+ docker exec --user jenkins 4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63 bash dependencies/job1
++ docker exec --user jenkins e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c bash dependencies/job1
 + git clone https://github.com/opencog/opencog.git
 Cloning into 'opencog'...
 + git clone https://github.com/opencog/atomspace.git
@@ -2023,21 +2023,57 @@ DSTATUS is BUILDPASS
 **********************************************************
 **********************************************************
 *****
-*****  guile Setup 
+*****  Guile Setup 
 *****
 **********************************************************
 **********************************************************
 **********************************************************
 **********************************************************
 
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/64/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/66/log
 + GUILEVERSION=opencog
 + cat
-[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins8665742042097261600.sh
++ chmod +x dependencies/job1
++ docker exec --user jenkins e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c bash dependencies/job1
++ rm -rf opencog
++ wget https://ftp.gnu.org/gnu/guile/opencog.tar.gz
+--2018-01-22 05:18:42--  https://ftp.gnu.org/gnu/guile/opencog.tar.gz
+Resolving ftp.gnu.org (ftp.gnu.org)... 208.118.235.20, 2001:4830:134:3::b
+Connecting to ftp.gnu.org (ftp.gnu.org)|208.118.235.20|:443... connected.
+HTTP request sent, awaiting response... 404 Not Found
+2018-01-22 05:18:42 ERROR 404: Not Found.
+
++ tar -xvf opencog.tar.gz
+tar: opencog.tar.gz: Cannot open: No such file or directory
+tar: Error is not recoverable: exiting now
++ cd opencog
+dependencies/job1: line 8: cd: opencog: No such file or directory
++ mkdir build
++ cd build
++ ../configure
+dependencies/job1: line 11: ../configure: No such file or directory
++ make -j8
+make: *** No targets specified and no makefile found.  Stop.
++ sudo make install
+make: *** No rule to make target `install'.  Stop.
++ sudo ldconfig
++ DSTATUS=BUILDPASS
++ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1404/builds/66/log OpenCOG_U1404_Guile
+Already up-to-date.
+~/status/jobs ~/status
+~/status
+[master e223eab] OpenCOG_U1404_Guile BUILDPASS
+ 4 files changed, 2066 insertions(+), 3881 deletions(-)
+ create mode 100644 jobs/OpenCOG_U1404_Guile.BUILDPASS
+ rewrite jobs/OpenCOG_U1404_Guile.log (96%)
+To git@github.com:edguy3/CenStatus.git
+   921655b..e223eab  master -> master
++ [ BUILDPASS = BUILDPASS ]
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins1015579855569674431.sh
 + . build.docker/docker.env
-+ CID=4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63
-+ DKRUNROOT=docker exec --user root   4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63
-+ DKRUNUSER=docker exec --user jenkins  4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63
++ CID=e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c
++ DKRUNROOT=docker exec --user root   e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c
++ DKRUNUSER=docker exec --user jenkins  e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c
 + UID=125
 + GID=132
 + cat
@@ -2054,17 +2090,17 @@ DSTATUS is BUILDPASS
 **********************************************************
 
 + WDIR=cogutil
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/64/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/66/log
 + cat
 + chmod +x dependencies/job1
-+ docker exec --user jenkins 4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63 bash dependencies/job1
++ docker exec --user jenkins e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c bash dependencies/job1
 /home/opencog
 atomspace
+build
 cogutil
 dependencies
 moses
 octool
-opencog
 * master
 commit e8d77ff4a98cfdbb952c0a058a44410bfdce2d7c
 Merge: b79fb16 43af5d6
@@ -2130,14 +2166,14 @@ The following components will be built:
 -- Build files have been written to: /home/opencog/cogutil/build
 + make -j8
 Scanning dependencies of target cogutil
-[  5%] [ 10%] [ 15%] [ 21%] [ 31%] [ 31%] [ 36%] [ 42%] Building C object opencog/util/CMakeFiles/cogutil.dir/backtrace-symbols.c.o
-Building CXX object opencog/util/CMakeFiles/cogutil.dir/ansi.cc.o
+[  5%] [ 15%] [ 15%] [ 21%] [ 26%] [ 36%] [ 36%] [ 42%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/ansi.cc.o
+Building C object opencog/util/CMakeFiles/cogutil.dir/backtrace-symbols.c.o
 Building CXX object opencog/util/CMakeFiles/cogutil.dir/Config.cc.o
 Building C object opencog/util/CMakeFiles/cogutil.dir/cluster.c.o
 Building CXX object opencog/util/CMakeFiles/cogutil.dir/exceptions.cc.o
-Building CXX object opencog/util/CMakeFiles/cogutil.dir/files.cc.o
-Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_random_selector.cc.o
 Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_normal_selector.cc.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_random_selector.cc.o
+Building CXX object opencog/util/CMakeFiles/cogutil.dir/files.cc.o
 [ 47%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_selector.cc.o
 [ 52%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/log_prog_name.cc.o
 [ 57%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/Logger.cc.o
@@ -2209,15 +2245,15 @@ Install the project...
 -- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean.h
 -- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean_mirror.h
 + DSTATUS=BUILDPASS
-+ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1404/builds/64/log OpenCOG_U1404_CogUtil
++ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1404/builds/66/log OpenCOG_U1404_CogUtil
 Already up-to-date.
 ~/status/jobs ~/status
 ~/status
-[master e806b44] OpenCOG_U1404_CogUtil BUILDPASS
- 3 files changed, 2226 insertions(+), 152 deletions(-)
+[master d82f0da] OpenCOG_U1404_CogUtil BUILDPASS
+ 3 files changed, 2253 insertions(+), 144 deletions(-)
  rewrite jobs/OpenCOG_U1404_CogUtil.log (85%)
 To git@github.com:edguy3/CenStatus.git
-   0e75dc1..e806b44  master -> master
+   e223eab..d82f0da  master -> master
 + echo DSTATUS is BUILDPASS
 DSTATUS is BUILDPASS
 + [ BUILDPASS = BUILDPASS ]
@@ -2225,11 +2261,11 @@ DSTATUS is BUILDPASS
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins2891438543474057292.sh
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins3076530514704257599.sh
 + . build.docker/docker.env
-+ CID=4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63
-+ DKRUNROOT=docker exec --user root   4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63
-+ DKRUNUSER=docker exec --user jenkins  4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63
++ CID=e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c
++ DKRUNROOT=docker exec --user root   e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c
++ DKRUNUSER=docker exec --user jenkins  e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c
 + UID=125
 + GID=132
 + cat
@@ -2246,27 +2282,17 @@ DSTATUS is BUILDPASS
 **********************************************************
 
 + WDIR=atomspace
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/64/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/66/log
 + cat
 + chmod +x dependencies/job1
-+ docker exec --user jenkins 4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63 bash dependencies/job1
-+ pwd
-+ ls
-+ cd atomspace
-+ git branch
-+ git log
-+ head
-+ rm -fr build
-+ mkdir build
-+ cd build
-+ cmake ..
++ docker exec --user jenkins e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c bash dependencies/job1
 /home/opencog
 atomspace
+build
 cogutil
 dependencies
 moses
 octool
-opencog
 * master
 commit e5576e82f5bf25f3f234e258887f08b42b64e6a0
 Merge: d026f46 7b55427
@@ -2278,6 +2304,16 @@ Date:   Sun Jan 21 22:05:52 2018 -0600
     fix for cython build error on ubuntu 14.04 as described in issue #1523
 
 commit d026f468f40cbeca025c5ace2f7fd781de81a466
++ pwd
++ ls
++ cd atomspace
++ git branch
++ git log
++ head
++ rm -fr build
++ mkdir build
++ cd build
++ cmake ..
 -- The C compiler identification is GNU 4.8.4
 -- The CXX compiler identification is GNU 4.8.4
 -- Check for working C compiler: /usr/bin/cc
@@ -2369,12 +2405,12 @@ The following components WILL NOT be built:
 -- Build files have been written to: /home/opencog/atomspace/build
 + make -j8
 [  0%] Scanning dependencies of target opencog_atom_types
-Scanning dependencies of target persist-odbc
-Scanning dependencies of target persist-pg
 Cythonizing logger.pyx
-[  2%] [  2%] [  2%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-odbc.dir/odbcxx.cc.o
-Generating opencog types
-Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-pg.dir/ll-pg-cxx.cc.o
+Scanning dependencies of target persist-pg
+Scanning dependencies of target persist-odbc
+[  2%] Generating opencog types
+[  2%] [  2%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-pg.dir/ll-pg-cxx.cc.o
+Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-odbc.dir/odbcxx.cc.o
 -- Atom type name: Notype Notype
 -- Atom type name: Value Value
 -- Atom type name: FloatValue FloatValue
@@ -2457,14 +2493,14 @@ Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-pg.dir/l
 -- Atom type name: ExtensionalImplicationScopeLink ExtensionalImplicationScope
 -- Atom type name: EquivalenceScopeLink EquivalenceScope
 -- Atom type name: IntensionalEquivalenceScopeLink IntensionalEquivalenceScope
-Scanning dependencies of target logger_cython
 -- Atom type name: ExtensionalEquivalenceScopeLink ExtensionalEquivalenceScope
+Scanning dependencies of target logger_cython
 -- Atom type name: ImplicationLink Implication
 -- Atom type name: IntensionalImplicationLink IntensionalImplication
-[  2%] -- Atom type name: ExtensionalImplicationLink ExtensionalImplication
--- Atom type name: EquivalenceLink Equivalence
-Building CXX object opencog/cython/opencog/CMakeFiles/logger_cython.dir/logger.cpp.o
+-- Atom type name: ExtensionalImplicationLink ExtensionalImplication
+[  2%] -- Atom type name: EquivalenceLink Equivalence
 -- Atom type name: IntensionalEquivalenceLink IntensionalEquivalence
+Building CXX object opencog/cython/opencog/CMakeFiles/logger_cython.dir/logger.cpp.o
 -- Atom type name: ExtensionalEquivalenceLink ExtensionalEquivalence
 -- Atom type name: AssociativeLink Associative
 -- Atom type name: AttractionLink Attraction
@@ -2520,14 +2556,14 @@ Building CXX object opencog/cython/opencog/CMakeFiles/logger_cython.dir/logger.c
 [  2%] Built target opencog_atom_types
 Scanning dependencies of target truthvalue
 [  4%] [  4%] [  4%] [  4%] [  7%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/AttentionValue.cc.o
-Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/CountTruthValue.cc.o
 Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/FuzzyTruthValue.cc.o
-Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/IndefiniteTruthValue.cc.o
 Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/EvidenceCountTruthValue.cc.o
+Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/CountTruthValue.cc.o
+Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/IndefiniteTruthValue.cc.o
 Linking CXX shared library libpersist-pg.so
 [  7%] Built target persist-pg
-[  7%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/ProbabilisticTruthValue.cc.o
 Linking CXX shared library libpersist-odbc.so
+[  7%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/ProbabilisticTruthValue.cc.o
 [  7%] Built target persist-odbc
 [  7%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/SimpleTruthValue.cc.o
 Linking CXX shared library logger.so
@@ -2536,28 +2572,28 @@ Linking CXX shared library logger.so
 Linking CXX shared library libtruthvalue.so
 [  7%] Built target truthvalue
 Scanning dependencies of target atombase
-[  7%] [  7%] [  7%] [  9%] [  9%] [  9%] [ 11%] [ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/ClassServer.cc.o
+[  7%] [  7%] [  7%] [  9%] [  9%] [  9%] [  9%] [ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/FloatValue.cc.o
+Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/ClassServer.cc.o
+Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/atom_types_init.cc.o
 Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Atom.cc.o
 Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/LinkValue.cc.o
-Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Link.cc.o
-Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/atom_types_init.cc.o
-Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Node.cc.o
-Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/FloatValue.cc.o
 Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Handle.cc.o
+Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Node.cc.o
+Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Link.cc.o
 [ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/StringValue.cc.o
 [ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Valuation.cc.o
 Linking CXX shared library libatombase.so
 [ 11%] Built target atombase
 Scanning dependencies of target attentionbank
 Scanning dependencies of target atomutils
-[ 11%] [ 11%] [ 14%] [ 14%] [ 14%] [ 14%] [ 16%] [ 16%] Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AttentionBank.cc.o
-Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/AtomUtils.cc.o
-Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FuzzyMatchBasic.cc.o
-Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AVUtils.cc.o
-Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FindUtils.cc.o
-Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AtomBins.cc.o
+[ 11%] [ 11%] [ 11%] [ 11%] [ 11%] [ 16%] [ 16%] [ 16%] Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AVUtils.cc.o
 Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/ImportanceIndex.cc.o
+Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FuzzyMatchBasic.cc.o
+Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FindUtils.cc.o
+Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/AtomUtils.cc.o
+Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AtomBins.cc.o
 Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FuzzyMatch.cc.o
+Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AttentionBank.cc.o
 [ 16%] Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/StochasticImportanceDiffusion.cc.o
 [ 16%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/Neighbors.cc.o
 [ 19%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/TypeUtils.cc.o
@@ -2566,14 +2602,14 @@ Linking CXX shared library libattentionbank.so
 Linking CXX shared library libatomutils.so
 [ 19%] Built target atomutils
 Scanning dependencies of target atomcore
-[ 19%] [ 21%] [ 21%] [ 21%] [ 21%] [ 23%] [ 23%] [ 23%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/Checkers.cc.o
-Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ArityLink.cc.o
+[ 21%] [ 21%] [ 21%] [ 21%] [ 21%] [ 23%] [ 23%] [ 23%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/Checkers.cc.o
 Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ComposeLink.cc.o
 Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/Context.cc.o
-Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/DefineLink.cc.o
-Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/FunctionLink.cc.o
-Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/FreeLink.cc.o
 Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/DeleteLink.cc.o
+Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/DefineLink.cc.o
+Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/FreeLink.cc.o
+Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ArityLink.cc.o
+Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/FunctionLink.cc.o
 [ 23%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ImplicationScopeLink.cc.o
 [ 26%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/LambdaLink.cc.o
 [ 26%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/NumberNode.cc.o
@@ -2589,8 +2625,8 @@ Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/DeleteLink.cc.o
 [ 30%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/StateLink.cc.o
 [ 33%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/TimeLink.cc.o
 [ 33%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/TypedAtomLink.cc.o
-[ 33%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/TypeNode.cc.o
-[ 33%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/UniqueLink.cc.o
+[ 33%] [ 33%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/UniqueLink.cc.o
+Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/TypeNode.cc.o
 [ 35%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/UnorderedLink.cc.o
 [ 35%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/Variables.cc.o
 [ 35%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/VariableList.cc.o
@@ -2598,12 +2634,12 @@ Linking CXX shared library libatomcore.so
 [ 35%] Built target atomcore
 Scanning dependencies of target clearbox
 Scanning dependencies of target atomspace
-[ 35%] [ 35%] [ 35%] [ 35%] [ 38%] [ 40%] [ 40%] [ 40%] Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/ArithmeticLink.cc.o
-Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/FoldLink.cc.o
-Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/DivideLink.cc.o
+[ 35%] [ 35%] [ 35%] [ 38%] [ 38%] [ 38%] [ 38%] [ 40%] Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/DivideLink.cc.o
 Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/MinusLink.cc.o
-Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/AtomSpace.cc.o
+Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/FoldLink.cc.o
 Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/AtomSpaceInit.cc.o
+Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/AtomSpace.cc.o
+Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/ArithmeticLink.cc.o
 Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/TimesLink.cc.o
 Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/PlusLink.cc.o
 [ 40%] Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/AtomTable.cc.o
@@ -2615,16 +2651,16 @@ Linking CXX shared library libclearbox.so
 Linking CXX shared library libatomspace.so
 [ 42%] Built target atomspace
 [ 45%] Cythonizing type_constructors.pyx
-Scanning dependencies of target lambda
 Scanning dependencies of target atomspaceutils
 Scanning dependencies of target sql-support
-[ 47%] [ 47%] [ 50%] [ 50%] [ 50%] [ 50%] [ 50%] Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/BindLink.cc.o
-Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/AtomSpaceUtils.cc.o
+Scanning dependencies of target lambda
+[ 47%] [ 47%] [ 47%] [ 47%] [ 50%] [ 50%] [ 50%] Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/AtomSpaceUtils.cc.o
 Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/DualLink.cc.o
-Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/PatternLink.cc.o
 Building CXX object opencog/persist/sql/CMakeFiles/sql-support.dir/AtomStorage.cc.o
 Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/TLB.cc.o
 Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/RandomAtomGenerator.cc.o
+Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/BindLink.cc.o
+Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/PatternLink.cc.o
 Scanning dependencies of target type_constructors
 [ 50%] Building CXX object opencog/cython/opencog/CMakeFiles/type_constructors.dir/type_constructors.cpp.o
 [ 52%] Building CXX object opencog/persist/sql/CMakeFiles/sql-support.dir/SQLBackingStore.cc.o
@@ -2633,11 +2669,11 @@ Scanning dependencies of target type_constructors
 Linking CXX shared library libatomspaceutils.so
 [ 54%] Built target atomspaceutils
 [ 54%] Cythonizing atomspace.pyx
-Linking CXX shared library libsql-support.so
-[ 54%] Built target sql-support
 Scanning dependencies of target atomspace_cython
 [ 54%] [ 54%] Building CXX object opencog/cython/opencog/CMakeFiles/atomspace_cython.dir/Cast.cc.o
 Building CXX object opencog/cython/opencog/CMakeFiles/atomspace_cython.dir/atomspace.cpp.o
+Linking CXX shared library libsql-support.so
+[ 54%] Built target sql-support
 Linking CXX shared library type_constructors.so
 [ 54%] Built target type_constructors
 Linking CXX shared library liblambda.so
@@ -2646,40 +2682,40 @@ Scanning dependencies of target unify
 [ 54%] Building CXX object opencog/unify/CMakeFiles/unify.dir/Unify.cc.o
 Scanning dependencies of target smob
 [ 54%] [ 54%] [ 54%] [ 57%] [ 57%] [ 57%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeEval.cc.o
-Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeModule.cc.o
 Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemePrimitive.cc.o
+Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeModule.cc.o
+Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAtom.cc.o
 Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmob.cc.o
 Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAF.cc.o
-Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAtom.cc.o
 [ 57%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAS.cc.o
 [ 59%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAV.cc.o
 [ 59%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobGC.cc.o
 [ 59%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobNew.cc.o
 [ 59%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobTV.cc.o
-[ 61%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobValue.cc.o
 Linking CXX shared library atomspace.so
+[ 59%] Built target atomspace_cython
+[ 61%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobValue.cc.o
 [ 61%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobLogger.cc.o
-[ 61%] Built target atomspace_cython
 Linking CXX shared library libunify.so
 [ 61%] Built target unify
 Linking CXX shared library libsmob.so
 [ 61%] Built target smob
 [ 61%] Serializing with protobuf
+Scanning dependencies of target dist-gearman
 Scanning dependencies of target randgen
 Scanning dependencies of target persist
-Scanning dependencies of target dist-gearman
-[ 64%] Scanning dependencies of target persist-sql
-Building CXX object opencog/guile/CMakeFiles/randgen.dir/RandGenSCM.cc.o
-Scanning dependencies of target atomspace_bm
-[ 64%] [ 64%] [ 66%] Scanning dependencies of target PythonEval
-Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-sql.dir/llapi.cc.o
+Scanning dependencies of target PythonEval
+Scanning dependencies of target persist-sql
+[ 64%] [ 64%] [ 66%] [ 66%] [ 66%] Scanning dependencies of target atomspace_bm
 Building CXX object opencog/persist/gearman/CMakeFiles/dist-gearman.dir/DistSCM.cc.o
+Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-sql.dir/llapi.cc.o
+Building CXX object opencog/cython/CMakeFiles/PythonEval.dir/PythonEval.cc.o
 Scanning dependencies of target query
-[ 66%] Building CXX object opencog/persist/guile/CMakeFiles/persist.dir/PersistSCM.cc.o
 Scanning dependencies of target zmqatoms
-[ 66%] Building CXX object opencog/benchmark/CMakeFiles/atomspace_bm.dir/AtomSpaceBenchmark.cc.o
-[ 66%] [ 69%] Building CXX object opencog/cython/CMakeFiles/PythonEval.dir/PythonEval.cc.o
-Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQMessages.pb.cc.o
+Building CXX object opencog/guile/CMakeFiles/randgen.dir/RandGenSCM.cc.o
+Building CXX object opencog/persist/guile/CMakeFiles/persist.dir/PersistSCM.cc.o
+[ 66%] [ 69%] Building CXX object opencog/benchmark/CMakeFiles/atomspace_bm.dir/AtomSpaceBenchmark.cc.o
+[ 69%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQMessages.pb.cc.o
 Building CXX object opencog/query/CMakeFiles/query.dir/AttentionalFocusCB.cc.o
 [ 69%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-sql.dir/SQLAtomStorage.cc.o
 Linking CXX shared library librandgen.so
@@ -2688,39 +2724,39 @@ Linking CXX shared library librandgen.so
 Linking CXX shared library libpersist.so
 Linking CXX shared library libdist-gearman.so
 [ 69%] Built target persist
-[ 71%] Building CXX object opencog/benchmark/CMakeFiles/atomspace_bm.dir/atomspace_bm.cc.o
-[ 71%] Built target dist-gearman
-[ 71%] Building CXX object opencog/query/CMakeFiles/query.dir/DefaultPatternMatchCB.cc.o
-[ 71%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ProtocolBufferSerializer.cc.o
-[ 71%] Building CXX object opencog/query/CMakeFiles/query.dir/Implicator.cc.o
-[ 73%] Building CXX object opencog/query/CMakeFiles/query.dir/DefaultImplicator.cc.o
-[ 73%] Building CXX object opencog/query/CMakeFiles/query.dir/InitiateSearchCB.cc.o
-[ 73%] Building CXX object opencog/cython/CMakeFiles/PythonEval.dir/load-file.cc.o
-[ 73%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQClient.cc.o
-Linking CXX executable atomspace_bm
-[ 73%] Built target atomspace_bm
-[ 76%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQPersistSCM.cc.o
+[ 69%] Building CXX object opencog/query/CMakeFiles/query.dir/DefaultPatternMatchCB.cc.o
+[ 69%] Built target dist-gearman
+[ 69%] Building CXX object opencog/query/CMakeFiles/query.dir/Implicator.cc.o
+[ 69%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ProtocolBufferSerializer.cc.o
+[ 71%] Building CXX object opencog/query/CMakeFiles/query.dir/DefaultImplicator.cc.o
+[ 71%] Building CXX object opencog/query/CMakeFiles/query.dir/InitiateSearchCB.cc.o
+[ 71%] Building CXX object opencog/cython/CMakeFiles/PythonEval.dir/load-file.cc.o
+[ 71%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQClient.cc.o
+[ 71%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternMatch.cc.o
+[ 73%] Building CXX object opencog/benchmark/CMakeFiles/atomspace_bm.dir/atomspace_bm.cc.o
 Linking CXX shared library libpersist-sql.so
-[ 76%] Built target persist-sql
-[ 76%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternMatch.cc.o
-[ 78%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternMatchEngine.cc.o
+[ 73%] Built target persist-sql
+[ 76%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternMatchEngine.cc.o
+[ 76%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternSCM.cc.o
 Linking CXX shared library libPythonEval.so
-[ 78%] Built target PythonEval
+[ 76%] Built target PythonEval
 Scanning dependencies of target sniff
-[ 78%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/sniff.dir/sniff.cc.o
-[ 78%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternSCM.cc.o
-[ 78%] Building CXX object opencog/query/CMakeFiles/query.dir/Recognizer.cc.o
-[ 78%] Building CXX object opencog/query/CMakeFiles/query.dir/Satisfier.cc.o
-Linking CXX shared library libzmqatoms.so
-[ 78%] Built target zmqatoms
-Scanning dependencies of target PythonSCM
-[ 78%] Building CXX object opencog/cython/CMakeFiles/PythonSCM.dir/PythonSCM.cc.o
+[ 76%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/sniff.dir/sniff.cc.o
+[ 76%] Building CXX object opencog/query/CMakeFiles/query.dir/Recognizer.cc.o
+Linking CXX executable atomspace_bm
+[ 76%] Built target atomspace_bm
+[ 76%] Building CXX object opencog/query/CMakeFiles/query.dir/Satisfier.cc.o
+[ 78%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQPersistSCM.cc.o
 Linking CXX executable sniff
 [ 78%] Built target sniff
+Scanning dependencies of target PythonSCM
+[ 78%] Building CXX object opencog/cython/CMakeFiles/PythonSCM.dir/PythonSCM.cc.o
 [ 80%] Cythonizing utilities.pyx
 Scanning dependencies of target utilities_cython
 [ 80%] [ 80%] Building CXX object opencog/cython/opencog/CMakeFiles/utilities_cython.dir/utilities.cpp.o
 Building CXX object opencog/cython/opencog/CMakeFiles/utilities_cython.dir/Utilities.cc.o
+Linking CXX shared library libzmqatoms.so
+[ 80%] Built target zmqatoms
 Linking CXX shared library libPythonSCM.so
 [ 80%] Built target PythonSCM
 Linking CXX shared library utilities.so
@@ -2728,22 +2764,22 @@ Linking CXX shared library utilities.so
 Linking CXX shared library libquery.so
 [ 80%] Built target query
 Scanning dependencies of target execution
-[ 80%] [ 83%] [ 83%] [ 83%] [ 83%] [ 83%] Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/Force.cc.o
-Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/ExecutionOutputLink.cc.o
+[ 80%] [ 80%] [ 80%] [ 80%] [ 83%] [ 83%] Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/Force.cc.o
 Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/EvaluationLink.cc.o
-Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/MapLink.cc.o
-Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/Instantiator.cc.o
 Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/ExecSCM.cc.o
+Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/Instantiator.cc.o
+Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/MapLink.cc.o
+Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/ExecutionOutputLink.cc.o
 Linking CXX shared library libexecution.so
 [ 83%] Built target execution
 [ 83%] [ 83%] Cythonizing scheme_wrapper.pyx
 Cythonizing bindlink.pyx
 Scanning dependencies of target atomspace-cwrapper
 Scanning dependencies of target profile_bindlink
-[ 83%] [ 83%] [ 85%] [ 85%] Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/Exec_CWrapper.cpp.o
-Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/AtomSpace_CWrapper.cpp.o
-Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/PatternMatcher_CWrapper.cpp.o
-[ 85%] Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/TruthValue_CWrapper.cpp.o
+[ 83%] [ 83%] [ 85%] [ 85%] Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/AtomSpace_CWrapper.cpp.o
+[ 85%] Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/PatternMatcher_CWrapper.cpp.o
+Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/Exec_CWrapper.cpp.o
+Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/TruthValue_CWrapper.cpp.o
 Building CXX object opencog/benchmark/CMakeFiles/profile_bindlink.dir/profile_bindlink.cc.o
 Scanning dependencies of target ruleengine
 [ 85%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/BackwardChainer.cc.o
@@ -2755,9 +2791,9 @@ Scanning dependencies of target bindlink_cython
 Linking CXX executable profile_bindlink
 [ 88%] Building CXX object opencog/cython/opencog/CMakeFiles/scheme_wrapper.dir/scheme_wrapper.cpp.o
 [ 88%] Built target profile_bindlink
-[ 88%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/TraceRecorder.cc.o
-[ 88%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/ControlPolicy.cc.o
 [ 90%] Building CXX object opencog/cython/opencog/CMakeFiles/bindlink_cython.dir/bindlink.cpp.o
+[ 90%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/TraceRecorder.cc.o
+[ 90%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/ControlPolicy.cc.o
 [ 92%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/MixtureModel.cc.o
 [ 92%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/ActionSelection.cc.o
 Linking CXX shared library libatomspace-cwrapper.so
@@ -3063,25 +3099,24 @@ Install the project...
 -- Installing: /usr/local/lib/opencog/libatomspace-cwrapper.so
 -- Set runtime path of "/usr/local/lib/opencog/libatomspace-cwrapper.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
 + DSTATUS=BUILDPASS
-+ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1404/builds/64/log OpenCOG_U1404_AtomSpace
++ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1404/builds/66/log OpenCOG_U1404_AtomSpace
 Already up-to-date.
 ~/status/jobs ~/status
 ~/status
-[master dcc6816] OpenCOG_U1404_AtomSpace BUILDPASS
- 3 files changed, 3071 insertions(+), 921 deletions(-)
- rewrite jobs/OpenCOG_U1404_AtomSpace.log (96%)
+[master 21ddbae] OpenCOG_U1404_AtomSpace BUILDPASS
+ 2 files changed, 350 insertions(+), 314 deletions(-)
 To git@github.com:edguy3/CenStatus.git
-   e806b44..dcc6816  master -> master
+   d82f0da..21ddbae  master -> master
 + [ BUILDPASS = BUILDPASS ]
 + curl -X POST --insecure --netrc https://10.0.0.103:8480/job/OpenCOG_U1404_AtomSpace/build
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins641974678708024796.sh
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins371451896206209423.sh
 + . build.docker/docker.env
-+ CID=4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63
-+ DKRUNROOT=docker exec --user root   4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63
-+ DKRUNUSER=docker exec --user jenkins  4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63
++ CID=e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c
++ DKRUNROOT=docker exec --user root   e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c
++ DKRUNUSER=docker exec --user jenkins  e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c
 + UID=125
 + GID=132
 + cat
@@ -3098,17 +3133,27 @@ To git@github.com:edguy3/CenStatus.git
 **********************************************************
 
 + WDIR=moses
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/64/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/66/log
 + cat
 + chmod +x dependencies/job1
-+ docker exec --user jenkins 4d40a55c112c9207acec05ac3c1ef17059da96db8d9c441851613f731dc28b63 bash dependencies/job1
++ docker exec --user jenkins e159d7b1821c52358f05b72e57b0eb3734c9669c1ab1f75f0c9e129aec1d4d6c bash dependencies/job1
++ pwd
++ ls
++ cd moses
++ git branch
++ git log
++ head
++ rm -fr build
++ mkdir build
++ cd build
++ cmake -DCMAKE_BUILD_TYPE=Release ..
 /home/opencog
 atomspace
+build
 cogutil
 dependencies
 moses
 octool
-opencog
 * master
 commit f8932cb51442e08f7eda4f05814de90d50b41c0a
 Merge: aa73d8e 4f833b2
@@ -3120,16 +3165,6 @@ Date:   Tue Nov 14 08:36:20 2017 +0200
     Fix regex linkage
 
 commit 4f833b27771389ab08ca6da484d4b9ef1d9f0859
-+ pwd
-+ ls
-+ cd moses
-+ git branch
-+ git log
-+ head
-+ rm -fr build
-+ mkdir build
-+ cd build
-+ cmake -DCMAKE_BUILD_TYPE=Release ..
 -- The C compiler identification is GNU 4.8.4
 -- The CXX compiler identification is GNU 4.8.4
 -- Check for working C compiler: /usr/bin/cc
@@ -3188,53 +3223,53 @@ The following components will be built:
 -- Build files have been written to: /home/opencog/moses/build
 + make -j8
 Scanning dependencies of target combo-man
-Scanning dependencies of target moses-man
 Scanning dependencies of target feature-man
-[  1%] [  1%] [  1%] Generating moses.1.gz
+Scanning dependencies of target moses-man
+[  0%] [  1%] [  1%] Generating eval-table.1.gz
 Generating feature-selection.1.gz
-Generating eval-table.1.gz
-[  1%] Built target feature-man
+Generating moses.1.gz
 [  1%] Built target combo-man
-[  1%] Built target moses-man
+[  1%] Built target feature-man
 Scanning dependencies of target feature_selection
 Scanning dependencies of target moses_exec
-[  5%] [  5%] [  5%] [  5%] [  5%] [  7%] [  7%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/deme_optimize.cc.o
-Scanning dependencies of target comboreduct
-Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/random.cc.o
-Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/stochastic_max_dependency.cc.o
-Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/demo-problems.cc.o
+[  1%] Built target moses-man
+[  1%] [  1%] [  5%] [  5%] [  7%] [  7%] [  7%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/demo-problems.cc.o
+Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/problem.cc.o
 Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/incremental.cc.o
+Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/random.cc.o
+Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/problem-params.cc.o
 Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/simple.cc.o
-Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/scorers/moses_optim.cc.o
+Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/deme_optimize.cc.o
+Scanning dependencies of target comboreduct
 [  7%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/crutil/exception.cc.o
 [  8%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/action.cc.o
-[  8%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/main/feature-selection.cc.o
-[ 10%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/problem.cc.o
-[ 10%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/problem-params.cc.o
-[ 10%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/action_symbol.cc.o
-[ 12%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/assumption.cc.o
-[ 12%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/builtin_action.cc.o
-[ 14%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/definite_object.cc.o
-[ 14%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/descriptions.cc.o
-[ 16%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/enum_type.cc.o
-[ 17%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/moses_exec.cc.o
-[ 17%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/indefinite_object.cc.o
-[ 17%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/moses_exec_def.cc.o
-[ 19%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/table-problems.cc.o
+[ 10%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/moses_exec.cc.o
+[ 10%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/stochastic_max_dependency.cc.o
+[ 12%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/scorers/moses_optim.cc.o
+[ 12%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/action_symbol.cc.o
+[ 12%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/main/feature-selection.cc.o
+[ 14%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/assumption.cc.o
+[ 14%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/builtin_action.cc.o
+[ 14%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/moses_exec_def.cc.o
+[ 16%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/table-problems.cc.o
+[ 17%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/definite_object.cc.o
+[ 17%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/descriptions.cc.o
+[ 19%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/enum_type.cc.o
+[ 19%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/indefinite_object.cc.o
 [ 21%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/iostream_combo.cc.o
 [ 21%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/message.cc.o
 [ 21%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/perception.cc.o
 [ 23%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/procedure_call.cc.o
 [ 23%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/procedure_repository.cc.o
-Linking CXX shared library libfeature_selection.so
-[ 23%] Built target feature_selection
 [ 25%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/similarity.cc.o
 [ 25%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/simple_nn.cc.o
 [ 26%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/vertex.cc.o
 [ 26%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/table/table.cc.o
 [ 28%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/table/table_io.cc.o
 [ 28%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/interpreter/interpreter.cc.o
+Linking CXX shared library libfeature_selection.so
 [ 30%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/interpreter/eval.cc.o
+[ 30%] Built target feature_selection
 [ 30%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/type_checker/type_tree_def.cc.o
 [ 32%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/type_checker/type_tree.cc.o
 In file included from /usr/include/boost/variant.hpp:17:0,
@@ -3252,7 +3287,6 @@ In file included from /usr/include/boost/variant.hpp:17:0,
 Linking CXX shared library libmoses_exec.so
 [ 32%] Built target moses_exec
 [ 32%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/action_reduction.cc.o
-[ 33%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/action_rules.cc.o
 In file included from /usr/include/boost/variant.hpp:17:0,
                  from /home/opencog/moses/moses/comboreduct/interpreter/../combo/vertex.h:29,
                  from /home/opencog/moses/moses/comboreduct/interpreter/eval.h:35,
@@ -3265,6 +3299,7 @@ In file included from /usr/include/boost/variant.hpp:17:0,
 /usr/include/boost/variant/variant.hpp:1563:71: note: candidate 2: typename boost::enable_if<boost::is_rvalue_reference<T&&> >::type boost::variant<T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, T10, T11, T12, T13, T14, T15, T16, T17, T18, T19>::convert_construct(T&&, int, mpl_::false_) [with T = const boost::variant<double, opencog::combo::enum_t, opencog::combo::id::builtin, opencog::combo::id::wild_card, opencog::combo::argument, opencog::combo::id::action, const opencog::combo::builtin_action_base*, const opencog::combo::perception_base*, std::basic_string<char>, const opencog::combo::indefinite_object_base*, opencog::combo::message, const opencog::combo::procedure_call_base*, const opencog::combo::action_symbol_base*, opencog::combo::ann_type>; T0_ = double; T1 = opencog::combo::enum_t; T2 = opencog::combo::id::builtin; T3 = opencog::combo::id::wild_card; T4 = opencog::combo::argument; T5 = opencog::combo::id::action; T6 = const opencog::combo::builtin_action_base*; T7 = const opencog::combo::perception_base*; T8 = std::basic_string<char>; T9 = const opencog::combo::indefinite_object_base*; T10 = opencog::combo::message; T11 = const opencog::combo::procedure_call_base*; T12 = const opencog::combo::action_symbol_base*; T13 = opencog::combo::ann_type; T14 = boost::detail::variant::void_; T15 = boost::detail::variant::void_; T16 = boost::detail::variant::void_; T17 = boost::detail::variant::void_; T18 = boost::detail::variant::void_; T19 = boost::detail::variant::void_; typename boost::enable_if<boost::is_rvalue_reference<T&&> >::type = void; mpl_::false_ = mpl_::bool_<false>]
      typename boost::enable_if<boost::is_rvalue_reference<T&&> >::type convert_construct(
                                                                        ^
+[ 33%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/action_rules.cc.o
 [ 33%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/branch_rules.cc.o
 [ 33%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/clean_reduction.cc.o
 [ 35%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/contin_reduction.cc.o
@@ -3286,29 +3321,29 @@ In file included from /usr/include/boost/variant.hpp:17:0,
 Linking CXX shared library libcomboreduct.so
 [ 48%] Built target comboreduct
 Scanning dependencies of target comboant
-[ 48%] [ 48%] [ 50%] [ 50%] [ 51%] Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_builtin_action.cc.o
+[ 48%] [ 48%] [ 48%] [ 50%] [ 51%] Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_perception.cc.o
+Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_builtin_action.cc.o
+Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_indefinite_object.cc.o
 Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_action_symbol.cc.o
 Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_combo_vocabulary.cc.o
-Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_perception.cc.o
-Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_indefinite_object.cc.o
 Linking CXX shared library libcomboant.so
 [ 51%] Built target comboant
-Scanning dependencies of target gen-disj-conj
 Scanning dependencies of target combo-fmt-converter
-Scanning dependencies of target gen-table
+Scanning dependencies of target full-reductor
 Scanning dependencies of target action-reductor
 Scanning dependencies of target eval-table
-Scanning dependencies of target full-reductor
+Scanning dependencies of target gen-disj-conj
 Scanning dependencies of target contin-reductor
 Scanning dependencies of target interactive-reductor
-[ 53%] [ 53%] [ 53%] [ 53%] [ 53%] [ 53%] [ 53%] Building CXX object moses/comboreduct/main/CMakeFiles/gen-disj-conj.dir/gen-disj-conj.cc.o
-[ 55%] Building CXX object moses/comboreduct/main/CMakeFiles/combo-fmt-converter.dir/combo-fmt-converter.cc.o
-Building CXX object moses/comboreduct/main/CMakeFiles/eval-table.dir/eval-table.cc.o
-Building CXX object moses/comboreduct/main/CMakeFiles/full-reductor.dir/full-reductor.cc.o
-Building CXX object moses/comboreduct/main/CMakeFiles/gen-table.dir/gen-table.cc.o
-Building CXX object moses/comboreduct/main/CMakeFiles/interactive-reductor.dir/interactive-reductor.cc.o
-Building CXX object moses/comboreduct/main/CMakeFiles/action-reductor.dir/action-reductor.cc.o
+Scanning dependencies of target gen-table
+[ 51%] [ 53%] [ 53%] [ 53%] [ 55%] [ 55%] [ 55%] Building CXX object moses/comboreduct/main/CMakeFiles/eval-table.dir/eval-table.cc.o
+Building CXX object moses/comboreduct/main/CMakeFiles/gen-disj-conj.dir/gen-disj-conj.cc.o
 Building CXX object moses/comboreduct/main/CMakeFiles/contin-reductor.dir/contin-reductor.cc.o
+Building CXX object moses/comboreduct/main/CMakeFiles/combo-fmt-converter.dir/combo-fmt-converter.cc.o
+Building CXX object moses/comboreduct/main/CMakeFiles/interactive-reductor.dir/interactive-reductor.cc.o
+[ 55%] Building CXX object moses/comboreduct/main/CMakeFiles/gen-table.dir/gen-table.cc.o
+Building CXX object moses/comboreduct/main/CMakeFiles/action-reductor.dir/action-reductor.cc.o
+Building CXX object moses/comboreduct/main/CMakeFiles/full-reductor.dir/full-reductor.cc.o
 In file included from /usr/include/boost/variant.hpp:17:0,
                  from /home/opencog/moses/moses/comboreduct/combo/vertex.h:29,
                  from /home/opencog/moses/moses/comboreduct/main/../combo/iostream_combo.h:33,
@@ -3325,20 +3360,20 @@ Linking CXX executable combo-fmt-converter
 [ 55%] Built target combo-fmt-converter
 Scanning dependencies of target logical-reductor
 [ 57%] Building CXX object moses/comboreduct/main/CMakeFiles/logical-reductor.dir/logical-reductor.cc.o
+Linking CXX executable gen-disj-conj
 Linking CXX executable contin-reductor
-[ 57%] Built target contin-reductor
-Linking CXX executable action-reductor
-Scanning dependencies of target mixed-reductor
-[ 57%] Linking CXX executable gen-disj-conj
-Building CXX object moses/comboreduct/main/CMakeFiles/mixed-reductor.dir/mixed-reductor.cc.o
 Linking CXX executable full-reductor
-[ 57%] Built target action-reductor
-Scanning dependencies of target perception-reductor
-[ 57%] [ 57%] Built target gen-disj-conj
-Building CXX object moses/comboreduct/main/CMakeFiles/perception-reductor.dir/perception-reductor.cc.o
+[ 57%] Built target gen-disj-conj
+[ 57%] Built target contin-reductor
+Scanning dependencies of target mixed-reductor
+[ 57%] Scanning dependencies of target perception-reductor
+Linking CXX executable action-reductor
+Building CXX object moses/comboreduct/main/CMakeFiles/mixed-reductor.dir/mixed-reductor.cc.o
+[ 57%] Building CXX object moses/comboreduct/main/CMakeFiles/perception-reductor.dir/perception-reductor.cc.o
+[ 57%] Built target full-reductor
 Scanning dependencies of target repl
-[ 57%] [ 58%] Built target full-reductor
-Building CXX object moses/comboreduct/main/CMakeFiles/repl.dir/repl.cc.o
+[ 58%] Building CXX object moses/comboreduct/main/CMakeFiles/repl.dir/repl.cc.o
+[ 58%] Built target action-reductor
 Scanning dependencies of target tree-sim
 [ 58%] Building CXX object moses/comboreduct/main/CMakeFiles/tree-sim.dir/tree-sim.cc.o
 Linking CXX executable interactive-reductor
@@ -3351,22 +3386,22 @@ Scanning dependencies of target moses
 [ 60%] Building CXX object moses/moses/CMakeFiles/moses.dir/deme/deme_expander.cc.o
 Linking CXX executable eval-table
 [ 60%] Built target eval-table
-[ 62%] Building CXX object moses/moses/CMakeFiles/moses.dir/deme/feature_selector.cc.o
+Scanning dependencies of target eval-features
+[ 62%] Building CXX object moses/feature-selection/main/CMakeFiles/eval-features.dir/eval-features.cc.o
 Linking CXX executable tree-sim
 [ 62%] Built target tree-sim
-[ 62%] Building CXX object moses/moses/CMakeFiles/moses.dir/eda/initialization.cc.o
+[ 64%] Building CXX object moses/moses/CMakeFiles/moses.dir/deme/feature_selector.cc.o
 Linking CXX executable logical-reductor
-[ 62%] Built target logical-reductor
-Scanning dependencies of target eval-features
-[ 64%] Building CXX object moses/feature-selection/main/CMakeFiles/eval-features.dir/eval-features.cc.o
+[ 64%] Built target logical-reductor
+[ 64%] Building CXX object moses/moses/CMakeFiles/moses.dir/eda/initialization.cc.o
 Linking CXX executable perception-reductor
 [ 64%] Built target perception-reductor
 [ 66%] Building CXX object moses/moses/CMakeFiles/moses.dir/eda/local_structure.cc.o
 Linking CXX executable mixed-reductor
 Linking CXX executable tree_gen
 [ 66%] Built target mixed-reductor
-[ 66%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/diversity.cc.o
-[ 66%] Built target tree_gen
+[ 66%] [ 66%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/diversity.cc.o
+Built target tree_gen
 [ 67%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/domination.cc.o
 Linking CXX executable repl
 [ 67%] Built target repl
@@ -3374,12 +3409,12 @@ Linking CXX executable repl
 [ 69%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/merging.cc.o
 [ 69%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/metapopulation.cc.o
 [ 71%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/metapop_params.cc.o
-[ 71%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/subsample.cc.o
-[ 73%] [ 73%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/complexity.cc.o
-Building CXX object moses/moses/CMakeFiles/moses.dir/moses/distributed_moses.cc.o
-[ 75%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/local_moses.cc.o
 Linking CXX executable eval-features
-[ 75%] Built target eval-features
+[ 71%] Built target eval-features
+[ 71%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/subsample.cc.o
+[ 73%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/complexity.cc.o
+[ 73%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/distributed_moses.cc.o
+[ 75%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/local_moses.cc.o
 [ 75%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/moses_main.cc.o
 [ 75%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/mpi_moses.cc.o
 [ 76%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/neighborhood_sampling.cc.o
@@ -3405,14 +3440,14 @@ Linking CXX executable eval-features
 Linking CXX shared library libmoses.so
 [ 92%] Built target moses
 [ 92%] Scanning dependencies of target moses-exec
-Scanning dependencies of target eval-candidate
-Cythonizing pymoses.pyx
 [ 94%] Scanning dependencies of target eval-candidate-likelihood
+Cythonizing pymoses.pyx
+Scanning dependencies of target eval-candidate
 Scanning dependencies of target eval-diversity
-Scanning dependencies of target fs-main
 Building CXX object moses/moses/main/CMakeFiles/moses-exec.dir/moses-exec.cc.o
-[ 94%] [ 96%] [ 96%] [ 98%] Building CXX object moses/moses/main/CMakeFiles/eval-candidate-likelihood.dir/eval-candidate-likelihood.cc.o
-Building CXX object moses/moses/main/CMakeFiles/eval-candidate.dir/eval-candidate.cc.o
+[ 96%] Scanning dependencies of target fs-main
+Building CXX object moses/moses/main/CMakeFiles/eval-candidate-likelihood.dir/eval-candidate-likelihood.cc.o
+[ 96%] [ 96%] [ 98%] Building CXX object moses/moses/main/CMakeFiles/eval-candidate.dir/eval-candidate.cc.o
 Building CXX object moses/feature-selection/main/CMakeFiles/fs-main.dir/fs-main.cc.o
 Building CXX object moses/moses/main/CMakeFiles/eval-diversity.dir/eval-diversity.cc.o
 Linking CXX executable moses
@@ -3421,14 +3456,14 @@ Scanning dependencies of target moses_cython
 [100%] Built target moses-exec
 Linking CXX shared library pymoses.so
 [100%] Built target moses_cython
+Linking CXX executable eval-candidate
+[100%] Built target eval-candidate
 Linking CXX executable eval-candidate-likelihood
 [100%] Built target eval-candidate-likelihood
 Linking CXX executable feature-selection
 Linking CXX executable eval-diversity
-Linking CXX executable eval-candidate
 [100%] Built target fs-main
 [100%] Built target eval-diversity
-[100%] Built target eval-candidate
 + sudo make install
 [ 35%] Built target comboreduct
 [ 39%] Built target comboant
@@ -3593,6 +3628,6 @@ Install the project...
 -- Set runtime path of "/usr/local/share/moses/python/moses/pymoses.so" to "/usr/local/lib/moses:/usr/local/lib"
 -- Installing: /usr/local/share/moses/python/moses/__init__.py
 + DSTATUS=BUILDPASS
-+ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1404/builds/64/log OpenCOG_U1404_Moses
++ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1404/builds/66/log OpenCOG_U1404_Moses
 Already up-to-date.
 ~/status/jobs ~/status
