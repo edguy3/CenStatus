@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Mon Jan 22 10:09:16 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Mon Jan 22 10:12:00 EST 2018.
 
 ## Modules 
 
@@ -20,7 +20,7 @@ This file shows the status of public cen.ai tracked projects as of Mon Jan 22 10
 | [OpenCOG_U1604__Core_Build](jobs/OpenCOG_U1604__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 10:00  | 10:00 |
 | [OpenCOG_U1604_Guile](jobs/OpenCOG_U1604_Guile.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 09:55  | 09:55 |
 | [OpenCOG_U1604_Moses](jobs/OpenCOG_U1604_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 10:09 | 2018-01-21 | 09:59  | 10:09 |
-| [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 2018-01-21 | 10:00  | 10:00 |
+| [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [76% tests passed, 6 tests failed out of 25](#opencog_u1604_opencog) |  | 10:12 | 10:00  | 10:12 |
 | [OpenCOG_U1704_AtomSpace](jobs/OpenCOG_U1704_AtomSpace.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   | 2018-01-16 |
 | [OpenCOG_U1704_CogUtil](jobs/OpenCOG_U1704_CogUtil.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   | 2018-01-16 |
 | [OpenCOG_U1704__Core_Build](jobs/OpenCOG_U1704__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 2018-01-16  | 2018-01-16 |
@@ -52,6 +52,17 @@ This file shows the status of public cen.ai tracked projects as of Mon Jan 22 10
 ```
  41/111 Test  #41: BasicSCMUTest ....................***Failed    0.17 sec
 111/111 Test #111: CythonGuile ......................***Exception: SegFault  0.22 sec
+```
+
+
+###  OpenCOG_U1604_Opencog
+```
+ 2/25 Test  #2: AtomSpacePublisherModuleUTest ....***Exception: Other  5.15 sec
+ 4/25 Test  #4: ShellUTest .......................***Failed  118.41 sec
+ 6/25 Test  #6: AtomOcTreeUTest ..................***Exception: SegFault  0.07 sec
+ 7/25 Test  #7: TimeSpaceAtomUTest ...............***Exception: SegFault  0.07 sec
+ 8/25 Test  #8: AnaphoraTest .....................***Failed    1.41 sec
+19/25 Test #19: RestApiTest ......................***Failed    0.24 sec
 ```
 
 
