@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Mon Jan 22 09:06:29 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Mon Jan 22 09:07:39 EST 2018.
 
 ## Modules 
 
@@ -15,7 +15,7 @@ This file shows the status of public cen.ai tracked projects as of Mon Jan 22 09
 | [OpenCOG_U1404_Guile](jobs/OpenCOG_U1404_Guile.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 09:00  | 09:00 |
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 08:39 | 2018-01-21 | 09:03  | 09:03 |
 | [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 08:43 | 09:04  | 09:04 |
-| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | [98% tests passed, 2 tests failed out of 111](#opencog_u1604_atomspace) |  | 08:45 | 08:27  | 08:45 |
+| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  |  | 08:45 | 09:07  | 09:07 |
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 08:43 | 2018-01-21 | 09:06  | 09:06 |
 | [OpenCOG_U1604__Core_Build](jobs/OpenCOG_U1604__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 2018-01-21  | 2018-01-21 |
 | [OpenCOG_U1604_Guile](jobs/OpenCOG_U1604_Guile.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 09:06  | 09:06 |
@@ -30,13 +30,6 @@ This file shows the status of public cen.ai tracked projects as of Mon Jan 22 09
 ( Times are currently EST/EDT GMT-5/-4) 
 
 ## Error Detail
-
-
-###  OpenCOG_U1604_AtomSpace
-```
- 41/111 Test  #41: BasicSCMUTest ....................***Failed    0.17 sec
-111/111 Test #111: CythonGuile ......................***Exception: SegFault  0.21 sec
-```
 
 
 ## Contributors
