@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Sun Jan 21 23:53:47 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Sun Jan 21 23:56:32 EST 2018.
 
 ## Modules 
 
@@ -14,7 +14,7 @@ This file shows the status of public cen.ai tracked projects as of Sun Jan 21 23
 | [OpenCOG_U1404__Core_Build](jobs/OpenCOG_U1404__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 23:39  | 23:39 |
 | [OpenCOG_U1404_Guile](jobs/OpenCOG_U1404_Guile.log) | ![Status](/images/INSTALLFAIL.svg) |  |  |  |   | 2018-01-17 |
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 23:53 | 23:40 | 23:39  | 23:53 |
-| [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/TESTFAIL.svg) |  |  | 23:40 | 23:39  | 23:40 |
+| [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [84% tests passed, 4 tests failed out of 25](#opencog_u1404_opencog) |  | 23:56 | 23:39  | 23:56 |
 | [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | [98% tests passed, 2 tests failed out of 111](#opencog_u1604_atomspace) |  | 22:55 | 22:50  | 22:55 |
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 22:53 | 22:15 | 22:49  | 22:53 |
 | [OpenCOG_U1604__Core_Build](jobs/OpenCOG_U1604__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 22:53  | 22:53 |
@@ -35,6 +35,15 @@ This file shows the status of public cen.ai tracked projects as of Sun Jan 21 23
 ```
  41/111 Test  #41: BasicSCMUTest ....................***Failed    0.19 sec
 111/111 Test #111: CythonGuile ......................***Exception: SegFault  0.19 sec
+```
+
+
+###  OpenCOG_U1404_Opencog
+```
+ 6/25 Test  #6: AtomOcTreeUTest ..................***Exception: SegFault  0.07 sec
+ 7/25 Test  #7: TimeSpaceAtomUTest ...............***Exception: SegFault  0.07 sec
+ 8/25 Test  #8: AnaphoraTest .....................***Failed    1.93 sec
+19/25 Test #19: RestApiTest ......................***Failed    0.18 sec
 ```
 
 

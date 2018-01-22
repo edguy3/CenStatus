@@ -1,6 +1,6 @@
 Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
 Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1404_Opencog
-[OpenCOG_U1404_Opencog] $ /bin/sh -xe /tmp/jenkins6875426718520454067.sh
+[OpenCOG_U1404_Opencog] $ /bin/sh -xe /tmp/jenkins1397538762503458489.sh
 + COGDIR=../OpenCOG_U1404
 + . ../OpenCOG_U1404/build.docker/docker.env
 + CID=dfed97b36737bc0ff6b01fd65e2f7e78c100127f4bd76f6ff2720e650930cb56
@@ -8,7 +8,7 @@ Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1404_Opencog
 + DKRUNUSER=docker exec --user jenkins  dfed97b36737bc0ff6b01fd65e2f7e78c100127f4bd76f6ff2720e650930cb56
 + UID=125
 + GID=132
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404_Opencog/builds/10/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404_Opencog/builds/11/log
 + cat
 
 
@@ -35,9 +35,450 @@ GIT_URL=
 + JOBDIR=../OpenCOG_U1404/dependencies
 + cat
 + chmod +x ../OpenCOG_U1404/dependencies/job1
-+ docker exec --user jenkins dfed97b36737bc0ff6b01fd65e2f7e78c100127f4bd76f6ff2720e650930cb56 bash opencog/dependencies/job1
-bash: opencog/dependencies/job1: No such file or directory
++ docker exec --user jenkins dfed97b36737bc0ff6b01fd65e2f7e78c100127f4bd76f6ff2720e650930cb56 bash dependencies/job1
++ pwd
++ cd opencog/
++ cd build
++ make -j8 test
+/home/opencog
+[  1%] [  1%] Generating PLNRulesUTest.cpp
+Generating MOSESPLNSynergyUTest.cpp
+[  1%] [  3%] [  4%] Built target nlp_atom_types
+[  7%] [ 10%] Built target attention_atom_types
+Built target json_spirit
+Built target xpatternminer
+Built target atom_octomap
+[ 14%] Built target openpsi
+[ 14%] [ 15%] [ 17%] [ 20%] Built target statistics
+Built target spacetime_atom_types
+[ 21%] Built target patternminer_atom_types
+Built target py-shell
+Built target agent_finder
+[ 23%] [ 25%] Built target dimensionalembedding
+Generating XPatternMinerUTest.cpp
+[ 25%] [ 25%] Built target attention-types
+[ 34%] Built target patternindex
+Generating AtomOcTreeUTest.cpp
+[ 35%] [ 37%] [ 39%] Scanning dependencies of target MOSESPLNSynergyUTest
+Built target atomspacepublishermodule
+Built target nlp-types
+Generating TimeSpaceAtomUTest.cpp
+[ 40%] [ 42%] [ 43%] [ 43%] Scanning dependencies of target PLNRulesUTest
+Building CXX object tests/pln/CMakeFiles/MOSESPLNSynergyUTest.dir/MOSESPLNSynergyUTest.cpp.o
+Generating OpenPsiSCMUTest.cpp
+Generating OpenPsiRulesUTest.cpp
+Generating OpenPsiImplicatorUTest.cpp
+[ 45%] Building CXX object tests/pln/rules/CMakeFiles/PLNRulesUTest.dir/PLNRulesUTest.cpp.o
+Scanning dependencies of target AtomOcTreeUTest
+Scanning dependencies of target XPatternMinerUTest
+[ 46%] Building CXX object tests/spacetime/CMakeFiles/AtomOcTreeUTest.dir/AtomOcTreeUTest.cpp.o
+[ 46%] Scanning dependencies of target TimeSpaceAtomUTest
+Building CXX object tests/learning/xpattern-miner/c++-based/CMakeFiles/XPatternMinerUTest.dir/XPatternMinerUTest.cpp.o
+[ 46%] Scanning dependencies of target OpenPsiImplicatorUTest
+Scanning dependencies of target OpenPsiSCMUTest
+Scanning dependencies of target OpenPsiRulesUTest
+Building CXX object tests/spacetime/CMakeFiles/TimeSpaceAtomUTest.dir/TimeSpaceAtomUTest.cpp.o
+[ 48%] [ 48%] Building CXX object tests/openpsi/CMakeFiles/OpenPsiImplicatorUTest.dir/OpenPsiImplicatorUTest.cpp.o
+[ 48%] Building CXX object tests/openpsi/CMakeFiles/OpenPsiSCMUTest.dir/OpenPsiSCMUTest.cpp.o
+Building CXX object tests/openpsi/CMakeFiles/OpenPsiRulesUTest.dir/OpenPsiRulesUTest.cpp.o
+Linking CXX executable OpenPsiRulesUTest
+Linking CXX executable MOSESPLNSynergyUTest
+[ 48%] Built target OpenPsiRulesUTest
+[ 48%] Generating StatisticsUTest.cpp
+Linking CXX executable OpenPsiSCMUTest
+Scanning dependencies of target StatisticsUTest
+[ 50%] Building CXX object tests/learning/statistics/CMakeFiles/StatisticsUTest.dir/StatisticsUTest.cpp.o
+[ 50%] Built target MOSESPLNSynergyUTest
+[ 51%] Built target patternminer-types
+[ 51%] Linking CXX executable OpenPsiImplicatorUTest
+Generating PatternIndexAPIUTest.cpp
+Scanning dependencies of target PatternIndexAPIUTest
+[ 53%] Building CXX object tests/learning/pattern-index/CMakeFiles/PatternIndexAPIUTest.dir/PatternIndexAPIUTest.cpp.o
+[ 53%] Built target OpenPsiSCMUTest
+[ 60%] Built target server
+[ 60%] Built target OpenPsiImplicatorUTest
+[ 67%] Built target PatternMiner
+[ 67%] [ 78%] Built target attention
+Generating AtomSpacePublisherModuleUTest.cpp
+[ 79%] Generating CogServerUTest.cpp
+Scanning dependencies of target AtomSpacePublisherModuleUTest
+Scanning dependencies of target CogServerUTest
+[ 81%] [ 81%] Building CXX object tests/persist/zmq/events/CMakeFiles/AtomSpacePublisherModuleUTest.dir/AtomSpacePublisherModuleUTest.cpp.o
+Building CXX object tests/server/CMakeFiles/CogServerUTest.dir/CogServerUTest.cpp.o
+Linking CXX executable AtomOcTreeUTest
+[ 81%] Built target AtomOcTreeUTest
+[ 81%] Generating ShellUTest.cpp
+Scanning dependencies of target ShellUTest
+[ 82%] Building CXX object tests/server/CMakeFiles/ShellUTest.dir/ShellUTest.cpp.o
+Linking CXX executable PLNRulesUTest
+[ 82%] Built target PLNRulesUTest
+[ 82%] Generating AgentUTest.cpp
+Scanning dependencies of target AgentUTest
+[ 84%] Building CXX object tests/server/CMakeFiles/AgentUTest.dir/AgentUTest.cpp.o
+Linking CXX executable TimeSpaceAtomUTest
+[ 84%] Built target TimeSpaceAtomUTest
+[ 85%] Built target PythonModule
+[ 85%] Generating PyEvalUTest.cpp
+Scanning dependencies of target PyEvalUTest
+[ 87%] Building CXX object tests/cython/CMakeFiles/PyEvalUTest.dir/PyEvalUTest.cpp.o
+Linking CXX executable StatisticsUTest
+[ 87%] Built target StatisticsUTest
+[ 89%] Generating DimEmbedUTest.cpp
+Scanning dependencies of target DimEmbedUTest
+[ 90%] Building CXX object tests/learning/dimensionalembedding/CMakeFiles/DimEmbedUTest.dir/DimEmbedUTest.cpp.o
+Linking CXX executable PatternIndexAPIUTest
+CMakeFiles/PatternIndexAPIUTest.dir/PatternIndexAPIUTest.cpp.o: In function `PatternIndexAPIUTest::PatternIndexAPIUTest()':
+/home/opencog/opencog/tests/learning/pattern-index/PatternIndexAPIUTest.cxxtest:76: warning: the use of `tmpnam' is dangerous, better use `mkstemp'
+[ 90%] Built target PatternIndexAPIUTest
+[ 92%] Generating PatternMinerUTest.cpp
+Scanning dependencies of target PatternMinerUTest
+[ 93%] Building CXX object tests/learning/PatternMiner/CMakeFiles/PatternMinerUTest.dir/PatternMinerUTest.cpp.o
+Linking CXX executable XPatternMinerUTest
+[ 93%] Built target XPatternMinerUTest
+[ 95%] Generating AttentionParamQueryUTest.cpp
+Scanning dependencies of target AttentionParamQueryUTest
+[ 95%] Building CXX object tests/attention/CMakeFiles/AttentionParamQueryUTest.dir/AttentionParamQueryUTest.cpp.o
+Linking CXX executable ShellUTest
+Linking CXX executable CogServerUTest
+[ 95%] Built target ShellUTest
+[ 96%] Generating PythonModuleUTest.cpp
+Scanning dependencies of target PythonModuleUTest
+[ 98%] Building CXX object tests/cython/CMakeFiles/PythonModuleUTest.dir/PythonModuleUTest.cpp.o
+Linking CXX executable AgentUTest
+[ 98%] Built target CogServerUTest
+[ 98%] Built target AgentUTest
+Linking CXX executable PyEvalUTest
+[ 98%] Built target PyEvalUTest
+Linking CXX executable AttentionParamQueryUTest
+[ 98%] Built target AttentionParamQueryUTest
+Linking CXX executable PatternMinerUTest
+[ 98%] Built target PatternMinerUTest
+Linking CXX executable PythonModuleUTest
+[ 98%] Built target PythonModuleUTest
+Linking CXX executable DimEmbedUTest
+[ 98%] Built target DimEmbedUTest
+Linking CXX executable AtomSpacePublisherModuleUTest
+[ 98%] Built target AtomSpacePublisherModuleUTest
+Scanning dependencies of target tests
+[ 98%] Built target tests
+Scanning dependencies of target test
+[100%] Running tests...
+Test project /home/opencog/opencog/build/tests
+      Start  1: AttentionParamQueryUTest
+ 1/25 Test  #1: AttentionParamQueryUTest .........   Passed    0.01 sec
+      Start  2: AtomSpacePublisherModuleUTest
+ 2/25 Test  #2: AtomSpacePublisherModuleUTest ....   Passed    5.08 sec
+      Start  3: CogServerUTest
+ 3/25 Test  #3: CogServerUTest ...................   Passed    0.74 sec
+      Start  4: ShellUTest
+ 4/25 Test  #4: ShellUTest .......................   Passed  119.01 sec
+      Start  5: AgentUTest
+ 5/25 Test  #5: AgentUTest .......................   Passed    0.08 sec
+      Start  6: AtomOcTreeUTest
+ 6/25 Test  #6: AtomOcTreeUTest ..................***Exception: SegFault  0.07 sec
+Running cxxtest tests (1 test)
+generating example map
+
+      Start  7: TimeSpaceAtomUTest
+ 7/25 Test  #7: TimeSpaceAtomUTest ...............***Exception: SegFault  0.07 sec
+Running cxxtest tests (1 test)
+generating example map
+
+      Start  8: AnaphoraTest
+ 8/25 Test  #8: AnaphoraTest .....................***Failed    1.93 sec
+Testing the bfs function ... ;;; note: auto-compilation is enabled, set GUILE_AUTO_COMPILE=0
+;;;       or pass the --no-auto-compile argument to disable.
+;;; compiling /usr/local/share/opencog/scm/opencog/atom-types.scm
+;;; compiling /usr/local/share/opencog/scm/opencog/nlp.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/usr/local/share/opencog/scm/opencog/nlp.scm.go
+;;; compiling /usr/local/share/opencog/scm/opencog/nlp/types/nlp_types.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/usr/local/share/opencog/scm/opencog/nlp/types/nlp_types.scm.go
+;;; compiling /usr/local/share/opencog/scm/opencog/nlp/nlp-utils.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/usr/local/share/opencog/scm/opencog/nlp/nlp-utils.scm.go
+;;; compiling /usr/local/share/opencog/scm/opencog/nlp/relex-utils.scm
+;;; opencog/nlp/relex-utils.scm:474:17: warning: possibly unbound variable `exact-integer?'
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/usr/local/share/opencog/scm/opencog/nlp/relex-utils.scm.go
+;;; compiling /usr/local/share/opencog/scm/opencog/nlp/processing-utils.scm
+;;; opencog/nlp/processing-utils.scm:214:32: warning: possibly unbound variable `nlp-parse'
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/usr/local/share/opencog/scm/opencog/nlp/processing-utils.scm.go
+;;; compiling /usr/local/share/opencog/scm/opencog/attention.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/usr/local/share/opencog/scm/opencog/attention.scm.go
+;;; compiling /usr/local/share/opencog/scm/opencog/attention/attention_types.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/usr/local/share/opencog/scm/opencog/attention/attention_types.scm.go
+;;; compiling /usr/local/share/opencog/scm/opencog/attention/default-param-values.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/usr/local/share/opencog/scm/opencog/attention/default-param-values.scm.go
+;;; compiling /usr/local/share/opencog/scm/opencog/spacetime.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/usr/local/share/opencog/scm/opencog/spacetime.scm.go
+;;; compiling /usr/local/share/opencog/scm/opencog/spacetime/spacetime_types.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/usr/local/share/opencog/scm/opencog/spacetime/spacetime_types.scm.go
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/usr/local/share/opencog/scm/opencog/atom-types.scm.go
+;;; compiling /usr/local/share/opencog/scm/opencog/query.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/usr/local/share/opencog/scm/opencog/query.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/getChildren.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/getChildren.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/getNumberNode_WordInstanceNode.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/getNumberNode_WordInstanceNode.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/getNumberNode_ParseNode.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/getNumberNode_ParseNode.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/connectRootsToParseNodes.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/connectRootsToParseNodes.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/getAllNumberNodes.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/getAllNumberNodes.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/getAllParseNodes.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/getAllParseNodes.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/getConjunction.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/getConjunction.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/getParseNode.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/getParseNode.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/getWords.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/getWords.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/isIt.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/isIt.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#1.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#1.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#2.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#2.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#3.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#3.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#4.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#4.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#5.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#5.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#6.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#6.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#7.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#7.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#8.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#8.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#9.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#9.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#10.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#10.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#11.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#11.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#12.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#12.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#13.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#13.scm.go
+;;; compiling /home/opok
+test_conjunctions (test_anaphora.AnaphoraUnitTester) ... FAIL
+Testing the getWords function ... ok
+test_pleonastic_if (test_anaphora.AnaphoraUnitTester) ... encog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#14.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#14.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#15.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#15.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#16.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#16.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#17.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#17.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/filters/filter-#18.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/filters/filter-#18.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/pre-process/pre-process-#1.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/pre-process/pre-process-#1.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/pre-process/pre-process-#2.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/pre-process/pre-process-#2.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/pre-process/pre-process-#3.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/pre-process/pre-process-#3.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/pleonastic-it/pleonastic-it-#1.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/pleonastic-it/pleonastic-it-#1.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/pleonastic-it/pleonastic-it-#2.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/pleonastic-it/pleonastic-it-#2.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../opencog/nlp/anaphora/rules/pleonastic-it/pleonastic-it-#3.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/opencog/nlp/anaphora/rules/pleonastic-it/pleonastic-it-#3.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../tests/nlp/anaphora/data/bfs.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/tests/nlp/anaphora/data/bfs.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../tests/nlp/anaphora/data/conjunction.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/tests/nlp/anaphora/data/conjunction.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../tests/nlp/anaphora/data/getWords.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/tests/nlp/anaphora/data/getWords.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../tests/nlp/anaphora/data/pleonastic_it/data_#1.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/tests/nlp/anaphora/data/pleonastic_it/data_#1.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../tests/nlp/anaphora/data/pleonastic_it/data_#2.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/tests/nlp/anaphora/data/pleonastic_it/data_#2.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../tests/nlp/anaphora/data/pleonastic_it/data_#3.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.FAIL
+Testing the propose function ... FAIL
+
+======================================================================
+FAIL: test_conjunctions (test_anaphora.AnaphoraUnitTester)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/opencog/opencog/tests/nlp/anaphora/test_anaphora.py", line 430, in test_conjunctions
+    self.assertFalse(self.hobbsAgent.pleonastic_it(self.getWord('waitresses')))
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_pleonastic_if (test_anaphora.AnaphoraUnitTester)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/opencog/opencog/tests/nlp/anaphora/test_anaphora.py", line 417, in test_pleonastic_if
+    self.assertFalse(self.hobbsAgent.pleonastic_it(self.getWord('it')))
+AssertionError: True is not false
+
+======================================================================
+FAIL: Testing the propose function
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/opencog/opencog/tests/nlp/anaphora/test_anaphora.py", line 378, in test_propose
+    filter_1()
+  File "/home/opencog/opencog/tests/nlp/anaphora/test_anaphora.py", line 94, in filter_1
+    self.assertTrue(self.hobbsAgent.propose(self.getWord('antecedent')))
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 5 tests in 1.874s
+
+FAILED (failures=3)
+accepted 
+[(WordInstanceNode "b") ; [7176733813256336297][1]
+, (WordInstanceNode "b") ; [7176733813256336297][1]
+, (WordInstanceNode "c") ; [1954536943936637625][1]
+]
+accepted 
+[(WordInstanceNode "c") ; [1954536943936637625][1]
+, (WordInstanceNode "b") ; [7176733813256336297][1]
+, (WordInstanceNode "c") ; [1954536943936637625][1]
+, (WordInstanceNode "d") ; [7920996617400663969][1]
+, (WordInstanceNode "e") ; [811631232188714808][1]
+, (WordInstanceNode "f") ; [825601903258358495][1]
+]
+accepted 
+[(WordInstanceNode "d") ; [7920996617400663969][1]
+, (WordInstanceNode "b") ; [7176733813256336297][1]
+, (WordInstanceNode "c") ; [1954536943936637625][1]
+, (WordInstanceNode "d") ; [7920996617400663969][1]
+, (WordInstanceNode "e") ; [811631232188714808][1]
+, (WordInstanceNode "f") ; [825601903258358495][1]
+, (WordInstanceNode "g") ; [7550112285569995374][1]
+]
+accepted 
+[(WordInstanceNode "e") ; [811631232188714808][1]
+, (WordInstanceNode "b") ; [7176733813256336297][1]
+, (WordInstanceNode "c") ; [1954536943936637625][1]
+, (WordInstanceNode "d") ; [7920996617400663969][1]
+, (WordInstanceNode "e") ; [811631232188714808][1]
+, (WordInstanceNode "f") ; [825601903258358495][1]
+, (WordInstanceNode "g") ; [7550112285569995374][1]
+]
+accepted 
+[(WordInstanceNode "f") ; [825601903258358495][1]
+, (WordInstanceNode "b") ; [7176733813256336297][1]
+, (WordInstanceNode "c") ; [1954536943936637625][1]
+, (WordInstanceNode "d") ; [7920996617400663969][1]
+, (WordInstanceNode "e") ; [811631232188714808][1]
+, (WordInstanceNode "f") ; [825601903258358495][1]
+, (WordInstanceNode "g") ; [7550112285569995374][1]
+]
+accepted 
+[(WordInstanceNode "g") ; [7550112285569995374][1]
+, (WordInstanceNode "b") ; [7176733813256336297][1]
+, (WordInstanceNode "c") ; [1954536943936637625][1]
+, (WordInstanceNode "d") ; [7920996617400663969][1]
+, (WordInstanceNode "e") ; [811631232188714808][1]
+, (WordInstanceNode "f") ; [825601903258358495][1]
+, (WordInstanceNode "g") ; [7550112285569995374][1]
+]
+Testing filter #1...
+0-LE-8-2.0/home/opencog/opencog/tests/nlp/anaphora/data/pleonastic_it/data_#3.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../tests/nlp/anaphora/data/pleonastic_it/data_#4.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/tests/nlp/anaphora/data/pleonastic_it/data_#4.scm.go
+;;; compiling /home/opencog/opencog/build/tests/nlp/../../../tests/nlp/anaphora/data/propose/filter-#1/data_#1.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/opencog/tests/nlp/anaphora/data/propose/filter-#1/data_#1.scm.go
+
+      Start  9: MOSESPLNSynergyUTest
+ 9/25 Test  #9: MOSESPLNSynergyUTest .............   Passed    9.07 sec
+      Start 10: PLNRulesUTest
+10/25 Test #10: PLNRulesUTest ....................   Passed    0.25 sec
+      Start 11: PythonPLNTest
+11/25 Test #11: PythonPLNTest ....................   Passed    0.06 sec
+      Start 12: OpenPsiRulesUTest
+12/25 Test #12: OpenPsiRulesUTest ................   Passed    0.28 sec
+      Start 13: OpenPsiImplicatorUTest
+13/25 Test #13: OpenPsiImplicatorUTest ...........   Passed    0.19 sec
+      Start 14: OpenPsiSCMUTest
+14/25 Test #14: OpenPsiSCMUTest ..................   Passed    8.19 sec
+      Start 15: PythonModuleUTest
+15/25 Test #15: PythonModuleUTest ................   Passed    0.13 sec
+      Start 16: PyEvalUTest
+16/25 Test #16: PyEvalUTest ......................   Passed    0.07 sec
+      Start 17: CythonServer
+17/25 Test #17: CythonServer .....................   Passed    0.06 sec
+      Start 18: CythonStatistics
+18/25 Test #18: CythonStatistics .................   Passed    0.05 sec
+      Start 19: RestApiTest
+19/25 Test #19: RestApiTest ......................***Failed    0.18 sec
+/home/opencog/opencog/opencog/python/web/api/apiatomcollection.py:4: ExtDeprecationWarning: Importing flask.ext.restful is deprecated, use flask_restful instead.
+  from flask.ext.restful import Resource, reqparse, marshal
+/home/opencog/opencog/opencog/python/web/api/apiatomcollection.py:4: ExtDeprecationWarning: Importing flask.ext.restful.reqparse is deprecated, use flask_restful.reqparse instead.
+  from flask.ext.restful import Resource, reqparse, marshal
+/home/opencog/opencog/opencog/python/web/api/mappers.py:12: ExtDeprecationWarning: Importing flask.ext.restful.fields is deprecated, use flask_restful.fields instead.
+  from flask.ext.restful import fields, marshal
+/home/opencog/opencog/opencog/python/web/api/apiatomcollection.py:8: ExtDeprecationWarning: Importing flask.ext.restful.utils is deprecated, use flask_restful.utils instead.
+  from flask.ext.restful.utils import cors
+/home/opencog/opencog/opencog/python/web/api/apiatomcollection.py:8: ExtDeprecationWarning: Importing flask.ext.restful.utils.cors is deprecated, use flask_restful.utils.cors instead.
+  from flask.ext.restful.utils import cors
+test_restapi.TestRESTApi.test_a_post_and_get_node ... ok
+test_restapi.TestRESTApi.test_b_post_and_get_link ... ok
+test_restapi.TestRESTApi.test_c_put_and_get_tv_av_node ... ok
+test_restapi.TestRESTApi.test_d_put_and_get_tv_av_link ... ok
+test_restapi.TestRESTApi.test_e_post_revise_existing_node ... ok
+test_restapi.TestRESTApi.test_f_post_revise_existing_link ... ok
+test_restapi.TestRESTApi.test_g_delete_node ... FAIL
+test_restapi.TestRESTApi.test_h_delete_link ... ok
+test_restapi.TestRESTApi.test_j_get_types ... ok
+test_restapi.TestRESTApi.test_k_tv_filter ... ok
+test_restapi.TestRESTApi.test_l_include_incoming_outgoing ... ok
+test_restapi.TestRESTApi.test_m_scheme_command ... ok
+test_restapi.TestRESTApi.test_n_dot_export ... ok
+
+======================================================================
+FAIL: test_restapi.TestRESTApi.test_g_delete_node
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/nose/case.py", line 197, in runTest
+    self.test(*self.arg)
+  File "/home/opencog/opencog/tests/python/restapi/test_restapi.py", line 368, in test_g_delete_node
+    assert delete_result['success']
+AssertionError
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.124s
+
+FAILED (failures=1)
+{u'truthvalue': {u'type': u'simple', u'details': {u'count': 0.4, u'strength': 0.5}}, u'outgoing': [2, 4], u'type': u'InheritanceLink'}
+{u'truthvalue': {u'type': u'simple', u'details': {u'count': 0.9, u'strength': 1.0}}, u'outgoing': [9, 12], u'type': u'InheritanceLink'}
+{u'truthvalue': {u'type': u'simple', u'details': {u'count': 0.9, u'strength': 1.0}}, u'outgoing': [16, 19], u'type': u'InheritanceLink'}
+{u'truthvalue': {u'type': u'simple', u'details': {u'count': 0.95, u'strength': 0.1}}, u'outgoing': [16, 19], u'type': u'InheritanceLink'}
+{u'truthvalue': {u'type': u'simple', u'details': {u'count': 0.9, u'strength': 1.0}}, u'outgoing': [22, 25], u'type': u'InheritanceLink'}
+
+      Start 20: BlendingTest
+20/25 Test #20: BlendingTest .....................   Passed    0.07 sec
+      Start 21: DimEmbedUTest
+21/25 Test #21: DimEmbedUTest ....................   Passed    0.07 sec
+      Start 22: StatisticsUTest
+22/25 Test #22: StatisticsUTest ..................   Passed    0.00 sec
+      Start 23: PatternMinerUTest
+23/25 Test #23: PatternMinerUTest ................   Passed    0.07 sec
+      Start 24: PatternIndexAPIUTest
+24/25 Test #24: PatternIndexAPIUTest .............   Passed    0.40 sec
+      Start 25: XPatternMinerUTest
+25/25 Test #25: XPatternMinerUTest ...............   Passed    1.95 sec
+
+84% tests passed, 4 tests failed out of 25
+
+Total Test time (real) = 148.08 sec
+
+The following tests FAILED:
+	  6 - AtomOcTreeUTest (SEGFAULT)
+	  7 - TimeSpaceAtomUTest (SEGFAULT)
+	  8 - AnaphoraTest (Failed)
+	 19 - RestApiTest (Failed)
+Errors while running CTest
+make[3]: *** [CMakeFiles/test] Error 8
+make[2]: *** [CMakeFiles/test.dir/all] Error 2
+make[1]: *** [CMakeFiles/test.dir/rule] Error 2
+make: *** [test] Error 2
 + DSTATUS=TESTFAIL
-+ /var/lib/jenkins/status/updateStatus TESTFAIL /var/lib/jenkins/jobs/OpenCOG_U1404_Opencog/builds/10/log OpenCOG_U1404_Opencog
++ /var/lib/jenkins/status/updateStatus TESTFAIL /var/lib/jenkins/jobs/OpenCOG_U1404_Opencog/builds/11/log OpenCOG_U1404_Opencog
 Already up-to-date.
 ~/status/jobs ~/status
