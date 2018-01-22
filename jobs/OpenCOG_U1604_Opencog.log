@@ -1,9 +1,6 @@
 Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
-Started by upstream project "[8mha:////4MnuFN63gwBm2tDyl2kQsSiQZRO2630PQVL7jYvS/YEaAAAAnx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZh/az8JH3/gtQ8Z3/3+FBDMwMTfQCU/aYIyAAAAA==[0mOpenCOG_U1604" build number [8mha:////4CEMrGf3ADw2Ij98qtS4yYSdfm36mRv9xbfbXIci9TJTAAAAoR+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAymEgZR/az8JH3/gtQ8Z3/3+FBDMwMTfUtLAMvr01bKAAAA[0m99
-originally caused by:
- Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
 Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1604_Opencog
-[OpenCOG_U1604_Opencog] $ /bin/sh -xe /tmp/jenkins510558230193786383.sh
+[OpenCOG_U1604_Opencog] $ /bin/sh -xe /tmp/jenkins6226129718426967083.sh
 + COGDIR=../OpenCOG_U1604
 + . ../OpenCOG_U1604/build.docker/docker.env
 + CID=6c7ea918b56027719dfe81a4604f7249b9600ef2d8d84c28015872150befd149
@@ -11,7 +8,7 @@ Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1604_Opencog
 + DKRUNUSER=docker exec --user jenkins  6c7ea918b56027719dfe81a4604f7249b9600ef2d8d84c28015872150befd149
 + UID=125
 + GID=132
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604_Opencog/builds/14/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604_Opencog/builds/15/log
 + cat
 
 
@@ -41,6 +38,6 @@ GIT_URL=
 + docker exec --user jenkins 6c7ea918b56027719dfe81a4604f7249b9600ef2d8d84c28015872150befd149 bash opencog/dependencies/job1
 bash: opencog/dependencies/job1: No such file or directory
 + DSTATUS=TESTFAIL
-+ /var/lib/jenkins/status/updateStatus TESTFAIL /var/lib/jenkins/jobs/OpenCOG_U1604_Opencog/builds/14/log OpenCOG_U1604_Opencog
++ /var/lib/jenkins/status/updateStatus TESTFAIL /var/lib/jenkins/jobs/OpenCOG_U1604_Opencog/builds/15/log OpenCOG_U1604_Opencog
 Already up-to-date.
 ~/status/jobs ~/status
