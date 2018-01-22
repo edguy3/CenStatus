@@ -1,4 +1,5 @@
 Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
 Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1604
  > git rev-parse --is-inside-work-tree # timeout=10
 Fetching changes from the remote Git repository
@@ -14,7 +15,7 @@ Checking out Revision 1973e4e29a36b9b68d366aefead5b852c8ea5578 (refs/remotes/ori
  > git checkout -f 1973e4e29a36b9b68d366aefead5b852c8ea5578
 Commit message: "Merge pull request #2982 from rTreutlein/UpstreamMaster"
  > git rev-list --no-walk 1973e4e29a36b9b68d366aefead5b852c8ea5578 # timeout=10
-[OpenCOG_U1604] $ /bin/sh -xe /tmp/jenkins2049771654523411190.sh
+[OpenCOG_U1604] $ /bin/sh -xe /tmp/jenkins1086192456495441142.sh
 + pwd
 /var/lib/jenkins/workspace/OpenCOG_U1604
 + whoami
@@ -95,17 +96,17 @@ Successfully built e3acb8b7b6e5
 + CIDFILENAME=/tmp/OpenCOG_U1604.cid
 + [ -e /tmp/OpenCOG_U1604.cid ]
 + cat /tmp/OpenCOG_U1604.cid
-+ CID=d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04
-+ docker container kill d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04
-d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04
-+ docker container rm d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04
-d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04
++ CID=2c2ecbe759b12e0c0394bb7c3412220219452e1361bd58760e772ff872d4fe7f
++ docker container kill 2c2ecbe759b12e0c0394bb7c3412220219452e1361bd58760e772ff872d4fe7f
+2c2ecbe759b12e0c0394bb7c3412220219452e1361bd58760e772ff872d4fe7f
++ docker container rm 2c2ecbe759b12e0c0394bb7c3412220219452e1361bd58760e772ff872d4fe7f
+2c2ecbe759b12e0c0394bb7c3412220219452e1361bd58760e772ff872d4fe7f
 + rm -f /tmp/OpenCOG_U1604.cid
 + docker run --cidfile /tmp/OpenCOG_U1604.cid -v /var/lib/jenkins/workspace/OpenCOG_U1604/dependencies:/home/opencog/dependencies -w /home/opencog -d edguy/opencog:OpenCOG_U1604 tail -f /dev/null
-2c2ecbe759b12e0c0394bb7c3412220219452e1361bd58760e772ff872d4fe7f
+e688364451e5e22bd44be6adbfb2f874bd6f2d854da8147edfad7b7eb1361b71
 + cat /tmp/OpenCOG_U1604.cid
-+ CID=2c2ecbe759b12e0c0394bb7c3412220219452e1361bd58760e772ff872d4fe7f
-+ DKRUN=docker exec 2c2ecbe759b12e0c0394bb7c3412220219452e1361bd58760e772ff872d4fe7f 
++ CID=e688364451e5e22bd44be6adbfb2f874bd6f2d854da8147edfad7b7eb1361b71
++ DKRUN=docker exec e688364451e5e22bd44be6adbfb2f874bd6f2d854da8147edfad7b7eb1361b71 
 + grep jenkins /etc/passwd
 + awk -F: {print $3}
 + UID=125
@@ -113,11 +114,11 @@ d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04
 + awk -F: {print $4}
 + GID=132
 + cat
-[OpenCOG_U1604] $ /bin/sh -xe /tmp/jenkins6922856937885315098.sh
+[OpenCOG_U1604] $ /bin/sh -xe /tmp/jenkins5988831469548635269.sh
 + . build.docker/docker.env
-+ CID=2c2ecbe759b12e0c0394bb7c3412220219452e1361bd58760e772ff872d4fe7f
-+ DKRUNROOT=docker exec --user root   2c2ecbe759b12e0c0394bb7c3412220219452e1361bd58760e772ff872d4fe7f
-+ DKRUNUSER=docker exec --user jenkins  2c2ecbe759b12e0c0394bb7c3412220219452e1361bd58760e772ff872d4fe7f
++ CID=e688364451e5e22bd44be6adbfb2f874bd6f2d854da8147edfad7b7eb1361b71
++ DKRUNROOT=docker exec --user root   e688364451e5e22bd44be6adbfb2f874bd6f2d854da8147edfad7b7eb1361b71
++ DKRUNUSER=docker exec --user jenkins  e688364451e5e22bd44be6adbfb2f874bd6f2d854da8147edfad7b7eb1361b71
 + UID=125
 + GID=132
 + cat
@@ -135,32 +136,32 @@ d4c468cfd483af39965542ef2f9be90760fa2e219dba5274992106df5082fc04
 
 + cat
 + chmod +x dependencies/job1
-+ docker exec --user jenkins 2c2ecbe759b12e0c0394bb7c3412220219452e1361bd58760e772ff872d4fe7f bash dependencies/job1
++ docker exec --user jenkins e688364451e5e22bd44be6adbfb2f874bd6f2d854da8147edfad7b7eb1361b71 bash dependencies/job1
 + wget http://raw.github.com/opencog/ocpkg/master/ocpkg -O octool
---2018-01-22 13:24:31--  http://raw.github.com/opencog/ocpkg/master/ocpkg
+--2018-01-22 14:04:25--  http://raw.github.com/opencog/ocpkg/master/ocpkg
 Resolving raw.github.com (raw.github.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
 Connecting to raw.github.com (raw.github.com)|151.101.0.133|:80... connected.
 HTTP request sent, awaiting response... 301 Moved Permanently
 Location: https://raw.github.com/opencog/ocpkg/master/ocpkg [following]
---2018-01-22 13:24:31--  https://raw.github.com/opencog/ocpkg/master/ocpkg
+--2018-01-22 14:04:25--  https://raw.github.com/opencog/ocpkg/master/ocpkg
 Connecting to raw.github.com (raw.github.com)|151.101.0.133|:443... connected.
 HTTP request sent, awaiting response... 301 Moved Permanently
 Location: https://raw.githubusercontent.com/opencog/ocpkg/master/ocpkg [following]
---2018-01-22 13:24:31--  https://raw.githubusercontent.com/opencog/ocpkg/master/ocpkg
+--2018-01-22 14:04:25--  https://raw.githubusercontent.com/opencog/ocpkg/master/ocpkg
 Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
 Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 38387 (37K) [text/plain]
 Saving to: 'octool'
 
-     0K .......... .......... .......... .......              100% 2.07M=0.02s
+     0K .......... .......... .......... .......              100% 1.83M=0.02s
 
-2018-01-22 13:24:31 (2.07 MB/s) - 'octool' saved [38387/38387]
+2018-01-22 14:04:25 (1.83 MB/s) - 'octool' saved [38387/38387]
 
 + chmod +rx octool
 + ./octool -rdp
 [1;34m[octool] Adding software repositories...[0m
-Executing: /tmp/tmp.e4JZCeBOvT/gpg.1.sh --keyserver
+Executing: /tmp/tmp.Xt3bLVwPIY/gpg.1.sh --keyserver
 hkp://ha.pool.sks-keyservers.net:80
 --recv-key
 421C365BD9FF1F717815A3895523BAEEB01FA116
@@ -168,14 +169,14 @@ gpg: requesting key B01FA116 from hkp server ha.pool.sks-keyservers.net
 gpg: key B01FA116: public key "ROS Builder <rosbuild@ros.org>" imported
 gpg: Total number processed: 1
 gpg:               imported: 1
-Get:1 http://security.ubuntu.com/ubuntu xenial-security InRelease [102 kB]
-Get:2 http://packages.ros.org/ros/ubuntu xenial InRelease [4037 B]
-Hit:3 http://archive.ubuntu.com/ubuntu xenial InRelease
+Hit:1 http://archive.ubuntu.com/ubuntu xenial InRelease
+Get:2 http://security.ubuntu.com/ubuntu xenial-security InRelease [102 kB]
+Get:3 http://packages.ros.org/ros/ubuntu xenial InRelease [4037 B]
 Get:4 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [102 kB]
 Get:5 http://packages.ros.org/ros/ubuntu xenial/main amd64 Packages [518 kB]
 Get:6 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [102 kB]
 Get:7 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [904 kB]
-Fetched 1733 kB in 1s (920 kB/s)
+Fetched 1733 kB in 1s (1050 kB/s)
 Reading package lists...
 [1;34m[octool] Installing OpenCog build dependencies....[0m
 Reading package lists...
@@ -241,7 +242,7 @@ After this operation, 9129 kB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu xenial/universe amd64 liboctomap1.6v5 amd64 1.6.8+dfsg-2.1 [77.2 kB]
 Get:2 http://archive.ubuntu.com/ubuntu xenial/universe amd64 liboctomap-dev amd64 1.6.8+dfsg-2.1 [1001 kB]
 debconf: delaying package configuration, since apt-utils is not installed
-Fetched 1078 kB in 3s (342 kB/s)
+Fetched 1078 kB in 2s (452 kB/s)
 Selecting previously unselected package liboctomap1.6v5.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 50384 files and directories currently installed.)
 Preparing to unpack .../liboctomap1.6v5_1.6.8+dfsg-2.1_amd64.deb ...
@@ -258,16 +259,16 @@ Reading state information...
 libcpprest2.8 is already the newest version (2.8.0-2).
 0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
 [1;34m[octool] Installing python packages....[0m
---2018-01-22 13:24:39--  https://raw.githubusercontent.com/opencog/opencog/master/opencog/python/requirements.txt
+--2018-01-22 14:04:33--  https://raw.githubusercontent.com/opencog/opencog/master/opencog/python/requirements.txt
 Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
 Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 148 [text/plain]
 Saving to: 'requirements.txt'
 
-     0K                                                       100% 12.0M=0s
+     0K                                                       100% 11.4M=0s
 
-2018-01-22 13:24:39 (12.0 MB/s) - 'requirements.txt' saved [148/148]
+2018-01-22 14:04:33 (11.4 MB/s) - 'requirements.txt' saved [148/148]
 
 The directory '/home/jenkins/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 The directory '/home/jenkins/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
@@ -397,10 +398,10 @@ DSTATUS is BUILDPASS
 
 + echo **** 
 **** 
-+ echo ****  2c2ecbe759b12e0c0394bb7c3412220219452e1361bd58760e772ff872d4fe7f
-****  2c2ecbe759b12e0c0394bb7c3412220219452e1361bd58760e772ff872d4fe7f
++ echo ****  e688364451e5e22bd44be6adbfb2f874bd6f2d854da8147edfad7b7eb1361b71
+****  e688364451e5e22bd44be6adbfb2f874bd6f2d854da8147edfad7b7eb1361b71
 + cat
-+ docker exec --user jenkins 2c2ecbe759b12e0c0394bb7c3412220219452e1361bd58760e772ff872d4fe7f bash dependencies/job1
++ docker exec --user jenkins e688364451e5e22bd44be6adbfb2f874bd6f2d854da8147edfad7b7eb1361b71 bash dependencies/job1
 + git clone https://github.com/opencog/opencog.git
 Cloning into 'opencog'...
 + git clone https://github.com/opencog/atomspace.git
@@ -430,18 +431,18 @@ DSTATUS is BUILDPASS
 **********************************************************
 **********************************************************
 
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604/builds/101/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604/builds/102/log
 + GUILEVERSION=opencog
 + cat
 + chmod +x dependencies/job1
-+ docker exec --user jenkins 2c2ecbe759b12e0c0394bb7c3412220219452e1361bd58760e772ff872d4fe7f bash dependencies/job1
++ docker exec --user jenkins e688364451e5e22bd44be6adbfb2f874bd6f2d854da8147edfad7b7eb1361b71 bash dependencies/job1
 + rm -rf opencog
 + wget https://ftp.gnu.org/gnu/guile/opencog.tar.gz
---2018-01-22 13:26:34--  https://ftp.gnu.org/gnu/guile/opencog.tar.gz
+--2018-01-22 14:06:22--  https://ftp.gnu.org/gnu/guile/opencog.tar.gz
 Resolving ftp.gnu.org (ftp.gnu.org)... 208.118.235.20, 2001:4830:134:3::b
 Connecting to ftp.gnu.org (ftp.gnu.org)|208.118.235.20|:443... connected.
 HTTP request sent, awaiting response... 404 Not Found
-2018-01-22 13:26:34 ERROR 404: Not Found.
+2018-01-22 14:06:22 ERROR 404: Not Found.
 
 + tar -xvf opencog.tar.gz
 tar: opencog.tar.gz: Cannot open: No such file or directory
@@ -458,6 +459,6 @@ make: *** No targets specified and no makefile found.  Stop.
 make: *** No rule to make target 'install'.  Stop.
 + sudo ldconfig
 + DSTATUS=BUILDPASS
-+ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1604/builds/101/log OpenCOG_U1604_Guile
++ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1604/builds/102/log OpenCOG_U1604_Guile
 Already up-to-date.
 ~/status/jobs ~/status
