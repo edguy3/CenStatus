@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Tue Jan 23 15:05:09 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Tue Jan 23 18:15:22 EST 2018.
 
 ## Modules 
 
@@ -9,6 +9,7 @@ This file shows the status of public cen.ai tracked projects as of Tue Jan 23 15
 | --- | --- | --- | --- | ---  | --- | --- | 
 | [OpenCOG_DebOld__Core_Build](jobs/OpenCOG_DebOld__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 2018-01-15  | 2018-01-15 |
 | [OpenCOG_DebStab__Core_Build](jobs/OpenCOG_DebStab__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 2018-01-16  | 2018-01-16 |
+| [OpenCOG_DebStab_Guile](jobs/OpenCOG_DebStab_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 18:15 |
 | [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | [99% tests passed, 1 tests failed out of 111](#opencog_u1404_atomspace) |  | 14:56 | 14:38  | 14:56 |
 | [OpenCOG_U1404_CogUtil](jobs/OpenCOG_U1404_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 14:53 | 2018-01-21 | 14:37  | 14:53 |
 | [OpenCOG_U1404__Core_Build](jobs/OpenCOG_U1404__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 14:41 |
@@ -37,7 +38,7 @@ This file shows the status of public cen.ai tracked projects as of Tue Jan 23 15
 111/111 Test #111: CythonGuile ......................***Exception: SegFault  0.45 sec
 ```
 
-See [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) for more detail
+See the log file at this link: [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) for more detail.
 
 
 ###  OpenCOG_U1404_Opencog
@@ -49,7 +50,7 @@ See [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) for more detail
 19/25 Test #19: RestApiTest ......................***Failed    0.20 sec
 ```
 
-See [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) for more detail
+See the log file at this link: [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) for more detail.
 
 
 ###  OpenCOG_U1604_AtomSpace
@@ -58,7 +59,7 @@ See [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) for more detail
 111/111 Test #111: CythonGuile ......................***Exception: SegFault  0.21 sec
 ```
 
-See [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) for more detail
+See the log file at this link: [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) for more detail.
 
 
 ###  OpenCOG_U1604_Opencog
@@ -70,7 +71,7 @@ See [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) for more detail
 19/25 Test #19: RestApiTest ......................***Failed    0.35 sec
 ```
 
-See [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) for more detail
+See the log file at this link: [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) for more detail.
 
 
 ## Contributors

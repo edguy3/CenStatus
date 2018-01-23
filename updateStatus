@@ -83,7 +83,7 @@ do
        egrep '\*\*\*(Failed|Exception)' "jobs/$JOBNAME.log" | tail -24  >>README.md
        echo '```' >>README.md
        echo >>README.md
-       echo See '['$JOBNAME'](jobs/'$JOBNAME.log') for more detail'>>README.md
+       echo See the log file at this link: '['$JOBNAME'](jobs/'$JOBNAME.log') for more detail.'>>README.md
        echo >>README.md
    fi
 done
