@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Tue Jan 23 14:40:11 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Tue Jan 23 14:41:05 EST 2018.
 
 ## Modules 
 
@@ -14,7 +14,7 @@ This file shows the status of public cen.ai tracked projects as of Tue Jan 23 14
 | [OpenCOG_U1404__Core_Build](jobs/OpenCOG_U1404__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 2018-01-22  | 2018-01-22 |
 | [OpenCOG_U1404_Guile](jobs/OpenCOG_U1404_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 14:37 |
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-01-22 | 2018-01-21 | 14:40  | 14:40 |
-| [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [80% tests passed, 5 tests failed out of 25](#opencog_u1404_opencog) |  | 2018-01-22 | 2018-01-22  | 2018-01-22 |
+| [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 2018-01-22 | 14:41  | 14:41 |
 | [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  |  | 2018-01-22 | 14:25  | 14:25 |
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-01-22 | 2018-01-21 | 14:24  | 14:24 |
 | [OpenCOG_U1604__Core_Build](jobs/OpenCOG_U1604__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 14:28 |
@@ -30,16 +30,6 @@ This file shows the status of public cen.ai tracked projects as of Tue Jan 23 14
 ( Times are currently EST/EDT GMT-5/-4) 
 
 ## Error Detail
-
-
-###  OpenCOG_U1404_Opencog
-```
- 6/25 Test  #6: AtomOcTreeUTest ..................***Exception: SegFault  0.07 sec
- 7/25 Test  #7: TimeSpaceAtomUTest ...............***Exception: SegFault  0.07 sec
- 8/25 Test  #8: AnaphoraTest .....................***Failed    9.34 sec
-10/25 Test #10: PLNRulesUTest ....................***Failed    2.42 sec
-19/25 Test #19: RestApiTest ......................***Failed    0.19 sec
-```
 
 
 ## Contributors
