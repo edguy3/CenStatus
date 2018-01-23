@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Tue Jan 23 14:37:16 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Tue Jan 23 14:38:21 EST 2018.
 
 ## Modules 
 
@@ -9,7 +9,7 @@ This file shows the status of public cen.ai tracked projects as of Tue Jan 23 14
 | --- | --- | --- | --- | ---  | --- | --- | 
 | [OpenCOG_DebOld__Core_Build](jobs/OpenCOG_DebOld__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 2018-01-15  | 2018-01-15 |
 | [OpenCOG_DebStab__Core_Build](jobs/OpenCOG_DebStab__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 2018-01-16  | 2018-01-16 |
-| [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | [99% tests passed, 1 tests failed out of 111](#opencog_u1404_atomspace) |  | 2018-01-22 | 2018-01-22  | 2018-01-22 |
+| [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  |  | 2018-01-22 | 14:38  | 14:38 |
 | [OpenCOG_U1404_CogUtil](jobs/OpenCOG_U1404_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-01-22 | 2018-01-21 | 14:37  | 14:37 |
 | [OpenCOG_U1404__Core_Build](jobs/OpenCOG_U1404__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 2018-01-22  | 2018-01-22 |
 | [OpenCOG_U1404_Guile](jobs/OpenCOG_U1404_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 14:37 |
@@ -30,12 +30,6 @@ This file shows the status of public cen.ai tracked projects as of Tue Jan 23 14
 ( Times are currently EST/EDT GMT-5/-4) 
 
 ## Error Detail
-
-
-###  OpenCOG_U1404_AtomSpace
-```
-111/111 Test #111: CythonGuile ......................***Exception: SegFault  0.41 sec
-```
 
 
 ###  OpenCOG_U1404_Opencog
