@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Thu Jan 25 12:06:54 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Thu Jan 25 12:10:21 EST 2018.
 
 ## Modules 
 
@@ -20,7 +20,7 @@ This file shows the status of public cen.ai tracked projects as of Thu Jan 25 12
 | [OpenCOG_U1404__Core_Build](jobs/OpenCOG_U1404__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 11:27 |
 | [OpenCOG_U1404_Guile](jobs/OpenCOG_U1404_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 11:22 |
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 12:06 | 2018-01-21 | 11:26  | 12:06 |
-| [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 10:28 | 11:27  | 11:27 |
+| [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [80% tests passed, 5 tests failed out of 25](#opencog_u1404_opencog) |  | 12:10 | 11:27  | 12:10 |
 | [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  |  | 10:31 | 11:35  | 11:35 |
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 10:28 | 2018-01-21 | 11:34  | 11:34 |
 | [OpenCOG_U1604__Core_Build](jobs/OpenCOG_U1604__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 11:40 |
@@ -45,6 +45,18 @@ This file shows the status of public cen.ai tracked projects as of Thu Jan 25 12
 ```
 
 See the log file at this link: [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) for more detail.
+
+
+###  OpenCOG_U1404_Opencog
+```
+ 6/25 Test  #6: AtomOcTreeUTest ..................***Exception: SegFault  0.09 sec
+ 7/25 Test  #7: TimeSpaceAtomUTest ...............***Exception: SegFault  0.10 sec
+ 8/25 Test  #8: AnaphoraTest .....................***Failed   13.14 sec
+10/25 Test #10: PLNRulesUTest ....................***Failed    3.99 sec
+19/25 Test #19: RestApiTest ......................***Failed    1.83 sec
+```
+
+See the log file at this link: [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) for more detail.
 
 
 ###  OpenCOG_U1710_AtomSpace
