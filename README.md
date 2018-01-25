@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Thu Jan 25 10:57:10 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Thu Jan 25 11:00:12 EST 2018.
 
 ## Modules 
 
@@ -27,7 +27,7 @@ This file shows the status of public cen.ai tracked projects as of Thu Jan 25 10
 | [OpenCOG_U1604_Guile](jobs/OpenCOG_U1604_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 09:39 |
 | [OpenCOG_U1604_Moses](jobs/OpenCOG_U1604_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 10:38 | 2018-01-21 | 09:44  | 10:38 |
 | [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [76% tests passed, 6 tests failed out of 25](#opencog_u1604_opencog) |  | 10:42 | 09:45  | 10:42 |
-| [OpenCOG_U1710_AtomSpace](jobs/OpenCOG_U1710_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  |  | 01:15 | 10:07  | 10:07 |
+| [OpenCOG_U1710_AtomSpace](jobs/OpenCOG_U1710_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | [99% tests passed, 1 tests failed out of 106](#opencog_u1710_atomspace) |  | 11:00 | 10:07  | 11:00 |
 | [OpenCOG_U1710_CogUtil](jobs/OpenCOG_U1710_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 10:57 |  | 10:06  | 10:57 |
 | [OpenCOG_U1710__Core_Build](jobs/OpenCOG_U1710__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 10:13 |
 | [OpenCOG_U1710_Guile](jobs/OpenCOG_U1710_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 10:05 |
@@ -93,6 +93,14 @@ See the log file at this link: [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_Atom
 ```
 
 See the log file at this link: [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) for more detail.
+
+
+###  OpenCOG_U1710_AtomSpace
+```
+ 41/106 Test  #41: BasicSCMUTest ....................***Failed    0.33 sec
+```
+
+See the log file at this link: [OpenCOG_U1710_AtomSpace](jobs/OpenCOG_U1710_AtomSpace.log) for more detail.
 
 
 ## Contributors
