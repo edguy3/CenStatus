@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Fri Jan 26 09:19:50 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Fri Jan 26 09:23:05 EST 2018.
 
 ## Modules 
 
@@ -14,7 +14,7 @@ This file shows the status of public cen.ai tracked projects as of Fri Jan 26 09
 | [OpenCOG_DebStab__Core_Build](jobs/OpenCOG_DebStab__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-16  | 08:27 |
 | [OpenCOG_DebStab_Guile](jobs/OpenCOG_DebStab_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 08:20 |
 | [OpenCOG_DebStab_Moses](jobs/OpenCOG_DebStab_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 09:19 |  | 08:26  | 09:19 |
-| [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 2018-01-25 | 08:27  | 08:27 |
+| [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [70% tests passed, 7 tests failed out of 23](#opencog_debstab_opencog) |  | 09:23 | 08:27  | 09:23 |
 | [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | [99% tests passed, 1 tests failed out of 111](#opencog_u1404_atomspace) |  | 08:44 | 07:57  | 08:44 |
 | [OpenCOG_U1404_CogUtil](jobs/OpenCOG_U1404_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 08:28 | 2018-01-21 | 07:56  | 08:28 |
 | [OpenCOG_U1404__Core_Build](jobs/OpenCOG_U1404__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 08:01 |
@@ -37,6 +37,20 @@ This file shows the status of public cen.ai tracked projects as of Fri Jan 26 09
 ( Times are currently EST/EDT GMT-5/-4) 
 
 ## Error Detail
+
+
+###  OpenCOG_DebStab_Opencog
+```
+ 2/23 Test  #2: AtomSpacePublisherModuleUTest ....***Exception: Other  5.72 sec
+ 6/23 Test  #6: AnaphoraTest .....................***Failed   12.22 sec
+ 8/23 Test  #8: PLNRulesUTest ....................***Failed    3.59 sec
+10/23 Test #10: OpenPsiRulesUTest ................***Failed    2.92 sec
+11/23 Test #11: OpenPsiImplicatorUTest ...........***Failed    0.88 sec
+12/23 Test #12: OpenPsiSCMUTest ..................***Failed    0.96 sec
+17/23 Test #17: RestApiTest ......................***Failed    2.02 sec
+```
+
+See the log file at this link: [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) for more detail.
 
 
 ###  OpenCOG_U1404_AtomSpace
