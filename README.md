@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Fri Jan 26 08:38:43 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Fri Jan 26 08:40:21 EST 2018.
 
 ## Modules 
 
@@ -32,24 +32,11 @@ This file shows the status of public cen.ai tracked projects as of Fri Jan 26 08
 | [OpenCOG_U1710__Core_Build](jobs/OpenCOG_U1710__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 2018-01-25 |
 | [OpenCOG_U1710_Guile](jobs/OpenCOG_U1710_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 08:32 |
 | [OpenCOG_U1710_Moses](jobs/OpenCOG_U1710_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-01-25 |  | 08:38  | 08:38 |
-| [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [65% tests passed, 6 tests failed out of 17](#opencog_u1710_opencog) |  | 2018-01-25 | 2018-01-25  | 2018-01-25 |
+| [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 2018-01-25 | 08:40  | 08:40 |
 
 ( Times are currently EST/EDT GMT-5/-4) 
 
 ## Error Detail
-
-
-###  OpenCOG_U1710_Opencog
-```
- 2/17 Test  #2: AtomSpacePublisherModuleUTest ....***Exception: Other  5.47 sec
- 6/17 Test  #6: MOSESPLNSynergyUTest .............***Failed    0.91 sec
- 7/17 Test  #7: PLNRulesUTest ....................***Failed    1.51 sec
- 8/17 Test  #8: OpenPsiRulesUTest ................***Failed    1.49 sec
- 9/17 Test  #9: OpenPsiImplicatorUTest ...........***Failed    0.36 sec
-10/17 Test #10: OpenPsiSCMUTest ..................***Failed    0.68 sec
-```
-
-See the log file at this link: [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Opencog.log) for more detail.
 
 
 ## Contributors
