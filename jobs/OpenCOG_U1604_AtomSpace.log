@@ -1,6 +1,6 @@
 Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
 Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1604_AtomSpace
-[OpenCOG_U1604_AtomSpace] $ /bin/sh -xe /tmp/jenkins7927370158641563523.sh
+[OpenCOG_U1604_AtomSpace] $ /bin/sh -xe /tmp/jenkins703259423508552212.sh
 + COGDIR=../OpenCOG_U1604
 + . ../OpenCOG_U1604/build.docker/docker.env
 + CID=45f43206c225623052a0fbe2054cfc3952c57fceb6404332824aae0a70034d1c
@@ -8,7 +8,7 @@ Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1604_AtomSpace
 + DKRUNUSER=docker exec --user jenkins  45f43206c225623052a0fbe2054cfc3952c57fceb6404332824aae0a70034d1c
 + UID=125
 + GID=132
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604_AtomSpace/builds/54/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604_AtomSpace/builds/55/log
 + cat
 
 
@@ -37,141 +37,151 @@ GIT_URL=
 + chmod +x ../OpenCOG_U1604/dependencies/job1
 + docker exec --user jenkins 45f43206c225623052a0fbe2054cfc3952c57fceb6404332824aae0a70034d1c bash dependencies/job1
 *#*#*# BENCHMARK START
-*#*#*# BENCHMARK END
 + cd atomspace
 + cd build
 + unset -x
 dependencies/job1: line 4: unset: -x: invalid option
 unset: usage: unset [-f] [-v] [-n] [name ...]
 + echo '*#*#*# BENCHMARK START'
-+ python ./opencog/benchmark/benchmark.py
-python: can't open file './opencog/benchmark/benchmark.py': [Errno 2] No such file or directory
++ python ../opencog/benchmark/benchmark.py
+
+--- OpenCog Python Benchmark -  2018-01-27 14:26:00.106244 ---
+
+Test                                        Time per op  Ops per second
+----                                        -----------  --------------
+Add nodes - Cython                              1.742µs         573,996
+Resolve Handle 100K - by type                   0.063µs      15,813,240
+Bind - bindlink - Cython                       14.300µs          69,929
+Test scheme_eval_h(+ 2 2)                      45.355µs          22,048
+Predicates - get_predicates                     1.580µs         632,907
+
+*#*#*# BENCHMARK END
 + echo '*#*#*# BENCHMARK END'
 + make -j8 test
 [  0%] Built target opencog_atom_types
 [  1%] Built target truthvalue
 [  3%] Built target atombase
-[  5%] Built target atomutils
 [  5%] Built target attentionbank
+[  5%] Built target atomutils
 [ 11%] Built target atomcore
 [ 12%] Built target clearbox
 [ 15%] Built target atomspace
-[ 17%] Built target EvidenceCountTruthValueUTest
+[ 15%] Built target BetaReduceUTest
+[ 16%] Built target AttentionValueUTest
 [ 17%] Built target TVMergeUTest
-[ 18%] Built target type_constructors
+[ 18%] Built target EvidenceCountTruthValueUTest
 [ 20%] Built target atomspaceutils
-[ 20%] Built target BetaReduceUTest
-[ 21%] Built target AttentionValueUTest
+[ 21%] Built target type_constructors
 [ 21%] Built target SimpleTruthValueUTest
 [ 22%] Built target lambda
 [ 22%] Built target ThreadSafeHandleMapUTest
-[ 23%] Built target VariablesUTest
+[ 23%] Built target ComposeLinkUTest
 [ 23%] Built target DefineLinkUTest
-[ 23%] Built target RemoveUTest
 [ 24%] Built target MultiSpaceUTest
-[ 27%] Built target ComposeLinkUTest
-[ 27%] Built target NodeUTest
-[ 28%] Built target atomspace_cython
-[ 28%] Built target AtomUTest
-[ 28%] Built target AtomSpaceAsyncUTest
-[ 28%] Built target LinkUTest
-[ 28%] Built target ClassServerUTest
-[ 29%] Built target AtomSpaceUTest
-[ 30%] Built target UseCountUTest
+[ 25%] Built target VariablesUTest
+[ 27%] Built target atomspace_cython
+[ 27%] Built target RemoveUTest
+[ 28%] Built target NodeUTest
+[ 29%] Built target UseCountUTest
+[ 29%] Built target AtomSpaceAsyncUTest
+[ 29%] Built target ClassServerUTest
 [ 30%] Built target AtomSpaceImplUTest
+[ 30%] Built target AtomUTest
+[ 30%] Built target AtomSpaceUTest
+[ 30%] Built target LinkUTest
 [ 30%] Built target TLBUTest
-[ 30%] Built target unify
 [ 30%] Built target AlphaConvertUTest
+[ 30%] Built target AttentionUTest
+[ 30%] Built target unify
 [ 31%] Built target AtomSpaceUtilsUTest
-[ 31%] Built target AttentionUTest
 [ 34%] Built target smob
 [ 34%] Built target FuzzyUTest
 [ 35%] Built target RewriteLinkUTest
+[ 36%] Built target AtomTableUTest
 [ 37%] Built target NeighborUTest
-[ 37%] Built target AtomTableUTest
-[ 40%] Built target ScopeLinkUTest
-[ 40%] Built target FreeLinkUTest
-[ 41%] Built target PythonEval
+[ 38%] Built target FreeLinkUTest
+[ 40%] Built target PythonEval
+[ 41%] Built target ScopeLinkUTest
 [ 43%] Built target query
 [ 44%] Built target FindUtilsUTest
-[ 44%] Built target utilities_cython
-[ 45%] Built target AtomUtilsUTest
-[ 47%] Built target UnifyUTest
+[ 45%] Built target UnifyUTest
+[ 47%] Built target AtomUtilsUTest
+[ 47%] Built target utilities_cython
 [ 48%] Built target execution
 [ 48%] Built target StateLinkUTest
-[ 48%] Built target DeleteLinkUTest
-[ 48%] Built target PutLinkUTest
 [ 48%] Built target PythonUtilitiesUTest
+[ 48%] Built target PutLinkUTest
 [ 48%] Built target EqualLinkUTest
-[ 49%] Built target MapLinkUTest
-[ 50%] Built target RandomUTest
-[ 51%] Built target ReductUTest
-[ 51%] Built target SCMPrimitiveUTest
-[ 51%] Built target MultiThreadUTest
-[ 51%] Built target MultiAtomSpaceUTest
+[ 48%] Built target DeleteLinkUTest
+[ 49%] Built target ReductUTest
+[ 51%] Built target RandomUTest
+[ 51%] Built target MapLinkUTest
 [ 51%] Built target ParallelUTest
-[ 51%] Built target NoExceptionUTest
-[ 52%] Built target SCMUtilsUTest
-[ 54%] Built target BasicSCMUTest
-[ 55%] Built target SCMExecutionOutputUTest
-[ 56%] Built target FirstNUTest
-[ 57%] Built target ArcanaUTest
-[ 57%] Built target UnorderedUTest
+[ 52%] Built target BasicSCMUTest
+[ 52%] Built target MultiAtomSpaceUTest
+[ 52%] Built target SCMPrimitiveUTest
+[ 52%] Built target MultiThreadUTest
+[ 54%] Built target SCMExecutionOutputUTest
+[ 54%] Built target NoExceptionUTest
+[ 55%] Built target SCMUtilsUTest
+[ 56%] Built target ArcanaUTest
+[ 57%] Built target FirstNUTest
 [ 57%] Built target VarTypeNotUTest
-[ 57%] Built target ScopeUTest
-[ 57%] Built target ExecutionOutputUTest
+[ 57%] Built target UnorderedUTest
 [ 57%] Built target ConstantClausesUTest
+[ 57%] Built target ExecutionOutputUTest
 [ 58%] Built target StackUTest
-[ 58%] Built target FiniteStateMachineUTest
+[ 58%] Built target ScopeUTest
 [ 60%] Built target BigPatternUTest
 [ 60%] Built target LoopPatternUTest
-[ 60%] Built target BuggyLinkUTest
-[ 61%] Built target PatternUTest
-[ 61%] Built target BooleanUTest
-[ 62%] Built target GreaterComputeUTest
-[ 63%] Built target ImplicationUTest
-[ 64%] Built target SubstitutionUTest
-[ 64%] Built target AttentionalFocusCBUTest
+[ 61%] Built target ImplicationUTest
+[ 62%] Built target SubstitutionUTest
+[ 62%] Built target BuggyLinkUTest
+[ 62%] Built target FiniteStateMachineUTest
+[ 63%] Built target GreaterComputeUTest
+[ 64%] Built target PatternUTest
+[ 64%] Built target BooleanUTest
 [ 65%] Built target GetStateUTest
-[ 67%] Built target BuggyStackUTest
-[ 68%] Built target UnquoteUTest
-[ 68%] Built target RecognizerUTest
+[ 67%] Built target UnquoteUTest
+[ 68%] Built target BuggyStackUTest
+[ 68%] Built target AttentionalFocusCBUTest
 [ 68%] Built target StackMoreUTest
 [ 69%] Built target DefineUTest
+[ 69%] Built target RecognizerUTest
 [ 70%] Built target BuggyNotUTest
-[ 71%] Built target DisconnectedUTest
-[ 72%] Built target DeepTypeUTest
+[ 71%] Built target DeepTypeUTest
+[ 72%] Built target DisconnectedUTest
 [ 74%] Built target EinsteinUTest
-[ 75%] Built target BiggerPatternUTest
-[ 75%] Built target GetLinkUTest
+[ 74%] Built target BiggerPatternUTest
+[ 75%] Built target Boolean2NotUTest
 [ 76%] Built target MatchLinkUTest
-[ 77%] Built target Boolean2NotUTest
 [ 77%] Built target GreaterThanUTest
+[ 77%] Built target GetLinkUTest
 [ 78%] Built target SequenceUTest
-[ 80%] Built target EvaluationUTest
-[ 80%] Built target GlobUTest
-[ 81%] Built target DontExecUTest
-[ 81%] Built target TypeChoiceUTest
-[ 81%] Built target AbsentUTest
-[ 82%] Built target PatternCrashUTest
-[ 83%] Built target QuoteUTest
-[ 84%] Built target BuggyQuoteUTest
+[ 80%] Built target TypeChoiceUTest
+[ 80%] Built target DontExecUTest
+[ 81%] Built target EvaluationUTest
+[ 81%] Built target GlobUTest
+[ 82%] Built target BuggyQuoteUTest
+[ 82%] Built target AbsentUTest
+[ 83%] Built target PatternCrashUTest
+[ 84%] Built target QuoteUTest
 [ 85%] Built target LocalQuoteUTest
-[ 85%] Built target BuggySelfGroundUTest
-[ 87%] Built target ChoiceLinkUTest
-[ 88%] Built target BuggyEqualUTest
+[ 87%] Built target BuggyEqualUTest
+[ 87%] Built target BuggySelfGroundUTest
+[ 88%] Built target ChoiceLinkUTest
 [ 89%] Built target SingleUTest
 [ 90%] Built target SudokuUTest
 [ 91%] Built target PythonEvalUTest
 [ 95%] Built target ruleengine
-[ 96%] Built target ActionSelectionUTest
-[ 97%] Built target BetaDistributionUTest
-[ 97%] Built target BackwardChainerUTest
-[ 97%] Built target ChainerUtilsUTest
+[ 96%] Built target BetaDistributionUTest
+[ 96%] Built target ChainerUtilsUTest
+[ 97%] Built target ActionSelectionUTest
+[ 97%] Built target ForwardChainerUTest
 [ 97%] Built target RuleUTest
+[ 97%] Built target UREConfigUTest
 [ 98%] Built target ControlPolicyUTest
-[ 98%] Built target UREConfigUTest
-[ 98%] Built target ForwardChainerUTest
+[ 98%] Built target BackwardChainerUTest
 [100%] Built target BITUTest
 [100%] Built target tests
 [100%] Running tests...
@@ -183,9 +193,9 @@ Test project /home/opencog/atomspace/build/tests
         Start   3: TVMergeUTest
   3/111 Test   #3: TVMergeUTest .....................   Passed    0.00 sec
         Start   4: AttentionValueUTest
-  4/111 Test   #4: AttentionValueUTest ..............   Passed    0.01 sec
+  4/111 Test   #4: AttentionValueUTest ..............   Passed    0.03 sec
         Start   5: AtomTableUTest
-  5/111 Test   #5: AtomTableUTest ...................   Passed    0.07 sec
+  5/111 Test   #5: AtomTableUTest ...................   Passed    0.09 sec
         Start   6: ClassServerUTest
   6/111 Test   #6: ClassServerUTest .................   Passed    0.00 sec
         Start   7: AtomUTest
@@ -197,19 +207,19 @@ Test project /home/opencog/atomspace/build/tests
         Start  10: TLBUTest
  10/111 Test  #10: TLBUTest .........................   Passed    0.00 sec
         Start  11: AtomSpaceUTest
- 11/111 Test  #11: AtomSpaceUTest ...................   Passed    0.01 sec
+ 11/111 Test  #11: AtomSpaceUTest ...................   Passed    0.02 sec
         Start  12: AtomSpaceImplUTest
  12/111 Test  #12: AtomSpaceImplUTest ...............   Passed    0.01 sec
         Start  13: AtomSpaceAsyncUTest
- 13/111 Test  #13: AtomSpaceAsyncUTest ..............   Passed    5.39 sec
+ 13/111 Test  #13: AtomSpaceAsyncUTest ..............   Passed    5.37 sec
         Start  14: UseCountUTest
- 14/111 Test  #14: UseCountUTest ....................   Passed    3.93 sec
+ 14/111 Test  #14: UseCountUTest ....................   Passed    4.02 sec
         Start  15: MultiSpaceUTest
  15/111 Test  #15: MultiSpaceUTest ..................   Passed    0.01 sec
         Start  16: RemoveUTest
  16/111 Test  #16: RemoveUTest ......................   Passed    0.01 sec
         Start  17: ThreadSafeHandleMapUTest
- 17/111 Test  #17: ThreadSafeHandleMapUTest .........   Passed    0.31 sec
+ 17/111 Test  #17: ThreadSafeHandleMapUTest .........   Passed    0.43 sec
         Start  18: FreeLinkUTest
  18/111 Test  #18: FreeLinkUTest ....................   Passed    0.06 sec
         Start  19: MapLinkUTest
@@ -217,7 +227,7 @@ Test project /home/opencog/atomspace/build/tests
         Start  20: ParallelUTest
  20/111 Test  #20: ParallelUTest ....................   Passed   11.08 sec
         Start  21: RandomUTest
- 21/111 Test  #21: RandomUTest ......................   Passed    0.45 sec
+ 21/111 Test  #21: RandomUTest ......................   Passed    0.42 sec
         Start  22: ReductUTest
  22/111 Test  #22: ReductUTest ......................   Passed    0.06 sec
         Start  23: RewriteLinkUTest
@@ -231,19 +241,19 @@ Test project /home/opencog/atomspace/build/tests
         Start  27: DefineLinkUTest
  27/111 Test  #27: DefineLinkUTest ..................   Passed    0.06 sec
         Start  28: DeleteLinkUTest
- 28/111 Test  #28: DeleteLinkUTest ..................   Passed    0.01 sec
+ 28/111 Test  #28: DeleteLinkUTest ..................   Passed    0.02 sec
         Start  29: EqualLinkUTest
- 29/111 Test  #29: EqualLinkUTest ...................   Passed    0.01 sec
+ 29/111 Test  #29: EqualLinkUTest ...................   Passed    0.02 sec
         Start  30: PutLinkUTest
- 30/111 Test  #30: PutLinkUTest .....................   Passed    0.23 sec
+ 30/111 Test  #30: PutLinkUTest .....................   Passed    0.28 sec
         Start  31: StateLinkUTest
- 31/111 Test  #31: StateLinkUTest ...................   Passed    0.01 sec
+ 31/111 Test  #31: StateLinkUTest ...................   Passed    0.02 sec
         Start  32: VariablesUTest
- 32/111 Test  #32: VariablesUTest ...................   Passed    0.00 sec
+ 32/111 Test  #32: VariablesUTest ...................   Passed    0.01 sec
         Start  33: ComposeLinkUTest
- 33/111 Test  #33: ComposeLinkUTest .................   Passed    0.00 sec
+ 33/111 Test  #33: ComposeLinkUTest .................   Passed    0.02 sec
         Start  34: AtomUtilsUTest
- 34/111 Test  #34: AtomUtilsUTest ...................   Passed    0.00 sec
+ 34/111 Test  #34: AtomUtilsUTest ...................   Passed    0.01 sec
         Start  35: FindUtilsUTest
  35/111 Test  #35: FindUtilsUTest ...................   Passed    0.00 sec
         Start  36: FuzzyUTest
@@ -251,21 +261,21 @@ Test project /home/opencog/atomspace/build/tests
         Start  37: NeighborUTest
  37/111 Test  #37: NeighborUTest ....................   Passed    0.00 sec
         Start  38: UnifyUTest
- 38/111 Test  #38: UnifyUTest .......................   Passed    8.32 sec
+ 38/111 Test  #38: UnifyUTest .......................   Passed    8.35 sec
         Start  39: AtomSpaceUtilsUTest
  39/111 Test  #39: AtomSpaceUtilsUTest ..............   Passed    0.00 sec
         Start  40: AttentionUTest
  40/111 Test  #40: AttentionUTest ...................   Passed    0.01 sec
         Start  41: BasicSCMUTest
- 41/111 Test  #41: BasicSCMUTest ....................***Failed    0.09 sec
-Running cxxtest tests (15 tests)[2018-01-27 14:18:22:813] [DEBUG] BEGIN TEST: test_utf8
+ 41/111 Test  #41: BasicSCMUTest ....................***Failed    0.36 sec
+Running cxxtest tests (15 tests)[2018-01-27 14:26:44:845] [DEBUG] BEGIN TEST: test_utf8
 
 In BasicSCMUTest::test_utf8:
 /home/opencog/atomspace/build/tests/scm/../../../tests/scm/BasicSCMUTest.cxxtest:150: Error: Test failed: Failed to eval a UTF-8 string
 /home/opencog/atomspace/build/tests/scm/../../../tests/scm/BasicSCMUTest.cxxtest:150: Error: Assertion failed: !eval_err
 /home/opencog/atomspace/build/tests/scm/../../../tests/scm/BasicSCMUTest.cxxtest:155: Error: Test failed: Failed to eval a UTF-8 string
 /home/opencog/atomspace/build/tests/scm/../../../tests/scm/BasicSCMUTest.cxxtest:155: Error: Assertion failed: !eval_err
-[2018-01-27 14:18:22:822] [DEBUG] BEGIN TEST: test_single_atom
+[2018-01-27 14:26:44:853] [DEBUG] BEGIN TEST: test_single_atom
 typedefs now loaded!
 check_node(Node,ola amigos,0.200000,0.300000)
 check node (Node "ola amigos" (stv 0.200000 0.300000))
@@ -286,54 +296,54 @@ In BasicSCMUTest::test_single_atom:
 /home/opencog/atomspace/build/tests/scm/../../../tests/scm/BasicSCMUTest.cxxtest:173: Error: Assertion failed: h != nullptr
 /home/opencog/atomspace/build/tests/scm/../../../tests/scm/BasicSCMUTest.cxxtest:176: Error: Test failed: Failed to find node
 /home/opencog/atomspace/build/tests/scm/../../../tests/scm/BasicSCMUTest.cxxtest:176: Error: Assertion failed: n != nullptr
-[2018-01-27 14:18:22:824] [DEBUG] END TEST: test_single_atom
-[2018-01-27 14:18:22:825] [DEBUG] BEGIN TEST: test_extract
-[2018-01-27 14:18:22:826] [DEBUG] END TEST: test_extract
-.[2018-01-27 14:18:22:827] [DEBUG] BEGIN TEST: test_clear
+[2018-01-27 14:26:44:855] [DEBUG] END TEST: test_single_atom
+[2018-01-27 14:26:44:857] [DEBUG] BEGIN TEST: test_extract
+[2018-01-27 14:26:44:857] [DEBUG] END TEST: test_extract
+.[2018-01-27 14:26:44:858] [DEBUG] BEGIN TEST: test_clear
 rs = 
-.[2018-01-27 14:18:22:828] [DEBUG] BEGIN TEST: test_extract_hypergraph
+.[2018-01-27 14:26:44:860] [DEBUG] BEGIN TEST: test_extract_hypergraph
 rs = 
-.[2018-01-27 14:18:22:830] [DEBUG] BEGIN TEST: test_link_tv_setting
-[2018-01-27 14:18:22:830] [DEBUG] END TEST: test_link_tv_setting
+.[2018-01-27 14:26:44:862] [DEBUG] BEGIN TEST: test_link_tv_setting
+[2018-01-27 14:26:44:862] [DEBUG] END TEST: test_link_tv_setting
 .check_link(ReferenceLink,WordInstanceNode,WordNode,0.650000,0.450000)
-[2018-01-27 14:18:22:831] [DEBUG] BEGIN TEST: test_reference_link
+[2018-01-27 14:26:44:864] [DEBUG] BEGIN TEST: test_reference_link
 check_link (ReferenceLink (stv 0.650000 0.450000) (WordInstanceNode "the@401c28c2-9de3-453f-b6d8-1b56061d127e") (WordNode "the") )
-[2018-01-27 14:18:22:831] [DEBUG] END TEST: test_reference_link
+[2018-01-27 14:26:44:864] [DEBUG] END TEST: test_reference_link
 .check_link(WordInstanceLink,WordInstanceNode,ParseNode,1.000000,1.000000)
-[2018-01-27 14:18:22:832] [DEBUG] BEGIN TEST: test_word_instance_link
+[2018-01-27 14:26:44:865] [DEBUG] BEGIN TEST: test_word_instance_link
 check_link (WordInstanceLink (stv 1.000000 1.000000) (WordInstanceNode "the@401c28c2-9de3-453f-b6d8-1b56061d127e") (ParseNode "sentence@8c13ec38-0295-4632-9205-e095035e4364_parse_0") )
-[2018-01-27 14:18:22:833] [DEBUG] END TEST: test_word_instance_link
+[2018-01-27 14:26:44:865] [DEBUG] END TEST: test_word_instance_link
 .check_link(InheritanceLink,WordInstanceNode,DefinedLinguisticConceptNode,1.000000,1.000000)
-[2018-01-27 14:18:22:834] [DEBUG] BEGIN TEST: test_inheritance_link
+[2018-01-27 14:26:44:867] [DEBUG] BEGIN TEST: test_inheritance_link
 check_link (InheritanceLink (stv 1.000000 1.000000) (WordInstanceNode "blue@6fdd848e-a69c-4b6c-a9a2-376e09789096") (DefinedLinguisticConceptNode "hyp") )
-[2018-01-27 14:18:22:834] [DEBUG] END TEST: test_inheritance_link
-.[2018-01-27 14:18:22:835] [DEBUG] BEGIN TEST: test_values
-.[2018-01-27 14:18:22:837] [DEBUG] BEGIN TEST: test_value_list
-.[2018-01-27 14:18:22:840] [DEBUG] BEGIN TEST: test_truth_value
+[2018-01-27 14:26:44:867] [DEBUG] END TEST: test_inheritance_link
+.[2018-01-27 14:26:44:868] [DEBUG] BEGIN TEST: test_values
+.[2018-01-27 14:26:44:870] [DEBUG] BEGIN TEST: test_value_list
+.[2018-01-27 14:26:44:873] [DEBUG] BEGIN TEST: test_truth_value
 .check_parse_link(ParseLink,ParseNode,SentenceNode,1.000000,1.000000)
-[2018-01-27 14:18:22:841] [DEBUG] BEGIN TEST: test_parse_link
-[2018-01-27 14:18:22:841] [DEBUG] END TEST: test_parse_link
+[2018-01-27 14:26:44:874] [DEBUG] BEGIN TEST: test_parse_link
+[2018-01-27 14:26:44:874] [DEBUG] END TEST: test_parse_link
 .check_parse_link(LemmaLink,WordInstanceNode,WordNode,1.000000,1.000000)
-[2018-01-27 14:18:22:843] [DEBUG] BEGIN TEST: test_lemma_link
-[2018-01-27 14:18:22:843] [DEBUG] END TEST: test_lemma_link
+[2018-01-27 14:26:44:876] [DEBUG] BEGIN TEST: test_lemma_link
+[2018-01-27 14:26:44:876] [DEBUG] END TEST: test_lemma_link
 .check_link(PartOfSpeechLink,WordInstanceNode,DefinedLinguisticConceptNode,1.000000,1.000000)
-[2018-01-27 14:18:22:844] [DEBUG] BEGIN TEST: test_part_of_speech_link
+[2018-01-27 14:26:44:877] [DEBUG] BEGIN TEST: test_part_of_speech_link
 check_link (PartOfSpeechLink (stv 1.000000 1.000000) (WordInstanceNode "blue@6fdd848e-a69c-4b6c-a9a2-376e09789096") (DefinedLinguisticConceptNode "adj") )
-[2018-01-27 14:18:22:844] [DEBUG] END TEST: test_part_of_speech_link
+[2018-01-27 14:26:44:877] [DEBUG] END TEST: test_part_of_speech_link
 .
 Failed 2 and Skipped 0 of 15 tests
 Success rate: 86%
 
         Start  42: SCMPrimitiveUTest
- 42/111 Test  #42: SCMPrimitiveUTest ................   Passed    0.57 sec
+ 42/111 Test  #42: SCMPrimitiveUTest ................   Passed    0.58 sec
         Start  43: MultiAtomSpaceUTest
  43/111 Test  #43: MultiAtomSpaceUTest ..............   Passed    0.23 sec
         Start  44: MultiThreadUTest
- 44/111 Test  #44: MultiThreadUTest .................   Passed    9.05 sec
+ 44/111 Test  #44: MultiThreadUTest .................   Passed    9.16 sec
         Start  45: SCMUtilsUTest
  45/111 Test  #45: SCMUtilsUTest ....................   Passed    0.06 sec
         Start  46: SCMExecutionOutputUTest
- 46/111 Test  #46: SCMExecutionOutputUTest ..........   Passed    0.20 sec
+ 46/111 Test  #46: SCMExecutionOutputUTest ..........   Passed    0.21 sec
         Start  47: PatternUTest
  47/111 Test  #47: PatternUTest .....................   Passed    0.01 sec
         Start  48: StackUTest
@@ -345,17 +355,17 @@ Success rate: 86%
         Start  51: LoopPatternUTest
  51/111 Test  #51: LoopPatternUTest .................   Passed    0.01 sec
         Start  52: BooleanUTest
- 52/111 Test  #52: BooleanUTest .....................   Passed    0.03 sec
+ 52/111 Test  #52: BooleanUTest .....................   Passed    0.01 sec
         Start  53: Boolean2NotUTest
- 53/111 Test  #53: Boolean2NotUTest .................   Passed    0.03 sec
+ 53/111 Test  #53: Boolean2NotUTest .................   Passed    0.01 sec
         Start  54: ConstantClausesUTest
- 54/111 Test  #54: ConstantClausesUTest .............   Passed    0.11 sec
+ 54/111 Test  #54: ConstantClausesUTest .............   Passed    0.08 sec
         Start  55: PatternCrashUTest
- 55/111 Test  #55: PatternCrashUTest ................   Passed    0.06 sec
+ 55/111 Test  #55: PatternCrashUTest ................   Passed    0.07 sec
         Start  56: DisconnectedUTest
  56/111 Test  #56: DisconnectedUTest ................   Passed    0.14 sec
         Start  57: ImplicationUTest
- 57/111 Test  #57: ImplicationUTest .................   Passed    0.06 sec
+ 57/111 Test  #57: ImplicationUTest .................   Passed    0.07 sec
         Start  58: ExecutionOutputUTest
  58/111 Test  #58: ExecutionOutputUTest .............   Passed    0.06 sec
         Start  59: BuggyStackUTest
@@ -369,19 +379,19 @@ Success rate: 86%
         Start  63: UnorderedUTest
  63/111 Test  #63: UnorderedUTest ...................   Passed    0.07 sec
         Start  64: StackMoreUTest
- 64/111 Test  #64: StackMoreUTest ...................   Passed    0.10 sec
+ 64/111 Test  #64: StackMoreUTest ...................   Passed    0.09 sec
         Start  65: GlobUTest
  65/111 Test  #65: GlobUTest ........................   Passed    0.11 sec
         Start  66: RecognizerUTest
  66/111 Test  #66: RecognizerUTest ..................   Passed    0.07 sec
         Start  67: ArcanaUTest
- 67/111 Test  #67: ArcanaUTest ......................   Passed    4.06 sec
+ 67/111 Test  #67: ArcanaUTest ......................   Passed    4.07 sec
         Start  68: SubstitutionUTest
  68/111 Test  #68: SubstitutionUTest ................   Passed    0.07 sec
         Start  69: GetLinkUTest
  69/111 Test  #69: GetLinkUTest .....................   Passed    0.06 sec
         Start  70: GetStateUTest
- 70/111 Test  #70: GetStateUTest ....................   Passed    1.57 sec
+ 70/111 Test  #70: GetStateUTest ....................   Passed    1.54 sec
         Start  71: DeepTypeUTest
  71/111 Test  #71: DeepTypeUTest ....................   Passed    0.07 sec
         Start  72: GreaterThanUTest
@@ -395,13 +405,13 @@ Success rate: 86%
         Start  76: DontExecUTest
  76/111 Test  #76: DontExecUTest ....................   Passed    0.07 sec
         Start  77: QuoteUTest
- 77/111 Test  #77: QuoteUTest .......................   Passed    0.07 sec
+ 77/111 Test  #77: QuoteUTest .......................   Passed    0.06 sec
         Start  78: UnquoteUTest
  78/111 Test  #78: UnquoteUTest .....................   Passed    0.01 sec
         Start  79: LocalQuoteUTest
- 79/111 Test  #79: LocalQuoteUTest ..................   Passed    0.03 sec
+ 79/111 Test  #79: LocalQuoteUTest ..................   Passed    0.01 sec
         Start  80: BuggyLinkUTest
- 80/111 Test  #80: BuggyLinkUTest ...................   Passed    0.09 sec
+ 80/111 Test  #80: BuggyLinkUTest ...................   Passed    0.06 sec
         Start  81: BuggyQuoteUTest
  81/111 Test  #81: BuggyQuoteUTest ..................   Passed    0.06 sec
         Start  82: BuggyEqualUTest
@@ -419,7 +429,7 @@ Success rate: 86%
         Start  88: SingleUTest
  88/111 Test  #88: SingleUTest ......................   Passed    0.06 sec
         Start  89: ScopeUTest
- 89/111 Test  #89: ScopeUTest .......................   Passed    0.12 sec
+ 89/111 Test  #89: ScopeUTest .......................   Passed    0.11 sec
         Start  90: FirstNUTest
  90/111 Test  #90: FirstNUTest ......................   Passed    0.10 sec
         Start  91: AttentionalFocusCBUTest
@@ -427,7 +437,7 @@ Success rate: 86%
         Start  92: SudokuUTest
  92/111 Test  #92: SudokuUTest ......................   Passed    0.06 sec
         Start  93: EinsteinUTest
- 93/111 Test  #93: EinsteinUTest ....................   Passed    5.21 sec
+ 93/111 Test  #93: EinsteinUTest ....................   Passed    5.27 sec
         Start  94: TypeChoiceUTest
  94/111 Test  #94: TypeChoiceUTest ..................   Passed    0.01 sec
         Start  95: NoExceptionUTest
@@ -439,11 +449,11 @@ Success rate: 86%
         Start  98: RuleUTest
  98/111 Test  #98: RuleUTest ........................   Passed    0.11 sec
         Start  99: ForwardChainerUTest
- 99/111 Test  #99: ForwardChainerUTest ..............   Passed    1.03 sec
+ 99/111 Test  #99: ForwardChainerUTest ..............   Passed    1.01 sec
         Start 100: BetaDistributionUTest
 100/111 Test #100: BetaDistributionUTest ............   Passed    0.01 sec
         Start 101: BackwardChainerUTest
-101/111 Test #101: BackwardChainerUTest .............   Passed    2.99 sec
+101/111 Test #101: BackwardChainerUTest .............   Passed    2.96 sec
         Start 102: ActionSelectionUTest
 102/111 Test #102: ActionSelectionUTest .............   Passed    0.01 sec
         Start 103: ControlPolicyUTest
@@ -455,11 +465,11 @@ Success rate: 86%
         Start 106: PythonUtilitiesUTest
 106/111 Test #106: PythonUtilitiesUTest .............   Passed    0.02 sec
         Start 107: Cython
-107/111 Test #107: Cython ...........................   Passed    1.78 sec
+107/111 Test #107: Cython ...........................   Passed    1.73 sec
         Start 108: CythonAtomSpace
-108/111 Test #108: CythonAtomSpace ..................   Passed    1.10 sec
+108/111 Test #108: CythonAtomSpace ..................   Passed    1.12 sec
         Start 109: CythonUtilities
-109/111 Test #109: CythonUtilities ..................   Passed    0.09 sec
+109/111 Test #109: CythonUtilities ..................   Passed    0.12 sec
         Start 110: CythonBindlink
 110/111 Test #110: CythonBindlink ...................   Passed    0.10 sec
         Start 111: CythonGuile
@@ -472,7 +482,7 @@ test_unifier (test_pattern.SchemeTest) ...
 
 98% tests passed, 2 tests failed out of 111
 
-Total Test time (real) =  61.94 sec
+Total Test time (real) =  62.54 sec
 
 The following tests FAILED:
 	 41 - BasicSCMUTest (Failed)
@@ -487,6 +497,6 @@ Makefile:197: recipe for target 'test' failed
 make[1]: *** [CMakeFiles/test.dir/rule] Error 2
 make: *** [test] Error 2
 + DSTATUS=TESTFAIL
-+ /var/lib/jenkins/status/updateStatus TESTFAIL /var/lib/jenkins/jobs/OpenCOG_U1604_AtomSpace/builds/54/log OpenCOG_U1604_AtomSpace
++ /var/lib/jenkins/status/updateStatus TESTFAIL /var/lib/jenkins/jobs/OpenCOG_U1604_AtomSpace/builds/55/log OpenCOG_U1604_AtomSpace
 Already up-to-date.
 ~/status/jobs ~/status
