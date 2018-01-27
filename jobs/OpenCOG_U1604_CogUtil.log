@@ -1,6 +1,6 @@
 Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
 Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1604_CogUtil
-[OpenCOG_U1604_CogUtil] $ /bin/sh -xe /tmp/jenkins5823439062238869362.sh
+[OpenCOG_U1604_CogUtil] $ /bin/sh -xe /tmp/jenkins4582561047636069336.sh
 + COGDIR=../OpenCOG_U1604
 + . ../OpenCOG_U1604/build.docker/docker.env
 + CID=45f43206c225623052a0fbe2054cfc3952c57fceb6404332824aae0a70034d1c
@@ -8,7 +8,7 @@ Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1604_CogUtil
 + DKRUNUSER=docker exec --user jenkins  45f43206c225623052a0fbe2054cfc3952c57fceb6404332824aae0a70034d1c
 + UID=125
 + GID=132
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/37/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/38/log
 + cat
 
 
@@ -36,43 +36,43 @@ GIT_URL=
 + cat
 + chmod +x ../OpenCOG_U1604/dependencies/job1
 + docker exec --user jenkins 45f43206c225623052a0fbe2054cfc3952c57fceb6404332824aae0a70034d1c bash dependencies/job1
+/home/opencog
 + pwd
 + cd cogutil
 + cd build
 + make -j8 test
-/home/opencog
 [ 35%] Built target cogutil
-[ 40%] Built target comprehensionUTest
-[ 45%] Built target StringTokenizerUTest
-[ 50%] Built target lru_cacheUTest
-[ 56%] Built target LoggerUTest
-[ 61%] Built target rankingUTest
-[ 66%] Built target CounterUTest
-[ 71%] Built target KLDUTest
+[ 43%] Built target rankingUTest
+[ 45%] Built target lru_cacheUTest
+[ 50%] Built target LoggerUTest
+[ 56%] Built target StringTokenizerUTest
+[ 61%] Built target comprehensionUTest
+[ 66%] Built target KLDUTest
+[ 71%] Built target CounterUTest
 [ 77%] Built target functionalUTest
-[ 82%] Built target iostreamContainerUTest
-[ 87%] Built target ConfigUTest
-[ 94%] Built target randomUTest
-[ 98%] Built target lazy_selectorUTest
+[ 82%] Built target randomUTest
+[ 87%] Built target iostreamContainerUTest
+[ 92%] Built target lazy_selectorUTest
+[ 98%] Built target ConfigUTest
 [ 98%] Built target tests
 [100%] Running tests...
 Test project /home/opencog/cogutil/build/tests
       Start  1: ConfigUTest
- 1/12 Test  #1: ConfigUTest ......................   Passed    0.00 sec
+ 1/12 Test  #1: ConfigUTest ......................   Passed    0.05 sec
       Start  2: LoggerUTest
- 2/12 Test  #2: LoggerUTest ......................   Passed    0.22 sec
+ 2/12 Test  #2: LoggerUTest ......................   Passed    0.53 sec
       Start  3: StringTokenizerUTest
  3/12 Test  #3: StringTokenizerUTest .............   Passed    0.01 sec
       Start  4: lazy_selectorUTest
- 4/12 Test  #4: lazy_selectorUTest ...............   Passed    0.01 sec
+ 4/12 Test  #4: lazy_selectorUTest ...............   Passed    0.00 sec
       Start  5: lru_cacheUTest
- 5/12 Test  #5: lru_cacheUTest ...................   Passed    0.02 sec
+ 5/12 Test  #5: lru_cacheUTest ...................   Passed    0.01 sec
       Start  6: iostreamContainerUTest
- 6/12 Test  #6: iostreamContainerUTest ...........   Passed    0.01 sec
+ 6/12 Test  #6: iostreamContainerUTest ...........   Passed    0.00 sec
       Start  7: functionalUTest
- 7/12 Test  #7: functionalUTest ..................   Passed    0.01 sec
+ 7/12 Test  #7: functionalUTest ..................   Passed    0.00 sec
       Start  8: KLDUTest
- 8/12 Test  #8: KLDUTest .........................   Passed    3.43 sec
+ 8/12 Test  #8: KLDUTest .........................   Passed    3.39 sec
       Start  9: randomUTest
  9/12 Test  #9: randomUTest ......................   Passed    1.45 sec
       Start 10: comprehensionUTest
@@ -84,9 +84,9 @@ Test project /home/opencog/cogutil/build/tests
 
 100% tests passed, 0 tests failed out of 12
 
-Total Test time (real) =   5.15 sec
+Total Test time (real) =   5.44 sec
 [100%] Built target test
 + DSTATUS=TESTPASS
-+ /var/lib/jenkins/status/updateStatus TESTPASS /var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/37/log OpenCOG_U1604_CogUtil
++ /var/lib/jenkins/status/updateStatus TESTPASS /var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/38/log OpenCOG_U1604_CogUtil
 Already up-to-date.
 ~/status/jobs ~/status

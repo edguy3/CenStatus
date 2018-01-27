@@ -88,14 +88,13 @@ do
    fi
 done
 
-cat >>README.md <<ZZZ4
 
 
-cat >>README.md <<ZZZ
+cat >>README.md <<ZZZ5
 
 ## Benchmarks
 
-ZZZ
+ZZZ5
 
 
 for JOBNAME in $JOBS
@@ -111,6 +110,8 @@ do
        echo >>README.md
    fi
 done
+
+cat >>README.md <<ZZZ4
 
 ## Contributors
 

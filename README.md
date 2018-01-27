@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Sat Jan 27 09:39:54 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Sat Jan 27 09:42:58 EST 2018.
 
 ## Modules 
 
@@ -22,7 +22,7 @@ This file shows the status of public cen.ai tracked projects as of Sat Jan 27 09
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 2018-01-26 | 2018-01-21 | 2018-01-26  | 2018-01-26 |
 | [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [80% tests passed, 5 tests failed out of 25](#opencog_u1404_opencog) |  | 2018-01-26 | 2018-01-26  | 2018-01-26 |
 | [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/TESTPASS.svg) | [98% tests passed, 2 tests failed out of 111](#opencog_u1604_atomspace) | 09:30 | 09:27 | 2018-01-26  | 09:30 |
-| [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 09:39 | 2018-01-21 | 2018-01-26  | 09:39 |
+| [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 09:42 | 2018-01-21 | 2018-01-26  | 09:42 |
 | [OpenCOG_U1604__Core_Build](jobs/OpenCOG_U1604__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 2018-01-26 |
 | [OpenCOG_U1604_Guile](jobs/OpenCOG_U1604_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 2018-01-26 |
 | [OpenCOG_U1604_Moses](jobs/OpenCOG_U1604_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 2018-01-26 | 2018-01-21 | 2018-01-26  | 2018-01-26 |
@@ -100,50 +100,25 @@ See the log file at this link: [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Openco
 See the log file at this link: [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Opencog.log) for more detail.
 
 
-
-cat >>README.md <<ZZZ
-
 ## Benchmarks
 
-ZZZ
+
+###  OpenCOG_U1604_AtomSpace
+```
+
+--- OpenCog Python Benchmark -  2018-01-27 14:29:48.690790 ---
+
+Test                                        Time per op  Ops per second
+----                                        -----------  --------------
+Add nodes - Cython                              1.732µs         577,428
+Resolve Handle 100K - by type                   0.064µs      15,600,211
+Bind - bindlink - Cython                       14.439µs          69,258
+Test scheme_eval_h(+ 2 2)                      45.246µs          22,101
+Predicates - get_predicates                     1.581µs         632,525
+
+```
 
 
-for JOBNAME in OpenCOG_DebOld__Core_Build
-OpenCOG_DebStab_Atomspace
-OpenCOG_DebStab_AtomSpace
-OpenCOG_DebStab_CogUtil
-OpenCOG_DebStab__Core_Build
-OpenCOG_DebStab_Guile
-OpenCOG_DebStab_Moses
-OpenCOG_DebStab_Opencog
-OpenCOG_U1404_AtomSpace
-OpenCOG_U1404_CogUtil
-OpenCOG_U1404__Core_Build
-OpenCOG_U1404_Guile
-OpenCOG_U1404_Moses
-OpenCOG_U1404_Opencog
-OpenCOG_U1604_AtomSpace
-OpenCOG_U1604_CogUtil
-OpenCOG_U1604__Core_Build
-OpenCOG_U1604_Guile
-OpenCOG_U1604_Moses
-OpenCOG_U1604_Opencog
-OpenCOG_U1710_AtomSpace
-OpenCOG_U1710_CogUtil
-OpenCOG_U1710__Core_Build
-OpenCOG_U1710_Guile
-OpenCOG_U1710_Moses
-OpenCOG_U1710_Opencog
-do
-   if egrep -q 'BENCHMARK START' "jobs/OpenCOG_U1710_Opencog.log" 
-   then
-       echo >>README.md
-       echo '### ' OpenCOG_U1710_Opencog >>README.md
-       echo '' >>README.md
-       echo >>README.md
-       echo >>README.md
-   fi
-done
 
 ## Contributors
 
