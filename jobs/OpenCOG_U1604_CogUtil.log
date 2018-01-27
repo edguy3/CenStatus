@@ -1,7 +1,6 @@
 Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
-Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
 Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1604_CogUtil
-[OpenCOG_U1604_CogUtil] $ /bin/sh -xe /tmp/jenkins1080186600108859678.sh
+[OpenCOG_U1604_CogUtil] $ /bin/sh -xe /tmp/jenkins5823439062238869362.sh
 + COGDIR=../OpenCOG_U1604
 + . ../OpenCOG_U1604/build.docker/docker.env
 + CID=45f43206c225623052a0fbe2054cfc3952c57fceb6404332824aae0a70034d1c
@@ -9,7 +8,7 @@ Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1604_CogUtil
 + DKRUNUSER=docker exec --user jenkins  45f43206c225623052a0fbe2054cfc3952c57fceb6404332824aae0a70034d1c
 + UID=125
 + GID=132
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/36/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/37/log
 + cat
 
 
@@ -37,93 +36,43 @@ GIT_URL=
 + cat
 + chmod +x ../OpenCOG_U1604/dependencies/job1
 + docker exec --user jenkins 45f43206c225623052a0fbe2054cfc3952c57fceb6404332824aae0a70034d1c bash dependencies/job1
-/home/opencog
 + pwd
 + cd cogutil
 + cd build
 + make -j8 test
+/home/opencog
 [ 35%] Built target cogutil
-[ 36%] Generating lru_cacheUTest.cpp
-[ 38%] Generating comprehensionUTest.cpp
-[ 40%] Generating CounterUTest.cpp
-[ 45%] Generating LoggerUTest.cpp
-[ 45%] Generating StringTokenizerUTest.cpp
-[ 49%] Generating functionalUTest.cpp
-[ 49%] Generating rankingUTest.cpp
-[ 49%] Generating KLDUTest.cpp
-Scanning dependencies of target CounterUTest
-Scanning dependencies of target StringTokenizerUTest
-Scanning dependencies of target functionalUTest
-Scanning dependencies of target comprehensionUTest
-Scanning dependencies of target KLDUTest
-[ 50%] Building CXX object tests/util/CMakeFiles/StringTokenizerUTest.dir/StringTokenizerUTest.cpp.o
-[ 52%] Building CXX object tests/util/CMakeFiles/CounterUTest.dir/CounterUTest.cpp.o
-Scanning dependencies of target LoggerUTest
-[ 54%] Building CXX object tests/util/CMakeFiles/comprehensionUTest.dir/comprehensionUTest.cpp.o
-Scanning dependencies of target rankingUTest
-[ 56%] Building CXX object tests/util/CMakeFiles/functionalUTest.dir/functionalUTest.cpp.o
-[ 57%] Building CXX object tests/util/CMakeFiles/LoggerUTest.dir/LoggerUTest.cpp.o
-[ 59%] Building CXX object tests/util/CMakeFiles/KLDUTest.dir/KLDUTest.cpp.o
-Scanning dependencies of target lru_cacheUTest
-[ 61%] Building CXX object tests/util/CMakeFiles/rankingUTest.dir/rankingUTest.cpp.o
-[ 63%] Building CXX object tests/util/CMakeFiles/lru_cacheUTest.dir/lru_cacheUTest.cpp.o
-[ 64%] Linking CXX executable StringTokenizerUTest
-[ 66%] Linking CXX executable LoggerUTest
-[ 68%] Linking CXX executable CounterUTest
-[ 70%] Linking CXX executable rankingUTest
-[ 70%] Built target LoggerUTest
-[ 70%] Built target StringTokenizerUTest
-[ 70%] Built target rankingUTest
-[ 70%] Built target CounterUTest
-[ 71%] Generating iostreamContainerUTest.cpp
-[ 73%] Generating ConfigUTest.cpp
-[ 75%] Generating lazy_selectorUTest.cpp
-[ 77%] Generating randomUTest.cpp
-Scanning dependencies of target randomUTest
-Scanning dependencies of target iostreamContainerUTest
-Scanning dependencies of target ConfigUTest
-Scanning dependencies of target lazy_selectorUTest
-[ 78%] Building CXX object tests/util/CMakeFiles/lazy_selectorUTest.dir/lazy_selectorUTest.cpp.o
-[ 80%] Building CXX object tests/util/CMakeFiles/ConfigUTest.dir/ConfigUTest.cpp.o
-[ 82%] Building CXX object tests/util/CMakeFiles/randomUTest.dir/randomUTest.cpp.o
-[ 84%] Building CXX object tests/util/CMakeFiles/iostreamContainerUTest.dir/iostreamContainerUTest.cpp.o
-[ 85%] Linking CXX executable functionalUTest
-[ 85%] Built target functionalUTest
-[ 87%] Linking CXX executable ConfigUTest
+[ 40%] Built target comprehensionUTest
+[ 45%] Built target StringTokenizerUTest
+[ 50%] Built target lru_cacheUTest
+[ 56%] Built target LoggerUTest
+[ 61%] Built target rankingUTest
+[ 66%] Built target CounterUTest
+[ 71%] Built target KLDUTest
+[ 77%] Built target functionalUTest
+[ 82%] Built target iostreamContainerUTest
 [ 87%] Built target ConfigUTest
-[ 89%] Linking CXX executable lazy_selectorUTest
-[ 89%] Built target lazy_selectorUTest
-[ 91%] Linking CXX executable KLDUTest
-[ 91%] Built target KLDUTest
-[ 92%] Linking CXX executable comprehensionUTest
-[ 92%] Built target comprehensionUTest
-[ 94%] Linking CXX executable iostreamContainerUTest
-[ 94%] Built target iostreamContainerUTest
-[ 96%] Linking CXX executable randomUTest
-[ 96%] Built target randomUTest
-[ 98%] Linking CXX executable lru_cacheUTest
-[ 98%] Built target lru_cacheUTest
-Scanning dependencies of target tests
+[ 94%] Built target randomUTest
+[ 98%] Built target lazy_selectorUTest
 [ 98%] Built target tests
-Scanning dependencies of target test
 [100%] Running tests...
 Test project /home/opencog/cogutil/build/tests
       Start  1: ConfigUTest
- 1/12 Test  #1: ConfigUTest ......................   Passed    0.02 sec
+ 1/12 Test  #1: ConfigUTest ......................   Passed    0.00 sec
       Start  2: LoggerUTest
- 2/12 Test  #2: LoggerUTest ......................   Passed    0.54 sec
+ 2/12 Test  #2: LoggerUTest ......................   Passed    0.22 sec
       Start  3: StringTokenizerUTest
  3/12 Test  #3: StringTokenizerUTest .............   Passed    0.01 sec
       Start  4: lazy_selectorUTest
- 4/12 Test  #4: lazy_selectorUTest ...............   Passed    0.00 sec
+ 4/12 Test  #4: lazy_selectorUTest ...............   Passed    0.01 sec
       Start  5: lru_cacheUTest
  5/12 Test  #5: lru_cacheUTest ...................   Passed    0.02 sec
       Start  6: iostreamContainerUTest
  6/12 Test  #6: iostreamContainerUTest ...........   Passed    0.01 sec
       Start  7: functionalUTest
- 7/12 Test  #7: functionalUTest ..................   Passed    0.00 sec
+ 7/12 Test  #7: functionalUTest ..................   Passed    0.01 sec
       Start  8: KLDUTest
- 8/12 Test  #8: KLDUTest .........................   Passed    4.10 sec
+ 8/12 Test  #8: KLDUTest .........................   Passed    3.43 sec
       Start  9: randomUTest
  9/12 Test  #9: randomUTest ......................   Passed    1.45 sec
       Start 10: comprehensionUTest
@@ -135,9 +84,9 @@ Test project /home/opencog/cogutil/build/tests
 
 100% tests passed, 0 tests failed out of 12
 
-Total Test time (real) =   6.16 sec
+Total Test time (real) =   5.15 sec
 [100%] Built target test
 + DSTATUS=TESTPASS
-+ /var/lib/jenkins/status/updateStatus TESTPASS /var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/36/log OpenCOG_U1604_CogUtil
++ /var/lib/jenkins/status/updateStatus TESTPASS /var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/37/log OpenCOG_U1604_CogUtil
 Already up-to-date.
 ~/status/jobs ~/status

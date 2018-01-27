@@ -90,6 +90,28 @@ done
 
 cat >>README.md <<ZZZ4
 
+
+cat >>README.md <<ZZZ
+
+## Benchmarks
+
+ZZZ
+
+
+for JOBNAME in $JOBS
+do
+   if egrep -q 'BENCHMARK START' "jobs/$JOBNAME.log" 
+   then
+       echo >>README.md
+       echo '### ' $JOBNAME >>README.md
+       echo '```' >>README.md
+       sed -n '/*#*#*# BENCHMARK START/,/*#*#*# BENCHMARK END/p' "jobs/$JOBNAME.log" | grep -v '*#*#*#'  >>README.md 
+       echo '```' >>README.md
+       echo >>README.md
+       echo >>README.md
+   fi
+done
+
 ## Contributors
 
 Ed Guy.
