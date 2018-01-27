@@ -9,7 +9,7 @@ LOGFILE=$1; shift
 JOB_BASE_NAME=$*
 
 git pull
-pushd jobs
+pushd jobs > /dev/null
 
 rm -f "${JOB_BASE_NAME}.svg"
 ln -s ../images/$DSTATUS.svg "${JOB_BASE_NAME}.svg"
@@ -17,7 +17,7 @@ touch "${JOB_BASE_NAME}.$DSTATUS"
 [ -s $LOGFILE ] && cp $LOGFILE "${JOB_BASE_NAME}.log"
 git add "${JOB_BASE_NAME}.*"
 
-popd
+popd  > /dev/null
 
 ## rewrite readme. 
 JOBS=$( cd jobs ; ls -1 *.svg| sed 's/.svg//' )
