@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Sun Jan 28 17:37:35 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Sun Jan 28 17:38:49 EST 2018.
 
 ## Modules 
 
@@ -14,7 +14,7 @@ This file shows the status of public cen.ai tracked projects as of Sun Jan 28 17
 | [OpenCOG_DebStab_Guile](jobs/OpenCOG_DebStab_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 2018-01-26 |
 | [OpenCOG_DebStab_Moses](jobs/OpenCOG_DebStab_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-01-26 |  | 2018-01-26  | 2018-01-26 |
 | [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [83% tests passed, 4 tests failed out of 23](#opencog_debstab_opencog) |  | 2018-01-26 | 2018-01-26  | 2018-01-26 |
-| [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | [99% tests passed, 1 tests failed out of 111](#opencog_u1404_atomspace) |  | 2018-01-26 | 2018-01-26  | 2018-01-26 |
+| [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  |  | 2018-01-26 | 17:38  | 17:38 |
 | [OpenCOG_U1404_CogUtil](jobs/OpenCOG_U1404_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-01-26 | 2018-01-21 | 17:37  | 17:37 |
 | [OpenCOG_U1404__Core_Build](jobs/OpenCOG_U1404__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 2018-01-26 |
 | [OpenCOG_U1404_Guile](jobs/OpenCOG_U1404_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 17:37 |
@@ -47,14 +47,6 @@ This file shows the status of public cen.ai tracked projects as of Sun Jan 28 17
 ```
 
 See the log file at this link: [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) for more detail.
-
-
-###  OpenCOG_U1404_AtomSpace
-```
-111/111 Test #111: CythonGuile ......................***Exception: SegFault  1.79 sec
-```
-
-See the log file at this link: [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) for more detail.
 
 
 ###  OpenCOG_U1404_Opencog
