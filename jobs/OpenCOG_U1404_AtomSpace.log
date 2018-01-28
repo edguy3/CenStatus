@@ -1,6 +1,6 @@
 Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
 Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1404_AtomSpace
-[OpenCOG_U1404_AtomSpace] $ /bin/sh -xe /tmp/jenkins882534476300254125.sh
+[OpenCOG_U1404_AtomSpace] $ /bin/sh -xe /tmp/jenkins6369066127194723186.sh
 + COGDIR=../OpenCOG_U1404
 + . ../OpenCOG_U1404/build.docker/docker.env
 + CID=6e98dd409a1eb60f1592da4b5639ea5b66803abddc5bb004dc6a8e76ef6b9e07
@@ -8,7 +8,7 @@ Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1404_AtomSpace
 + DKRUNUSER=docker exec --user jenkins  6e98dd409a1eb60f1592da4b5639ea5b66803abddc5bb004dc6a8e76ef6b9e07
 + UID=125
 + GID=132
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404_AtomSpace/builds/31/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404_AtomSpace/builds/32/log
 + cat
 
 
@@ -36,563 +36,137 @@ GIT_URL=
 + cat
 + chmod +x ../OpenCOG_U1404/dependencies/job1
 + docker exec --user jenkins 6e98dd409a1eb60f1592da4b5639ea5b66803abddc5bb004dc6a8e76ef6b9e07 bash dependencies/job1
+/home/opencog
 + pwd
 + cd atomspace
 + cd build
 + make -j8 test
-/home/opencog
 [  1%] Built target opencog_atom_types
 [  3%] Built target truthvalue
 [  5%] Built target atombase
-[  8%] [  9%] Built target attentionbank
+[  9%] [  9%] Built target attentionbank
 Built target atomutils
 [ 17%] Built target atomcore
 [ 18%] [ 20%] Built target clearbox
 Built target atomspace
-[ 20%] [ 20%] [ 21%] [ 21%] [ 21%] Generating BetaReduceUTest.cpp
-Generating EvidenceCountTruthValueUTest.cpp
-Generating AttentionValueUTest.cpp
-Generating TVMergeUTest.cpp
-[ 22%] Generating SimpleTruthValueUTest.cpp
-Built target atomspaceutils
-[ 25%] [ 26%] Built target type_constructors
+[ 21%] Built target SimpleTruthValueUTest
+[ 22%] [ 24%] Built target TVMergeUTest
+[ 24%] [ 24%] [ 25%] [ 27%] [ 27%] Built target atomspaceutils
+Built target AttentionValueUTest
+Built target BetaReduceUTest
+Built target type_constructors
 Built target lambda
-[ 26%] [ 26%] [ 26%] Generating DefineLinkUTest.cpp
-Generating ComposeLinkUTest.cpp
-Generating VariablesUTest.cpp
-Scanning dependencies of target EvidenceCountTruthValueUTest
-Scanning dependencies of target BetaReduceUTest
-Scanning dependencies of target TVMergeUTest
-[ 26%] [ 26%] Scanning dependencies of target SimpleTruthValueUTest
-Building CXX object tests/truthvalue/CMakeFiles/EvidenceCountTruthValueUTest.dir/EvidenceCountTruthValueUTest.cpp.o
-[ 26%] Building CXX object tests/atoms/CMakeFiles/BetaReduceUTest.dir/BetaReduceUTest.cpp.o
-Scanning dependencies of target AttentionValueUTest
-Building CXX object tests/truthvalue/CMakeFiles/TVMergeUTest.dir/TVMergeUTest.cpp.o
-[ 26%] [ 27%] Scanning dependencies of target VariablesUTest
-Building CXX object tests/truthvalue/CMakeFiles/SimpleTruthValueUTest.dir/SimpleTruthValueUTest.cpp.o
-Building CXX object tests/truthvalue/CMakeFiles/AttentionValueUTest.dir/AttentionValueUTest.cpp.o
-[ 27%] Scanning dependencies of target ComposeLinkUTest
-Scanning dependencies of target DefineLinkUTest
-Building CXX object tests/atoms/CMakeFiles/VariablesUTest.dir/VariablesUTest.cpp.o
-[ 27%] [ 27%] Building CXX object tests/atoms/CMakeFiles/ComposeLinkUTest.dir/ComposeLinkUTest.cpp.o
-Building CXX object tests/atoms/CMakeFiles/DefineLinkUTest.dir/DefineLinkUTest.cpp.o
-Linking CXX executable EvidenceCountTruthValueUTest
-Linking CXX executable SimpleTruthValueUTest
-[ 27%] [ 27%] Built target EvidenceCountTruthValueUTest
-Built target SimpleTruthValueUTest
-[ 27%] Generating AtomSpaceUtilsUTest.cpp
-[ 27%] Built target unify
-[ 27%] Generating AttentionUTest.cpp
-Scanning dependencies of target AtomSpaceUtilsUTest
-[ 28%] Building CXX object tests/atomspaceutils/CMakeFiles/AtomSpaceUtilsUTest.dir/AtomSpaceUtilsUTest.cpp.o
-Scanning dependencies of target AttentionUTest
-[ 29%] Building CXX object tests/attentionbank/CMakeFiles/AttentionUTest.dir/AttentionUTest.cpp.o
-Linking CXX executable TVMergeUTest
-[ 29%] Built target TVMergeUTest
-[ 33%] Built target smob
-[ 33%] Built target atomspace_cython
-[ 35%] Built target query
-[ 35%] Generating AtomTableUTest.cpp
-Scanning dependencies of target AtomTableUTest
-[ 35%] Building CXX object tests/atomspace/CMakeFiles/AtomTableUTest.dir/AtomTableUTest.cpp.o
-Linking CXX executable DefineLinkUTest
-[ 35%] Built target DefineLinkUTest
-Linking CXX executable ComposeLinkUTest
-Linking CXX executable VariablesUTest
-Linking CXX executable BetaReduceUTest
-[ 35%] Generating ClassServerUTest.cpp
-[ 35%] [ 35%] Built target ComposeLinkUTest
-Built target VariablesUTest
-[ 35%] Built target BetaReduceUTest
-Scanning dependencies of target ClassServerUTest
-[ 36%] Building CXX object tests/atomspace/CMakeFiles/ClassServerUTest.dir/ClassServerUTest.cpp.o
-[ 36%] [ 36%] [ 36%] Generating LinkUTest.cpp
-Generating AtomUTest.cpp
-Generating NodeUTest.cpp
-Linking CXX executable AttentionValueUTest
-Scanning dependencies of target LinkUTest
-Scanning dependencies of target NodeUTest
-Scanning dependencies of target AtomUTest
-[ 37%] [ 37%] [ 39%] Building CXX object tests/atomspace/CMakeFiles/LinkUTest.dir/LinkUTest.cpp.o
-Building CXX object tests/atomspace/CMakeFiles/NodeUTest.dir/NodeUTest.cpp.o
-Building CXX object tests/atomspace/CMakeFiles/AtomUTest.dir/AtomUTest.cpp.o
-[ 39%] Built target AttentionValueUTest
-[ 39%] Generating TLBUTest.cpp
-Scanning dependencies of target TLBUTest
-[ 39%] Building CXX object tests/atomspace/CMakeFiles/TLBUTest.dir/TLBUTest.cpp.o
-Linking CXX executable AttentionUTest
-Linking CXX executable AtomSpaceUtilsUTest
-[ 39%] Built target AtomSpaceUtilsUTest
-[ 39%] Generating AtomSpaceUTest.cpp
-[ 39%] Built target AttentionUTest
-[ 39%] Generating AtomSpaceImplUTest.cpp
-Scanning dependencies of target AtomSpaceUTest
-[ 39%] Building CXX object tests/atomspace/CMakeFiles/AtomSpaceUTest.dir/AtomSpaceUTest.cpp.o
-Scanning dependencies of target AtomSpaceImplUTest
-[ 40%] Building CXX object tests/atomspace/CMakeFiles/AtomSpaceImplUTest.dir/AtomSpaceImplUTest.cpp.o
-Linking CXX executable NodeUTest
-[ 40%] Built target NodeUTest
-[ 40%] Generating AtomSpaceAsyncUTest.cpp
-Linking CXX executable AtomTableUTest
-Scanning dependencies of target AtomSpaceAsyncUTest
-Linking CXX executable ClassServerUTest
-[ 40%] Building CXX object tests/atomspace/CMakeFiles/AtomSpaceAsyncUTest.dir/AtomSpaceAsyncUTest.cpp.o
-[ 40%] Built target ClassServerUTest
-Linking CXX executable TLBUTest
-Linking CXX executable LinkUTest
-[ 40%] Generating UseCountUTest.cpp
-[ 40%] Built target TLBUTest
-Scanning dependencies of target UseCountUTest
-[ 40%] [ 40%] Built target LinkUTest
-[ 40%] Building CXX object tests/atomspace/CMakeFiles/UseCountUTest.dir/UseCountUTest.cpp.o
-Generating MultiSpaceUTest.cpp
-[ 40%] Generating RemoveUTest.cpp
-Scanning dependencies of target MultiSpaceUTest
-Scanning dependencies of target RemoveUTest
-[ 40%] [ 40%] Building CXX object tests/atomspace/CMakeFiles/MultiSpaceUTest.dir/MultiSpaceUTest.cpp.o
-Building CXX object tests/atomspace/CMakeFiles/RemoveUTest.dir/RemoveUTest.cpp.o
-[ 40%] Built target AtomTableUTest
-[ 40%] Generating ThreadSafeHandleMapUTest.cpp
-Scanning dependencies of target ThreadSafeHandleMapUTest
-[ 40%] Building CXX object tests/atomspace/CMakeFiles/ThreadSafeHandleMapUTest.dir/ThreadSafeHandleMapUTest.cpp.o
-Linking CXX executable AtomUTest
-[ 40%] Built target AtomUTest
-[ 40%] Generating FreeLinkUTest.cpp
-Scanning dependencies of target FreeLinkUTest
-[ 40%] Building CXX object tests/atoms/CMakeFiles/FreeLinkUTest.dir/FreeLinkUTest.cpp.o
-Linking CXX executable UseCountUTest
-[ 40%] Built target UseCountUTest
-[ 40%] Generating RewriteLinkUTest.cpp
-Scanning dependencies of target RewriteLinkUTest
-[ 41%] Building CXX object tests/atoms/CMakeFiles/RewriteLinkUTest.dir/RewriteLinkUTest.cpp.o
-Linking CXX executable ThreadSafeHandleMapUTest
-[ 41%] Built target ThreadSafeHandleMapUTest
-[ 41%] Generating ScopeLinkUTest.cpp
-Scanning dependencies of target ScopeLinkUTest
-[ 41%] Building CXX object tests/atoms/CMakeFiles/ScopeLinkUTest.dir/ScopeLinkUTest.cpp.o
-Linking CXX executable FreeLinkUTest
-[ 41%] Built target FreeLinkUTest
-[ 41%] Generating AlphaConvertUTest.cpp
-Scanning dependencies of target AlphaConvertUTest
-[ 41%] Building CXX object tests/atoms/CMakeFiles/AlphaConvertUTest.dir/AlphaConvertUTest.cpp.o
-Linking CXX executable RemoveUTest
-Linking CXX executable AtomSpaceAsyncUTest
-Linking CXX executable AtomSpaceImplUTest
-[ 41%] Built target RemoveUTest
-[ 41%] Built target AtomSpaceAsyncUTest
-[ 41%] Built target AtomSpaceImplUTest
-Linking CXX executable MultiSpaceUTest
-[ 41%] [ 41%] Generating AtomUtilsUTest.cpp
-Generating FindUtilsUTest.cpp
-[ 42%] Generating FuzzyUTest.cpp
-Scanning dependencies of target FindUtilsUTest
-Scanning dependencies of target FuzzyUTest
-Scanning dependencies of target AtomUtilsUTest
-[ 42%] [ 42%] Building CXX object tests/atomutils/CMakeFiles/FuzzyUTest.dir/FuzzyUTest.cpp.o
-[ 42%] Building CXX object tests/atomutils/CMakeFiles/FindUtilsUTest.dir/FindUtilsUTest.cpp.o
-Building CXX object tests/atomutils/CMakeFiles/AtomUtilsUTest.dir/AtomUtilsUTest.cpp.o
-[ 42%] Built target MultiSpaceUTest
-[ 42%] Generating NeighborUTest.cpp
-Scanning dependencies of target NeighborUTest
-[ 43%] Building CXX object tests/atomutils/CMakeFiles/NeighborUTest.dir/NeighborUTest.cpp.o
-Linking CXX executable AtomSpaceUTest
-[ 43%] Built target AtomSpaceUTest
-[ 44%] Generating UnifyUTest.cpp
-Scanning dependencies of target UnifyUTest
-[ 44%] Building CXX object tests/unify/CMakeFiles/UnifyUTest.dir/UnifyUTest.cpp.o
-Linking CXX executable RewriteLinkUTest
-Linking CXX executable ScopeLinkUTest
-[ 44%] Built target RewriteLinkUTest
-[ 44%] Built target ScopeLinkUTest
-[ 44%] Built target PythonEval
-[ 45%] Built target utilities_cython
+Built target EvidenceCountTruthValueUTest
+[ 27%] Built target DefineLinkUTest
+[ 29%] [ 29%] Built target AtomSpaceUtilsUTest
+Built target AttentionUTest
+[ 29%] [ 29%] Built target VariablesUTest
+Built target ComposeLinkUTest
+[ 31%] Built target ClassServerUTest
+[ 32%] [ 32%] [ 33%] [ 33%] Built target AtomUTest
+Built target LinkUTest
+Built target atomspace_cython
+Built target NodeUTest
+[ 33%] [ 33%] [ 34%] Built target AtomSpaceUTest
+Built target TLBUTest
+Built target AtomSpaceImplUTest
+[ 34%] Built target RemoveUTest
+[ 35%] [ 37%] [ 37%] [ 37%] Built target smob
+Built target UseCountUTest
+Built target MultiSpaceUTest
+Built target AtomSpaceAsyncUTest
+[ 37%] [ 37%] [ 37%] Built target AlphaConvertUTest
+Built target unify
+Built target ThreadSafeHandleMapUTest
+[ 39%] Built target RewriteLinkUTest
+[ 39%] [ 39%] [ 39%] [ 39%] [ 39%] Built target AtomTableUTest
+Built target PythonEval
+Built target FindUtilsUTest
+Built target FreeLinkUTest
+[ 40%] [ 41%] Built target AtomUtilsUTest
+Built target query
+Built target ScopeLinkUTest
+[ 42%] Built target FuzzyUTest
+[ 43%] [ 44%] [ 45%] Built target NeighborUTest
+Built target UnifyUTest
+Built target utilities_cython
 [ 47%] Built target execution
-[ 47%] [ 48%] Generating PythonUtilitiesUTest.cpp
-Generating MapLinkUTest.cpp
-Scanning dependencies of target PythonUtilitiesUTest
-Scanning dependencies of target MapLinkUTest
-[ 49%] [ 49%] Building CXX object tests/cython/CMakeFiles/PythonUtilitiesUTest.dir/PythonUtilitiesUTest.cpp.o
-Building CXX object tests/atoms/CMakeFiles/MapLinkUTest.dir/MapLinkUTest.cpp.o
-Linking CXX executable AlphaConvertUTest
-[ 49%] Built target AlphaConvertUTest
-[ 49%] Generating ParallelUTest.cpp
-Scanning dependencies of target ParallelUTest
-[ 49%] Building CXX object tests/atoms/CMakeFiles/ParallelUTest.dir/ParallelUTest.cpp.o
-Linking CXX executable FuzzyUTest
-Linking CXX executable FindUtilsUTest
-[ 49%] Built target FuzzyUTest
-Linking CXX executable AtomUtilsUTest
-Linking CXX executable NeighborUTest
-[ 49%] Generating RandomUTest.cpp
-[ 49%] Built target AtomUtilsUTest
-[ 49%] Built target FindUtilsUTest
-[ 49%] Generating ReductUTest.cpp
-Scanning dependencies of target RandomUTest
-[ 49%] [ 50%] Generating DeleteLinkUTest.cpp
-Building CXX object tests/atoms/CMakeFiles/RandomUTest.dir/RandomUTest.cpp.o
-[ 50%] Built target NeighborUTest
-[ 50%] Generating EqualLinkUTest.cpp
-Scanning dependencies of target DeleteLinkUTest
-Scanning dependencies of target ReductUTest
-[ 50%] Building CXX object tests/atoms/CMakeFiles/DeleteLinkUTest.dir/DeleteLinkUTest.cpp.o
-[ 51%] Scanning dependencies of target EqualLinkUTest
-[ 51%] Building CXX object tests/atoms/CMakeFiles/ReductUTest.dir/ReductUTest.cpp.o
-Building CXX object tests/atoms/CMakeFiles/EqualLinkUTest.dir/EqualLinkUTest.cpp.o
-Linking CXX executable PythonUtilitiesUTest
-[ 51%] Built target PythonUtilitiesUTest
-[ 52%] Generating PutLinkUTest.cpp
-Scanning dependencies of target PutLinkUTest
-[ 52%] Building CXX object tests/atoms/CMakeFiles/PutLinkUTest.dir/PutLinkUTest.cpp.o
-Linking CXX executable MapLinkUTest
-Linking CXX executable ParallelUTest
+[ 48%] [ 48%] [ 48%] [ 49%] Built target DeleteLinkUTest
+Built target EqualLinkUTest
+Built target PutLinkUTest
+Built target PythonUtilitiesUTest
+[ 49%] [ 50%] [ 51%] Built target ParallelUTest
+Built target RandomUTest
 [ 52%] Built target MapLinkUTest
-[ 52%] Generating StateLinkUTest.cpp
-[ 52%] Built target ParallelUTest
-[ 52%] Generating BasicSCMUTest.cpp
-Scanning dependencies of target StateLinkUTest
-[ 54%] Building CXX object tests/atoms/CMakeFiles/StateLinkUTest.dir/StateLinkUTest.cpp.o
-Scanning dependencies of target BasicSCMUTest
-[ 54%] Building CXX object tests/scm/CMakeFiles/BasicSCMUTest.dir/BasicSCMUTest.cpp.o
-Linking CXX executable RandomUTest
-[ 54%] Built target RandomUTest
-[ 54%] Generating SCMPrimitiveUTest.cpp
-Linking CXX executable EqualLinkUTest
-Scanning dependencies of target SCMPrimitiveUTest
-Linking CXX executable DeleteLinkUTest
-[ 54%] Building CXX object tests/scm/CMakeFiles/SCMPrimitiveUTest.dir/SCMPrimitiveUTest.cpp.o
-[ 54%] Built target EqualLinkUTest
-[ 55%] Generating MultiAtomSpaceUTest.cpp
-[ 55%] Built target DeleteLinkUTest
-[ 56%] Generating MultiThreadUTest.cpp
-Scanning dependencies of target MultiAtomSpaceUTest
-[ 56%] Building CXX object tests/scm/CMakeFiles/MultiAtomSpaceUTest.dir/MultiAtomSpaceUTest.cpp.o
-Scanning dependencies of target MultiThreadUTest
-[ 56%] Building CXX object tests/scm/CMakeFiles/MultiThreadUTest.dir/MultiThreadUTest.cpp.o
-Linking CXX executable ReductUTest
-[ 56%] Built target ReductUTest
-[ 56%] Generating SCMUtilsUTest.cpp
-Scanning dependencies of target SCMUtilsUTest
-[ 57%] Building CXX object tests/scm/CMakeFiles/SCMUtilsUTest.dir/SCMUtilsUTest.cpp.o
-Linking CXX executable StateLinkUTest
-[ 57%] Built target StateLinkUTest
-[ 57%] Generating SCMExecutionOutputUTest.cpp
-Scanning dependencies of target SCMExecutionOutputUTest
-[ 58%] Building CXX object tests/scm/CMakeFiles/SCMExecutionOutputUTest.dir/SCMExecutionOutputUTest.cpp.o
-Linking CXX executable BasicSCMUTest
-[ 58%] Built target BasicSCMUTest
-[ 58%] Generating PatternUTest.cpp
-Scanning dependencies of target PatternUTest
-[ 58%] Building CXX object tests/query/CMakeFiles/PatternUTest.dir/PatternUTest.cpp.o
-Linking CXX executable SCMPrimitiveUTest
-[ 58%] Built target SCMPrimitiveUTest
-[ 58%] Generating StackUTest.cpp
-Scanning dependencies of target StackUTest
-[ 58%] Building CXX object tests/query/CMakeFiles/StackUTest.dir/StackUTest.cpp.o
-Linking CXX executable MultiThreadUTest
-[ 58%] Built target MultiThreadUTest
-Linking CXX executable SCMUtilsUTest
-Linking CXX executable PutLinkUTest
-[ 58%] Generating BigPatternUTest.cpp
-Scanning dependencies of target BigPatternUTest
-[ 59%] Building CXX object tests/query/CMakeFiles/BigPatternUTest.dir/BigPatternUTest.cpp.o
-[ 59%] Built target SCMUtilsUTest
-[ 59%] Generating BiggerPatternUTest.cpp
-[ 59%] Built target PutLinkUTest
-[ 59%] Generating LoopPatternUTest.cpp
-Scanning dependencies of target BiggerPatternUTest
-[ 59%] Building CXX object tests/query/CMakeFiles/BiggerPatternUTest.dir/BiggerPatternUTest.cpp.o
-Scanning dependencies of target LoopPatternUTest
-[ 59%] Building CXX object tests/query/CMakeFiles/LoopPatternUTest.dir/LoopPatternUTest.cpp.o
-Linking CXX executable MultiAtomSpaceUTest
-[ 59%] Built target MultiAtomSpaceUTest
-[ 59%] Generating BooleanUTest.cpp
-Scanning dependencies of target BooleanUTest
-[ 59%] Building CXX object tests/query/CMakeFiles/BooleanUTest.dir/BooleanUTest.cpp.o
-Linking CXX executable UnifyUTest
-[ 59%] Built target UnifyUTest
-[ 59%] Generating Boolean2NotUTest.cpp
-Scanning dependencies of target Boolean2NotUTest
-[ 60%] Building CXX object tests/query/CMakeFiles/Boolean2NotUTest.dir/Boolean2NotUTest.cpp.o
-Linking CXX executable StackUTest
-[ 60%] Built target StackUTest
-Linking CXX executable SCMExecutionOutputUTest
-[ 62%] Generating ConstantClausesUTest.cpp
-Scanning dependencies of target ConstantClausesUTest
-[ 62%] Building CXX object tests/query/CMakeFiles/ConstantClausesUTest.dir/ConstantClausesUTest.cpp.o
-[ 62%] Built target SCMExecutionOutputUTest
-[ 62%] Generating PatternCrashUTest.cpp
-Scanning dependencies of target PatternCrashUTest
-[ 63%] Building CXX object tests/query/CMakeFiles/PatternCrashUTest.dir/PatternCrashUTest.cpp.o
-Linking CXX executable PatternUTest
-Linking CXX executable BigPatternUTest
-[ 63%] Built target PatternUTest
-[ 63%] Built target BigPatternUTest
-Linking CXX executable LoopPatternUTest
-[ 64%] [ 65%] Generating ImplicationUTest.cpp
-Generating DisconnectedUTest.cpp
-Scanning dependencies of target DisconnectedUTest
-Scanning dependencies of target ImplicationUTest
-[ 65%] [ 65%] Building CXX object tests/query/CMakeFiles/DisconnectedUTest.dir/DisconnectedUTest.cpp.o
-Building CXX object tests/query/CMakeFiles/ImplicationUTest.dir/ImplicationUTest.cpp.o
-[ 65%] Built target LoopPatternUTest
-[ 66%] Generating ExecutionOutputUTest.cpp
-Scanning dependencies of target ExecutionOutputUTest
-[ 66%] Building CXX object tests/query/CMakeFiles/ExecutionOutputUTest.dir/ExecutionOutputUTest.cpp.o
-Linking CXX executable BooleanUTest
-[ 66%] Built target BooleanUTest
-Linking CXX executable BiggerPatternUTest
-[ 66%] Generating BuggyStackUTest.cpp
-Scanning dependencies of target BuggyStackUTest
-[ 66%] Building CXX object tests/query/CMakeFiles/BuggyStackUTest.dir/BuggyStackUTest.cpp.o
-[ 66%] Built target BiggerPatternUTest
-[ 67%] Generating VarTypeNotUTest.cpp
-Scanning dependencies of target VarTypeNotUTest
-[ 67%] Building CXX object tests/query/CMakeFiles/VarTypeNotUTest.dir/VarTypeNotUTest.cpp.o
-Linking CXX executable Boolean2NotUTest
-Linking CXX executable ConstantClausesUTest
-[ 67%] Built target ConstantClausesUTest
-[ 67%] Built target Boolean2NotUTest
-Linking CXX executable PatternCrashUTest
-[ 67%] [ 67%] Generating MatchLinkUTest.cpp
-Generating BuggyNotUTest.cpp
-[ 67%] Built target PatternCrashUTest
-[ 67%] Generating UnorderedUTest.cpp
-Scanning dependencies of target BuggyNotUTest
-Scanning dependencies of target MatchLinkUTest
-[ 68%] [ 68%] Building CXX object tests/query/CMakeFiles/BuggyNotUTest.dir/BuggyNotUTest.cpp.o
-Building CXX object tests/query/CMakeFiles/MatchLinkUTest.dir/MatchLinkUTest.cpp.o
-Scanning dependencies of target UnorderedUTest
-[ 68%] Building CXX object tests/query/CMakeFiles/UnorderedUTest.dir/UnorderedUTest.cpp.o
-Linking CXX executable DisconnectedUTest
-[ 68%] Built target DisconnectedUTest
-[ 68%] Generating StackMoreUTest.cpp
-Scanning dependencies of target StackMoreUTest
-[ 70%] Building CXX object tests/query/CMakeFiles/StackMoreUTest.dir/StackMoreUTest.cpp.o
-Linking CXX executable ImplicationUTest
-Linking CXX executable BuggyStackUTest
-[ 70%] Built target ImplicationUTest
-[ 70%] Generating GlobUTest.cpp
-[ 70%] Built target BuggyStackUTest
-[ 70%] Generating RecognizerUTest.cpp
-Scanning dependencies of target GlobUTest
-[ 70%] Building CXX object tests/query/CMakeFiles/GlobUTest.dir/GlobUTest.cpp.o
-Scanning dependencies of target RecognizerUTest
-[ 70%] Building CXX object tests/query/CMakeFiles/RecognizerUTest.dir/RecognizerUTest.cpp.o
-Linking CXX executable ExecutionOutputUTest
-[ 70%] Built target ExecutionOutputUTest
-[ 70%] Generating ArcanaUTest.cpp
-Scanning dependencies of target ArcanaUTest
-[ 71%] Building CXX object tests/query/CMakeFiles/ArcanaUTest.dir/ArcanaUTest.cpp.o
-Linking CXX executable VarTypeNotUTest
-[ 71%] Built target VarTypeNotUTest
-[ 71%] Generating SubstitutionUTest.cpp
-Scanning dependencies of target SubstitutionUTest
-[ 71%] Building CXX object tests/query/CMakeFiles/SubstitutionUTest.dir/SubstitutionUTest.cpp.o
-Linking CXX executable BuggyNotUTest
-Linking CXX executable MatchLinkUTest
-[ 71%] Built target BuggyNotUTest
-[ 71%] Generating GetLinkUTest.cpp
-[ 71%] Built target MatchLinkUTest
-Scanning dependencies of target GetLinkUTest
-[ 72%] [ 72%] Generating GetStateUTest.cpp
-Building CXX object tests/query/CMakeFiles/GetLinkUTest.dir/GetLinkUTest.cpp.o
-Linking CXX executable UnorderedUTest
-Scanning dependencies of target GetStateUTest
-[ 72%] Building CXX object tests/query/CMakeFiles/GetStateUTest.dir/GetStateUTest.cpp.o
-[ 72%] Built target UnorderedUTest
-[ 73%] Generating DeepTypeUTest.cpp
-Scanning dependencies of target DeepTypeUTest
-[ 73%] Building CXX object tests/query/CMakeFiles/DeepTypeUTest.dir/DeepTypeUTest.cpp.o
-Linking CXX executable StackMoreUTest
-[ 73%] Built target StackMoreUTest
-[ 73%] Generating GreaterThanUTest.cpp
-Scanning dependencies of target GreaterThanUTest
-[ 73%] Building CXX object tests/query/CMakeFiles/GreaterThanUTest.dir/GreaterThanUTest.cpp.o
-Linking CXX executable RecognizerUTest
-[ 73%] Built target RecognizerUTest
-Linking CXX executable GlobUTest
-[ 73%] Built target GlobUTest
-[ 74%] Generating GreaterComputeUTest.cpp
-Scanning dependencies of target GreaterComputeUTest
-[ 74%] Building CXX object tests/query/CMakeFiles/GreaterComputeUTest.dir/GreaterComputeUTest.cpp.o
-[ 74%] Generating SequenceUTest.cpp
-Linking CXX executable ArcanaUTest
-Linking CXX executable SubstitutionUTest
-Linking CXX executable GetLinkUTest
-Linking CXX executable GetStateUTest
-Scanning dependencies of target SequenceUTest
-[ 74%] Building CXX object tests/query/CMakeFiles/SequenceUTest.dir/SequenceUTest.cpp.o
-[ 74%] Built target GetStateUTest
-[ 74%] Built target ArcanaUTest
-[ 74%] Built target GetLinkUTest
-Linking CXX executable DeepTypeUTest
-[ 74%] Built target SubstitutionUTest
-Linking CXX executable GreaterThanUTest
-Linking CXX executable GreaterComputeUTest
-[ 75%] [ 75%] [ 77%] [ 77%] Generating EvaluationUTest.cpp
-Generating QuoteUTest.cpp
-Generating UnquoteUTest.cpp
-Generating DontExecUTest.cpp
-Scanning dependencies of target EvaluationUTest
-Scanning dependencies of target UnquoteUTest
-[ 77%] [ 77%] Scanning dependencies of target DontExecUTest
-Building CXX object tests/query/CMakeFiles/EvaluationUTest.dir/EvaluationUTest.cpp.o
-Building CXX object tests/query/CMakeFiles/UnquoteUTest.dir/UnquoteUTest.cpp.o
-Scanning dependencies of target QuoteUTest
-[ 77%] [ 77%] Building CXX object tests/query/CMakeFiles/DontExecUTest.dir/DontExecUTest.cpp.o
-Building CXX object tests/query/CMakeFiles/QuoteUTest.dir/QuoteUTest.cpp.o
-[ 77%] Built target GreaterThanUTest
-[ 77%] Built target DeepTypeUTest
-[ 78%] [ 78%] Generating LocalQuoteUTest.cpp
-[ 78%] Built target GreaterComputeUTest
-Generating BuggyLinkUTest.cpp
-[ 78%] Generating BuggyQuoteUTest.cpp
-Scanning dependencies of target LocalQuoteUTest
-[ 78%] Building CXX object tests/query/CMakeFiles/LocalQuoteUTest.dir/LocalQuoteUTest.cpp.o
-Scanning dependencies of target BuggyLinkUTest
-Scanning dependencies of target BuggyQuoteUTest
-[ 78%] Building CXX object tests/query/CMakeFiles/BuggyLinkUTest.dir/BuggyLinkUTest.cpp.o
-[ 78%] Building CXX object tests/query/CMakeFiles/BuggyQuoteUTest.dir/BuggyQuoteUTest.cpp.o
-Linking CXX executable SequenceUTest
-Linking CXX executable BuggyQuoteUTest
-Linking CXX executable BuggyLinkUTest
-[ 78%] Built target BuggyQuoteUTest
-[ 78%] Built target BuggyLinkUTest
-[ 78%] Built target SequenceUTest
-Linking CXX executable EvaluationUTest
-[ 78%] Built target EvaluationUTest
-Linking CXX executable DontExecUTest
-[ 78%] Linking CXX executable QuoteUTest
-[ 78%] Generating BuggyEqualUTest.cpp
-Generating BuggySelfGroundUTest.cpp
-[ 78%] Built target DontExecUTest
-[ 78%] Generating ChoiceLinkUTest.cpp
-[ 78%] Built target QuoteUTest
-Scanning dependencies of target BuggyEqualUTest
-[ 79%] Building CXX object tests/query/CMakeFiles/BuggyEqualUTest.dir/BuggyEqualUTest.cpp.o
-Scanning dependencies of target BuggySelfGroundUTest
-[ 80%] Building CXX object tests/query/CMakeFiles/BuggySelfGroundUTest.dir/BuggySelfGroundUTest.cpp.o
-[ 81%] Generating DefineUTest.cpp
-Linking CXX executable UnquoteUTest
-Scanning dependencies of target ChoiceLinkUTest
-[ 81%] Building CXX object tests/query/CMakeFiles/ChoiceLinkUTest.dir/ChoiceLinkUTest.cpp.o
-Linking CXX executable LocalQuoteUTest
-[ 81%] Built target UnquoteUTest
-[ 81%] [ 81%] [ 82%] Generating FiniteStateMachineUTest.cpp
-Generating AbsentUTest.cpp
-Generating SingleUTest.cpp
-Scanning dependencies of target DefineUTest
-[ 82%] Building CXX object tests/query/CMakeFiles/DefineUTest.dir/DefineUTest.cpp.o
-Scanning dependencies of target FiniteStateMachineUTest
-Scanning dependencies of target AbsentUTest
-[ 82%] Scanning dependencies of target SingleUTest
-Building CXX object tests/query/CMakeFiles/FiniteStateMachineUTest.dir/FiniteStateMachineUTest.cpp.o
-[ 82%] [ 82%] Building CXX object tests/query/CMakeFiles/SingleUTest.dir/SingleUTest.cpp.o
-Building CXX object tests/query/CMakeFiles/AbsentUTest.dir/AbsentUTest.cpp.o
-[ 82%] Built target LocalQuoteUTest
-[ 82%] Generating ScopeUTest.cpp
-Scanning dependencies of target ScopeUTest
-[ 83%] Building CXX object tests/query/CMakeFiles/ScopeUTest.dir/ScopeUTest.cpp.o
-Linking CXX executable BuggySelfGroundUTest
-Linking CXX executable BuggyEqualUTest
-[ 83%] Built target BuggySelfGroundUTest
-[ 83%] Generating FirstNUTest.cpp
-[ 83%] Built target BuggyEqualUTest
-Scanning dependencies of target FirstNUTest
-[ 83%] Generating AttentionalFocusCBUTest.cpp
-[ 83%] Building CXX object tests/query/CMakeFiles/FirstNUTest.dir/FirstNUTest.cpp.o
-Scanning dependencies of target AttentionalFocusCBUTest
-[ 85%] Building CXX object tests/query/CMakeFiles/AttentionalFocusCBUTest.dir/AttentionalFocusCBUTest.cpp.o
-Linking CXX executable ChoiceLinkUTest
-[ 85%] Built target ChoiceLinkUTest
-[ 85%] Generating SudokuUTest.cpp
-Scanning dependencies of target SudokuUTest
-[ 86%] Building CXX object tests/query/CMakeFiles/SudokuUTest.dir/SudokuUTest.cpp.o
-Linking CXX executable SingleUTest
-[ 86%] Built target SingleUTest
-[ 87%] Generating EinsteinUTest.cpp
-Scanning dependencies of target EinsteinUTest
-[ 87%] Building CXX object tests/query/CMakeFiles/EinsteinUTest.dir/EinsteinUTest.cpp.o
-Linking CXX executable DefineUTest
-[ 87%] Built target DefineUTest
-[ 88%] Generating TypeChoiceUTest.cpp
-Scanning dependencies of target TypeChoiceUTest
-[ 88%] Building CXX object tests/query/CMakeFiles/TypeChoiceUTest.dir/TypeChoiceUTest.cpp.o
-Linking CXX executable FiniteStateMachineUTest
-[ 88%] Built target FiniteStateMachineUTest
-[ 88%] Generating NoExceptionUTest.cpp
-Scanning dependencies of target NoExceptionUTest
-[ 88%] Building CXX object tests/query/CMakeFiles/NoExceptionUTest.dir/NoExceptionUTest.cpp.o
-Linking CXX executable ScopeUTest
-[ 88%] Built target ScopeUTest
-[ 93%] Built target ruleengine
-[ 94%] Generating PythonEvalUTest.cpp
-Linking CXX executable AbsentUTest
-[ 94%] Built target AbsentUTest
-[ 95%] Generating ForwardChainerUTest.cpp
-Scanning dependencies of target ForwardChainerUTest
-[ 95%] Building CXX object tests/rule-engine/forwardchainer/CMakeFiles/ForwardChainerUTest.dir/ForwardChainerUTest.cpp.o
-Scanning dependencies of target PythonEvalUTest
-[ 95%] Building CXX object tests/cython/CMakeFiles/PythonEvalUTest.dir/PythonEvalUTest.cpp.o
-Linking CXX executable AttentionalFocusCBUTest
-[ 95%] Built target AttentionalFocusCBUTest
-[ 95%] Generating BetaDistributionUTest.cpp
-Scanning dependencies of target BetaDistributionUTest
-[ 96%] Building CXX object tests/rule-engine/backwardchainer/CMakeFiles/BetaDistributionUTest.dir/BetaDistributionUTest.cpp.o
-Linking CXX executable FirstNUTest
-[ 96%] Built target FirstNUTest
-[ 96%] Generating BackwardChainerUTest.cpp
-Scanning dependencies of target BackwardChainerUTest
-[ 97%] Building CXX object tests/rule-engine/backwardchainer/CMakeFiles/BackwardChainerUTest.dir/BackwardChainerUTest.cpp.o
-Linking CXX executable SudokuUTest
-[ 97%] Built target SudokuUTest
-Linking CXX executable EinsteinUTest
-[ 97%] Generating ActionSelectionUTest.cpp
-Scanning dependencies of target ActionSelectionUTest
-[ 97%] Built target EinsteinUTest
-[ 98%] Building CXX object tests/rule-engine/backwardchainer/CMakeFiles/ActionSelectionUTest.dir/ActionSelectionUTest.cpp.o
-Linking CXX executable NoExceptionUTest
-[ 98%] Generating ControlPolicyUTest.cpp
-Linking CXX executable TypeChoiceUTest
-Scanning dependencies of target ControlPolicyUTest
-[ 98%] Building CXX object tests/rule-engine/backwardchainer/CMakeFiles/ControlPolicyUTest.dir/ControlPolicyUTest.cpp.o
-[ 98%] Built target NoExceptionUTest
-[ 98%] Generating BITUTest.cpp
-[ 98%] Built target TypeChoiceUTest
-[ 98%] Generating ChainerUtilsUTest.cpp
-Scanning dependencies of target BITUTest
-[ 98%] Building CXX object tests/rule-engine/backwardchainer/CMakeFiles/BITUTest.dir/BITUTest.cpp.o
-Scanning dependencies of target ChainerUtilsUTest
-[100%] Building CXX object tests/rule-engine/CMakeFiles/ChainerUtilsUTest.dir/ChainerUtilsUTest.cpp.o
-Linking CXX executable PythonEvalUTest
-[100%] Built target PythonEvalUTest
-[100%] Generating UREConfigUTest.cpp
-Scanning dependencies of target UREConfigUTest
-[100%] Building CXX object tests/rule-engine/CMakeFiles/UREConfigUTest.dir/UREConfigUTest.cpp.o
-Linking CXX executable ForwardChainerUTest
-[100%] Built target ForwardChainerUTest
-[100%] Generating RuleUTest.cpp
-Scanning dependencies of target RuleUTest
-[100%] Building CXX object tests/rule-engine/CMakeFiles/RuleUTest.dir/RuleUTest.cpp.o
-Linking CXX executable BetaDistributionUTest
-[100%] Built target BetaDistributionUTest
-Linking CXX executable ActionSelectionUTest
-[100%] Built target ActionSelectionUTest
-Linking CXX executable UREConfigUTest
-Linking CXX executable ControlPolicyUTest
-[100%] Built target UREConfigUTest
-Linking CXX executable ChainerUtilsUTest
-Linking CXX executable BackwardChainerUTest
-Linking CXX executable BITUTest
-Linking CXX executable RuleUTest
+Built target ReductUTest
+[ 54%] Built target StateLinkUTest
+[ 55%] [ 55%] Built target MultiAtomSpaceUTest
+[ 55%] Built target SCMPrimitiveUTest
+Built target BasicSCMUTest
+[ 56%] [ 56%] Built target MultiThreadUTest
+Built target PatternUTest
+[ 57%] Built target SCMUtilsUTest
+[ 58%] Built target SCMExecutionOutputUTest
+[ 58%] [ 59%] [ 59%] Built target StackUTest
+[ 59%] [ 60%] [ 60%] Built target BigPatternUTest
+Built target LoopPatternUTest
+Built target BiggerPatternUTest
+Built target Boolean2NotUTest
+Built target BooleanUTest
+[ 62%] Built target ConstantClausesUTest
+[ 64%] [ 64%] Built target PatternCrashUTest
+Built target DisconnectedUTest
+[ 65%] Built target ImplicationUTest
+[ 66%] [ 66%] Built target BuggyNotUTest
+Built target BuggyStackUTest
+[ 67%] [ 67%] Built target VarTypeNotUTest
+Built target MatchLinkUTest
+[ 68%] Built target ExecutionOutputUTest
+[ 70%] Built target StackMoreUTest
+[ 70%] Built target UnorderedUTest
+[ 70%] Built target RecognizerUTest
+[ 71%] [ 71%] [ 72%] [ 72%] Built target ArcanaUTest
+[ 72%] Built target SubstitutionUTest
+Built target GetStateUTest
+Built target GetLinkUTest
+Built target GlobUTest
+[ 73%] [ 73%] Built target DeepTypeUTest
+Built target GreaterThanUTest
+[ 74%] [ 74%] [ 75%] Built target UnquoteUTest
+Built target GreaterComputeUTest
+Built target SequenceUTest
+[ 75%] [ 77%] [ 77%] Built target DontExecUTest
+Built target EvaluationUTest
+Built target QuoteUTest
+[ 78%] [ 78%] Built target LocalQuoteUTest
+Built target BuggyLinkUTest
+[ 79%] [ 79%] Built target BuggyQuoteUTest
+Built target BuggySelfGroundUTest
+[ 80%] [ 80%] Built target BuggyEqualUTest
+Built target ChoiceLinkUTest
+[ 81%] Built target DefineUTest
+[ 82%] [ 82%] Built target FiniteStateMachineUTest
+Built target AbsentUTest
+[ 82%] Built target SingleUTest
+[ 83%] [ 83%] Built target ScopeUTest
+Built target FirstNUTest
+[ 85%] Built target SudokuUTest
+[ 86%] [ 87%] Built target AttentionalFocusCBUTest
+[ 88%] Built target EinsteinUTest
+Built target TypeChoiceUTest
+[ 88%] Built target NoExceptionUTest
+[ 89%] Built target PythonEvalUTest
+[ 94%] Built target ruleengine
+[ 95%] [ 96%] Built target ActionSelectionUTest
+Built target BetaDistributionUTest
+[ 97%] [ 97%] [ 98%] [100%] Built target ChainerUtilsUTest
+Built target ForwardChainerUTest
+Built target UREConfigUTest
+Built target BackwardChainerUTest
 [100%] Built target ControlPolicyUTest
-[100%] Built target BackwardChainerUTest
-[100%] Built target ChainerUtilsUTest
-[100%] Built target RuleUTest
 [100%] Built target BITUTest
-Scanning dependencies of target tests
+[100%] Built target RuleUTest
 [100%] Built target tests
-Scanning dependencies of target test
 [100%] Running tests...
 Test project /home/opencog/atomspace/build/tests
         Start   1: SimpleTruthValueUTest
@@ -604,7 +178,7 @@ Test project /home/opencog/atomspace/build/tests
         Start   4: AttentionValueUTest
   4/111 Test   #4: AttentionValueUTest ..............   Passed    0.01 sec
         Start   5: AtomTableUTest
-  5/111 Test   #5: AtomTableUTest ...................   Passed    9.60 sec
+  5/111 Test   #5: AtomTableUTest ...................   Passed    0.24 sec
         Start   6: ClassServerUTest
   6/111 Test   #6: ClassServerUTest .................   Passed    0.00 sec
         Start   7: AtomUTest
@@ -616,49 +190,49 @@ Test project /home/opencog/atomspace/build/tests
         Start  10: TLBUTest
  10/111 Test  #10: TLBUTest .........................   Passed    0.00 sec
         Start  11: AtomSpaceUTest
- 11/111 Test  #11: AtomSpaceUTest ...................   Passed    0.03 sec
+ 11/111 Test  #11: AtomSpaceUTest ...................   Passed    0.01 sec
         Start  12: AtomSpaceImplUTest
- 12/111 Test  #12: AtomSpaceImplUTest ...............   Passed    0.02 sec
+ 12/111 Test  #12: AtomSpaceImplUTest ...............   Passed    0.07 sec
         Start  13: AtomSpaceAsyncUTest
- 13/111 Test  #13: AtomSpaceAsyncUTest ..............   Passed    5.48 sec
+ 13/111 Test  #13: AtomSpaceAsyncUTest ..............   Passed    5.47 sec
         Start  14: UseCountUTest
- 14/111 Test  #14: UseCountUTest ....................   Passed    3.92 sec
+ 14/111 Test  #14: UseCountUTest ....................   Passed    3.94 sec
         Start  15: MultiSpaceUTest
  15/111 Test  #15: MultiSpaceUTest ..................   Passed    0.00 sec
         Start  16: RemoveUTest
- 16/111 Test  #16: RemoveUTest ......................   Passed    0.02 sec
+ 16/111 Test  #16: RemoveUTest ......................   Passed    0.01 sec
         Start  17: ThreadSafeHandleMapUTest
  17/111 Test  #17: ThreadSafeHandleMapUTest .........   Passed    0.41 sec
         Start  18: FreeLinkUTest
- 18/111 Test  #18: FreeLinkUTest ....................   Passed    0.26 sec
+ 18/111 Test  #18: FreeLinkUTest ....................   Passed    0.25 sec
         Start  19: MapLinkUTest
- 19/111 Test  #19: MapLinkUTest .....................   Passed    2.72 sec
+ 19/111 Test  #19: MapLinkUTest .....................   Passed    0.29 sec
         Start  20: ParallelUTest
- 20/111 Test  #20: ParallelUTest ....................   Passed   11.41 sec
+ 20/111 Test  #20: ParallelUTest ....................   Passed   11.25 sec
         Start  21: RandomUTest
- 21/111 Test  #21: RandomUTest ......................   Passed    0.88 sec
+ 21/111 Test  #21: RandomUTest ......................   Passed    0.59 sec
         Start  22: ReductUTest
- 22/111 Test  #22: ReductUTest ......................   Passed    0.26 sec
+ 22/111 Test  #22: ReductUTest ......................   Passed    0.25 sec
         Start  23: RewriteLinkUTest
- 23/111 Test  #23: RewriteLinkUTest .................   Passed    0.29 sec
+ 23/111 Test  #23: RewriteLinkUTest .................   Passed    0.24 sec
         Start  24: ScopeLinkUTest
- 24/111 Test  #24: ScopeLinkUTest ...................   Passed    1.41 sec
+ 24/111 Test  #24: ScopeLinkUTest ...................   Passed    0.26 sec
         Start  25: AlphaConvertUTest
  25/111 Test  #25: AlphaConvertUTest ................   Passed    0.01 sec
         Start  26: BetaReduceUTest
- 26/111 Test  #26: BetaReduceUTest ..................   Passed    0.01 sec
+ 26/111 Test  #26: BetaReduceUTest ..................   Passed    0.00 sec
         Start  27: DefineLinkUTest
- 27/111 Test  #27: DefineLinkUTest ..................   Passed    0.09 sec
+ 27/111 Test  #27: DefineLinkUTest ..................   Passed    0.05 sec
         Start  28: DeleteLinkUTest
- 28/111 Test  #28: DeleteLinkUTest ..................   Passed    0.03 sec
+ 28/111 Test  #28: DeleteLinkUTest ..................   Passed    0.01 sec
         Start  29: EqualLinkUTest
- 29/111 Test  #29: EqualLinkUTest ...................   Passed    0.02 sec
+ 29/111 Test  #29: EqualLinkUTest ...................   Passed    0.01 sec
         Start  30: PutLinkUTest
- 30/111 Test  #30: PutLinkUTest .....................   Passed    0.29 sec
+ 30/111 Test  #30: PutLinkUTest .....................   Passed    0.33 sec
         Start  31: StateLinkUTest
- 31/111 Test  #31: StateLinkUTest ...................   Passed    0.03 sec
+ 31/111 Test  #31: StateLinkUTest ...................   Passed    0.02 sec
         Start  32: VariablesUTest
- 32/111 Test  #32: VariablesUTest ...................   Passed    0.00 sec
+ 32/111 Test  #32: VariablesUTest ...................   Passed    0.01 sec
         Start  33: ComposeLinkUTest
  33/111 Test  #33: ComposeLinkUTest .................   Passed    0.00 sec
         Start  34: AtomUtilsUTest
@@ -670,21 +244,21 @@ Test project /home/opencog/atomspace/build/tests
         Start  37: NeighborUTest
  37/111 Test  #37: NeighborUTest ....................   Passed    0.00 sec
         Start  38: UnifyUTest
- 38/111 Test  #38: UnifyUTest .......................   Passed    8.81 sec
+ 38/111 Test  #38: UnifyUTest .......................   Passed    8.77 sec
         Start  39: AtomSpaceUtilsUTest
  39/111 Test  #39: AtomSpaceUtilsUTest ..............   Passed    0.00 sec
         Start  40: AttentionUTest
  40/111 Test  #40: AttentionUTest ...................   Passed    0.01 sec
         Start  41: BasicSCMUTest
- 41/111 Test  #41: BasicSCMUTest ....................   Passed    1.42 sec
+ 41/111 Test  #41: BasicSCMUTest ....................   Passed    0.31 sec
         Start  42: SCMPrimitiveUTest
- 42/111 Test  #42: SCMPrimitiveUTest ................   Passed    0.58 sec
+ 42/111 Test  #42: SCMPrimitiveUTest ................   Passed    0.63 sec
         Start  43: MultiAtomSpaceUTest
- 43/111 Test  #43: MultiAtomSpaceUTest ..............   Passed    1.42 sec
+ 43/111 Test  #43: MultiAtomSpaceUTest ..............   Passed    0.69 sec
         Start  44: MultiThreadUTest
- 44/111 Test  #44: MultiThreadUTest .................   Passed   15.04 sec
+ 44/111 Test  #44: MultiThreadUTest .................   Passed   15.08 sec
         Start  45: SCMUtilsUTest
- 45/111 Test  #45: SCMUtilsUTest ....................   Passed    0.54 sec
+ 45/111 Test  #45: SCMUtilsUTest ....................   Passed    0.24 sec
         Start  46: SCMExecutionOutputUTest
  46/111 Test  #46: SCMExecutionOutputUTest ..........   Passed    0.48 sec
         Start  47: PatternUTest
@@ -696,127 +270,127 @@ Test project /home/opencog/atomspace/build/tests
         Start  50: BiggerPatternUTest
  50/111 Test  #50: BiggerPatternUTest ...............   Passed    0.01 sec
         Start  51: LoopPatternUTest
- 51/111 Test  #51: LoopPatternUTest .................   Passed    0.01 sec
+ 51/111 Test  #51: LoopPatternUTest .................   Passed    0.03 sec
         Start  52: BooleanUTest
- 52/111 Test  #52: BooleanUTest .....................   Passed    0.02 sec
+ 52/111 Test  #52: BooleanUTest .....................   Passed    0.03 sec
         Start  53: Boolean2NotUTest
  53/111 Test  #53: Boolean2NotUTest .................   Passed    0.02 sec
         Start  54: ConstantClausesUTest
- 54/111 Test  #54: ConstantClausesUTest .............   Passed    0.51 sec
+ 54/111 Test  #54: ConstantClausesUTest .............   Passed    0.29 sec
         Start  55: PatternCrashUTest
- 55/111 Test  #55: PatternCrashUTest ................   Passed    0.25 sec
+ 55/111 Test  #55: PatternCrashUTest ................   Passed    0.26 sec
         Start  56: DisconnectedUTest
- 56/111 Test  #56: DisconnectedUTest ................   Passed    0.84 sec
+ 56/111 Test  #56: DisconnectedUTest ................   Passed    0.35 sec
         Start  57: ImplicationUTest
- 57/111 Test  #57: ImplicationUTest .................   Passed    0.26 sec
+ 57/111 Test  #57: ImplicationUTest .................   Passed    0.24 sec
         Start  58: ExecutionOutputUTest
- 58/111 Test  #58: ExecutionOutputUTest .............   Passed    0.34 sec
+ 58/111 Test  #58: ExecutionOutputUTest .............   Passed    0.24 sec
         Start  59: BuggyStackUTest
- 59/111 Test  #59: BuggyStackUTest ..................   Passed    0.46 sec
+ 59/111 Test  #59: BuggyStackUTest ..................   Passed    0.24 sec
         Start  60: VarTypeNotUTest
- 60/111 Test  #60: VarTypeNotUTest ..................   Passed    0.42 sec
+ 60/111 Test  #60: VarTypeNotUTest ..................   Passed    0.25 sec
         Start  61: BuggyNotUTest
- 61/111 Test  #61: BuggyNotUTest ....................   Passed    0.40 sec
+ 61/111 Test  #61: BuggyNotUTest ....................   Passed    0.24 sec
         Start  62: MatchLinkUTest
- 62/111 Test  #62: MatchLinkUTest ...................   Passed    0.56 sec
+ 62/111 Test  #62: MatchLinkUTest ...................   Passed    0.24 sec
         Start  63: UnorderedUTest
- 63/111 Test  #63: UnorderedUTest ...................   Passed    0.98 sec
+ 63/111 Test  #63: UnorderedUTest ...................   Passed    0.27 sec
         Start  64: StackMoreUTest
- 64/111 Test  #64: StackMoreUTest ...................   Passed    3.24 sec
+ 64/111 Test  #64: StackMoreUTest ...................   Passed    0.30 sec
         Start  65: GlobUTest
- 65/111 Test  #65: GlobUTest ........................   Passed    1.26 sec
+ 65/111 Test  #65: GlobUTest ........................   Passed    0.28 sec
         Start  66: RecognizerUTest
- 66/111 Test  #66: RecognizerUTest ..................   Passed    0.47 sec
+ 66/111 Test  #66: RecognizerUTest ..................   Passed    0.25 sec
         Start  67: ArcanaUTest
- 67/111 Test  #67: ArcanaUTest ......................   Passed    4.81 sec
+ 67/111 Test  #67: ArcanaUTest ......................   Passed    4.25 sec
         Start  68: SubstitutionUTest
- 68/111 Test  #68: SubstitutionUTest ................   Passed    0.40 sec
+ 68/111 Test  #68: SubstitutionUTest ................   Passed    0.26 sec
         Start  69: GetLinkUTest
- 69/111 Test  #69: GetLinkUTest .....................   Passed    0.43 sec
+ 69/111 Test  #69: GetLinkUTest .....................   Passed    0.24 sec
         Start  70: GetStateUTest
  70/111 Test  #70: GetStateUTest ....................   Passed    1.86 sec
         Start  71: DeepTypeUTest
- 71/111 Test  #71: DeepTypeUTest ....................   Passed    0.41 sec
+ 71/111 Test  #71: DeepTypeUTest ....................   Passed    0.25 sec
         Start  72: GreaterThanUTest
- 72/111 Test  #72: GreaterThanUTest .................   Passed    0.50 sec
+ 72/111 Test  #72: GreaterThanUTest .................   Passed    0.25 sec
         Start  73: GreaterComputeUTest
- 73/111 Test  #73: GreaterComputeUTest ..............   Passed    0.37 sec
+ 73/111 Test  #73: GreaterComputeUTest ..............   Passed    0.30 sec
         Start  74: SequenceUTest
- 74/111 Test  #74: SequenceUTest ....................   Passed    0.66 sec
+ 74/111 Test  #74: SequenceUTest ....................   Passed    0.26 sec
         Start  75: EvaluationUTest
- 75/111 Test  #75: EvaluationUTest ..................   Passed    0.70 sec
+ 75/111 Test  #75: EvaluationUTest ..................   Passed    0.27 sec
         Start  76: DontExecUTest
- 76/111 Test  #76: DontExecUTest ....................   Passed    0.34 sec
+ 76/111 Test  #76: DontExecUTest ....................   Passed    0.27 sec
         Start  77: QuoteUTest
- 77/111 Test  #77: QuoteUTest .......................   Passed    0.85 sec
+ 77/111 Test  #77: QuoteUTest .......................   Passed    0.26 sec
         Start  78: UnquoteUTest
- 78/111 Test  #78: UnquoteUTest .....................   Passed    0.01 sec
+ 78/111 Test  #78: UnquoteUTest .....................   Passed    0.02 sec
         Start  79: LocalQuoteUTest
  79/111 Test  #79: LocalQuoteUTest ..................   Passed    0.01 sec
         Start  80: BuggyLinkUTest
- 80/111 Test  #80: BuggyLinkUTest ...................   Passed    0.36 sec
+ 80/111 Test  #80: BuggyLinkUTest ...................   Passed    0.25 sec
         Start  81: BuggyQuoteUTest
- 81/111 Test  #81: BuggyQuoteUTest ..................   Passed    0.34 sec
+ 81/111 Test  #81: BuggyQuoteUTest ..................   Passed    0.26 sec
         Start  82: BuggyEqualUTest
- 82/111 Test  #82: BuggyEqualUTest ..................   Passed    0.43 sec
+ 82/111 Test  #82: BuggyEqualUTest ..................   Passed    0.24 sec
         Start  83: BuggySelfGroundUTest
- 83/111 Test  #83: BuggySelfGroundUTest .............   Passed    0.29 sec
+ 83/111 Test  #83: BuggySelfGroundUTest .............   Passed    0.25 sec
         Start  84: ChoiceLinkUTest
- 84/111 Test  #84: ChoiceLinkUTest ..................   Passed    1.30 sec
+ 84/111 Test  #84: ChoiceLinkUTest ..................   Passed    0.25 sec
         Start  85: DefineUTest
- 85/111 Test  #85: DefineUTest ......................   Passed    0.42 sec
+ 85/111 Test  #85: DefineUTest ......................   Passed    0.26 sec
         Start  86: FiniteStateMachineUTest
- 86/111 Test  #86: FiniteStateMachineUTest ..........   Passed    0.34 sec
+ 86/111 Test  #86: FiniteStateMachineUTest ..........   Passed    0.24 sec
         Start  87: AbsentUTest
- 87/111 Test  #87: AbsentUTest ......................   Passed    0.72 sec
+ 87/111 Test  #87: AbsentUTest ......................   Passed    0.25 sec
         Start  88: SingleUTest
- 88/111 Test  #88: SingleUTest ......................   Passed    0.31 sec
+ 88/111 Test  #88: SingleUTest ......................   Passed    0.24 sec
         Start  89: ScopeUTest
- 89/111 Test  #89: ScopeUTest .......................   Passed    0.93 sec
+ 89/111 Test  #89: ScopeUTest .......................   Passed    0.31 sec
         Start  90: FirstNUTest
- 90/111 Test  #90: FirstNUTest ......................   Passed    0.44 sec
+ 90/111 Test  #90: FirstNUTest ......................   Passed    0.33 sec
         Start  91: AttentionalFocusCBUTest
- 91/111 Test  #91: AttentionalFocusCBUTest ..........   Passed    0.33 sec
+ 91/111 Test  #91: AttentionalFocusCBUTest ..........   Passed    0.25 sec
         Start  92: SudokuUTest
- 92/111 Test  #92: SudokuUTest ......................   Passed    0.61 sec
+ 92/111 Test  #92: SudokuUTest ......................   Passed    0.29 sec
         Start  93: EinsteinUTest
- 93/111 Test  #93: EinsteinUTest ....................   Passed    7.61 sec
+ 93/111 Test  #93: EinsteinUTest ....................   Passed    6.63 sec
         Start  94: TypeChoiceUTest
- 94/111 Test  #94: TypeChoiceUTest ..................   Passed    0.02 sec
+ 94/111 Test  #94: TypeChoiceUTest ..................   Passed    0.01 sec
         Start  95: NoExceptionUTest
- 95/111 Test  #95: NoExceptionUTest .................   Passed    0.37 sec
+ 95/111 Test  #95: NoExceptionUTest .................   Passed    0.24 sec
         Start  96: ChainerUtilsUTest
  96/111 Test  #96: ChainerUtilsUTest ................   Passed    0.24 sec
         Start  97: UREConfigUTest
- 97/111 Test  #97: UREConfigUTest ...................   Passed    0.51 sec
+ 97/111 Test  #97: UREConfigUTest ...................   Passed    0.24 sec
         Start  98: RuleUTest
- 98/111 Test  #98: RuleUTest ........................   Passed    0.94 sec
+ 98/111 Test  #98: RuleUTest ........................   Passed    0.29 sec
         Start  99: ForwardChainerUTest
- 99/111 Test  #99: ForwardChainerUTest ..............   Passed    1.73 sec
+ 99/111 Test  #99: ForwardChainerUTest ..............   Passed    1.12 sec
         Start 100: BetaDistributionUTest
-100/111 Test #100: BetaDistributionUTest ............   Passed    0.04 sec
+100/111 Test #100: BetaDistributionUTest ............   Passed    0.01 sec
         Start 101: BackwardChainerUTest
-101/111 Test #101: BackwardChainerUTest .............   Passed    4.91 sec
+101/111 Test #101: BackwardChainerUTest .............   Passed    3.57 sec
         Start 102: ActionSelectionUTest
 102/111 Test #102: ActionSelectionUTest .............   Passed    0.01 sec
         Start 103: ControlPolicyUTest
-103/111 Test #103: ControlPolicyUTest ...............   Passed    0.39 sec
+103/111 Test #103: ControlPolicyUTest ...............   Passed    0.26 sec
         Start 104: BITUTest
-104/111 Test #104: BITUTest .........................   Passed    2.31 sec
+104/111 Test #104: BITUTest .........................   Passed    0.33 sec
         Start 105: PythonEvalUTest
-105/111 Test #105: PythonEvalUTest ..................   Passed    0.34 sec
+105/111 Test #105: PythonEvalUTest ..................   Passed    0.33 sec
         Start 106: PythonUtilitiesUTest
-106/111 Test #106: PythonUtilitiesUTest .............   Passed    0.03 sec
+106/111 Test #106: PythonUtilitiesUTest .............   Passed    0.05 sec
         Start 107: Cython
 107/111 Test #107: Cython ...........................   Passed    1.70 sec
         Start 108: CythonAtomSpace
-108/111 Test #108: CythonAtomSpace ..................   Passed    1.18 sec
+108/111 Test #108: CythonAtomSpace ..................   Passed    1.08 sec
         Start 109: CythonUtilities
-109/111 Test #109: CythonUtilities ..................   Passed    0.10 sec
+109/111 Test #109: CythonUtilities ..................   Passed    0.06 sec
         Start 110: CythonBindlink
-110/111 Test #110: CythonBindlink ...................   Passed    0.08 sec
+110/111 Test #110: CythonBindlink ...................   Passed    0.07 sec
         Start 111: CythonGuile
-111/111 Test #111: CythonGuile ......................***Exception: SegFault  0.60 sec
+111/111 Test #111: CythonGuile ......................***Exception: SegFault  0.37 sec
 test_a_load_core_types (test_pattern.SchemeTest) ... ok
 test_b_load_file (test_pattern.SchemeTest) ... ok
 test_c_eval (test_pattern.SchemeTest) ... ok
@@ -825,7 +399,7 @@ test_unifier (test_pattern.SchemeTest) ...
 
 99% tests passed, 1 tests failed out of 111
 
-Total Test time (real) = 116.97 sec
+Total Test time (real) =  82.13 sec
 
 The following tests FAILED:
 	111 - CythonGuile (SEGFAULT)
@@ -835,5 +409,5 @@ make[2]: *** [CMakeFiles/test.dir/all] Error 2
 make[1]: *** [CMakeFiles/test.dir/rule] Error 2
 make: *** [test] Error 2
 + DSTATUS=TESTFAIL
-+ /var/lib/jenkins/status/updateStatus TESTFAIL /var/lib/jenkins/jobs/OpenCOG_U1404_AtomSpace/builds/31/log OpenCOG_U1404_AtomSpace
++ /var/lib/jenkins/status/updateStatus TESTFAIL /var/lib/jenkins/jobs/OpenCOG_U1404_AtomSpace/builds/32/log OpenCOG_U1404_AtomSpace
 Already up-to-date.
