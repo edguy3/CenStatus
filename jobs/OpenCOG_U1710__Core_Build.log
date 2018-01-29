@@ -1,6 +1,6 @@
 Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
 Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1710
-[OpenCOG_U1710] $ /bin/sh -xe /tmp/jenkins2928629314247068283.sh
+[OpenCOG_U1710] $ /bin/sh -xe /tmp/jenkins71340913590676798.sh
 + pwd
 /var/lib/jenkins/workspace/OpenCOG_U1710
 + whoami
@@ -11,66 +11,78 @@ jenkins
 + cp /home/edguy/OCDOCK/DOCKER.OpenCOG_U1710 docker.buildfile
 + docker build -f docker.buildfile -t edguy/opencog:OpenCOG_U1710 .
 Sending build context to Docker daemon 4.096 kB
-Step 1/20 : FROM ubuntu:17.10
+Step 1/24 : FROM ubuntu:17.10
  ---> 26d147d2310f
-Step 2/20 : MAINTAINER Ed Guy "edguy@eguy.org"
+Step 2/24 : MAINTAINER Ed Guy "edguy@eguy.org"
  ---> Using cache
  ---> 35d771ff3a27
-Step 3/20 : ENV DEBIAN_FRONTEND noninteractive
+Step 3/24 : ENV DEBIAN_FRONTEND noninteractive
  ---> Using cache
  ---> 0fd263a81619
-Step 4/20 : ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
+Step 4/24 : ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
  ---> Using cache
  ---> 0fcb7309dbc6
-Step 5/20 : RUN apt-get -y update && apt-get -y upgrade || echo done
+Step 5/24 : RUN apt-get -y update && apt-get -y upgrade || echo done
  ---> Using cache
  ---> 0b075d6a7603
-Step 6/20 : RUN apt-get update && apt-get -y install screen telnet netcat-openbsd byobu wget vim unzip gcc g++ make sudo lsb-release net-tools apt-utils
+Step 6/24 : RUN apt-get update && apt-get -y install screen telnet netcat-openbsd byobu wget vim unzip gcc g++ make sudo lsb-release net-tools apt-utils
  ---> Using cache
  ---> 4f5b49f65ac1
-Step 7/20 : RUN apt-get update && apt-get -y install openjdk-8-jdk ant libcommons-logging-java
+Step 7/24 : RUN apt-get update && apt-get -y install openjdk-8-jdk ant libcommons-logging-java
  ---> Using cache
  ---> bdd20bb67f5d
-Step 8/20 : RUN test -e /usr/local/share/java || mkdir /usr/local/share/java
+Step 8/24 : RUN test -e /usr/local/share/java || mkdir /usr/local/share/java
  ---> Using cache
  ---> b55bae01e4c2
-Step 9/20 : WORKDIR /home/opencog
+Step 9/24 : WORKDIR /home/opencog
  ---> Using cache
  ---> 6c32494a89ae
-Step 10/20 : RUN apt-get update && apt-get -y install build-essential  cmake  cxxtest  rlwrap  guile-2.0-dev  libiberty-dev  libicu-dev  libbz2-dev  cython  python-dev  python-zmq  python-simplejson  libboost-date-time-dev  libboost-filesystem-dev  libboost-math-dev  libboost-program-options-dev  libboost-regex-dev  libboost-serialization-dev  libboost-thread-dev  libboost-system-dev  libboost-random-dev  libzmq3-dev  libtbb-dev  binutils-dev  unixodbc-dev  libpq-dev uuid-dev  libprotoc-dev  protobuf-compiler  libsdl-gfx1.2-dev  libssl-dev  tcl-dev  tcsh  libfreetype6-dev  libatlas-base-dev  gfortran  gearman  libgearman-dev  ccache  libgsasl7  libldap2-dev  krb5-multidev  wordnet  wordnet-dev  wordnet-sense-index
+Step 10/24 : RUN apt-get update && apt-get -y install build-essential  cmake  cxxtest  rlwrap  guile-2.0-dev  libiberty-dev  libicu-dev  libbz2-dev  cython  python-dev  python-zmq  python-simplejson  libboost-date-time-dev  libboost-filesystem-dev  libboost-math-dev  libboost-program-options-dev  libboost-regex-dev  libboost-serialization-dev  libboost-thread-dev  libboost-system-dev  libboost-random-dev  libzmq3-dev  libtbb-dev  binutils-dev  unixodbc-dev  libpq-dev uuid-dev  libprotoc-dev  protobuf-compiler  libsdl-gfx1.2-dev  libssl-dev  tcl-dev  tcsh  libfreetype6-dev  libatlas-base-dev  gfortran  gearman  libgearman-dev  ccache  libgsasl7  libldap2-dev  krb5-multidev  wordnet  wordnet-dev  wordnet-sense-index
  ---> Using cache
  ---> 13dab238d656
-Step 11/20 : RUN apt-get update && apt-get -y install unixodbc odbc-postgresql postgresql-client
+Step 11/24 : RUN apt-get update && apt-get -y install unixodbc odbc-postgresql postgresql-client
  ---> Using cache
  ---> f44567ba6228
-Step 12/20 : RUN apt-get update && apt-get -y install python-pip git
+Step 12/24 : RUN apt-get update && apt-get -y install python-pip git
  ---> Using cache
  ---> 1d842843eb18
-Step 13/20 : RUN apt-get update && apt-get -y install libcpprest  #1604
+Step 13/24 : RUN apt-get update && apt-get -y install libcpprest  #1604
  ---> Using cache
  ---> 6ded514211d7
-Step 14/20 : RUN apt-get update && apt-get -y install doxygen
+Step 14/24 : RUN apt-get update && apt-get -y install doxygen
  ---> Using cache
  ---> ca5940564349
-Step 15/20 : RUN apt-get update && apt-get -y install fonts-lyx python-cairo python-decorator python-glade2 python-gobject-2 python-gtk2 python-imaging python-matplotlib python-matplotlib-data python-numpy python-pyparsing python-scipy python-tk python-tz
+Step 15/24 : RUN apt-get update && apt-get -y install fonts-lyx python-cairo python-decorator python-glade2 python-gobject-2 python-gtk2 python-imaging python-matplotlib python-matplotlib-data python-numpy python-pyparsing python-scipy python-tk python-tz
  ---> Using cache
  ---> 32cac5636a93
-Step 16/20 : RUN useradd -ms /bin/bash  jenkins --uid 125 && echo "jenkins:jenkins" | chpasswd && adduser jenkins sudo
+Step 16/24 : RUN useradd -ms /bin/bash  jenkins --uid 125 && echo "jenkins:jenkins" | chpasswd && adduser jenkins sudo
  ---> Using cache
  ---> e5bf48311513
-Step 17/20 : RUN echo "jenkins	ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
+Step 17/24 : RUN apt-get update && apt-get -y install locales
  ---> Using cache
- ---> 21e188d3403b
-Step 18/20 : RUN chown jenkins:jenkins /home/opencog
+ ---> 1b4609c74163
+Step 18/24 : RUN echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
  ---> Using cache
- ---> 25f34795e2df
-Step 19/20 : USER jenkins
+ ---> d51152dfde0c
+Step 19/24 : RUN locale-gen
  ---> Using cache
- ---> 60d4ce74732a
-Step 20/20 : CMD tail -f /dev/null
+ ---> 5c2889519f33
+Step 20/24 : RUN update-locale LANG=en_US.UTF-8 && cat /etc/default/locale
  ---> Using cache
- ---> aab8ad55920b
-Successfully built aab8ad55920b
+ ---> c92bb9bc1d5b
+Step 21/24 : RUN echo "jenkins	ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
+ ---> Using cache
+ ---> 28a754a55a31
+Step 22/24 : RUN chown jenkins:jenkins /home/opencog
+ ---> Using cache
+ ---> 975aeed009de
+Step 23/24 : USER jenkins
+ ---> Using cache
+ ---> 74c8c22932a1
+Step 24/24 : CMD tail -f /dev/null
+ ---> Using cache
+ ---> 7b312f0fe780
+Successfully built 7b312f0fe780
 + echo ******  CID=
 ******  CID=
 + CIDFILENAME=/tmp/OpenCOG_U1710.cid
@@ -78,17 +90,17 @@ Successfully built aab8ad55920b
 + CIDFILENAME=/tmp/OpenCOG_U1710.cid
 + [ -e /tmp/OpenCOG_U1710.cid ]
 + cat /tmp/OpenCOG_U1710.cid
-+ CID=a95334ad602eeb631f4ea5dafaf707730615efb516c13b08fde0f0ec834a5c4f
-+ docker container kill a95334ad602eeb631f4ea5dafaf707730615efb516c13b08fde0f0ec834a5c4f
-a95334ad602eeb631f4ea5dafaf707730615efb516c13b08fde0f0ec834a5c4f
-+ docker container rm a95334ad602eeb631f4ea5dafaf707730615efb516c13b08fde0f0ec834a5c4f
-a95334ad602eeb631f4ea5dafaf707730615efb516c13b08fde0f0ec834a5c4f
++ CID=0f9c99508e7af4747a71086ba4481029b8ad3f8e380c7a5d43561f338d74ea22
++ docker container kill 0f9c99508e7af4747a71086ba4481029b8ad3f8e380c7a5d43561f338d74ea22
+0f9c99508e7af4747a71086ba4481029b8ad3f8e380c7a5d43561f338d74ea22
++ docker container rm 0f9c99508e7af4747a71086ba4481029b8ad3f8e380c7a5d43561f338d74ea22
+0f9c99508e7af4747a71086ba4481029b8ad3f8e380c7a5d43561f338d74ea22
 + rm -f /tmp/OpenCOG_U1710.cid
 + docker run --cidfile /tmp/OpenCOG_U1710.cid -v /var/lib/jenkins/workspace/OpenCOG_U1710/dependencies:/home/opencog/dependencies -w /home/opencog -d edguy/opencog:OpenCOG_U1710 tail -f /dev/null
-84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a
+f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443
 + cat /tmp/OpenCOG_U1710.cid
-+ CID=84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a
-+ DKRUN=docker exec 84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a 
++ CID=f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443
++ DKRUN=docker exec f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443 
 + grep jenkins /etc/passwd
 + awk -F: {print $3}
 + UID=125
@@ -96,11 +108,11 @@ a95334ad602eeb631f4ea5dafaf707730615efb516c13b08fde0f0ec834a5c4f
 + awk -F: {print $4}
 + GID=132
 + cat
-[OpenCOG_U1710] $ /bin/sh -xe /tmp/jenkins1615994233945103640.sh
+[OpenCOG_U1710] $ /bin/sh -xe /tmp/jenkins4615687457980183518.sh
 + . build.docker/docker.env
-+ CID=84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a
-+ DKRUNROOT=docker exec --user root   84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a
-+ DKRUNUSER=docker exec --user jenkins  84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a
++ CID=f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443
++ DKRUNROOT=docker exec --user root   f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443
++ DKRUNUSER=docker exec --user jenkins  f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443
 + UID=125
 + GID=132
 + cat
@@ -118,42 +130,65 @@ a95334ad602eeb631f4ea5dafaf707730615efb516c13b08fde0f0ec834a5c4f
 
 + cat
 + chmod +x dependencies/job1
-+ docker exec --user jenkins 84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a bash dependencies/job1
++ docker exec --user jenkins f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443 bash dependencies/job1
 + wget http://raw.github.com/opencog/ocpkg/master/ocpkg -O octool
---2018-01-28 22:50:02--  http://raw.github.com/opencog/ocpkg/master/ocpkg
+--2018-01-29 00:28:08--  http://raw.github.com/opencog/ocpkg/master/ocpkg
 Resolving raw.github.com (raw.github.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
 Connecting to raw.github.com (raw.github.com)|151.101.0.133|:80... connected.
 HTTP request sent, awaiting response... 301 Moved Permanently
 Location: https://raw.github.com/opencog/ocpkg/master/ocpkg [following]
---2018-01-28 22:50:02--  https://raw.github.com/opencog/ocpkg/master/ocpkg
+--2018-01-29 00:28:08--  https://raw.github.com/opencog/ocpkg/master/ocpkg
 Connecting to raw.github.com (raw.github.com)|151.101.0.133|:443... connected.
 HTTP request sent, awaiting response... 301 Moved Permanently
 Location: https://raw.githubusercontent.com/opencog/ocpkg/master/ocpkg [following]
---2018-01-28 22:50:02--  https://raw.githubusercontent.com/opencog/ocpkg/master/ocpkg
+--2018-01-29 00:28:08--  https://raw.githubusercontent.com/opencog/ocpkg/master/ocpkg
 Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
 Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 38461 (38K) [text/plain]
 Saving to: 'octool'
 
-     0K .......... .......... .......... .......              100%  451K=0.08s
+     0K .......... .......... .......... .......              100% 1.53M=0.02s
 
-2018-01-28 22:50:03 (451 KB/s) - 'octool' saved [38461/38461]
+2018-01-29 00:28:09 (1.53 MB/s) - 'octool' saved [38461/38461]
 
 + chmod +rx octool
 + ./octool -rdp
 [1;34m[octool] Adding software repositories...[0m
 Warning: apt-key output should not be parsed (stdout is not a terminal)
-Executing: /tmp/apt-key-gpghome.NMvAxLsvU2/gpg.1.sh --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+Executing: /tmp/apt-key-gpghome.p4D18iQT7v/gpg.1.sh --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
 gpg: failed to start the dirmngr '/usr/bin/dirmngr': No such file or directory
-gpg: connecting dirmngr at '/tmp/apt-key-gpghome.NMvAxLsvU2/S.dirmngr' failed: No such file or directory
+gpg: connecting dirmngr at '/tmp/apt-key-gpghome.p4D18iQT7v/S.dirmngr' failed: No such file or directory
 gpg: keyserver receive failed: No dirmngr
 + sudo apt-get upgrade -y
 Reading package lists...
 Building dependency tree...
 Reading state information...
 Calculating upgrade...
-0 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+The following packages will be upgraded:
+  libtasn1-6 linux-libc-dev
+2 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 986 kB of archives.
+After this operation, 1,024 B disk space will be freed.
+Get:1 http://archive.ubuntu.com/ubuntu artful-updates/main amd64 libtasn1-6 amd64 4.12-2.1ubuntu0.1 [35.8 kB]
+Get:2 http://archive.ubuntu.com/ubuntu artful-updates/main amd64 linux-libc-dev amd64 4.13.0-32.35 [950 kB]
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+dpkg-preconfigure: unable to re-open stdin: 
+Fetched 986 kB in 0s (1,072 kB/s)
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 65850 files and directories currently installed.)
+Preparing to unpack .../libtasn1-6_4.12-2.1ubuntu0.1_amd64.deb ...
+Unpacking libtasn1-6:amd64 (4.12-2.1ubuntu0.1) over (4.12-2.1) ...
+Setting up libtasn1-6:amd64 (4.12-2.1ubuntu0.1) ...
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 65850 files and directories currently installed.)
+Preparing to unpack .../linux-libc-dev_4.13.0-32.35_amd64.deb ...
+Unpacking linux-libc-dev:amd64 (4.13.0-32.35) over (4.13.0-31.34) ...
+Setting up linux-libc-dev:amd64 (4.13.0-32.35) ...
+Processing triggers for libc-bin (2.26-0ubuntu2.1) ...
 + DSTATUS=BUILDPASS
 + echo DSTATUS is BUILDPASS
 DSTATUS is BUILDPASS
@@ -173,10 +208,10 @@ DSTATUS is BUILDPASS
 
 + echo **** 
 **** 
-+ echo ****  84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a
-****  84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a
++ echo ****  f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443
+****  f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443
 + cat
-+ docker exec --user jenkins 84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a bash dependencies/job1
++ docker exec --user jenkins f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443 bash dependencies/job1
 + git clone https://github.com/opencog/opencog.git
 Cloning into 'opencog'...
 + git clone https://github.com/opencog/atomspace.git
@@ -206,360 +241,360 @@ DSTATUS is BUILDPASS
 **********************************************************
 **********************************************************
 
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1710/builds/19/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1710/builds/21/log
 + GUILEVERSION=guile-2.2.3
 + cat
 + chmod +x dependencies/job1
-+ docker exec --user jenkins 84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a bash dependencies/job1
++ docker exec --user jenkins f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443 bash dependencies/job1
 + rm -rf 'guile-2.2.3*'
 + wget https://ftp.gnu.org/gnu/guile/guile-2.2.3.tar.gz
---2018-01-28 22:52:11--  https://ftp.gnu.org/gnu/guile/guile-2.2.3.tar.gz
+--2018-01-29 00:30:02--  https://ftp.gnu.org/gnu/guile/guile-2.2.3.tar.gz
 Resolving ftp.gnu.org (ftp.gnu.org)... 208.118.235.20, 2001:4830:134:3::b
 Connecting to ftp.gnu.org (ftp.gnu.org)|208.118.235.20|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 17266587 (16M) [application/x-gzip]
 Saving to: 'guile-2.2.3.tar.gz'
 
-     0K .......... .......... .......... .......... ..........  0%  897K 19s
-    50K .......... .......... .......... .......... ..........  0% 1.73M 14s
-   100K .......... .......... .......... .......... ..........  0% 2.20M 12s
-   150K .......... .......... .......... .......... ..........  1% 11.6M 9s
-   200K .......... .......... .......... .......... ..........  1% 2.26M 9s
-   250K .......... .......... .......... .......... ..........  1% 1.96M 9s
-   300K .......... .......... .......... .......... ..........  2% 1.84M 9s
-   350K .......... .......... .......... .......... ..........  2% 11.6M 8s
-   400K .......... .......... .......... .......... ..........  2% 2.24M 8s
-   450K .......... .......... .......... .......... ..........  2% 2.33M 8s
-   500K .......... .......... .......... .......... ..........  3% 1.91M 8s
-   550K .......... .......... .......... .......... ..........  3% 12.0M 7s
-   600K .......... .......... .......... .......... ..........  3% 1.85M 7s
-   650K .......... .......... .......... .......... ..........  4% 2.02M 7s
-   700K .......... .......... .......... .......... ..........  4% 10.5M 7s
-   750K .......... .......... .......... .......... ..........  4% 1.95M 7s
-   800K .......... .......... .......... .......... ..........  5% 2.27M 7s
-   850K .......... .......... .......... .......... ..........  5% 11.0M 6s
-   900K .......... .......... .......... .......... ..........  5% 2.58M 6s
-   950K .......... .......... .......... .......... ..........  5% 11.7M 6s
-  1000K .......... .......... .......... .......... ..........  6% 2.04M 6s
-  1050K .......... .......... .......... .......... ..........  6% 11.8M 6s
-  1100K .......... .......... .......... .......... ..........  6% 2.49M 6s
-  1150K .......... .......... .......... .......... ..........  7% 11.1M 6s
-  1200K .......... .......... .......... .......... ..........  7% 2.47M 6s
-  1250K .......... .......... .......... .......... ..........  7% 2.59M 6s
-  1300K .......... .......... .......... .......... ..........  8% 11.1M 6s
-  1350K .......... .......... .......... .......... ..........  8% 2.79M 6s
-  1400K .......... .......... .......... .......... ..........  8% 11.6M 5s
-  1450K .......... .......... .......... .......... ..........  8% 2.81M 5s
-  1500K .......... .......... .......... .......... ..........  9% 11.1M 5s
-  1550K .......... .......... .......... .......... ..........  9% 7.88M 5s
-  1600K .......... .......... .......... .......... ..........  9% 2.74M 5s
-  1650K .......... .......... .......... .......... .......... 10% 10.5M 5s
-  1700K .......... .......... .......... .......... .......... 10% 2.94M 5s
-  1750K .......... .......... .......... .......... .......... 10% 12.6M 5s
-  1800K .......... .......... .......... .......... .......... 10% 2.50M 5s
-  1850K .......... .......... .......... .......... .......... 11% 11.7M 5s
-  1900K .......... .......... .......... .......... .......... 11% 1.50M 5s
-  1950K .......... .......... .......... .......... .......... 11% 58.8M 5s
-  2000K .......... .......... .......... .......... .......... 12% 72.2M 5s
-  2050K .......... .......... .......... .......... .......... 12% 2.33M 5s
-  2100K .......... .......... .......... .......... .......... 12% 4.63M 5s
-  2150K .......... .......... .......... .......... .......... 13% 2.77M 5s
-  2200K .......... .......... .......... .......... .......... 13% 7.98M 4s
-  2250K .......... .......... .......... .......... .......... 13% 3.11M 4s
-  2300K .......... .......... .......... .......... .......... 13% 7.21M 4s
-  2350K .......... .......... .......... .......... .......... 14% 2.87M 4s
-  2400K .......... .......... .......... .......... .......... 14% 2.48M 4s
-  2450K .......... .......... .......... .......... .......... 14% 11.6M 4s
-  2500K .......... .......... .......... .......... .......... 15% 2.12M 4s
-  2550K .......... .......... .......... .......... .......... 15% 11.0M 4s
-  2600K .......... .......... .......... .......... .......... 15% 2.05M 4s
-  2650K .......... .......... .......... .......... .......... 16% 11.7M 4s
-  2700K .......... .......... .......... .......... .......... 16% 2.43M 4s
-  2750K .......... .......... .......... .......... .......... 16% 12.5M 4s
-  2800K .......... .......... .......... .......... .......... 16% 2.56M 4s
-  2850K .......... .......... .......... .......... .......... 17% 5.89M 4s
-  2900K .......... .......... .......... .......... .......... 17% 3.45M 4s
-  2950K .......... .......... .......... .......... .......... 17% 2.73M 4s
-  3000K .......... .......... .......... .......... .......... 18% 7.66M 4s
-  3050K .......... .......... .......... .......... .......... 18% 2.88M 4s
-  3100K .......... .......... .......... .......... .......... 18% 12.0M 4s
-  3150K .......... .......... .......... .......... .......... 18% 2.87M 4s
-  3200K .......... .......... .......... .......... .......... 19% 6.01M 4s
-  3250K .......... .......... .......... .......... .......... 19% 2.37M 4s
-  3300K .......... .......... .......... .......... .......... 19% 11.7M 4s
-  3350K .......... .......... .......... .......... .......... 20% 2.70M 4s
-  3400K .......... .......... .......... .......... .......... 20% 11.2M 4s
-  3450K .......... .......... .......... .......... .......... 20% 2.67M 4s
-  3500K .......... .......... .......... .......... .......... 21% 11.6M 4s
-  3550K .......... .......... .......... .......... .......... 21% 2.72M 4s
-  3600K .......... .......... .......... .......... .......... 21% 3.50M 4s
-  3650K .......... .......... .......... .......... .......... 21% 3.53M 4s
-  3700K .......... .......... .......... .......... .......... 22% 6.39M 4s
-  3750K .......... .......... .......... .......... .......... 22% 2.56M 4s
-  3800K .......... .......... .......... .......... .......... 22% 11.4M 4s
-  3850K .......... .......... .......... .......... .......... 23% 2.75M 4s
-  3900K .......... .......... .......... .......... .......... 23% 11.0M 4s
-  3950K .......... .......... .......... .......... .......... 23% 2.14M 4s
-  4000K .......... .......... .......... .......... .......... 24% 2.64M 4s
-  4050K .......... .......... .......... .......... .......... 24% 10.5M 4s
-  4100K .......... .......... .......... .......... .......... 24% 8.24M 4s
-  4150K .......... .......... .......... .......... .......... 24% 2.47M 4s
-  4200K .......... .......... .......... .......... .......... 25% 10.8M 4s
-  4250K .......... .......... .......... .......... .......... 25% 2.84M 4s
-  4300K .......... .......... .......... .......... .......... 25% 11.1M 3s
-  4350K .......... .......... .......... .......... .......... 26% 2.84M 3s
-  4400K .......... .......... .......... .......... .......... 26% 2.38M 3s
-  4450K .......... .......... .......... .......... .......... 26% 11.0M 3s
-  4500K .......... .......... .......... .......... .......... 26% 4.12M 3s
-  4550K .......... .......... .......... .......... .......... 27% 3.47M 3s
-  4600K .......... .......... .......... .......... .......... 27% 11.4M 3s
-  4650K .......... .......... .......... .......... .......... 27% 2.85M 3s
-  4700K .......... .......... .......... .......... .......... 28% 10.8M 3s
-  4750K .......... .......... .......... .......... .......... 28% 2.79M 3s
-  4800K .......... .......... .......... .......... .......... 28% 6.05M 3s
-  4850K .......... .......... .......... .......... .......... 29% 3.19M 3s
-  4900K .......... .......... .......... .......... .......... 29% 11.0M 3s
-  4950K .......... .......... .......... .......... .......... 29% 2.92M 3s
-  5000K .......... .......... .......... .......... .......... 29% 11.5M 3s
-  5050K .......... .......... .......... .......... .......... 30% 2.19M 3s
-  5100K .......... .......... .......... .......... .......... 30% 11.8M 3s
-  5150K .......... .......... .......... .......... .......... 30% 2.65M 3s
-  5200K .......... .......... .......... .......... .......... 31% 9.33M 3s
-  5250K .......... .......... .......... .......... .......... 31% 2.17M 3s
-  5300K .......... .......... .......... .......... .......... 31% 12.3M 3s
-  5350K .......... .......... .......... .......... .......... 32% 1.26M 3s
-  5400K .......... .......... .......... .......... .......... 32% 58.0M 3s
-  5450K .......... .......... .......... .......... .......... 32% 6.41M 3s
-  5500K .......... .......... .......... .......... .......... 32% 4.66M 3s
-  5550K .......... .......... .......... .......... .......... 33% 3.87M 3s
-  5600K .......... .......... .......... .......... .......... 33% 3.12M 3s
-  5650K .......... .......... .......... .......... .......... 33% 2.91M 3s
-  5700K .......... .......... .......... .......... .......... 34% 4.39M 3s
-  5750K .......... .......... .......... .......... .......... 34% 4.60M 3s
-  5800K .......... .......... .......... .......... .......... 34% 3.56M 3s
-  5850K .......... .......... .......... .......... .......... 34% 3.63M 3s
-  5900K .......... .......... .......... .......... .......... 35% 4.39M 3s
-  5950K .......... .......... .......... .......... .......... 35% 3.51M 3s
-  6000K .......... .......... .......... .......... .......... 35% 2.62M 3s
-  6050K .......... .......... .......... .......... .......... 36% 5.07M 3s
-  6100K .......... .......... .......... .......... .......... 36% 3.47M 3s
-  6150K .......... .......... .......... .......... .......... 36% 4.48M 3s
-  6200K .......... .......... .......... .......... .......... 37% 3.82M 3s
-  6250K .......... .......... .......... .......... .......... 37% 4.20M 3s
-  6300K .......... .......... .......... .......... .......... 37% 3.83M 3s
-  6350K .......... .......... .......... .......... .......... 37% 3.87M 3s
-  6400K .......... .......... .......... .......... .......... 38% 2.14M 3s
-  6450K .......... .......... .......... .......... .......... 38% 11.6M 3s
-  6500K .......... .......... .......... .......... .......... 38% 2.17M 3s
-  6550K .......... .......... .......... .......... .......... 39% 2.55M 3s
-  6600K .......... .......... .......... .......... .......... 39% 11.7M 3s
-  6650K .......... .......... .......... .......... .......... 39% 2.57M 3s
-  6700K .......... .......... .......... .......... .......... 40% 11.7M 3s
-  6750K .......... .......... .......... .......... .......... 40% 2.75M 3s
-  6800K .......... .......... .......... .......... .......... 40% 2.91M 3s
-  6850K .......... .......... .......... .......... .......... 40% 6.73M 3s
-  6900K .......... .......... .......... .......... .......... 41% 2.64M 3s
-  6950K .......... .......... .......... .......... .......... 41% 3.25M 3s
-  7000K .......... .......... .......... .......... .......... 41% 7.13M 3s
-  7050K .......... .......... .......... .......... .......... 42% 3.12M 3s
-  7100K .......... .......... .......... .......... .......... 42% 5.93M 3s
-  7150K .......... .......... .......... .......... .......... 42% 3.06M 3s
-  7200K .......... .......... .......... .......... .......... 42% 2.94M 3s
-  7250K .......... .......... .......... .......... .......... 43% 5.48M 3s
-  7300K .......... .......... .......... .......... .......... 43% 2.97M 3s
-  7350K .......... .......... .......... .......... .......... 43% 3.44M 3s
-  7400K .......... .......... .......... .......... .......... 44% 7.23M 3s
-  7450K .......... .......... .......... .......... .......... 44% 3.00M 3s
-  7500K .......... .......... .......... .......... .......... 44% 5.50M 3s
-  7550K .......... .......... .......... .......... .......... 45% 2.68M 3s
-  7600K .......... .......... .......... .......... .......... 45% 2.90M 2s
-  7650K .......... .......... .......... .......... .......... 45% 4.75M 2s
-  7700K .......... .......... .......... .......... .......... 45% 3.19M 2s
-  7750K .......... .......... .......... .......... .......... 46% 4.77M 2s
-  7800K .......... .......... .......... .......... .......... 46% 4.42M 2s
-  7850K .......... .......... .......... .......... .......... 46% 2.75M 2s
-  7900K .......... .......... .......... .......... .......... 47% 11.1M 2s
-  7950K .......... .......... .......... .......... .......... 47% 2.30M 2s
-  8000K .......... .......... .......... .......... .......... 47% 2.44M 2s
-  8050K .......... .......... .......... .......... .......... 48% 11.7M 2s
-  8100K .......... .......... .......... .......... .......... 48% 2.94M 2s
-  8150K .......... .......... .......... .......... .......... 48% 7.50M 2s
-  8200K .......... .......... .......... .......... .......... 48% 3.01M 2s
-  8250K .......... .......... .......... .......... .......... 49% 3.54M 2s
-  8300K .......... .......... .......... .......... .......... 49% 6.89M 2s
-  8350K .......... .......... .......... .......... .......... 49% 3.26M 2s
+     0K .......... .......... .......... .......... ..........  0% 1.08M 15s
+    50K .......... .......... .......... .......... ..........  0% 1.94M 12s
+   100K .......... .......... .......... .......... ..........  0% 2.24M 10s
+   150K .......... .......... .......... .......... ..........  1% 2.27M 9s
+   200K .......... .......... .......... .......... ..........  1% 5.45M 8s
+   250K .......... .......... .......... .......... ..........  1% 2.98M 8s
+   300K .......... .......... .......... .......... ..........  2% 2.37M 8s
+   350K .......... .......... .......... .......... ..........  2% 2.39M 7s
+   400K .......... .......... .......... .......... ..........  2% 2.23M 7s
+   450K .......... .......... .......... .......... ..........  2% 2.42M 7s
+   500K .......... .......... .......... .......... ..........  3% 5.92M 7s
+   550K .......... .......... .......... .......... ..........  3% 3.07M 7s
+   600K .......... .......... .......... .......... ..........  3% 2.39M 7s
+   650K .......... .......... .......... .......... ..........  4% 2.10M 7s
+   700K .......... .......... .......... .......... ..........  4% 11.4M 6s
+   750K .......... .......... .......... .......... ..........  4% 2.63M 6s
+   800K .......... .......... .......... .......... ..........  5% 2.43M 6s
+   850K .......... .......... .......... .......... ..........  5% 9.65M 6s
+   900K .......... .......... .......... .......... ..........  5% 2.71M 6s
+   950K .......... .......... .......... .......... ..........  5% 2.59M 6s
+  1000K .......... .......... .......... .......... ..........  6% 11.3M 6s
+  1050K .......... .......... .......... .......... ..........  6% 2.31M 6s
+  1100K .......... .......... .......... .......... ..........  6% 12.2M 6s
+  1150K .......... .......... .......... .......... ..........  7% 2.65M 6s
+  1200K .......... .......... .......... .......... ..........  7% 6.74M 5s
+  1250K .......... .......... .......... .......... ..........  7% 3.14M 5s
+  1300K .......... .......... .......... .......... ..........  8% 7.84M 5s
+  1350K .......... .......... .......... .......... ..........  8% 3.34M 5s
+  1400K .......... .......... .......... .......... ..........  8% 7.31M 5s
+  1450K .......... .......... .......... .......... ..........  8% 3.67M 5s
+  1500K .......... .......... .......... .......... ..........  9% 9.09M 5s
+  1550K .......... .......... .......... .......... ..........  9% 3.43M 5s
+  1600K .......... .......... .......... .......... ..........  9% 3.70M 5s
+  1650K .......... .......... .......... .......... .......... 10% 8.30M 5s
+  1700K .......... .......... .......... .......... .......... 10% 5.73M 5s
+  1750K .......... .......... .......... .......... .......... 10% 4.37M 5s
+  1800K .......... .......... .......... .......... .......... 10% 5.90M 4s
+  1850K .......... .......... .......... .......... .......... 11% 4.88M 4s
+  1900K .......... .......... .......... .......... .......... 11% 4.55M 4s
+  1950K .......... .......... .......... .......... .......... 11% 10.1M 4s
+  2000K .......... .......... .......... .......... .......... 12% 3.56M 4s
+  2050K .......... .......... .......... .......... .......... 12% 7.66M 4s
+  2100K .......... .......... .......... .......... .......... 12% 4.51M 4s
+  2150K .......... .......... .......... .......... .......... 13% 7.90M 4s
+  2200K .......... .......... .......... .......... .......... 13% 8.14M 4s
+  2250K .......... .......... .......... .......... .......... 13% 5.03M 4s
+  2300K .......... .......... .......... .......... .......... 13% 6.11M 4s
+  2350K .......... .......... .......... .......... .......... 14% 5.28M 4s
+  2400K .......... .......... .......... .......... .......... 14% 6.67M 4s
+  2450K .......... .......... .......... .......... .......... 14% 5.10M 4s
+  2500K .......... .......... .......... .......... .......... 15% 4.86M 4s
+  2550K .......... .......... .......... .......... .......... 15% 11.7M 4s
+  2600K .......... .......... .......... .......... .......... 15% 2.93M 4s
+  2650K .......... .......... .......... .......... .......... 16% 11.8M 4s
+  2700K .......... .......... .......... .......... .......... 16% 6.38M 4s
+  2750K .......... .......... .......... .......... .......... 16% 4.42M 4s
+  2800K .......... .......... .......... .......... .......... 16% 8.70M 4s
+  2850K .......... .......... .......... .......... .......... 17% 6.72M 4s
+  2900K .......... .......... .......... .......... .......... 17% 4.54M 4s
+  2950K .......... .......... .......... .......... .......... 17% 10.5M 3s
+  3000K .......... .......... .......... .......... .......... 18% 5.41M 3s
+  3050K .......... .......... .......... .......... .......... 18% 7.56M 3s
+  3100K .......... .......... .......... .......... .......... 18% 8.59M 3s
+  3150K .......... .......... .......... .......... .......... 18% 6.13M 3s
+  3200K .......... .......... .......... .......... .......... 19% 5.00M 3s
+  3250K .......... .......... .......... .......... .......... 19% 8.81M 3s
+  3300K .......... .......... .......... .......... .......... 19% 7.58M 3s
+  3350K .......... .......... .......... .......... .......... 20% 5.67M 3s
+  3400K .......... .......... .......... .......... .......... 20% 9.15M 3s
+  3450K .......... .......... .......... .......... .......... 20%  549K 3s
+  3500K .......... .......... .......... .......... .......... 21% 11.9M 3s
+  3550K .......... .......... .......... .......... .......... 21% 1.84M 3s
+  3600K .......... .......... .......... .......... .......... 21% 2.61M 3s
+  3650K .......... .......... .......... .......... .......... 21% 71.9M 3s
+  3700K .......... .......... .......... .......... .......... 22% 69.1M 3s
+  3750K .......... .......... .......... .......... .......... 22% 8.49M 3s
+  3800K .......... .......... .......... .......... .......... 22% 2.34M 3s
+  3850K .......... .......... .......... .......... .......... 23% 11.8M 3s
+  3900K .......... .......... .......... .......... .......... 23% 1.76M 3s
+  3950K .......... .......... .......... .......... .......... 23% 96.8M 3s
+  4000K .......... .......... .......... .......... .......... 24% 3.36M 3s
+  4050K .......... .......... .......... .......... .......... 24% 4.36M 3s
+  4100K .......... .......... .......... .......... .......... 24% 3.61M 3s
+  4150K .......... .......... .......... .......... .......... 24% 4.26M 3s
+  4200K .......... .......... .......... .......... .......... 25% 4.91M 3s
+  4250K .......... .......... .......... .......... .......... 25% 3.37M 3s
+  4300K .......... .......... .......... .......... .......... 25% 3.69M 3s
+  4350K .......... .......... .......... .......... .......... 26% 4.47M 3s
+  4400K .......... .......... .......... .......... .......... 26% 2.51M 3s
+  4450K .......... .......... .......... .......... .......... 26% 4.57M 3s
+  4500K .......... .......... .......... .......... .......... 26% 3.69M 3s
+  4550K .......... .......... .......... .......... .......... 27% 4.30M 3s
+  4600K .......... .......... .......... .......... .......... 27% 3.72M 3s
+  4650K .......... .......... .......... .......... .......... 27% 4.38M 3s
+  4700K .......... .......... .......... .......... .......... 28% 3.75M 3s
+  4750K .......... .......... .......... .......... .......... 28% 3.46M 3s
+  4800K .......... .......... .......... .......... .......... 28% 3.34M 3s
+  4850K .......... .......... .......... .......... .......... 29% 3.42M 3s
+  4900K .......... .......... .......... .......... .......... 29% 4.65M 3s
+  4950K .......... .......... .......... .......... .......... 29% 3.67M 3s
+  5000K .......... .......... .......... .......... .......... 29% 4.63M 3s
+  5050K .......... .......... .......... .......... .......... 30% 3.85M 3s
+  5100K .......... .......... .......... .......... .......... 30% 4.24M 3s
+  5150K .......... .......... .......... .......... .......... 30% 4.92M 3s
+  5200K .......... .......... .......... .......... .......... 31% 2.81M 3s
+  5250K .......... .......... .......... .......... .......... 31% 3.00M 3s
+  5300K .......... .......... .......... .......... .......... 31% 6.21M 3s
+  5350K .......... .......... .......... .......... .......... 32% 3.19M 3s
+  5400K .......... .......... .......... .......... .......... 32% 2.65M 3s
+  5450K .......... .......... .......... .......... .......... 32% 11.2M 3s
+  5500K .......... .......... .......... .......... .......... 32% 2.59M 3s
+  5550K .......... .......... .......... .......... .......... 33% 12.6M 3s
+  5600K .......... .......... .......... .......... .......... 33% 2.42M 3s
+  5650K .......... .......... .......... .......... .......... 33% 2.62M 3s
+  5700K .......... .......... .......... .......... .......... 34% 4.54M 3s
+  5750K .......... .......... .......... .......... .......... 34% 4.22M 3s
+  5800K .......... .......... .......... .......... .......... 34% 4.28M 3s
+  5850K .......... .......... .......... .......... .......... 34% 4.35M 3s
+  5900K .......... .......... .......... .......... .......... 35% 2.15M 3s
+  5950K .......... .......... .......... .......... .......... 35% 7.12M 3s
+  6000K .......... .......... .......... .......... .......... 35% 2.87M 3s
+  6050K .......... .......... .......... .......... .......... 36% 6.21M 3s
+  6100K .......... .......... .......... .......... .......... 36% 3.35M 3s
+  6150K .......... .......... .......... .......... .......... 36% 2.23M 3s
+  6200K .......... .......... .......... .......... .......... 37% 11.7M 3s
+  6250K .......... .......... .......... .......... .......... 37% 2.30M 3s
+  6300K .......... .......... .......... .......... .......... 37% 11.4M 3s
+  6350K .......... .......... .......... .......... .......... 37% 2.72M 3s
+  6400K .......... .......... .......... .......... .......... 38% 2.50M 3s
+  6450K .......... .......... .......... .......... .......... 38% 11.8M 3s
+  6500K .......... .......... .......... .......... .......... 38% 2.74M 3s
+  6550K .......... .......... .......... .......... .......... 39% 11.0M 3s
+  6600K .......... .......... .......... .......... .......... 39% 2.75M 3s
+  6650K .......... .......... .......... .......... .......... 39% 4.62M 3s
+  6700K .......... .......... .......... .......... .......... 40% 4.20M 3s
+  6750K .......... .......... .......... .......... .......... 40% 3.57M 3s
+  6800K .......... .......... .......... .......... .......... 40% 5.11M 3s
+  6850K .......... .......... .......... .......... .......... 40% 3.40M 3s
+  6900K .......... .......... .......... .......... .......... 41% 3.46M 3s
+  6950K .......... .......... .......... .......... .......... 41% 5.76M 3s
+  7000K .......... .......... .......... .......... .......... 41% 4.21M 3s
+  7050K .......... .......... .......... .......... .......... 42% 5.11M 2s
+  7100K .......... .......... .......... .......... .......... 42% 3.05M 2s
+  7150K .......... .......... .......... .......... .......... 42% 3.60M 2s
+  7200K .......... .......... .......... .......... .......... 42% 5.01M 2s
+  7250K .......... .......... .......... .......... .......... 43% 2.65M 2s
+  7300K .......... .......... .......... .......... .......... 43% 10.7M 2s
+  7350K .......... .......... .......... .......... .......... 43% 2.76M 2s
+  7400K .......... .......... .......... .......... .......... 44% 4.97M 2s
+  7450K .......... .......... .......... .......... .......... 44% 4.40M 2s
+  7500K .......... .......... .......... .......... .......... 44% 3.56M 2s
+  7550K .......... .......... .......... .......... .......... 45% 7.35M 2s
+  7600K .......... .......... .......... .......... .......... 45% 2.80M 2s
+  7650K .......... .......... .......... .......... .......... 45% 4.50M 2s
+  7700K .......... .......... .......... .......... .......... 45% 4.33M 2s
+  7750K .......... .......... .......... .......... .......... 46% 2.63M 2s
+  7800K .......... .......... .......... .......... .......... 46% 11.8M 2s
+  7850K .......... .......... .......... .......... .......... 46% 2.71M 2s
+  7900K .......... .......... .......... .......... .......... 47% 5.68M 2s
+  7950K .......... .......... .......... .......... .......... 47% 3.05M 2s
+  8000K .......... .......... .......... .......... .......... 47% 2.55M 2s
+  8050K .......... .......... .......... .......... .......... 48% 10.2M 2s
+  8100K .......... .......... .......... .......... .......... 48% 2.71M 2s
+  8150K .......... .......... .......... .......... .......... 48% 11.9M 2s
+  8200K .......... .......... .......... .......... .......... 48% 2.68M 2s
+  8250K .......... .......... .......... .......... .......... 49% 12.1M 2s
+  8300K .......... .......... .......... .......... .......... 49% 2.74M 2s
+  8350K .......... .......... .......... .......... .......... 49% 10.2M 2s
   8400K .......... .......... .......... .......... .......... 50% 2.56M 2s
-  8450K .......... .......... .......... .......... .......... 50% 5.08M 2s
-  8500K .......... .......... .......... .......... .......... 50% 2.83M 2s
-  8550K .......... .......... .......... .......... .......... 51% 9.29M 2s
-  8600K .......... .......... .......... .......... .......... 51% 2.71M 2s
-  8650K .......... .......... .......... .......... .......... 51% 6.61M 2s
-  8700K .......... .......... .......... .......... .......... 51% 3.28M 2s
-  8750K .......... .......... .......... .......... .......... 52% 2.80M 2s
-  8800K .......... .......... .......... .......... .......... 52% 4.74M 2s
-  8850K .......... .......... .......... .......... .......... 52% 3.68M 2s
-  8900K .......... .......... .......... .......... .......... 53% 3.99M 2s
-  8950K .......... .......... .......... .......... .......... 53% 6.47M 2s
-  9000K .......... .......... .......... .......... .......... 53% 2.90M 2s
-  9050K .......... .......... .......... .......... .......... 53% 7.07M 2s
-  9100K .......... .......... .......... .......... .......... 54% 2.29M 2s
-  9150K .......... .......... .......... .......... .......... 54% 11.7M 2s
-  9200K .......... .......... .......... .......... .......... 54% 2.27M 2s
-  9250K .......... .......... .......... .......... .......... 55% 2.79M 2s
-  9300K .......... .......... .......... .......... .......... 55% 9.96M 2s
-  9350K .......... .......... .......... .......... .......... 55% 2.19M 2s
-  9400K .......... .......... .......... .......... .......... 56% 10.9M 2s
-  9450K .......... .......... .......... .......... .......... 56% 2.32M 2s
-  9500K .......... .......... .......... .......... .......... 56% 11.6M 2s
-  9550K .......... .......... .......... .......... .......... 56% 2.72M 2s
-  9600K .......... .......... .......... .......... .......... 57% 2.03M 2s
-  9650K .......... .......... .......... .......... .......... 57% 11.7M 2s
-  9700K .......... .......... .......... .......... .......... 57% 2.46M 2s
-  9750K .......... .......... .......... .......... .......... 58% 11.8M 2s
-  9800K .......... .......... .......... .......... .......... 58% 2.58M 2s
-  9850K .......... .......... .......... .......... .......... 58% 10.9M 2s
-  9900K .......... .......... .......... .......... .......... 59% 2.49M 2s
-  9950K .......... .......... .......... .......... .......... 59% 1.98M 2s
- 10000K .......... .......... .......... .......... .......... 59% 8.34M 2s
- 10050K .......... .......... .......... .......... .......... 59% 2.77M 2s
- 10100K .......... .......... .......... .......... .......... 60% 11.6M 2s
- 10150K .......... .......... .......... .......... .......... 60% 2.95M 2s
- 10200K .......... .......... .......... .......... .......... 60% 2.73M 2s
- 10250K .......... .......... .......... .......... .......... 61% 7.51M 2s
- 10300K .......... .......... .......... .......... .......... 61% 2.24M 2s
- 10350K .......... .......... .......... .......... .......... 61% 11.2M 2s
- 10400K .......... .......... .......... .......... .......... 61% 2.58M 2s
- 10450K .......... .......... .......... .......... .......... 62% 11.9M 2s
- 10500K .......... .......... .......... .......... .......... 62% 2.58M 2s
- 10550K .......... .......... .......... .......... .......... 62% 3.39M 2s
- 10600K .......... .......... .......... .......... .......... 63% 5.17M 2s
- 10650K .......... .......... .......... .......... .......... 63% 2.67M 2s
- 10700K .......... .......... .......... .......... .......... 63% 11.7M 2s
- 10750K .......... .......... .......... .......... .......... 64% 3.20M 2s
- 10800K .......... .......... .......... .......... .......... 64% 5.17M 2s
- 10850K .......... .......... .......... .......... .......... 64% 2.90M 2s
- 10900K .......... .......... .......... .......... .......... 64% 2.72M 2s
- 10950K .......... .......... .......... .......... .......... 65% 9.96M 2s
- 11000K .......... .......... .......... .......... .......... 65% 2.69M 2s
- 11050K .......... .......... .......... .......... .......... 65% 11.1M 2s
- 11100K .......... .......... .......... .......... .......... 66% 2.77M 2s
- 11150K .......... .......... .......... .......... .......... 66% 8.76M 2s
- 11200K .......... .......... .......... .......... .......... 66% 2.64M 1s
- 11250K .......... .......... .......... .......... .......... 67% 3.35M 1s
- 11300K .......... .......... .......... .......... .......... 67% 8.43M 1s
- 11350K .......... .......... .......... .......... .......... 67% 3.18M 1s
- 11400K .......... .......... .......... .......... .......... 67% 6.36M 1s
- 11450K .......... .......... .......... .......... .......... 68% 3.26M 1s
- 11500K .......... .......... .......... .......... .......... 68% 7.42M 1s
- 11550K .......... .......... .......... .......... .......... 68% 2.75M 1s
- 11600K .......... .......... .......... .......... .......... 69% 2.33M 1s
- 11650K .......... .......... .......... .......... .......... 69% 9.51M 1s
- 11700K .......... .......... .......... .......... .......... 69% 2.22M 1s
- 11750K .......... .......... .......... .......... .......... 69% 11.1M 1s
- 11800K .......... .......... .......... .......... .......... 70% 2.11M 1s
- 11850K .......... .......... .......... .......... .......... 70% 11.7M 1s
- 11900K .......... .......... .......... .......... .......... 70% 2.93M 1s
- 11950K .......... .......... .......... .......... .......... 71% 10.4M 1s
- 12000K .......... .......... .......... .......... .......... 71% 2.50M 1s
- 12050K .......... .......... .......... .......... .......... 71% 3.42M 1s
- 12100K .......... .......... .......... .......... .......... 72% 6.20M 1s
- 12150K .......... .......... .......... .......... .......... 72% 2.64M 1s
- 12200K .......... .......... .......... .......... .......... 72% 10.3M 1s
- 12250K .......... .......... .......... .......... .......... 72% 2.69M 1s
- 12300K .......... .......... .......... .......... .......... 73% 9.61M 1s
- 12350K .......... .......... .......... .......... .......... 73% 2.27M 1s
- 12400K .......... .......... .......... .......... .......... 73% 2.24M 1s
- 12450K .......... .......... .......... .......... .......... 74% 11.1M 1s
- 12500K .......... .......... .......... .......... .......... 74% 2.76M 1s
- 12550K .......... .......... .......... .......... .......... 74% 9.94M 1s
- 12600K .......... .......... .......... .......... .......... 75% 2.79M 1s
- 12650K .......... .......... .......... .......... .......... 75% 11.1M 1s
- 12700K .......... .......... .......... .......... .......... 75% 2.89M 1s
- 12750K .......... .......... .......... .......... .......... 75% 7.69M 1s
- 12800K .......... .......... .......... .......... .......... 76% 2.53M 1s
- 12850K .......... .......... .......... .......... .......... 76% 2.78M 1s
- 12900K .......... .......... .......... .......... .......... 76% 11.7M 1s
- 12950K .......... .......... .......... .......... .......... 77% 2.44M 1s
- 13000K .......... .......... .......... .......... .......... 77% 11.4M 1s
- 13050K .......... .......... .......... .......... .......... 77% 2.17M 1s
- 13100K .......... .......... .......... .......... .......... 77% 11.4M 1s
- 13150K .......... .......... .......... .......... .......... 78% 2.37M 1s
- 13200K .......... .......... .......... .......... .......... 78% 2.11M 1s
- 13250K .......... .......... .......... .......... .......... 78% 11.8M 1s
- 13300K .......... .......... .......... .......... .......... 79% 2.55M 1s
- 13350K .......... .......... .......... .......... .......... 79% 11.0M 1s
- 13400K .......... .......... .......... .......... .......... 79% 2.72M 1s
- 13450K .......... .......... .......... .......... .......... 80% 11.7M 1s
- 13500K .......... .......... .......... .......... .......... 80% 2.64M 1s
- 13550K .......... .......... .......... .......... .......... 80% 5.12M 1s
- 13600K .......... .......... .......... .......... .......... 80% 3.14M 1s
- 13650K .......... .......... .......... .......... .......... 81% 2.08M 1s
- 13700K .......... .......... .......... .......... .......... 81% 11.2M 1s
- 13750K .......... .......... .......... .......... .......... 81% 2.00M 1s
- 13800K .......... .......... .......... .......... .......... 82% 11.5M 1s
- 13850K .......... .......... .......... .......... .......... 82% 2.62M 1s
- 13900K .......... .......... .......... .......... .......... 82% 11.0M 1s
- 13950K .......... .......... .......... .......... .......... 83% 2.66M 1s
- 14000K .......... .......... .......... .......... .......... 83% 8.41M 1s
- 14050K .......... .......... .......... .......... .......... 83% 2.18M 1s
- 14100K .......... .......... .......... .......... .......... 83% 2.01M 1s
- 14150K .......... .......... .......... .......... .......... 84% 62.8M 1s
- 14200K .......... .......... .......... .......... .......... 84% 2.05M 1s
- 14250K .......... .......... .......... .......... .......... 84% 1.97M 1s
- 14300K .......... .......... .......... .......... .......... 85% 11.0M 1s
- 14350K .......... .......... .......... .......... .......... 85% 2.15M 1s
- 14400K .......... .......... .......... .......... .......... 85% 1.81M 1s
- 14450K .......... .......... .......... .......... .......... 85% 1.89M 1s
- 14500K .......... .......... .......... .......... .......... 86% 4.89M 1s
- 14550K .......... .......... .......... .......... .......... 86% 3.13M 1s
- 14600K .......... .......... .......... .......... .......... 86% 1.88M 1s
- 14650K .......... .......... .......... .......... .......... 87% 2.33M 1s
- 14700K .......... .......... .......... .......... .......... 87% 9.62M 1s
- 14750K .......... .......... .......... .......... .......... 87% 1.84M 1s
- 14800K .......... .......... .......... .......... .......... 88% 1.83M 1s
- 14850K .......... .......... .......... .......... .......... 88% 2.45M 1s
- 14900K .......... .......... .......... .......... .......... 88% 9.91M 1s
- 14950K .......... .......... .......... .......... .......... 88% 2.31M 1s
- 15000K .......... .......... .......... .......... .......... 89% 2.00M 0s
- 15050K .......... .......... .......... .......... .......... 89% 1.88M 0s
- 15100K .......... .......... .......... .......... .......... 89% 11.2M 0s
- 15150K .......... .......... .......... .......... .......... 90% 2.36M 0s
- 15200K .......... .......... .......... .......... .......... 90% 1.86M 0s
- 15250K .......... .......... .......... .......... .......... 90% 1.95M 0s
- 15300K .......... .......... .......... .......... .......... 91% 11.3M 0s
- 15350K .......... .......... .......... .......... .......... 91% 2.25M 0s
- 15400K .......... .......... .......... .......... .......... 91% 2.43M 0s
- 15450K .......... .......... .......... .......... .......... 91% 10.2M 0s
- 15500K .......... .......... .......... .......... .......... 92% 2.12M 0s
- 15550K .......... .......... .......... .......... .......... 92% 2.03M 0s
- 15600K .......... .......... .......... .......... .......... 92% 1.88M 0s
- 15650K .......... .......... .......... .......... .......... 93% 10.8M 0s
- 15700K .......... .......... .......... .......... .......... 93% 2.42M 0s
- 15750K .......... .......... .......... .......... .......... 93% 3.43M 0s
- 15800K .......... .......... .......... .......... .......... 93% 4.73M 0s
- 15850K .......... .......... .......... .......... .......... 94% 2.33M 0s
- 15900K .......... .......... .......... .......... .......... 94% 11.7M 0s
- 15950K .......... .......... .......... .......... .......... 94% 2.48M 0s
- 16000K .......... .......... .......... .......... .......... 95% 2.42M 0s
- 16050K .......... .......... .......... .......... .......... 95% 2.07M 0s
- 16100K .......... .......... .......... .......... .......... 95% 10.3M 0s
- 16150K .......... .......... .......... .......... .......... 96% 2.21M 0s
- 16200K .......... .......... .......... .......... .......... 96% 11.8M 0s
- 16250K .......... .......... .......... .......... .......... 96% 2.05M 0s
- 16300K .......... .......... .......... .......... .......... 96% 2.26M 0s
- 16350K .......... .......... .......... .......... .......... 97% 11.7M 0s
- 16400K .......... .......... .......... .......... .......... 97% 2.20M 0s
- 16450K .......... .......... .......... .......... .......... 97% 2.52M 0s
- 16500K .......... .......... .......... .......... .......... 98% 11.0M 0s
- 16550K .......... .......... .......... .......... .......... 98% 2.34M 0s
- 16600K .......... .......... .......... .......... .......... 98% 2.29M 0s
- 16650K .......... .......... .......... .......... .......... 99% 11.7M 0s
- 16700K .......... .......... .......... .......... .......... 99% 2.44M 0s
- 16750K .......... .......... .......... .......... .......... 99% 6.07M 0s
- 16800K .......... .......... .......... .......... .......... 99% 3.04M 0s
- 16850K .......... .                                          100%  230M=4.7s
+  8450K .......... .......... .......... .......... .......... 50% 2.69M 2s
+  8500K .......... .......... .......... .......... .......... 50% 11.8M 2s
+  8550K .......... .......... .......... .......... .......... 51% 2.69M 2s
+  8600K .......... .......... .......... .......... .......... 51% 11.5M 2s
+  8650K .......... .......... .......... .......... .......... 51% 3.13M 2s
+  8700K .......... .......... .......... .......... .......... 51% 7.06M 2s
+  8750K .......... .......... .......... .......... .......... 52% 2.41M 2s
+  8800K .......... .......... .......... .......... .......... 52% 4.97M 2s
+  8850K .......... .......... .......... .......... .......... 52% 4.34M 2s
+  8900K .......... .......... .......... .......... .......... 53% 5.67M 2s
+  8950K .......... .......... .......... .......... .......... 53% 3.38M 2s
+  9000K .......... .......... .......... .......... .......... 53% 5.10M 2s
+  9050K .......... .......... .......... .......... .......... 53% 4.59M 2s
+  9100K .......... .......... .......... .......... .......... 54% 3.77M 2s
+  9150K .......... .......... .......... .......... .......... 54% 5.06M 2s
+  9200K .......... .......... .......... .......... .......... 54% 3.36M 2s
+  9250K .......... .......... .......... .......... .......... 55% 4.93M 2s
+  9300K .......... .......... .......... .......... .......... 55% 3.93M 2s
+  9350K .......... .......... .......... .......... .......... 55% 3.17M 2s
+  9400K .......... .......... .......... .......... .......... 56% 6.32M 2s
+  9450K .......... .......... .......... .......... .......... 56% 3.60M 2s
+  9500K .......... .......... .......... .......... .......... 56% 6.21M 2s
+  9550K .......... .......... .......... .......... .......... 56% 4.19M 2s
+  9600K .......... .......... .......... .......... .......... 57% 3.88M 2s
+  9650K .......... .......... .......... .......... .......... 57% 4.29M 2s
+  9700K .......... .......... .......... .......... .......... 57% 3.78M 2s
+  9750K .......... .......... .......... .......... .......... 58% 5.25M 2s
+  9800K .......... .......... .......... .......... .......... 58% 4.50M 2s
+  9850K .......... .......... .......... .......... .......... 58% 5.08M 2s
+  9900K .......... .......... .......... .......... .......... 59% 4.67M 2s
+  9950K .......... .......... .......... .......... .......... 59% 5.19M 2s
+ 10000K .......... .......... .......... .......... .......... 59% 2.80M 2s
+ 10050K .......... .......... .......... .......... .......... 59% 4.75M 2s
+ 10100K .......... .......... .......... .......... .......... 60% 4.26M 2s
+ 10150K .......... .......... .......... .......... .......... 60% 4.29M 2s
+ 10200K .......... .......... .......... .......... .......... 60% 4.70M 2s
+ 10250K .......... .......... .......... .......... .......... 61% 3.50M 2s
+ 10300K .......... .......... .......... .......... .......... 61% 7.61M 2s
+ 10350K .......... .......... .......... .......... .......... 61% 2.64M 2s
+ 10400K .......... .......... .......... .......... .......... 61% 9.47M 2s
+ 10450K .......... .......... .......... .......... .......... 62% 2.38M 2s
+ 10500K .......... .......... .......... .......... .......... 62% 11.9M 2s
+ 10550K .......... .......... .......... .......... .......... 62% 2.44M 2s
+ 10600K .......... .......... .......... .......... .......... 63% 11.5M 2s
+ 10650K .......... .......... .......... .......... .......... 63% 2.38M 2s
+ 10700K .......... .......... .......... .......... .......... 63% 4.56M 2s
+ 10750K .......... .......... .......... .......... .......... 64% 4.23M 2s
+ 10800K .......... .......... .......... .......... .......... 64% 2.23M 2s
+ 10850K .......... .......... .......... .......... .......... 64% 11.8M 1s
+ 10900K .......... .......... .......... .......... .......... 64% 2.68M 1s
+ 10950K .......... .......... .......... .......... .......... 65% 11.8M 1s
+ 11000K .......... .......... .......... .......... .......... 65% 2.75M 1s
+ 11050K .......... .......... .......... .......... .......... 65% 11.7M 1s
+ 11100K .......... .......... .......... .......... .......... 66% 2.25M 1s
+ 11150K .......... .......... .......... .......... .......... 66% 11.7M 1s
+ 11200K .......... .......... .......... .......... .......... 66% 2.60M 1s
+ 11250K .......... .......... .......... .......... .......... 67% 2.71M 1s
+ 11300K .......... .......... .......... .......... .......... 67% 11.7M 1s
+ 11350K .......... .......... .......... .......... .......... 67% 2.35M 1s
+ 11400K .......... .......... .......... .......... .......... 67% 12.3M 1s
+ 11450K .......... .......... .......... .......... .......... 68% 2.74M 1s
+ 11500K .......... .......... .......... .......... .......... 68% 12.2M 1s
+ 11550K .......... .......... .......... .......... .......... 68% 2.38M 1s
+ 11600K .......... .......... .......... .......... .......... 69% 9.05M 1s
+ 11650K .......... .......... .......... .......... .......... 69% 2.41M 1s
+ 11700K .......... .......... .......... .......... .......... 69% 11.9M 1s
+ 11750K .......... .......... .......... .......... .......... 69% 2.81M 1s
+ 11800K .......... .......... .......... .......... .......... 70% 11.7M 1s
+ 11850K .......... .......... .......... .......... .......... 70% 2.77M 1s
+ 11900K .......... .......... .......... .......... .......... 70% 11.8M 1s
+ 11950K .......... .......... .......... .......... .......... 71% 2.77M 1s
+ 12000K .......... .......... .......... .......... .......... 71% 2.58M 1s
+ 12050K .......... .......... .......... .......... .......... 71% 12.0M 1s
+ 12100K .......... .......... .......... .......... .......... 72% 2.73M 1s
+ 12150K .......... .......... .......... .......... .......... 72% 10.1M 1s
+ 12200K .......... .......... .......... .......... .......... 72% 2.83M 1s
+ 12250K .......... .......... .......... .......... .......... 72% 9.44M 1s
+ 12300K .......... .......... .......... .......... .......... 73% 2.95M 1s
+ 12350K .......... .......... .......... .......... .......... 73% 9.95M 1s
+ 12400K .......... .......... .......... .......... .......... 73% 2.60M 1s
+ 12450K .......... .......... .......... .......... .......... 74% 2.76M 1s
+ 12500K .......... .......... .......... .......... .......... 74% 11.3M 1s
+ 12550K .......... .......... .......... .......... .......... 74% 2.76M 1s
+ 12600K .......... .......... .......... .......... .......... 75% 11.8M 1s
+ 12650K .......... .......... .......... .......... .......... 75% 2.84M 1s
+ 12700K .......... .......... .......... .......... .......... 75% 10.3M 1s
+ 12750K .......... .......... .......... .......... .......... 75% 2.89M 1s
+ 12800K .......... .......... .......... .......... .......... 76% 7.90M 1s
+ 12850K .......... .......... .......... .......... .......... 76% 2.89M 1s
+ 12900K .......... .......... .......... .......... .......... 76% 10.1M 1s
+ 12950K .......... .......... .......... .......... .......... 77% 2.82M 1s
+ 13000K .......... .......... .......... .......... .......... 77% 6.81M 1s
+ 13050K .......... .......... .......... .......... .......... 77% 3.39M 1s
+ 13100K .......... .......... .......... .......... .......... 77% 3.25M 1s
+ 13150K .......... .......... .......... .......... .......... 78% 7.35M 1s
+ 13200K .......... .......... .......... .......... .......... 78% 2.96M 1s
+ 13250K .......... .......... .......... .......... .......... 78% 6.34M 1s
+ 13300K .......... .......... .......... .......... .......... 79% 2.77M 1s
+ 13350K .......... .......... .......... .......... .......... 79% 8.83M 1s
+ 13400K .......... .......... .......... .......... .......... 79% 2.99M 1s
+ 13450K .......... .......... .......... .......... .......... 80% 9.35M 1s
+ 13500K .......... .......... .......... .......... .......... 80% 3.34M 1s
+ 13550K .......... .......... .......... .......... .......... 80% 6.51M 1s
+ 13600K .......... .......... .......... .......... .......... 80% 2.88M 1s
+ 13650K .......... .......... .......... .......... .......... 81% 3.66M 1s
+ 13700K .......... .......... .......... .......... .......... 81% 7.35M 1s
+ 13750K .......... .......... .......... .......... .......... 81% 3.63M 1s
+ 13800K .......... .......... .......... .......... .......... 82% 5.61M 1s
+ 13850K .......... .......... .......... .......... .......... 82% 4.14M 1s
+ 13900K .......... .......... .......... .......... .......... 82% 5.71M 1s
+ 13950K .......... .......... .......... .......... .......... 83% 3.75M 1s
+ 14000K .......... .......... .......... .......... .......... 83% 3.36M 1s
+ 14050K .......... .......... .......... .......... .......... 83% 5.48M 1s
+ 14100K .......... .......... .......... .......... .......... 83% 4.46M 1s
+ 14150K .......... .......... .......... .......... .......... 84% 5.13M 1s
+ 14200K .......... .......... .......... .......... .......... 84% 4.46M 1s
+ 14250K .......... .......... .......... .......... .......... 84% 5.32M 1s
+ 14300K .......... .......... .......... .......... .......... 85% 3.13M 1s
+ 14350K .......... .......... .......... .......... .......... 85% 7.46M 1s
+ 14400K .......... .......... .......... .......... .......... 85% 3.22M 1s
+ 14450K .......... .......... .......... .......... .......... 85% 4.23M 1s
+ 14500K .......... .......... .......... .......... .......... 86% 4.57M 1s
+ 14550K .......... .......... .......... .......... .......... 86% 3.72M 1s
+ 14600K .......... .......... .......... .......... .......... 86% 7.37M 1s
+ 14650K .......... .......... .......... .......... .......... 87% 3.47M 1s
+ 14700K .......... .......... .......... .......... .......... 87% 5.78M 1s
+ 14750K .......... .......... .......... .......... .......... 87% 4.50M 1s
+ 14800K .......... .......... .......... .......... .......... 88% 3.65M 0s
+ 14850K .......... .......... .......... .......... .......... 88% 4.83M 0s
+ 14900K .......... .......... .......... .......... .......... 88% 3.68M 0s
+ 14950K .......... .......... .......... .......... .......... 88% 6.71M 0s
+ 15000K .......... .......... .......... .......... .......... 89% 3.80M 0s
+ 15050K .......... .......... .......... .......... .......... 89% 5.46M 0s
+ 15100K .......... .......... .......... .......... .......... 89% 4.63M 0s
+ 15150K .......... .......... .......... .......... .......... 90% 4.70M 0s
+ 15200K .......... .......... .......... .......... .......... 90% 3.35M 0s
+ 15250K .......... .......... .......... .......... .......... 90% 3.79M 0s
+ 15300K .......... .......... .......... .......... .......... 91% 5.18M 0s
+ 15350K .......... .......... .......... .......... .......... 91% 4.51M 0s
+ 15400K .......... .......... .......... .......... .......... 91% 5.26M 0s
+ 15450K .......... .......... .......... .......... .......... 91% 4.92M 0s
+ 15500K .......... .......... .......... .......... .......... 92% 4.65M 0s
+ 15550K .......... .......... .......... .......... .......... 92% 3.07M 0s
+ 15600K .......... .......... .......... .......... .......... 92% 6.34M 0s
+ 15650K .......... .......... .......... .......... .......... 93% 3.27M 0s
+ 15700K .......... .......... .......... .......... .......... 93% 4.61M 0s
+ 15750K .......... .......... .......... .......... .......... 93% 4.18M 0s
+ 15800K .......... .......... .......... .......... .......... 93% 2.80M 0s
+ 15850K .......... .......... .......... .......... .......... 94% 10.2M 0s
+ 15900K .......... .......... .......... .......... .......... 94% 2.74M 0s
+ 15950K .......... .......... .......... .......... .......... 94% 12.0M 0s
+ 16000K .......... .......... .......... .......... .......... 95% 2.55M 0s
+ 16050K .......... .......... .......... .......... .......... 95% 11.4M 0s
+ 16100K .......... .......... .......... .......... .......... 95% 2.82M 0s
+ 16150K .......... .......... .......... .......... .......... 96% 10.5M 0s
+ 16200K .......... .......... .......... .......... .......... 96% 2.80M 0s
+ 16250K .......... .......... .......... .......... .......... 96% 11.7M 0s
+ 16300K .......... .......... .......... .......... .......... 96% 2.92M 0s
+ 16350K .......... .......... .......... .......... .......... 97% 9.96M 0s
+ 16400K .......... .......... .......... .......... .......... 97% 2.66M 0s
+ 16450K .......... .......... .......... .......... .......... 97% 3.48M 0s
+ 16500K .......... .......... .......... .......... .......... 98% 5.79M 0s
+ 16550K .......... .......... .......... .......... .......... 98% 3.59M 0s
+ 16600K .......... .......... .......... .......... .......... 98% 6.13M 0s
+ 16650K .......... .......... .......... .......... .......... 99% 2.75M 0s
+ 16700K .......... .......... .......... .......... .......... 99% 11.8M 0s
+ 16750K .......... .......... .......... .......... .......... 99% 2.75M 0s
+ 16800K .......... .......... .......... .......... .......... 99% 9.41M 0s
+ 16850K .......... .                                          100%  122M=4.1s
 
-2018-01-28 22:52:16 (3.52 MB/s) - 'guile-2.2.3.tar.gz' saved [17266587/17266587]
+2018-01-29 00:30:06 (4.02 MB/s) - 'guile-2.2.3.tar.gz' saved [17266587/17266587]
 
 + tar -xvf guile-2.2.3.tar.gz
 guile-2.2.3/
@@ -2925,8 +2960,8 @@ checking for special C compiler options needed for large files... no
 checking for _FILE_OFFSET_BITS value needed for large files... no
 configure: autobuild project... GNU Guile
 configure: autobuild revision... 2.2.3
-configure: autobuild hostname... 84f38639fcf1
-configure: autobuild timestamp... 20180128T225218Z
+configure: autobuild hostname... f80b224414a5
+configure: autobuild timestamp... 20180129T003007Z
 checking how to run the C preprocessor... gcc -std=gnu11 -E
 checking for a sed that does not truncate output... /bin/sed
 checking for gawk... (cached) gawk
@@ -3875,18 +3910,18 @@ make: *** No targets specified and no makefile found.  Stop.
 make: *** No rule to make target 'install'.  Stop.
 + sudo ldconfig
 + DSTATUS=BUILDPASSNOTEST
-+ /var/lib/jenkins/status/updateStatus BUILDPASSNOTEST /var/lib/jenkins/jobs/OpenCOG_U1710/builds/19/log OpenCOG_U1710_Guile
++ /var/lib/jenkins/status/updateStatus BUILDPASSNOTEST /var/lib/jenkins/jobs/OpenCOG_U1710/builds/21/log OpenCOG_U1710_Guile
 Already up-to-date.
-[master 5ceef1a] OpenCOG_U1710_Guile BUILDPASSNOTEST
- 2 files changed, 371 insertions(+), 372 deletions(-)
+[master 3e1d5e8] OpenCOG_U1710_Guile BUILDPASSNOTEST
+ 2 files changed, 431 insertions(+), 396 deletions(-)
 To git@github.com:edguy3/CenStatus.git
-   1502161..5ceef1a  master -> master
+   938fc64..3e1d5e8  master -> master
 + [ BUILDPASSNOTEST = BUILDPASSNOTEST ]
-[OpenCOG_U1710] $ /bin/sh -xe /tmp/jenkins7719667430634145486.sh
+[OpenCOG_U1710] $ /bin/sh -xe /tmp/jenkins5580915097970439479.sh
 + . build.docker/docker.env
-+ CID=84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a
-+ DKRUNROOT=docker exec --user root   84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a
-+ DKRUNUSER=docker exec --user jenkins  84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a
++ CID=f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443
++ DKRUNROOT=docker exec --user root   f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443
++ DKRUNUSER=docker exec --user jenkins  f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443
 + UID=125
 + GID=132
 + cat
@@ -3903,10 +3938,18 @@ To git@github.com:edguy3/CenStatus.git
 **********************************************************
 
 + WDIR=cogutil
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1710/builds/19/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1710/builds/21/log
 + cat
 + chmod +x dependencies/job1
-+ docker exec --user jenkins 84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a bash dependencies/job1
++ docker exec --user jenkins f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443 bash dependencies/job1
++ pwd
++ ls
++ cd cogutil
++ git branch
++ git log
++ head
++ rm -fr build
++ mkdir build
 /home/opencog
 atomspace
 cogutil
@@ -3927,14 +3970,6 @@ Date:   Fri Jan 26 15:41:39 2018 -0600
     fix: while loop spinning on ; rather than subsequent loop
 
 commit 5601da19dddc5ed6c25755cb08cbd7dfd9c35162
-+ pwd
-+ ls
-+ cd cogutil
-+ git branch
-+ git log
-+ head
-+ rm -fr build
-+ mkdir build
 + cd build
 + cmake ..
 CMake Deprecation Warning at CMakeLists.txt:21 (CMAKE_POLICY):
@@ -4006,14 +4041,14 @@ The following components will be built:
 -- Build files have been written to: /home/opencog/cogutil/build
 + make -j8
 Scanning dependencies of target cogutil
-[  5%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/ansi.cc.o
-[ 15%] Building C object opencog/util/CMakeFiles/cogutil.dir/cluster.c.o
-[ 15%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/exceptions.cc.o
-[ 20%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/Config.cc.o
-[ 25%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_normal_selector.cc.o
-[ 30%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_random_selector.cc.o
-[ 35%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/files.cc.o
-[ 40%] Building C object opencog/util/CMakeFiles/cogutil.dir/backtrace-symbols.c.o
+[ 25%] Building C object opencog/util/CMakeFiles/cogutil.dir/cluster.c.o
+[ 25%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/exceptions.cc.o
+[ 30%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/ansi.cc.o
+[ 30%] Building C object opencog/util/CMakeFiles/cogutil.dir/backtrace-symbols.c.o
+[ 30%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/Config.cc.o
+[ 30%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/files.cc.o
+[ 35%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_normal_selector.cc.o
+[ 40%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_random_selector.cc.o
 [ 45%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_selector.cc.o
 [ 50%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/log_prog_name.cc.o
 [ 55%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/Logger.cc.o
@@ -4085,13 +4120,13 @@ Install the project...
 -- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean.h
 -- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean_mirror.h
 + DSTATUS=BUILDPASS
-+ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1710/builds/19/log OpenCOG_U1710_CogUtil
++ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1710/builds/21/log OpenCOG_U1710_CogUtil
 Already up-to-date.
-[master 1b86213] OpenCOG_U1710_CogUtil BUILDPASS
- 3 files changed, 4092 insertions(+), 146 deletions(-)
- rewrite jobs/OpenCOG_U1710_CogUtil.log (83%)
+[master 4af363d] OpenCOG_U1710_CogUtil BUILDPASS
+ 3 files changed, 4127 insertions(+), 145 deletions(-)
+ rewrite jobs/OpenCOG_U1710_CogUtil.log (84%)
 To git@github.com:edguy3/CenStatus.git
-   5ceef1a..1b86213  master -> master
+   3e1d5e8..4af363d  master -> master
 + echo DSTATUS is BUILDPASS
 DSTATUS is BUILDPASS
 + [ BUILDPASS = BUILDPASS ]
@@ -4099,11 +4134,11 @@ DSTATUS is BUILDPASS
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-[OpenCOG_U1710] $ /bin/sh -xe /tmp/jenkins1149035571899865196.sh
+[OpenCOG_U1710] $ /bin/sh -xe /tmp/jenkins7905721537788777949.sh
 + . build.docker/docker.env
-+ CID=84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a
-+ DKRUNROOT=docker exec --user root   84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a
-+ DKRUNUSER=docker exec --user jenkins  84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a
++ CID=f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443
++ DKRUNROOT=docker exec --user root   f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443
++ DKRUNUSER=docker exec --user jenkins  f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443
 + UID=125
 + GID=132
 + cat
@@ -4120,36 +4155,16 @@ DSTATUS is BUILDPASS
 **********************************************************
 
 + WDIR=atomspace
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1710/builds/19/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1710/builds/21/log
 + cat
 + chmod +x dependencies/job1
-+ docker exec --user jenkins 84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a bash dependencies/job1
++ docker exec --user jenkins f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443 bash dependencies/job1
 + pwd
 + ls
-/home/opencog
-atomspace
-cogutil
-dependencies
-guile-2.2.3
-guile-2.2.3.tar.gz
-moses
-octool
-opencog
 + cd atomspace
 + git branch
-* master
 + git log
 + head
-commit 981b775a7142cc214b4b27c59bd064ee693582a1
-Merge: 8547e39c9 a0f6a09e9
-Author: Linas Vepštas <linasvepstas@gmail.com>
-Date:   Fri Jan 26 18:11:17 2018 -0600
-
-    Merge pull request #1535 from edguy3/AS_timepair_t_RV_FIX
-    
-    modify return value on timepair_t AtomSpaceBenchmark::bm_getHandlesBy
-
-commit 8547e39c99a7752a22eb5fecf19c56a87277626f
 + rm -fr build
 + mkdir build
 + cd build
@@ -4164,6 +4179,26 @@ CMake Deprecation Warning at CMakeLists.txt:18 (CMAKE_POLICY):
   behavior and not rely on setting a policy to OLD.
 
 
+/home/opencog
+atomspace
+cogutil
+dependencies
+guile-2.2.3
+guile-2.2.3.tar.gz
+moses
+octool
+opencog
+* master
+commit 981b775a7142cc214b4b27c59bd064ee693582a1
+Merge: 8547e39c9 a0f6a09e9
+Author: Linas Vepštas <linasvepstas@gmail.com>
+Date:   Fri Jan 26 18:11:17 2018 -0600
+
+    Merge pull request #1535 from edguy3/AS_timepair_t_RV_FIX
+    
+    modify return value on timepair_t AtomSpaceBenchmark::bm_getHandlesBy
+
+commit 8547e39c99a7752a22eb5fecf19c56a87277626f
 -- The C compiler identification is GNU 7.2.0
 -- The CXX compiler identification is GNU 7.2.0
 -- Check for working C compiler: /usr/bin/cc
@@ -4228,7 +4263,6 @@ CMake Deprecation Warning at CMakeLists.txt:18 (CMAKE_POLICY):
 -- Found ZeroMQ library: /usr/lib/x86_64-linux-gnu/libzmq.so
 -- Detected ZeroMQ version number: 4.2.1
 -- ZeroMQ was found.
-failed to create symbolic link '/home/opencog/atomspace/build/opencog/scm//opencog/matrix/bin-count.scm': No such file or directory
 CMake Warning at tests/persist/sql/multi-driver/CMakeLists.txt:46 (MESSAGE):
   /usr/bin/psql: psql: could not connect to server: No such file or directory
 
@@ -4271,11 +4305,11 @@ The following components WILL NOT be built:
 -- Build files have been written to: /home/opencog/atomspace/build
 + make -j8
 [  0%] Cythonizing logger.pyx
-Scanning dependencies of target persist-odbc
 Scanning dependencies of target opencog_atom_types
-Scanning dependencies of target persist-pg
-[  0%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-odbc.dir/odbcxx.cc.o
+Scanning dependencies of target persist-odbc
 [  0%] Generating opencog types
+[  0%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-odbc.dir/odbcxx.cc.o
+Scanning dependencies of target persist-pg
 [  2%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-pg.dir/ll-pg-cxx.cc.o
 -- Atom type name: Notype Notype
 -- Atom type name: Value Value
@@ -4419,32 +4453,32 @@ Scanning dependencies of target persist-pg
 -- Atom type name: Section Section
 [  2%] Built target opencog_atom_types
 Scanning dependencies of target truthvalue
-[  2%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/EvidenceCountTruthValue.cc.o
 [  2%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/FuzzyTruthValue.cc.o
+[  2%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/EvidenceCountTruthValue.cc.o
 [  2%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/AttentionValue.cc.o
-[  5%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/CountTruthValue.cc.o
+[  2%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/CountTruthValue.cc.o
 [  5%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/IndefiniteTruthValue.cc.o
 Scanning dependencies of target logger_cython
 [  5%] Building CXX object opencog/cython/opencog/CMakeFiles/logger_cython.dir/logger.cpp.o
 [  5%] Linking CXX shared library libpersist-pg.so
-[  5%] Linking CXX shared library libpersist-odbc.so
-[  5%] Built target persist-odbc
 [  5%] Built target persist-pg
+[  5%] Linking CXX shared library libpersist-odbc.so
 [  5%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/ProbabilisticTruthValue.cc.o
+[  5%] Built target persist-odbc
 [  5%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/SimpleTruthValue.cc.o
 [  8%] Linking CXX shared library logger.so
-[  8%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/TruthValue.cc.o
 [  8%] Built target logger_cython
+[  8%] Building CXX object opencog/truthvalue/CMakeFiles/truthvalue.dir/TruthValue.cc.o
 [  8%] Linking CXX shared library libtruthvalue.so
 [  8%] Built target truthvalue
 Scanning dependencies of target atombase
-[ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Atom.cc.o
-[ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/ClassServer.cc.o
-[ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Handle.cc.o
-[ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/atom_types_init.cc.o
+[  8%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/atom_types_init.cc.o
+[  8%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/FloatValue.cc.o
+[  8%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Atom.cc.o
 [ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/LinkValue.cc.o
-[ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/FloatValue.cc.o
+[ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/ClassServer.cc.o
 [ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Link.cc.o
+[ 11%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Handle.cc.o
 [ 13%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Node.cc.o
 [ 13%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/StringValue.cc.o
 [ 13%] Building CXX object opencog/atoms/base/CMakeFiles/atombase.dir/Valuation.cc.o
@@ -4452,14 +4486,14 @@ Scanning dependencies of target atombase
 [ 13%] Built target atombase
 Scanning dependencies of target attentionbank
 Scanning dependencies of target atomutils
-[ 13%] Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AtomBins.cc.o
-[ 13%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FindUtils.cc.o
-[ 13%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FuzzyMatch.cc.o
-[ 16%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FuzzyMatchBasic.cc.o
-[ 16%] Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AVUtils.cc.o
+[ 13%] Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AVUtils.cc.o
+[ 16%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/AtomUtils.cc.o
+[ 16%] Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AtomBins.cc.o
+[ 16%] Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AttentionBank.cc.o
+[ 16%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FuzzyMatch.cc.o
 [ 16%] Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/ImportanceIndex.cc.o
-[ 19%] Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/AttentionBank.cc.o
-[ 19%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/AtomUtils.cc.o
+[ 16%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FindUtils.cc.o
+[ 19%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/FuzzyMatchBasic.cc.o
 [ 19%] Building CXX object opencog/attentionbank/CMakeFiles/attentionbank.dir/StochasticImportanceDiffusion.cc.o
 [ 19%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/Neighbors.cc.o
 [ 19%] Building CXX object opencog/atomutils/CMakeFiles/atomutils.dir/TypeUtils.cc.o
@@ -4468,14 +4502,14 @@ Scanning dependencies of target atomutils
 [ 19%] Linking CXX shared library libatomutils.so
 [ 19%] Built target atomutils
 Scanning dependencies of target atomcore
-[ 19%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/Context.cc.o
-[ 19%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ArityLink.cc.o
-[ 22%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/FunctionLink.cc.o
+[ 22%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ArityLink.cc.o
+[ 22%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/Context.cc.o
 [ 22%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/Checkers.cc.o
-[ 22%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/FreeLink.cc.o
 [ 22%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/DefineLink.cc.o
-[ 25%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ComposeLink.cc.o
-[ 25%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/DeleteLink.cc.o
+[ 22%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ComposeLink.cc.o
+[ 22%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/DeleteLink.cc.o
+[ 22%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/FreeLink.cc.o
+[ 25%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/FunctionLink.cc.o
 [ 25%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/ImplicationScopeLink.cc.o
 [ 25%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/LambdaLink.cc.o
 [ 25%] Building CXX object opencog/atoms/core/CMakeFiles/atomcore.dir/NumberNode.cc.o
@@ -4503,10 +4537,10 @@ Scanning dependencies of target atomspace
 [ 33%] Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/ArithmeticLink.cc.o
 [ 33%] Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/DivideLink.cc.o
 [ 33%] Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/MinusLink.cc.o
-[ 36%] Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/AtomSpace.cc.o
-[ 36%] Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/PlusLink.cc.o
-[ 38%] Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/FoldLink.cc.o
-[ 38%] Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/TimesLink.cc.o
+[ 33%] Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/PlusLink.cc.o
+[ 33%] Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/TimesLink.cc.o
+[ 36%] Building CXX object opencog/atoms/reduct/CMakeFiles/clearbox.dir/FoldLink.cc.o
+[ 38%] Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/AtomSpace.cc.o
 [ 38%] Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/AtomSpaceInit.cc.o
 [ 38%] Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/AtomTable.cc.o
 [ 38%] Building CXX object opencog/atomspace/CMakeFiles/atomspace.dir/BackingStore.cc.o
@@ -4520,12 +4554,12 @@ Scanning dependencies of target atomspace
 Scanning dependencies of target atomspaceutils
 Scanning dependencies of target lambda
 [ 47%] Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/RandomAtomGenerator.cc.o
-[ 47%] Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/TLB.cc.o
 [ 47%] Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/AtomSpaceUtils.cc.o
-Scanning dependencies of target sql-support
-[ 47%] Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/BindLink.cc.o
+[ 47%] Building CXX object opencog/atomspaceutils/CMakeFiles/atomspaceutils.dir/TLB.cc.o
 [ 47%] Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/DualLink.cc.o
+[ 47%] Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/BindLink.cc.o
 [ 47%] Building CXX object opencog/atoms/pattern/CMakeFiles/lambda.dir/PatternLink.cc.o
+Scanning dependencies of target sql-support
 [ 47%] Building CXX object opencog/persist/sql/CMakeFiles/sql-support.dir/AtomStorage.cc.o
 Scanning dependencies of target type_constructors
 [ 47%] Building CXX object opencog/cython/opencog/CMakeFiles/type_constructors.dir/type_constructors.cpp.o
@@ -4546,10 +4580,10 @@ Scanning dependencies of target unify
 [ 52%] Building CXX object opencog/unify/CMakeFiles/unify.dir/Unify.cc.o
 Scanning dependencies of target smob
 [ 52%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeModule.cc.o
-[ 52%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmob.cc.o
+[ 52%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeEval.cc.o
 [ 52%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemePrimitive.cc.o
 [ 55%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAtom.cc.o
-[ 55%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeEval.cc.o
+[ 55%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmob.cc.o
 [ 55%] Linking CXX shared library type_constructors.so
 [ 55%] Built target type_constructors
 [ 55%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAF.cc.o
@@ -4557,30 +4591,30 @@ Scanning dependencies of target smob
 [ 55%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobAV.cc.o
 [ 55%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobGC.cc.o
 [ 55%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobNew.cc.o
-[ 55%] Linking CXX shared library atomspace.so
 [ 58%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobTV.cc.o
-[ 58%] Built target atomspace_cython
 [ 58%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobValue.cc.o
+[ 58%] Linking CXX shared library atomspace.so
+[ 58%] Built target atomspace_cython
 [ 58%] Building CXX object opencog/guile/CMakeFiles/smob.dir/SchemeSmobLogger.cc.o
-[ 58%] Linking CXX shared library libsmob.so
 [ 58%] Linking CXX shared library libunify.so
 [ 58%] Built target unify
+[ 58%] Linking CXX shared library libsmob.so
 [ 58%] Built target smob
 [ 61%] Serializing with protobuf
+Scanning dependencies of target persist
 Scanning dependencies of target randgen
 Scanning dependencies of target dist-gearman
-Scanning dependencies of target persist
 Scanning dependencies of target persist-sql
-[ 61%] Building CXX object opencog/guile/CMakeFiles/randgen.dir/RandGenSCM.cc.o
-[ 61%] Building CXX object opencog/persist/gearman/CMakeFiles/dist-gearman.dir/DistSCM.cc.o
-[ 61%] Building CXX object opencog/persist/guile/CMakeFiles/persist.dir/PersistSCM.cc.o
 Scanning dependencies of target PythonEval
 Scanning dependencies of target atomspace_bm
+[ 61%] Building CXX object opencog/guile/CMakeFiles/randgen.dir/RandGenSCM.cc.o
+[ 61%] Building CXX object opencog/persist/guile/CMakeFiles/persist.dir/PersistSCM.cc.o
+[ 61%] Building CXX object opencog/persist/gearman/CMakeFiles/dist-gearman.dir/DistSCM.cc.o
 [ 61%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/persist-sql.dir/llapi.cc.o
 Scanning dependencies of target query
 [ 63%] Building CXX object opencog/cython/CMakeFiles/PythonEval.dir/PythonEval.cc.o
-[ 63%] Building CXX object opencog/query/CMakeFiles/query.dir/AttentionalFocusCB.cc.o
 [ 63%] Building CXX object opencog/benchmark/CMakeFiles/atomspace_bm.dir/AtomSpaceBenchmark.cc.o
+[ 63%] Building CXX object opencog/query/CMakeFiles/query.dir/AttentionalFocusCB.cc.o
 [libprotobuf WARNING google/protobuf/compiler/parser.cc:547] No syntax specified for the proto file: ZMQMessages.proto. Please use 'syntax = "proto2";' or 'syntax = "proto3";' to specify a syntax version. (Defaulted to proto2 syntax.)
 Scanning dependencies of target zmqatoms
 [ 63%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQMessages.pb.cc.o
@@ -4596,35 +4630,35 @@ Scanning dependencies of target zmqatoms
 [ 66%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ProtocolBufferSerializer.cc.o
 [ 69%] Building CXX object opencog/query/CMakeFiles/query.dir/DefaultPatternMatchCB.cc.o
 [ 69%] Building CXX object opencog/benchmark/CMakeFiles/atomspace_bm.dir/atomspace_bm.cc.o
-[ 69%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQClient.cc.o
-[ 69%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQPersistSCM.cc.o
 [ 69%] Building CXX object opencog/query/CMakeFiles/query.dir/Implicator.cc.o
 [ 69%] Building CXX object opencog/query/CMakeFiles/query.dir/DefaultImplicator.cc.o
+[ 69%] Linking CXX shared library libPythonEval.so
+[ 69%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQClient.cc.o
+[ 69%] Built target PythonEval
+[ 69%] Building CXX object opencog/query/CMakeFiles/query.dir/InitiateSearchCB.cc.o
+[ 69%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternMatch.cc.o
 [ 72%] Linking CXX shared library libpersist-sql.so
 [ 72%] Built target persist-sql
-[ 72%] Building CXX object opencog/query/CMakeFiles/query.dir/InitiateSearchCB.cc.o
-[ 72%] Linking CXX shared library libPythonEval.so
-[ 72%] Linking CXX executable atomspace_bm
-[ 72%] Built target PythonEval
-Scanning dependencies of target sniff
-[ 72%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/sniff.dir/sniff.cc.o
-[ 72%] Built target atomspace_bm
 Scanning dependencies of target PythonSCM
 [ 72%] Building CXX object opencog/cython/CMakeFiles/PythonSCM.dir/PythonSCM.cc.o
+[ 72%] Linking CXX executable atomspace_bm
+[ 72%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternMatchEngine.cc.o
+[ 72%] Built target atomspace_bm
 [ 72%] Cythonizing utilities.pyx
 Scanning dependencies of target utilities_cython
-[ 72%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternMatch.cc.o
 [ 72%] Building CXX object opencog/cython/opencog/CMakeFiles/utilities_cython.dir/Utilities.cc.o
-[ 75%] Linking CXX shared library libzmqatoms.so
-[ 75%] Built target zmqatoms
+[ 72%] Building CXX object opencog/persist/zmq/atomspace/CMakeFiles/zmqatoms.dir/ZMQPersistSCM.cc.o
+[ 75%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternSCM.cc.o
+[ 75%] Linking CXX shared library libPythonSCM.so
+[ 75%] Built target PythonSCM
+[ 75%] Building CXX object opencog/query/CMakeFiles/query.dir/Recognizer.cc.o
+Scanning dependencies of target sniff
+[ 75%] Building CXX object opencog/persist/sql/multi-driver/CMakeFiles/sniff.dir/sniff.cc.o
 [ 75%] Building CXX object opencog/cython/opencog/CMakeFiles/utilities_cython.dir/utilities.cpp.o
-[ 77%] Linking CXX executable sniff
-[ 77%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternMatchEngine.cc.o
-[ 77%] Linking CXX shared library libPythonSCM.so
-[ 80%] Building CXX object opencog/query/CMakeFiles/query.dir/PatternSCM.cc.o
-[ 80%] Building CXX object opencog/query/CMakeFiles/query.dir/Recognizer.cc.o
-[ 80%] Built target PythonSCM
-[ 80%] Building CXX object opencog/query/CMakeFiles/query.dir/Satisfier.cc.o
+[ 75%] Building CXX object opencog/query/CMakeFiles/query.dir/Satisfier.cc.o
+[ 77%] Linking CXX shared library libzmqatoms.so
+[ 77%] Built target zmqatoms
+[ 80%] Linking CXX executable sniff
 [ 80%] Built target sniff
 [ 80%] Linking CXX shared library utilities.so
 [ 80%] Built target utilities_cython
@@ -4632,22 +4666,22 @@ Scanning dependencies of target utilities_cython
 [ 80%] Built target query
 Scanning dependencies of target execution
 [ 80%] Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/Force.cc.o
+[ 80%] Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/ExecSCM.cc.o
+[ 80%] Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/Instantiator.cc.o
 [ 80%] Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/MapLink.cc.o
+[ 80%] Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/EvaluationLink.cc.o
 [ 83%] Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/ExecutionOutputLink.cc.o
-[ 83%] Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/EvaluationLink.cc.o
-[ 83%] Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/Instantiator.cc.o
-[ 83%] Building CXX object opencog/atoms/execution/CMakeFiles/execution.dir/ExecSCM.cc.o
 [ 83%] Linking CXX shared library libexecution.so
 [ 83%] Built target execution
-[ 83%] Cythonizing scheme_wrapper.pyx
 [ 86%] Cythonizing bindlink.pyx
-Scanning dependencies of target profile_bindlink
+[ 86%] Cythonizing scheme_wrapper.pyx
 Scanning dependencies of target atomspace-cwrapper
-[ 88%] Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/PatternMatcher_CWrapper.cpp.o
+Scanning dependencies of target profile_bindlink
+[ 86%] Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/AtomSpace_CWrapper.cpp.o
+[ 86%] Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/PatternMatcher_CWrapper.cpp.o
+[ 86%] Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/Exec_CWrapper.cpp.o
+[ 86%] Building CXX object opencog/benchmark/CMakeFiles/profile_bindlink.dir/profile_bindlink.cc.o
 [ 88%] Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/TruthValue_CWrapper.cpp.o
-[ 88%] Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/Exec_CWrapper.cpp.o
-[ 88%] Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/AtomSpace_CWrapper.cpp.o
-[ 88%] Building CXX object opencog/benchmark/CMakeFiles/profile_bindlink.dir/profile_bindlink.cc.o
 Scanning dependencies of target ruleengine
 [ 88%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/BackwardChainer.cc.o
 Scanning dependencies of target scheme_wrapper
@@ -4655,26 +4689,26 @@ Scanning dependencies of target scheme_wrapper
 Scanning dependencies of target bindlink_cython
 [ 88%] Building CXX object opencog/cython/opencog/CMakeFiles/bindlink_cython.dir/BindlinkStub.cc.o
 [ 88%] Building CXX object opencog/haskell/CMakeFiles/atomspace-cwrapper.dir/Value_CWrapper.cpp.o
-[ 88%] Building CXX object opencog/cython/opencog/CMakeFiles/scheme_wrapper.dir/scheme_wrapper.cpp.o
 [ 88%] Linking CXX executable profile_bindlink
-[ 88%] Building CXX object opencog/cython/opencog/CMakeFiles/bindlink_cython.dir/bindlink.cpp.o
 [ 88%] Built target profile_bindlink
 [ 88%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/TraceRecorder.cc.o
+[ 88%] Building CXX object opencog/cython/opencog/CMakeFiles/scheme_wrapper.dir/scheme_wrapper.cpp.o
 [ 88%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/ControlPolicy.cc.o
 [ 88%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/MixtureModel.cc.o
+[ 88%] Building CXX object opencog/cython/opencog/CMakeFiles/bindlink_cython.dir/bindlink.cpp.o
 [ 88%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/ActionSelection.cc.o
 [ 88%] Linking CXX shared library libatomspace-cwrapper.so
 [ 88%] Built target atomspace-cwrapper
 [ 91%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/BetaDistribution.cc.o
-[ 91%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/BackwardChainerPMCB.cc.o
 [ 94%] Linking CXX shared library scheme_wrapper.so
 [ 94%] Built target scheme_wrapper
+[ 94%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/BackwardChainerPMCB.cc.o
 [ 94%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/BIT.cc.o
 [ 94%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/backwardchainer/Fitness.cc.o
-[ 94%] Linking CXX shared library bindlink.so
-[ 94%] Built target bindlink_cython
 [ 94%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/forwardchainer/FCStat.cc.o
+[ 94%] Linking CXX shared library bindlink.so
 [ 97%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/forwardchainer/ForwardChainer.cc.o
+[ 97%] Built target bindlink_cython
 [ 97%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/URELogger.cc.o
 [ 97%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/ChainerUtils.cc.o
 [ 97%] Building CXX object opencog/rule-engine/CMakeFiles/ruleengine.dir/InferenceSCM.cc.o
@@ -4902,7 +4936,6 @@ Install the project...
 -- Installing: /usr/local/include/opencog/guile/SchemePrimitive.h
 -- Installing: /usr/local/include/opencog/guile/SchemeSmob.h
 -- Installing: /usr/local/share/opencog/scm/opencog.scm
-failed to create symbolic link '/usr/share/guile/site/2.0/opencog.scm': No such file or directory
 -- Installing: /usr/local/share/opencog/scm/opencog/base/apply.scm
 -- Installing: /usr/local/share/opencog/scm/opencog/base/atom-cache.scm
 -- Installing: /usr/local/share/opencog/scm/opencog/base/av-tv.scm
@@ -4967,22 +5000,22 @@ failed to create symbolic link '/usr/share/guile/site/2.0/opencog.scm': No such 
 -- Installing: /usr/local/lib/opencog/libatomspace-cwrapper.so
 -- Set runtime path of "/usr/local/lib/opencog/libatomspace-cwrapper.so" to "/usr/local/lib/opencog:/usr/local/lib/python2.7/dist-packages/opencog:/usr/local/lib"
 + DSTATUS=BUILDPASS
-+ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1710/builds/19/log OpenCOG_U1710_AtomSpace
++ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1710/builds/21/log OpenCOG_U1710_AtomSpace
 Already up-to-date.
-[master 071f6b0] OpenCOG_U1710_AtomSpace BUILDPASS
- 2 files changed, 536 insertions(+), 540 deletions(-)
+[master 2f0a272] OpenCOG_U1710_AtomSpace BUILDPASS
+ 3 files changed, 4985 insertions(+), 28 deletions(-)
 To git@github.com:edguy3/CenStatus.git
-   1b86213..071f6b0  master -> master
+   4af363d..2f0a272  master -> master
 + [ BUILDPASS = BUILDPASS ]
 + curl -X POST --insecure --netrc https://10.0.0.103:8480/job/OpenCOG_U1710_AtomSpace/build
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-[OpenCOG_U1710] $ /bin/sh -xe /tmp/jenkins5847912457245855433.sh
+[OpenCOG_U1710] $ /bin/sh -xe /tmp/jenkins6506090637314963328.sh
 + . build.docker/docker.env
-+ CID=84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a
-+ DKRUNROOT=docker exec --user root   84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a
-+ DKRUNUSER=docker exec --user jenkins  84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a
++ CID=f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443
++ DKRUNROOT=docker exec --user root   f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443
++ DKRUNUSER=docker exec --user jenkins  f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443
 + UID=125
 + GID=132
 + cat
@@ -4999,20 +5032,10 @@ To git@github.com:edguy3/CenStatus.git
 **********************************************************
 
 + WDIR=moses
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1710/builds/19/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1710/builds/21/log
 + cat
 + chmod +x dependencies/job1
-+ docker exec --user jenkins 84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a bash dependencies/job1
-+ pwd
-+ ls
-+ cd moses
-+ git branch
-+ git log
-+ head
-+ rm -fr build
-+ mkdir build
-+ cd build
-+ cmake -DCMAKE_BUILD_TYPE=Release ..
++ docker exec --user jenkins f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443 bash dependencies/job1
 /home/opencog
 atomspace
 cogutil
@@ -5033,6 +5056,16 @@ Date:   Tue Nov 14 08:36:20 2017 +0200
     Fix regex linkage
 
 commit 4f833b27771389ab08ca6da484d4b9ef1d9f0859
++ pwd
++ ls
++ cd moses
++ git branch
++ git log
++ head
++ rm -fr build
++ mkdir build
++ cd build
++ cmake -DCMAKE_BUILD_TYPE=Release ..
 CMake Deprecation Warning at CMakeLists.txt:17 (CMAKE_POLICY):
   The OLD behavior for policy CMP0005 will be removed from a future version
   of CMake.
@@ -5128,40 +5161,40 @@ The following components WILL NOT be built:
 -- Generating done
 -- Build files have been written to: /home/opencog/moses/build
 + make -j8
-Scanning dependencies of target feature-man
 Scanning dependencies of target combo-man
+Scanning dependencies of target feature-man
 Scanning dependencies of target moses-man
 [  0%] Generating eval-table.1.gz
-[  0%] Generating moses.1.gz
 [  0%] Generating feature-selection.1.gz
-Scanning dependencies of target feature_selection
+[  0%] Generating moses.1.gz
+[  0%] Built target feature-man
 [  0%] Built target combo-man
 [  0%] Built target moses-man
+Scanning dependencies of target feature_selection
 Scanning dependencies of target moses_exec
-[  0%] Built target feature-man
+[  1%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/deme_optimize.cc.o
+[  1%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/incremental.cc.o
 [  1%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/random.cc.o
 [  1%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/simple.cc.o
-[  1%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/stochastic_max_dependency.cc.o
-[  1%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/demo-problems.cc.o
-[  3%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/incremental.cc.o
-[  3%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/deme_optimize.cc.o
+[  1%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/scorers/moses_optim.cc.o
+[  3%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/algo/stochastic_max_dependency.cc.o
+[  3%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/demo-problems.cc.o
 Scanning dependencies of target comboreduct
-[  3%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/scorers/moses_optim.cc.o
 [  5%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/crutil/exception.cc.o
 [  5%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/action.cc.o
-[  7%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/main/feature-selection.cc.o
-[  7%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/problem.cc.o
-[  7%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/problem-params.cc.o
-[  9%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/action_symbol.cc.o
-[  9%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/assumption.cc.o
+[  9%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/definite_object.cc.o
+[  5%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/assumption.cc.o
 [  9%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/builtin_action.cc.o
-[ 11%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/definite_object.cc.o
+[  9%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/action_symbol.cc.o
+[  9%] Building CXX object moses/feature-selection/CMakeFiles/feature_selection.dir/main/feature-selection.cc.o
+[ 11%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/problem.cc.o
 [ 11%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/descriptions.cc.o
-[ 11%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/enum_type.cc.o
-[ 13%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/indefinite_object.cc.o
-[ 13%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/moses_exec.cc.o
-[ 15%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/moses_exec_def.cc.o
-[ 15%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/table-problems.cc.o
+[ 11%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/problem-params.cc.o
+[ 11%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/moses_exec.cc.o
+[ 13%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/moses_exec_def.cc.o
+[ 13%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/enum_type.cc.o
+[ 13%] Building CXX object moses/moses/main/CMakeFiles/moses_exec.dir/table-problems.cc.o
+[ 15%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/indefinite_object.cc.o
 [ 15%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/iostream_combo.cc.o
 [ 15%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/message.cc.o
 [ 17%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/perception.cc.o
@@ -5169,18 +5202,18 @@ Scanning dependencies of target comboreduct
 [ 17%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/procedure_repository.cc.o
 [ 19%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/similarity.cc.o
 [ 19%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/simple_nn.cc.o
-[ 21%] Linking CXX shared library libfeature_selection.so
-[ 21%] Built target feature_selection
-[ 21%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/vertex.cc.o
-[ 23%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/table/table.cc.o
-[ 23%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/table/table_io.cc.o
+[ 19%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/combo/vertex.cc.o
+[ 21%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/table/table.cc.o
+[ 21%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/table/table_io.cc.o
+[ 23%] Linking CXX shared library libfeature_selection.so
 [ 23%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/interpreter/interpreter.cc.o
 [ 25%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/interpreter/eval.cc.o
-[ 25%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/type_checker/type_tree_def.cc.o
-[ 25%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/type_checker/type_tree.cc.o
-[ 27%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/action_reduction.cc.o
-[ 29%] Linking CXX shared library libmoses_exec.so
-[ 29%] Built target moses_exec
+[ 27%] Linking CXX shared library libmoses_exec.so
+[ 27%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/type_checker/type_tree_def.cc.o
+[ 27%] Built target moses_exec
+[ 27%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/type_checker/type_tree.cc.o
+[ 27%] Built target feature_selection
+[ 29%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/action_reduction.cc.o
 [ 29%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/action_rules.cc.o
 [ 29%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/branch_rules.cc.o
 [ 31%] Building CXX object moses/comboreduct/CMakeFiles/comboreduct.dir/reduct/clean_reduction.cc.o
@@ -5203,26 +5236,26 @@ Scanning dependencies of target comboreduct
 [ 43%] Linking CXX shared library libcomboreduct.so
 [ 43%] Built target comboreduct
 Scanning dependencies of target comboant
-[ 45%] Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_perception.cc.o
-[ 45%] Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_builtin_action.cc.o
-[ 45%] Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_action_symbol.cc.o
-[ 47%] Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_indefinite_object.cc.o
 [ 47%] Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_combo_vocabulary.cc.o
+[ 47%] Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_builtin_action.cc.o
+[ 47%] Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_indefinite_object.cc.o
+[ 47%] Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_action_symbol.cc.o
+[ 47%] Building CXX object moses/comboreduct/CMakeFiles/comboant.dir/ant_combo_vocabulary/ant_perception.cc.o
 [ 47%] Linking CXX shared library libcomboant.so
 [ 47%] Built target comboant
-Scanning dependencies of target full-reductor
-Scanning dependencies of target tree_gen
 Scanning dependencies of target contin-reductor
+Scanning dependencies of target mixed-reductor
 Scanning dependencies of target gen-table
 Scanning dependencies of target combo-fmt-converter
-Scanning dependencies of target mixed-reductor
 Scanning dependencies of target logical-reductor
+Scanning dependencies of target tree_gen
+Scanning dependencies of target full-reductor
 Scanning dependencies of target action-reductor
-[ 49%] Building CXX object moses/comboreduct/main/CMakeFiles/full-reductor.dir/full-reductor.cc.o
+[ 49%] Building CXX object moses/comboreduct/main/CMakeFiles/mixed-reductor.dir/mixed-reductor.cc.o
 [ 49%] Building CXX object moses/comboreduct/main/CMakeFiles/contin-reductor.dir/contin-reductor.cc.o
+[ 49%] Building CXX object moses/comboreduct/main/CMakeFiles/gen-table.dir/gen-table.cc.o
 [ 49%] Building CXX object moses/comboreduct/main/CMakeFiles/tree_gen.dir/tree_gen.cc.o
-[ 50%] Building CXX object moses/comboreduct/main/CMakeFiles/gen-table.dir/gen-table.cc.o
-[ 50%] Building CXX object moses/comboreduct/main/CMakeFiles/mixed-reductor.dir/mixed-reductor.cc.o
+[ 50%] Building CXX object moses/comboreduct/main/CMakeFiles/full-reductor.dir/full-reductor.cc.o
 [ 52%] Building CXX object moses/comboreduct/main/CMakeFiles/combo-fmt-converter.dir/combo-fmt-converter.cc.o
 [ 54%] Building CXX object moses/comboreduct/main/CMakeFiles/logical-reductor.dir/logical-reductor.cc.o
 [ 54%] Building CXX object moses/comboreduct/main/CMakeFiles/action-reductor.dir/action-reductor.cc.o
@@ -5241,17 +5274,17 @@ Scanning dependencies of target tree-sim
 [ 56%] Linking CXX executable contin-reductor
 [ 56%] Built target contin-reductor
 [ 56%] Linking CXX executable mixed-reductor
+[ 56%] Built target mixed-reductor
+[ 56%] Linking CXX executable full-reductor
 Scanning dependencies of target gen-disj-conj
 [ 58%] Building CXX object moses/comboreduct/main/CMakeFiles/gen-disj-conj.dir/gen-disj-conj.cc.o
-[ 58%] Built target mixed-reductor
-[ 60%] Linking CXX executable action-reductor
 Scanning dependencies of target interactive-reductor
-[ 60%] Building CXX object moses/comboreduct/main/CMakeFiles/interactive-reductor.dir/interactive-reductor.cc.o
+[ 58%] Building CXX object moses/comboreduct/main/CMakeFiles/interactive-reductor.dir/interactive-reductor.cc.o
+[ 58%] Built target full-reductor
+[ 60%] Linking CXX executable action-reductor
 [ 60%] Built target action-reductor
 Scanning dependencies of target eval-table
 [ 60%] Building CXX object moses/comboreduct/main/CMakeFiles/eval-table.dir/eval-table.cc.o
-[ 60%] Linking CXX executable full-reductor
-[ 60%] Built target full-reductor
 [ 62%] Linking CXX executable gen-table
 [ 62%] Built target gen-table
 Scanning dependencies of target eval-features
@@ -5272,15 +5305,15 @@ Scanning dependencies of target moses
 [ 68%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/diversity.cc.o
 [ 68%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/domination.cc.o
 [ 68%] Linking CXX executable interactive-reductor
-[ 68%] Linking CXX executable eval-table
 [ 68%] Built target interactive-reductor
 [ 68%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/ensemble.cc.o
+[ 68%] Linking CXX executable eval-table
 [ 68%] Built target eval-table
 [ 70%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/merging.cc.o
 [ 70%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/metapopulation.cc.o
-[ 70%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/metapop_params.cc.o
 [ 72%] Linking CXX executable eval-features
 [ 72%] Built target eval-features
+[ 72%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/metapop_params.cc.o
 [ 74%] Building CXX object moses/moses/CMakeFiles/moses.dir/metapopulation/subsample.cc.o
 [ 74%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/complexity.cc.o
 [ 74%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/distributed_moses.cc.o
@@ -5289,8 +5322,8 @@ Scanning dependencies of target moses
 [ 76%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/mpi_moses.cc.o
 [ 78%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/neighborhood_sampling.cc.o
 [ 78%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/partial.cc.o
-[ 78%] Building CXX object moses/moses/CMakeFiles/moses.dir/optimization/hill-climbing.cc.o
 [ 80%] Building CXX object moses/moses/CMakeFiles/moses.dir/moses/types.cc.o
+[ 80%] Building CXX object moses/moses/CMakeFiles/moses.dir/optimization/hill-climbing.cc.o
 [ 80%] Building CXX object moses/moses/CMakeFiles/moses.dir/optimization/optimization.cc.o
 [ 82%] Building CXX object moses/moses/CMakeFiles/moses.dir/optimization/star-anneal.cc.o
 [ 82%] Building CXX object moses/moses/CMakeFiles/moses.dir/optimization/univariate.cc.o
@@ -5309,16 +5342,16 @@ Scanning dependencies of target moses
 [ 90%] Building CXX object moses/moses/CMakeFiles/moses.dir/scoring/select_bscore.cc.o
 [ 92%] Linking CXX shared library libmoses.so
 [ 92%] Built target moses
-[ 92%] Cythonizing pymoses.pyx
 Scanning dependencies of target moses-exec
+[ 92%] Cythonizing pymoses.pyx
 [ 94%] Building CXX object moses/moses/main/CMakeFiles/moses-exec.dir/moses-exec.cc.o
-Scanning dependencies of target eval-candidate-likelihood
-[ 94%] Building CXX object moses/moses/main/CMakeFiles/eval-candidate-likelihood.dir/eval-candidate-likelihood.cc.o
 Scanning dependencies of target eval-candidate
 Scanning dependencies of target eval-diversity
+Scanning dependencies of target eval-candidate-likelihood
 Scanning dependencies of target fs-main
 [ 94%] Building CXX object moses/moses/main/CMakeFiles/eval-candidate.dir/eval-candidate.cc.o
 [ 96%] Building CXX object moses/moses/main/CMakeFiles/eval-diversity.dir/eval-diversity.cc.o
+[ 96%] Building CXX object moses/moses/main/CMakeFiles/eval-candidate-likelihood.dir/eval-candidate-likelihood.cc.o
 [ 96%] Building CXX object moses/feature-selection/main/CMakeFiles/fs-main.dir/fs-main.cc.o
 [ 96%] Linking CXX executable moses
 [ 96%] Built target moses-exec
@@ -5328,12 +5361,12 @@ Scanning dependencies of target moses_cython
 [ 98%] Built target moses_cython
 [ 98%] Linking CXX executable eval-candidate-likelihood
 [ 98%] Built target eval-candidate-likelihood
+[ 98%] Linking CXX executable eval-diversity
 [100%] Linking CXX executable eval-candidate
-[100%] Built target eval-candidate
-[100%] Linking CXX executable eval-diversity
-[100%] Built target eval-diversity
 [100%] Linking CXX executable feature-selection
 [100%] Built target fs-main
+[100%] Built target eval-candidate
+[100%] Built target eval-diversity
 + sudo make install
 [ 31%] Built target comboreduct
 [ 35%] Built target comboant
@@ -5498,23 +5531,23 @@ Install the project...
 -- Set runtime path of "/usr/local/share/moses/python/moses/pymoses.so" to "/usr/local/lib/moses:/usr/local/lib"
 -- Installing: /usr/local/share/moses/python/moses/__init__.py
 + DSTATUS=BUILDPASS
-+ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1710/builds/19/log OpenCOG_U1710_Moses
++ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1710/builds/21/log OpenCOG_U1710_Moses
 Already up-to-date.
-[master 890dab8] OpenCOG_U1710_Moses BUILDPASS
- 3 files changed, 5505 insertions(+), 305 deletions(-)
+[master 02ff24d] OpenCOG_U1710_Moses BUILDPASS
+ 3 files changed, 5538 insertions(+), 304 deletions(-)
  rewrite jobs/OpenCOG_U1710_Moses.log (91%)
 To git@github.com:edguy3/CenStatus.git
-   071f6b0..890dab8  master -> master
+   2f0a272..02ff24d  master -> master
 + [ BUILDPASS = BUILDPASS ]
 + curl -X POST --insecure --netrc https://10.0.0.103:8480/job/OpenCOG_U1710_Moses/build
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-[OpenCOG_U1710] $ /bin/sh -xe /tmp/jenkins5155406272528994848.sh
+[OpenCOG_U1710] $ /bin/sh -xe /tmp/jenkins5083348102694936031.sh
 + . build.docker/docker.env
-+ CID=84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a
-+ DKRUNROOT=docker exec --user root   84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a
-+ DKRUNUSER=docker exec --user jenkins  84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a
++ CID=f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443
++ DKRUNROOT=docker exec --user root   f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443
++ DKRUNUSER=docker exec --user jenkins  f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443
 + UID=125
 + GID=132
 + cat
@@ -5531,12 +5564,10 @@ To git@github.com:edguy3/CenStatus.git
 **********************************************************
 
 + WDIR=opencog
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1710/builds/19/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1710/builds/21/log
 + cat
 + chmod +x dependencies/job1
-+ docker exec --user jenkins 84f38639fcf15b013413ecdd600882310c656d6b8f17772de500c8e2f3919d1a bash dependencies/job1
-+ pwd
-+ ls
++ docker exec --user jenkins f80b224414a56e416054d16e1cc48963e49277a42e4d647a6001e3cf02663443 bash dependencies/job1
 /home/opencog
 atomspace
 cogutil
@@ -5546,6 +5577,8 @@ guile-2.2.3.tar.gz
 moses
 octool
 opencog
++ pwd
++ ls
 + cd opencog
 + git branch
 * master
@@ -5669,6 +5702,7 @@ Installation instructions: https://casablanca.codeplex.com/
 -- ZeroMQ was found.
 -- Stack was not found. Haskell codes will not be built.
 -- The Haskell Tool Stack not found.
+failed to create symbolic link '/home/opencog/opencog/build/opencog/scm//opencog/learning/pattern-index.scm': No such file or directory
 CMake Warning at tests/python/CMakeLists.txt:15 (MESSAGE):
   Nosetests executable for testing Python modules not found.  Install with
   "sudo easy_install nose".
@@ -5710,96 +5744,95 @@ This warning is for project developers.  Use -Wno-dev to suppress it.
 -- Generating done
 -- Build files have been written to: /home/opencog/opencog/build
 + make -j8
-Scanning dependencies of target nlp_atom_types
 Scanning dependencies of target spacetime_atom_types
 Scanning dependencies of target patternminer_atom_types
+Scanning dependencies of target nlp_atom_types
 Scanning dependencies of target statistics
-Scanning dependencies of target blopex
 Scanning dependencies of target json_spirit
-[  0%] Generating opencog types
-[  0%] Generating opencog types
-[  0%] Generating opencog types
+Scanning dependencies of target blopex
+[  1%] Generating opencog types
 [  1%] Building CXX object opencog/learning/statistics/CMakeFiles/statistics.dir/InteractionInformation.cc.o
-Scanning dependencies of target xpatternminer
-[  1%] Building C object opencog/learning/clustering/blopex/CMakeFiles/blopex.dir/fortran_matrix.c.o
 [  1%] Building CXX object lib/json_spirit/CMakeFiles/json_spirit.dir/json_spirit_reader.cpp.o
+[  1%] Building C object opencog/learning/clustering/blopex/CMakeFiles/blopex.dir/fortran_matrix.c.o
+[  1%] Generating opencog types
+[  1%] Generating opencog types
+Scanning dependencies of target xpatternminer
+Scanning dependencies of target dimensionalembedding
 -- Atom type name: WordNode Word
+-- Atom type name: AnyNode Any
+-- Atom type name: WordClassNode WordClass
+-- Atom type name: ReferenceLink Reference
+-- Atom type name: ActionLink Action
 -- Atom type name: PatternVariableNode PatternVariable
 -- Atom type name: SpaceMapNode SpaceMap
--- Atom type name: AnyNode Any
-[  1%] Building CXX object opencog/learning/xpattern-miner/c++-based/CMakeFiles/xpatternminer.dir/XPatternMiner.cc.o
--- Atom type name: MinedPatternLink MinedPattern
--- Atom type name: ObjectNode Object
--- Atom type name: WordClassNode WordClass
--- Atom type name: BlockEntityNode BlockEntity
--- Atom type name: ReferenceLink Reference
--- Atom type name: EntityNode Entity
--- Atom type name: ActionLink Action
--- Atom type name: StructureNode Structure
 -- Atom type name: DocumentNode Document
+[  1%] Building CXX object opencog/learning/xpattern-miner/c++-based/CMakeFiles/xpatternminer.dir/XPatternMiner.cc.o
+-- Atom type name: ObjectNode Object
+-- Atom type name: MinedPatternLink MinedPattern
 -- Atom type name: SentenceNode Sentence
--- Atom type name: ImaginaryStructureNode ImaginaryStructure
+-- Atom type name: BlockEntityNode BlockEntity
 -- Atom type name: SentenceLink Sentence
-Scanning dependencies of target dimensionalembedding
--- Atom type name: AtLocationLink AtLocation
 -- Atom type name: ParseNode Parse
--- Atom type name: TimeNode Time
+-- Atom type name: EntityNode Entity
+[  2%] Building CXX object opencog/learning/dimensionalembedding/CMakeFiles/dimensionalembedding.dir/DimEmbedModule.cc.o
 -- Atom type name: ParseLink Parse
+-- Atom type name: StructureNode Structure
 -- Atom type name: WordInstanceNode WordInstance
+-- Atom type name: ImaginaryStructureNode ImaginaryStructure
 -- Atom type name: WordInstanceLink WordInstance
+-- Atom type name: AtLocationLink AtLocation
 -- Atom type name: UtteranceNode Utterance
--- Atom type name: TimeIntervalLink TimeInterval
+-- Atom type name: TimeNode Time
 -- Atom type name: DialogNode Dialog
+-- Atom type name: TimeIntervalLink TimeInterval
 -- Atom type name: PhraseNode Phrase
 -- Atom type name: TimeDomainNode TimeDomain
-[  2%] Building CXX object opencog/learning/dimensionalembedding/CMakeFiles/dimensionalembedding.dir/DimEmbedModule.cc.o
 -- Atom type name: SequenceLink Sequence
 -- Atom type name: AtTimeLink AtTime
--- Atom type name: LatestLink Latest
 -- Atom type name: WordSequenceLink WordSequence
+-- Atom type name: LatestLink Latest
 -- Atom type name: BeforeLink Before
 -- Atom type name: SentenceSequenceLink SentenceSequence
 -- Atom type name: OverlapsLink Overlaps
 -- Atom type name: DocumentSequenceLink DocumentSequence
--- Atom type name: DuringLink During
 -- Atom type name: FeatureNode Feature
--- Atom type name: MeetsLink Meets
+-- Atom type name: DuringLink During
 -- Atom type name: FeatureLink Feature
+-- Atom type name: MeetsLink Meets
+-- Atom type name: LinkGrammarRelationshipNode LinkGrammarRelationship
 -- Atom type name: StartsLink Starts
 -- Atom type name: FinishesLink Finishes
--- Atom type name: LinkGrammarRelationshipNode LinkGrammarRelationship
 -- Atom type name: EqualsLink Equals
 -- Atom type name: DefinedLinguisticConceptNode DefinedLinguisticConcept
 -- Atom type name: AfterLink After
-[  2%] Built target patternminer_atom_types
--- Atom type name: OverlappedByLink OverlappedBy
 -- Atom type name: DefinedLinguisticPredicateNode DefinedLinguisticPredicate
+-- Atom type name: OverlappedByLink OverlappedBy
 -- Atom type name: ContainsLink Contains
--- Atom type name: MetByLink MetBy
 -- Atom type name: DefinedLinguisticRelationshipNode DefinedLinguisticRelationship
--- Atom type name: StartedByLink StartedBy
+-- Atom type name: MetByLink MetBy
 -- Atom type name: PrepositionalRelationshipNode PrepositionalRelationship
+-- Atom type name: StartedByLink StartedBy
+[  2%] Built target patternminer_atom_types
 -- Atom type name: FinishedByLink FinishedBy
 -- Atom type name: WordSenseNode WordSense
--- Atom type name: PredictiveImplicationLink PredictiveImplication
 -- Atom type name: WordSenseLink WordSense
--- Atom type name: TailPredictiveImplicationLink TailPredictiveImplication
+-- Atom type name: PredictiveImplicationLink PredictiveImplication
 -- Atom type name: PartOfSpeechNode PartOfSpeech
+-- Atom type name: TailPredictiveImplicationLink TailPredictiveImplication
 -- Atom type name: PartOfSpeechLink PartOfSpeech
--- Atom type name: PredictiveAttractionLink PredictiveAttraction
-Scanning dependencies of target cogita
+[  4%] Building C object opencog/learning/clustering/blopex/CMakeFiles/blopex.dir/lobpcg.c.o
 -- Atom type name: LemmaNode Lemma
--- Atom type name: SimultaneousAndLink SimultaneousAnd
--- Custom atom type name specified: "EventualSequentialAND"
+-- Atom type name: PredictiveAttractionLink PredictiveAttraction
 -- Atom type name: LemmaLink Lemma
--- Atom type name: EventualSequentialAND EventualSequentialAND
--- Custom atom type name specified: "EventualSequentialImplication"
+-- Atom type name: SimultaneousAndLink SimultaneousAnd
 -- Atom type name: HolonymLink Holonym
--- Atom type name: EventualSequentialImplication EventualSequentialImplication
+-- Custom atom type name specified: "EventualSequentialAND"
+-- Atom type name: EventualSequentialAND EventualSequentialAND
 -- Atom type name: TenseNode Tense
+-- Custom atom type name specified: "EventualSequentialImplication"
+-- Atom type name: EventualSequentialImplication EventualSequentialImplication
 -- Atom type name: TenseLink Tense
 -- Atom type name: CosenseLink Cosense
-[  2%] Building CXX object opencog/nlp/irc/CMakeFiles/cogita.dir/CogitaConfig.cc.o
 -- Atom type name: SemeNode Seme
 -- Atom type name: SemanticRelationNode SemanticRelation
 -- Atom type name: InterpretationNode Interpretation
@@ -5816,229 +5849,228 @@ Scanning dependencies of target cogita
 -- Atom type name: LgSeq LgSeq
 -- Atom type name: LgAnd LgAnd
 -- Atom type name: LgOr LgOr
+[  4%] Built target spacetime_atom_types
 -- Atom type name: LgWordCset LgWordCset
 -- Atom type name: LgDisjunct LgDisjunct
 -- Atom type name: LgLinkInstanceNode LgLinkInstance
 -- Atom type name: LgLinkInstanceLink LgLinkInstance
 -- Atom type name: SetTypeLink SetType
 -- Atom type name: SetSizeLink SetSize
-[  2%] Built target spacetime_atom_types
-Scanning dependencies of target py-shell
-[  2%] Built target nlp_atom_types
-[  2%] Cythonizing agent_finder.pyx
-[  4%] Building CXX object opencog/cogserver/shell/CMakeFiles/py-shell.dir/GenericShell.cc.o
-[  4%] Linking CXX shared library libstatistics.so
-[  5%] Building C object opencog/learning/clustering/blopex/CMakeFiles/blopex.dir/lobpcg.c.o
-[  5%] Built target statistics
+Scanning dependencies of target cogita
+[  4%] Building CXX object opencog/nlp/irc/CMakeFiles/cogita.dir/CogitaConfig.cc.o
+[  4%] Built target nlp_atom_types
+[  5%] Building CXX object opencog/learning/xpattern-miner/c++-based/CMakeFiles/xpatternminer.dir/HandleTree.cc.o
 [  5%] Building C object opencog/learning/clustering/blopex/CMakeFiles/blopex.dir/multivector.c.o
-Scanning dependencies of target agent_finder
-[  7%] Building CXX object opencog/cython/opencog/CMakeFiles/agent_finder.dir/agent_finder.cpp.o
-[  8%] Building C object opencog/learning/clustering/blopex/CMakeFiles/blopex.dir/temp_multivector.c.o
+[  5%] Linking CXX shared library libstatistics.so
+Scanning dependencies of target spacetime-types
+[  7%] Building C object opencog/learning/clustering/blopex/CMakeFiles/blopex.dir/temp_multivector.c.o
+[  7%] Building CXX object opencog/spacetime/atom-types/CMakeFiles/spacetime-types.dir/atom_types_init.cc.o
+[  7%] Built target statistics
+Scanning dependencies of target py-shell
+[  8%] Building CXX object opencog/cogserver/shell/CMakeFiles/py-shell.dir/GenericShell.cc.o
+[  8%] Linking C shared library libblopex.so
 [ 10%] Building CXX object opencog/nlp/irc/CMakeFiles/cogita.dir/IRC.cc.o
-[ 10%] Building CXX object opencog/nlp/irc/CMakeFiles/cogita.dir/go-irc.cc.o
-[ 10%] Linking C shared library libblopex.so
 [ 10%] Built target blopex
+[ 10%] Building CXX object opencog/nlp/irc/CMakeFiles/cogita.dir/go-irc.cc.o
+[ 10%] Building CXX object opencog/learning/xpattern-miner/c++-based/CMakeFiles/xpatternminer.dir/Valuations.cc.o
+[ 11%] Building CXX object opencog/nlp/irc/CMakeFiles/cogita.dir/whirr-sockets.cc.o
+/home/opencog/opencog/opencog/learning/xpattern-miner/c++-based/XPatternMiner.cc: In member function 'unsigned int opencog::XPatternMiner::freq(const HandleSet&, int) const':
+/home/opencog/opencog/opencog/learning/xpattern-miner/c++-based/XPatternMiner.cc:310:19: warning: unused variable 'text' [-Wunused-variable]
+  for (const auto& text : texts) {
+                   ^~~~
+[ 11%] Linking CXX executable cogita
+[ 13%] Linking CXX shared library libspacetime-types.so
+[ 13%] Built target cogita
+[ 13%] Building CXX object opencog/cogserver/shell/CMakeFiles/py-shell.dir/PythonShell.cc.o
+[ 13%] Built target spacetime-types
+[ 13%] Cythonizing agent_finder.pyx
+[ 13%] Building CXX object lib/json_spirit/CMakeFiles/json_spirit.dir/json_spirit_value.cpp.o
+[ 13%] Building CXX object opencog/cogserver/shell/CMakeFiles/py-shell.dir/PythonShellModule.cc.o
+Scanning dependencies of target agent_finder
+[ 14%] Building CXX object opencog/cython/opencog/CMakeFiles/agent_finder.dir/agent_finder.cpp.o
+In file included from /home/opencog/opencog/lib/json_spirit/json_spirit_value.cpp:8:0:
+/home/opencog/opencog/lib/json_spirit/json_spirit_value.h:586:24: warning: 'std::__cxx11::string json_spirit::value_type_to_string(json_spirit::Value_type)' defined but not used [-Wunused-function]
+     static std::string value_type_to_string( const Value_type vtype )
+                        ^~~~~~~~~~~~~~~~~~~~
+[ 15%] Building CXX object lib/json_spirit/CMakeFiles/json_spirit.dir/json_spirit_writer.cpp.o
 Scanning dependencies of target attention_atom_types
-Scanning dependencies of target openpsi
-[ 10%] Generating opencog types
-[ 11%] Building CXX object opencog/openpsi/CMakeFiles/openpsi.dir/OpenPsiImplicator.cc.o
+[ 15%] Generating opencog types
 -- Atom type name: HebbianLink Hebbian
 -- Atom type name: AsymmetricHebbianLink AsymmetricHebbian
 -- Atom type name: SymmetricHebbianLink SymmetricHebbian
 -- Atom type name: InverseHebbianLink InverseHebbian
 -- Atom type name: SymmetricInverseHebbianLink SymmetricInverseHebbian
-[ 11%] Built target attention_atom_types
-[ 13%] Cythonizing statistics.pyx
-[ 14%] Building CXX object opencog/nlp/irc/CMakeFiles/cogita.dir/whirr-sockets.cc.o
-[ 14%] Linking CXX executable cogita
-[ 14%] Built target cogita
-Scanning dependencies of target dotty
-[ 15%] Building CXX object opencog/visualization/dotty/CMakeFiles/dotty.dir/DottyModule.cc.o
+[ 15%] Built target attention_atom_types
+Scanning dependencies of target openpsi
+[ 17%] Building CXX object opencog/openpsi/CMakeFiles/openpsi.dir/OpenPsiImplicator.cc.o
+[ 17%] Building CXX object opencog/openpsi/CMakeFiles/openpsi.dir/OpenPsiRules.cc.o
+[ 18%] Linking CXX static library libxpatternminer.a
+[ 18%] Built target xpatternminer
+[ 20%] Cythonizing statistics.pyx
+[ 21%] Linking CXX shared library libpy-shell.so
+[ 21%] Built target py-shell
+[ 23%] Building CXX object opencog/openpsi/CMakeFiles/openpsi.dir/OpenPsiSCM.cc.o
 Scanning dependencies of target statistics_cython
-[ 15%] Building CXX object opencog/cython/opencog/CMakeFiles/statistics_cython.dir/statistics.cpp.o
-/home/opencog/opencog/opencog/learning/xpattern-miner/c++-based/XPatternMiner.cc: In member function 'unsigned int opencog::XPatternMiner::freq(const HandleSet&, int) const':
-/home/opencog/opencog/opencog/learning/xpattern-miner/c++-based/XPatternMiner.cc:310:19: warning: unused variable 'text' [-Wunused-variable]
-  for (const auto& text : texts) {
-                   ^~~~
-[ 15%] Building CXX object opencog/cogserver/shell/CMakeFiles/py-shell.dir/PythonShell.cc.o
-[ 15%] Building CXX object opencog/openpsi/CMakeFiles/openpsi.dir/OpenPsiRules.cc.o
-[ 17%] Linking CXX shared library statistics.so
-[ 17%] Building CXX object opencog/cogserver/shell/CMakeFiles/py-shell.dir/PythonShellModule.cc.o
-[ 17%] Built target statistics_cython
-[ 18%] Building CXX object opencog/openpsi/CMakeFiles/openpsi.dir/OpenPsiSCM.cc.o
-[ 18%] Linking CXX shared library agent_finder.so
-[ 18%] Built target agent_finder
+[ 23%] Building CXX object opencog/cython/opencog/CMakeFiles/statistics_cython.dir/statistics.cpp.o
+Scanning dependencies of target dotty
+[ 24%] Building CXX object opencog/visualization/dotty/CMakeFiles/dotty.dir/DottyModule.cc.o
+[ 24%] Linking CXX shared library agent_finder.so
+[ 24%] Built target agent_finder
 Scanning dependencies of target serial_driver
-[ 18%] Building C object opencog/learning/clustering/blopex-demo/CMakeFiles/serial_driver.dir/multi_vector.c.o
-[ 20%] Building CXX object opencog/learning/xpattern-miner/c++-based/CMakeFiles/xpatternminer.dir/HandleTree.cc.o
-[ 21%] Building C object opencog/learning/clustering/blopex-demo/CMakeFiles/serial_driver.dir/pcg_multi.c.o
-[ 21%] Building C object opencog/learning/clustering/blopex-demo/CMakeFiles/serial_driver.dir/serial_driver.c.o
-[ 23%] Linking C executable serial_driver
-[ 23%] Built target serial_driver
+[ 24%] Building C object opencog/learning/clustering/blopex-demo/CMakeFiles/serial_driver.dir/multi_vector.c.o
+[ 26%] Building C object opencog/learning/clustering/blopex-demo/CMakeFiles/serial_driver.dir/pcg_multi.c.o
+[ 26%] Building C object opencog/learning/clustering/blopex-demo/CMakeFiles/serial_driver.dir/serial_driver.c.o
 Scanning dependencies of target patternminer-types
-[ 23%] Building CXX object opencog/learning/PatternMiner/types/CMakeFiles/patternminer-types.dir/PatternMinerTypes.cc.o
-[ 23%] Linking CXX shared library libdotty.so
-[ 23%] Built target dotty
+[ 26%] Building CXX object opencog/learning/PatternMiner/types/CMakeFiles/patternminer-types.dir/PatternMinerTypes.cc.o
+[ 27%] Linking C executable serial_driver
 Scanning dependencies of target patternindex
-[ 24%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/PatternIndexAPI.cc.o
-[ 26%] Linking CXX shared library libpatternminer-types.so
-[ 27%] Built target patternminer-types
+[ 28%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/PatternIndexAPI.cc.o
+[ 28%] Built target serial_driver
 Scanning dependencies of target nlp-types
-[ 27%] Building CXX object opencog/nlp/types/CMakeFiles/nlp-types.dir/NLPTypes.cc.o
-[ 27%] Building CXX object opencog/learning/xpattern-miner/c++-based/CMakeFiles/xpatternminer.dir/Valuations.cc.o
+[ 28%] Building CXX object opencog/nlp/types/CMakeFiles/nlp-types.dir/NLPTypes.cc.o
+[ 30%] Linking CXX shared library libpatternminer-types.so
+[ 30%] Linking CXX shared library libdimensionalembedding.so
+[ 31%] Built target patternminer-types
 Scanning dependencies of target wsd
-[ 28%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/EdgeThin.cc.o
-[ 30%] Linking CXX shared library libpy-shell.so
-[ 30%] Linking CXX shared library libopenpsi.so
-[ 31%] Linking CXX shared library libnlp-types.so
-[ 33%] Built target nlp-types
-[ 33%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/EdgeUtils.cc.o
-[ 33%] Linking CXX shared library libdimensionalembedding.so
-[ 33%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/Mihalcea.cc.o
-[ 33%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/PatternIndexSCM.cc.o
-[ 34%] Linking CXX static library libxpatternminer.a
-Scanning dependencies of target spacetime-types
-[ 34%] Building CXX object opencog/spacetime/atom-types/CMakeFiles/spacetime-types.dir/atom_types_init.cc.o
-[ 34%] Built target py-shell
-[ 34%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/TypeFrameIndex.cc.o
-[ 34%] Built target xpatternminer
-[ 34%] Built target dimensionalembedding
-[ 34%] Built target openpsi
-[ 36%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/TypeFrameIndexBuilder.cc.o
+[ 31%] Built target dimensionalembedding
 Scanning dependencies of target attention-types
-[ 36%] Building CXX object opencog/attention/CMakeFiles/attention-types.dir/atom_types_init.cc.o
-Scanning dependencies of target server
-[ 36%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/Agent.cc.o
-[ 37%] Linking CXX shared library libspacetime-types.so
-[ 39%] Linking CXX shared library libattention-types.so
-[ 39%] Built target spacetime-types
+[ 33%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/EdgeThin.cc.o
+[ 33%] Building CXX object opencog/attention/CMakeFiles/attention-types.dir/atom_types_init.cc.o
+[ 33%] Linking CXX shared library libopenpsi.so
+[ 33%] Built target openpsi
 Scanning dependencies of target PatternMiner
-[ 39%] Building CXX object opencog/learning/PatternMiner/CMakeFiles/PatternMiner.dir/HTree.cc.o
-[ 39%] Built target attention-types
-[ 40%] Building CXX object opencog/learning/PatternMiner/CMakeFiles/PatternMiner.dir/Parameters.cc.o
-[ 40%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/PatternHeap.cc.o
-[ 42%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/MihalceaEdge.cc.o
-[ 43%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/CombinationGenerator.cc.o
-[ 43%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/PartitionGenerator.cc.o
-[ 44%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/CartesianProductGenerator.cc.o
-[ 44%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/SCMLoader.cc.o
-[ 46%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/TypeFrame.cc.o
-[ 47%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/AgentRunnerBase.cc.o
-[ 47%] Building CXX object opencog/learning/PatternMiner/CMakeFiles/PatternMiner.dir/PatternMiner.cc.o
-[ 47%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/MihalceaLabel.cc.o
-[ 49%] Building CXX object opencog/learning/PatternMiner/CMakeFiles/PatternMiner.dir/PatternMinerBF.cc.o
-[ 49%] Building CXX object opencog/learning/PatternMiner/CMakeFiles/PatternMiner.dir/PatternMinerDF.cc.o
-[ 50%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/NNAdjust.cc.o
-[ 50%] Linking CXX shared library libpatternindex.so
+[ 33%] Building CXX object opencog/learning/PatternMiner/CMakeFiles/PatternMiner.dir/HTree.cc.o
+[ 34%] Linking CXX shared library libnlp-types.so
+[ 36%] Built target nlp-types
+[ 37%] Building CXX object opencog/learning/PatternMiner/CMakeFiles/PatternMiner.dir/Parameters.cc.o
+[ 39%] Linking CXX shared library statistics.so
+[ 39%] Built target statistics_cython
+[ 40%] Linking CXX shared library libattention-types.so
+Scanning dependencies of target server
+[ 40%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/Agent.cc.o
+[ 40%] Built target attention-types
+[ 42%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/AgentRunnerBase.cc.o
+[ 42%] Linking CXX shared library libdotty.so
+[ 42%] Built target dotty
+[ 42%] Building CXX object opencog/learning/PatternMiner/CMakeFiles/PatternMiner.dir/PatternMiner.cc.o
+[ 42%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/EdgeUtils.cc.o
+[ 43%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/PatternIndexSCM.cc.o
+[ 43%] Building CXX object opencog/learning/PatternMiner/CMakeFiles/PatternMiner.dir/PatternMinerBF.cc.o
+[ 43%] Building CXX object opencog/learning/PatternMiner/CMakeFiles/PatternMiner.dir/PatternMinerDF.cc.o
+[ 43%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/AgentRunnerThread.cc.o
+[ 44%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/BaseServer.cc.o
+[ 44%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/Mihalcea.cc.o
+[ 44%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/TypeFrameIndex.cc.o
 /home/opencog/opencog/opencog/learning/PatternMiner/PatternMiner.cc: In member function 'unsigned int opencog::PatternMining::PatternMiner::getCountOfAConnectedPattern(const string&, const HandleSeq&)':
 /home/opencog/opencog/opencog/learning/PatternMiner/PatternMiner.cc:1821:43: warning: self-comparison always evaluates to true [-Wtautological-compare]
              if (PATTERN_VARIABLENODE_TYPE == PATTERN_VARIABLE_NODE)
-[ 50%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/AgentRunnerThread.cc.o
-[ 50%] Built target patternindex
-[ 50%] Cythonizing cogserver_type_constructors.pyx
+[ 44%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/CogServer.cc.o
+[ 46%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/Request.cc.o
+[ 47%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/MihalceaEdge.cc.o
+[ 47%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/NetworkServer.cc.o
+[ 47%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/ServerSocket.cc.o
+[ 49%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/ConsoleSocket.cc.o
+[ 49%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/MihalceaLabel.cc.o
+[ 49%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/SystemActivityTable.cc.o
+[ 50%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/TypeFrameIndexBuilder.cc.o
+[ 50%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/PatternHeap.cc.o
+[ 52%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/CombinationGenerator.cc.o
+[ 53%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/NNAdjust.cc.o
+[ 53%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/ParseRank.cc.o
+[ 55%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/ReportRank.cc.o
+[ 55%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/PartitionGenerator.cc.o
+[ 56%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/CartesianProductGenerator.cc.o
+[ 57%] Linking CXX shared library libserver.so
+[ 57%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/SenseCache.cc.o
+[ 57%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/SCMLoader.cc.o
+[ 57%] Built target server
+[ 57%] Cythonizing cogserver_type_constructors.pyx
 Scanning dependencies of target cogserver_type_constructors
-[ 52%] Building CXX object opencog/cython/opencog/CMakeFiles/cogserver_type_constructors.dir/cogserver_type_constructors.cpp.o
-[ 52%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/ParseRank.cc.o
-[ 53%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/ReportRank.cc.o
-[ 55%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/BaseServer.cc.o
-[ 55%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/SenseCache.cc.o
-[ 55%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/CogServer.cc.o
-[ 56%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/Request.cc.o
-[ 56%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/NetworkServer.cc.o
-[ 56%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/ServerSocket.cc.o
-[ 57%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/ConsoleSocket.cc.o
-[ 59%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/SenseRank.cc.o
-[ 59%] Linking CXX shared library cogserver_type_constructors.so
-[ 59%] Built target cogserver_type_constructors
-[ 59%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/SenseSimilarityLCH.cc.o
-[ 59%] Building CXX object opencog/cogserver/server/CMakeFiles/server.dir/SystemActivityTable.cc.o
-[ 59%] Building CXX object lib/json_spirit/CMakeFiles/json_spirit.dir/json_spirit_value.cpp.o
-[ 60%] Building CXX object lib/json_spirit/CMakeFiles/json_spirit.dir/json_spirit_writer.cpp.o
+[ 59%] Building CXX object opencog/cython/opencog/CMakeFiles/cogserver_type_constructors.dir/cogserver_type_constructors.cpp.o
+[ 60%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/SenseRank.cc.o
+[ 60%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/SenseSimilarityLCH.cc.o
 [ 62%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/SenseSimilaritySQL.cc.o
 [ 62%] Building CXX object opencog/nlp/wsd/CMakeFiles/wsd.dir/Sweep.cc.o
-In file included from /home/opencog/opencog/lib/json_spirit/json_spirit_value.cpp:8:0:
-/home/opencog/opencog/lib/json_spirit/json_spirit_value.h:586:24: warning: 'std::__cxx11::string json_spirit::value_type_to_string(json_spirit::Value_type)' defined but not used [-Wunused-function]
-     static std::string value_type_to_string( const Value_type vtype )
-                        ^~~~~~~~~~~~~~~~~~~~
-Scanning dependencies of target patternIndexQueryExample
-[ 63%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternIndexQueryExample.dir/patternIndexQueryExample.cc.o
-Scanning dependencies of target patternIndexMiningExample
-[ 65%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternIndexMiningExample.dir/patternIndexMiningExample.cc.o
+[ 63%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternindex.dir/TypeFrame.cc.o
+Scanning dependencies of target adaptor-tulip
+[ 65%] Building CXX object opencog/visualization/tulip/CMakeFiles/adaptor-tulip.dir/TulipWriter.cc.o
 [ 66%] Linking CXX shared library libPatternMiner.so
-[ 68%] Linking CXX shared library libserver.so
-[ 68%] Built target PatternMiner
-[ 68%] Built target server
+[ 66%] Built target PatternMiner
 Scanning dependencies of target PatternMinerAgent
+[ 66%] Building CXX object opencog/learning/PatternMiner/CMakeFiles/PatternMinerAgent.dir/PatternMinerAgent.cc.o
 Scanning dependencies of target guile-patternminer
-[ 68%] Building CXX object opencog/learning/PatternMiner/CMakeFiles/PatternMinerAgent.dir/PatternMinerAgent.cc.o
-[ 68%] Building CXX object opencog/learning/PatternMiner/CMakeFiles/guile-patternminer.dir/PatternMinerSCM.cc.o
+[ 66%] Building CXX object opencog/learning/PatternMiner/CMakeFiles/guile-patternminer.dir/PatternMinerSCM.cc.o
+[ 68%] Linking CXX shared library libwsd.so
 Scanning dependencies of target scheme-shell
 [ 68%] Building CXX object opencog/cogserver/shell/CMakeFiles/scheme-shell.dir/GenericShell.cc.o
-[ 69%] Linking CXX shared library libwsd.so
-[ 69%] Linking CXX executable patternIndexQueryExample
-[ 69%] Built target wsd
-[ 69%] Built target patternIndexQueryExample
+[ 68%] Linking CXX shared library cogserver_type_constructors.so
+[ 68%] Linking CXX shared library libpatternindex.so
+[ 69%] Linking CXX shared library libPatternMinerAgent.so
+[ 69%] Built target cogserver_type_constructors
 [ 71%] Building CXX object opencog/cogserver/shell/CMakeFiles/scheme-shell.dir/SchemeShell.cc.o
+[ 71%] Built target wsd
 Scanning dependencies of target builtinreqs
+[ 71%] Built target PatternMinerAgent
 [ 72%] Building CXX object opencog/cogserver/server/CMakeFiles/builtinreqs.dir/BuiltinRequestsModule.cc.o
-[ 72%] Linking CXX executable patternIndexMiningExample
-[ 72%] Building CXX object opencog/cogserver/server/CMakeFiles/builtinreqs.dir/Request.cc.o
-[ 72%] Built target patternIndexMiningExample
 Scanning dependencies of target cogserver
+[ 72%] Built target patternindex
+[ 72%] Building CXX object opencog/cogserver/shell/CMakeFiles/scheme-shell.dir/SchemeShellModule.cc.o
 [ 73%] Building CXX object opencog/cogserver/server/CMakeFiles/cogserver.dir/CogServerMain.cc.o
-[ 73%] Building CXX object opencog/cogserver/shell/CMakeFiles/scheme-shell.dir/SchemeShellModule.cc.o
-[ 75%] Building CXX object opencog/cogserver/server/CMakeFiles/builtinreqs.dir/LoadModuleRequest.cc.o
-[ 76%] Linking CXX shared library libPatternMinerAgent.so
-[ 76%] Built target PatternMinerAgent
+[ 73%] Linking CXX static library libadaptor-tulip.a
+[ 73%] Built target adaptor-tulip
 Scanning dependencies of target guile-cogserver
-[ 76%] Building CXX object opencog/cogserver/server/CMakeFiles/guile-cogserver.dir/CogServerSCM.cc.o
+[ 73%] Building CXX object opencog/cogserver/server/CMakeFiles/guile-cogserver.dir/CogServerSCM.cc.o
 Scanning dependencies of target PythonModule
-[ 76%] Building CXX object opencog/cogserver/modules/python/CMakeFiles/PythonModule.dir/PythonModule.cc.o
-[ 78%] Linking CXX shared library libguile-patternminer.so
-[ 78%] Built target guile-patternminer
+[ 73%] Building CXX object opencog/cogserver/modules/python/CMakeFiles/PythonModule.dir/PythonModule.cc.o
+[ 75%] Building CXX object opencog/cogserver/modules/python/CMakeFiles/PythonModule.dir/PyMindAgent.cc.o
+[ 76%] Linking CXX shared library libscheme-shell.so
+[ 76%] Built target scheme-shell
 Scanning dependencies of target attention
-[ 79%] Building CXX object opencog/attention/CMakeFiles/attention.dir/AttentionParamQuery.cc.o
-[ 81%] Linking CXX shared library libscheme-shell.so
-[ 81%] Built target scheme-shell
-[ 82%] Cythonizing cogserver.pyx
+[ 78%] Building CXX object opencog/attention/CMakeFiles/attention.dir/AttentionParamQuery.cc.o
+[ 79%] Linking CXX shared library libguile-patternminer.so
+[ 79%] Built target guile-patternminer
+[ 81%] Cythonizing cogserver.pyx
 Scanning dependencies of target cogserver_cython
-[ 82%] Building CXX object opencog/cython/opencog/CMakeFiles/cogserver_cython.dir/cogserver.cpp.o
-[ 82%] Building CXX object opencog/cogserver/server/CMakeFiles/builtinreqs.dir/ListRequest.cc.o
-[ 84%] Building CXX object opencog/cogserver/server/CMakeFiles/builtinreqs.dir/ShutdownRequest.cc.o
-[ 84%] Linking CXX executable cogserver
-[ 84%] Built target cogserver
-Scanning dependencies of target adaptor-tulip
-[ 85%] Building CXX object opencog/visualization/tulip/CMakeFiles/adaptor-tulip.dir/TulipWriter.cc.o
-[ 86%] Linking CXX shared library libguile-cogserver.so
-[ 86%] Built target guile-cogserver
-[ 86%] Building CXX object opencog/attention/CMakeFiles/attention.dir/AttentionModule.cc.o
-[ 88%] Building CXX object opencog/attention/CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.o
+[ 81%] Building CXX object opencog/cython/opencog/CMakeFiles/cogserver_cython.dir/cogserver.cpp.o
+[ 81%] Linking CXX executable cogserver
+[ 81%] Built target cogserver
+[ 81%] Building CXX object opencog/cogserver/modules/python/CMakeFiles/PythonModule.dir/PyRequest.cc.o
+[ 81%] Building CXX object opencog/cogserver/server/CMakeFiles/builtinreqs.dir/Request.cc.o
+[ 82%] Linking CXX shared library libguile-cogserver.so
+[ 82%] Built target guile-cogserver
+[ 84%] Building CXX object opencog/cogserver/server/CMakeFiles/builtinreqs.dir/LoadModuleRequest.cc.o
+[ 84%] Linking CXX shared library libjson_spirit.so
+[ 84%] Building CXX object opencog/attention/CMakeFiles/attention.dir/AttentionModule.cc.o
+[ 85%] Building CXX object opencog/attention/CMakeFiles/attention.dir/ImportanceDiffusionBase.cc.o
+Scanning dependencies of target patternIndexQueryExample
+[ 86%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternIndexQueryExample.dir/patternIndexQueryExample.cc.o
+[ 88%] Linking CXX shared library cogserver.so
+[ 88%] Built target json_spirit
 [ 88%] Building CXX object opencog/attention/CMakeFiles/attention.dir/AFImportanceDiffusionAgent.cc.o
-[ 88%] Linking CXX shared library libjson_spirit.so
-[ 89%] Building CXX object opencog/cogserver/modules/python/CMakeFiles/PythonModule.dir/PyMindAgent.cc.o
-[ 91%] Linking CXX shared library cogserver.so
+[ 88%] Built target cogserver_cython
+[ 88%] Building CXX object opencog/cogserver/server/CMakeFiles/builtinreqs.dir/ListRequest.cc.o
+Scanning dependencies of target patternIndexMiningExample
+[ 89%] Building CXX object opencog/learning/pattern-index/CMakeFiles/patternIndexMiningExample.dir/patternIndexMiningExample.cc.o
+[ 89%] Linking CXX shared library libPythonModule.so
+[ 89%] Built target PythonModule
+[ 91%] Building CXX object opencog/cogserver/server/CMakeFiles/builtinreqs.dir/ShutdownRequest.cc.o
 [ 91%] Building CXX object opencog/cogserver/server/CMakeFiles/builtinreqs.dir/UnloadModuleRequest.cc.o
-[ 91%] Building CXX object opencog/attention/CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.o
-[ 92%] Building CXX object opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.o
-[ 92%] Linking CXX static library libadaptor-tulip.a
-[ 92%] Built target adaptor-tulip
-[ 94%] Building CXX object opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.o
-[ 94%] Built target cogserver_cython
-[ 94%] Building CXX object opencog/attention/CMakeFiles/attention.dir/WARentCollectionAgent.cc.o
-[ 94%] Built target json_spirit
-[ 95%] Building CXX object opencog/attention/CMakeFiles/attention.dir/ForgettingAgent.cc.o
-[ 95%] Building CXX object opencog/cogserver/modules/python/CMakeFiles/PythonModule.dir/PyRequest.cc.o
-[ 95%] Building CXX object opencog/cogserver/server/CMakeFiles/builtinreqs.dir/ListModulesRequest.cc.o
-[ 95%] Building CXX object opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.o
-[ 97%] Building CXX object opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.o
+[ 91%] Linking CXX executable patternIndexQueryExample
+[ 91%] Built target patternIndexQueryExample
 Scanning dependencies of target atomspacepublishermodule
-[ 98%] Building CXX object opencog/cogserver/modules/events/CMakeFiles/atomspacepublishermodule.dir/AtomSpacePublisherModule.cc.o
+[ 92%] Building CXX object opencog/cogserver/modules/events/CMakeFiles/atomspacepublishermodule.dir/AtomSpacePublisherModule.cc.o
+[ 92%] Linking CXX executable patternIndexMiningExample
+[ 92%] Built target patternIndexMiningExample
+[ 94%] Building CXX object opencog/attention/CMakeFiles/attention.dir/WAImportanceDiffusionAgent.cc.o
+[ 94%] Building CXX object opencog/attention/CMakeFiles/attention.dir/RentCollectionBaseAgent.cc.o
+[ 94%] Building CXX object opencog/cogserver/server/CMakeFiles/builtinreqs.dir/ListModulesRequest.cc.o
+[ 95%] Building CXX object opencog/attention/CMakeFiles/attention.dir/AFRentCollectionAgent.cc.o
+[ 95%] Building CXX object opencog/attention/CMakeFiles/attention.dir/WARentCollectionAgent.cc.o
+[ 97%] Building CXX object opencog/attention/CMakeFiles/attention.dir/ForgettingAgent.cc.o
+[ 97%] Building CXX object opencog/attention/CMakeFiles/attention.dir/HebbianCreationAgent.cc.o
+[ 98%] Building CXX object opencog/attention/CMakeFiles/attention.dir/HebbianUpdatingAgent.cc.o
 [100%] Linking CXX shared library libbuiltinreqs.so
 [100%] Built target builtinreqs
-[100%] Linking CXX shared library libPythonModule.so
-[100%] Built target PythonModule
-[100%] Linking CXX shared library libattention.so
-[100%] Built target attention
 In file included from /home/opencog/opencog/lib/json_spirit/json_spirit.h:13:0,
                  from /home/opencog/opencog/opencog/cogserver/modules/events/AtomSpacePublisherModule.cc:30:
 /home/opencog/opencog/lib/json_spirit/json_spirit_value.h:586:24: warning: 'std::__cxx11::string json_spirit::value_type_to_string(json_spirit::Value_type)' defined but not used [-Wunused-function]
@@ -6046,6 +6078,8 @@ In file included from /home/opencog/opencog/lib/json_spirit/json_spirit.h:13:0,
                         ^~~~~~~~~~~~~~~~~~~~
 [100%] Linking CXX shared library libatomspacepublishermodule.so
 [100%] Built target atomspacepublishermodule
+[100%] Linking CXX shared library libattention.so
+[100%] Built target attention
 + sudo make install
 [  1%] Built target json_spirit
 [  4%] Built target blopex
@@ -6367,20 +6401,20 @@ Install the project...
 -- Installing: /usr/local/lib/opencog/libdotty.so
 -- Set runtime path of "/usr/local/lib/opencog/libdotty.so" to "/usr/local/lib/opencog:/usr/local/lib/opencog//modules:/usr/local/lib"
 + DSTATUS=BUILDPASS
-+ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1710/builds/19/log OpenCOG_U1710_Opencog
++ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1710/builds/21/log OpenCOG_U1710_Opencog
 Already up-to-date.
-[master 8dda432] OpenCOG_U1710_Opencog BUILDPASS
- 3 files changed, 6374 insertions(+), 260 deletions(-)
- rewrite jobs/OpenCOG_U1710_Opencog.log (88%)
+[master fe51255] OpenCOG_U1710_Opencog BUILDPASS
+ 3 files changed, 6408 insertions(+), 259 deletions(-)
+ rewrite jobs/OpenCOG_U1710_Opencog.log (90%)
 To git@github.com:edguy3/CenStatus.git
-   890dab8..8dda432  master -> master
+   02ff24d..fe51255  master -> master
 + [ BUILDPASS = BUILDPASS ]
 + curl -X POST --insecure --netrc https://10.0.0.103:8480/job/OpenCOG_U1710_Opencog/build
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-[OpenCOG_U1710] $ /bin/sh -xe /tmp/jenkins8652945522704455229.sh
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1710/builds/19/log
+[OpenCOG_U1710] $ /bin/sh -xe /tmp/jenkins2720407694032350072.sh
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1710/builds/21/log
 + DSTATUS=BUILDPASSNOTEST
-+ /var/lib/jenkins/status/updateStatus BUILDPASSNOTEST /var/lib/jenkins/jobs/OpenCOG_U1710/builds/19/log OpenCOG_U1710__Core_Build
++ /var/lib/jenkins/status/updateStatus BUILDPASSNOTEST /var/lib/jenkins/jobs/OpenCOG_U1710/builds/21/log OpenCOG_U1710__Core_Build
 Already up-to-date.
