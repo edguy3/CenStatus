@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Sun Jan 28 22:47:53 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Sun Jan 28 22:50:31 EST 2018.
 
 ## Modules 
 
@@ -31,7 +31,7 @@ This file shows the status of public cen.ai tracked projects as of Sun Jan 28 22
 | [OpenCOG_U1710__Core_Build](jobs/OpenCOG_U1710__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 22:01 |
 | [OpenCOG_U1710_Guile](jobs/OpenCOG_U1710_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 21:56 |
 | [OpenCOG_U1710_Moses](jobs/OpenCOG_U1710_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 34 | 22:47 |  | 22:00  | 22:47 |
-| [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 19:46 | 22:01  | 22:01 |
+| [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [88% tests passed, 2 tests failed out of 17](#opencog_u1710_opencog) |  | 22:50 | 22:01  | 22:50 |
 
 ( Times are currently EST/EDT GMT-5/-4) 
 
@@ -76,6 +76,15 @@ See the log file at this link: [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_Atom
 ```
 
 See the log file at this link: [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) for more detail.
+
+
+###  OpenCOG_U1710_Opencog
+```
+ 2/17 Test  #2: AtomSpacePublisherModuleUTest ....***Exception: Other  5.19 sec
+ 6/17 Test  #6: MOSESPLNSynergyUTest .............***Failed    0.11 sec
+```
+
+See the log file at this link: [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Opencog.log) for more detail.
 
 
 ## Benchmarks
