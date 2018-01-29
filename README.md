@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Sun Jan 28 19:02:07 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Sun Jan 28 19:06:25 EST 2018.
 
 ## Modules 
 
@@ -20,7 +20,7 @@ This file shows the status of public cen.ai tracked projects as of Sun Jan 28 19
 | [OpenCOG_U1404_Guile](jobs/OpenCOG_U1404_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 17:37 |
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 18:19 | 2018-01-21 | 17:40  | 18:19 |
 | [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [80% tests passed, 5 tests failed out of 25](#opencog_u1404_opencog) |  | 18:23 | 17:41  | 18:23 |
-| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/TESTPASS.svg) | [98% tests passed, 2 tests failed out of 111](#opencog_u1604_atomspace) | 19:02 | 2018-01-27 | 18:56  | 19:02 |
+| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/TESTPASS.svg) | [99% tests passed, 1 tests failed out of 111](#opencog_u1604_atomspace) | 19:06 | 2018-01-27 | 18:56  | 19:06 |
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 18:59 | 2018-01-21 | 18:54  | 18:59 |
 | [OpenCOG_U1604__Core_Build](jobs/OpenCOG_U1604__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 18:59 |
 | [OpenCOG_U1604_Guile](jobs/OpenCOG_U1604_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 18:54 |
@@ -71,8 +71,7 @@ See the log file at this link: [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Openco
 
 ###  OpenCOG_U1604_AtomSpace
 ```
- 41/111 Test  #41: BasicSCMUTest ....................***Failed    0.19 sec
-111/111 Test #111: CythonGuile ......................***Exception: SegFault  0.21 sec
+111/111 Test #111: CythonGuile ......................***Exception: SegFault  0.25 sec
 ```
 
 See the log file at this link: [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) for more detail.
@@ -100,17 +99,17 @@ See the log file at this link: [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Openco
 
 ###  OpenCOG_U1604_AtomSpace
 ```
-Uptime:  00:01:53 up 4 days, 10:26,  0 users,  load average: 2.84, 4.06, 3.34
+Uptime:  00:06:11 up 4 days, 10:30,  0 users,  load average: 3.82, 3.70, 3.30
 
---- OpenCog Python Benchmark -  2018-01-29 00:01:53.543403 ---
+--- OpenCog Python Benchmark -  2018-01-29 00:06:11.570448 ---
 
 Test                                        Time per op  Ops per second
 ----                                        -----------  --------------
-Add nodes - Cython                              1.732µs         577,497
-Resolve Handle 100K - by type                   0.065µs      15,466,407
-Bind - bindlink - Cython                       14.238µs          70,234
-Test scheme_eval_h(+ 2 2)                      45.741µs          21,862
-Predicates - get_predicates                     1.587µs         630,121
+Add nodes - Cython                              1.749µs         571,681
+Resolve Handle 100K - by type                   0.064µs      15,672,024
+Bind - bindlink - Cython                       14.211µs          70,367
+Test scheme_eval_h(+ 2 2)                      47.835µs          20,905
+Predicates - get_predicates                     1.587µs         630,150
 
 
 ( This is not a dedicated machine)
