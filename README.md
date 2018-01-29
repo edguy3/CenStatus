@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Mon Jan 29 16:45:16 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Mon Jan 29 16:45:19 EST 2018.
 
 ## Modules 
 
@@ -28,7 +28,7 @@ This file shows the status of public cen.ai tracked projects as of Mon Jan 29 16
 | [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 00:14 | 16:37  | 16:37 |
 | [OpenCOG_U1710_AtomSpace](jobs/OpenCOG_U1710_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 00:16 | 2018-01-28 | 16:41  | 16:41 |
 | [OpenCOG_U1710_CogUtil](jobs/OpenCOG_U1710_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 00:14 |  | 16:40  | 16:40 |
-| [OpenCOG_U1710__Core_Build](jobs/OpenCOG_U1710__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 2018-01-28 |
+| [OpenCOG_U1710__Core_Build](jobs/OpenCOG_U1710__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 16:45 |
 | [OpenCOG_U1710_Guile](jobs/OpenCOG_U1710_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 16:40 |
 | [OpenCOG_U1710_Moses](jobs/OpenCOG_U1710_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 00:22 |  | 16:44  | 16:44 |
 | [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 00:24 | 16:45  | 16:45 |
