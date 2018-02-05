@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Mon Feb  5 11:17:47 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Mon Feb  5 11:18:40 EST 2018.
 
 ## Modules 
 
@@ -19,7 +19,7 @@ This file shows the status of public cen.ai tracked projects as of Mon Feb  5 11
 | [OpenCOG_U1404__Core_Build](jobs/OpenCOG_U1404__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 2018-01-29 |
 | [OpenCOG_U1404_Guile](jobs/OpenCOG_U1404_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 11:14 |
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-01-29 | 2018-01-21 | 11:17  | 11:17 |
-| [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [76% tests passed, 6 tests failed out of 25](#opencog_u1404_opencog) |  | 2018-01-29 | 2018-01-29  | 2018-01-29 |
+| [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 2018-01-29 | 11:18  | 11:18 |
 | [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/TESTPASS.svg) | [99% tests passed, 1 tests failed out of 111](#opencog_u1604_atomspace) | 2018-01-29 | 2018-01-27 | 2018-01-29  | 2018-01-29 |
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 2018-01-29 | 2018-01-21 | 2018-01-29  | 2018-01-29 |
 | [OpenCOG_U1604__Core_Build](jobs/OpenCOG_U1604__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 2018-01-29 |
@@ -36,19 +36,6 @@ This file shows the status of public cen.ai tracked projects as of Mon Feb  5 11
 ( Times are currently EST/EDT GMT-5/-4) 
 
 ## Error Detail
-
-
-###  OpenCOG_U1404_Opencog
-```
- 6/25 Test  #6: AtomOcTreeUTest ..................***Exception: SegFault  0.10 sec
- 7/25 Test  #7: TimeSpaceAtomUTest ...............***Exception: SegFault  0.07 sec
- 8/25 Test  #8: AnaphoraTest .....................***Exception: SegFault  1.24 sec
-10/25 Test #10: PLNRulesUTest ....................***Failed    2.49 sec
-14/25 Test #14: OpenPsiSCMUTest ..................***Failed    8.33 sec
-19/25 Test #19: RestApiTest ......................***Failed    0.22 sec
-```
-
-See the log file at this link: [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) for more detail.
 
 
 ###  OpenCOG_U1604_AtomSpace
