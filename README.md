@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Mon Feb  5 11:24:55 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Mon Feb  5 11:25:47 EST 2018.
 
 ## Modules 
 
@@ -25,7 +25,7 @@ This file shows the status of public cen.ai tracked projects as of Mon Feb  5 11
 | [OpenCOG_U1604__Core_Build](jobs/OpenCOG_U1604__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 2018-01-29 |
 | [OpenCOG_U1604_Guile](jobs/OpenCOG_U1604_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 11:21 |
 | [OpenCOG_U1604_Moses](jobs/OpenCOG_U1604_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-01-29 | 2018-01-21 | 11:24  | 11:24 |
-| [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [80% tests passed, 5 tests failed out of 25](#opencog_u1604_opencog) |  | 2018-01-29 | 2018-01-29  | 2018-01-29 |
+| [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 2018-01-29 | 11:25  | 11:25 |
 | [OpenCOG_U1710_AtomSpace](jobs/OpenCOG_U1710_AtomSpace.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 106 | 2018-01-29 | 2018-01-28 | 2018-01-29  | 2018-01-29 |
 | [OpenCOG_U1710_CogUtil](jobs/OpenCOG_U1710_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 2018-01-29 |  | 2018-01-29  | 2018-01-29 |
 | [OpenCOG_U1710__Core_Build](jobs/OpenCOG_U1710__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 2018-01-29 |
@@ -36,18 +36,6 @@ This file shows the status of public cen.ai tracked projects as of Mon Feb  5 11
 ( Times are currently EST/EDT GMT-5/-4) 
 
 ## Error Detail
-
-
-###  OpenCOG_U1604_Opencog
-```
- 2/25 Test  #2: AtomSpacePublisherModuleUTest ....***Exception: Other  5.14 sec
- 6/25 Test  #6: AtomOcTreeUTest ..................***Exception: SegFault  0.07 sec
- 7/25 Test  #7: TimeSpaceAtomUTest ...............***Exception: SegFault  0.07 sec
- 8/25 Test  #8: AnaphoraTest .....................***Exception: Other  0.32 sec
-19/25 Test #19: RestApiTest ......................***Failed    0.25 sec
-```
-
-See the log file at this link: [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) for more detail.
 
 
 ###  OpenCOG_U1710_Opencog
