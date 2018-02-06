@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Tue Feb  6 04:02:14 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Tue Feb  6 04:02:40 EST 2018.
 
 ## Modules 
 
@@ -20,7 +20,7 @@ This file shows the status of public cen.ai tracked projects as of Tue Feb  6 04
 | [OpenCOG_U1404_Guile](jobs/OpenCOG_U1404_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 03:26 |
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 04:01 | 2018-01-21 | 03:29  | 04:01 |
 | [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/BUILDFAIL.svg) |  |  | 2018-02-05 | 2018-02-05  | 03:30 |
-| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-02-05 | 2018-01-27 | 03:34  | 03:34 |
+| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/TESTPASS.svg) |  | 04:02 | 2018-01-27 | 03:34  | 04:02 |
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 04:02 | 2018-01-21 | 03:33  | 04:02 |
 | [OpenCOG_U1604__Core_Build](jobs/OpenCOG_U1604__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 2018-02-05 |
 | [OpenCOG_U1604_Guile](jobs/OpenCOG_U1604_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 03:33 |
@@ -39,6 +39,46 @@ This file shows the status of public cen.ai tracked projects as of Tue Feb  6 04
 
 
 ## Benchmarks
+
+
+###  OpenCOG_U1604_AtomSpace
+```
+Uptime:  09:02:25 up 12 days, 19:27,  0 users,  load average: 3.33, 3.95, 4.93
+
+--- OpenCog Python Benchmark -  2018-02-06 09:02:25.885195 ---
+
+Test                                        Time per op  Ops per second
+----                                        -----------  --------------
+Add nodes - Cython                              1.793µs         557,803
+Resolve Handle 100K - by type                   0.052µs      19,188,259
+Bind - bindlink - Cython                       14.415µs          69,370
+Test scheme_eval_h(+ 2 2)                      41.679µs          23,993
+Predicates - get_predicates                     1.549µs         645,778
+
+;;; note: auto-compilation is enabled, set GUILE_AUTO_COMPILE=0
+;;;       or pass the --no-auto-compile argument to disable.
+;;; compiling /home/opencog/atomspace/opencog/scm/opencog/base/core_types.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/atomspace/opencog/scm/opencog/base/core_types.scm.go
+;;; compiling /home/opencog/atomspace/build/opencog/atoms/base/core_types.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/atomspace/build/opencog/atoms/base/core_types.scm.go
+;;; compiling /home/opencog/atomspace/opencog/scm/opencog/base/core-docs.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/atomspace/opencog/scm/opencog/base/core-docs.scm.go
+;;; compiling /home/opencog/atomspace/opencog/scm/opencog/base/utilities.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/atomspace/opencog/scm/opencog/base/utilities.scm.go
+;;; compiling /home/opencog/atomspace/opencog/scm/opencog/base/apply.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/atomspace/opencog/scm/opencog/base/apply.scm.go
+;;; compiling /home/opencog/atomspace/opencog/scm/opencog/base/av-tv.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/atomspace/opencog/scm/opencog/base/av-tv.scm.go
+;;; compiling /home/opencog/atomspace/opencog/scm/opencog/base/file-utils.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/atomspace/opencog/scm/opencog/base/file-utils.scm.go
+;;; compiling /home/opencog/atomspace/opencog/scm/opencog/base/debug-trace.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/atomspace/opencog/scm/opencog/base/debug-trace.scm.go
+;;; compiling /home/opencog/atomspace/build/../opencog/scm/opencog/query.scm
+;;; compiled /home/jenkins/.cache/guile/ccache/2.0-LE-8-2.0/home/opencog/atomspace/opencog/scm/opencog/query.scm.go
+
+( This is not a dedicated machine)
+```
+
 
 
 ## Contributors
