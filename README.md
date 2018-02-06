@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Tue Feb  6 05:22:31 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Tue Feb  6 05:25:26 EST 2018.
 
 ## Modules 
 
@@ -25,7 +25,7 @@ This file shows the status of public cen.ai tracked projects as of Tue Feb  6 05
 | [OpenCOG_U1604__Core_Build](jobs/OpenCOG_U1604__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 04:42 |
 | [OpenCOG_U1604_Guile](jobs/OpenCOG_U1604_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 04:38 |
 | [OpenCOG_U1604_Moses](jobs/OpenCOG_U1604_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 05:22 | 2018-01-21 | 04:41  | 05:22 |
-| [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 2018-02-05 | 04:42  | 04:42 |
+| [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [85% tests passed, 4 tests failed out of 26](#opencog_u1604_opencog) |  | 05:25 | 04:42  | 05:25 |
 | [OpenCOG_U1710_AtomSpace](jobs/OpenCOG_U1710_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-02-05 | 04:09 | 04:46  | 04:46 |
 | [OpenCOG_U1710_CogUtil](jobs/OpenCOG_U1710_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 04:09 |  | 04:45  | 04:45 |
 | [OpenCOG_U1710__Core_Build](jobs/OpenCOG_U1710__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 04:50 |
@@ -64,6 +64,17 @@ See the log file at this link: [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Openco
 ```
 
 See the log file at this link: [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) for more detail.
+
+
+###  OpenCOG_U1604_Opencog
+```
+ 6/26 Test  #6: AtomOcTreeUTest ..................***Exception: SegFault  0.08 sec
+ 7/26 Test  #7: TimeSpaceAtomUTest ...............***Exception: SegFault  0.07 sec
+ 8/26 Test  #8: AnaphoraTest .....................***Exception: Other  0.32 sec
+19/26 Test #19: RestApiTest ......................***Failed    0.26 sec
+```
+
+See the log file at this link: [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) for more detail.
 
 
 ## Benchmarks
