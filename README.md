@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Tue Feb  6 06:59:16 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Tue Feb  6 07:02:11 EST 2018.
 
 ## Modules 
 
@@ -31,7 +31,7 @@ This file shows the status of public cen.ai tracked projects as of Tue Feb  6 06
 | [OpenCOG_U1710__Core_Build](jobs/OpenCOG_U1710__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 06:16 |
 | [OpenCOG_U1710_Guile](jobs/OpenCOG_U1710_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 06:10 |
 | [OpenCOG_U1710_Moses](jobs/OpenCOG_U1710_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 34 | 06:59 |  | 06:15  | 06:59 |
-| [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  | 05:36 | 2018-01-29 | 06:16  | 06:16 |
+| [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Opencog.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 18 | 07:02 | 2018-01-29 | 06:16  | 07:02 |
 
 ( Times are currently EST/EDT GMT-5/-4) 
 
