@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Wed Feb  7 12:00:16 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Wed Feb  7 12:01:31 EST 2018.
 
 ## Modules 
 
@@ -20,7 +20,7 @@ This file shows the status of public cen.ai tracked projects as of Wed Feb  7 12
 | [OpenCOG_U1404_Guile](jobs/OpenCOG_U1404_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 11:53 |
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 11:05 | 2018-01-21 | 11:56  | 11:56 |
 | [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 11:08 | 11:57  | 11:57 |
-| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/TESTPASS.svg) | [98% tests passed, 2 tests failed out of 112](#opencog_u1604_atomspace) | 11:10 | 2018-01-27 | 10:34  | 11:10 |
+| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 11:10 | 2018-01-27 | 12:01  | 12:01 |
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 11:08 | 2018-01-21 | 12:00  | 12:00 |
 | [OpenCOG_U1604__Core_Build](jobs/OpenCOG_U1604__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 10:37 |
 | [OpenCOG_U1604_Guile](jobs/OpenCOG_U1604_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 12:00 |
@@ -58,15 +58,6 @@ See the log file at this link: [OpenCOG_DebStab_AtomSpace](jobs/OpenCOG_DebStab_
 See the log file at this link: [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) for more detail.
 
 
-###  OpenCOG_U1604_AtomSpace
-```
- 25/112 Test  #25: PutLinkUTest .....................***Failed    0.38 sec
- 40/112 Test  #40: AttentionUTest ...................***Failed    0.01 sec
-```
-
-See the log file at this link: [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) for more detail.
-
-
 ###  OpenCOG_U1604_Opencog
 ```
  6/26 Test  #6: AtomOcTreeUTest ..................***Exception: SegFault  0.07 sec
@@ -89,26 +80,6 @@ See the log file at this link: [OpenCOG_U1710_AtomSpace](jobs/OpenCOG_U1710_Atom
 
 
 ## Benchmarks
-
-
-###  OpenCOG_U1604_AtomSpace
-```
-Uptime:  16:10:38 up 14 days,  2:35,  0 users,  load average: 5.08, 4.30, 4.95
-
---- OpenCog Python Benchmark -  2018-02-07 16:10:39.020922 ---
-
-Test                                        Time per op  Ops per second
-----                                        -----------  --------------
-Add nodes - Cython                              1.790µs         558,803
-Resolve Handle 100K - by type                   0.073µs      13,708,488
-Bind - bindlink - Cython                       14.497µs          68,977
-Test scheme_eval_h(+ 2 2)                      47.044µs          21,256
-Predicates - get_predicates                     1.590µs         628,919
-
-
-( This is not a dedicated machine)
-```
-
 
 
 ## Contributors
