@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Wed Feb  7 15:36:08 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Wed Feb  7 15:38:30 EST 2018.
 
 ## Modules 
 
@@ -20,7 +20,7 @@ This file shows the status of public cen.ai tracked projects as of Wed Feb  7 15
 | [OpenCOG_U1404_Guile](jobs/OpenCOG_U1404_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 14:53 |
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 15:32 | 2018-01-21 | 14:56  | 15:32 |
 | [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [81% tests passed, 5 tests failed out of 26](#opencog_u1404_opencog) |  | 15:35 | 14:57  | 15:35 |
-| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 14:11 | 2018-01-27 | 15:02  | 15:02 |
+| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/TESTPASS.svg) | [98% tests passed, 2 tests failed out of 112](#opencog_u1604_atomspace) | 15:38 | 2018-01-27 | 15:02  | 15:38 |
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 15:36 | 2018-01-21 | 15:00  | 15:36 |
 | [OpenCOG_U1604__Core_Build](jobs/OpenCOG_U1604__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 15:05 |
 | [OpenCOG_U1604_Guile](jobs/OpenCOG_U1604_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 15:00 |
@@ -59,7 +59,36 @@ See the log file at this link: [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_Atom
 See the log file at this link: [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) for more detail.
 
 
+###  OpenCOG_U1604_AtomSpace
+```
+ 25/112 Test  #25: PutLinkUTest .....................***Failed    0.44 sec
+ 40/112 Test  #40: AttentionUTest ...................***Failed    0.01 sec
+```
+
+See the log file at this link: [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) for more detail.
+
+
 ## Benchmarks
+
+
+###  OpenCOG_U1604_AtomSpace
+```
+Uptime:  20:38:16 up 14 days,  7:02,  0 users,  load average: 4.70, 4.09, 4.89
+
+--- OpenCog Python Benchmark -  2018-02-07 20:38:16.918162 ---
+
+Test                                        Time per op  Ops per second
+----                                        -----------  --------------
+Add nodes - Cython                              1.797µs         556,495
+Resolve Handle 100K - by type                   0.074µs      13,587,254
+Bind - bindlink - Cython                       14.695µs          68,048
+Test scheme_eval_h(+ 2 2)                      40.847µs          24,481
+Predicates - get_predicates                     1.585µs         630,765
+
+
+( This is not a dedicated machine)
+```
+
 
 
 ## Contributors
