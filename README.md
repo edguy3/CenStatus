@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Wed Feb  7 20:58:19 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Wed Feb  7 20:59:26 EST 2018.
 
 ## Modules 
 
@@ -14,7 +14,7 @@ This file shows the status of public cen.ai tracked projects as of Wed Feb  7 20
 | [OpenCOG_DebStab_Guile](jobs/OpenCOG_DebStab_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 20:04 |
 | [OpenCOG_DebStab_Moses](jobs/OpenCOG_DebStab_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 20:48 |  | 20:08  | 20:48 |
 | [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [63% tests passed, 6 tests failed out of 16](#opencog_debstab_opencog) |  | 20:49 | 20:09  | 20:49 |
-| [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | [97% tests passed, 3 tests failed out of 105](#opencog_u1404_atomspace) | 2018-02-05 | 20:12 | 19:41  | 20:12 |
+| [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-02-05 | 20:12 | 20:59  | 20:59 |
 | [OpenCOG_U1404_CogUtil](jobs/OpenCOG_U1404_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 20:09 | 2018-01-21 | 20:58  | 20:58 |
 | [OpenCOG_U1404__Core_Build](jobs/OpenCOG_U1404__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 19:44 |
 | [OpenCOG_U1404_Guile](jobs/OpenCOG_U1404_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 20:58 |
@@ -57,16 +57,6 @@ See the log file at this link: [OpenCOG_DebStab_AtomSpace](jobs/OpenCOG_DebStab_
 ```
 
 See the log file at this link: [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) for more detail.
-
-
-###  OpenCOG_U1404_AtomSpace
-```
- 25/105 Test  #25: PutLinkUTest .....................***Failed    0.73 sec
- 40/105 Test  #40: AttentionUTest ...................***Failed    0.01 sec
- 46/105 Test  #46: SCMExecutionOutputUTest ..........***Exception: Other  0.65 sec
-```
-
-See the log file at this link: [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) for more detail.
 
 
 ###  OpenCOG_U1404_Opencog
