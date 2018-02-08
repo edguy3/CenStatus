@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Wed Feb  7 20:08:41 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Wed Feb  7 20:09:34 EST 2018.
 
 ## Modules 
 
@@ -13,7 +13,7 @@ This file shows the status of public cen.ai tracked projects as of Wed Feb  7 20
 | [OpenCOG_DebStab__Core_Build](jobs/OpenCOG_DebStab__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-16  | 18:51 |
 | [OpenCOG_DebStab_Guile](jobs/OpenCOG_DebStab_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 20:04 |
 | [OpenCOG_DebStab_Moses](jobs/OpenCOG_DebStab_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 19:30 |  | 20:08  | 20:08 |
-| [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [63% tests passed, 6 tests failed out of 16](#opencog_debstab_opencog) |  | 19:31 | 18:51  | 19:31 |
+| [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 19:31 | 20:09  | 20:09 |
 | [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-02-05 | 18:54 | 19:41  | 19:41 |
 | [OpenCOG_U1404_CogUtil](jobs/OpenCOG_U1404_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 18:51 | 2018-01-21 | 19:40  | 19:40 |
 | [OpenCOG_U1404__Core_Build](jobs/OpenCOG_U1404__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 19:44 |
@@ -36,19 +36,6 @@ This file shows the status of public cen.ai tracked projects as of Wed Feb  7 20
 ( Times are currently EST/EDT GMT-5/-4) 
 
 ## Error Detail
-
-
-###  OpenCOG_DebStab_Opencog
-```
- 2/16 Test  #2: AtomSpacePublisherModuleUTest ....***Exception: SegFault  0.30 sec
- 3/16 Test  #3: CogServerUTest ...................***Exception: SegFault  0.26 sec
- 4/16 Test  #4: ShellUTest .......................***Exception: SegFault  0.26 sec
- 5/16 Test  #5: AgentUTest .......................***Exception: SegFault  0.26 sec
- 7/16 Test  #7: PLNRulesUTest ....................***Failed    1.77 sec
-11/16 Test #11: DimEmbedUTest ....................***Exception: SegFault  0.29 sec
-```
-
-See the log file at this link: [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) for more detail.
 
 
 ## Benchmarks
