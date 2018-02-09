@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Fri Feb  9 01:58:45 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Fri Feb  9 02:00:00 EST 2018.
 
 ## Modules 
 
@@ -20,7 +20,7 @@ This file shows the status of public cen.ai tracked projects as of Fri Feb  9 01
 | [OpenCOG_U1404_Guile](jobs/OpenCOG_U1404_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 01:51 |
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-02-08 | 2018-01-21 | 01:55  | 01:55 |
 | [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 2018-02-08 | 01:55  | 01:55 |
-| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/TESTPASS.svg) | [98% tests passed, 2 tests failed out of 105](#opencog_u1604_atomspace) | 2018-02-08 | 2018-01-27 | 2018-02-08  | 2018-02-08 |
+| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-02-08 | 2018-01-27 | 02:00  | 02:00 |
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-02-08 | 2018-01-21 | 01:58  | 01:58 |
 | [OpenCOG_U1604__Core_Build](jobs/OpenCOG_U1604__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 2018-02-08 |
 | [OpenCOG_U1604_Guile](jobs/OpenCOG_U1604_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 01:58 |
@@ -59,15 +59,6 @@ See the log file at this link: [OpenCOG_DebStab_AtomSpace](jobs/OpenCOG_DebStab_
 See the log file at this link: [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) for more detail.
 
 
-###  OpenCOG_U1604_AtomSpace
-```
- 25/105 Test  #25: PutLinkUTest .....................***Failed    0.44 sec
- 91/105 Test  #91: FirstNUTest ......................***Exception: Other  0.17 sec
-```
-
-See the log file at this link: [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) for more detail.
-
-
 ###  OpenCOG_U1604_Opencog
 ```
  2/18 Test  #2: AtomSpacePublisherModuleUTest ....***Exception: SegFault  0.14 sec
@@ -103,19 +94,6 @@ See the log file at this link: [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Openco
 
 
 ## Benchmarks
-
-
-###  OpenCOG_U1604_AtomSpace
-```
-Uptime:  12:48:51 up 14 days, 23:13,  0 users,  load average: 4.84, 4.60, 5.40
-Traceback (most recent call last):
-  File "../opencog/benchmark/benchmark.py", line 41, in <module>
-    from opencog.atomspace import AtomSpace, TruthValue, Atom, types
-ImportError: No module named opencog.atomspace
-
-( This is not a dedicated machine)
-```
-
 
 
 ## Contributors
