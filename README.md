@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Mon Feb 12 03:48:42 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Mon Feb 12 03:50:49 EST 2018.
 
 ## Modules 
 
@@ -26,7 +26,7 @@ This file shows the status of public cen.ai tracked projects as of Mon Feb 12 03
 | [OpenCOG_U1604_Guile](jobs/OpenCOG_U1604_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 03:03 |
 | [OpenCOG_U1604_Moses](jobs/OpenCOG_U1604_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 03:46 | 2018-01-21 | 03:07  | 03:46 |
 | [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [50% tests passed, 9 tests failed out of 18](#opencog_u1604_opencog) |  | 03:48 | 03:08  | 03:48 |
-| [OpenCOG_U1710_AtomSpace](jobs/OpenCOG_U1710_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-02-05 | 2018-02-09 | 03:11  | 03:11 |
+| [OpenCOG_U1710_AtomSpace](jobs/OpenCOG_U1710_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | [99% tests passed, 1 tests failed out of 105](#opencog_u1710_atomspace) | 2018-02-05 | 03:50 | 03:11  | 03:50 |
 | [OpenCOG_U1710_CogUtil](jobs/OpenCOG_U1710_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 03:48 |  | 03:10  | 03:48 |
 | [OpenCOG_U1710__Core_Build](jobs/OpenCOG_U1710__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 03:15 |
 | [OpenCOG_U1710_Guile](jobs/OpenCOG_U1710_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 03:10 |
@@ -87,6 +87,14 @@ See the log file at this link: [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_Atom
 ```
 
 See the log file at this link: [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) for more detail.
+
+
+###  OpenCOG_U1710_AtomSpace
+```
+ 40/105 Test  #40: AttentionUTest ...................***Failed    0.01 sec
+```
+
+See the log file at this link: [OpenCOG_U1710_AtomSpace](jobs/OpenCOG_U1710_AtomSpace.log) for more detail.
 
 
 ## Benchmarks
