@@ -1,6 +1,6 @@
 Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
 Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1404
-[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins4538351008967493082.sh
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins7558386486351609862.sh
 + pwd
 /var/lib/jenkins/workspace/OpenCOG_U1404
 + whoami
@@ -87,17 +87,17 @@ Successfully built 2c4eb650fc4d
 + CIDFILENAME=/tmp/OpenCOG_U1404.cid
 + [ -e /tmp/OpenCOG_U1404.cid ]
 + cat /tmp/OpenCOG_U1404.cid
-+ CID=fe2cd76cf8b3104595e0b0036ab55671bf57b6c79d95471e9072db8027fd7f77
-+ docker container kill fe2cd76cf8b3104595e0b0036ab55671bf57b6c79d95471e9072db8027fd7f77
-fe2cd76cf8b3104595e0b0036ab55671bf57b6c79d95471e9072db8027fd7f77
-+ docker container rm fe2cd76cf8b3104595e0b0036ab55671bf57b6c79d95471e9072db8027fd7f77
-fe2cd76cf8b3104595e0b0036ab55671bf57b6c79d95471e9072db8027fd7f77
++ CID=97787c758e707c3f17b0542a5d7b8069d9b515d02c787d48370a9a156079942c
++ docker container kill 97787c758e707c3f17b0542a5d7b8069d9b515d02c787d48370a9a156079942c
+97787c758e707c3f17b0542a5d7b8069d9b515d02c787d48370a9a156079942c
++ docker container rm 97787c758e707c3f17b0542a5d7b8069d9b515d02c787d48370a9a156079942c
+97787c758e707c3f17b0542a5d7b8069d9b515d02c787d48370a9a156079942c
 + rm -f /tmp/OpenCOG_U1404.cid
 + docker run --cidfile /tmp/OpenCOG_U1404.cid -v /var/lib/jenkins/workspace/OpenCOG_U1404/dependencies:/home/opencog/dependencies -w /home/opencog -d edguy/opencog:OpenCOG_U1404 tail -f /dev/null
-97787c758e707c3f17b0542a5d7b8069d9b515d02c787d48370a9a156079942c
+aa62dee47a55fe7aa44e76f1753a6f0bd5d12293d9afc812f29bf58636bd8e3b
 + cat /tmp/OpenCOG_U1404.cid
-+ CID=97787c758e707c3f17b0542a5d7b8069d9b515d02c787d48370a9a156079942c
-+ DKRUN=docker exec 97787c758e707c3f17b0542a5d7b8069d9b515d02c787d48370a9a156079942c 
++ CID=aa62dee47a55fe7aa44e76f1753a6f0bd5d12293d9afc812f29bf58636bd8e3b
++ DKRUN=docker exec aa62dee47a55fe7aa44e76f1753a6f0bd5d12293d9afc812f29bf58636bd8e3b 
 + grep jenkins /etc/passwd
 + awk -F: {print $3}
 + UID=125
@@ -105,11 +105,11 @@ fe2cd76cf8b3104595e0b0036ab55671bf57b6c79d95471e9072db8027fd7f77
 + awk -F: {print $4}
 + GID=132
 + cat
-[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins3230238018581702321.sh
+[OpenCOG_U1404] $ /bin/sh -xe /tmp/jenkins5730600775313752823.sh
 + . build.docker/docker.env
-+ CID=97787c758e707c3f17b0542a5d7b8069d9b515d02c787d48370a9a156079942c
-+ DKRUNROOT=docker exec --user root   97787c758e707c3f17b0542a5d7b8069d9b515d02c787d48370a9a156079942c
-+ DKRUNUSER=docker exec --user jenkins  97787c758e707c3f17b0542a5d7b8069d9b515d02c787d48370a9a156079942c
++ CID=aa62dee47a55fe7aa44e76f1753a6f0bd5d12293d9afc812f29bf58636bd8e3b
++ DKRUNROOT=docker exec --user root   aa62dee47a55fe7aa44e76f1753a6f0bd5d12293d9afc812f29bf58636bd8e3b
++ DKRUNUSER=docker exec --user jenkins  aa62dee47a55fe7aa44e76f1753a6f0bd5d12293d9afc812f29bf58636bd8e3b
 + UID=125
 + GID=132
 + cat
@@ -127,32 +127,32 @@ fe2cd76cf8b3104595e0b0036ab55671bf57b6c79d95471e9072db8027fd7f77
 
 + cat
 + chmod +x dependencies/job1
-+ docker exec --user jenkins 97787c758e707c3f17b0542a5d7b8069d9b515d02c787d48370a9a156079942c bash dependencies/job1
++ docker exec --user jenkins aa62dee47a55fe7aa44e76f1753a6f0bd5d12293d9afc812f29bf58636bd8e3b bash dependencies/job1
 + wget http://raw.github.com/opencog/ocpkg/master/ocpkg -O octool
---2018-02-12 09:08:34--  http://raw.github.com/opencog/ocpkg/master/ocpkg
+--2018-02-12 22:18:12--  http://raw.github.com/opencog/ocpkg/master/ocpkg
 Resolving raw.github.com (raw.github.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
 Connecting to raw.github.com (raw.github.com)|151.101.0.133|:80... connected.
 HTTP request sent, awaiting response... 301 Moved Permanently
 Location: https://raw.github.com/opencog/ocpkg/master/ocpkg [following]
---2018-02-12 09:08:34--  https://raw.github.com/opencog/ocpkg/master/ocpkg
+--2018-02-12 22:18:12--  https://raw.github.com/opencog/ocpkg/master/ocpkg
 Connecting to raw.github.com (raw.github.com)|151.101.0.133|:443... connected.
 HTTP request sent, awaiting response... 301 Moved Permanently
 Location: https://raw.githubusercontent.com/opencog/ocpkg/master/ocpkg [following]
---2018-02-12 09:08:34--  https://raw.githubusercontent.com/opencog/ocpkg/master/ocpkg
+--2018-02-12 22:18:12--  https://raw.githubusercontent.com/opencog/ocpkg/master/ocpkg
 Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
 Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 39081 (38K) [text/plain]
 Saving to: 'octool'
 
-     0K .......... .......... .......... ........             100% 1.79M=0.02s
+     0K .......... .......... .......... ........             100% 1.85M=0.02s
 
-2018-02-12 09:08:34 (1.79 MB/s) - 'octool' saved [39081/39081]
+2018-02-12 22:18:12 (1.85 MB/s) - 'octool' saved [39081/39081]
 
 + chmod +rx octool
 + ./octool -rdp
 [1;34m[octool] Adding software repositories...[0m
-Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --homedir /tmp/tmp.mBIu4bgETM --no-auto-check-trustdb --trust-model always --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+Executing: gpg --ignore-time-conflict --no-options --no-default-keyring --homedir /tmp/tmp.FY2W26JDv1 --no-auto-check-trustdb --trust-model always --keyring /etc/apt/trusted.gpg --primary-keyring /etc/apt/trusted.gpg --keyserver hkp://ha.pool.sks-keyservers.net:80 --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
 gpg: requesting key B01FA116 from hkp server ha.pool.sks-keyservers.net
 gpg: key B01FA116: "ROS Builder <rosbuild@ros.org>" not changed
 gpg: Total number processed: 1
@@ -165,14 +165,14 @@ Get:3 http://packages.ros.org trusty InRelease [4031 B]
 Hit http://archive.ubuntu.com trusty Release.gpg
 Hit http://archive.ubuntu.com trusty Release
 Get:4 http://security.ubuntu.com trusty-security/universe Sources [82.5 kB]
-Get:5 http://security.ubuntu.com trusty-security/main amd64 Packages [881 kB]
-Get:6 http://archive.ubuntu.com trusty-updates/universe Sources [248 kB]
-Get:7 http://security.ubuntu.com trusty-security/restricted amd64 Packages [18.1 kB]
-Get:8 http://security.ubuntu.com trusty-security/universe amd64 Packages [258 kB]
+Get:5 http://security.ubuntu.com trusty-security/main amd64 Packages [882 kB]
+Get:6 http://security.ubuntu.com trusty-security/restricted amd64 Packages [18.1 kB]
+Get:7 http://security.ubuntu.com trusty-security/universe amd64 Packages [258 kB]
+Get:8 http://archive.ubuntu.com trusty-updates/universe Sources [248 kB]
 Get:9 http://security.ubuntu.com trusty-security/multiverse amd64 Packages [4723 B]
-Get:10 http://archive.ubuntu.com trusty-updates/main amd64 Packages [1311 kB]
+Get:10 http://archive.ubuntu.com trusty-updates/main amd64 Packages [1312 kB]
 Get:11 http://archive.ubuntu.com trusty-updates/restricted amd64 Packages [21.4 kB]
-Get:12 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [570 kB]
+Get:12 http://archive.ubuntu.com trusty-updates/universe amd64 Packages [571 kB]
 Get:13 http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages [16.0 kB]
 Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
 Get:14 http://packages.ros.org trusty/main amd64 Packages [844 kB]
@@ -184,7 +184,7 @@ Hit http://archive.ubuntu.com trusty/main amd64 Packages
 Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
 Hit http://archive.ubuntu.com trusty/universe amd64 Packages
 Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
-Fetched 4391 kB in 5s (778 kB/s)
+Fetched 4393 kB in 5s (763 kB/s)
 Reading package lists...
 W: Size of file /var/lib/apt/lists/archive.ubuntu.com_ubuntu_dists_trusty-updates_multiverse_binary-amd64_Packages.gz is not what the server reported 16003 16007
 [1;34m[octool] Installing OpenCog build dependencies....[0m
@@ -242,54 +242,54 @@ Skipping postgresql-client, it is already installed and upgrade is not set.
 Skipping uuid-dev, it is already installed and upgrade is not set.
 Skipping python-pip, it is already installed and upgrade is not set.
 Skipping ros-indigo-octomap, it is already installed and upgrade is not set.
-0 upgraded, 0 newly installed, 0 to remove and 10 not upgraded.
+0 upgraded, 0 newly installed, 0 to remove and 11 not upgraded.
 [1;34m[octool] Installing cpprest....[0m
---2018-02-12 09:08:54--  https://github.com/Microsoft/cpprestsdk/archive/v2.9.0.tar.gz
+--2018-02-12 22:18:31--  https://github.com/Microsoft/cpprestsdk/archive/v2.9.0.tar.gz
 Resolving github.com (github.com)... 192.30.253.112, 192.30.253.113
 Connecting to github.com (github.com)|192.30.253.112|:443... connected.
 HTTP request sent, awaiting response... 302 Found
 Location: https://codeload.github.com/Microsoft/cpprestsdk/tar.gz/v2.9.0 [following]
---2018-02-12 09:08:54--  https://codeload.github.com/Microsoft/cpprestsdk/tar.gz/v2.9.0
+--2018-02-12 22:18:32--  https://codeload.github.com/Microsoft/cpprestsdk/tar.gz/v2.9.0
 Resolving codeload.github.com (codeload.github.com)... 192.30.253.121, 192.30.253.120
 Connecting to codeload.github.com (codeload.github.com)|192.30.253.121|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: unspecified [application/x-gzip]
 Saving to: 'v2.9.0.tar.gz'
 
-     0K .......... .......... .......... .......... .......... 1.44M
-    50K .......... .......... .......... .......... .......... 3.03M
-   100K .......... .......... .......... .......... .......... 11.0M
-   150K .......... .......... .......... .......... .......... 1.98M
-   200K .......... .......... .......... .......... .......... 29.7M
-   250K .......... .......... .......... .......... .......... 3.40M
-   300K .......... .......... .......... .......... .......... 9.62M
-   350K .......... .......... .......... .......... .......... 22.2M
-   400K .......... .......... .......... .......... .......... 39.9M
-   450K .......... .......... .......... .......... .......... 6.64M
-   500K .......... .......... .......... .......... .......... 4.33M
-   550K .......... .......... .......... .......... .......... 11.0M
-   600K .......... .......... .......... .......... .......... 11.1M
-   650K .......... .......... .......... .......... .......... 7.71M
-   700K .......... .......... .......... .......... .......... 7.55M
-   750K .......... .......... .......... .......... .......... 10.6M
-   800K .......... .......... .......... .......... .......... 7.60M
-   850K .......... .......... .......... .......... .......... 9.18M
-   900K .......... .......... .......... .......... .......... 9.94M
-   950K .......... .......... .......... .......... .......... 10.4M
-  1000K .......... .......... .......... .......... .......... 7.37M
-  1050K .......... .......... .......... .......... .......... 9.38M
-  1100K .......... .......... .......... .......... .......... 10.2M
-  1150K .......... .......... .......... .......... .......... 6.88M
-  1200K .......... .......... .......... .......... .......... 11.4M
-  1250K .......... .......... .......... .......... .......... 8.83M
-  1300K .......... .......... .......... .......... .......... 8.77M
-  1350K .......... .......... .......... .......... .......... 7.10M
-  1400K .......... .......... .......... .......... .......... 14.1M
-  1450K .......... .......... .......... .......... .......... 9.34M
-  1500K .......... .......... .......... .......... .......... 6.74M
-  1550K .......... .......... ........                         10.5M=0.2s
+     0K .......... .......... .......... .......... .......... 1.31M
+    50K .......... .......... .......... .......... .......... 3.13M
+   100K .......... .......... .......... .......... .......... 10.7M
+   150K .......... .......... .......... .......... .......... 1.49M
+   200K .......... .......... .......... .......... .......... 35.8M
+   250K .......... .......... .......... .......... .......... 7.63M
+   300K .......... .......... .......... .......... .......... 12.1M
+   350K .......... .......... .......... .......... .......... 28.9M
+   400K .......... .......... .......... .......... .......... 4.87M
+   450K .......... .......... .......... .......... .......... 11.1M
+   500K .......... .......... .......... .......... .......... 3.37M
+   550K .......... .......... .......... .......... .......... 11.4M
+   600K .......... .......... .......... .......... .......... 12.7M
+   650K .......... .......... .......... .......... .......... 2.06M
+   700K .......... .......... .......... .......... .......... 28.6M
+   750K .......... .......... .......... .......... .......... 25.9M
+   800K .......... .......... .......... .......... .......... 2.54M
+   850K .......... .......... .......... .......... .......... 12.0M
+   900K .......... .......... .......... .......... .......... 1.50M
+   950K .......... .......... .......... .......... .......... 22.9M
+  1000K .......... .......... .......... .......... .......... 27.6M
+  1050K .......... .......... .......... .......... .......... 2.85M
+  1100K .......... .......... .......... .......... .......... 12.1M
+  1150K .......... .......... .......... .......... .......... 3.35M
+  1200K .......... .......... .......... .......... .......... 3.64M
+  1250K .......... .......... .......... .......... .......... 3.39M
+  1300K .......... .......... .......... .......... .......... 10.6M
+  1350K .......... .......... .......... .......... .......... 3.32M
+  1400K .......... .......... .......... .......... .......... 3.42M
+  1450K .......... .......... .......... .......... .......... 6.22M
+  1500K .......... .......... .......... .......... .......... 4.54M
+  1550K .......... .......... ........                         2.48M=0.4s
 
-2018-02-12 09:08:54 (6.57 MB/s) - 'v2.9.0.tar.gz' saved [1616575]
+2018-02-12 22:18:32 (4.34 MB/s) - 'v2.9.0.tar.gz' saved [1616575]
 
 cpprestsdk-2.9.0/
 cpprestsdk-2.9.0/.gitignore
@@ -1533,81 +1533,81 @@ cpprestsdk-2.9.0/setup_ps_env_VS2015.ps1
 -- Generating done
 -- Build files have been written to: /tmp/cpprestsdk-2.9.0/Release/build.release
 Scanning dependencies of target unittestpp
-[  2%] [  3%] [  3%] [  3%] [  3%] [  4%] [  5%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/CompositeTestReporter.cpp.o
-Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/DeferredTestReporter.cpp.o
+[  0%] [  2%] [  2%] [  3%] [  3%] [  4%] [  5%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/AssertException.cpp.o
 Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/CurrentTest.cpp.o
+Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/CompositeTestReporter.cpp.o
+Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/DeferredTestReporter.cpp.o
 Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/DeferredTestResult.cpp.o
-Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/AssertException.cpp.o
 Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/GlobalSettings.cpp.o
 Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/MemoryOutStream.cpp.o
 Scanning dependencies of target cpprest
 [  5%] Building CXX object src/CMakeFiles/cpprest.dir/http/client/http_client.cpp.o
-[  6%] [  6%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/ReportAssert.cpp.o
+[  5%] [  6%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/ReportAssert.cpp.o
 Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/Test.cpp.o
-[  7%] [  8%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestDetails.cpp.o
-Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestList.cpp.o
+[  7%] [  8%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestList.cpp.o
+Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestDetails.cpp.o
 [  8%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestReporter.cpp.o
-[  9%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestReporterStdout.cpp.o
-[ 10%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestResults.cpp.o
-[ 10%] [ 11%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestRunner.cpp.o
-Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/XmlTestReporter.cpp.o
-[ 12%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/Posix/SignalTranslator.cpp.o
-[ 13%] [ 14%] [ 15%] Building CXX object src/CMakeFiles/cpprest.dir/http/client/http_client_msg.cpp.o
-Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/Posix/TimeHelpers.cpp.o
-Building CXX object src/CMakeFiles/cpprest.dir/http/client/x509_cert_utilities.cpp.o
-[ 16%] Building CXX object src/CMakeFiles/cpprest.dir/http/common/http_helpers.cpp.o
+[  9%] Building CXX object src/CMakeFiles/cpprest.dir/http/client/http_client_msg.cpp.o
+[ 10%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestReporterStdout.cpp.o
+[ 11%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestResults.cpp.o
+[ 11%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/TestRunner.cpp.o
+[ 12%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/XmlTestReporter.cpp.o
+[ 13%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/Posix/SignalTranslator.cpp.o
+[ 14%] Building CXX object src/CMakeFiles/cpprest.dir/http/client/x509_cert_utilities.cpp.o
+[ 15%] Building CXX object src/CMakeFiles/cpprest.dir/http/common/http_helpers.cpp.o
+[ 16%] Building CXX object tests/common/UnitTestpp/CMakeFiles/unittestpp.dir/src/Posix/TimeHelpers.cpp.o
 [ 16%] Building CXX object src/CMakeFiles/cpprest.dir/http/common/http_msg.cpp.o
 [ 17%] Building CXX object src/CMakeFiles/cpprest.dir/http/listener/http_listener.cpp.o
 [ 18%] Building CXX object src/CMakeFiles/cpprest.dir/http/listener/http_listener_msg.cpp.o
 Linking CXX shared library ../../../Binaries/libunittestpp.so
 [ 18%] Built target unittestpp
+[ 18%] Building CXX object src/CMakeFiles/cpprest.dir/http/listener/http_server_api.cpp.o
+[ 19%] Building CXX object src/CMakeFiles/cpprest.dir/http/oauth/oauth1.cpp.o
+[ 20%] Building CXX object src/CMakeFiles/cpprest.dir/http/oauth/oauth2.cpp.o
+[ 21%] Building CXX object src/CMakeFiles/cpprest.dir/json/json.cpp.o
+[ 21%] Building CXX object src/CMakeFiles/cpprest.dir/json/json_parsing.cpp.o
+[ 22%] Building CXX object src/CMakeFiles/cpprest.dir/json/json_serialization.cpp.o
+[ 23%] Building CXX object src/CMakeFiles/cpprest.dir/pplx/pplx.cpp.o
+[ 23%] Building CXX object src/CMakeFiles/cpprest.dir/uri/uri.cpp.o
+[ 24%] Building CXX object src/CMakeFiles/cpprest.dir/uri/uri_builder.cpp.o
+[ 25%] Building CXX object src/CMakeFiles/cpprest.dir/uri/uri_parser.cpp.o
+[ 26%] Building CXX object src/CMakeFiles/cpprest.dir/utilities/asyncrt_utils.cpp.o
+[ 26%] Building CXX object src/CMakeFiles/cpprest.dir/utilities/base64.cpp.o
+[ 27%] Building CXX object src/CMakeFiles/cpprest.dir/utilities/web_utilities.cpp.o
+[ 28%] Building CXX object src/CMakeFiles/cpprest.dir/websockets/client/ws_msg.cpp.o
+[ 28%] Building CXX object src/CMakeFiles/cpprest.dir/websockets/client/ws_client.cpp.o
+[ 29%] Building CXX object src/CMakeFiles/cpprest.dir/streams/fileio_posix.cpp.o
+[ 30%] Building CXX object src/CMakeFiles/cpprest.dir/pplx/threadpool.cpp.o
+[ 31%] Building CXX object src/CMakeFiles/cpprest.dir/http/client/http_client_asio.cpp.o
+[ 31%] Building CXX object src/CMakeFiles/cpprest.dir/http/listener/http_server_asio.cpp.o
+[ 32%] Building CXX object src/CMakeFiles/cpprest.dir/websockets/client/ws_client_wspp.cpp.o
+[ 33%] Building CXX object src/CMakeFiles/cpprest.dir/pplx/pplxlinux.cpp.o
 Scanning dependencies of target test_runner
-[ 19%] Building CXX object tests/common/TestRunner/CMakeFiles/test_runner.dir/test_runner.cpp.o
-[ 20%] Building CXX object tests/common/TestRunner/CMakeFiles/test_runner.dir/test_module_loader.cpp.o
+[ 34%] Building CXX object tests/common/TestRunner/CMakeFiles/test_runner.dir/test_runner.cpp.o
+[ 35%] Building CXX object tests/common/TestRunner/CMakeFiles/test_runner.dir/test_module_loader.cpp.o
 Linking CXX executable ../../../Binaries/test_runner
-[ 20%] Built target test_runner
-[ 20%] Building CXX object src/CMakeFiles/cpprest.dir/http/listener/http_server_api.cpp.o
-[ 21%] Building CXX object src/CMakeFiles/cpprest.dir/http/oauth/oauth1.cpp.o
-[ 22%] [ 23%] Building CXX object src/CMakeFiles/cpprest.dir/http/oauth/oauth2.cpp.o
-Building CXX object src/CMakeFiles/cpprest.dir/json/json.cpp.o
-[ 23%] Building CXX object src/CMakeFiles/cpprest.dir/json/json_parsing.cpp.o
-[ 24%] Building CXX object src/CMakeFiles/cpprest.dir/json/json_serialization.cpp.o
-[ 25%] Building CXX object src/CMakeFiles/cpprest.dir/pplx/pplx.cpp.o
-[ 25%] Building CXX object src/CMakeFiles/cpprest.dir/uri/uri.cpp.o
-[ 26%] Building CXX object src/CMakeFiles/cpprest.dir/uri/uri_builder.cpp.o
-[ 27%] Building CXX object src/CMakeFiles/cpprest.dir/uri/uri_parser.cpp.o
-[ 28%] Building CXX object src/CMakeFiles/cpprest.dir/utilities/asyncrt_utils.cpp.o
-[ 28%] Building CXX object src/CMakeFiles/cpprest.dir/utilities/base64.cpp.o
-[ 29%] Building CXX object src/CMakeFiles/cpprest.dir/utilities/web_utilities.cpp.o
-[ 30%] Building CXX object src/CMakeFiles/cpprest.dir/websockets/client/ws_msg.cpp.o
-[ 30%] Building CXX object src/CMakeFiles/cpprest.dir/websockets/client/ws_client.cpp.o
-[ 31%] Building CXX object src/CMakeFiles/cpprest.dir/streams/fileio_posix.cpp.o
-[ 32%] Building CXX object src/CMakeFiles/cpprest.dir/pplx/threadpool.cpp.o
-[ 33%] Building CXX object src/CMakeFiles/cpprest.dir/http/client/http_client_asio.cpp.o
-[ 33%] Building CXX object src/CMakeFiles/cpprest.dir/http/listener/http_server_asio.cpp.o
-[ 34%] Building CXX object src/CMakeFiles/cpprest.dir/websockets/client/ws_client_wspp.cpp.o
-[ 35%] Building CXX object src/CMakeFiles/cpprest.dir/pplx/pplxlinux.cpp.o
+[ 35%] Built target test_runner
 Linking CXX shared library ../Binaries/libcpprest.so
 [ 35%] Built target cpprest
 Scanning dependencies of target common_utilities
-Scanning dependencies of target BingRequest
-Scanning dependencies of target blackjackclient
+Scanning dependencies of target oauth1client
 Scanning dependencies of target SearchFile
+Scanning dependencies of target BingRequest
 [ 36%] Scanning dependencies of target oauth2client
+[ 37%] Scanning dependencies of target blackjackclient
 Scanning dependencies of target blackjackserver
-[ 37%] Scanning dependencies of target oauth1client
-[ 37%] [ 37%] [ 38%] [ 39%] Building CXX object tests/common/utilities/CMakeFiles/common_utilities.dir/stdafx.cpp.o
-[ 40%] Building CXX object samples/BlackJack/BlackJack_Client/CMakeFiles/blackjackclient.dir/BlackJackClient.cpp.o
-Building CXX object samples/Oauth2Client/CMakeFiles/oauth2client.dir/Oauth2Client.cpp.o
-[ 41%] Building CXX object samples/BingRequest/CMakeFiles/BingRequest.dir/bingrequest.cpp.o
+Building CXX object tests/common/utilities/CMakeFiles/common_utilities.dir/stdafx.cpp.o
 Building CXX object tests/common/utilities/CMakeFiles/common_utilities.dir/os_utilities.cpp.o
-Building CXX object samples/SearchFile/CMakeFiles/SearchFile.dir/searchfile.cpp.o
+[ 38%] [ 39%] [ 40%] Building CXX object samples/SearchFile/CMakeFiles/SearchFile.dir/searchfile.cpp.o
+[ 40%] [ 41%] Building CXX object samples/Oauth1Client/CMakeFiles/oauth1client.dir/Oauth1Client.cpp.o
+Building CXX object samples/BlackJack/BlackJack_Client/CMakeFiles/blackjackclient.dir/BlackJackClient.cpp.o
 Building CXX object samples/BlackJack/BlackJack_Server/CMakeFiles/blackjackserver.dir/BlackJack_Server.cpp.o
-Building CXX object samples/Oauth1Client/CMakeFiles/oauth1client.dir/Oauth1Client.cpp.o
-[ 42%] Building CXX object samples/BlackJack/BlackJack_Server/CMakeFiles/blackjackserver.dir/Dealer.cpp.o
+[ 41%] Building CXX object samples/BingRequest/CMakeFiles/BingRequest.dir/bingrequest.cpp.o
+Building CXX object samples/Oauth2Client/CMakeFiles/oauth2client.dir/Oauth2Client.cpp.o
+[ 41%] Building CXX object samples/BlackJack/BlackJack_Client/CMakeFiles/blackjackclient.dir/stdafx.cpp.o
 Linking CXX shared library ../../../Binaries/libcommon_utilities.so
-[ 42%] Built target common_utilities
-[ 43%] Building CXX object samples/Oauth2Client/CMakeFiles/oauth2client.dir/stdafx.cpp.o
+[ 41%] Built target common_utilities
+[ 42%] Building CXX object samples/Oauth2Client/CMakeFiles/oauth2client.dir/stdafx.cpp.o
 /tmp/cpprestsdk-2.9.0/Release/samples/Oauth2Client/Oauth2Client.cpp: In function 'void open_browser(utility::string_t)':
 /tmp/cpprestsdk-2.9.0/Release/samples/Oauth2Client/Oauth2Client.cpp:86:32: warning: ignoring return value of 'int system(const char*)', declared with attribute warn_unused_result [-Wunused-result]
      system(browser_cmd.c_str());
@@ -1616,24 +1616,18 @@ Linking CXX shared library ../../../Binaries/libcommon_utilities.so
 /tmp/cpprestsdk-2.9.0/Release/samples/Oauth1Client/Oauth1Client.cpp:83:32: warning: ignoring return value of 'int system(const char*)', declared with attribute warn_unused_result [-Wunused-result]
      system(browser_cmd.c_str());
                                 ^
+[ 43%] Building CXX object samples/BlackJack/BlackJack_Server/CMakeFiles/blackjackserver.dir/Dealer.cpp.o
 [ 44%] Building CXX object samples/BlackJack/BlackJack_Server/CMakeFiles/blackjackserver.dir/stdafx.cpp.o
 [ 44%] Building CXX object samples/BlackJack/BlackJack_Server/CMakeFiles/blackjackserver.dir/Table.cpp.o
-[ 44%] Building CXX object samples/BlackJack/BlackJack_Client/CMakeFiles/blackjackclient.dir/stdafx.cpp.o
-Linking CXX executable ../../Binaries/oauth2client
-[ 44%] Built target oauth2client
-[ 45%] Building CXX object samples/Oauth1Client/CMakeFiles/oauth1client.dir/stdafx.cpp.o
-Scanning dependencies of target httptest_utilities
-[ 46%] Building CXX object tests/functional/http/utilities/CMakeFiles/httptest_utilities.dir/http_asserts.cpp.o
-[ 47%] Building CXX object tests/functional/http/utilities/CMakeFiles/httptest_utilities.dir/test_http_client.cpp.o
-[ 48%] Building CXX object tests/functional/http/utilities/CMakeFiles/httptest_utilities.dir/test_http_server.cpp.o
-Linking CXX executable ../../Binaries/BingRequest
-[ 48%] Built target BingRequest
-Scanning dependencies of target websockettest_utilities
-[ 49%] Building CXX object tests/functional/websockets/CMakeFiles/websockettest_utilities.dir/utilities/test_websocket_server.cpp.o
 Linking CXX executable ../../../Binaries/blackjackclient
-[ 49%] Built target blackjackclient
-[ 49%] Building CXX object tests/functional/http/utilities/CMakeFiles/httptest_utilities.dir/test_server_utilities.cpp.o
-Linking CXX executable ../../Binaries/SearchFile
+[ 44%] Built target blackjackclient
+Scanning dependencies of target httptest_utilities
+[ 45%] Building CXX object tests/functional/http/utilities/CMakeFiles/httptest_utilities.dir/http_asserts.cpp.o
+Linking CXX executable ../../Binaries/oauth2client
+[ 46%] Building CXX object samples/Oauth1Client/CMakeFiles/oauth1client.dir/stdafx.cpp.o
+[ 46%] Built target oauth2client
+Scanning dependencies of target websockettest_utilities
+[ 47%] Building CXX object tests/functional/websockets/CMakeFiles/websockettest_utilities.dir/utilities/test_websocket_server.cpp.o
 In file included from /tmp/cpprestsdk-2.9.0/Release/tests/functional/websockets/utilities/test_websocket_server.cpp:30:0:
 /tmp/cpprestsdk-2.9.0/Release/tests/functional/websockets/utilities/test_websocket_server.h:124:49: warning: 'dllexport' attribute directive ignored [-Wattributes]
      WEBSOCKET_UTILITY_API test_websocket_server();
@@ -1656,110 +1650,116 @@ In file included from /tmp/cpprestsdk-2.9.0/Release/tests/functional/websockets/
 /tmp/cpprestsdk-2.9.0/Release/tests/functional/websockets/utilities/test_websocket_server.h:139:76: warning: 'dllexport' attribute directive ignored [-Wattributes]
      WEBSOCKET_UTILITY_API std::shared_ptr<_test_websocket_server> get_impl();
                                                                             ^
+[ 48%] Building CXX object tests/functional/http/utilities/CMakeFiles/httptest_utilities.dir/test_http_client.cpp.o
+Linking CXX executable ../../Binaries/BingRequest
+[ 48%] Built target BingRequest
+[ 49%] Building CXX object tests/functional/http/utilities/CMakeFiles/httptest_utilities.dir/test_http_server.cpp.o
+Linking CXX executable ../../Binaries/SearchFile
 [ 49%] Built target SearchFile
+[ 49%] Building CXX object tests/functional/http/utilities/CMakeFiles/httptest_utilities.dir/test_server_utilities.cpp.o
 Linking CXX executable ../../Binaries/oauth1client
-Linking CXX executable ../../../Binaries/blackjackserver
 [ 49%] Built target oauth1client
+Linking CXX executable ../../../Binaries/blackjackserver
 [ 49%] Built target blackjackserver
+Linking CXX shared library ../../../Binaries/libwebsockettest_utilities.so
+[ 49%] Built target websockettest_utilities
 Linking CXX shared library ../../../../Binaries/libhttptest_utilities.so
 [ 49%] Built target httptest_utilities
 Scanning dependencies of target pplx_test
 Scanning dependencies of target utils_test
 Scanning dependencies of target json_test
+[ 50%] Scanning dependencies of target uri_test
 Scanning dependencies of target streams_test
-Scanning dependencies of target uri_test
-[ 50%] Building CXX object tests/functional/pplx/pplx_test/CMakeFiles/pplx_test.dir/pplx_op_test.cpp.o
-[ 51%] [ 52%] [ 53%] [ 53%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/construction_tests.cpp.o
+Scanning dependencies of target websocketclient_test
+Building CXX object tests/functional/pplx/pplx_test/CMakeFiles/pplx_test.dir/pplx_op_test.cpp.o
+[ 52%] [ 52%] Building CXX object tests/functional/utils/CMakeFiles/utils_test.dir/datetime.cpp.o
+Building CXX object tests/functional/json/CMakeFiles/json_test.dir/construction_tests.cpp.o
+[ 52%] [ 52%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/authentication_tests.cpp.o
 Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/accessor_tests.cpp.o
-Building CXX object tests/functional/utils/CMakeFiles/utils_test.dir/datetime.cpp.o
+[ 53%] Scanning dependencies of target httplistener_test
 Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/fstreambuf_tests.cpp.o
-Scanning dependencies of target httplistener_test
-[ 54%] Scanning dependencies of target httpclient_test
-Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/building_response_tests.cpp.o
+[ 54%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/building_response_tests.cpp.o
+Scanning dependencies of target httpclient_test
 [ 54%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/authentication_tests.cpp.o
-Linking CXX shared library ../../../Binaries/libwebsockettest_utilities.so
-[ 54%] Built target websockettest_utilities
-[ 55%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/building_request_tests.cpp.o
-[ 56%] [ 56%] Building CXX object tests/functional/utils/CMakeFiles/utils_test.dir/base64.cpp.o
-Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/combining_tests.cpp.o
+[ 55%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/combining_tests.cpp.o
+[ 55%] Building CXX object tests/functional/utils/CMakeFiles/utils_test.dir/base64.cpp.o
+[ 56%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/constructor_tests.cpp.o
 [ 57%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/negative_parsing_tests.cpp.o
-[ 58%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/constructor_tests.cpp.o
-[ 59%] Building CXX object tests/functional/utils/CMakeFiles/utils_test.dir/strings.cpp.o
-[ 60%] Building CXX object tests/functional/pplx/pplx_test/CMakeFiles/pplx_test.dir/pplx_task_options.cpp.o
-[ 60%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/parsing_tests.cpp.o
+[ 58%] Building CXX object tests/functional/utils/CMakeFiles/utils_test.dir/strings.cpp.o
+[ 59%] Building CXX object tests/functional/pplx/pplx_test/CMakeFiles/pplx_test.dir/pplx_task_options.cpp.o
+[ 60%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/client_construction.cpp.o
 [ 60%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/conversions_tests.cpp.o
+[ 60%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/parsing_tests.cpp.o
 [ 61%] Building CXX object tests/functional/utils/CMakeFiles/utils_test.dir/macro_test.cpp.o
 [ 62%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/connections_and_errors.cpp.o
 [ 63%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/diagnostic_tests.cpp.o
-[ 64%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/client_construction.cpp.o
-[ 65%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/connections_and_errors.cpp.o
-[ 66%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/encoding_tests.cpp.o
+[ 64%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/encoding_tests.cpp.o
+[ 65%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/building_request_tests.cpp.o
+[ 66%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/close_tests.cpp.o
 [ 67%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/to_as_and_operators_tests.cpp.o
 [ 68%] Building CXX object tests/functional/utils/CMakeFiles/utils_test.dir/nonce_generator_tests.cpp.o
 [ 69%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/operator_tests.cpp.o
-Linking CXX shared library ../../../Binaries/libutils_test.so
 [ 69%] Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/istream_tests.cpp.o
-[ 69%] Built target utils_test
-[ 69%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/splitting_tests.cpp.o
 [ 69%] Building CXX object tests/functional/pplx/pplx_test/CMakeFiles/pplx_test.dir/pplxtask_tests.cpp.o
-[ 70%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/uri_builder_tests.cpp.o
+Linking CXX shared library ../../../Binaries/libutils_test.so
+[ 69%] Built target utils_test
+[ 70%] Building CXX object tests/functional/pplx/pplx_test/CMakeFiles/pplx_test.dir/stdafx.cpp.o
+[ 70%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/splitting_tests.cpp.o
+[ 70%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/error_tests.cpp.o
 [ 71%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/iterator_tests.cpp.o
-[ 71%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/header_tests.cpp.o
-[ 72%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/http_client_tests.cpp.o
-[ 73%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/header_tests.cpp.o
+[ 72%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/json_numbers_tests.cpp.o
+[ 73%] Building CXX object tests/functional/uri/CMakeFiles/uri_test.dir/uri_builder_tests.cpp.o
+[ 73%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/fuzz_tests.cpp.o
+[ 74%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/header_tests.cpp.o
+[ 74%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/listener_construction_tests.cpp.o
 Linking CXX shared library ../../../Binaries/liburi_test.so
-[ 73%] Built target uri_test
-[ 73%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/listener_construction_tests.cpp.o
-[ 74%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/json_numbers_tests.cpp.o
-[ 75%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/http_methods_tests.cpp.o
-[ 75%] Building CXX object tests/functional/json/CMakeFiles/json_test.dir/fuzz_tests.cpp.o
-[ 75%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/multiple_requests.cpp.o
+[ 75%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/client_construction.cpp.o
+[ 75%] Built target uri_test
+[ 76%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/connections_and_errors.cpp.o
 Linking CXX shared library ../../../Binaries/libjson_test.so
-[ 76%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/oauth1_tests.cpp.o
 [ 76%] Built target json_test
-[ 77%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/oauth2_tests.cpp.o
+[ 76%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/header_tests.cpp.o
+[ 77%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/receive_msg_tests.cpp.o
 [ 78%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/reply_helper_tests.cpp.o
-[ 79%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/outside_tests.cpp.o
-[ 80%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/request_extract_tests.cpp.o
-[ 80%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/pipeline_stage_tests.cpp.o
-[ 81%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/progress_handler_tests.cpp.o
-[ 82%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/proxy_tests.cpp.o
-[ 82%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/request_handler_tests.cpp.o
-[ 83%] Building CXX object tests/functional/pplx/pplx_test/CMakeFiles/pplx_test.dir/stdafx.cpp.o
-[ 83%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/request_helper_tests.cpp.o
-[ 84%] Linking CXX shared library ../../../../Binaries/libpplx_test.so
-Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/request_relative_uri_tests.cpp.o
-[ 85%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/request_stream_tests.cpp.o
-[ 85%] Built target pplx_test
-Scanning dependencies of target websocketclient_test
-[ 85%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/authentication_tests.cpp.o
-[ 86%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/request_uri_tests.cpp.o
-[ 87%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/response_extract_tests.cpp.o
-[ 88%] Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/memstream_tests.cpp.o
-[ 89%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/client_construction.cpp.o
+[ 79%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/http_client_tests.cpp.o
+[ 80%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/send_msg_tests.cpp.o
+[ 81%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/http_methods_tests.cpp.o
+[ 82%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/request_extract_tests.cpp.o
+[ 82%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/multiple_requests.cpp.o
+[ 83%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/oauth1_tests.cpp.o
+[ 83%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/request_handler_tests.cpp.o
+[ 84%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/oauth2_tests.cpp.o
+Linking CXX shared library ../../../../Binaries/libpplx_test.so
+[ 84%] Built target pplx_test
+[ 85%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/outside_tests.cpp.o
+[ 86%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/request_relative_uri_tests.cpp.o
+Linking CXX shared library ../../../../Binaries/libwebsocketclient_test.so
+[ 86%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/pipeline_stage_tests.cpp.o
+[ 86%] Built target websocketclient_test
+[ 87%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/progress_handler_tests.cpp.o
+[ 88%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/proxy_tests.cpp.o
+[ 88%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/request_helper_tests.cpp.o
+[ 89%] Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/memstream_tests.cpp.o
 [ 90%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/request_stream_tests.cpp.o
-[ 90%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/response_stream_tests.cpp.o
-[ 91%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/requests_tests.cpp.o
-[ 92%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/status_code_reason_phrase_tests.cpp.o
-[ 93%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/to_string_tests.cpp.o
-[ 94%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/close_tests.cpp.o
-[ 94%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/http_client_fuzz_tests.cpp.o
-[ 95%] Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/ostream_tests.cpp.o
-[ 95%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/response_stream_tests.cpp.o
-[ 95%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/error_tests.cpp.o
-[ 96%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/status_code_reason_phrase_tests.cpp.o
-[ 97%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/to_string_tests.cpp.o
-[ 97%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/stdafx.cpp.o
-[ 98%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/receive_msg_tests.cpp.o
-[ 99%] Building CXX object tests/functional/websockets/client/CMakeFiles/websocketclient_test.dir/send_msg_tests.cpp.o
-[100%] Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/stdstream_tests.cpp.o
+[ 91%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/request_stream_tests.cpp.o
+[ 92%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/requests_tests.cpp.o
+[ 93%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/request_uri_tests.cpp.o
+[ 94%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/response_extract_tests.cpp.o
+[ 94%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/response_stream_tests.cpp.o
+[ 95%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/status_code_reason_phrase_tests.cpp.o
+[ 96%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/to_string_tests.cpp.o
+[ 96%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/response_stream_tests.cpp.o
+[ 97%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/status_code_reason_phrase_tests.cpp.o
+[ 97%] Building CXX object tests/functional/http/client/CMakeFiles/httpclient_test.dir/http_client_fuzz_tests.cpp.o
+[ 98%] Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/ostream_tests.cpp.o
+[ 99%] Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/stdstream_tests.cpp.o
+[ 99%] Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/fuzz_tests.cpp.o
+[100%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/to_string_tests.cpp.o
+[100%] Building CXX object tests/functional/http/listener/CMakeFiles/httplistener_test.dir/stdafx.cpp.o
 Linking CXX shared library ../../../../Binaries/libhttpclient_test.so
 [100%] Built target httpclient_test
-[100%] Building CXX object tests/functional/streams/CMakeFiles/streams_test.dir/fuzz_tests.cpp.o
 Linking CXX shared library ../../../../Binaries/libhttplistener_test.so
 [100%] Built target httplistener_test
-Linking CXX shared library ../../../../Binaries/libwebsocketclient_test.so
-[100%] Built target websocketclient_test
 Linking CXX shared library ../../../Binaries/libstreams_test.so
 [100%] Built target streams_test
 [ 20%] Built target cpprest
@@ -1831,16 +1831,16 @@ Install the project...
 -- Installing: /usr/local/lib/libcpprest.so.2.9
 -- Installing: /usr/local/lib/libcpprest.so
 [1;34m[octool] Installing python packages....[0m
---2018-02-12 09:11:25--  https://raw.githubusercontent.com/opencog/opencog/master/opencog/python/requirements.txt
+--2018-02-12 22:21:00--  https://raw.githubusercontent.com/opencog/opencog/master/opencog/python/requirements.txt
 Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
 Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 148 [text/plain]
 Saving to: 'requirements.txt'
 
-     0K                                                       100% 9.04M=0s
+     0K                                                       100% 8.02M=0s
 
-2018-02-12 09:11:25 (9.04 MB/s) - 'requirements.txt' saved [148/148]
+2018-02-12 22:21:01 (8.02 MB/s) - 'requirements.txt' saved [148/148]
 
 Downloading/unpacking pip from https://pypi.python.org/packages/b6/ac/7015eb97dc749283ffdec1c3a88ddb8ae03b8fad0f0e611408f196358da3/pip-9.0.1-py2.py3-none-any.whl#md5=297dbd16ef53bcef0447d245815f5144
 Installing collected packages: pip
@@ -1907,8 +1907,8 @@ Installing collected packages: requests, argparse, nose, pyparsing, six, python-
     Uninstalling nose-1.3.1:
       Successfully uninstalled nose-1.3.1
   Found existing installation: pyparsing 2.0.1
-    DEPRECATION: Uninstalling a distutils installed project (pyparsing) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
     Uninstalling pyparsing-2.0.1:
+    DEPRECATION: Uninstalling a distutils installed project (pyparsing) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
       Successfully uninstalled pyparsing-2.0.1
   Found existing installation: six 1.5.2
     DEPRECATION: Uninstalling a distutils installed project (six) has been deprecated and will be removed in a future version. This is due to the fact that uninstalling a distutils project will only partially uninstall the project.
@@ -1939,7 +1939,7 @@ python set to manually installed.
 python-matplotlib is already the newest version.
 python-scipy is already the newest version.
 python-numpy is already the newest version.
-0 upgraded, 0 newly installed, 0 to remove and 10 not upgraded.
+0 upgraded, 0 newly installed, 0 to remove and 11 not upgraded.
 The directory '/home/jenkins/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 The directory '/home/jenkins/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with sudo, you may want sudo's -H flag.
 Collecting pyyaml
@@ -1970,20 +1970,22 @@ Building dependency tree...
 Reading state information...
 The following packages will be upgraded:
   libcurl3 libcurl3-gnutls libpq-dev libpq5 libtasn1-6 libudev1
-  postgresql-client-9.3 python-catkin-pkg python-catkin-pkg-modules udev
-10 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
-Need to get 2195 kB of archives.
+  postgresql-client-9.3 python-catkin-pkg python-catkin-pkg-modules resolvconf
+  udev
+11 upgraded, 0 newly installed, 0 to remove and 0 not upgraded.
+Need to get 2250 kB of archives.
 After this operation, 13.3 kB of additional disk space will be used.
-Get:1 http://packages.ros.org/ros/ubuntu/ trusty/main python-catkin-pkg-modules all 0.4.1-1 [35.3 kB]
-Get:2 http://packages.ros.org/ros/ubuntu/ trusty/main python-catkin-pkg all 0.4.1-100 [2424 B]
-Get:3 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libtasn1-6 amd64 3.4-3ubuntu0.6 [43.6 kB]
-Get:4 http://archive.ubuntu.com/ubuntu/ trusty-updates/main udev amd64 204-5ubuntu20.26 [735 kB]
-Get:5 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libudev1 amd64 204-5ubuntu20.26 [34.7 kB]
-Get:6 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libcurl3-gnutls amd64 7.35.0-1ubuntu2.14 [166 kB]
-Get:7 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libcurl3 amd64 7.35.0-1ubuntu2.14 [174 kB]
-Get:8 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libpq-dev amd64 9.3.21-0ubuntu0.14.04 [140 kB]
-Get:9 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libpq5 amd64 9.3.21-0ubuntu0.14.04 [77.6 kB]
-Get:10 http://archive.ubuntu.com/ubuntu/ trusty-updates/main postgresql-client-9.3 amd64 9.3.21-0ubuntu0.14.04 [786 kB]
+Get:1 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libtasn1-6 amd64 3.4-3ubuntu0.6 [43.6 kB]
+Get:2 http://packages.ros.org/ros/ubuntu/ trusty/main python-catkin-pkg-modules all 0.4.1-1 [35.3 kB]
+Get:3 http://packages.ros.org/ros/ubuntu/ trusty/main python-catkin-pkg all 0.4.1-100 [2424 B]
+Get:4 http://archive.ubuntu.com/ubuntu/ trusty-updates/main resolvconf all 1.69ubuntu1.4 [55.1 kB]
+Get:5 http://archive.ubuntu.com/ubuntu/ trusty-updates/main udev amd64 204-5ubuntu20.26 [735 kB]
+Get:6 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libudev1 amd64 204-5ubuntu20.26 [34.7 kB]
+Get:7 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libcurl3-gnutls amd64 7.35.0-1ubuntu2.14 [166 kB]
+Get:8 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libcurl3 amd64 7.35.0-1ubuntu2.14 [174 kB]
+Get:9 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libpq-dev amd64 9.3.21-0ubuntu0.14.04 [140 kB]
+Get:10 http://archive.ubuntu.com/ubuntu/ trusty-updates/main libpq5 amd64 9.3.21-0ubuntu0.14.04 [77.6 kB]
+Get:11 http://archive.ubuntu.com/ubuntu/ trusty-updates/main postgresql-client-9.3 amd64 9.3.21-0ubuntu0.14.04 [786 kB]
 debconf: unable to initialize frontend: Dialog
 debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
 debconf: falling back to frontend: Readline
@@ -1991,10 +1993,18 @@ debconf: unable to initialize frontend: Readline
 debconf: (This frontend requires a controlling tty.)
 debconf: falling back to frontend: Teletype
 dpkg-preconfigure: unable to re-open stdin: 
-Fetched 2195 kB in 1s (1340 kB/s)
+Fetched 2250 kB in 1s (1298 kB/s)
 (Reading database ... 49412 files and directories currently installed.)
 Preparing to unpack .../libtasn1-6_3.4-3ubuntu0.6_amd64.deb ...
 Unpacking libtasn1-6:amd64 (3.4-3ubuntu0.6) over (3.4-3ubuntu0.5) ...
+Preparing to unpack .../resolvconf_1.69ubuntu1.4_all.deb ...
+Unpacking resolvconf (1.69ubuntu1.4) over (1.69ubuntu1.3) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
 Preparing to unpack .../udev_204-5ubuntu20.26_amd64.deb ...
 Adding 'diversion of /bin/udevadm to /bin/udevadm.upgrade by fake-udev'
 Unpacking udev (204-5ubuntu20.26) over (204-5ubuntu20.25) ...
@@ -2016,6 +2026,14 @@ Preparing to unpack .../python-catkin-pkg_0.4.1-100_all.deb ...
 Unpacking python-catkin-pkg (0.4.1-100) over (0.3.9-100) ...
 Processing triggers for ureadahead (0.100.0-16) ...
 Setting up libtasn1-6:amd64 (3.4-3ubuntu0.6) ...
+Setting up resolvconf (1.69ubuntu1.4) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+invoke-rc.d: policy-rc.d denied execution of start.
 Setting up libudev1:amd64 (204-5ubuntu20.26) ...
 Setting up udev (204-5ubuntu20.26) ...
 invoke-rc.d: policy-rc.d denied execution of restart.
@@ -2049,10 +2067,10 @@ DSTATUS is BUILDPASS
 
 + echo **** 
 **** 
-+ echo ****  97787c758e707c3f17b0542a5d7b8069d9b515d02c787d48370a9a156079942c
-****  97787c758e707c3f17b0542a5d7b8069d9b515d02c787d48370a9a156079942c
++ echo ****  aa62dee47a55fe7aa44e76f1753a6f0bd5d12293d9afc812f29bf58636bd8e3b
+****  aa62dee47a55fe7aa44e76f1753a6f0bd5d12293d9afc812f29bf58636bd8e3b
 + cat
-+ docker exec --user jenkins 97787c758e707c3f17b0542a5d7b8069d9b515d02c787d48370a9a156079942c bash dependencies/job1
++ docker exec --user jenkins aa62dee47a55fe7aa44e76f1753a6f0bd5d12293d9afc812f29bf58636bd8e3b bash dependencies/job1
 + git clone https://github.com/opencog/opencog.git
 Cloning into 'opencog'...
 + git clone https://github.com/opencog/atomspace.git
@@ -2082,14 +2100,14 @@ DSTATUS is BUILDPASS
 **********************************************************
 **********************************************************
 
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/118/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404/builds/119/log
 + GUILEVERSION=guile-2.2.3
 + cat
 + chmod +x dependencies/job1
-+ docker exec --user jenkins 97787c758e707c3f17b0542a5d7b8069d9b515d02c787d48370a9a156079942c bash dependencies/job1
++ docker exec --user jenkins aa62dee47a55fe7aa44e76f1753a6f0bd5d12293d9afc812f29bf58636bd8e3b bash dependencies/job1
 + rm -rf 'guile-2.2.3*'
 + wget https://ftp.gnu.org/gnu/guile/guile-2.2.3.tar.gz
---2018-02-12 09:13:37--  https://ftp.gnu.org/gnu/guile/guile-2.2.3.tar.gz
+--2018-02-12 22:23:00--  https://ftp.gnu.org/gnu/guile/guile-2.2.3.tar.gz
 Resolving ftp.gnu.org (ftp.gnu.org)... 208.118.235.20, 2001:4830:134:3::b
 Connecting to ftp.gnu.org (ftp.gnu.org)|208.118.235.20|:443... connected.
 HTTP request sent, awaiting response... 200 OK
@@ -2097,345 +2115,345 @@ Length: 17266587 (16M) [application/x-gzip]
 Saving to: 'guile-2.2.3.tar.gz'
 
      0K .......... .......... .......... .......... ..........  0% 1.09M 15s
-    50K .......... .......... .......... .......... ..........  0% 2.31M 11s
-   100K .......... .......... .......... .......... ..........  0% 12.0M 8s
-   150K .......... .......... .......... .......... ..........  1% 11.7M 6s
-   200K .......... .......... .......... .......... ..........  1% 3.12M 6s
-   250K .......... .......... .......... .......... ..........  1% 11.7M 5s
-   300K .......... .......... .......... .......... ..........  2% 3.23M 5s
-   350K .......... .......... .......... .......... ..........  2% 11.2M 5s
-   400K .......... .......... .......... .......... ..........  2% 8.78M 4s
-   450K .......... .......... .......... .......... ..........  2% 3.47M 4s
-   500K .......... .......... .......... .......... ..........  3% 12.0M 4s
-   550K .......... .......... .......... .......... ..........  3% 3.39M 4s
-   600K .......... .......... .......... .......... ..........  3% 11.0M 4s
-   650K .......... .......... .......... .......... ..........  4% 11.6M 4s
-   700K .......... .......... .......... .......... ..........  4% 3.53M 4s
-   750K .......... .......... .......... .......... ..........  4% 11.8M 4s
-   800K .......... .......... .......... .......... ..........  5% 8.33M 3s
-   850K .......... .......... .......... .......... ..........  5% 3.80M 3s
-   900K .......... .......... .......... .......... ..........  5% 11.0M 3s
-   950K .......... .......... .......... .......... ..........  5% 12.5M 3s
-  1000K .......... .......... .......... .......... ..........  6% 3.78M 3s
-  1050K .......... .......... .......... .......... ..........  6% 10.0M 3s
-  1100K .......... .......... .......... .......... ..........  6% 11.1M 3s
-  1150K .......... .......... .......... .......... ..........  7% 4.20M 3s
-  1200K .......... .......... .......... .......... ..........  7% 7.48M 3s
-  1250K .......... .......... .......... .......... ..........  7% 6.74M 3s
-  1300K .......... .......... .......... .......... ..........  8% 7.15M 3s
-  1350K .......... .......... .......... .......... ..........  8% 8.37M 3s
-  1400K .......... .......... .......... .......... ..........  8% 9.93M 3s
-  1450K .......... .......... .......... .......... ..........  8% 5.61M 3s
-  1500K .......... .......... .......... .......... ..........  9% 8.32M 3s
-  1550K .......... .......... .......... .......... ..........  9% 9.80M 3s
-  1600K .......... .......... .......... .......... ..........  9% 5.37M 3s
-  1650K .......... .......... .......... .......... .......... 10% 6.80M 3s
-  1700K .......... .......... .......... .......... .......... 10% 9.86M 3s
-  1750K .......... .......... .......... .......... .......... 10% 8.38M 3s
-  1800K .......... .......... .......... .......... .......... 10% 6.79M 3s
-  1850K .......... .......... .......... .......... .......... 11% 6.75M 3s
-  1900K .......... .......... .......... .......... .......... 11% 10.3M 3s
-  1950K .......... .......... .......... .......... .......... 11% 7.38M 3s
-  2000K .......... .......... .......... .......... .......... 12% 5.76M 3s
-  2050K .......... .......... .......... .......... .......... 12% 8.92M 3s
-  2100K .......... .......... .......... .......... .......... 12% 9.02M 2s
-  2150K .......... .......... .......... .......... .......... 13% 7.58M 2s
-  2200K .......... .......... .......... .......... .......... 13% 8.31M 2s
-  2250K .......... .......... .......... .......... .......... 13% 7.68M 2s
-  2300K .......... .......... .......... .......... .......... 13% 9.37M 2s
-  2350K .......... .......... .......... .......... .......... 14% 8.96M 2s
-  2400K .......... .......... .......... .......... .......... 14% 6.04M 2s
-  2450K .......... .......... .......... .......... .......... 14% 8.25M 2s
-  2500K .......... .......... .......... .......... .......... 15% 9.10M 2s
-  2550K .......... .......... .......... .......... .......... 15% 7.72M 2s
-  2600K .......... .......... .......... .......... .......... 15% 8.05M 2s
-  2650K .......... .......... .......... .......... .......... 16% 8.54M 2s
-  2700K .......... .......... .......... .......... .......... 16% 9.63M 2s
-  2750K .......... .......... .......... .......... .......... 16% 9.68M 2s
-  2800K .......... .......... .......... .......... .......... 16% 6.40M 2s
-  2850K .......... .......... .......... .......... .......... 17% 7.76M 2s
-  2900K .......... .......... .......... .......... .......... 17% 8.34M 2s
-  2950K .......... .......... .......... .......... .......... 17% 11.8M 2s
-  3000K .......... .......... .......... .......... .......... 18% 6.84M 2s
-  3050K .......... .......... .......... .......... .......... 18% 9.18M 2s
-  3100K .......... .......... .......... .......... .......... 18% 8.06M 2s
-  3150K .......... .......... .......... .......... .......... 18% 11.4M 2s
-  3200K .......... .......... .......... .......... .......... 19% 8.58M 2s
-  3250K .......... .......... .......... .......... .......... 19% 6.64M 2s
-  3300K .......... .......... .......... .......... .......... 19% 8.57M 2s
-  3350K .......... .......... .......... .......... .......... 20% 11.7M 2s
-  3400K .......... .......... .......... .......... .......... 20% 9.82M 2s
-  3450K .......... .......... .......... .......... .......... 20% 8.11M 2s
-  3500K .......... .......... .......... .......... .......... 21% 9.98M 2s
-  3550K .......... .......... .......... .......... .......... 21% 9.58M 2s
-  3600K .......... .......... .......... .......... .......... 21% 7.55M 2s
-  3650K .......... .......... .......... .......... .......... 21% 7.21M 2s
-  3700K .......... .......... .......... .......... .......... 22% 11.1M 2s
-  3750K .......... .......... .......... .......... .......... 22% 8.16M 2s
-  3800K .......... .......... .......... .......... .......... 22% 11.1M 2s
-  3850K .......... .......... .......... .......... .......... 23% 9.49M 2s
-  3900K .......... .......... .......... .......... .......... 23% 8.12M 2s
-  3950K .......... .......... .......... .......... .......... 23% 12.5M 2s
-  4000K .......... .......... .......... .......... .......... 24% 6.50M 2s
-  4050K .......... .......... .......... .......... .......... 24% 10.5M 2s
-  4100K .......... .......... .......... .......... .......... 24% 8.04M 2s
-  4150K .......... .......... .......... .......... .......... 24% 11.0M 2s
-  4200K .......... .......... .......... .......... .......... 25% 9.09M 2s
-  4250K .......... .......... .......... .......... .......... 25% 11.9M 2s
-  4300K .......... .......... .......... .......... .......... 25% 10.4M 2s
-  4350K .......... .......... .......... .......... .......... 26% 2.39M 2s
-  4400K .......... .......... .......... .......... .......... 26% 9.06M 2s
-  4450K .......... .......... .......... .......... .......... 26% 10.5M 2s
-  4500K .......... .......... .......... .......... .......... 26% 6.06M 2s
-  4550K .......... .......... .......... .......... .......... 27% 11.2M 2s
-  4600K .......... .......... .......... .......... .......... 27% 12.3M 2s
-  4650K .......... .......... .......... .......... .......... 27% 11.0M 2s
-  4700K .......... .......... .......... .......... .......... 28% 7.34M 2s
-  4750K .......... .......... .......... .......... .......... 28% 8.44M 2s
-  4800K .......... .......... .......... .......... .......... 28% 7.28M 2s
-  4850K .......... .......... .......... .......... .......... 29% 11.8M 2s
-  4900K .......... .......... .......... .......... .......... 29% 11.7M 2s
-  4950K .......... .......... .......... .......... .......... 29% 8.06M 2s
-  5000K .......... .......... .......... .......... .......... 29% 11.0M 2s
-  5050K .......... .......... .......... .......... .......... 30% 11.1M 2s
-  5100K .......... .......... .......... .......... .......... 30% 8.98M 2s
-  5150K .......... .......... .......... .......... .......... 30% 11.7M 2s
-  5200K .......... .......... .......... .......... .......... 31% 6.77M 2s
-  5250K .......... .......... .......... .......... .......... 31% 11.9M 2s
-  5300K .......... .......... .......... .......... .......... 31% 10.9M 2s
-  5350K .......... .......... .......... .......... .......... 32% 9.29M 2s
-  5400K .......... .......... .......... .......... .......... 32% 11.9M 2s
-  5450K .......... .......... .......... .......... .......... 32% 9.08M 2s
-  5500K .......... .......... .......... .......... .......... 32% 11.1M 2s
-  5550K .......... .......... .......... .......... .......... 33% 12.4M 2s
-  5600K .......... .......... .......... .......... .......... 33% 7.02M 2s
-  5650K .......... .......... .......... .......... .......... 33% 8.48M 1s
-  5700K .......... .......... .......... .......... .......... 34% 11.7M 1s
-  5750K .......... .......... .......... .......... .......... 34% 11.1M 1s
-  5800K .......... .......... .......... .......... .......... 34% 11.5M 1s
-  5850K .......... .......... .......... .......... .......... 34% 11.8M 1s
-  5900K .......... .......... .......... .......... .......... 35% 10.4M 1s
-  5950K .......... .......... .......... .......... .......... 35% 8.27M 1s
-  6000K .......... .......... .......... .......... .......... 35% 8.72M 1s
-  6050K .......... .......... .......... .......... .......... 36% 11.7M 1s
-  6100K .......... .......... .......... .......... .......... 36% 11.7M 1s
-  6150K .......... .......... .......... .......... .......... 36% 8.28M 1s
-  6200K .......... .......... .......... .......... .......... 37% 10.9M 1s
-  6250K .......... .......... .......... .......... .......... 37% 9.82M 1s
-  6300K .......... .......... .......... .......... .......... 37% 11.7M 1s
-  6350K .......... .......... .......... .......... .......... 37% 11.7M 1s
-  6400K .......... .......... .......... .......... .......... 38% 9.16M 1s
-  6450K .......... .......... .......... .......... .......... 38% 8.86M 1s
-  6500K .......... .......... .......... .......... .......... 38% 11.1M 1s
-  6550K .......... .......... .......... .......... .......... 39% 10.4M 1s
-  6600K .......... .......... .......... .......... .......... 39% 11.5M 1s
-  6650K .......... .......... .......... .......... .......... 39% 11.8M 1s
-  6700K .......... .......... .......... .......... .......... 40% 11.7M 1s
-  6750K .......... .......... .......... .......... .......... 40% 9.33M 1s
-  6800K .......... .......... .......... .......... .......... 40% 8.82M 1s
-  6850K .......... .......... .......... .......... .......... 40% 11.7M 1s
-  6900K .......... .......... .......... .......... .......... 41% 11.1M 1s
-  6950K .......... .......... .......... .......... .......... 41% 11.2M 1s
-  7000K .......... .......... .......... .......... .......... 41% 10.5M 1s
-  7050K .......... .......... .......... .......... .......... 42% 11.4M 1s
-  7100K .......... .......... .......... .......... .......... 42% 11.6M 1s
-  7150K .......... .......... .......... .......... .......... 42% 10.9M 1s
-  7200K .......... .......... .......... .......... .......... 42% 8.77M 1s
-  7250K .......... .......... .......... .......... .......... 43% 11.7M 1s
-  7300K .......... .......... .......... .......... .......... 43% 11.1M 1s
-  7350K .......... .......... .......... .......... .......... 43% 11.2M 1s
-  7400K .......... .......... .......... .......... .......... 44% 11.6M 1s
-  7450K .......... .......... .......... .......... .......... 44% 11.1M 1s
-  7500K .......... .......... .......... .......... .......... 44% 11.7M 1s
-  7550K .......... .......... .......... .......... .......... 45% 12.0M 1s
-  7600K .......... .......... .......... .......... .......... 45% 9.08M 1s
-  7650K .......... .......... .......... .......... .......... 45% 11.7M 1s
-  7700K .......... .......... .......... .......... .......... 45% 11.7M 1s
-  7750K .......... .......... .......... .......... .......... 46% 11.1M 1s
-  7800K .......... .......... .......... .......... .......... 46% 11.7M 1s
-  7850K .......... .......... .......... .......... .......... 46% 11.7M 1s
-  7900K .......... .......... .......... .......... .......... 47% 11.7M 1s
-  7950K .......... .......... .......... .......... .......... 47% 11.7M 1s
-  8000K .......... .......... .......... .......... .......... 47% 8.68M 1s
-  8050K .......... .......... .......... .......... .......... 48% 11.7M 1s
-  8100K .......... .......... .......... .......... .......... 48% 10.5M 1s
-  8150K .......... .......... .......... .......... .......... 48% 12.5M 1s
-  8200K .......... .......... .......... .......... .......... 48% 11.7M 1s
-  8250K .......... .......... .......... .......... .......... 49% 11.7M 1s
-  8300K .......... .......... .......... .......... .......... 49% 11.7M 1s
-  8350K .......... .......... .......... .......... .......... 49% 11.7M 1s
-  8400K .......... .......... .......... .......... .......... 50% 8.68M 1s
-  8450K .......... .......... .......... .......... .......... 50% 11.7M 1s
-  8500K .......... .......... .......... .......... .......... 50% 11.7M 1s
-  8550K .......... .......... .......... .......... .......... 51% 11.7M 1s
-  8600K .......... .......... .......... .......... .......... 51% 11.7M 1s
-  8650K .......... .......... .......... .......... .......... 51% 11.7M 1s
-  8700K .......... .......... .......... .......... .......... 51% 11.7M 1s
-  8750K .......... .......... .......... .......... .......... 52% 11.7M 1s
-  8800K .......... .......... .......... .......... .......... 52% 8.69M 1s
-  8850K .......... .......... .......... .......... .......... 52% 11.7M 1s
-  8900K .......... .......... .......... .......... .......... 53% 11.1M 1s
-  8950K .......... .......... .......... .......... .......... 53% 12.5M 1s
-  9000K .......... .......... .......... .......... .......... 53% 11.0M 1s
-  9050K .......... .......... .......... .......... .......... 53% 12.5M 1s
-  9100K .......... .......... .......... .......... .......... 54% 11.1M 1s
-  9150K .......... .......... .......... .......... .......... 54% 11.7M 1s
-  9200K .......... .......... .......... .......... .......... 54% 8.32M 1s
-  9250K .......... .......... .......... .......... .......... 55% 12.5M 1s
-  9300K .......... .......... .......... .......... .......... 55% 11.1M 1s
-  9350K .......... .......... .......... .......... .......... 55% 1.90M 1s
-  9400K .......... .......... .......... .......... .......... 56%  461M 1s
-  9450K .......... .......... .......... .......... .......... 56%  456M 1s
-  9500K .......... .......... .......... .......... .......... 56%  516M 1s
-  9550K .......... .......... .......... .......... .......... 56%  459M 1s
-  9600K .......... .......... .......... .......... .......... 57% 8.68M 1s
-  9650K .......... .......... .......... .......... .......... 57% 7.03M 1s
-  9700K .......... .......... .......... .......... .......... 57% 8.24M 1s
-  9750K .......... .......... .......... .......... .......... 58% 9.57M 1s
-  9800K .......... .......... .......... .......... .......... 58% 9.22M 1s
-  9850K .......... .......... .......... .......... .......... 58% 11.1M 1s
-  9900K .......... .......... .......... .......... .......... 59% 6.91M 1s
-  9950K .......... .......... .......... .......... .......... 59% 9.78M 1s
- 10000K .......... .......... .......... .......... .......... 59% 4.48M 1s
- 10050K .......... .......... .......... .......... .......... 59% 11.0M 1s
- 10100K .......... .......... .......... .......... .......... 60% 12.2M 1s
- 10150K .......... .......... .......... .......... .......... 60% 11.2M 1s
- 10200K .......... .......... .......... .......... .......... 60% 7.62M 1s
- 10250K .......... .......... .......... .......... .......... 61% 7.63M 1s
- 10300K .......... .......... .......... .......... .......... 61% 12.0M 1s
- 10350K .......... .......... .......... .......... .......... 61% 10.7M 1s
- 10400K .......... .......... .......... .......... .......... 61% 6.28M 1s
- 10450K .......... .......... .......... .......... .......... 62% 7.92M 1s
+    50K .......... .......... .......... .......... ..........  0% 2.29M 11s
+   100K .......... .......... .......... .......... ..........  0% 11.9M 8s
+   150K .......... .......... .......... .......... ..........  1% 2.85M 7s
+   200K .......... .......... .......... .......... ..........  1% 10.8M 6s
+   250K .......... .......... .......... .......... ..........  1% 1.60M 7s
+   300K .......... .......... .......... .......... ..........  2% 23.6M 6s
+   350K .......... .......... .......... .......... ..........  2% 4.39M 6s
+   400K .......... .......... .......... .......... ..........  2% 51.2M 5s
+   450K .......... .......... .......... .......... ..........  2% 3.57M 5s
+   500K .......... .......... .......... .......... ..........  3% 12.5M 5s
+   550K .......... .......... .......... .......... ..........  3% 45.0M 4s
+   600K .......... .......... .......... .......... ..........  3% 61.8M 4s
+   650K .......... .......... .......... .......... ..........  4% 1.59M 4s
+   700K .......... .......... .......... .......... ..........  4% 9.85M 4s
+   750K .......... .......... .......... .......... ..........  4% 64.7M 4s
+   800K .......... .......... .......... .......... ..........  5% 60.7M 4s
+   850K .......... .......... .......... .......... ..........  5% 90.1M 3s
+   900K .......... .......... .......... .......... ..........  5% 6.72M 3s
+   950K .......... .......... .......... .......... ..........  5% 4.12M 3s
+  1000K .......... .......... .......... .......... ..........  6% 8.58M 3s
+  1050K .......... .......... .......... .......... ..........  6% 9.56M 3s
+  1100K .......... .......... .......... .......... ..........  6% 4.79M 3s
+  1150K .......... .......... .......... .......... ..........  7% 9.56M 3s
+  1200K .......... .......... .......... .......... ..........  7% 5.67M 3s
+  1250K .......... .......... .......... .......... ..........  7% 5.63M 3s
+  1300K .......... .......... .......... .......... ..........  8% 8.87M 3s
+  1350K .......... .......... .......... .......... ..........  8% 8.88M 3s
+  1400K .......... .......... .......... .......... ..........  8% 5.49M 3s
+  1450K .......... .......... .......... .......... ..........  8% 9.09M 3s
+  1500K .......... .......... .......... .......... ..........  9% 8.44M 3s
+  1550K .......... .......... .......... .......... ..........  9% 5.81M 3s
+  1600K .......... .......... .......... .......... ..........  9% 7.32M 3s
+  1650K .......... .......... .......... .......... .......... 10% 6.23M 3s
+  1700K .......... .......... .......... .......... .......... 10% 8.27M 3s
+  1750K .......... .......... .......... .......... .......... 10% 7.18M 3s
+  1800K .......... .......... .......... .......... .......... 10% 7.42M 3s
+  1850K .......... .......... .......... .......... .......... 11% 8.56M 3s
+  1900K .......... .......... .......... .......... .......... 11% 5.80M 3s
+  1950K .......... .......... .......... .......... .......... 11% 9.91M 3s
+  2000K .......... .......... .......... .......... .......... 12% 5.15M 3s
+  2050K .......... .......... .......... .......... .......... 12% 8.23M 3s
+  2100K .......... .......... .......... .......... .......... 12% 7.38M 3s
+  2150K .......... .......... .......... .......... .......... 13% 6.87M 3s
+  2200K .......... .......... .......... .......... .......... 13% 8.58M 2s
+  2250K .......... .......... .......... .......... .......... 13% 5.95M 2s
+  2300K .......... .......... .......... .......... .......... 13% 8.52M 2s
+  2350K .......... .......... .......... .......... .......... 14% 7.92M 2s
+  2400K .......... .......... .......... .......... .......... 14% 5.55M 2s
+  2450K .......... .......... .......... .......... .......... 14% 6.83M 2s
+  2500K .......... .......... .......... .......... .......... 15% 7.36M 2s
+  2550K .......... .......... .......... .......... .......... 15% 9.40M 2s
+  2600K .......... .......... .......... .......... .......... 15% 7.79M 2s
+  2650K .......... .......... .......... .......... .......... 16% 6.11M 2s
+  2700K .......... .......... .......... .......... .......... 16% 7.98M 2s
+  2750K .......... .......... .......... .......... .......... 16% 7.70M 2s
+  2800K .......... .......... .......... .......... .......... 16% 5.97M 2s
+  2850K .......... .......... .......... .......... .......... 17% 6.51M 2s
+  2900K .......... .......... .......... .......... .......... 17% 9.73M 2s
+  2950K .......... .......... .......... .......... .......... 17% 8.11M 2s
+  3000K .......... .......... .......... .......... .......... 18% 5.55M 2s
+  3050K .......... .......... .......... .......... .......... 18% 8.56M 2s
+  3100K .......... .......... .......... .......... .......... 18% 11.0M 2s
+  3150K .......... .......... .......... .......... .......... 18% 5.90M 2s
+  3200K .......... .......... .......... .......... .......... 19% 5.52M 2s
+  3250K .......... .......... .......... .......... .......... 19% 9.99M 2s
+  3300K .......... .......... .......... .......... .......... 19% 7.64M 2s
+  3350K .......... .......... .......... .......... .......... 20% 5.51M 2s
+  3400K .......... .......... .......... .......... .......... 20% 10.0M 2s
+  3450K .......... .......... .......... .......... .......... 20% 8.60M 2s
+  3500K .......... .......... .......... .......... .......... 21% 5.86M 2s
+  3550K .......... .......... .......... .......... .......... 21% 8.85M 2s
+  3600K .......... .......... .......... .......... .......... 21% 7.33M 2s
+  3650K .......... .......... .......... .......... .......... 21% 6.25M 2s
+  3700K .......... .......... .......... .......... .......... 22% 8.03M 2s
+  3750K .......... .......... .......... .......... .......... 22% 8.31M 2s
+  3800K .......... .......... .......... .......... .......... 22% 6.95M 2s
+  3850K .......... .......... .......... .......... .......... 23% 8.34M 2s
+  3900K .......... .......... .......... .......... .......... 23% 5.50M 2s
+  3950K .......... .......... .......... .......... .......... 23% 9.53M 2s
+  4000K .......... .......... .......... .......... .......... 24% 5.40M 2s
+  4050K .......... .......... .......... .......... .......... 24% 7.82M 2s
+  4100K .......... .......... .......... .......... .......... 24% 9.15M 2s
+  4150K .......... .......... .......... .......... .......... 24% 8.83M 2s
+  4200K .......... .......... .......... .......... .......... 25% 6.12M 2s
+  4250K .......... .......... .......... .......... .......... 25% 8.10M 2s
+  4300K .......... .......... .......... .......... .......... 25% 9.15M 2s
+  4350K .......... .......... .......... .......... .......... 26% 7.18M 2s
+  4400K .......... .......... .......... .......... .......... 26% 5.48M 2s
+  4450K .......... .......... .......... .......... .......... 26% 7.81M 2s
+  4500K .......... .......... .......... .......... .......... 26% 7.98M 2s
+  4550K .......... .......... .......... .......... .......... 27% 7.21M 2s
+  4600K .......... .......... .......... .......... .......... 27% 8.37M 2s
+  4650K .......... .......... .......... .......... .......... 27% 8.94M 2s
+  4700K .......... .......... .......... .......... .......... 28% 5.64M 2s
+  4750K .......... .......... .......... .......... .......... 28% 8.38M 2s
+  4800K .......... .......... .......... .......... .......... 28% 5.72M 2s
+  4850K .......... .......... .......... .......... .......... 29% 7.97M 2s
+  4900K .......... .......... .......... .......... .......... 29% 8.51M 2s
+  4950K .......... .......... .......... .......... .......... 29% 7.77M 2s
+  5000K .......... .......... .......... .......... .......... 29% 6.61M 2s
+  5050K .......... .......... .......... .......... .......... 30% 8.84M 2s
+  5100K .......... .......... .......... .......... .......... 30% 6.95M 2s
+  5150K .......... .......... .......... .......... .......... 30% 8.20M 2s
+  5200K .......... .......... .......... .......... .......... 31% 5.82M 2s
+  5250K .......... .......... .......... .......... .......... 31% 8.45M 2s
+  5300K .......... .......... .......... .......... .......... 31% 8.95M 2s
+  5350K .......... .......... .......... .......... .......... 32% 7.76M 2s
+  5400K .......... .......... .......... .......... .......... 32% 7.10M 2s
+  5450K .......... .......... .......... .......... .......... 32% 8.20M 2s
+  5500K .......... .......... .......... .......... .......... 32% 8.50M 2s
+  5550K .......... .......... .......... .......... .......... 33% 6.34M 2s
+  5600K .......... .......... .......... .......... .......... 33% 7.72M 2s
+  5650K .......... .......... .......... .......... .......... 33% 6.70M 2s
+  5700K .......... .......... .......... .......... .......... 34% 7.79M 2s
+  5750K .......... .......... .......... .......... .......... 34% 7.77M 2s
+  5800K .......... .......... .......... .......... .......... 34% 7.52M 2s
+  5850K .......... .......... .......... .......... .......... 34% 8.47M 2s
+  5900K .......... .......... .......... .......... .......... 35% 9.08M 2s
+  5950K .......... .......... .......... .......... .......... 35% 7.13M 2s
+  6000K .......... .......... .......... .......... .......... 35% 6.25M 2s
+  6050K .......... .......... .......... .......... .......... 36% 8.84M 2s
+  6100K .......... .......... .......... .......... .......... 36% 5.84M 2s
+  6150K .......... .......... .......... .......... .......... 36% 11.2M 2s
+  6200K .......... .......... .......... .......... .......... 37% 7.76M 2s
+  6250K .......... .......... .......... .......... .......... 37% 6.29M 2s
+  6300K .......... .......... .......... .......... .......... 37% 8.58M 2s
+  6350K .......... .......... .......... .......... .......... 37% 11.8M 2s
+  6400K .......... .......... .......... .......... .......... 38% 5.08M 2s
+  6450K .......... .......... .......... .......... .......... 38% 8.07M 2s
+  6500K .......... .......... .......... .......... .......... 38% 8.61M 1s
+  6550K .......... .......... .......... .......... .......... 39% 9.71M 1s
+  6600K .......... .......... .......... .......... .......... 39% 6.33M 1s
+  6650K .......... .......... .......... .......... .......... 39% 8.06M 1s
+  6700K .......... .......... .......... .......... .......... 40% 8.29M 1s
+  6750K .......... .......... .......... .......... .......... 40% 10.4M 1s
+  6800K .......... .......... .......... .......... .......... 40% 5.07M 1s
+  6850K .......... .......... .......... .......... .......... 40% 6.29M 1s
+  6900K .......... .......... .......... .......... .......... 41% 11.7M 1s
+  6950K .......... .......... .......... .......... .......... 41% 7.06M 1s
+  7000K .......... .......... .......... .......... .......... 41% 7.08M 1s
+  7050K .......... .......... .......... .......... .......... 42% 7.42M 1s
+  7100K .......... .......... .......... .......... .......... 42% 9.58M 1s
+  7150K .......... .......... .......... .......... .......... 42% 8.04M 1s
+  7200K .......... .......... .......... .......... .......... 42% 5.66M 1s
+  7250K .......... .......... .......... .......... .......... 43% 4.50M 1s
+  7300K .......... .......... .......... .......... .......... 43% 70.7M 1s
+  7350K .......... .......... .......... .......... .......... 43% 7.57M 1s
+  7400K .......... .......... .......... .......... .......... 44% 4.80M 1s
+  7450K .......... .......... .......... .......... .......... 44% 11.9M 1s
+  7500K .......... .......... .......... .......... .......... 44% 11.8M 1s
+  7550K .......... .......... .......... .......... .......... 45% 7.43M 1s
+  7600K .......... .......... .......... .......... .......... 45% 4.66M 1s
+  7650K .......... .......... .......... .......... .......... 45% 11.6M 1s
+  7700K .......... .......... .......... .......... .......... 45% 11.1M 1s
+  7750K .......... .......... .......... .......... .......... 46% 4.84M 1s
+  7800K .......... .......... .......... .......... .......... 46% 8.89M 1s
+  7850K .......... .......... .......... .......... .......... 46% 11.0M 1s
+  7900K .......... .......... .......... .......... .......... 47% 8.41M 1s
+  7950K .......... .......... .......... .......... .......... 47% 5.71M 1s
+  8000K .......... .......... .......... .......... .......... 47% 6.77M 1s
+  8050K .......... .......... .......... .......... .......... 48% 10.6M 1s
+  8100K .......... .......... .......... .......... .......... 48% 5.80M 1s
+  8150K .......... .......... .......... .......... .......... 48% 9.53M 1s
+  8200K .......... .......... .......... .......... .......... 48% 7.77M 1s
+  8250K .......... .......... .......... .......... .......... 49% 6.74M 1s
+  8300K .......... .......... .......... .......... .......... 49% 9.67M 1s
+  8350K .......... .......... .......... .......... .......... 49% 8.30M 1s
+  8400K .......... .......... .......... .......... .......... 50% 6.16M 1s
+  8450K .......... .......... .......... .......... .......... 50% 7.81M 1s
+  8500K .......... .......... .......... .......... .......... 50% 10.6M 1s
+  8550K .......... .......... .......... .......... .......... 51% 6.97M 1s
+  8600K .......... .......... .......... .......... .......... 51% 7.28M 1s
+  8650K .......... .......... .......... .......... .......... 51% 8.65M 1s
+  8700K .......... .......... .......... .......... .......... 51% 8.83M 1s
+  8750K .......... .......... .......... .......... .......... 52% 8.34M 1s
+  8800K .......... .......... .......... .......... .......... 52% 6.16M 1s
+  8850K .......... .......... .......... .......... .......... 52% 7.06M 1s
+  8900K .......... .......... .......... .......... .......... 53% 8.13M 1s
+  8950K .......... .......... .......... .......... .......... 53% 8.98M 1s
+  9000K .......... .......... .......... .......... .......... 53% 7.76M 1s
+  9050K .......... .......... .......... .......... .......... 53% 7.66M 1s
+  9100K .......... .......... .......... .......... .......... 54% 8.77M 1s
+  9150K .......... .......... .......... .......... .......... 54% 9.49M 1s
+  9200K .......... .......... .......... .......... .......... 54% 4.58M 1s
+  9250K .......... .......... .......... .......... .......... 55% 4.80M 1s
+  9300K .......... .......... .......... .......... .......... 55% 11.7M 1s
+  9350K .......... .......... .......... .......... .......... 55% 11.1M 1s
+  9400K .......... .......... .......... .......... .......... 56% 8.28M 1s
+  9450K .......... .......... .......... .......... .......... 56% 4.91M 1s
+  9500K .......... .......... .......... .......... .......... 56% 11.7M 1s
+  9550K .......... .......... .......... .......... .......... 56% 11.7M 1s
+  9600K .......... .......... .......... .......... .......... 57% 4.51M 1s
+  9650K .......... .......... .......... .......... .......... 57% 7.63M 1s
+  9700K .......... .......... .......... .......... .......... 57% 8.73M 1s
+  9750K .......... .......... .......... .......... .......... 58% 7.30M 1s
+  9800K .......... .......... .......... .......... .......... 58% 7.59M 1s
+  9850K .......... .......... .......... .......... .......... 58% 10.1M 1s
+  9900K .......... .......... .......... .......... .......... 59% 4.70M 1s
+  9950K .......... .......... .......... .......... .......... 59% 12.5M 1s
+ 10000K .......... .......... .......... .......... .......... 59% 7.65M 1s
+ 10050K .......... .......... .......... .......... .......... 59% 4.51M 1s
+ 10100K .......... .......... .......... .......... .......... 60% 10.2M 1s
+ 10150K .......... .......... .......... .......... .......... 60% 12.6M 1s
+ 10200K .......... .......... .......... .......... .......... 60% 6.55M 1s
+ 10250K .......... .......... .......... .......... .......... 61% 5.97M 1s
+ 10300K .......... .......... .......... .......... .......... 61% 10.4M 1s
+ 10350K .......... .......... .......... .......... .......... 61% 12.5M 1s
+ 10400K .......... .......... .......... .......... .......... 61% 6.33M 1s
+ 10450K .......... .......... .......... .......... .......... 62% 5.49M 1s
  10500K .......... .......... .......... .......... .......... 62% 11.5M 1s
- 10550K .......... .......... .......... .......... .......... 62% 11.3M 1s
- 10600K .......... .......... .......... .......... .......... 63% 9.63M 1s
- 10650K .......... .......... .......... .......... .......... 63% 7.99M 1s
- 10700K .......... .......... .......... .......... .......... 63% 8.14M 1s
- 10750K .......... .......... .......... .......... .......... 64% 11.7M 1s
- 10800K .......... .......... .......... .......... .......... 64% 9.13M 1s
- 10850K .......... .......... .......... .......... .......... 64% 7.19M 1s
- 10900K .......... .......... .......... .......... .......... 64% 8.68M 1s
- 10950K .......... .......... .......... .......... .......... 65% 9.22M 1s
- 11000K .......... .......... .......... .......... .......... 65% 11.5M 1s
- 11050K .......... .......... .......... .......... .......... 65% 9.30M 1s
- 11100K .......... .......... .......... .......... .......... 66% 8.91M 1s
- 11150K .......... .......... .......... .......... .......... 66% 8.73M 1s
- 11200K .......... .......... .......... .......... .......... 66% 8.32M 1s
- 11250K .......... .......... .......... .......... .......... 67% 8.60M 1s
- 11300K .......... .......... .......... .......... .......... 67% 9.95M 1s
- 11350K .......... .......... .......... .......... .......... 67% 7.89M 1s
- 11400K .......... .......... .......... .......... .......... 67% 11.7M 1s
- 11450K .......... .......... .......... .......... .......... 68% 11.7M 1s
- 11500K .......... .......... .......... .......... .......... 68% 8.62M 1s
- 11550K .......... .......... .......... .......... .......... 68% 9.88M 1s
- 11600K .......... .......... .......... .......... .......... 69% 6.21M 1s
- 11650K .......... .......... .......... .......... .......... 69% 11.7M 1s
- 11700K .......... .......... .......... .......... .......... 69% 11.1M 1s
- 11750K .......... .......... .......... .......... .......... 69% 10.1M 1s
- 11800K .......... .......... .......... .......... .......... 70% 6.90M 1s
- 11850K .......... .......... .......... .......... .......... 70% 11.1M 1s
- 11900K .......... .......... .......... .......... .......... 70% 10.5M 1s
- 11950K .......... .......... .......... .......... .......... 71% 9.48M 1s
- 12000K .......... .......... .......... .......... .......... 71% 7.99M 1s
- 12050K .......... .......... .......... .......... .......... 71% 8.48M 1s
- 12100K .......... .......... .......... .......... .......... 72% 11.7M 1s
- 12150K .......... .......... .......... .......... .......... 72% 9.06M 1s
- 12200K .......... .......... .......... .......... .......... 72% 9.32M 1s
- 12250K .......... .......... .......... .......... .......... 72% 7.06M 1s
- 12300K .......... .......... .......... .......... .......... 73% 11.7M 1s
- 12350K .......... .......... .......... .......... .......... 73% 10.5M 1s
- 12400K .......... .......... .......... .......... .......... 73% 7.68M 1s
- 12450K .......... .......... .......... .......... .......... 74% 11.1M 1s
- 12500K .......... .......... .......... .......... .......... 74% 7.52M 0s
- 12550K .......... .......... .......... .......... .......... 74% 11.7M 0s
- 12600K .......... .......... .......... .......... .......... 75% 10.5M 0s
- 12650K .......... .......... .......... .......... .......... 75% 9.17M 0s
- 12700K .......... .......... .......... .......... .......... 75% 11.1M 0s
- 12750K .......... .......... .......... .......... .......... 75% 7.86M 0s
- 12800K .......... .......... .......... .......... .......... 76% 9.08M 0s
- 12850K .......... .......... .......... .......... .......... 76% 6.68M 0s
- 12900K .......... .......... .......... .......... .......... 76% 9.69M 0s
- 12950K .......... .......... .......... .......... .......... 77% 11.1M 0s
- 13000K .......... .......... .......... .......... .......... 77% 12.4M 0s
- 13050K .......... .......... .......... .......... .......... 77% 11.1M 0s
- 13100K .......... .......... .......... .......... .......... 77% 7.24M 0s
- 13150K .......... .......... .......... .......... .......... 78% 10.4M 0s
- 13200K .......... .......... .......... .......... .......... 78% 8.36M 0s
- 13250K .......... .......... .......... .......... .......... 78% 11.7M 0s
- 13300K .......... .......... .......... .......... .......... 79% 7.36M 0s
- 13350K .......... .......... .......... .......... .......... 79% 10.5M 0s
- 13400K .......... .......... .......... .......... .......... 79% 10.5M 0s
- 13450K .......... .......... .......... .......... .......... 80% 11.1M 0s
- 13500K .......... .......... .......... .......... .......... 80% 11.7M 0s
- 13550K .......... .......... .......... .......... .......... 80% 7.39M 0s
- 13600K .......... .......... .......... .......... .......... 80% 8.72M 0s
- 13650K .......... .......... .......... .......... .......... 81% 9.96M 0s
- 13700K .......... .......... .......... .......... .......... 81% 11.1M 0s
- 13750K .......... .......... .......... .......... .......... 81% 8.87M 0s
- 13800K .......... .......... .......... .......... .......... 82% 9.69M 0s
- 13850K .......... .......... .......... .......... .......... 82% 10.5M 0s
- 13900K .......... .......... .......... .......... .......... 82% 9.96M 0s
- 13950K .......... .......... .......... .......... .......... 83% 11.7M 0s
- 14000K .......... .......... .......... .......... .......... 83% 6.78M 0s
- 14050K .......... .......... .......... .......... .......... 83% 9.69M 0s
- 14100K .......... .......... .......... .......... .......... 83% 9.67M 0s
- 14150K .......... .......... .......... .......... .......... 84% 11.7M 0s
- 14200K .......... .......... .......... .......... .......... 84% 9.94M 0s
- 14250K .......... .......... .......... .......... .......... 84% 10.5M 0s
- 14300K .......... .......... .......... .......... .......... 85% 8.88M 0s
- 14350K .......... .......... .......... .......... .......... 85% 11.1M 0s
- 14400K .......... .......... .......... .......... .......... 85% 7.96M 0s
- 14450K .......... .......... .......... .......... .......... 85% 10.5M 0s
- 14500K .......... .......... .......... .......... .......... 86% 11.1M 0s
- 14550K .......... .......... .......... .......... .......... 86% 9.47M 0s
- 14600K .......... .......... .......... .......... .......... 86% 10.5M 0s
- 14650K .......... .......... .......... .......... .......... 87% 9.10M 0s
- 14700K .......... .......... .......... .......... .......... 87% 11.1M 0s
- 14750K .......... .......... .......... .......... .......... 87% 11.0M 0s
- 14800K .......... .......... .......... .......... .......... 88% 8.00M 0s
- 14850K .......... .......... .......... .......... .......... 88% 9.97M 0s
- 14900K .......... .......... .......... .......... .......... 88% 9.28M 0s
- 14950K .......... .......... .......... .......... .......... 88% 10.5M 0s
- 15000K .......... .......... .......... .......... .......... 89% 10.5M 0s
- 15050K .......... .......... .......... .......... .......... 89% 11.7M 0s
- 15100K .......... .......... .......... .......... .......... 89% 9.79M 0s
- 15150K .......... .......... .......... .......... .......... 90% 8.94M 0s
- 15200K .......... .......... .......... .......... .......... 90% 7.99M 0s
- 15250K .......... .......... .......... .......... .......... 90% 10.5M 0s
- 15300K .......... .......... .......... .......... .......... 91% 11.7M 0s
- 15350K .......... .......... .......... .......... .......... 91% 8.13M 0s
- 15400K .......... .......... .......... .......... .......... 91% 11.0M 0s
- 15450K .......... .......... .......... .......... .......... 91% 10.5M 0s
- 15500K .......... .......... .......... .......... .......... 92% 11.7M 0s
- 15550K .......... .......... .......... .......... .......... 92% 9.94M 0s
- 15600K .......... .......... .......... .......... .......... 92% 7.28M 0s
- 15650K .......... .......... .......... .......... .......... 93% 10.5M 0s
- 15700K .......... .......... .......... .......... .......... 93% 11.7M 0s
- 15750K .......... .......... .......... .......... .......... 93% 9.96M 0s
- 15800K .......... .......... .......... .......... .......... 93% 7.71M 0s
- 15850K .......... .......... .......... .......... .......... 94% 11.1M 0s
- 15900K .......... .......... .......... .......... .......... 94% 12.5M 0s
- 15950K .......... .......... .......... .......... .......... 94% 11.1M 0s
- 16000K .......... .......... .......... .......... .......... 95% 7.99M 0s
- 16050K .......... .......... .......... .......... .......... 95% 8.61M 0s
- 16100K .......... .......... .......... .......... .......... 95% 10.5M 0s
- 16150K .......... .......... .......... .......... .......... 96% 11.1M 0s
- 16200K .......... .......... .......... .......... .......... 96% 11.7M 0s
- 16250K .......... .......... .......... .......... .......... 96% 11.7M 0s
- 16300K .......... .......... .......... .......... .......... 96% 7.51M 0s
- 16350K .......... .......... .......... .......... .......... 97% 11.7M 0s
- 16400K .......... .......... .......... .......... .......... 97% 8.68M 0s
- 16450K .......... .......... .......... .......... .......... 97% 10.5M 0s
- 16500K .......... .......... .......... .......... .......... 98% 11.0M 0s
- 16550K .......... .......... .......... .......... .......... 98% 8.36M 0s
- 16600K .......... .......... .......... .......... .......... 98% 10.4M 0s
- 16650K .......... .......... .......... .......... .......... 99% 12.5M 0s
- 16700K .......... .......... .......... .......... .......... 99% 11.1M 0s
- 16750K .......... .......... .......... .......... .......... 99% 11.2M 0s
- 16800K .......... .......... .......... .......... .......... 99% 6.77M 0s
- 16850K .......... .                                          100%  702M=1.9s
+ 10550K .......... .......... .......... .......... .......... 62% 10.4M 1s
+ 10600K .......... .......... .......... .......... .......... 63% 7.92M 1s
+ 10650K .......... .......... .......... .......... .......... 63% 5.71M 1s
+ 10700K .......... .......... .......... .......... .......... 63% 11.7M 1s
+ 10750K .......... .......... .......... .......... .......... 64% 4.71M 1s
+ 10800K .......... .......... .......... .......... .......... 64% 9.09M 1s
+ 10850K .......... .......... .......... .......... .......... 64% 8.52M 1s
+ 10900K .......... .......... .......... .......... .......... 64% 7.26M 1s
+ 10950K .......... .......... .......... .......... .......... 65% 6.53M 1s
+ 11000K .......... .......... .......... .......... .......... 65% 11.6M 1s
+ 11050K .......... .......... .......... .......... .......... 65% 10.5M 1s
+ 11100K .......... .......... .......... .......... .......... 66% 5.69M 1s
+ 11150K .......... .......... .......... .......... .......... 66% 7.65M 1s
+ 11200K .......... .......... .......... .......... .......... 66% 8.66M 1s
+ 11250K .......... .......... .......... .......... .......... 67% 7.00M 1s
+ 11300K .......... .......... .......... .......... .......... 67% 8.28M 1s
+ 11350K .......... .......... .......... .......... .......... 67% 7.59M 1s
+ 11400K .......... .......... .......... .......... .......... 67% 10.9M 1s
+ 11450K .......... .......... .......... .......... .......... 68% 9.53M 1s
+ 11500K .......... .......... .......... .......... .......... 68% 6.02M 1s
+ 11550K .......... .......... .......... .......... .......... 68% 7.71M 1s
+ 11600K .......... .......... .......... .......... .......... 69% 8.75M 1s
+ 11650K .......... .......... .......... .......... .......... 69% 7.28M 1s
+ 11700K .......... .......... .......... .......... .......... 69% 7.63M 1s
+ 11750K .......... .......... .......... .......... .......... 69% 7.36M 1s
+ 11800K .......... .......... .......... .......... .......... 70% 11.1M 1s
+ 11850K .......... .......... .......... .......... .......... 70% 7.45M 1s
+ 11900K .......... .......... .......... .......... .......... 70% 7.61M 1s
+ 11950K .......... .......... .......... .......... .......... 71% 7.06M 1s
+ 12000K .......... .......... .......... .......... .......... 71% 8.83M 1s
+ 12050K .......... .......... .......... .......... .......... 71% 7.13M 1s
+ 12100K .......... .......... .......... .......... .......... 72% 5.83M 1s
+ 12150K .......... .......... .......... .......... .......... 72% 11.9M 1s
+ 12200K .......... .......... .......... .......... .......... 72% 10.3M 1s
+ 12250K .......... .......... .......... .......... .......... 72% 7.44M 1s
+ 12300K .......... .......... .......... .......... .......... 73% 6.23M 1s
+ 12350K .......... .......... .......... .......... .......... 73% 11.0M 1s
+ 12400K .......... .......... .......... .......... .......... 73% 7.64M 1s
+ 12450K .......... .......... .......... .......... .......... 74% 5.77M 1s
+ 12500K .......... .......... .......... .......... .......... 74% 9.24M 1s
+ 12550K .......... .......... .......... .......... .......... 74% 11.7M 1s
+ 12600K .......... .......... .......... .......... .......... 75% 7.71M 1s
+ 12650K .......... .......... .......... .......... .......... 75% 5.79M 1s
+ 12700K .......... .......... .......... .......... .......... 75% 11.1M 1s
+ 12750K .......... .......... .......... .......... .......... 75% 11.1M 1s
+ 12800K .......... .......... .......... .......... .......... 76% 5.09M 1s
+ 12850K .......... .......... .......... .......... .......... 76% 7.46M 1s
+ 12900K .......... .......... .......... .......... .......... 76% 9.47M 1s
+ 12950K .......... .......... .......... .......... .......... 77% 11.1M 1s
+ 13000K .......... .......... .......... .......... .......... 77% 6.09M 1s
+ 13050K .......... .......... .......... .......... .......... 77% 7.33M 1s
+ 13100K .......... .......... .......... .......... .......... 77% 10.5M 1s
+ 13150K .......... .......... .......... .......... .......... 78% 11.1M 0s
+ 13200K .......... .......... .......... .......... .......... 78% 5.21M 0s
+ 13250K .......... .......... .......... .......... .......... 78% 7.87M 0s
+ 13300K .......... .......... .......... .......... .......... 79% 9.96M 0s
+ 13350K .......... .......... .......... .......... .......... 79% 10.4M 0s
+ 13400K .......... .......... .......... .......... .......... 79% 5.52M 0s
+ 13450K .......... .......... .......... .......... .......... 80% 9.68M 0s
+ 13500K .......... .......... .......... .......... .......... 80% 10.5M 0s
+ 13550K .......... .......... .......... .......... .......... 80% 9.96M 0s
+ 13600K .......... .......... .......... .......... .......... 80% 2.78M 0s
+ 13650K .......... .......... .......... .......... .......... 81% 11.1M 0s
+ 13700K .......... .......... .......... .......... .......... 81% 1.55M 0s
+ 13750K .......... .......... .......... .......... .......... 81% 4.75M 0s
+ 13800K .......... .......... .......... .......... .......... 82% 58.8M 0s
+ 13850K .......... .......... .......... .......... .......... 82% 70.5M 0s
+ 13900K .......... .......... .......... .......... .......... 82% 11.8M 0s
+ 13950K .......... .......... .......... .......... .......... 83% 4.75M 0s
+ 14000K .......... .......... .......... .......... .......... 83% 4.98M 0s
+ 14050K .......... .......... .......... .......... .......... 83% 7.65M 0s
+ 14100K .......... .......... .......... .......... .......... 83% 4.59M 0s
+ 14150K .......... .......... .......... .......... .......... 84% 7.46M 0s
+ 14200K .......... .......... .......... .......... .......... 84% 4.67M 0s
+ 14250K .......... .......... .......... .......... .......... 84% 7.73M 0s
+ 14300K .......... .......... .......... .......... .......... 85% 8.00M 0s
+ 14350K .......... .......... .......... .......... .......... 85% 4.37M 0s
+ 14400K .......... .......... .......... .......... .......... 85% 6.54M 0s
+ 14450K .......... .......... .......... .......... .......... 85% 4.03M 0s
+ 14500K .......... .......... .......... .......... .......... 86% 8.41M 0s
+ 14550K .......... .......... .......... .......... .......... 86% 5.05M 0s
+ 14600K .......... .......... .......... .......... .......... 86% 7.83M 0s
+ 14650K .......... .......... .......... .......... .......... 87% 6.54M 0s
+ 14700K .......... .......... .......... .......... .......... 87% 4.93M 0s
+ 14750K .......... .......... .......... .......... .......... 87% 8.29M 0s
+ 14800K .......... .......... .......... .......... .......... 88% 4.53M 0s
+ 14850K .......... .......... .......... .......... .......... 88% 6.29M 0s
+ 14900K .......... .......... .......... .......... .......... 88% 5.51M 0s
+ 14950K .......... .......... .......... .......... .......... 88% 7.43M 0s
+ 15000K .......... .......... .......... .......... .......... 89% 7.92M 0s
+ 15050K .......... .......... .......... .......... .......... 89% 5.78M 0s
+ 15100K .......... .......... .......... .......... .......... 89% 5.60M 0s
+ 15150K .......... .......... .......... .......... .......... 90% 5.58M 0s
+ 15200K .......... .......... .......... .......... .......... 90% 5.02M 0s
+ 15250K .......... .......... .......... .......... .......... 90% 8.29M 0s
+ 15300K .......... .......... .......... .......... .......... 91% 5.18M 0s
+ 15350K .......... .......... .......... .......... .......... 91% 6.74M 0s
+ 15400K .......... .......... .......... .......... .......... 91% 6.58M 0s
+ 15450K .......... .......... .......... .......... .......... 91% 5.15M 0s
+ 15500K .......... .......... .......... .......... .......... 92% 7.61M 0s
+ 15550K .......... .......... .......... .......... .......... 92% 6.40M 0s
+ 15600K .......... .......... .......... .......... .......... 92% 4.46M 0s
+ 15650K .......... .......... .......... .......... .......... 93% 6.88M 0s
+ 15700K .......... .......... .......... .......... .......... 93% 5.51M 0s
+ 15750K .......... .......... .......... .......... .......... 93% 6.32M 0s
+ 15800K .......... .......... .......... .......... .......... 93% 6.59M 0s
+ 15850K .......... .......... .......... .......... .......... 94% 7.29M 0s
+ 15900K .......... .......... .......... .......... .......... 94% 5.29M 0s
+ 15950K .......... .......... .......... .......... .......... 94% 9.45M 0s
+ 16000K .......... .......... .......... .......... .......... 95% 3.81M 0s
+ 16050K .......... .......... .......... .......... .......... 95% 7.49M 0s
+ 16100K .......... .......... .......... .......... .......... 95% 6.10M 0s
+ 16150K .......... .......... .......... .......... .......... 96% 5.33M 0s
+ 16200K .......... .......... .......... .......... .......... 96% 7.66M 0s
+ 16250K .......... .......... .......... .......... .......... 96% 6.10M 0s
+ 16300K .......... .......... .......... .......... .......... 96% 6.72M 0s
+ 16350K .......... .......... .......... .......... .......... 97% 6.41M 0s
+ 16400K .......... .......... .......... .......... .......... 97% 4.44M 0s
+ 16450K .......... .......... .......... .......... .......... 97% 6.15M 0s
+ 16500K .......... .......... .......... .......... .......... 98% 5.01M 0s
+ 16550K .......... .......... .......... .......... .......... 98% 9.05M 0s
+ 16600K .......... .......... .......... .......... .......... 98% 3.50M 0s
+ 16650K .......... .......... .......... .......... .......... 99% 12.1M 0s
+ 16700K .......... .......... .......... .......... .......... 99% 9.44M 0s
+ 16750K .......... .......... .......... .......... .......... 99% 4.20M 0s
+ 16800K .......... .......... .......... .......... .......... 99% 6.75M 0s
+ 16850K .......... .                                          100%  107M=2.4s
 
-2018-02-12 09:13:39 (8.80 MB/s) - 'guile-2.2.3.tar.gz' saved [17266587/17266587]
+2018-02-12 22:23:02 (6.89 MB/s) - 'guile-2.2.3.tar.gz' saved [17266587/17266587]
 
 + tar -xvf guile-2.2.3.tar.gz
 guile-2.2.3/
@@ -4801,8 +4819,8 @@ checking for special C compiler options needed for large files... no
 checking for _FILE_OFFSET_BITS value needed for large files... no
 configure: autobuild project... GNU Guile
 configure: autobuild revision... 2.2.3
-configure: autobuild hostname... 97787c758e70
-configure: autobuild timestamp... 20180212T091341Z
+configure: autobuild hostname... aa62dee47a55
+configure: autobuild timestamp... 20180212T222304Z
 checking how to run the C preprocessor... gcc -std=gnu11 -E
 checking for a sed that does not truncate output... /bin/sed
 checking for gawk... (cached) gawk
@@ -5444,8 +5462,8 @@ checking whether wcstok is declared without a macro... yes
 checking whether wcswidth is declared without a macro... yes
 checking for flexible array member... yes
 checking whether localtime_r is declared... yes
-checking whether localtime_r is compatible with its POSIX signature... ../configure: line 36916: test: =: unary operator expected
-yes
+checking whether localtime_r is compatible with its POSIX signature... yes
+../configure: line 36916: test: =: unary operator expected
 checking for unsetenv... yes
 checking for unsetenv() return type... int
 checking whether unsetenv obeys POSIX... yes
@@ -5964,40 +5982,40 @@ make[2]: Entering directory `/home/opencog/guile-2.2.3/build/lib'
   GEN      limits.h
   GEN      stdint.h
   GEN      sys/types.h
+  GEN      langinfo.h
+  GEN      poll.h
   GEN      sys/uio.h
   GEN      sys/file.h
-  GEN      dirent.h
+  GEN      sys/select.h
+  GEN      sys/socket.h
+  GEN      sys/stat.h
+  GEN      sys/time.h
+  GEN      time.h
   GEN      sys/times.h
+  GEN      unistd.h
+  GEN      wchar.h
+  GEN      dirent.h
   GEN      fcntl.h
   GEN      arpa/inet.h
   GEN      iconv.h
-  GEN      langinfo.h
   GEN      locale.h
-  GEN      netdb.h
-  GEN      poll.h
-  GEN      signal.h
   GEN      math.h
+  GEN      netdb.h
+  GEN      signal.h
   GEN      stdio.h
   GEN      stdlib.h
   GEN      string.h
-  GEN      sys/select.h
-  GEN      time.h
-  GEN      unistd.h
-  GEN      wchar.h
-  GEN      sys/socket.h
-  GEN      sys/time.h
-  GEN      sys/stat.h
 make  all-recursive
 make[3]: Entering directory `/home/opencog/guile-2.2.3/build/lib'
 make[4]: Entering directory `/home/opencog/guile-2.2.3/build/lib'
-  CC       binary-io.lo
   CC       accept4.lo
+  CC       binary-io.lo
   CC       c-ctype.lo
   CC       c-strcasecmp.lo
   CC       c-strncasecmp.lo
   CC       dirname-lgpl.lo
-  CC       basename-lgpl.lo
   CC       stripslash.lo
+  CC       basename-lgpl.lo
   CC       full-read.lo
   CC       full-write.lo
   CC       localcharset.lo
@@ -6026,9 +6044,9 @@ guile="`echo guile | /bin/sed -e 's,x,x,'`" ; guild="`echo guild | /bin/sed -e '
 guile="`echo guile | /bin/sed -e 's,x,x,'`" ; guild="`echo guild | /bin/sed -e 's,x,x,'`" ; installed_guile="/usr/local/bin/$guile" ; /bin/sed -e "s|[@]PACKAGE_NAME[@]|GNU Guile|g" -e "s|[@]PACKAGE_BUGREPORT[@]|bug-guile@gnu.org|g" -e "s|[@]GUILE_EFFECTIVE_VERSION[@]|2.2|g" -e "s|[@]GUILE_VERSION[@]|2.2.3|g" -e "s|[@]GUILE_CFLAGS[@]|-pthread|g" -e "s|[@]GUILE_LIBS[@]|-lcrypt  -lm|g" -e "s|[@]LIBGUILE_INTERFACE[@]|4:0:3|g" -e "s|[@]BDW_GC_CFLAGS[@]||g" -e "s|[@]BDW_GC_LIBS[@]|-lgc  |g" -e "s|[@]LIB_CLOCK_GETTIME[@]||g" -e "s|[@]LIBGMP[@]|-lgmp|g" -e "s|[@]LIBLTDL[@]|-lltdl|g" -e "s|[@]LIBFFI_LIBS[@]|-lffi  |g" -e "s|[@]LIBUNISTRING[@]|-lunistring|g" -e "s|[@]LIBICONV[@]||g" -e "s|[@]LIBINTL[@]||g" -e "s|[@]LIBSOCKET[@]||g" -e "s|[@]SERVENT_LIB[@]||g" -e "s|[@]HOSTENT_LIB[@]||g" -e "s|[@]GETADDRINFO_LIB[@]||g" -e "s|[@]INET_NTOP_LIB[@]||g" -e "s|[@]INET_PTON_LIB[@]||g" -e "s|[@]PKG_CONFIG[@]|/usr/bin/pkg-config|g" -e "s|[@]pkgconfigdir[@]|/usr/local/lib/pkgconfig|g" -e "s|[@]prefix[@]|/usr/local|g" -e "s|[@]exec_prefix[@]|/usr/local|g" -e "s|[@]bindir[@]|/usr/local/bin|g" -e "s|[@]libdir[@]|/usr/local/lib|g" -e "s|[@]includedir[@]|/usr/local/include|g" -e "s|[@]datarootdir[@]|/usr/local/share|g" -e "s|[@]datadir[@]|/usr/local/share|g" -e "s|[@]sitedir[@]|/usr/local/share/guile/site/2.2|g" -e "s|[@]guile[@]|$guile|g" -e "s|[@]guild[@]|$guild|g" -e "s|[@]installed_guile[@]|$installed_guile|g" < "../../meta/guild.in" > "guild.out"
 guile="`echo guile | /bin/sed -e 's,x,x,'`" ; guild="`echo guild | /bin/sed -e 's,x,x,'`" ; installed_guile="/usr/local/bin/$guile" ; /bin/sed -e "s|[@]PACKAGE_NAME[@]|GNU Guile|g" -e "s|[@]PACKAGE_BUGREPORT[@]|bug-guile@gnu.org|g" -e "s|[@]GUILE_EFFECTIVE_VERSION[@]|2.2|g" -e "s|[@]GUILE_VERSION[@]|2.2.3|g" -e "s|[@]GUILE_CFLAGS[@]|-pthread|g" -e "s|[@]GUILE_LIBS[@]|-lcrypt  -lm|g" -e "s|[@]LIBGUILE_INTERFACE[@]|4:0:3|g" -e "s|[@]BDW_GC_CFLAGS[@]||g" -e "s|[@]BDW_GC_LIBS[@]|-lgc  |g" -e "s|[@]LIB_CLOCK_GETTIME[@]||g" -e "s|[@]LIBGMP[@]|-lgmp|g" -e "s|[@]LIBLTDL[@]|-lltdl|g" -e "s|[@]LIBFFI_LIBS[@]|-lffi  |g" -e "s|[@]LIBUNISTRING[@]|-lunistring|g" -e "s|[@]LIBICONV[@]||g" -e "s|[@]LIBINTL[@]||g" -e "s|[@]LIBSOCKET[@]||g" -e "s|[@]SERVENT_LIB[@]||g" -e "s|[@]HOSTENT_LIB[@]||g" -e "s|[@]GETADDRINFO_LIB[@]||g" -e "s|[@]INET_NTOP_LIB[@]||g" -e "s|[@]INET_PTON_LIB[@]||g" -e "s|[@]PKG_CONFIG[@]|/usr/bin/pkg-config|g" -e "s|[@]pkgconfigdir[@]|/usr/local/lib/pkgconfig|g" -e "s|[@]prefix[@]|/usr/local|g" -e "s|[@]exec_prefix[@]|/usr/local|g" -e "s|[@]bindir[@]|/usr/local/bin|g" -e "s|[@]libdir[@]|/usr/local/lib|g" -e "s|[@]includedir[@]|/usr/local/include|g" -e "s|[@]datarootdir[@]|/usr/local/share|g" -e "s|[@]datadir[@]|/usr/local/share|g" -e "s|[@]sitedir[@]|/usr/local/share/guile/site/2.2|g" -e "s|[@]guile[@]|$guile|g" -e "s|[@]guild[@]|$guild|g" -e "s|[@]installed_guile[@]|$installed_guile|g" < "../../meta/guile-2.2.pc.in" > "guile-2.2.pc.out"
 chmod +x "guild.out"
-mv "guile-2.2.pc.out" "guile-2.2.pc"
-mv "guild.out" "guild"
 chmod +x "guile-config.out"
+mv "guild.out" "guild"
+mv "guile-2.2.pc.out" "guile-2.2.pc"
 mv "guile-config.out" "guile-config"
 make[2]: Leaving directory `/home/opencog/guile-2.2.3/build/meta'
 Making all in libguile
@@ -6135,8 +6153,8 @@ make[2]: Entering directory `/home/opencog/guile-2.2.3/build/libguile'
   SNARF  vm.x
   SNARF  vports.x
   SNARF  weak-set.x
-  SNARF  weak-vector.x
   SNARF  weak-table.x
+  SNARF  weak-vector.x
   SNARF  posix.x
   SNARF  net_db.x
   SNARF  socket.x
@@ -6144,8 +6162,8 @@ make[2]: Entering directory `/home/opencog/guile-2.2.3/build/libguile'
 make  all-am
 make[3]: Entering directory `/home/opencog/guile-2.2.3/build/libguile'
   CC       libguile_2.2_la-alist.lo
-  CC       libguile_2.2_la-array-map.lo
   CC       libguile_2.2_la-array-handle.lo
+  CC       libguile_2.2_la-array-map.lo
   CC       libguile_2.2_la-arrays.lo
   CC       libguile_2.2_la-async.lo
   CC       libguile_2.2_la-atomic.lo
@@ -6254,19 +6272,19 @@ make[3]: Entering directory `/home/opencog/guile-2.2.3/build/libguile'
   CC       libguile_2.2_la-dynl.lo
   CC       libguile_2.2_la-posix.lo
   CC       libguile_2.2_la-net_db.lo
+  CC       libguile_2.2_la-socket.lo
 ../../libguile/posix.c: In function 'scm_nice':
 ../../libguile/posix.c:1891:8: warning: ignoring return value of 'nice', declared with attribute warn_unused_result [-Wunused-result]
    nice (scm_to_int (incr));
         ^
-  CC       libguile_2.2_la-socket.lo
   CC       libguile_2.2_la-regex-posix.lo
   CC       guile-guile.o
   GEN      c-tokenize.o
   GEN      guile_filter_doc_snarfage
-  SNARF  array-handle.doc
-  SNARF  arrays.doc
   SNARF  alist.doc
+  SNARF  array-handle.doc
   SNARF  array-map.doc
+  SNARF  arrays.doc
   SNARF  async.doc
   SNARF  atomic.doc
   SNARF  backtrace.doc
@@ -6281,8 +6299,8 @@ make[3]: Entering directory `/home/opencog/guile-2.2.3/build/libguile'
   SNARF  deprecation.doc
   SNARF  dynl.doc
   SNARF  dynwind.doc
-  SNARF  eq.doc
   SNARF  error.doc
+  SNARF  eq.doc
   SNARF  eval.doc
   SNARF  evalext.doc
   SNARF  expand.doc
@@ -6376,14 +6394,14 @@ Making all in bootstrap
 make[2]: Entering directory `/home/opencog/guile-2.2.3/build/bootstrap'
   BOOTSTRAP GUILEC ice-9/eval.go
 wrote `ice-9/eval.go'
-  BOOTSTRAP GUILEC ice-9/psyntax-pp.go
   BOOTSTRAP GUILEC language/cps/intmap.go
+  BOOTSTRAP GUILEC ice-9/psyntax-pp.go
   BOOTSTRAP GUILEC language/cps/intset.go
   BOOTSTRAP GUILEC language/cps/utils.go
   BOOTSTRAP GUILEC ice-9/vlist.go
+  BOOTSTRAP GUILEC srfi/srfi-1.go
   BOOTSTRAP GUILEC language/tree-il.go
   BOOTSTRAP GUILEC language/tree-il/analyze.go
-  BOOTSTRAP GUILEC srfi/srfi-1.go
 wrote `srfi/srfi-1.go'
   BOOTSTRAP GUILEC language/tree-il/canonicalize.go
 wrote `language/cps/utils.go'
@@ -6392,19 +6410,19 @@ wrote `language/tree-il/canonicalize.go'
   BOOTSTRAP GUILEC language/tree-il/debug.go
 wrote `ice-9/vlist.go'
   BOOTSTRAP GUILEC language/tree-il/effects.go
-wrote `language/cps/intset.go'
-  BOOTSTRAP GUILEC language/tree-il/fix-letrec.go
 wrote `language/cps/intmap.go'
-  BOOTSTRAP GUILEC language/tree-il/optimize.go
+  BOOTSTRAP GUILEC language/tree-il/fix-letrec.go
 wrote `language/tree-il/debug.go'
+  BOOTSTRAP GUILEC language/tree-il/optimize.go
+wrote `language/cps/intset.go'
   BOOTSTRAP GUILEC language/tree-il/peval.go
 wrote `language/tree-il.go'
   BOOTSTRAP GUILEC language/tree-il/primitives.go
 wrote `language/tree-il/optimize.go'
   BOOTSTRAP GUILEC language/tree-il/spec.go
-wrote `language/tree-il/analyze.go'
-  BOOTSTRAP GUILEC language/cps.go
 wrote `language/tree-il/spec.go'
+  BOOTSTRAP GUILEC language/cps.go
+wrote `language/tree-il/analyze.go'
   BOOTSTRAP GUILEC language/cps/closure-conversion.go
 wrote `language/tree-il/fix-letrec.go'
   BOOTSTRAP GUILEC language/cps/compile-bytecode.go
@@ -6418,13 +6436,13 @@ wrote `language/tree-il/compile-cps.go'
   BOOTSTRAP GUILEC language/cps/dce.go
 wrote `language/cps/contification.go'
   BOOTSTRAP GUILEC language/cps/effects-analysis.go
-wrote `ice-9/psyntax-pp.go'
+wrote `language/cps/dce.go'
   BOOTSTRAP GUILEC language/cps/elide-values.go
-wrote `language/cps/closure-conversion.go'
+wrote `ice-9/psyntax-pp.go'
   BOOTSTRAP GUILEC language/cps/handle-interrupts.go
 wrote `language/cps/cse.go'
-wrote `language/cps/dce.go'
   BOOTSTRAP GUILEC language/cps/licm.go
+wrote `language/cps/closure-conversion.go'
   BOOTSTRAP GUILEC language/cps/peel-loops.go
 wrote `language/cps/elide-values.go'
   BOOTSTRAP GUILEC language/cps/primitives.go
@@ -6432,13 +6450,13 @@ wrote `language/cps/handle-interrupts.go'
   BOOTSTRAP GUILEC language/cps/prune-bailouts.go
 wrote `language/cps/primitives.go'
   BOOTSTRAP GUILEC language/cps/prune-top-level-scopes.go
-wrote `language/cps/compile-bytecode.go'
+wrote `language/cps/prune-bailouts.go'
   BOOTSTRAP GUILEC language/cps/reify-primitives.go
 wrote `language/cps/peel-loops.go'
   BOOTSTRAP GUILEC language/cps/renumber.go
-wrote `language/cps/prune-bailouts.go'
-  BOOTSTRAP GUILEC language/cps/rotate-loops.go
 wrote `language/cps/prune-top-level-scopes.go'
+  BOOTSTRAP GUILEC language/cps/rotate-loops.go
+wrote `language/cps/compile-bytecode.go'
   BOOTSTRAP GUILEC language/cps/optimize.go
 wrote `language/cps/licm.go'
   BOOTSTRAP GUILEC language/cps/simplify.go
@@ -6448,11 +6466,11 @@ wrote `language/cps/optimize.go'
   BOOTSTRAP GUILEC language/cps/slot-allocation.go
 wrote `language/cps/effects-analysis.go'
   BOOTSTRAP GUILEC language/cps/spec.go
-wrote `language/cps/rotate-loops.go'
-  BOOTSTRAP GUILEC language/cps/specialize-primcalls.go
-wrote `language/cps/spec.go'
-  BOOTSTRAP GUILEC language/cps/specialize-numbers.go
 wrote `language/cps/reify-primitives.go'
+  BOOTSTRAP GUILEC language/cps/specialize-primcalls.go
+wrote `language/cps/rotate-loops.go'
+  BOOTSTRAP GUILEC language/cps/specialize-numbers.go
+wrote `language/cps/spec.go'
   BOOTSTRAP GUILEC language/cps/split-rec.go
 wrote `language/cps/self-references.go'
   BOOTSTRAP GUILEC language/cps/type-checks.go
@@ -6462,27 +6480,27 @@ wrote `language/cps/type-checks.go'
   BOOTSTRAP GUILEC language/cps/types.go
 wrote `language/cps/simplify.go'
   BOOTSTRAP GUILEC language/cps/verify.go
-wrote `language/cps/specialize-primcalls.go'
-  BOOTSTRAP GUILEC language/cps/with-cps.go
 wrote `language/cps/split-rec.go'
+  BOOTSTRAP GUILEC language/cps/with-cps.go
+wrote `language/cps/specialize-primcalls.go'
   BOOTSTRAP GUILEC language/scheme/spec.go
 wrote `language/tree-il/peval.go'
   BOOTSTRAP GUILEC language/scheme/compile-tree-il.go
-wrote `language/cps/with-cps.go'
-  BOOTSTRAP GUILEC language/scheme/decompile-tree-il.go
 wrote `language/scheme/spec.go'
+  BOOTSTRAP GUILEC language/scheme/decompile-tree-il.go
+wrote `language/cps/with-cps.go'
   BOOTSTRAP GUILEC language/bytecode.go
 wrote `language/scheme/compile-tree-il.go'
   BOOTSTRAP GUILEC language/bytecode/spec.go
-wrote `language/bytecode/spec.go'
-  BOOTSTRAP GUILEC language/value/spec.go
 wrote `language/cps/type-fold.go'
+  BOOTSTRAP GUILEC language/value/spec.go
+wrote `language/bytecode/spec.go'
   BOOTSTRAP GUILEC system/base/pmatch.go
 wrote `language/bytecode.go'
   BOOTSTRAP GUILEC system/base/syntax.go
-wrote `language/cps/verify.go'
-  BOOTSTRAP GUILEC system/base/compile.go
 wrote `language/value/spec.go'
+  BOOTSTRAP GUILEC system/base/compile.go
+wrote `language/cps/verify.go'
   BOOTSTRAP GUILEC system/base/language.go
 wrote `system/base/pmatch.go'
   BOOTSTRAP GUILEC system/base/lalr.go
@@ -6498,9 +6516,9 @@ wrote `system/base/target.go'
   BOOTSTRAP GUILEC ice-9/boot-9.go
 wrote `system/base/ck.go'
   BOOTSTRAP GUILEC ice-9/ports.go
-wrote `language/cps/slot-allocation.go'
-  BOOTSTRAP GUILEC ice-9/r5rs.go
 wrote `system/base/message.go'
+  BOOTSTRAP GUILEC ice-9/r5rs.go
+wrote `language/cps/slot-allocation.go'
   BOOTSTRAP GUILEC ice-9/deprecated.go
 wrote `ice-9/r5rs.go'
   BOOTSTRAP GUILEC ice-9/binary-ports.go
@@ -6508,9 +6526,9 @@ wrote `ice-9/ports.go'
   BOOTSTRAP GUILEC ice-9/command-line.go
 wrote `ice-9/binary-ports.go'
   BOOTSTRAP GUILEC ice-9/control.go
-wrote `ice-9/control.go'
-  BOOTSTRAP GUILEC ice-9/format.go
 wrote `ice-9/deprecated.go'
+  BOOTSTRAP GUILEC ice-9/format.go
+wrote `ice-9/control.go'
   BOOTSTRAP GUILEC ice-9/getopt-long.go
 wrote `ice-9/command-line.go'
   BOOTSTRAP GUILEC ice-9/i18n.go
@@ -6518,23 +6536,23 @@ wrote `language/scheme/decompile-tree-il.go'
   BOOTSTRAP GUILEC ice-9/match.go
 wrote `system/base/types.go'
   BOOTSTRAP GUILEC ice-9/networking.go
-wrote `ice-9/networking.go'
-  BOOTSTRAP GUILEC ice-9/posix.go
 wrote `ice-9/i18n.go'
+  BOOTSTRAP GUILEC ice-9/posix.go
+wrote `ice-9/networking.go'
   BOOTSTRAP GUILEC ice-9/rdelim.go
-wrote `ice-9/getopt-long.go'
-  BOOTSTRAP GUILEC ice-9/receive.go
-wrote `ice-9/posix.go'
-  BOOTSTRAP GUILEC ice-9/regex.go
 wrote `system/base/lalr.go'
+  BOOTSTRAP GUILEC ice-9/receive.go
+wrote `ice-9/getopt-long.go'
+  BOOTSTRAP GUILEC ice-9/regex.go
+wrote `ice-9/posix.go'
   BOOTSTRAP GUILEC ice-9/session.go
 wrote `ice-9/receive.go'
   BOOTSTRAP GUILEC ice-9/pretty-print.go
 wrote `ice-9/rdelim.go'
   BOOTSTRAP GUILEC system/vm/assembler.go
-wrote `ice-9/regex.go'
-  BOOTSTRAP GUILEC system/vm/debug.go
 wrote `ice-9/match.go'
+  BOOTSTRAP GUILEC system/vm/debug.go
+wrote `ice-9/regex.go'
   BOOTSTRAP GUILEC system/vm/disassembler.go
 wrote `ice-9/session.go'
   BOOTSTRAP GUILEC system/vm/dwarf.go
@@ -6542,20 +6560,20 @@ wrote `ice-9/pretty-print.go'
   BOOTSTRAP GUILEC system/vm/elf.go
 wrote `ice-9/format.go'
   BOOTSTRAP GUILEC system/vm/frame.go
-wrote `ice-9/boot-9.go'
-  BOOTSTRAP GUILEC system/vm/linker.go
 wrote `system/vm/debug.go'
+  BOOTSTRAP GUILEC system/vm/linker.go
+wrote `ice-9/boot-9.go'
   BOOTSTRAP GUILEC system/vm/loader.go
-wrote `system/vm/loader.go'
-  BOOTSTRAP GUILEC system/vm/program.go
 wrote `system/vm/frame.go'
+  BOOTSTRAP GUILEC system/vm/program.go
+wrote `system/vm/loader.go'
   BOOTSTRAP GUILEC system/vm/vm.go
 wrote `system/vm/vm.go'
   BOOTSTRAP GUILEC system/foreign.go
 wrote `system/vm/program.go'
 wrote `system/foreign.go'
-wrote `system/vm/linker.go'
 wrote `language/cps/types.go'
+wrote `system/vm/linker.go'
 wrote `system/vm/disassembler.go'
 wrote `system/vm/elf.go'
 wrote `system/vm/dwarf.go'
@@ -6563,13 +6581,13 @@ wrote `system/vm/assembler.go'
 make[2]: Leaving directory `/home/opencog/guile-2.2.3/build/bootstrap'
 Making all in module
 make[2]: Entering directory `/home/opencog/guile-2.2.3/build/module'
-  GUILEC ice-9/and-let-star.go
   GUILEC ice-9/arrays.go
+  GUILEC ice-9/and-let-star.go
   GUILEC ice-9/atomic.go
   GUILEC ice-9/binary-ports.go
   GUILEC ice-9/boot-9.go
-  GUILEC ice-9/calling.go
   GUILEC ice-9/buffered-input.go
+  GUILEC ice-9/calling.go
   GUILEC ice-9/channel.go
 wrote `ice-9/binary-ports.go'
   GUILEC ice-9/command-line.go
@@ -6589,15 +6607,15 @@ wrote `ice-9/curried-definitions.go'
   GUILEC ice-9/eval-string.go
 wrote `ice-9/control.go'
   GUILEC ice-9/eval.go
+wrote `ice-9/calling.go'
 wrote `ice-9/common-list.go'
   GUILEC ice-9/expect.go
-wrote `ice-9/calling.go'
   GUILEC ice-9/fdes-finalizers.go
 wrote `ice-9/eval-string.go'
   GUILEC ice-9/format.go
-wrote `ice-9/documentation.go'
-  GUILEC ice-9/ftw.go
 wrote `ice-9/fdes-finalizers.go'
+  GUILEC ice-9/ftw.go
+wrote `ice-9/documentation.go'
   GUILEC ice-9/futures.go
 wrote `ice-9/expect.go'
   GUILEC ice-9/gap-buffer.go
@@ -6607,17 +6625,17 @@ wrote `ice-9/deprecated.go'
   GUILEC ice-9/hash-table.go
 wrote `ice-9/gap-buffer.go'
   GUILEC ice-9/hcons.go
-wrote `ice-9/ftw.go'
-  GUILEC ice-9/history.go
 wrote `ice-9/hash-table.go'
+  GUILEC ice-9/history.go
+wrote `ice-9/ftw.go'
   GUILEC ice-9/i18n.go
 wrote `ice-9/hcons.go'
   GUILEC ice-9/iconv.go
 wrote `ice-9/history.go'
   GUILEC ice-9/lineio.go
-wrote `ice-9/iconv.go'
-  GUILEC ice-9/list.go
 wrote `ice-9/futures.go'
+  GUILEC ice-9/list.go
+wrote `ice-9/iconv.go'
   GUILEC ice-9/local-eval.go
 wrote `ice-9/lineio.go'
   GUILEC ice-9/ls.go
@@ -6637,9 +6655,9 @@ wrote `ice-9/networking.go'
   GUILEC ice-9/peg.go
 wrote `ice-9/i18n.go'
   GUILEC ice-9/peg/cache.go
-wrote `ice-9/peg.go'
-  GUILEC ice-9/peg/codegen.go
 wrote `ice-9/peg/cache.go'
+  GUILEC ice-9/peg/codegen.go
+wrote `ice-9/peg.go'
   GUILEC ice-9/peg/simplify-tree.go
 wrote `ice-9/local-eval.go'
   GUILEC ice-9/peg/string-peg.go
@@ -6657,13 +6675,13 @@ wrote `ice-9/match.go'
   GUILEC ice-9/posix.go
 wrote `ice-9/popen.go'
   GUILEC ice-9/pretty-print.go
-wrote `ice-9/posix.go'
-  GUILEC ice-9/psyntax-pp.go
 wrote `ice-9/occam-channel.go'
+  GUILEC ice-9/psyntax-pp.go
+wrote `ice-9/posix.go'
   GUILEC ice-9/q.go
-wrote `ice-9/q.go'
-  GUILEC ice-9/r5rs.go
 wrote `ice-9/poll.go'
+  GUILEC ice-9/r5rs.go
+wrote `ice-9/q.go'
   GUILEC ice-9/rdelim.go
 wrote `ice-9/ports.go'
   GUILEC ice-9/receive.go
@@ -6673,19 +6691,19 @@ wrote `ice-9/receive.go'
   GUILEC ice-9/runq.go
 wrote `ice-9/rdelim.go'
   GUILEC ice-9/rw.go
-wrote `ice-9/regex.go'
-  GUILEC ice-9/safe-r5rs.go
 wrote `ice-9/rw.go'
+  GUILEC ice-9/safe-r5rs.go
+wrote `ice-9/regex.go'
   GUILEC ice-9/safe.go
-wrote `ice-9/runq.go'
 ice-9/runq.scm:93:8: warning: possibly unbound variable `apply-to-args'
+wrote `ice-9/runq.go'
   GUILEC ice-9/sandbox.go
+wrote `ice-9/safe-r5rs.go'
+  GUILEC ice-9/save-stack.go
+wrote `ice-9/safe.go'
+  GUILEC ice-9/scm-style-repl.go
 ice-9/pretty-print.scm:439:39: warning: non-literal format string
 wrote `ice-9/pretty-print.go'
-  GUILEC ice-9/save-stack.go
-wrote `ice-9/safe-r5rs.go'
-  GUILEC ice-9/scm-style-repl.go
-wrote `ice-9/safe.go'
   GUILEC ice-9/serialize.go
 wrote `ice-9/save-stack.go'
   GUILEC ice-9/session.go
@@ -6693,38 +6711,38 @@ wrote `ice-9/serialize.go'
   GUILEC ice-9/slib.go
 wrote `ice-9/sandbox.go'
   GUILEC ice-9/stack-catch.go
-wrote `ice-9/slib.go'
-  GUILEC ice-9/streams.go
 wrote `ice-9/scm-style-repl.go'
+  GUILEC ice-9/streams.go
+wrote `ice-9/slib.go'
   GUILEC ice-9/string-fun.go
 wrote `ice-9/stack-catch.go'
   GUILEC ice-9/suspendable-ports.go
-wrote `ice-9/streams.go'
-  GUILEC ice-9/syncase.go
 wrote `ice-9/peg/string-peg.go'
+  GUILEC ice-9/syncase.go
+wrote `ice-9/streams.go'
   GUILEC ice-9/textual-ports.go
-wrote `ice-9/string-fun.go'
-  GUILEC ice-9/threads.go
 wrote `ice-9/syncase.go'
-  GUILEC ice-9/time.go
-wrote `ice-9/session.go'
+  GUILEC ice-9/threads.go
 ice-9/session.scm:241:11: warning: non-literal format string
+wrote `ice-9/session.go'
+  GUILEC ice-9/time.go
+wrote `ice-9/string-fun.go'
   GUILEC ice-9/top-repl.go
 wrote `ice-9/textual-ports.go'
   GUILEC ice-9/unicode.go
-wrote `ice-9/time.go'
-  GUILEC ice-9/vlist.go
 wrote `ice-9/unicode.go'
+  GUILEC ice-9/vlist.go
+wrote `ice-9/time.go'
   GUILEC ice-9/weak-vector.go
 wrote `ice-9/weak-vector.go'
   GUILEC language/brainfuck/parse.go
-wrote `ice-9/top-repl.go'
-  GUILEC language/brainfuck/compile-scheme.go
 wrote `language/brainfuck/parse.go'
+  GUILEC language/brainfuck/compile-scheme.go
+wrote `ice-9/top-repl.go'
   GUILEC language/brainfuck/compile-tree-il.go
-wrote `language/brainfuck/compile-scheme.go'
-  GUILEC language/brainfuck/spec.go
 wrote `ice-9/threads.go'
+  GUILEC language/brainfuck/spec.go
+wrote `language/brainfuck/compile-scheme.go'
   GUILEC language/bytecode.go
 wrote `language/brainfuck/compile-tree-il.go'
   GUILEC language/bytecode/spec.go
@@ -6748,19 +6766,19 @@ wrote `language/cps/dce.go'
   GUILEC language/cps/elide-values.go
 wrote `language/cps/closure-conversion.go'
   GUILEC language/cps/handle-interrupts.go
-wrote `language/cps/cse.go'
-  GUILEC language/cps/intmap.go
-wrote `language/cps/handle-interrupts.go'
-  GUILEC language/cps/intset.go
 wrote `language/cps/elide-values.go'
+  GUILEC language/cps/intmap.go
+wrote `language/cps/cse.go'
+  GUILEC language/cps/intset.go
+wrote `language/cps/handle-interrupts.go'
   GUILEC language/cps/licm.go
 wrote `language/cps/compile-bytecode.go'
   GUILEC language/cps/optimize.go
-wrote `language/cps/optimize.go'
+wrote `ice-9/format.go'
   GUILEC language/cps/peel-loops.go
 wrote `language/cps/licm.go'
   GUILEC language/cps/primitives.go
-wrote `ice-9/format.go'
+wrote `language/cps/optimize.go'
   GUILEC language/cps/prune-bailouts.go
 wrote `language/cps/primitives.go'
   GUILEC language/cps/prune-top-level-scopes.go
@@ -6768,60 +6786,60 @@ wrote `language/cps/prune-bailouts.go'
   GUILEC language/cps/reify-primitives.go
 wrote `language/cps/prune-top-level-scopes.go'
   GUILEC language/cps/renumber.go
-wrote `language/cps/peel-loops.go'
-  GUILEC language/cps/rotate-loops.go
 wrote `language/cps/effects-analysis.go'
+  GUILEC language/cps/rotate-loops.go
+wrote `language/cps/peel-loops.go'
   GUILEC language/cps/self-references.go
 wrote `language/cps/self-references.go'
   GUILEC language/cps/simplify.go
-wrote `language/cps/reify-primitives.go'
-  GUILEC language/cps/slot-allocation.go
 wrote `language/cps.go'
+  GUILEC language/cps/slot-allocation.go
+wrote `language/cps/reify-primitives.go'
   GUILEC language/cps/spec.go
-wrote `language/cps/renumber.go'
-  GUILEC language/cps/specialize-primcalls.go
 wrote `language/cps/spec.go'
+  GUILEC language/cps/specialize-primcalls.go
+wrote `language/cps/renumber.go'
   GUILEC language/cps/specialize-numbers.go
 wrote `language/cps/rotate-loops.go'
   GUILEC language/cps/split-rec.go
-wrote `language/cps/intmap.go'
-  GUILEC language/cps/type-checks.go
 wrote `language/cps/specialize-primcalls.go'
+  GUILEC language/cps/type-checks.go
+wrote `language/cps/intmap.go'
   GUILEC language/cps/type-fold.go
 wrote `language/cps/type-checks.go'
   GUILEC language/cps/types.go
-wrote `language/cps/split-rec.go'
-  GUILEC language/cps/utils.go
-wrote `language/cps/simplify.go'
-  GUILEC language/cps/verify.go
 wrote `language/cps/intset.go'
+  GUILEC language/cps/utils.go
+wrote `language/cps/split-rec.go'
+  GUILEC language/cps/verify.go
+wrote `language/cps/simplify.go'
   GUILEC language/cps/with-cps.go
 wrote `language/cps/with-cps.go'
   GUILEC language/ecmascript/tokenize.go
-wrote `language/cps/type-fold.go'
+wrote `language/cps/verify.go'
   GUILEC language/ecmascript/parse.go
 wrote `language/ecmascript/tokenize.go'
   GUILEC language/ecmascript/impl.go
-wrote `language/cps/verify.go'
-  GUILEC language/ecmascript/base.go
 wrote `language/cps/utils.go'
+  GUILEC language/ecmascript/base.go
+wrote `language/cps/type-fold.go'
   GUILEC language/ecmascript/function.go
 wrote `language/cps/specialize-numbers.go'
   GUILEC language/ecmascript/array.go
-wrote `language/ecmascript/function.go'
 language/ecmascript/function.scm:40:9: warning: possibly unbound variable `<js-array-object>'
 language/ecmascript/function.scm:44:43: warning: possibly unbound variable `js-array-vector'
+wrote `language/ecmascript/function.go'
   GUILEC language/ecmascript/compile-tree-il.go
 wrote `language/ecmascript/impl.go'
   GUILEC language/ecmascript/spec.go
-wrote `language/ecmascript/base.go'
 language/ecmascript/base.scm:229:22: warning: possibly unbound variable `Boolean'
 language/ecmascript/base.scm:230:21: warning: possibly unbound variable `String'
 language/ecmascript/base.scm:231:21: warning: possibly unbound variable `Number'
+wrote `language/ecmascript/base.go'
   GUILEC language/elisp/falias.go
-wrote `language/ecmascript/array.go'
-  GUILEC language/elisp/lexer.go
 wrote `language/elisp/falias.go'
+  GUILEC language/elisp/lexer.go
+wrote `language/ecmascript/array.go'
   GUILEC language/elisp/parser.go
 wrote `language/elisp/parser.go'
   GUILEC language/elisp/bindings.go
@@ -6856,23 +6874,23 @@ wrote `language/elisp/lexer.go'
 %% Shift/Reduce conflict (shift 144, reduce 176) on 'in' in state 47
 wrote `language/ecmascript/spec.go'
   GUILEC language/elisp/runtime.go
-wrote `language/cps/slot-allocation.go'
-  GUILEC language/elisp/runtime/function-slot.go
 wrote `language/elisp/bindings.go'
-  GUILEC language/elisp/runtime/value-slot.go
-wrote `language/elisp/runtime/value-slot.go'
-  GUILEC language/elisp/spec.go
+  GUILEC language/elisp/runtime/function-slot.go
 wrote `language/elisp/runtime.go'
+  GUILEC language/elisp/runtime/value-slot.go
+wrote `language/cps/slot-allocation.go'
+  GUILEC language/elisp/spec.go
+wrote `language/elisp/runtime/value-slot.go'
   GUILEC language/scheme/compile-tree-il.go
 wrote `language/elisp/runtime/function-slot.go'
   GUILEC language/scheme/decompile-tree-il.go
 wrote `language/elisp/spec.go'
   GUILEC language/scheme/spec.go
-wrote `language/scheme/compile-tree-il.go'
-  GUILEC language/tree-il.go
-wrote `language/scheme/spec.go'
-  GUILEC language/tree-il/analyze.go
 wrote `ice-9/psyntax-pp.go'
+  GUILEC language/tree-il.go
+wrote `language/scheme/compile-tree-il.go'
+  GUILEC language/tree-il/analyze.go
+wrote `language/scheme/spec.go'
   GUILEC language/tree-il/canonicalize.go
 wrote `language/ecmascript/compile-tree-il.go'
   GUILEC language/tree-il/compile-cps.go
@@ -6894,35 +6912,35 @@ wrote `language/tree-il/spec.go'
   GUILEC language/value/spec.go
 wrote `language/value/spec.go'
   GUILEC rnrs/base.go
-wrote `language/scheme/decompile-tree-il.go'
-  GUILEC rnrs/conditions.go
 wrote `rnrs/base.go'
+  GUILEC rnrs/conditions.go
+wrote `language/scheme/decompile-tree-il.go'
   GUILEC rnrs/control.go
 wrote `rnrs/control.go'
   GUILEC rnrs/enums.go
-wrote `rnrs/conditions.go'
-  GUILEC rnrs/eval.go
 wrote `language/tree-il/analyze.go'
+  GUILEC rnrs/eval.go
+wrote `rnrs/conditions.go'
   GUILEC rnrs/exceptions.go
-wrote `rnrs/eval.go'
-  GUILEC rnrs/files.go
-wrote `rnrs/enums.go'
-  GUILEC rnrs/hashtables.go
 wrote `language/tree-il/compile-cps.go'
+  GUILEC rnrs/files.go
+wrote `rnrs/eval.go'
+  GUILEC rnrs/hashtables.go
+wrote `rnrs/enums.go'
   GUILEC rnrs/lists.go
 wrote `rnrs/files.go'
   GUILEC rnrs/mutable-pairs.go
 wrote `rnrs/lists.go'
   GUILEC rnrs/mutable-strings.go
-wrote `rnrs/hashtables.go'
-  GUILEC rnrs/programs.go
-wrote `rnrs/mutable-pairs.go'
-  GUILEC rnrs/r5rs.go
-wrote `rnrs/exceptions.go'
-  GUILEC rnrs/sorting.go
 wrote `language/tree-il/primitives.go'
-  GUILEC rnrs/syntax-case.go
+  GUILEC rnrs/programs.go
+wrote `rnrs/hashtables.go'
+  GUILEC rnrs/r5rs.go
 wrote `rnrs/mutable-strings.go'
+  GUILEC rnrs/sorting.go
+wrote `rnrs/exceptions.go'
+  GUILEC rnrs/syntax-case.go
+wrote `rnrs/mutable-pairs.go'
   GUILEC rnrs/unicode.go
 wrote `rnrs/programs.go'
   GUILEC rnrs/arithmetic/bitwise.go
@@ -6980,15 +6998,15 @@ wrote `scripts/frisk.go'
   GUILEC scripts/lint.go
 wrote `scripts/doc-snarf.go'
   GUILEC scripts/list.go
-wrote `scripts/help.go'
-  GUILEC scripts/punify.go
-wrote `scripts/lint.go'
-  GUILEC scripts/read-scheme-source.go
-wrote `language/tree-il/peval.go'
-  GUILEC scripts/read-text-outline.go
 wrote `scripts/list.go'
-  GUILEC scripts/use2dot.go
+  GUILEC scripts/punify.go
+wrote `scripts/help.go'
+  GUILEC scripts/read-scheme-source.go
+wrote `scripts/lint.go'
+  GUILEC scripts/read-text-outline.go
 wrote `scripts/punify.go'
+  GUILEC scripts/use2dot.go
+wrote `language/tree-il/peval.go'
   GUILEC scripts/snarf-check-and-output-texi.go
 wrote `scripts/use2dot.go'
   GUILEC scripts/summarize-guile-TODO.go
@@ -6998,20 +7016,20 @@ wrote `scripts/read-scheme-source.go'
   GUILEC scripts/read-rfc822.go
 wrote `scripts/summarize-guile-TODO.go'
   GUILEC scripts/snarf-guile-m4-docs.go
-wrote `scripts/api-diff.go'
-  GUILEC scripts/autofrisk.go
 wrote `scripts/read-rfc822.go'
+  GUILEC scripts/autofrisk.go
+wrote `scripts/api-diff.go'
   GUILEC scripts/scan-api.go
 wrote `scripts/snarf-guile-m4-docs.go'
   GUILEC srfi/srfi-1.go
 scripts/autofrisk.scm:185:2: warning: non-literal format string
 wrote `scripts/autofrisk.go'
   GUILEC srfi/srfi-2.go
-wrote `scripts/snarf-check-and-output-texi.go'
+wrote `srfi/srfi-2.go'
   GUILEC srfi/srfi-4.go
 wrote `scripts/scan-api.go'
   GUILEC srfi/srfi-4/gnu.go
-wrote `srfi/srfi-2.go'
+wrote `scripts/snarf-check-and-output-texi.go'
   GUILEC srfi/srfi-6.go
 wrote `srfi/srfi-6.go'
   GUILEC srfi/srfi-8.go
@@ -7024,19 +7042,6 @@ wrote `srfi/srfi-4/gnu.go'
 wrote `srfi/srfi-9/gnu.go'
   GUILEC srfi/srfi-11.go
 wrote `srfi/srfi-10.go'
-  GUILEC srfi/srfi-13.go
-wrote `srfi/srfi-9.go'
-  GUILEC srfi/srfi-14.go
-wrote `srfi/srfi-4.go'
-  GUILEC srfi/srfi-16.go
-wrote `srfi/srfi-13.go'
-  GUILEC srfi/srfi-17.go
-wrote `srfi/srfi-11.go'
-wrote `srfi/srfi-16.go'
-  GUILEC srfi/srfi-18.go
-  GUILEC srfi/srfi-19.go
-wrote `srfi/srfi-14.go'
-  GUILEC srfi/srfi-26.go
 %% Reduce/Reduce conflict (reduce 11, reduce 7) on '--' in state 422
 %% Reduce/Reduce conflict (reduce 11, reduce 7) on '++' in state 422
 %% Reduce/Reduce conflict (reduce 11, reduce 7) on '-' in state 422
@@ -7065,53 +7070,79 @@ wrote `srfi/srfi-14.go'
 %% Shift/Reduce conflict (shift 152, reduce 159) on '-' in state 49
 %% Shift/Reduce conflict (shift 144, reduce 176) on 'in' in state 47
 wrote `language/ecmascript/parse.go'
+  GUILEC srfi/srfi-13.go
+  GUILEC srfi/srfi-14.go
+wrote `srfi/srfi-4.go'
+  GUILEC srfi/srfi-16.go
+wrote `srfi/srfi-13.go'
+  GUILEC srfi/srfi-17.go
+wrote `srfi/srfi-14.go'
+  GUILEC srfi/srfi-18.go
+wrote `srfi/srfi-16.go'
+  GUILEC srfi/srfi-19.go
+wrote `srfi/srfi-9.go'
+  GUILEC srfi/srfi-26.go
+wrote `srfi/srfi-11.go'
   GUILEC srfi/srfi-27.go
-wrote `srfi/srfi-26.go'
+wrote `language/cps/types.go'
   GUILEC srfi/srfi-28.go
 wrote `srfi/srfi-17.go'
   GUILEC srfi/srfi-31.go
 wrote `srfi/srfi-28.go'
   GUILEC srfi/srfi-34.go
-wrote `srfi/srfi-31.go'
+wrote `srfi/srfi-26.go'
   GUILEC srfi/srfi-35.go
-wrote `srfi/srfi-1.go'
+wrote `srfi/srfi-31.go'
   GUILEC srfi/srfi-37.go
 wrote `srfi/srfi-34.go'
   GUILEC srfi/srfi-38.go
-wrote `srfi/srfi-27.go'
+wrote `srfi/srfi-1.go'
   GUILEC srfi/srfi-41.go
-wrote `srfi/srfi-38.go'
+wrote `srfi/srfi-27.go'
   GUILEC srfi/srfi-42.go
-wrote `srfi/srfi-35.go'
+wrote `srfi/srfi-38.go'
   GUILEC srfi/srfi-43.go
-wrote `srfi/srfi-37.go'
+wrote `srfi/srfi-35.go'
   GUILEC srfi/srfi-39.go
 wrote `srfi/srfi-39.go'
   GUILEC srfi/srfi-45.go
-wrote `srfi/srfi-45.go'
+wrote `srfi/srfi-37.go'
   GUILEC srfi/srfi-60.go
 wrote `srfi/srfi-60.go'
   GUILEC srfi/srfi-64.go
-wrote `srfi/srfi-18.go'
+wrote `srfi/srfi-45.go'
   GUILEC srfi/srfi-67.go
-wrote `srfi/srfi-42.go'
+wrote `srfi/srfi-18.go'
   GUILEC srfi/srfi-69.go
-wrote `srfi/srfi-43.go'
+wrote `srfi/srfi-42.go'
   GUILEC srfi/srfi-88.go
 wrote `srfi/srfi-88.go'
   GUILEC srfi/srfi-98.go
-wrote `srfi/srfi-41.go'
-  GUILEC srfi/srfi-111.go
 wrote `srfi/srfi-98.go'
-  GUILEC statprof.go
+  GUILEC srfi/srfi-111.go
 wrote `srfi/srfi-111.go'
-  GUILEC system/base/pmatch.go
-wrote `system/base/pmatch.go'
-  GUILEC system/base/syntax.go
+  GUILEC statprof.go
 wrote `srfi/srfi-69.go'
+  GUILEC system/base/pmatch.go
+wrote `srfi/srfi-43.go'
+  GUILEC system/base/syntax.go
+wrote `system/base/pmatch.go'
   GUILEC system/base/compile.go
-wrote `language/cps/types.go'
+wrote `srfi/srfi-41.go'
   GUILEC system/base/language.go
+wrote `system/base/language.go'
+  GUILEC system/base/lalr.go
+wrote `system/base/compile.go'
+  GUILEC system/base/message.go
+wrote `system/base/syntax.go'
+  GUILEC system/base/target.go
+wrote `srfi/srfi-67.go'
+  GUILEC system/base/types.go
+wrote `system/base/target.go'
+  GUILEC system/base/ck.go
+wrote `system/base/ck.go'
+  GUILEC system/foreign.go
+wrote `srfi/srfi-19.go'
 srfi/srfi-19.scm:294:23: warning: macro `date-second' used before definition
 srfi/srfi-19.scm:295:23: warning: macro `date-minute' used before definition
 srfi/srfi-19.scm:296:24: warning: macro `date-hour' used before definition
@@ -7119,45 +7150,32 @@ srfi/srfi-19.scm:298:24: warning: macro `date-day' used before definition
 srfi/srfi-19.scm:299:26: warning: macro `date-month' used before definition
 srfi/srfi-19.scm:301:32: warning: macro `date-year' used before definition
 srfi/srfi-19.scm:303:29: warning: macro `date-zone-offset' used before definition
-wrote `srfi/srfi-19.go'
-  GUILEC system/base/lalr.go
-wrote `system/base/compile.go'
-  GUILEC system/base/message.go
-wrote `system/base/language.go'
-  GUILEC system/base/target.go
-wrote `system/base/syntax.go'
-  GUILEC system/base/types.go
-wrote `srfi/srfi-67.go'
-  GUILEC system/base/ck.go
-wrote `system/base/target.go'
-  GUILEC system/foreign.go
-wrote `system/base/ck.go'
   GUILEC system/foreign-object.go
 wrote `system/base/message.go'
-wrote `system/foreign.go'
   GUILEC system/repl/debug.go
+wrote `system/foreign.go'
   GUILEC system/repl/error-handling.go
-wrote `system/foreign-object.go'
-  GUILEC system/repl/common.go
 wrote `system/repl/debug.go'
-  GUILEC system/repl/command.go
+  GUILEC system/repl/common.go
 wrote `system/repl/error-handling.go'
+  GUILEC system/repl/command.go
+wrote `system/foreign-object.go'
   GUILEC system/repl/repl.go
-wrote `system/repl/common.go'
-  GUILEC system/repl/server.go
-wrote `oop/goops.go'
-  GUILEC system/repl/coop-server.go
 wrote `srfi/srfi-64.go'
-  GUILEC system/vm/assembler.go
+  GUILEC system/repl/server.go
+wrote `system/repl/common.go'
+  GUILEC system/repl/coop-server.go
 wrote `system/repl/repl.go'
+  GUILEC system/vm/assembler.go
+wrote `oop/goops.go'
   GUILEC system/vm/coverage.go
+wrote `system/repl/server.go'
 system/repl/server.scm:74:41: warning: possibly unbound variable `inet-aton'
 
 Some deprecated features have been used.  Set the environment
 variable GUILE_WARN_DEPRECATED to "detailed" and rerun the
 program to get more information.  Set it to "no" to suppress
 this message.
-wrote `system/repl/server.go'
   GUILEC system/vm/debug.go
 wrote `system/base/types.go'
   GUILEC system/vm/disassembler.go
@@ -7172,9 +7190,9 @@ wrote `system/vm/coverage.go'
   GUILEC system/vm/elf.go
 wrote `statprof.go'
   GUILEC system/vm/frame.go
-wrote `system/vm/frame.go'
-  GUILEC system/vm/inspect.go
 wrote `system/vm/debug.go'
+  GUILEC system/vm/inspect.go
+wrote `system/vm/frame.go'
   GUILEC system/vm/linker.go
 wrote `system/vm/inspect.go'
   GUILEC system/vm/loader.go
@@ -7182,9 +7200,9 @@ wrote `system/vm/loader.go'
   GUILEC system/vm/program.go
 wrote `system/repl/command.go'
   GUILEC system/vm/trace.go
-wrote `system/vm/trace.go'
-  GUILEC system/vm/trap-state.go
 wrote `system/vm/program.go'
+  GUILEC system/vm/trap-state.go
+wrote `system/vm/trace.go'
   GUILEC system/vm/traps.go
 wrote `system/vm/trap-state.go'
   GUILEC system/vm/vm.go
@@ -7194,9 +7212,9 @@ wrote `system/syntax.go'
   GUILEC system/xref.go
 wrote `system/vm/traps.go'
   GUILEC sxml/apply-templates.go
-wrote `sxml/apply-templates.go'
-  GUILEC sxml/fold.go
 wrote `system/vm/linker.go'
+  GUILEC sxml/fold.go
+wrote `sxml/apply-templates.go'
   GUILEC sxml/match.go
 wrote `sxml/fold.go'
   GUILEC sxml/simple.go
@@ -7251,9 +7269,9 @@ wrote `web/client.go'
   GUILEC web/uri.go
 wrote `web/server.go'
   GUILEC language/elisp/boot.go
-wrote `web/server/http.go'
-wrote `web/response.go'
 wrote `web/request.go'
+wrote `web/response.go'
+wrote `web/server/http.go'
 wrote `web/uri.go'
 wrote `system/vm/dwarf.go'
 wrote `web/http.go'
@@ -7766,5 +7784,5 @@ make[1]: Leaving directory `/home/opencog/guile-2.2.3/build'
 /sbin/ldconfig.real: /usr/local/lib/libguile-2.2.so.1.3.0-gdb.scm is not an ELF file - it has the wrong magic bytes at the start.
 
 + DSTATUS=BUILDPASSNOTEST
-+ /var/lib/jenkins/status/updateStatus BUILDPASSNOTEST /var/lib/jenkins/jobs/OpenCOG_U1404/builds/118/log OpenCOG_U1404_Guile
++ /var/lib/jenkins/status/updateStatus BUILDPASSNOTEST /var/lib/jenkins/jobs/OpenCOG_U1404/builds/119/log OpenCOG_U1404_Guile
 Already up-to-date.
