@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Mon Feb 12 22:23:14 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Mon Feb 12 22:25:18 EST 2018.
 
 ## Modules 
 
@@ -29,7 +29,7 @@ This file shows the status of public cen.ai tracked projects as of Mon Feb 12 22
 | [OpenCOG_U1710_AtomSpace](jobs/OpenCOG_U1710_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | [99% tests passed, 1 tests failed out of 105](#opencog_u1710_atomspace) | 2018-02-05 | 18:18 | 17:41  | 18:18 |
 | [OpenCOG_U1710_CogUtil](jobs/OpenCOG_U1710_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 18:15 |  | 17:40  | 18:15 |
 | [OpenCOG_U1710__Core_Build](jobs/OpenCOG_U1710__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 17:45 |
-| [OpenCOG_U1710_Guile](jobs/OpenCOG_U1710_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 17:40 |
+| [OpenCOG_U1710_Guile](jobs/OpenCOG_U1710_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 22:25 |
 | [OpenCOG_U1710_Moses](jobs/OpenCOG_U1710_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 34 | 18:23 |  | 17:44  | 18:23 |
 | [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [50% tests passed, 8 tests failed out of 16](#opencog_u1710_opencog) | 2018-02-07 | 18:24 | 17:45  | 18:24 |
 
