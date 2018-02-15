@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Thu Feb 15 08:22:49 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Thu Feb 15 08:25:48 EST 2018.
 
 ## Modules 
 
@@ -12,7 +12,7 @@ This file shows the status of public cen.ai tracked projects as of Thu Feb 15 08
 | [OpenCOG_DebStab_CogUtil](jobs/OpenCOG_DebStab_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 05:35 |  | 08:21  | 08:21 |
 | [OpenCOG_DebStab__Core_Build](jobs/OpenCOG_DebStab__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-16  | 05:06 |
 | [OpenCOG_DebStab_Guile](jobs/OpenCOG_DebStab_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 08:21 |
-| [OpenCOG_DebStab_Moses](jobs/OpenCOG_DebStab_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 05:44 |  | 05:05  | 05:44 |
+| [OpenCOG_DebStab_Moses](jobs/OpenCOG_DebStab_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 05:44 |  | 08:25  | 08:25 |
 | [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [44% tests passed, 9 tests failed out of 16](#opencog_debstab_opencog) |  | 05:45 | 05:06  | 05:45 |
 | [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-02-05 | 05:09 | 07:58  | 07:58 |
 | [OpenCOG_U1404_CogUtil](jobs/OpenCOG_U1404_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 05:06 | 2018-01-21 | 07:57  | 07:57 |
