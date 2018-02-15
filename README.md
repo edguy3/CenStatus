@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Thu Feb 15 08:04:13 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Thu Feb 15 08:05:28 EST 2018.
 
 ## Modules 
 
@@ -20,7 +20,7 @@ This file shows the status of public cen.ai tracked projects as of Thu Feb 15 08
 | [OpenCOG_U1404_Guile](jobs/OpenCOG_U1404_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 07:56 |
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 05:15 | 2018-01-21 | 08:00  | 08:00 |
 | [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 05:16 | 08:01  | 08:01 |
-| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/TESTPASS.svg) | [98% tests passed, 2 tests failed out of 105](#opencog_u1604_atomspace) | 05:19 | 2018-01-27 | 04:45  | 05:19 |
+| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 05:19 | 2018-01-27 | 08:05  | 08:05 |
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 05:17 | 2018-01-21 | 08:04  | 08:04 |
 | [OpenCOG_U1604__Core_Build](jobs/OpenCOG_U1604__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 04:48 |
 | [OpenCOG_U1604_Guile](jobs/OpenCOG_U1604_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 08:04 |
@@ -60,15 +60,6 @@ See the log file at this link: [OpenCOG_DebStab_AtomSpace](jobs/OpenCOG_DebStab_
 ```
 
 See the log file at this link: [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) for more detail.
-
-
-###  OpenCOG_U1604_AtomSpace
-```
- 40/105 Test  #40: AttentionUTest ...................***Failed    0.01 sec
- 91/105 Test  #91: FirstNUTest ......................***Exception: Other  0.16 sec
-```
-
-See the log file at this link: [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) for more detail.
 
 
 ###  OpenCOG_U1604_Opencog
@@ -112,19 +103,6 @@ See the log file at this link: [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Openco
 
 
 ## Benchmarks
-
-
-###  OpenCOG_U1604_AtomSpace
-```
-Uptime:  10:19:05 up 21 days, 20:43,  0 users,  load average: 9.48, 5.17, 4.84
-Traceback (most recent call last):
-  File "../opencog/benchmark/benchmark.py", line 41, in <module>
-    from opencog.atomspace import AtomSpace, TruthValue, Atom, types
-ImportError: No module named opencog.atomspace
-
-( This is not a dedicated machine)
-```
-
 
 
 ## Contributors
