@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Fri Feb 16 06:53:33 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Fri Feb 16 06:54:20 EST 2018.
 
 ## Modules 
 
@@ -13,7 +13,7 @@ This file shows the status of public cen.ai tracked projects as of Fri Feb 16 06
 | [OpenCOG_DebStab__Core_Build](jobs/OpenCOG_DebStab__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-16  | 06:14 |
 | [OpenCOG_DebStab_Guile](jobs/OpenCOG_DebStab_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 06:09 |
 | [OpenCOG_DebStab_Moses](jobs/OpenCOG_DebStab_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 06:53 |  | 06:13  | 06:53 |
-| [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 05:36 | 06:14  | 06:14 |
+| [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [56% tests passed, 7 tests failed out of 16](#opencog_debstab_opencog) |  | 06:54 | 06:14  | 06:54 |
 | [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | [98% tests passed, 2 tests failed out of 106](#opencog_u1404_atomspace) | 2018-02-05 | 06:18 | 05:46  | 06:18 |
 | [OpenCOG_U1404_CogUtil](jobs/OpenCOG_U1404_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 06:15 | 2018-01-21 | 05:45  | 06:15 |
 | [OpenCOG_U1404__Core_Build](jobs/OpenCOG_U1404__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 05:49 |
@@ -44,6 +44,20 @@ This file shows the status of public cen.ai tracked projects as of Fri Feb 16 06
 ```
 
 See the log file at this link: [OpenCOG_DebStab_AtomSpace](jobs/OpenCOG_DebStab_AtomSpace.log) for more detail.
+
+
+###  OpenCOG_DebStab_Opencog
+```
+ 2/16 Test  #2: AtomSpacePublisherModuleUTest ....***Exception: SegFault  0.38 sec
+ 3/16 Test  #3: CogServerUTest ...................***Exception: SegFault  0.26 sec
+ 4/16 Test  #4: ShellUTest .......................***Exception: SegFault  0.26 sec
+ 5/16 Test  #5: AgentUTest .......................***Exception: SegFault  0.26 sec
+ 7/16 Test  #7: PLNRulesUTest ....................***Failed    1.76 sec
+11/16 Test #11: DimEmbedUTest ....................***Exception: SegFault  0.26 sec
+16/16 Test #16: UREPatternMinerUTest .............***Failed   14.09 sec
+```
+
+See the log file at this link: [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) for more detail.
 
 
 ###  OpenCOG_U1404_AtomSpace
