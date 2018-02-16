@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Thu Feb 15 23:55:00 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Thu Feb 15 23:56:00 EST 2018.
 
 ## Modules 
 
@@ -31,7 +31,7 @@ This file shows the status of public cen.ai tracked projects as of Thu Feb 15 23
 | [OpenCOG_U1710__Core_Build](jobs/OpenCOG_U1710__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 08:16 |
 | [OpenCOG_U1710_Guile](jobs/OpenCOG_U1710_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 23:50 |
 | [OpenCOG_U1710_Moses](jobs/OpenCOG_U1710_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 08:54 |  | 23:55  | 23:55 |
-| [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [56% tests passed, 7 tests failed out of 16](#opencog_u1710_opencog) | 2018-02-07 | 08:55 | 08:16  | 08:55 |
+| [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-02-07 | 08:55 | 23:56  | 23:56 |
 
 ( Times are currently EST/EDT GMT-5/-4) 
 
@@ -59,20 +59,6 @@ See the log file at this link: [OpenCOG_DebStab_AtomSpace](jobs/OpenCOG_DebStab_
 ```
 
 See the log file at this link: [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) for more detail.
-
-
-###  OpenCOG_U1710_Opencog
-```
- 2/16 Test  #2: AtomSpacePublisherModuleUTest ....***Exception: SegFault  0.15 sec
- 3/16 Test  #3: CogServerUTest ...................***Exception: SegFault  0.14 sec
- 4/16 Test  #4: ShellUTest .......................***Exception: SegFault  0.14 sec
- 5/16 Test  #5: AgentUTest .......................***Exception: SegFault  0.14 sec
- 6/16 Test  #6: MOSESPLNSynergyUTest .............***Failed    0.62 sec
-11/16 Test #11: DimEmbedUTest ....................***Exception: SegFault  0.14 sec
-16/16 Test #16: UREPatternMinerUTest .............***Failed   15.74 sec
-```
-
-See the log file at this link: [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Opencog.log) for more detail.
 
 
 ## Benchmarks
