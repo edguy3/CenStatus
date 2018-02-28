@@ -1,14 +1,14 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Wed Feb 28 12:11:45 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Wed Feb 28 12:13:09 EST 2018.
 
 ## Modules 
 
 | MODULE & Logfile | Status | Detail | Test Pass | Test Fail| Build | Attempt|
 | --- | --- | --- | --- | ---  | --- | --- | 
 | [OpenCOG_DebOld__Core_Build](jobs/OpenCOG_DebOld__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 2018-01-15  | 2018-01-15 |
-| [OpenCOG_DebStab_AtomSpace](jobs/OpenCOG_DebStab_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | [96% tests passed, 4 tests failed out of 107](#opencog_debstab_atomspace) | 2018-02-05 | 11:32 | 11:03  | 11:32 |
+| [OpenCOG_DebStab_AtomSpace](jobs/OpenCOG_DebStab_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-02-05 | 11:32 | 12:13  | 12:13 |
 | [OpenCOG_DebStab_CogUtil](jobs/OpenCOG_DebStab_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 11:30 |  | 12:11  | 12:11 |
 | [OpenCOG_DebStab__Core_Build](jobs/OpenCOG_DebStab__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-16  | 11:07 |
 | [OpenCOG_DebStab_Guile](jobs/OpenCOG_DebStab_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 12:11 |
@@ -36,17 +36,6 @@ This file shows the status of public cen.ai tracked projects as of Wed Feb 28 12
 ( Times are currently EST/EDT GMT-5/-4) 
 
 ## Error Detail
-
-
-###  OpenCOG_DebStab_AtomSpace
-```
- 25/107 Test  #25: PutLinkUTest .....................***Exception: SegFault  0.71 sec
- 40/107 Test  #40: AttentionUTest ...................***Failed    0.01 sec
- 54/107 Test  #54: ConstantClausesUTest .............***Failed    0.64 sec
-104/107 Test #104: BackwardChainerUTest .............***Failed    4.87 sec
-```
-
-See the log file at this link: [OpenCOG_DebStab_AtomSpace](jobs/OpenCOG_DebStab_AtomSpace.log) for more detail.
 
 
 ###  OpenCOG_DebStab_Opencog
