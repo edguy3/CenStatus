@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Wed Apr  4 06:13:37 EDT 2018.
+This file shows the status of public cen.ai tracked projects as of Wed Apr  4 06:14:28 EDT 2018.
 
 ## Modules 
 
@@ -18,7 +18,7 @@ This file shows the status of public cen.ai tracked projects as of Wed Apr  4 06
 | [OpenCOG_U1404_CogUtil](jobs/OpenCOG_U1404_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 06:01 | 2018-01-21 | 05:28  | 06:01 |
 | [OpenCOG_U1404_Guile](jobs/OpenCOG_U1404_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 05:28 |
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 06:13 | 2018-01-21 | 05:31  | 06:13 |
-| [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 00:54 | 05:32  | 05:32 |
+| [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [56% tests passed, 8 tests failed out of 18](#opencog_u1404_opencog) |  | 06:14 | 05:32  | 06:14 |
 | [OpenCOG_U1404__Core_Build](jobs/OpenCOG_U1404__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 05:32 |
 | [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 03:37 | 2018-01-27 | 05:43  | 05:43 |
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 03:34 | 2018-01-21 | 05:42  | 05:42 |
@@ -46,6 +46,21 @@ This file shows the status of public cen.ai tracked projects as of Wed Apr  4 06
 ```
 
 See the log file at this link: [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) for more detail.
+
+
+###  OpenCOG_U1404_Opencog
+```
+ 2/18 Test  #2: AtomSpacePublisherModuleUTest ....***Exception: SegFault  0.32 sec
+ 3/18 Test  #3: CogServerUTest ...................***Exception: SegFault  0.31 sec
+ 4/18 Test  #4: ShellUTest .......................***Exception: SegFault  0.31 sec
+ 5/18 Test  #5: AgentUTest .......................***Exception: SegFault  0.31 sec
+ 6/18 Test  #6: AtomOcTreeUTest ..................***Exception: SegFault  0.07 sec
+ 7/18 Test  #7: TimeSpaceAtomUTest ...............***Exception: SegFault  0.07 sec
+ 9/18 Test  #9: PLNRulesUTest ....................***Failed    2.47 sec
+13/18 Test #13: DimEmbedUTest ....................***Exception: SegFault  0.31 sec
+```
+
+See the log file at this link: [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) for more detail.
 
 
 ###  OpenCOG_U1710_AtomSpace
