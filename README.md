@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Wed Apr 11 10:49:32 EDT 2018.
+This file shows the status of public cen.ai tracked projects as of Wed Apr 11 10:51:25 EDT 2018.
 
 ## Modules 
 
@@ -17,7 +17,7 @@ This file shows the status of public cen.ai tracked projects as of Wed Apr 11 10
 | [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-02-05 | 08:22 | 10:49  | 10:49 |
 | [OpenCOG_U1404_CogUtil](jobs/OpenCOG_U1404_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 08:16 | 2018-01-21 | 10:48  | 10:48 |
 | [OpenCOG_U1404_Guile](jobs/OpenCOG_U1404_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 10:48 |
-| [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 08:28 | 2018-01-21 | 07:46  | 08:28 |
+| [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 08:28 | 2018-01-21 | 10:51  | 10:51 |
 | [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [56% tests passed, 8 tests failed out of 18](#opencog_u1404_opencog) |  | 08:29 | 07:47  | 08:29 |
 | [OpenCOG_U1404__Core_Build](jobs/OpenCOG_U1404__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 07:47 |
 | [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/TESTPASS.svg) | [98% tests passed, 2 tests failed out of 107](#opencog_u1604_atomspace) | 08:32 | 2018-01-27 | 07:58  | 08:32 |
