@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Wed Apr 25 19:22:28 EDT 2018.
+This file shows the status of public cen.ai tracked projects as of Wed Apr 25 19:27:49 EDT 2018.
 
 ## Modules 
 
@@ -14,7 +14,7 @@ This file shows the status of public cen.ai tracked projects as of Wed Apr 25 19
 | [OpenCOG_DebStab_Moses](jobs/OpenCOG_DebStab_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 11:11 |  | 19:21  | 19:21 |
 | [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 11:12 | 19:22  | 19:22 |
 | [OpenCOG_DebStab__Core_Build](jobs/OpenCOG_DebStab__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-16  | 19:22 |
-| [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-02-05 | 10:42 | 18:49  | 18:49 |
+| [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | [96% tests passed, 4 tests failed out of 107](#opencog_u1404_atomspace) | 2018-02-05 | 19:27 | 18:49  | 19:27 |
 | [OpenCOG_U1404_CogUtil](jobs/OpenCOG_U1404_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 19:22 | 2018-01-21 | 18:48  | 19:22 |
 | [OpenCOG_U1404_Guile](jobs/OpenCOG_U1404_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 18:48 |
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 10:48 | 2018-01-21 | 18:51  | 18:51 |
@@ -36,6 +36,17 @@ This file shows the status of public cen.ai tracked projects as of Wed Apr 25 19
 ( Times are currently EST/EDT GMT-5/-4) 
 
 ## Error Detail
+
+
+###  OpenCOG_U1404_AtomSpace
+```
+ 25/107 Test  #25: PutLinkUTest .....................***Exception: Other127.71 sec
+ 40/107 Test  #40: AttentionUTest ...................***Failed    0.01 sec
+ 46/107 Test  #46: SCMExecutionOutputUTest ..........***Exception: Other  0.74 sec
+104/107 Test #104: BackwardChainerUTest .............***Exception: Other  4.67 sec
+```
+
+See the log file at this link: [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) for more detail.
 
 
 ###  OpenCOG_U1710_AtomSpace
