@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Tue May  1 00:58:38 EDT 2018.
+This file shows the status of public cen.ai tracked projects as of Tue May  1 00:59:25 EDT 2018.
 
 ## Modules 
 
@@ -24,7 +24,7 @@ This file shows the status of public cen.ai tracked projects as of Tue May  1 00
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 00:49 | 2018-01-21 | 00:16  | 00:49 |
 | [OpenCOG_U1604_Guile](jobs/OpenCOG_U1604_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 00:16 |
 | [OpenCOG_U1604_Moses](jobs/OpenCOG_U1604_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 00:58 | 2018-01-21 | 00:20  | 00:58 |
-| [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 2018-04-30 | 00:21  | 00:21 |
+| [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) | ![Status](/images/TESTFAIL.svg) | [72% tests passed, 5 tests failed out of 18](#opencog_u1604_opencog) |  | 00:59 | 00:21  | 00:59 |
 | [OpenCOG_U1604__Core_Build](jobs/OpenCOG_U1604__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 00:21 |
 | [OpenCOG_U1710_AtomSpace](jobs/OpenCOG_U1710_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | [98% tests passed, 2 tests failed out of 106](#opencog_u1710_atomspace) | 2018-02-05 | 2018-02-23 | 2018-02-23  | 2018-02-23 |
 | [OpenCOG_U1710_CogUtil](jobs/OpenCOG_U1710_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 2018-02-23 |  | 2018-02-23  | 2018-02-23 |
@@ -69,6 +69,18 @@ See the log file at this link: [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Openco
 ```
 
 See the log file at this link: [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) for more detail.
+
+
+###  OpenCOG_U1604_Opencog
+```
+ 3/18 Test  #3: CogServerUTest ...................***Exception: SegFault  0.80 sec
+ 4/18 Test  #4: ShellUTest .......................***Exception: Other  1.68 sec
+ 6/18 Test  #6: AtomOcTreeUTest ..................***Exception: SegFault  0.07 sec
+ 7/18 Test  #7: TimeSpaceAtomUTest ...............***Exception: SegFault  0.07 sec
+ 9/18 Test  #9: PLNRulesUTest ....................***Failed    1.76 sec
+```
+
+See the log file at this link: [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) for more detail.
 
 
 ###  OpenCOG_U1710_AtomSpace
