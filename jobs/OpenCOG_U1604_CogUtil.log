@@ -1,7 +1,6 @@
 Started by user [8mha:////4EpdBdCNuCwQa66fWYnPH3vw48K9Acxogji8zuYoZJVXAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKK2vVLpcJb0ykYmByZOBLSc1L70kw4eBubQop4RByCcrsSxRPycxL10/uKQoMy/dGmicFJpxzhAa3d4CIIO1hIFbv7Q4tUg/MSU3Mw8AT2NAa8AAAAA=[0madmin
-Started by user [8mha:////4EpdBdCNuCwQa66fWYnPH3vw48K9Acxogji8zuYoZJVXAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKK2vVLpcJb0ykYmByZOBLSc1L70kw4eBubQop4RByCcrsSxRPycxL10/uKQoMy/dGmicFJpxzhAa3d4CIIO1hIFbv7Q4tUg/MSU3Mw8AT2NAa8AAAAA=[0madmin
 Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1604_CogUtil
-[OpenCOG_U1604_CogUtil] $ /bin/sh -xe /tmp/jenkins7869427930972906689.sh
+[OpenCOG_U1604_CogUtil] $ /bin/sh -xe /tmp/jenkins1959029944471860238.sh
 + COGDIR=../OpenCOG_U1604
 + . ../OpenCOG_U1604/build.docker/docker.env
 + CID=9eb04b514509b63bc06e066f3271c4369622d783d362d16282d0446240446215
@@ -9,7 +8,7 @@ Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1604_CogUtil
 + DKRUNUSER=docker exec --user jenkins  9eb04b514509b63bc06e066f3271c4369622d783d362d16282d0446240446215
 + UID=125
 + GID=132
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/205/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/206/log
 + cat
 
 
@@ -39,5 +38,5 @@ GIT_URL=
 + docker exec --user jenkins 9eb04b514509b63bc06e066f3271c4369622d783d362d16282d0446240446215 bash dependencies/job1
 Error response from daemon: Container 9eb04b514509b63bc06e066f3271c4369622d783d362d16282d0446240446215 is not running
 + DSTATUS=TESTFAIL
-+ /var/lib/jenkins/status/updateStatus TESTFAIL /var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/205/log OpenCOG_U1604_CogUtil
++ /var/lib/jenkins/status/updateStatus TESTFAIL /var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/206/log OpenCOG_U1604_CogUtil
 Already up-to-date.
