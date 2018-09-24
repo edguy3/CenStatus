@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Mon Sep 24 05:18:56 EDT 2018.
+This file shows the status of public cen.ai tracked projects as of Mon Sep 24 05:21:50 EDT 2018.
 
 ## Modules 
 
@@ -20,7 +20,7 @@ This file shows the status of public cen.ai tracked projects as of Mon Sep 24 05
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 2018-09-10 | 2018-09-09 | 2018-09-10  | 2018-09-10 |
 | [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/BUILDFAIL.svg) |  |  | 2018-09-09 | 2018-05-14  | 2018-09-10 |
 | [OpenCOG_U1404__Core_Build](jobs/OpenCOG_U1404__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 2018-05-14 |
-| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-09-19 | 2018-09-09 | 05:00  | 05:00 |
+| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/TESTPASS.svg) | [99% tests passed, 1 tests failed out of 114](#opencog_u1604_atomspace) | 05:21 | 2018-09-09 | 05:00  | 05:21 |
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 05:18 | 2018-09-09 | 04:58  | 05:18 |
 | [OpenCOG_U1604_Guile](jobs/OpenCOG_U1604_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 04:58 |
 | [OpenCOG_U1604_Moses](jobs/OpenCOG_U1604_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-09-19 | 2018-09-09 | 05:02  | 05:02 |
@@ -36,6 +36,14 @@ This file shows the status of public cen.ai tracked projects as of Mon Sep 24 05
 ( Times are currently EST/EDT GMT-5/-4) 
 
 ## Error Detail
+
+
+###  OpenCOG_U1604_AtomSpace
+```
+ 54/114 Test  #54: VectorAPIUTest ...................***Failed    5.36 sec
+```
+
+See the log file at this link: [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) for more detail.
 
 
 ###  OpenCOG_U1710_AtomSpace
@@ -60,6 +68,16 @@ See the log file at this link: [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Openco
 
 
 ## Benchmarks
+
+
+###  OpenCOG_U1604_AtomSpace
+```
+Uptime:  09:21:49 up 14 days, 15:40,  0 users,  load average: 2.33, 4.83, 5.20
+python: can't open file '../opencog/benchmark/benchmark.py': [Errno 2] No such file or directory
+
+( This is not a dedicated machine)
+```
+
 
 
 ## Contributors
