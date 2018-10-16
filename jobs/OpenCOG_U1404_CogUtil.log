@@ -1,15 +1,14 @@
 Started by user [8mha:////4EpdBdCNuCwQa66fWYnPH3vw48K9Acxogji8zuYoZJVXAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKK2vVLpcJb0ykYmByZOBLSc1L70kw4eBubQop4RByCcrsSxRPycxL10/uKQoMy/dGmicFJpxzhAa3d4CIIO1hIFbv7Q4tUg/MSU3Mw8AT2NAa8AAAAA=[0madmin
-Started by user [8mha:////4EpdBdCNuCwQa66fWYnPH3vw48K9Acxogji8zuYoZJVXAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKK2vVLpcJb0ykYmByZOBLSc1L70kw4eBubQop4RByCcrsSxRPycxL10/uKQoMy/dGmicFJpxzhAa3d4CIIO1hIFbv7Q4tUg/MSU3Mw8AT2NAa8AAAAA=[0madmin
 Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1404_CogUtil
-[OpenCOG_U1404_CogUtil] $ /bin/sh -xe /tmp/jenkins4176870951760313957.sh
+[OpenCOG_U1404_CogUtil] $ /bin/sh -xe /tmp/jenkins3295718397564404235.sh
 + COGDIR=../OpenCOG_U1404
 + . ../OpenCOG_U1404/build.docker/docker.env
-+ CID=8463e9c2d73d4b643353d904cda3c16a05d16b8697f8451c8213d79517a68a74
-+ DKRUNROOT=docker exec --user root   8463e9c2d73d4b643353d904cda3c16a05d16b8697f8451c8213d79517a68a74
-+ DKRUNUSER=docker exec --user jenkins  8463e9c2d73d4b643353d904cda3c16a05d16b8697f8451c8213d79517a68a74
++ CID=c61f742fcdc3796fbaa819a4cb0136051dd1a2edb01ba06ba131e7f2818e4c49
++ DKRUNROOT=docker exec --user root   c61f742fcdc3796fbaa819a4cb0136051dd1a2edb01ba06ba131e7f2818e4c49
++ DKRUNUSER=docker exec --user jenkins  c61f742fcdc3796fbaa819a4cb0136051dd1a2edb01ba06ba131e7f2818e4c49
 + UID=125
 + GID=132
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404_CogUtil/builds/245/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1404_CogUtil/builds/246/log
 + cat
 
 
@@ -36,105 +35,16 @@ GIT_URL=
 + JOBDIR=../OpenCOG_U1404/dependencies
 + cat
 + chmod +x ../OpenCOG_U1404/dependencies/job1
-+ docker exec --user jenkins 8463e9c2d73d4b643353d904cda3c16a05d16b8697f8451c8213d79517a68a74 bash dependencies/job1
++ docker exec --user jenkins c61f742fcdc3796fbaa819a4cb0136051dd1a2edb01ba06ba131e7f2818e4c49 bash dependencies/job1
 + cd cogutil
 + cd build
+dependencies/job1: line 3: cd: build: No such file or directory
 + make -j8 test
-[ 43%] Built target cogutil
-[ 45%] [ 47%] [ 50%] [ 52%] [ 54%] [ 56%] [ 59%] [ 61%] Generating functionalUTest.cpp
-Generating lru_cacheUTest.cpp
-Generating ConfigUTest.cpp
-Generating StringTokenizerUTest.cpp
-Generating rankingUTest.cpp
-Generating LoggerUTest.cpp
-Generating lazy_selectorUTest.cpp
-Generating iostreamContainerUTest.cpp
-Scanning dependencies of target StringTokenizerUTest
-Scanning dependencies of target iostreamContainerUTest
-Scanning dependencies of target lazy_selectorUTest
-Scanning dependencies of target functionalUTest
-Scanning dependencies of target ConfigUTest
-Scanning dependencies of target LoggerUTest
-Scanning dependencies of target rankingUTest
-Scanning dependencies of target lru_cacheUTest
-[ 63%] [ 65%] [ 70%] [ 70%] [ 72%] [ 75%] [ 77%] Building CXX object tests/util/CMakeFiles/StringTokenizerUTest.dir/StringTokenizerUTest.cpp.o
-Building CXX object tests/util/CMakeFiles/ConfigUTest.dir/ConfigUTest.cpp.o
-Building CXX object tests/util/CMakeFiles/functionalUTest.dir/functionalUTest.cpp.o
-Building CXX object tests/util/CMakeFiles/lazy_selectorUTest.dir/lazy_selectorUTest.cpp.o
-Building CXX object tests/util/CMakeFiles/iostreamContainerUTest.dir/iostreamContainerUTest.cpp.o
-Building CXX object tests/util/CMakeFiles/LoggerUTest.dir/LoggerUTest.cpp.o
-[ 79%] Building CXX object tests/util/CMakeFiles/rankingUTest.dir/rankingUTest.cpp.o
-Building CXX object tests/util/CMakeFiles/lru_cacheUTest.dir/lru_cacheUTest.cpp.o
-Linking CXX executable StringTokenizerUTest
-[ 79%] Built target StringTokenizerUTest
-Linking CXX executable lazy_selectorUTest
-[ 81%] Generating KLDUTest.cpp
-Scanning dependencies of target KLDUTest
-[ 84%] Building CXX object tests/util/CMakeFiles/KLDUTest.dir/KLDUTest.cpp.o
-[ 84%] Built target lazy_selectorUTest
-[ 86%] Generating randomUTest.cpp
-Scanning dependencies of target randomUTest
-Linking CXX executable ConfigUTest
-[ 88%] Building CXX object tests/util/CMakeFiles/randomUTest.dir/randomUTest.cpp.o
-[ 88%] Built target ConfigUTest
-[ 90%] Generating comprehensionUTest.cpp
-Scanning dependencies of target comprehensionUTest
-[ 93%] Building CXX object tests/util/CMakeFiles/comprehensionUTest.dir/comprehensionUTest.cpp.o
-Linking CXX executable rankingUTest
-[ 93%] Built target rankingUTest
-[ 95%] Generating CounterUTest.cpp
-Scanning dependencies of target CounterUTest
-[ 97%] Building CXX object tests/util/CMakeFiles/CounterUTest.dir/CounterUTest.cpp.o
-Linking CXX executable iostreamContainerUTest
-Linking CXX executable functionalUTest
-[ 97%] Built target iostreamContainerUTest
-Linking CXX executable LoggerUTest
-[ 97%] Built target functionalUTest
-[ 97%] Built target LoggerUTest
-Linking CXX executable lru_cacheUTest
-[ 97%] Built target lru_cacheUTest
-Linking CXX executable KLDUTest
-[ 97%] Built target KLDUTest
-Linking CXX executable CounterUTest
-[ 97%] Built target CounterUTest
-Linking CXX executable comprehensionUTest
-[ 97%] Built target comprehensionUTest
-Linking CXX executable randomUTest
-[ 97%] Built target randomUTest
-Scanning dependencies of target tests
-[ 97%] Built target tests
-Scanning dependencies of target test
-[100%] Running tests...
-Test project /home/opencog/cogutil/build/tests
-      Start  1: ConfigUTest
- 1/12 Test  #1: ConfigUTest ......................   Passed    0.01 sec
-      Start  2: LoggerUTest
- 2/12 Test  #2: LoggerUTest ......................   Passed    0.65 sec
-      Start  3: StringTokenizerUTest
- 3/12 Test  #3: StringTokenizerUTest .............   Passed    0.01 sec
-      Start  4: lazy_selectorUTest
- 4/12 Test  #4: lazy_selectorUTest ...............   Passed    0.00 sec
-      Start  5: lru_cacheUTest
- 5/12 Test  #5: lru_cacheUTest ...................   Passed    0.01 sec
-      Start  6: iostreamContainerUTest
- 6/12 Test  #6: iostreamContainerUTest ...........   Passed    0.00 sec
-      Start  7: functionalUTest
- 7/12 Test  #7: functionalUTest ..................   Passed    0.00 sec
-      Start  8: KLDUTest
- 8/12 Test  #8: KLDUTest .........................   Passed    3.37 sec
-      Start  9: randomUTest
- 9/12 Test  #9: randomUTest ......................   Passed    1.34 sec
-      Start 10: comprehensionUTest
-10/12 Test #10: comprehensionUTest ...............   Passed    0.00 sec
-      Start 11: CounterUTest
-11/12 Test #11: CounterUTest .....................   Passed    0.00 sec
-      Start 12: rankingUTest
-12/12 Test #12: rankingUTest .....................   Passed    0.00 sec
+make: *** No rule to make target `test'.  Stop.
++ DSTATUS=TESTFAIL
++ /var/lib/jenkins/status/updateStatus TESTFAIL /var/lib/jenkins/jobs/OpenCOG_U1404_CogUtil/builds/246/log OpenCOG_U1404_CogUtil
+ssh: Could not resolve hostname github.com: Temporary failure in name resolution
+fatal: Could not read from remote repository.
 
-100% tests passed, 0 tests failed out of 12
-
-Total Test time (real) =   5.41 sec
-[100%] Built target test
-+ DSTATUS=TESTPASS
-+ /var/lib/jenkins/status/updateStatus TESTPASS /var/lib/jenkins/jobs/OpenCOG_U1404_CogUtil/builds/245/log OpenCOG_U1404_CogUtil
-Already up-to-date.
+Please make sure you have the correct access rights
+and the repository exists.
