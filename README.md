@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Mon Oct 29 12:25:12 EDT 2018.
+This file shows the status of public cen.ai tracked projects as of Mon Oct 29 12:25:28 EDT 2018.
 
 ## Modules 
 
@@ -9,7 +9,7 @@ This file shows the status of public cen.ai tracked projects as of Mon Oct 29 12
 | --- | --- | --- | --- | ---  | --- | --- | 
 | [OpenCOG_DebOld__Core_Build](jobs/OpenCOG_DebOld__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 2018-01-15  | 2018-01-15 |
 | [OpenCOG_DebStab_AtomSpace](jobs/OpenCOG_DebStab_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-05-14 | 2018-10-25 | 12:08  | 12:08 |
-| [OpenCOG_DebStab_CogUtil](jobs/OpenCOG_DebStab_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-10-25 | 2018-09-09 | 12:07  | 12:07 |
+| [OpenCOG_DebStab_CogUtil](jobs/OpenCOG_DebStab_CogUtil.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 12 | 12:25 | 2018-09-09 | 12:07  | 12:25 |
 | [OpenCOG_DebStab_Guile](jobs/OpenCOG_DebStab_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 12:07 |
 | [OpenCOG_DebStab_Moses](jobs/OpenCOG_DebStab_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-10-25 | 2018-09-09 | 12:11  | 12:11 |
 | [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  |  | 2018-10-25 | 12:12  | 12:12 |
