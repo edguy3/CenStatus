@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Wed Dec  5 14:09:18 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Wed Dec  5 14:10:38 EST 2018.
 
 ## Modules 
 
@@ -20,7 +20,7 @@ This file shows the status of public cen.ai tracked projects as of Wed Dec  5 14
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 2018-09-10 | 2018-09-09 | 2018-09-10  | 2018-09-10 |
 | [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/BUILDFAIL.svg) |  |  | 2018-09-09 | 2018-05-14  | 2018-09-10 |
 | [OpenCOG_U1404__Core_Build](jobs/OpenCOG_U1404__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 2018-05-14 |
-| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/TESTPASS.svg) | [99% tests passed, 1 tests failed out of 121](#opencog_u1604_atomspace) | 13:20 | 2018-09-09 | 12:58  | 13:20 |
+| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 13:20 | 2018-09-09 | 14:10  | 14:10 |
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 13:17 | 2018-09-09 | 14:09  | 14:09 |
 | [OpenCOG_U1604_Guile](jobs/OpenCOG_U1604_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 14:09 |
 | [OpenCOG_U1604_Moses](jobs/OpenCOG_U1604_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 13:27 | 2018-09-09 | 13:00  | 13:27 |
@@ -54,14 +54,6 @@ See the log file at this link: [OpenCOG_DebStab_AtomSpace](jobs/OpenCOG_DebStab_
 See the log file at this link: [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) for more detail.
 
 
-###  OpenCOG_U1604_AtomSpace
-```
- 59/121 Test  #59: VectorAPIUTest ...................***Failed    5.26 sec
-```
-
-See the log file at this link: [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) for more detail.
-
-
 ###  OpenCOG_U1604_Opencog
 ```
  1/18 Test  #1: AttentionParamQueryUTest .........***Failed    0.45 sec
@@ -92,16 +84,6 @@ See the log file at this link: [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Openco
 
 
 ## Benchmarks
-
-
-###  OpenCOG_U1604_AtomSpace
-```
-Uptime:  18:20:44 up 87 days, 39 min,  0 users,  load average: 2.00, 4.80, 5.06
-python: can't open file '../opencog/benchmark/benchmark.py': [Errno 2] No such file or directory
-
-( This is not a dedicated machine)
-```
-
 
 
 ## Contributors
