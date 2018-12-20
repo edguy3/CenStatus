@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Thu Dec 20 15:55:11 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Thu Dec 20 15:58:09 EST 2018.
 
 ## Modules 
 
@@ -11,7 +11,7 @@ This file shows the status of public cen.ai tracked projects as of Thu Dec 20 15
 | [OpenCOG_DebStab_AtomSpace](jobs/OpenCOG_DebStab_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-05-14 | 15:12 | 15:55  | 15:55 |
 | [OpenCOG_DebStab_CogUtil](jobs/OpenCOG_DebStab_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 15:09 | 2018-12-12 | 15:53  | 15:53 |
 | [OpenCOG_DebStab_Guile](jobs/OpenCOG_DebStab_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 15:53 |
-| [OpenCOG_DebStab_Moses](jobs/OpenCOG_DebStab_Moses.log) | ![Status](/images/TESTFAIL.svg) | [97% tests passed, 1 tests failed out of 35](#opencog_debstab_moses) | 2018-12-19 | 15:19 | 14:55  | 15:19 |
+| [OpenCOG_DebStab_Moses](jobs/OpenCOG_DebStab_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-12-19 | 15:19 | 15:58  | 15:58 |
 | [OpenCOG_DebStab_Opencog](jobs/OpenCOG_DebStab_Opencog.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 19 | 15:22 | 2018-12-11 | 14:56  | 15:22 |
 | [OpenCOG_DebStab__Core_Build](jobs/OpenCOG_DebStab__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-16  | 14:56 |
 | [OpenCOG_U1404_AtomSpace](jobs/OpenCOG_U1404_AtomSpace.log) | ![Status](/images/BUILDFAIL.svg) |  | 2018-02-05 | 2018-09-10 | 2018-09-10  | 15:28 |
@@ -36,14 +36,6 @@ This file shows the status of public cen.ai tracked projects as of Thu Dec 20 15
 ( Times are currently EST/EDT GMT-5/-4) 
 
 ## Error Detail
-
-
-###  OpenCOG_DebStab_Moses
-```
-35/35 Test #35: CythonMoses .......................***Failed    0.18 sec
-```
-
-See the log file at this link: [OpenCOG_DebStab_Moses](jobs/OpenCOG_DebStab_Moses.log) for more detail.
 
 
 ###  OpenCOG_U1710_AtomSpace
