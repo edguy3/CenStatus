@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Thu Dec 20 16:52:41 EST 2018.
+This file shows the status of public cen.ai tracked projects as of Thu Dec 20 16:54:56 EST 2018.
 
 ## Modules 
 
@@ -23,7 +23,7 @@ This file shows the status of public cen.ai tracked projects as of Thu Dec 20 16
 | [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 16:02 | 2018-09-09 | 16:52  | 16:52 |
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 15:59 | 2018-12-12 | 16:51  | 16:51 |
 | [OpenCOG_U1604_Guile](jobs/OpenCOG_U1604_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 16:51 |
-| [OpenCOG_U1604_Moses](jobs/OpenCOG_U1604_Moses.log) | ![Status](/images/TESTFAIL.svg) | [97% tests passed, 1 tests failed out of 35](#opencog_u1604_moses) | 2018-12-19 | 16:09 | 15:42  | 16:09 |
+| [OpenCOG_U1604_Moses](jobs/OpenCOG_U1604_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-12-19 | 16:09 | 16:54  | 16:54 |
 | [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 19 | 16:11 | 2018-12-13 | 15:43  | 16:11 |
 | [OpenCOG_U1604__Core_Build](jobs/OpenCOG_U1604__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 15:43 |
 | [OpenCOG_U1710_AtomSpace](jobs/OpenCOG_U1710_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | [98% tests passed, 2 tests failed out of 106](#opencog_u1710_atomspace) | 2018-02-05 | 2018-02-23 | 2018-02-23  | 2018-02-23 |
@@ -52,14 +52,6 @@ See the log file at this link: [OpenCOG_DebStab_AtomSpace](jobs/OpenCOG_DebStab_
 ```
 
 See the log file at this link: [OpenCOG_DebStab_Moses](jobs/OpenCOG_DebStab_Moses.log) for more detail.
-
-
-###  OpenCOG_U1604_Moses
-```
-35/35 Test #35: CythonMoses .......................***Failed    0.13 sec
-```
-
-See the log file at this link: [OpenCOG_U1604_Moses](jobs/OpenCOG_U1604_Moses.log) for more detail.
 
 
 ###  OpenCOG_U1710_AtomSpace
