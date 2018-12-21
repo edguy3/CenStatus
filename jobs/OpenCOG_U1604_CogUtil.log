@@ -1,1712 +1,151 @@
 Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
-Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1604
-[OpenCOG_U1604] $ /bin/sh -xe /tmp/jenkins6571439075167138645.sh
-+ pwd
-/var/lib/jenkins/workspace/OpenCOG_U1604
-+ whoami
-jenkins
-+ rm -fr build.docker
-+ mkdir build.docker
-+ cd build.docker
-+ cp /home/edguy/OCDOCK/DOCKER.OpenCOG_U1604 docker.buildfile
-+ docker build -f docker.buildfile -t edguy/opencog:OpenCOG_U1604 .
-Sending build context to Docker daemon 4.096 kB
-Step 1/23 : FROM ubuntu:16.04
- ---> 2a4cca5ac898
-Step 2/23 : MAINTAINER Ed Guy "edguy@eguy.org"
- ---> Using cache
- ---> 05f1342d5592
-Step 3/23 : ENV DEBIAN_FRONTEND noninteractive
- ---> Using cache
- ---> 8bd6968097fc
-Step 4/23 : ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
- ---> Using cache
- ---> 33046b2f8462
-Step 5/23 : RUN apt-get -y update && apt-get -y upgrade
- ---> Using cache
- ---> 7980d5d3d675
-Step 6/23 : RUN apt-get update && apt-get -y install screen telnet netcat-openbsd byobu wget vim unzip gcc g++ make sudo lsb-release net-tools apt-utils
- ---> Using cache
- ---> b5caab59bef7
-Step 7/23 : RUN apt-get update && apt-get -y install openjdk-8-jdk ant libcommons-logging-java
- ---> Using cache
- ---> 8de95913d64b
-Step 8/23 : RUN test -e /usr/local/share/java || mkdir /usr/local/share/java
- ---> Using cache
- ---> cc4a0f017996
-Step 9/23 : WORKDIR /home/opencog
- ---> Using cache
- ---> 346994b23552
-Step 10/23 : RUN apt-get update && apt-get -y install build-essential  cmake  cxxtest  rlwrap  guile-2.0-dev  libiberty-dev  libicu-dev  libbz2-dev  cython  python-dev  python-zmq  python-simplejson  libboost-date-time-dev  libboost-filesystem-dev  libboost-math-dev  libboost-program-options-dev  libboost-regex-dev  libboost-serialization-dev  libboost-thread-dev  libboost-system-dev  libboost-random-dev  libzmq3-dev  libtbb-dev  binutils-dev  unixodbc-dev  libpq-dev uuid-dev  libprotoc-dev  protobuf-compiler  libsdl-gfx1.2-dev  libssl-dev  tcl-dev  tcsh  libfreetype6-dev  libatlas-base-dev  gfortran  gearman  libgearman-dev  ccache  libgsasl7  libldap2-dev  krb5-multidev  wordnet  wordnet-dev  wordnet-sense-index
- ---> Using cache
- ---> dcd13d08e2dc
-Step 11/23 : RUN apt-get update && apt-get -y install unixodbc odbc-postgresql postgresql-client
- ---> Using cache
- ---> 7a84dd6812d1
-Step 12/23 : RUN apt-get update && apt-get -y install python-pip git
- ---> Using cache
- ---> 91f25d7e8bca
-Step 13/23 : RUN apt-get update && apt-get -y install libcpprest  #1604
- ---> Using cache
- ---> 2d3142f74563
-Step 14/23 : RUN apt-get update && apt-get -y install doxygen
- ---> Using cache
- ---> a1f3faa3e1a8
-Step 15/23 : RUN apt-get update && apt-get -y install fonts-lyx python-cairo python-decorator python-glade2 python-gobject-2 python-gtk2 python-imaging python-matplotlib python-matplotlib-data python-numpy python-pyparsing python-scipy python-tk python-tz
- ---> Using cache
- ---> 75d211facccd
-Step 16/23 : RUN useradd -ms /bin/bash  jenkins --uid 125 && echo "jenkins:jenkins" | chpasswd && adduser jenkins sudo
- ---> Using cache
- ---> 4dfcef470c7b
-Step 17/23 : RUN echo "jenkins	ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
- ---> Using cache
- ---> 48eae38451f0
-Step 18/23 : RUN chown jenkins:jenkins /home/opencog
- ---> Using cache
- ---> d0605c65a99b
-Step 19/23 : RUN apt-get update && apt-get -y install locales
- ---> Using cache
- ---> 47a37ad0537c
-Step 20/23 : RUN echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
- ---> Using cache
- ---> 743bd536769b
-Step 21/23 : RUN locale-gen
- ---> Using cache
- ---> 57b8c935c79e
-Step 22/23 : USER jenkins
- ---> Using cache
- ---> f7705c668ec1
-Step 23/23 : CMD tail -f /dev/null
- ---> Using cache
- ---> 510eeead4405
-Successfully built 510eeead4405
-+ echo ******  CID=
-******  CID=
-+ CIDFILENAME=/tmp/OpenCOG_U1604.cid
-+ cleanupDockerContainers /tmp/OpenCOG_U1604.cid
-+ CIDFILENAME=/tmp/OpenCOG_U1604.cid
-+ [ -e /tmp/OpenCOG_U1604.cid ]
-+ cat /tmp/OpenCOG_U1604.cid
-+ CID=860ae4587ec4f54e943c635fd8e51a479c8b7555fb5bda726e1501060993166f
-+ docker container kill 860ae4587ec4f54e943c635fd8e51a479c8b7555fb5bda726e1501060993166f
-860ae4587ec4f54e943c635fd8e51a479c8b7555fb5bda726e1501060993166f
-+ docker container rm 860ae4587ec4f54e943c635fd8e51a479c8b7555fb5bda726e1501060993166f
-860ae4587ec4f54e943c635fd8e51a479c8b7555fb5bda726e1501060993166f
-+ rm -f /tmp/OpenCOG_U1604.cid
-+ docker run --cidfile /tmp/OpenCOG_U1604.cid -v /var/lib/jenkins/workspace/OpenCOG_U1604/dependencies:/home/opencog/dependencies -w /home/opencog -d edguy/opencog:OpenCOG_U1604 tail -f /dev/null
-14a034d0c4446251a3a1a46b772fb849134426c17321fe468978896ed6cf7c17
-+ cat /tmp/OpenCOG_U1604.cid
-+ CID=14a034d0c4446251a3a1a46b772fb849134426c17321fe468978896ed6cf7c17
-+ DKRUN=docker exec 14a034d0c4446251a3a1a46b772fb849134426c17321fe468978896ed6cf7c17 
-+ grep jenkins /etc/passwd
-+ awk -F: {print $3}
-+ UID=125
-+ grep jenkins /etc/passwd
-+ awk -F: {print $4}
-+ GID=132
-+ cat
-[OpenCOG_U1604] $ /bin/sh -xe /tmp/jenkins3901232422370019565.sh
-+ . build.docker/docker.env
+Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1604_CogUtil
+[OpenCOG_U1604_CogUtil] $ /bin/sh -xe /tmp/jenkins409937292088996870.sh
++ COGDIR=../OpenCOG_U1604
++ . ../OpenCOG_U1604/build.docker/docker.env
 + CID=14a034d0c4446251a3a1a46b772fb849134426c17321fe468978896ed6cf7c17
 + DKRUNROOT=docker exec --user root   14a034d0c4446251a3a1a46b772fb849134426c17321fe468978896ed6cf7c17
 + DKRUNUSER=docker exec --user jenkins  14a034d0c4446251a3a1a46b772fb849134426c17321fe468978896ed6cf7c17
 + UID=125
 + GID=132
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/376/log
 + cat
+
+
 **********************************************************
 **********************************************************
 **********************************************************
 **********************************************************
-*****
-*****  Machine Setup 
-*****
+*****                                                *****
+*****                  Cogutil TEST                *****
+*****                                                *****
 **********************************************************
 **********************************************************
 **********************************************************
 **********************************************************
 
-+ cat
-+ chmod +x dependencies/job1
-+ docker exec --user jenkins 14a034d0c4446251a3a1a46b772fb849134426c17321fe468978896ed6cf7c17 bash dependencies/job1
-+ wget http://raw.github.com/opencog/ocpkg/master/ocpkg -O octool
---2018-12-21 19:43:01--  http://raw.github.com/opencog/ocpkg/master/ocpkg
-Resolving raw.github.com (raw.github.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
-Connecting to raw.github.com (raw.github.com)|151.101.0.133|:80... connected.
-HTTP request sent, awaiting response... 301 Moved Permanently
-Location: https://raw.github.com/opencog/ocpkg/master/ocpkg [following]
---2018-12-21 19:43:01--  https://raw.github.com/opencog/ocpkg/master/ocpkg
-Connecting to raw.github.com (raw.github.com)|151.101.0.133|:443... connected.
-HTTP request sent, awaiting response... 301 Moved Permanently
-Location: https://raw.githubusercontent.com/opencog/ocpkg/master/ocpkg [following]
---2018-12-21 19:43:01--  https://raw.githubusercontent.com/opencog/ocpkg/master/ocpkg
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
-HTTP request sent, awaiting response... 200 OK
-Length: 43876 (43K) [text/plain]
-Saving to: 'octool'
 
-     0K .......... .......... .......... .......... ..        100% 1.96M=0.02s
-
-2018-12-21 19:43:01 (1.96 MB/s) - 'octool' saved [43876/43876]
-
-+ chmod +rx octool
-+ ./octool -rdp
-[1;34m[octool] Adding software repositories...[0m
-Executing: /tmp/tmp.IDiAfDfoWR/gpg.1.sh --keyserver
-keyserver.ubuntu.com
---recv-key
-421C365BD9FF1F717815A3895523BAEEB01FA116
-gpg: requesting key B01FA116 from hkp server keyserver.ubuntu.com
-gpg: key B01FA116: public key "ROS Builder <rosbuild@ros.org>" imported
-gpg: Total number processed: 1
-gpg:               imported: 1
-Get:1 http://security.ubuntu.com/ubuntu xenial-security InRelease [107 kB]
-Get:2 http://packages.ros.org/ros/ubuntu xenial InRelease [4040 B]
-Hit:3 http://archive.ubuntu.com/ubuntu xenial InRelease
-Get:4 http://archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]
-Get:5 http://packages.ros.org/ros/ubuntu xenial/main amd64 Packages [719 kB]
-Get:6 http://security.ubuntu.com/ubuntu xenial-security/universe Sources [113 kB]
-Get:7 http://security.ubuntu.com/ubuntu xenial-security/main amd64 Packages [762 kB]
-Get:8 http://security.ubuntu.com/ubuntu xenial-security/restricted amd64 Packages [12.7 kB]
-Get:9 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 Packages [522 kB]
-Get:10 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 Packages [4026 B]
-Get:11 http://archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB]
-Get:12 http://archive.ubuntu.com/ubuntu xenial-updates/universe Sources [299 kB]
-Get:13 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [1163 kB]
-Get:14 http://archive.ubuntu.com/ubuntu xenial-updates/restricted amd64 Packages [13.1 kB]
-Get:15 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 Packages [925 kB]
-Get:16 http://archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 Packages [19.0 kB]
-Get:17 http://archive.ubuntu.com/ubuntu xenial-backports/main amd64 Packages [7942 B]
-Get:18 http://archive.ubuntu.com/ubuntu xenial-backports/universe amd64 Packages [8532 B]
-Fetched 4894 kB in 1s (3309 kB/s)
-Reading package lists...
-[1;34m[octool] Installing OpenCog build dependencies....[0m
-Reading package lists...
-Building dependency tree...
-Reading state information...
-Skipping build-essential, it is already installed and upgrade is not set.
-Skipping ccache, it is already installed and upgrade is not set.
-Skipping gfortran, it is already installed and upgrade is not set.
-Skipping libboost-program-options-dev, it is already installed and upgrade is not set.
-Skipping libbz2-dev, it is already installed and upgrade is not set.
-Skipping libgmp-dev, it is already installed and upgrade is not set.
-libgmp-dev set to manually installed.
-Skipping libprotoc-dev, it is already installed and upgrade is not set.
-Skipping protobuf-compiler, it is already installed and upgrade is not set.
-Skipping tcl-dev, it is already installed and upgrade is not set.
-Skipping unixodbc, it is already installed and upgrade is not set.
-Skipping unixodbc-dev, it is already installed and upgrade is not set.
-Skipping cxxtest, it is already installed and upgrade is not set.
-Skipping cython, it is already installed and upgrade is not set.
-Skipping gearman, it is already installed and upgrade is not set.
-Skipping libatlas-base-dev, it is already installed and upgrade is not set.
-Skipping libboost-date-time-dev, it is already installed and upgrade is not set.
-Skipping libboost-filesystem-dev, it is already installed and upgrade is not set.
-Skipping libboost-math-dev, it is already installed and upgrade is not set.
-Skipping libboost-random-dev, it is already installed and upgrade is not set.
-Skipping libboost-regex-dev, it is already installed and upgrade is not set.
-Skipping libboost-serialization-dev, it is already installed and upgrade is not set.
-Skipping libboost-system-dev, it is already installed and upgrade is not set.
-Skipping libboost-thread-dev, it is already installed and upgrade is not set.
-Skipping libgearman-dev, it is already installed and upgrade is not set.
-Skipping libgsasl7, it is already installed and upgrade is not set.
-Skipping libsdl-gfx1.2-dev, it is already installed and upgrade is not set.
-Skipping libtbb-dev, it is already installed and upgrade is not set.
-Skipping libzmq3-dev, it is already installed and upgrade is not set.
-Skipping odbc-postgresql, it is already installed and upgrade is not set.
-Skipping rlwrap, it is already installed and upgrade is not set.
-Skipping tcsh, it is already installed and upgrade is not set.
-Skipping wordnet, it is already installed and upgrade is not set.
-Skipping wordnet-dev, it is already installed and upgrade is not set.
-Skipping wordnet-sense-index, it is already installed and upgrade is not set.
-Skipping binutils-dev, it is already installed and upgrade is not set.
-Skipping cmake, it is already installed and upgrade is not set.
-Skipping git, it is already installed and upgrade is not set.
-Skipping krb5-multidev, it is already installed and upgrade is not set.
-Skipping libfreetype6-dev, it is already installed and upgrade is not set.
-Skipping libiberty-dev, it is already installed and upgrade is not set.
-Skipping libicu-dev, it is already installed and upgrade is not set.
-Skipping libldap2-dev, it is already installed and upgrade is not set.
-Skipping libpq-dev, it is already installed and upgrade is not set.
-Skipping libssl-dev, it is already installed and upgrade is not set.
-Skipping locales, it is already installed and upgrade is not set.
-Skipping postgresql-client, it is already installed and upgrade is not set.
-Skipping uuid-dev, it is already installed and upgrade is not set.
-Skipping python-pip, it is already installed and upgrade is not set.
-The following additional packages will be installed:
-  docutils-common docutils-doc google-mock libgtest-dev libpaper-utils
-  libpaper1 libpython3-dev libpython3.5 libpython3.5-dev libpython3.5-minimal
-  libpython3.5-stdlib python-catkin-pkg python-catkin-pkg-modules
-  python-chardet python-docutils python-empy python-nose python-pygments
-  python-roman python3-pkg-resources python3-setuptools python3-wheel
-  python3.5 python3.5-dev python3.5-minimal ros-kinetic-catkin
-Suggested packages:
-  texlive-latex-recommended texlive-latex-base texlive-lang-french
-  fonts-linuxlibertine | ttf-linux-libertine python-coverage python-nose-doc
-  python-setuptools-doc python3.5-venv python3.5-doc binfmt-support
-The following NEW packages will be installed:
-  docutils-common docutils-doc google-mock libatomic-ops-dev libffi-dev
-  libgtest-dev libpaper-utils libpaper1 libpython3-dev libpython3.5-dev
-  libreadline-dev python-catkin-pkg python-catkin-pkg-modules python-chardet
-  python-docutils python-empy python-nose python-pygments python-roman
-  python3-dev python3-nose python3-pip python3-pkg-resources
-  python3-setuptools python3-simplejson python3-wheel python3-zmq
-  python3.5-dev ros-kinetic-catkin ros-kinetic-octomap
-The following packages will be upgraded:
-  libpython3.5 libpython3.5-minimal libpython3.5-stdlib python3.5
-  python3.5-minimal
-5 upgraded, 30 newly installed, 0 to remove and 178 not upgraded.
-Need to get 47.3 MB of archives.
-After this operation, 74.3 MB of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython3.5 amd64 3.5.2-2ubuntu0~16.04.5 [1360 kB]
-Get:2 http://packages.ros.org/ros/ubuntu xenial/main amd64 python-catkin-pkg-modules all 0.4.9-1 [40.8 kB]
-Get:3 http://packages.ros.org/ros/ubuntu xenial/main amd64 python-catkin-pkg all 0.4.9-100 [3404 B]
-Get:4 http://packages.ros.org/ros/ubuntu xenial/main amd64 ros-kinetic-catkin amd64 0.7.14-0xenial-20180809-132632-0800 [112 kB]
-Get:5 http://packages.ros.org/ros/ubuntu xenial/main amd64 ros-kinetic-octomap amd64 1.8.1-0xenial-20180809-134711-0800 [193 kB]
-Get:6 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python3.5 amd64 3.5.2-2ubuntu0~16.04.5 [165 kB]
-Get:7 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython3.5-stdlib amd64 3.5.2-2ubuntu0~16.04.5 [2134 kB]
-Get:8 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python3.5-minimal amd64 3.5.2-2ubuntu0~16.04.5 [1598 kB]
-Get:9 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython3.5-minimal amd64 3.5.2-2ubuntu0~16.04.5 [524 kB]
-Get:10 http://archive.ubuntu.com/ubuntu xenial/main amd64 docutils-common all 0.12+dfsg-1 [141 kB]
-Get:11 http://archive.ubuntu.com/ubuntu xenial/main amd64 docutils-doc all 0.12+dfsg-1 [889 kB]
-Get:12 http://archive.ubuntu.com/ubuntu xenial/universe amd64 libgtest-dev amd64 1.7.0-4ubuntu1 [198 kB]
-Get:13 http://archive.ubuntu.com/ubuntu xenial/universe amd64 google-mock amd64 1.7.0-18092013-1 [116 kB]
-Get:14 http://archive.ubuntu.com/ubuntu xenial/main amd64 libatomic-ops-dev amd64 7.4.2-3ubuntu1 [69.5 kB]
-Get:15 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpaper1 amd64 1.1.24+nmu4ubuntu1 [13.7 kB]
-Get:16 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpaper-utils amd64 1.1.24+nmu4ubuntu1 [8276 B]
-Get:17 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython3.5-dev amd64 3.5.2-2ubuntu0~16.04.5 [37.3 MB]
-Get:18 http://archive.ubuntu.com/ubuntu xenial/main amd64 libpython3-dev amd64 3.5.1-3 [6926 B]
-Get:19 http://archive.ubuntu.com/ubuntu xenial/main amd64 libreadline-dev amd64 6.3-8ubuntu2 [992 B]
-Get:20 http://archive.ubuntu.com/ubuntu xenial/main amd64 python-roman all 2.0.0-2 [8062 B]
-Get:21 http://archive.ubuntu.com/ubuntu xenial/main amd64 python-docutils all 0.12+dfsg-1 [348 kB]
-Get:22 http://archive.ubuntu.com/ubuntu xenial/main amd64 python-chardet all 2.3.0-2 [96.3 kB]
-Get:23 http://archive.ubuntu.com/ubuntu xenial/universe amd64 python-empy all 3.3.2-1build1 [72.5 kB]
-Get:24 http://archive.ubuntu.com/ubuntu xenial/universe amd64 python-nose all 1.3.7-1 [116 kB]
-Get:25 http://archive.ubuntu.com/ubuntu xenial/main amd64 python-pygments all 2.1+dfsg-1 [522 kB]
-Get:26 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python3.5-dev amd64 3.5.2-2ubuntu0~16.04.5 [413 kB]
-Get:27 http://archive.ubuntu.com/ubuntu xenial/main amd64 python3-dev amd64 3.5.1-3 [1186 B]
-Get:28 http://archive.ubuntu.com/ubuntu xenial/main amd64 python3-pkg-resources all 20.7.0-1 [79.0 kB]
-Get:29 http://archive.ubuntu.com/ubuntu xenial/main amd64 python3-nose all 1.3.7-1 [116 kB]
-Get:30 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 python3-pip all 8.1.1-2ubuntu0.4 [109 kB]
-Get:31 http://archive.ubuntu.com/ubuntu xenial/main amd64 python3-setuptools all 20.7.0-1 [88.0 kB]
-Get:32 http://archive.ubuntu.com/ubuntu xenial/main amd64 python3-simplejson amd64 3.8.1-1ubuntu2 [48.6 kB]
-Get:33 http://archive.ubuntu.com/ubuntu xenial/universe amd64 python3-wheel all 0.29.0-1 [48.1 kB]
-Get:34 http://archive.ubuntu.com/ubuntu xenial/universe amd64 python3-zmq amd64 15.2.0-0ubuntu4 [202 kB]
-Get:35 http://archive.ubuntu.com/ubuntu xenial/main amd64 libffi-dev amd64 3.2.1-4 [161 kB]
-debconf: unable to initialize frontend: Dialog
-debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
-debconf: falling back to frontend: Readline
-debconf: unable to initialize frontend: Readline
-debconf: (This frontend requires a controlling tty.)
-debconf: falling back to frontend: Teletype
-dpkg-preconfigure: unable to re-open stdin: 
-Fetched 47.3 MB in 5s (8134 kB/s)
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 51067 files and directories currently installed.)
-Preparing to unpack .../libpython3.5_3.5.2-2ubuntu0~16.04.5_amd64.deb ...
-Unpacking libpython3.5:amd64 (3.5.2-2ubuntu0~16.04.5) over (3.5.2-2ubuntu0~16.04.4) ...
-Preparing to unpack .../python3.5_3.5.2-2ubuntu0~16.04.5_amd64.deb ...
-Unpacking python3.5 (3.5.2-2ubuntu0~16.04.5) over (3.5.2-2ubuntu0~16.04.4) ...
-Preparing to unpack .../libpython3.5-stdlib_3.5.2-2ubuntu0~16.04.5_amd64.deb ...
-Unpacking libpython3.5-stdlib:amd64 (3.5.2-2ubuntu0~16.04.5) over (3.5.2-2ubuntu0~16.04.4) ...
-Preparing to unpack .../python3.5-minimal_3.5.2-2ubuntu0~16.04.5_amd64.deb ...
-Unpacking python3.5-minimal (3.5.2-2ubuntu0~16.04.5) over (3.5.2-2ubuntu0~16.04.4) ...
-Preparing to unpack .../libpython3.5-minimal_3.5.2-2ubuntu0~16.04.5_amd64.deb ...
-Unpacking libpython3.5-minimal:amd64 (3.5.2-2ubuntu0~16.04.5) over (3.5.2-2ubuntu0~16.04.4) ...
-Selecting previously unselected package docutils-common.
-Preparing to unpack .../docutils-common_0.12+dfsg-1_all.deb ...
-Unpacking docutils-common (0.12+dfsg-1) ...
-Selecting previously unselected package docutils-doc.
-Preparing to unpack .../docutils-doc_0.12+dfsg-1_all.deb ...
-Unpacking docutils-doc (0.12+dfsg-1) ...
-Selecting previously unselected package libgtest-dev:amd64.
-Preparing to unpack .../libgtest-dev_1.7.0-4ubuntu1_amd64.deb ...
-Unpacking libgtest-dev:amd64 (1.7.0-4ubuntu1) ...
-Selecting previously unselected package google-mock:amd64.
-Preparing to unpack .../google-mock_1.7.0-18092013-1_amd64.deb ...
-Unpacking google-mock:amd64 (1.7.0-18092013-1) ...
-Selecting previously unselected package libatomic-ops-dev:amd64.
-Preparing to unpack .../libatomic-ops-dev_7.4.2-3ubuntu1_amd64.deb ...
-Unpacking libatomic-ops-dev:amd64 (7.4.2-3ubuntu1) ...
-Selecting previously unselected package libpaper1:amd64.
-Preparing to unpack .../libpaper1_1.1.24+nmu4ubuntu1_amd64.deb ...
-Unpacking libpaper1:amd64 (1.1.24+nmu4ubuntu1) ...
-Selecting previously unselected package libpaper-utils.
-Preparing to unpack .../libpaper-utils_1.1.24+nmu4ubuntu1_amd64.deb ...
-Unpacking libpaper-utils (1.1.24+nmu4ubuntu1) ...
-Selecting previously unselected package libpython3.5-dev:amd64.
-Preparing to unpack .../libpython3.5-dev_3.5.2-2ubuntu0~16.04.5_amd64.deb ...
-Unpacking libpython3.5-dev:amd64 (3.5.2-2ubuntu0~16.04.5) ...
-Selecting previously unselected package libpython3-dev:amd64.
-Preparing to unpack .../libpython3-dev_3.5.1-3_amd64.deb ...
-Unpacking libpython3-dev:amd64 (3.5.1-3) ...
-Selecting previously unselected package libreadline-dev:amd64.
-Preparing to unpack .../libreadline-dev_6.3-8ubuntu2_amd64.deb ...
-Unpacking libreadline-dev:amd64 (6.3-8ubuntu2) ...
-Selecting previously unselected package python-roman.
-Preparing to unpack .../python-roman_2.0.0-2_all.deb ...
-Unpacking python-roman (2.0.0-2) ...
-Selecting previously unselected package python-docutils.
-Preparing to unpack .../python-docutils_0.12+dfsg-1_all.deb ...
-Unpacking python-docutils (0.12+dfsg-1) ...
-Selecting previously unselected package python-catkin-pkg-modules.
-Preparing to unpack .../python-catkin-pkg-modules_0.4.9-1_all.deb ...
-Unpacking python-catkin-pkg-modules (0.4.9-1) ...
-Selecting previously unselected package python-catkin-pkg.
-Preparing to unpack .../python-catkin-pkg_0.4.9-100_all.deb ...
-Unpacking python-catkin-pkg (0.4.9-100) ...
-Selecting previously unselected package python-chardet.
-Preparing to unpack .../python-chardet_2.3.0-2_all.deb ...
-Unpacking python-chardet (2.3.0-2) ...
-Selecting previously unselected package python-empy.
-Preparing to unpack .../python-empy_3.3.2-1build1_all.deb ...
-Unpacking python-empy (3.3.2-1build1) ...
-Selecting previously unselected package python-nose.
-Preparing to unpack .../python-nose_1.3.7-1_all.deb ...
-Unpacking python-nose (1.3.7-1) ...
-Selecting previously unselected package python-pygments.
-Preparing to unpack .../python-pygments_2.1+dfsg-1_all.deb ...
-Unpacking python-pygments (2.1+dfsg-1) ...
-Selecting previously unselected package python3.5-dev.
-Preparing to unpack .../python3.5-dev_3.5.2-2ubuntu0~16.04.5_amd64.deb ...
-Unpacking python3.5-dev (3.5.2-2ubuntu0~16.04.5) ...
-Selecting previously unselected package python3-dev.
-Preparing to unpack .../python3-dev_3.5.1-3_amd64.deb ...
-Unpacking python3-dev (3.5.1-3) ...
-Selecting previously unselected package python3-pkg-resources.
-Preparing to unpack .../python3-pkg-resources_20.7.0-1_all.deb ...
-Unpacking python3-pkg-resources (20.7.0-1) ...
-Selecting previously unselected package python3-nose.
-Preparing to unpack .../python3-nose_1.3.7-1_all.deb ...
-Unpacking python3-nose (1.3.7-1) ...
-Selecting previously unselected package python3-pip.
-Preparing to unpack .../python3-pip_8.1.1-2ubuntu0.4_all.deb ...
-Unpacking python3-pip (8.1.1-2ubuntu0.4) ...
-Selecting previously unselected package python3-setuptools.
-Preparing to unpack .../python3-setuptools_20.7.0-1_all.deb ...
-Unpacking python3-setuptools (20.7.0-1) ...
-Selecting previously unselected package python3-simplejson.
-Preparing to unpack .../python3-simplejson_3.8.1-1ubuntu2_amd64.deb ...
-Unpacking python3-simplejson (3.8.1-1ubuntu2) ...
-Selecting previously unselected package python3-wheel.
-Preparing to unpack .../python3-wheel_0.29.0-1_all.deb ...
-Unpacking python3-wheel (0.29.0-1) ...
-Selecting previously unselected package python3-zmq.
-Preparing to unpack .../python3-zmq_15.2.0-0ubuntu4_amd64.deb ...
-Unpacking python3-zmq (15.2.0-0ubuntu4) ...
-Selecting previously unselected package libffi-dev:amd64.
-Preparing to unpack .../libffi-dev_3.2.1-4_amd64.deb ...
-Unpacking libffi-dev:amd64 (3.2.1-4) ...
-Selecting previously unselected package ros-kinetic-catkin.
-Preparing to unpack .../ros-kinetic-catkin_0.7.14-0xenial-20180809-132632-0800_amd64.deb ...
-Unpacking ros-kinetic-catkin (0.7.14-0xenial-20180809-132632-0800) ...
-Selecting previously unselected package ros-kinetic-octomap.
-Preparing to unpack .../ros-kinetic-octomap_1.8.1-0xenial-20180809-134711-0800_amd64.deb ...
-Unpacking ros-kinetic-octomap (1.8.1-0xenial-20180809-134711-0800) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Processing triggers for mime-support (3.59ubuntu1) ...
-Processing triggers for shared-mime-info (1.5-2ubuntu0.1) ...
-Processing triggers for sgml-base (1.26+nmu4ubuntu1) ...
-Setting up libpython3.5-minimal:amd64 (3.5.2-2ubuntu0~16.04.5) ...
-Setting up libpython3.5-stdlib:amd64 (3.5.2-2ubuntu0~16.04.5) ...
-Setting up libpython3.5:amd64 (3.5.2-2ubuntu0~16.04.5) ...
-Setting up python3.5-minimal (3.5.2-2ubuntu0~16.04.5) ...
-Setting up python3.5 (3.5.2-2ubuntu0~16.04.5) ...
-Setting up docutils-common (0.12+dfsg-1) ...
-Setting up docutils-doc (0.12+dfsg-1) ...
-Setting up libgtest-dev:amd64 (1.7.0-4ubuntu1) ...
-Setting up google-mock:amd64 (1.7.0-18092013-1) ...
-Setting up libatomic-ops-dev:amd64 (7.4.2-3ubuntu1) ...
-Setting up libpaper1:amd64 (1.1.24+nmu4ubuntu1) ...
-debconf: unable to initialize frontend: Dialog
-debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
-debconf: falling back to frontend: Readline
-
-Creating config file /etc/papersize with new version
-Setting up libpaper-utils (1.1.24+nmu4ubuntu1) ...
-Setting up libpython3.5-dev:amd64 (3.5.2-2ubuntu0~16.04.5) ...
-Setting up libpython3-dev:amd64 (3.5.1-3) ...
-Setting up libreadline-dev:amd64 (6.3-8ubuntu2) ...
-Setting up python-roman (2.0.0-2) ...
-Setting up python-chardet (2.3.0-2) ...
-Setting up python-empy (3.3.2-1build1) ...
-Setting up python-nose (1.3.7-1) ...
-Setting up python-pygments (2.1+dfsg-1) ...
-Setting up python3.5-dev (3.5.2-2ubuntu0~16.04.5) ...
-Setting up python3-dev (3.5.1-3) ...
-Setting up python3-pkg-resources (20.7.0-1) ...
-Setting up python3-nose (1.3.7-1) ...
-Setting up python3-pip (8.1.1-2ubuntu0.4) ...
-Setting up python3-setuptools (20.7.0-1) ...
-Setting up python3-simplejson (3.8.1-1ubuntu2) ...
-Setting up python3-wheel (0.29.0-1) ...
-Setting up python3-zmq (15.2.0-0ubuntu4) ...
-Setting up libffi-dev:amd64 (3.2.1-4) ...
-Processing triggers for sgml-base (1.26+nmu4ubuntu1) ...
-Setting up python-docutils (0.12+dfsg-1) ...
-update-alternatives: using /usr/share/docutils/scripts/python2/rst-buildhtml to provide /usr/bin/rst-buildhtml (rst-buildhtml) in auto mode
-update-alternatives: using /usr/share/docutils/scripts/python2/rst2html to provide /usr/bin/rst2html (rst2html) in auto mode
-update-alternatives: using /usr/share/docutils/scripts/python2/rst2latex to provide /usr/bin/rst2latex (rst2latex) in auto mode
-update-alternatives: using /usr/share/docutils/scripts/python2/rst2man to provide /usr/bin/rst2man (rst2man) in auto mode
-update-alternatives: using /usr/share/docutils/scripts/python2/rst2odt to provide /usr/bin/rst2odt (rst2odt) in auto mode
-update-alternatives: using /usr/share/docutils/scripts/python2/rst2odt_prepstyles to provide /usr/bin/rst2odt_prepstyles (rst2odt_prepstyles) in auto mode
-update-alternatives: using /usr/share/docutils/scripts/python2/rst2pseudoxml to provide /usr/bin/rst2pseudoxml (rst2pseudoxml) in auto mode
-update-alternatives: using /usr/share/docutils/scripts/python2/rst2s5 to provide /usr/bin/rst2s5 (rst2s5) in auto mode
-update-alternatives: using /usr/share/docutils/scripts/python2/rst2xetex to provide /usr/bin/rst2xetex (rst2xetex) in auto mode
-update-alternatives: using /usr/share/docutils/scripts/python2/rst2xml to provide /usr/bin/rst2xml (rst2xml) in auto mode
-update-alternatives: using /usr/share/docutils/scripts/python2/rstpep2html to provide /usr/bin/rstpep2html (rstpep2html) in auto mode
-Setting up python-catkin-pkg-modules (0.4.9-1) ...
-Setting up python-catkin-pkg (0.4.9-100) ...
-Setting up ros-kinetic-catkin (0.7.14-0xenial-20180809-132632-0800) ...
-Setting up ros-kinetic-octomap (1.8.1-0xenial-20180809-134711-0800) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-UTF-8 locale enabled already
-Reading package lists...
-Building dependency tree...
-Reading state information...
-libcpprest2.8 is already the newest version (2.8.0-2).
-0 upgraded, 0 newly installed, 0 to remove and 178 not upgraded.
-[1;34m[octool] Installing latest bdwgc ....[0m
-./octool: line 1004: curl: command not found
-./octool: line 603: curl: command not found
-ivmai bdwgc
---2018-12-21 19:43:30--  https://github.com/ivmai/bdwgc/releases/download//gc-.tar.gz
-Resolving github.com (github.com)... 192.30.253.113, 192.30.253.112
-Connecting to github.com (github.com)|192.30.253.113|:443... connected.
-HTTP request sent, awaiting response... 404 Not Found
-2018-12-21 19:43:30 ERROR 404: Not Found.
-
-tar: gc-.tar.gz: Cannot open: No such file or directory
-tar: Error is not recoverable: exiting now
-./octool: line 1011: cd: gc-: No such file or directory
-./octool: line 1012: ./configure: No such file or directory
-make: *** No targets specified and no makefile found.  Stop.
-make: *** No rule to make target 'install'.  Stop.
-[1;34m[octool] Installing guile-2.2.3....[0m
-Reading package lists...
-Building dependency tree...
-Reading state information...
-The following NEW packages will be installed:
-  libunistring-dev
-0 upgraded, 1 newly installed, 0 to remove and 178 not upgraded.
-Need to get 423 kB of archives.
-After this operation, 2733 kB of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu xenial/main amd64 libunistring-dev amd64 0.9.3-5.2ubuntu1 [423 kB]
-debconf: unable to initialize frontend: Dialog
-debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
-debconf: falling back to frontend: Readline
-debconf: unable to initialize frontend: Readline
-debconf: (This frontend requires a controlling tty.)
-debconf: falling back to frontend: Teletype
-dpkg-preconfigure: unable to re-open stdin: 
-Fetched 423 kB in 0s (646 kB/s)
-Selecting previously unselected package libunistring-dev:amd64.
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 52957 files and directories currently installed.)
-Preparing to unpack .../libunistring-dev_0.9.3-5.2ubuntu1_amd64.deb ...
-Unpacking libunistring-dev:amd64 (0.9.3-5.2ubuntu1) ...
-Setting up libunistring-dev:amd64 (0.9.3-5.2ubuntu1) ...
---2018-12-21 19:43:32--  https://ftp.gnu.org/gnu/guile/guile-2.2.3.tar.gz
-Resolving ftp.gnu.org (ftp.gnu.org)... 208.118.235.20, 2001:4830:134:3::b
-Connecting to ftp.gnu.org (ftp.gnu.org)|208.118.235.20|:443... connected.
-Unable to establish SSL connection.
-+ sudo apt-get upgrade -y
-Reading package lists...
-Building dependency tree...
-Reading state information...
-Calculating upgrade...
-The following packages have been kept back:
-  libgl1-mesa-dri
-The following packages will be upgraded:
-  ant ant-optional apt apt-utils base-files binutils binutils-dev bsdutils
-  cpp-5 distro-info-data dpkg dpkg-dev file g++-5 gcc-5 gcc-5-base
-  gettext-base gfortran-5 git git-man gnupg gpgv guile-2.0 guile-2.0-dev
-  guile-2.0-libs hicolor-icon-theme icu-devtools ifupdown iproute2
-  isc-dhcp-client isc-dhcp-common libapparmor1 libapt-inst2.0 libapt-pkg5.0
-  libarchive13 libasan2 libasprintf0v5 libatomic1 libaudit-common libaudit1
-  libavahi-client3 libavahi-common-data libavahi-common3 libblkid1 libcc1-0
-  libcilkrts5 libcups2 libcurl3 libcurl3-gnutls libdns-export162 libdpkg-perl
-  libdrm-amdgpu1 libdrm-common libdrm-dev libdrm-intel1 libdrm-nouveau2
-  libdrm-radeon1 libdrm2 libelf1 libfdisk1 libgcc-5-dev libgcrypt20
-  libgdk-pixbuf2.0-0 libgdk-pixbuf2.0-common libgfortran-5-dev libgfortran3
-  libgl1-mesa-dev libgl1-mesa-glx libglapi-mesa libglib2.0-0 libglib2.0-bin
-  libglib2.0-data libglib2.0-dev libgomp1 libicu-dev libicu55 libisc-export160
-  libitm1 libjpeg-turbo8 libkmod2 liblcms2-2 libldap-2.4-2 libldap2-dev
-  liblsan0 libmagic1 libmount1 libmpx0 libmysqlclient20 libobjc-5-dev libobjc4
-  libpam-modules libpam-modules-bin libpam-runtime libpam0g libperl5.22
-  libpng12-0 libpng12-dev libpq-dev libpq5 libprocps4 libpulse-dev
-  libpulse-mainloop-glib0 libpulse0 libpython-all-dev libpython-dev
-  libpython-stdlib libpython2.7 libpython2.7-dev libpython2.7-minimal
-  libpython2.7-stdlib libquadmath0 libsasl2-2 libsasl2-modules
-  libsasl2-modules-db libslang2 libslang2-dev libsmartcols1 libssl-dev
-  libssl-doc libssl1.0.0 libstdc++-5-dev libstdc++6 libsystemd0 libtasn1-6
-  libtiff5 libtsan0 libubsan0 libudev1 libuuid1 libvorbis0a libvorbisenc2
-  libx11-6 libx11-data libx11-dev libx11-doc libx11-xcb-dev libx11-xcb1
-  libxcursor1 libxml2 linux-libc-dev memcached mesa-common-dev mount
-  mysql-common openjdk-8-jdk openjdk-8-jdk-headless openjdk-8-jre
-  openjdk-8-jre-headless openssh-client openssl patch perl perl-base
-  perl-modules-5.22 postgresql-client postgresql-client-9.5
-  postgresql-client-common procps python python-all python-all-dev python-dev
-  python-minimal python-tk python2.7 python2.7-dev python2.7-minimal
-  sensible-utils shared-mime-info systemd systemd-sysv tzdata util-linux
-  uuid-dev wget x11-common xdg-user-dirs
-177 upgraded, 0 newly installed, 0 to remove and 1 not upgraded.
-Need to get 180 MB of archives.
-After this operation, 58.4 kB of additional disk space will be used.
-Get:1 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 base-files amd64 9.4ubuntu4.7 [65.9 kB]
-Get:2 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 bsdutils amd64 1:2.27.1-6ubuntu3.6 [51.2 kB]
-Get:3 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 dpkg amd64 1.18.4ubuntu1.5 [2085 kB]
-Get:4 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 util-linux amd64 2.27.1-6ubuntu3.6 [848 kB]
-Get:5 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 mount amd64 2.27.1-6ubuntu3.6 [121 kB]
-Get:6 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libperl5.22 amd64 5.22.1-9ubuntu0.6 [3405 kB]
-Get:7 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 perl amd64 5.22.1-9ubuntu0.6 [237 kB]
-Get:8 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 perl-base amd64 5.22.1-9ubuntu0.6 [1283 kB]
-Get:9 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 perl-modules-5.22 all 5.22.1-9ubuntu0.6 [2629 kB]
-Get:10 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libquadmath0 amd64 5.4.0-6ubuntu1~16.04.11 [131 kB]
-Get:11 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgomp1 amd64 5.4.0-6ubuntu1~16.04.11 [55.0 kB]
-Get:12 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libitm1 amd64 5.4.0-6ubuntu1~16.04.11 [27.4 kB]
-Get:13 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libatomic1 amd64 5.4.0-6ubuntu1~16.04.11 [8896 B]
-Get:14 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libasan2 amd64 5.4.0-6ubuntu1~16.04.11 [264 kB]
-Get:15 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 liblsan0 amd64 5.4.0-6ubuntu1~16.04.11 [105 kB]
-Get:16 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libtsan0 amd64 5.4.0-6ubuntu1~16.04.11 [244 kB]
-Get:17 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libubsan0 amd64 5.4.0-6ubuntu1~16.04.11 [95.4 kB]
-Get:18 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcilkrts5 amd64 5.4.0-6ubuntu1~16.04.11 [40.1 kB]
-Get:19 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libmpx0 amd64 5.4.0-6ubuntu1~16.04.11 [9748 B]
-Get:20 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgfortran3 amd64 5.4.0-6ubuntu1~16.04.11 [260 kB]
-Get:21 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 gfortran-5 amd64 5.4.0-6ubuntu1~16.04.11 [8034 kB]
-Get:22 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 g++-5 amd64 5.4.0-6ubuntu1~16.04.11 [8310 kB]
-Get:23 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 gcc-5 amd64 5.4.0-6ubuntu1~16.04.11 [8417 kB]
-Get:24 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 cpp-5 amd64 5.4.0-6ubuntu1~16.04.11 [7660 kB]
-Get:25 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcc1-0 amd64 5.4.0-6ubuntu1~16.04.11 [38.8 kB]
-Get:26 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libstdc++-5-dev amd64 5.4.0-6ubuntu1~16.04.11 [1426 kB]
-Get:27 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 binutils-dev amd64 2.26.1-1ubuntu1~16.04.7 [2177 kB]
-Get:28 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 binutils amd64 2.26.1-1ubuntu1~16.04.7 [2309 kB]
-Get:29 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgfortran-5-dev amd64 5.4.0-6ubuntu1~16.04.11 [291 kB]
-Get:30 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libobjc-5-dev amd64 5.4.0-6ubuntu1~16.04.11 [380 kB]
-Get:31 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgcc-5-dev amd64 5.4.0-6ubuntu1~16.04.11 [2229 kB]
-Get:32 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libobjc4 amd64 5.4.0-6ubuntu1~16.04.11 [111 kB]
-Get:33 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 gcc-5-base amd64 5.4.0-6ubuntu1~16.04.11 [17.3 kB]
-Get:34 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libstdc++6 amd64 5.4.0-6ubuntu1~16.04.11 [393 kB]
-Get:35 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libapt-pkg5.0 amd64 1.2.29 [707 kB]
-Get:36 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libapt-inst2.0 amd64 1.2.29 [55.5 kB]
-Get:37 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apt amd64 1.2.29 [1041 kB]
-Get:38 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 apt-utils amd64 1.2.29 [196 kB]
-Get:39 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 gpgv amd64 1.4.20-1ubuntu3.3 [165 kB]
-Get:40 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 gnupg amd64 1.4.20-1ubuntu3.3 [626 kB]
-Get:41 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libaudit-common all 1:2.4.5-1ubuntu2.1 [3924 B]
-Get:42 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libaudit1 amd64 1:2.4.5-1ubuntu2.1 [36.2 kB]
-Get:43 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpam0g amd64 1.1.8-3.2ubuntu2.1 [55.6 kB]
-Get:44 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpam-modules-bin amd64 1.1.8-3.2ubuntu2.1 [36.9 kB]
-Get:45 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpam-modules amd64 1.1.8-3.2ubuntu2.1 [244 kB]
-Get:46 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 iproute2 amd64 4.3.0-1ubuntu3.16.04.4 [521 kB]
-Get:47 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libsystemd0 amd64 229-4ubuntu21.10 [204 kB]
-Get:48 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 systemd amd64 229-4ubuntu21.10 [3784 kB]
-Get:49 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 ifupdown amd64 0.8.10ubuntu1.4 [54.9 kB]
-Get:50 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libapparmor1 amd64 2.10.95-0ubuntu2.10 [29.7 kB]
-Get:51 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 uuid-dev amd64 2.27.1-6ubuntu3.6 [26.4 kB]
-Get:52 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libuuid1 amd64 2.27.1-6ubuntu3.6 [15.1 kB]
-Get:53 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libblkid1 amd64 2.27.1-6ubuntu3.6 [107 kB]
-Get:54 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libkmod2 amd64 22-1ubuntu5.1 [39.8 kB]
-Get:55 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libmount1 amd64 2.27.1-6ubuntu3.6 [114 kB]
-Get:56 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 systemd-sysv amd64 229-4ubuntu21.10 [11.3 kB]
-Get:57 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python2.7-dev amd64 2.7.12-1ubuntu0~16.04.4 [276 kB]
-Get:58 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7-dev amd64 2.7.12-1ubuntu0~16.04.4 [27.8 MB]
-Get:59 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7 amd64 2.7.12-1ubuntu0~16.04.4 [1071 kB]
-Get:60 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python2.7 amd64 2.7.12-1ubuntu0~16.04.4 [224 kB]
-Get:61 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libssl-doc all 1.0.2g-1ubuntu4.14 [1078 kB]
-Get:62 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libssl-dev amd64 1.0.2g-1ubuntu4.14 [1345 kB]
-Get:63 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libssl1.0.0 amd64 1.0.2g-1ubuntu4.14 [1085 kB]
-Get:64 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7-stdlib amd64 2.7.12-1ubuntu0~16.04.4 [1880 kB]
-Get:65 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python2.7-minimal amd64 2.7.12-1ubuntu0~16.04.4 [1261 kB]
-Get:66 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython2.7-minimal amd64 2.7.12-1ubuntu0~16.04.4 [339 kB]
-Get:67 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python-all-dev amd64 2.7.12-1~16.04 [1016 B]
-Get:68 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python-dev amd64 2.7.12-1~16.04 [1186 B]
-Get:69 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python-all amd64 2.7.12-1~16.04 [996 B]
-Get:70 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python-minimal amd64 2.7.12-1~16.04 [28.1 kB]
-Get:71 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python amd64 2.7.12-1~16.04 [137 kB]
-Get:72 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython-all-dev amd64 2.7.12-1~16.04 [1006 B]
-Get:73 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython-dev amd64 2.7.12-1~16.04 [7840 B]
-Get:74 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpython-stdlib amd64 2.7.12-1~16.04 [7768 B]
-Get:75 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libelf1 amd64 0.165-3ubuntu1.1 [43.0 kB]
-Get:76 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libglib2.0-data all 2.48.2-0ubuntu4.1 [132 kB]
-Get:77 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libglib2.0-dev amd64 2.48.2-0ubuntu4.1 [1379 kB]
-Get:78 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libglib2.0-bin amd64 2.48.2-0ubuntu4.1 [39.4 kB]
-Get:79 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libglib2.0-0 amd64 2.48.2-0ubuntu4.1 [1120 kB]
-Get:80 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libjpeg-turbo8 amd64 1.4.2-0ubuntu3.1 [111 kB]
-Get:81 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libfdisk1 amd64 2.27.1-6ubuntu3.6 [138 kB]
-Get:82 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgcrypt20 amd64 1.6.5-2ubuntu0.5 [338 kB]
-Get:83 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpam-runtime all 1.1.8-3.2ubuntu2.1 [37.9 kB]
-Get:84 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libsmartcols1 amd64 2.27.1-6ubuntu3.6 [62.7 kB]
-Get:85 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libudev1 amd64 229-4ubuntu21.10 [53.8 kB]
-Get:86 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 sensible-utils all 0.0.9ubuntu0.16.04.1 [10.0 kB]
-Get:87 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libprocps4 amd64 2:3.3.10-4ubuntu2.4 [33.1 kB]
-Get:88 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 procps amd64 2:3.3.10-4ubuntu2.4 [222 kB]
-Get:89 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 tzdata all 2018g-0ubuntu0.16.04 [166 kB]
-Get:90 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 distro-info-data all 0.28ubuntu0.9 [4534 B]
-Get:91 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 file amd64 1:5.25-2ubuntu1.1 [21.2 kB]
-Get:92 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libmagic1 amd64 1:5.25-2ubuntu1.1 [216 kB]
-Get:93 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libisc-export160 amd64 1:9.10.3.dfsg.P4-8ubuntu1.11 [153 kB]
-Get:94 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdns-export162 amd64 1:9.10.3.dfsg.P4-8ubuntu1.11 [667 kB]
-Get:95 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 isc-dhcp-client amd64 4.3.3-5ubuntu12.10 [224 kB]
-Get:96 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 isc-dhcp-common amd64 4.3.3-5ubuntu12.10 [105 kB]
-Get:97 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpng12-dev amd64 1.2.54-1ubuntu1.1 [183 kB]
-Get:98 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpng12-0 amd64 1.2.54-1ubuntu1.1 [116 kB]
-Get:99 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libslang2-dev amd64 2.3.0-2ubuntu1.1 [382 kB]
-Get:100 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libslang2 amd64 2.3.0-2ubuntu1.1 [415 kB]
-Get:101 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libtasn1-6 amd64 4.7-3ubuntu0.16.04.3 [43.5 kB]
-Get:102 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libasprintf0v5 amd64 0.19.7-2ubuntu3.1 [6568 B]
-Get:103 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 gettext-base amd64 0.19.7-2ubuntu3.1 [48.0 kB]
-Get:104 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libldap2-dev amd64 2.4.42+dfsg-2ubuntu3.4 [262 kB]
-Get:105 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libsasl2-modules-db amd64 2.1.26.dfsg1-14ubuntu0.1 [14.5 kB]
-Get:106 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libsasl2-2 amd64 2.1.26.dfsg1-14ubuntu0.1 [48.6 kB]
-Get:107 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libldap-2.4-2 amd64 2.4.42+dfsg-2ubuntu3.4 [160 kB]
-Get:108 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcurl3-gnutls amd64 7.47.0-1ubuntu2.11 [185 kB]
-Get:109 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdrm-dev amd64 2.4.91-2~16.04.1 [232 kB]
-Get:110 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdrm-intel1 amd64 2.4.91-2~16.04.1 [59.9 kB]
-Get:111 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdrm-radeon1 amd64 2.4.91-2~16.04.1 [21.5 kB]
-Get:112 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdrm-nouveau2 amd64 2.4.91-2~16.04.1 [16.3 kB]
-Get:113 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdrm-amdgpu1 amd64 2.4.91-2~16.04.1 [18.9 kB]
-Get:114 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdrm-common all 2.4.91-2~16.04.1 [4764 B]
-Get:115 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdrm2 amd64 2.4.91-2~16.04.1 [30.8 kB]
-Get:116 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libicu-dev amd64 55.1-7ubuntu0.4 [8566 kB]
-Get:117 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 icu-devtools amd64 55.1-7ubuntu0.4 [166 kB]
-Get:118 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libicu55 amd64 55.1-7ubuntu0.4 [7646 kB]
-Get:119 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libsasl2-modules amd64 2.1.26.dfsg1-14ubuntu0.1 [47.5 kB]
-Get:120 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libx11-data all 2:1.6.3-1ubuntu2.1 [113 kB]
-Get:121 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libx11-doc all 2:1.6.3-1ubuntu2.1 [1470 kB]
-Get:122 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libx11-dev amd64 2:1.6.3-1ubuntu2.1 [640 kB]
-Get:123 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libx11-6 amd64 2:1.6.3-1ubuntu2.1 [570 kB]
-Get:124 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libxml2 amd64 2.9.3+dfsg1-1ubuntu0.6 [697 kB]
-Get:125 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 openssh-client amd64 1:7.2p2-4ubuntu2.6 [584 kB]
-Get:126 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 openssl amd64 1.0.2g-1ubuntu4.14 [492 kB]
-Get:127 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 shared-mime-info amd64 1.5-2ubuntu0.2 [405 kB]
-Get:128 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 wget amd64 1.17.1-1ubuntu1.4 [299 kB]
-Get:129 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 xdg-user-dirs amd64 0.15-2ubuntu6.16.04.1 [61.8 kB]
-Get:130 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 ant-optional all 1.9.6-1ubuntu1.1 [315 kB]
-Get:131 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgl1-mesa-dev amd64 18.0.5-0ubuntu0~16.04.1 [4456 B]
-Get:132 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 mesa-common-dev amd64 18.0.5-0ubuntu0~16.04.1 [543 kB]
-Get:133 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libx11-xcb-dev amd64 2:1.6.3-1ubuntu2.1 [9718 B]
-Get:134 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libx11-xcb1 amd64 2:1.6.3-1ubuntu2.1 [9044 B]
-Get:135 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgl1-mesa-glx amd64 18.0.5-0ubuntu0~16.04.1 [132 kB]
-Get:136 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libglapi-mesa amd64 18.0.5-0ubuntu0~16.04.1 [23.4 kB]
-Get:137 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpulse-dev amd64 1:8.0-0ubuntu3.10 [71.3 kB]
-Get:138 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpulse-mainloop-glib0 amd64 1:8.0-0ubuntu3.10 [11.5 kB]
-Get:139 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpulse0 amd64 1:8.0-0ubuntu3.10 [249 kB]
-Get:140 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 openjdk-8-jdk amd64 8u191-b12-0ubuntu0.16.04.1 [1415 kB]
-Get:141 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 openjdk-8-jre amd64 8u191-b12-0ubuntu0.16.04.1 [69.3 kB]
-Get:142 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 openjdk-8-jdk-headless amd64 8u191-b12-0ubuntu0.16.04.1 [8208 kB]
-Get:143 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libavahi-common-data amd64 0.6.32~rc+dfsg-1ubuntu2.2 [21.5 kB]
-Get:144 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libavahi-common3 amd64 0.6.32~rc+dfsg-1ubuntu2.2 [21.6 kB]
-Get:145 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libavahi-client3 amd64 0.6.32~rc+dfsg-1ubuntu2.2 [25.2 kB]
-Get:146 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcups2 amd64 2.1.3-4ubuntu0.6 [197 kB]
-Get:147 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 liblcms2-2 amd64 2.6-3ubuntu2.1 [136 kB]
-Get:148 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 openjdk-8-jre-headless amd64 8u191-b12-0ubuntu0.16.04.1 [27.1 MB]
-Get:149 http://archive.ubuntu.com/ubuntu xenial-updates/universe amd64 ant all 1.9.6-1ubuntu1.1 [1899 kB]
-Get:150 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 dpkg-dev all 1.18.4ubuntu1.5 [584 kB]
-Get:151 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libdpkg-perl all 1.18.4ubuntu1.5 [195 kB]
-Get:152 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 patch amd64 2.7.5-1ubuntu0.16.04.1 [90.5 kB]
-Get:153 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 git-man all 1:2.7.4-0ubuntu1.6 [736 kB]
-Get:154 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 git amd64 1:2.7.4-0ubuntu1.6 [3176 kB]
-Get:155 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 guile-2.0-dev amd64 2.0.11+1-10ubuntu0.1 [701 kB]
-Get:156 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 guile-2.0 amd64 2.0.11+1-10ubuntu0.1 [8690 B]
-Get:157 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 guile-2.0-libs amd64 2.0.11+1-10ubuntu0.1 [2237 kB]
-Get:158 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 hicolor-icon-theme all 0.15-0ubuntu1.1 [7698 B]
-Get:159 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libarchive13 amd64 3.1.2-11ubuntu0.16.04.4 [262 kB]
-Get:160 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libcurl3 amd64 7.47.0-1ubuntu2.11 [186 kB]
-Get:161 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libtiff5 amd64 4.0.6-1ubuntu0.4 [148 kB]
-Get:162 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgdk-pixbuf2.0-0 amd64 2.32.2-1ubuntu1.5 [159 kB]
-Get:163 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libgdk-pixbuf2.0-common all 2.32.2-1ubuntu1.5 [10.3 kB]
-Get:164 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 mysql-common all 5.7.24-0ubuntu0.16.04.1 [15.3 kB]
-Get:165 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libmysqlclient20 amd64 5.7.24-0ubuntu0.16.04.1 [810 kB]
-Get:166 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpq-dev amd64 9.5.14-0ubuntu0.16.04 [154 kB]
-Get:167 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libpq5 amd64 9.5.14-0ubuntu0.16.04 [78.8 kB]
-Get:168 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libvorbisenc2 amd64 1.3.5-3ubuntu0.2 [70.6 kB]
-Get:169 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libvorbis0a amd64 1.3.5-3ubuntu0.2 [86.0 kB]
-Get:170 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 libxcursor1 amd64 1:1.1.14-1ubuntu0.16.04.2 [19.9 kB]
-Get:171 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 linux-libc-dev amd64 4.4.0-141.167 [854 kB]
-Get:172 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 memcached amd64 1.4.25-2ubuntu1.4 [89.6 kB]
-Get:173 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 postgresql-client-common all 173ubuntu0.2 [28.4 kB]
-Get:174 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 postgresql-client-9.5 amd64 9.5.14-0ubuntu0.16.04 [872 kB]
-Get:175 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 postgresql-client all 9.5+173ubuntu0.2 [5468 B]
-Get:176 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 python-tk amd64 2.7.12-1~16.04 [26.3 kB]
-Get:177 http://archive.ubuntu.com/ubuntu xenial-updates/main amd64 x11-common all 1:7.7+13ubuntu3.1 [22.9 kB]
-debconf: unable to initialize frontend: Dialog
-debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
-debconf: falling back to frontend: Readline
-debconf: unable to initialize frontend: Readline
-debconf: (This frontend requires a controlling tty.)
-debconf: falling back to frontend: Teletype
-dpkg-preconfigure: unable to re-open stdin: 
-Fetched 180 MB in 26s (6697 kB/s)
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../base-files_9.4ubuntu4.7_amd64.deb ...
-Unpacking base-files (9.4ubuntu4.7) over (9.4ubuntu4.5) ...
-Setting up base-files (9.4ubuntu4.7) ...
-Installing new version of config file /etc/issue ...
-Installing new version of config file /etc/issue.net ...
-Installing new version of config file /etc/lsb-release ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../bsdutils_1%3a2.27.1-6ubuntu3.6_amd64.deb ...
-Unpacking bsdutils (1:2.27.1-6ubuntu3.6) over (1:2.27.1-6ubuntu3.3) ...
-Setting up bsdutils (1:2.27.1-6ubuntu3.6) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../dpkg_1.18.4ubuntu1.5_amd64.deb ...
-Unpacking dpkg (1.18.4ubuntu1.5) over (1.18.4ubuntu1.3) ...
-Setting up dpkg (1.18.4ubuntu1.5) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../util-linux_2.27.1-6ubuntu3.6_amd64.deb ...
-Unpacking util-linux (2.27.1-6ubuntu3.6) over (2.27.1-6ubuntu3.3) ...
-Processing triggers for mime-support (3.59ubuntu1) ...
-Setting up util-linux (2.27.1-6ubuntu3.6) ...
-Processing triggers for systemd (229-4ubuntu21) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../mount_2.27.1-6ubuntu3.6_amd64.deb ...
-Unpacking mount (2.27.1-6ubuntu3.6) over (2.27.1-6ubuntu3.3) ...
-Setting up mount (2.27.1-6ubuntu3.6) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../libperl5.22_5.22.1-9ubuntu0.6_amd64.deb ...
-Unpacking libperl5.22:amd64 (5.22.1-9ubuntu0.6) over (5.22.1-9ubuntu0.2) ...
-Preparing to unpack .../perl_5.22.1-9ubuntu0.6_amd64.deb ...
-Unpacking perl (5.22.1-9ubuntu0.6) over (5.22.1-9ubuntu0.2) ...
-Preparing to unpack .../perl-base_5.22.1-9ubuntu0.6_amd64.deb ...
-Unpacking perl-base (5.22.1-9ubuntu0.6) over (5.22.1-9ubuntu0.2) ...
-Setting up perl-base (5.22.1-9ubuntu0.6) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../perl-modules-5.22_5.22.1-9ubuntu0.6_all.deb ...
-Unpacking perl-modules-5.22 (5.22.1-9ubuntu0.6) over (5.22.1-9ubuntu0.2) ...
-Preparing to unpack .../libquadmath0_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking libquadmath0:amd64 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../libgomp1_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking libgomp1:amd64 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../libitm1_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking libitm1:amd64 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../libatomic1_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking libatomic1:amd64 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../libasan2_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking libasan2:amd64 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../liblsan0_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking liblsan0:amd64 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../libtsan0_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking libtsan0:amd64 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../libubsan0_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking libubsan0:amd64 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../libcilkrts5_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking libcilkrts5:amd64 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../libmpx0_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking libmpx0:amd64 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../libgfortran3_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking libgfortran3:amd64 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../gfortran-5_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking gfortran-5 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../g++-5_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking g++-5 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../gcc-5_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking gcc-5 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../cpp-5_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking cpp-5 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../libcc1-0_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking libcc1-0:amd64 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../libstdc++-5-dev_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking libstdc++-5-dev:amd64 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../binutils-dev_2.26.1-1ubuntu1~16.04.7_amd64.deb ...
-Unpacking binutils-dev (2.26.1-1ubuntu1~16.04.7) over (2.26.1-1ubuntu1~16.04.6) ...
-Preparing to unpack .../binutils_2.26.1-1ubuntu1~16.04.7_amd64.deb ...
-Unpacking binutils (2.26.1-1ubuntu1~16.04.7) over (2.26.1-1ubuntu1~16.04.6) ...
-Preparing to unpack .../libgfortran-5-dev_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking libgfortran-5-dev:amd64 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../libobjc-5-dev_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking libobjc-5-dev:amd64 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../libgcc-5-dev_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking libgcc-5-dev:amd64 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../libobjc4_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking libobjc4:amd64 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Preparing to unpack .../gcc-5-base_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking gcc-5-base:amd64 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Processing triggers for ccache (3.2.4-1) ...
-Updating symlinks in /usr/lib/ccache ...
-Setting up gcc-5-base:amd64 (5.4.0-6ubuntu1~16.04.11) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../libstdc++6_5.4.0-6ubuntu1~16.04.11_amd64.deb ...
-Unpacking libstdc++6:amd64 (5.4.0-6ubuntu1~16.04.11) over (5.4.0-6ubuntu1~16.04.5) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Setting up libstdc++6:amd64 (5.4.0-6ubuntu1~16.04.11) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../libapt-pkg5.0_1.2.29_amd64.deb ...
-Unpacking libapt-pkg5.0:amd64 (1.2.29) over (1.2.24) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Setting up libapt-pkg5.0:amd64 (1.2.29) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../libapt-inst2.0_1.2.29_amd64.deb ...
-Unpacking libapt-inst2.0:amd64 (1.2.29) over (1.2.24) ...
-Preparing to unpack .../archives/apt_1.2.29_amd64.deb ...
-Unpacking apt (1.2.29) over (1.2.24) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Setting up apt (1.2.29) ...
-Installing new version of config file /etc/apt/apt.conf.d/01autoremove ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../apt-utils_1.2.29_amd64.deb ...
-Unpacking apt-utils (1.2.29) over (1.2.24) ...
-Preparing to unpack .../gpgv_1.4.20-1ubuntu3.3_amd64.deb ...
-Unpacking gpgv (1.4.20-1ubuntu3.3) over (1.4.20-1ubuntu3.1) ...
-Setting up gpgv (1.4.20-1ubuntu3.3) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../gnupg_1.4.20-1ubuntu3.3_amd64.deb ...
-Unpacking gnupg (1.4.20-1ubuntu3.3) over (1.4.20-1ubuntu3.1) ...
-Setting up gnupg (1.4.20-1ubuntu3.3) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../libaudit-common_1%3a2.4.5-1ubuntu2.1_all.deb ...
-Unpacking libaudit-common (1:2.4.5-1ubuntu2.1) over (1:2.4.5-1ubuntu2) ...
-Setting up libaudit-common (1:2.4.5-1ubuntu2.1) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../libaudit1_1%3a2.4.5-1ubuntu2.1_amd64.deb ...
-Unpacking libaudit1:amd64 (1:2.4.5-1ubuntu2.1) over (1:2.4.5-1ubuntu2) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Setting up libaudit1:amd64 (1:2.4.5-1ubuntu2.1) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../libpam0g_1.1.8-3.2ubuntu2.1_amd64.deb ...
-Unpacking libpam0g:amd64 (1.1.8-3.2ubuntu2.1) over (1.1.8-3.2ubuntu2) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Setting up libpam0g:amd64 (1.1.8-3.2ubuntu2.1) ...
-debconf: unable to initialize frontend: Dialog
-debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
-debconf: falling back to frontend: Readline
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../libpam-modules-bin_1.1.8-3.2ubuntu2.1_amd64.deb ...
-Unpacking libpam-modules-bin (1.1.8-3.2ubuntu2.1) over (1.1.8-3.2ubuntu2) ...
-Setting up libpam-modules-bin (1.1.8-3.2ubuntu2.1) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../libpam-modules_1.1.8-3.2ubuntu2.1_amd64.deb ...
-debconf: unable to initialize frontend: Dialog
-debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
-debconf: falling back to frontend: Readline
-Unpacking libpam-modules:amd64 (1.1.8-3.2ubuntu2.1) over (1.1.8-3.2ubuntu2) ...
-Setting up libpam-modules:amd64 (1.1.8-3.2ubuntu2.1) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../iproute2_4.3.0-1ubuntu3.16.04.4_amd64.deb ...
-Unpacking iproute2 (4.3.0-1ubuntu3.16.04.4) over (4.3.0-1ubuntu3.16.04.3) ...
-Preparing to unpack .../libsystemd0_229-4ubuntu21.10_amd64.deb ...
-Unpacking libsystemd0:amd64 (229-4ubuntu21.10) over (229-4ubuntu21) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Setting up libsystemd0:amd64 (229-4ubuntu21.10) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../systemd_229-4ubuntu21.10_amd64.deb ...
-Unpacking systemd (229-4ubuntu21.10) over (229-4ubuntu21) ...
-Processing triggers for dbus (1.10.6-1ubuntu3.3) ...
-Setting up systemd (229-4ubuntu21.10) ...
-Initializing machine ID from D-Bus machine ID.
-addgroup: The group `systemd-journal' already exists as a system group. Exiting.
-Operation failed: No such file or directory
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../ifupdown_0.8.10ubuntu1.4_amd64.deb ...
-Unpacking ifupdown (0.8.10ubuntu1.4) over (0.8.10ubuntu1.2) ...
-Preparing to unpack .../libapparmor1_2.10.95-0ubuntu2.10_amd64.deb ...
-Unpacking libapparmor1:amd64 (2.10.95-0ubuntu2.10) over (2.10.95-0ubuntu2.7) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Setting up libapparmor1:amd64 (2.10.95-0ubuntu2.10) ...
-Processing triggers for systemd (229-4ubuntu21.10) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../uuid-dev_2.27.1-6ubuntu3.6_amd64.deb ...
-Unpacking uuid-dev:amd64 (2.27.1-6ubuntu3.6) over (2.27.1-6ubuntu3.3) ...
-Preparing to unpack .../libuuid1_2.27.1-6ubuntu3.6_amd64.deb ...
-Unpacking libuuid1:amd64 (2.27.1-6ubuntu3.6) over (2.27.1-6ubuntu3.3) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Setting up libuuid1:amd64 (2.27.1-6ubuntu3.6) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../libblkid1_2.27.1-6ubuntu3.6_amd64.deb ...
-Unpacking libblkid1:amd64 (2.27.1-6ubuntu3.6) over (2.27.1-6ubuntu3.3) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Setting up libblkid1:amd64 (2.27.1-6ubuntu3.6) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../libkmod2_22-1ubuntu5.1_amd64.deb ...
-Unpacking libkmod2:amd64 (22-1ubuntu5.1) over (22-1ubuntu5) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Setting up libkmod2:amd64 (22-1ubuntu5.1) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../libmount1_2.27.1-6ubuntu3.6_amd64.deb ...
-Unpacking libmount1:amd64 (2.27.1-6ubuntu3.6) over (2.27.1-6ubuntu3.3) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Setting up libmount1:amd64 (2.27.1-6ubuntu3.6) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../systemd-sysv_229-4ubuntu21.10_amd64.deb ...
-Unpacking systemd-sysv (229-4ubuntu21.10) over (229-4ubuntu21) ...
-Setting up systemd-sysv (229-4ubuntu21.10) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../python2.7-dev_2.7.12-1ubuntu0~16.04.4_amd64.deb ...
-Unpacking python2.7-dev (2.7.12-1ubuntu0~16.04.4) over (2.7.12-1ubuntu0~16.04.3) ...
-Preparing to unpack .../libpython2.7-dev_2.7.12-1ubuntu0~16.04.4_amd64.deb ...
-Unpacking libpython2.7-dev:amd64 (2.7.12-1ubuntu0~16.04.4) over (2.7.12-1ubuntu0~16.04.3) ...
-Preparing to unpack .../libpython2.7_2.7.12-1ubuntu0~16.04.4_amd64.deb ...
-Unpacking libpython2.7:amd64 (2.7.12-1ubuntu0~16.04.4) over (2.7.12-1ubuntu0~16.04.3) ...
-Preparing to unpack .../python2.7_2.7.12-1ubuntu0~16.04.4_amd64.deb ...
-Unpacking python2.7 (2.7.12-1ubuntu0~16.04.4) over (2.7.12-1ubuntu0~16.04.3) ...
-Preparing to unpack .../libssl-doc_1.0.2g-1ubuntu4.14_all.deb ...
-Unpacking libssl-doc (1.0.2g-1ubuntu4.14) over (1.0.2g-1ubuntu4.10) ...
-Preparing to unpack .../libssl-dev_1.0.2g-1ubuntu4.14_amd64.deb ...
-Unpacking libssl-dev:amd64 (1.0.2g-1ubuntu4.14) over (1.0.2g-1ubuntu4.10) ...
-Preparing to unpack .../libssl1.0.0_1.0.2g-1ubuntu4.14_amd64.deb ...
-Unpacking libssl1.0.0:amd64 (1.0.2g-1ubuntu4.14) over (1.0.2g-1ubuntu4.10) ...
-Preparing to unpack .../libpython2.7-stdlib_2.7.12-1ubuntu0~16.04.4_amd64.deb ...
-Unpacking libpython2.7-stdlib:amd64 (2.7.12-1ubuntu0~16.04.4) over (2.7.12-1ubuntu0~16.04.3) ...
-Preparing to unpack .../python2.7-minimal_2.7.12-1ubuntu0~16.04.4_amd64.deb ...
-Unpacking python2.7-minimal (2.7.12-1ubuntu0~16.04.4) over (2.7.12-1ubuntu0~16.04.3) ...
-Preparing to unpack .../libpython2.7-minimal_2.7.12-1ubuntu0~16.04.4_amd64.deb ...
-Unpacking libpython2.7-minimal:amd64 (2.7.12-1ubuntu0~16.04.4) over (2.7.12-1ubuntu0~16.04.3) ...
-Preparing to unpack .../python-all-dev_2.7.12-1~16.04_amd64.deb ...
-Unpacking python-all-dev (2.7.12-1~16.04) over (2.7.11-1) ...
-Preparing to unpack .../python-dev_2.7.12-1~16.04_amd64.deb ...
-Unpacking python-dev (2.7.12-1~16.04) over (2.7.11-1) ...
-Preparing to unpack .../python-all_2.7.12-1~16.04_amd64.deb ...
-Unpacking python-all (2.7.12-1~16.04) over (2.7.11-1) ...
-Preparing to unpack .../python-minimal_2.7.12-1~16.04_amd64.deb ...
-Unpacking python-minimal (2.7.12-1~16.04) over (2.7.11-1) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Processing triggers for mime-support (3.59ubuntu1) ...
-Setting up libpython2.7-minimal:amd64 (2.7.12-1ubuntu0~16.04.4) ...
-Setting up python2.7-minimal (2.7.12-1ubuntu0~16.04.4) ...
-Setting up python-minimal (2.7.12-1~16.04) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../python_2.7.12-1~16.04_amd64.deb ...
-Unpacking python (2.7.12-1~16.04) over (2.7.11-1) ...
-Preparing to unpack .../libpython-all-dev_2.7.12-1~16.04_amd64.deb ...
-Unpacking libpython-all-dev:amd64 (2.7.12-1~16.04) over (2.7.11-1) ...
-Preparing to unpack .../libpython-dev_2.7.12-1~16.04_amd64.deb ...
-Unpacking libpython-dev:amd64 (2.7.12-1~16.04) over (2.7.11-1) ...
-Preparing to unpack .../libpython-stdlib_2.7.12-1~16.04_amd64.deb ...
-Unpacking libpython-stdlib:amd64 (2.7.12-1~16.04) over (2.7.11-1) ...
-Preparing to unpack .../libelf1_0.165-3ubuntu1.1_amd64.deb ...
-Unpacking libelf1:amd64 (0.165-3ubuntu1.1) over (0.165-3ubuntu1) ...
-Preparing to unpack .../libglib2.0-data_2.48.2-0ubuntu4.1_all.deb ...
-Unpacking libglib2.0-data (2.48.2-0ubuntu4.1) over (2.48.2-0ubuntu1) ...
-Preparing to unpack .../libglib2.0-dev_2.48.2-0ubuntu4.1_amd64.deb ...
-Unpacking libglib2.0-dev (2.48.2-0ubuntu4.1) over (2.48.2-0ubuntu1) ...
-Preparing to unpack .../libglib2.0-bin_2.48.2-0ubuntu4.1_amd64.deb ...
-Unpacking libglib2.0-bin (2.48.2-0ubuntu4.1) over (2.48.2-0ubuntu1) ...
-Preparing to unpack .../libglib2.0-0_2.48.2-0ubuntu4.1_amd64.deb ...
-Unpacking libglib2.0-0:amd64 (2.48.2-0ubuntu4.1) over (2.48.2-0ubuntu1) ...
-Preparing to unpack .../libjpeg-turbo8_1.4.2-0ubuntu3.1_amd64.deb ...
-Unpacking libjpeg-turbo8:amd64 (1.4.2-0ubuntu3.1) over (1.4.2-0ubuntu3) ...
-Preparing to unpack .../libfdisk1_2.27.1-6ubuntu3.6_amd64.deb ...
-Unpacking libfdisk1:amd64 (2.27.1-6ubuntu3.6) over (2.27.1-6ubuntu3.3) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Setting up libfdisk1:amd64 (2.27.1-6ubuntu3.6) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../libgcrypt20_1.6.5-2ubuntu0.5_amd64.deb ...
-Unpacking libgcrypt20:amd64 (1.6.5-2ubuntu0.5) over (1.6.5-2ubuntu0.3) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Setting up libgcrypt20:amd64 (1.6.5-2ubuntu0.5) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../libpam-runtime_1.1.8-3.2ubuntu2.1_all.deb ...
-Unpacking libpam-runtime (1.1.8-3.2ubuntu2.1) over (1.1.8-3.2ubuntu2) ...
-Setting up libpam-runtime (1.1.8-3.2ubuntu2.1) ...
-debconf: unable to initialize frontend: Dialog
-debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
-debconf: falling back to frontend: Readline
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../libsmartcols1_2.27.1-6ubuntu3.6_amd64.deb ...
-Unpacking libsmartcols1:amd64 (2.27.1-6ubuntu3.6) over (2.27.1-6ubuntu3.3) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Setting up libsmartcols1:amd64 (2.27.1-6ubuntu3.6) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../libudev1_229-4ubuntu21.10_amd64.deb ...
-Unpacking libudev1:amd64 (229-4ubuntu21.10) over (229-4ubuntu21) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Setting up libudev1:amd64 (229-4ubuntu21.10) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../sensible-utils_0.0.9ubuntu0.16.04.1_all.deb ...
-Unpacking sensible-utils (0.0.9ubuntu0.16.04.1) over (0.0.9) ...
-Processing triggers for mime-support (3.59ubuntu1) ...
-Setting up sensible-utils (0.0.9ubuntu0.16.04.1) ...
-(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 53011 files and directories currently installed.)
-Preparing to unpack .../libprocps4_2%3a3.3.10-4ubuntu2.4_amd64.deb ...
-Unpacking libprocps4:amd64 (2:3.3.10-4ubuntu2.4) over (2:3.3.10-4ubuntu2.3) ...
-Preparing to unpack .../procps_2%3a3.3.10-4ubuntu2.4_amd64.deb ...
-Unpacking procps (2:3.3.10-4ubuntu2.4) over (2:3.3.10-4ubuntu2.3) ...
-Preparing to unpack .../tzdata_2018g-0ubuntu0.16.04_all.deb ...
-Unpacking tzdata (2018g-0ubuntu0.16.04) over (2017c-0ubuntu0.16.04) ...
-Preparing to unpack .../distro-info-data_0.28ubuntu0.9_all.deb ...
-Unpacking distro-info-data (0.28ubuntu0.9) over (0.28ubuntu0.7) ...
-Preparing to unpack .../file_1%3a5.25-2ubuntu1.1_amd64.deb ...
-Unpacking file (1:5.25-2ubuntu1.1) over (1:5.25-2ubuntu1) ...
-Preparing to unpack .../libmagic1_1%3a5.25-2ubuntu1.1_amd64.deb ...
-Unpacking libmagic1:amd64 (1:5.25-2ubuntu1.1) over (1:5.25-2ubuntu1) ...
-Preparing to unpack .../libisc-export160_1%3a9.10.3.dfsg.P4-8ubuntu1.11_amd64.deb ...
-Unpacking libisc-export160 (1:9.10.3.dfsg.P4-8ubuntu1.11) over (1:9.10.3.dfsg.P4-8ubuntu1.10) ...
-Preparing to unpack .../libdns-export162_1%3a9.10.3.dfsg.P4-8ubuntu1.11_amd64.deb ...
-Unpacking libdns-export162 (1:9.10.3.dfsg.P4-8ubuntu1.11) over (1:9.10.3.dfsg.P4-8ubuntu1.10) ...
-Preparing to unpack .../isc-dhcp-client_4.3.3-5ubuntu12.10_amd64.deb ...
-Unpacking isc-dhcp-client (4.3.3-5ubuntu12.10) over (4.3.3-5ubuntu12.7) ...
-Preparing to unpack .../isc-dhcp-common_4.3.3-5ubuntu12.10_amd64.deb ...
-Unpacking isc-dhcp-common (4.3.3-5ubuntu12.10) over (4.3.3-5ubuntu12.7) ...
-Preparing to unpack .../libpng12-dev_1.2.54-1ubuntu1.1_amd64.deb ...
-Unpacking libpng12-dev:amd64 (1.2.54-1ubuntu1.1) over (1.2.54-1ubuntu1) ...
-Preparing to unpack .../libpng12-0_1.2.54-1ubuntu1.1_amd64.deb ...
-Unpacking libpng12-0:amd64 (1.2.54-1ubuntu1.1) over (1.2.54-1ubuntu1) ...
-Preparing to unpack .../libslang2-dev_2.3.0-2ubuntu1.1_amd64.deb ...
-Unpacking libslang2-dev:amd64 (2.3.0-2ubuntu1.1) over (2.3.0-2ubuntu1) ...
-Preparing to unpack .../libslang2_2.3.0-2ubuntu1.1_amd64.deb ...
-Unpacking libslang2:amd64 (2.3.0-2ubuntu1.1) over (2.3.0-2ubuntu1) ...
-Preparing to unpack .../libtasn1-6_4.7-3ubuntu0.16.04.3_amd64.deb ...
-Unpacking libtasn1-6:amd64 (4.7-3ubuntu0.16.04.3) over (4.7-3ubuntu0.16.04.2) ...
-Preparing to unpack .../libasprintf0v5_0.19.7-2ubuntu3.1_amd64.deb ...
-Unpacking libasprintf0v5:amd64 (0.19.7-2ubuntu3.1) over (0.19.7-2ubuntu3) ...
-Preparing to unpack .../gettext-base_0.19.7-2ubuntu3.1_amd64.deb ...
-Unpacking gettext-base (0.19.7-2ubuntu3.1) over (0.19.7-2ubuntu3) ...
-Preparing to unpack .../libldap2-dev_2.4.42+dfsg-2ubuntu3.4_amd64.deb ...
-Unpacking libldap2-dev:amd64 (2.4.42+dfsg-2ubuntu3.4) over (2.4.42+dfsg-2ubuntu3.2) ...
-Preparing to unpack .../libsasl2-modules-db_2.1.26.dfsg1-14ubuntu0.1_amd64.deb ...
-Unpacking libsasl2-modules-db:amd64 (2.1.26.dfsg1-14ubuntu0.1) over (2.1.26.dfsg1-14build1) ...
-Preparing to unpack .../libsasl2-2_2.1.26.dfsg1-14ubuntu0.1_amd64.deb ...
-Unpacking libsasl2-2:amd64 (2.1.26.dfsg1-14ubuntu0.1) over (2.1.26.dfsg1-14build1) ...
-Preparing to unpack .../libldap-2.4-2_2.4.42+dfsg-2ubuntu3.4_amd64.deb ...
-Unpacking libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.4) over (2.4.42+dfsg-2ubuntu3.2) ...
-Preparing to unpack .../libcurl3-gnutls_7.47.0-1ubuntu2.11_amd64.deb ...
-Unpacking libcurl3-gnutls:amd64 (7.47.0-1ubuntu2.11) over (7.47.0-1ubuntu2.5) ...
-Preparing to unpack .../libdrm-dev_2.4.91-2~16.04.1_amd64.deb ...
-Unpacking libdrm-dev:amd64 (2.4.91-2~16.04.1) over (2.4.83-1~16.04.1) ...
-Preparing to unpack .../libdrm-intel1_2.4.91-2~16.04.1_amd64.deb ...
-Unpacking libdrm-intel1:amd64 (2.4.91-2~16.04.1) over (2.4.83-1~16.04.1) ...
-Preparing to unpack .../libdrm-radeon1_2.4.91-2~16.04.1_amd64.deb ...
-Unpacking libdrm-radeon1:amd64 (2.4.91-2~16.04.1) over (2.4.83-1~16.04.1) ...
-Preparing to unpack .../libdrm-nouveau2_2.4.91-2~16.04.1_amd64.deb ...
-Unpacking libdrm-nouveau2:amd64 (2.4.91-2~16.04.1) over (2.4.83-1~16.04.1) ...
-Preparing to unpack .../libdrm-amdgpu1_2.4.91-2~16.04.1_amd64.deb ...
-Unpacking libdrm-amdgpu1:amd64 (2.4.91-2~16.04.1) over (2.4.83-1~16.04.1) ...
-Preparing to unpack .../libdrm-common_2.4.91-2~16.04.1_all.deb ...
-Unpacking libdrm-common (2.4.91-2~16.04.1) over (2.4.83-1~16.04.1) ...
-Preparing to unpack .../libdrm2_2.4.91-2~16.04.1_amd64.deb ...
-Unpacking libdrm2:amd64 (2.4.91-2~16.04.1) over (2.4.83-1~16.04.1) ...
-Preparing to unpack .../libicu-dev_55.1-7ubuntu0.4_amd64.deb ...
-Unpacking libicu-dev:amd64 (55.1-7ubuntu0.4) over (55.1-7ubuntu0.3) ...
-Preparing to unpack .../icu-devtools_55.1-7ubuntu0.4_amd64.deb ...
-Unpacking icu-devtools (55.1-7ubuntu0.4) over (55.1-7ubuntu0.3) ...
-Preparing to unpack .../libicu55_55.1-7ubuntu0.4_amd64.deb ...
-Unpacking libicu55:amd64 (55.1-7ubuntu0.4) over (55.1-7ubuntu0.3) ...
-Preparing to unpack .../libsasl2-modules_2.1.26.dfsg1-14ubuntu0.1_amd64.deb ...
-Unpacking libsasl2-modules:amd64 (2.1.26.dfsg1-14ubuntu0.1) over (2.1.26.dfsg1-14build1) ...
-Preparing to unpack .../libx11-data_2%3a1.6.3-1ubuntu2.1_all.deb ...
-Unpacking libx11-data (2:1.6.3-1ubuntu2.1) over (2:1.6.3-1ubuntu2) ...
-Preparing to unpack .../libx11-doc_2%3a1.6.3-1ubuntu2.1_all.deb ...
-Unpacking libx11-doc (2:1.6.3-1ubuntu2.1) over (2:1.6.3-1ubuntu2) ...
-Preparing to unpack .../libx11-dev_2%3a1.6.3-1ubuntu2.1_amd64.deb ...
-Unpacking libx11-dev:amd64 (2:1.6.3-1ubuntu2.1) over (2:1.6.3-1ubuntu2) ...
-Preparing to unpack .../libx11-6_2%3a1.6.3-1ubuntu2.1_amd64.deb ...
-Unpacking libx11-6:amd64 (2:1.6.3-1ubuntu2.1) over (2:1.6.3-1ubuntu2) ...
-Preparing to unpack .../libxml2_2.9.3+dfsg1-1ubuntu0.6_amd64.deb ...
-Unpacking libxml2:amd64 (2.9.3+dfsg1-1ubuntu0.6) over (2.9.3+dfsg1-1ubuntu0.5) ...
-Preparing to unpack .../openssh-client_1%3a7.2p2-4ubuntu2.6_amd64.deb ...
-Unpacking openssh-client (1:7.2p2-4ubuntu2.6) over (1:7.2p2-4ubuntu2.4) ...
-Preparing to unpack .../openssl_1.0.2g-1ubuntu4.14_amd64.deb ...
-Unpacking openssl (1.0.2g-1ubuntu4.14) over (1.0.2g-1ubuntu4.10) ...
-Preparing to unpack .../shared-mime-info_1.5-2ubuntu0.2_amd64.deb ...
-Unpacking shared-mime-info (1.5-2ubuntu0.2) over (1.5-2ubuntu0.1) ...
-Preparing to unpack .../wget_1.17.1-1ubuntu1.4_amd64.deb ...
-Unpacking wget (1.17.1-1ubuntu1.4) over (1.17.1-1ubuntu1.3) ...
-Preparing to unpack .../xdg-user-dirs_0.15-2ubuntu6.16.04.1_amd64.deb ...
-Unpacking xdg-user-dirs (0.15-2ubuntu6.16.04.1) over (0.15-2ubuntu6) ...
-Preparing to unpack .../ant-optional_1.9.6-1ubuntu1.1_all.deb ...
-Unpacking ant-optional (1.9.6-1ubuntu1.1) over (1.9.6-1ubuntu1) ...
-Preparing to unpack .../libgl1-mesa-dev_18.0.5-0ubuntu0~16.04.1_amd64.deb ...
-Unpacking libgl1-mesa-dev:amd64 (18.0.5-0ubuntu0~16.04.1) over (17.2.4-0ubuntu1~16.04.4) ...
-Preparing to unpack .../mesa-common-dev_18.0.5-0ubuntu0~16.04.1_amd64.deb ...
-Unpacking mesa-common-dev:amd64 (18.0.5-0ubuntu0~16.04.1) over (17.2.4-0ubuntu1~16.04.4) ...
-Preparing to unpack .../libx11-xcb-dev_2%3a1.6.3-1ubuntu2.1_amd64.deb ...
-Unpacking libx11-xcb-dev:amd64 (2:1.6.3-1ubuntu2.1) over (2:1.6.3-1ubuntu2) ...
-Preparing to unpack .../libx11-xcb1_2%3a1.6.3-1ubuntu2.1_amd64.deb ...
-Unpacking libx11-xcb1:amd64 (2:1.6.3-1ubuntu2.1) over (2:1.6.3-1ubuntu2) ...
-Preparing to unpack .../libgl1-mesa-glx_18.0.5-0ubuntu0~16.04.1_amd64.deb ...
-Unpacking libgl1-mesa-glx:amd64 (18.0.5-0ubuntu0~16.04.1) over (17.2.4-0ubuntu1~16.04.4) ...
-Preparing to unpack .../libglapi-mesa_18.0.5-0ubuntu0~16.04.1_amd64.deb ...
-Unpacking libglapi-mesa:amd64 (18.0.5-0ubuntu0~16.04.1) over (17.2.4-0ubuntu1~16.04.4) ...
-Preparing to unpack .../libpulse-dev_1%3a8.0-0ubuntu3.10_amd64.deb ...
-Unpacking libpulse-dev:amd64 (1:8.0-0ubuntu3.10) over (1:8.0-0ubuntu3.7) ...
-Preparing to unpack .../libpulse-mainloop-glib0_1%3a8.0-0ubuntu3.10_amd64.deb ...
-Unpacking libpulse-mainloop-glib0:amd64 (1:8.0-0ubuntu3.10) over (1:8.0-0ubuntu3.7) ...
-Preparing to unpack .../libpulse0_1%3a8.0-0ubuntu3.10_amd64.deb ...
-Unpacking libpulse0:amd64 (1:8.0-0ubuntu3.10) over (1:8.0-0ubuntu3.7) ...
-Preparing to unpack .../openjdk-8-jdk_8u191-b12-0ubuntu0.16.04.1_amd64.deb ...
-Unpacking openjdk-8-jdk:amd64 (8u191-b12-0ubuntu0.16.04.1) over (8u151-b12-0ubuntu0.16.04.2) ...
-Preparing to unpack .../openjdk-8-jre_8u191-b12-0ubuntu0.16.04.1_amd64.deb ...
-Unpacking openjdk-8-jre:amd64 (8u191-b12-0ubuntu0.16.04.1) over (8u151-b12-0ubuntu0.16.04.2) ...
-Preparing to unpack .../openjdk-8-jdk-headless_8u191-b12-0ubuntu0.16.04.1_amd64.deb ...
-Unpacking openjdk-8-jdk-headless:amd64 (8u191-b12-0ubuntu0.16.04.1) over (8u151-b12-0ubuntu0.16.04.2) ...
-Preparing to unpack .../libavahi-common-data_0.6.32~rc+dfsg-1ubuntu2.2_amd64.deb ...
-Unpacking libavahi-common-data:amd64 (0.6.32~rc+dfsg-1ubuntu2.2) over (0.6.32~rc+dfsg-1ubuntu2) ...
-Preparing to unpack .../libavahi-common3_0.6.32~rc+dfsg-1ubuntu2.2_amd64.deb ...
-Unpacking libavahi-common3:amd64 (0.6.32~rc+dfsg-1ubuntu2.2) over (0.6.32~rc+dfsg-1ubuntu2) ...
-Preparing to unpack .../libavahi-client3_0.6.32~rc+dfsg-1ubuntu2.2_amd64.deb ...
-Unpacking libavahi-client3:amd64 (0.6.32~rc+dfsg-1ubuntu2.2) over (0.6.32~rc+dfsg-1ubuntu2) ...
-Preparing to unpack .../libcups2_2.1.3-4ubuntu0.6_amd64.deb ...
-Unpacking libcups2:amd64 (2.1.3-4ubuntu0.6) over (2.1.3-4ubuntu0.3) ...
-Preparing to unpack .../liblcms2-2_2.6-3ubuntu2.1_amd64.deb ...
-Unpacking liblcms2-2:amd64 (2.6-3ubuntu2.1) over (2.6-3ubuntu2) ...
-Preparing to unpack .../openjdk-8-jre-headless_8u191-b12-0ubuntu0.16.04.1_amd64.deb ...
-Unpacking openjdk-8-jre-headless:amd64 (8u191-b12-0ubuntu0.16.04.1) over (8u151-b12-0ubuntu0.16.04.2) ...
-Preparing to unpack .../ant_1.9.6-1ubuntu1.1_all.deb ...
-Unpacking ant (1.9.6-1ubuntu1.1) over (1.9.6-1ubuntu1) ...
-Preparing to unpack .../dpkg-dev_1.18.4ubuntu1.5_all.deb ...
-Unpacking dpkg-dev (1.18.4ubuntu1.5) over (1.18.4ubuntu1.3) ...
-Preparing to unpack .../libdpkg-perl_1.18.4ubuntu1.5_all.deb ...
-Unpacking libdpkg-perl (1.18.4ubuntu1.5) over (1.18.4ubuntu1.3) ...
-Preparing to unpack .../patch_2.7.5-1ubuntu0.16.04.1_amd64.deb ...
-Unpacking patch (2.7.5-1ubuntu0.16.04.1) over (2.7.5-1) ...
-Preparing to unpack .../git-man_1%3a2.7.4-0ubuntu1.6_all.deb ...
-Unpacking git-man (1:2.7.4-0ubuntu1.6) over (1:2.7.4-0ubuntu1.3) ...
-Preparing to unpack .../git_1%3a2.7.4-0ubuntu1.6_amd64.deb ...
-Unpacking git (1:2.7.4-0ubuntu1.6) over (1:2.7.4-0ubuntu1.3) ...
-Preparing to unpack .../guile-2.0-dev_2.0.11+1-10ubuntu0.1_amd64.deb ...
-Unpacking guile-2.0-dev (2.0.11+1-10ubuntu0.1) over (2.0.11+1-10) ...
-Preparing to unpack .../guile-2.0_2.0.11+1-10ubuntu0.1_amd64.deb ...
-Unpacking guile-2.0 (2.0.11+1-10ubuntu0.1) over (2.0.11+1-10) ...
-Preparing to unpack .../guile-2.0-libs_2.0.11+1-10ubuntu0.1_amd64.deb ...
-Unpacking guile-2.0-libs:amd64 (2.0.11+1-10ubuntu0.1) over (2.0.11+1-10) ...
-Preparing to unpack .../hicolor-icon-theme_0.15-0ubuntu1.1_all.deb ...
-Unpacking hicolor-icon-theme (0.15-0ubuntu1.1) over (0.15-0ubuntu1) ...
-Preparing to unpack .../libarchive13_3.1.2-11ubuntu0.16.04.4_amd64.deb ...
-Unpacking libarchive13:amd64 (3.1.2-11ubuntu0.16.04.4) over (3.1.2-11ubuntu0.16.04.3) ...
-Preparing to unpack .../libcurl3_7.47.0-1ubuntu2.11_amd64.deb ...
-Unpacking libcurl3:amd64 (7.47.0-1ubuntu2.11) over (7.47.0-1ubuntu2.5) ...
-Preparing to unpack .../libtiff5_4.0.6-1ubuntu0.4_amd64.deb ...
-Unpacking libtiff5:amd64 (4.0.6-1ubuntu0.4) over (4.0.6-1ubuntu0.2) ...
-Preparing to unpack .../libgdk-pixbuf2.0-0_2.32.2-1ubuntu1.5_amd64.deb ...
-Unpacking libgdk-pixbuf2.0-0:amd64 (2.32.2-1ubuntu1.5) over (2.32.2-1ubuntu1.4) ...
-Preparing to unpack .../libgdk-pixbuf2.0-common_2.32.2-1ubuntu1.5_all.deb ...
-Unpacking libgdk-pixbuf2.0-common (2.32.2-1ubuntu1.5) over (2.32.2-1ubuntu1.4) ...
-Preparing to unpack .../mysql-common_5.7.24-0ubuntu0.16.04.1_all.deb ...
-Unpacking mysql-common (5.7.24-0ubuntu0.16.04.1) over (5.7.21-0ubuntu0.16.04.1) ...
-Preparing to unpack .../libmysqlclient20_5.7.24-0ubuntu0.16.04.1_amd64.deb ...
-Unpacking libmysqlclient20:amd64 (5.7.24-0ubuntu0.16.04.1) over (5.7.21-0ubuntu0.16.04.1) ...
-Preparing to unpack .../libpq-dev_9.5.14-0ubuntu0.16.04_amd64.deb ...
-Unpacking libpq-dev (9.5.14-0ubuntu0.16.04) over (9.5.10-0ubuntu0.16.04) ...
-Preparing to unpack .../libpq5_9.5.14-0ubuntu0.16.04_amd64.deb ...
-Unpacking libpq5:amd64 (9.5.14-0ubuntu0.16.04) over (9.5.10-0ubuntu0.16.04) ...
-Preparing to unpack .../libvorbisenc2_1.3.5-3ubuntu0.2_amd64.deb ...
-Unpacking libvorbisenc2:amd64 (1.3.5-3ubuntu0.2) over (1.3.5-3) ...
-Preparing to unpack .../libvorbis0a_1.3.5-3ubuntu0.2_amd64.deb ...
-Unpacking libvorbis0a:amd64 (1.3.5-3ubuntu0.2) over (1.3.5-3) ...
-Preparing to unpack .../libxcursor1_1%3a1.1.14-1ubuntu0.16.04.2_amd64.deb ...
-Unpacking libxcursor1:amd64 (1:1.1.14-1ubuntu0.16.04.2) over (1:1.1.14-1ubuntu0.16.04.1) ...
-Preparing to unpack .../linux-libc-dev_4.4.0-141.167_amd64.deb ...
-Unpacking linux-libc-dev:amd64 (4.4.0-141.167) over (4.4.0-112.135) ...
-Preparing to unpack .../memcached_1.4.25-2ubuntu1.4_amd64.deb ...
-invoke-rc.d: could not determine current runlevel
-invoke-rc.d: policy-rc.d denied execution of stop.
-Unpacking memcached (1.4.25-2ubuntu1.4) over (1.4.25-2ubuntu1.2) ...
-Preparing to unpack .../postgresql-client-common_173ubuntu0.2_all.deb ...
-Unpacking postgresql-client-common (173ubuntu0.2) over (173ubuntu0.1) ...
-Preparing to unpack .../postgresql-client-9.5_9.5.14-0ubuntu0.16.04_amd64.deb ...
-Unpacking postgresql-client-9.5 (9.5.14-0ubuntu0.16.04) over (9.5.10-0ubuntu0.16.04) ...
-Preparing to unpack .../postgresql-client_9.5+173ubuntu0.2_all.deb ...
-Unpacking postgresql-client (9.5+173ubuntu0.2) over (9.5+173ubuntu0.1) ...
-Preparing to unpack .../python-tk_2.7.12-1~16.04_amd64.deb ...
-Unpacking python-tk (2.7.12-1~16.04) over (2.7.11-2) ...
-Preparing to unpack .../x11-common_1%3a7.7+13ubuntu3.1_all.deb ...
-invoke-rc.d: could not determine current runlevel
-invoke-rc.d: policy-rc.d denied execution of stop.
-dpkg-query: no packages found matching nux-tools
-Unpacking x11-common (1:7.7+13ubuntu3.1) over (1:7.7+13ubuntu3) ...
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-Processing triggers for systemd (229-4ubuntu21.10) ...
-Processing triggers for mime-support (3.59ubuntu1) ...
-Setting up perl-modules-5.22 (5.22.1-9ubuntu0.6) ...
-Setting up libperl5.22:amd64 (5.22.1-9ubuntu0.6) ...
-Setting up perl (5.22.1-9ubuntu0.6) ...
-Setting up libquadmath0:amd64 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up libgomp1:amd64 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up libitm1:amd64 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up libatomic1:amd64 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up libasan2:amd64 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up liblsan0:amd64 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up libtsan0:amd64 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up libubsan0:amd64 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up libcilkrts5:amd64 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up libmpx0:amd64 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up libgfortran3:amd64 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up cpp-5 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up libcc1-0:amd64 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up binutils (2.26.1-1ubuntu1~16.04.7) ...
-Setting up libgcc-5-dev:amd64 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up gcc-5 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up libgfortran-5-dev:amd64 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up gfortran-5 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up libstdc++-5-dev:amd64 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up g++-5 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up binutils-dev (2.26.1-1ubuntu1~16.04.7) ...
-Setting up libobjc4:amd64 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up libobjc-5-dev:amd64 (5.4.0-6ubuntu1~16.04.11) ...
-Setting up libapt-inst2.0:amd64 (1.2.29) ...
-Setting up apt-utils (1.2.29) ...
-Setting up iproute2 (4.3.0-1ubuntu3.16.04.4) ...
-Setting up ifupdown (0.8.10ubuntu1.4) ...
-Setting up uuid-dev:amd64 (2.27.1-6ubuntu3.6) ...
-Setting up libssl1.0.0:amd64 (1.0.2g-1ubuntu4.14) ...
-debconf: unable to initialize frontend: Dialog
-debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
-debconf: falling back to frontend: Readline
-Setting up libpython2.7-stdlib:amd64 (2.7.12-1ubuntu0~16.04.4) ...
-Setting up python2.7 (2.7.12-1ubuntu0~16.04.4) ...
-Setting up libpython2.7:amd64 (2.7.12-1ubuntu0~16.04.4) ...
-Setting up libpython2.7-dev:amd64 (2.7.12-1ubuntu0~16.04.4) ...
-Setting up python2.7-dev (2.7.12-1ubuntu0~16.04.4) ...
-Setting up libssl-doc (1.0.2g-1ubuntu4.14) ...
-Setting up libssl-dev:amd64 (1.0.2g-1ubuntu4.14) ...
-Setting up libpython-stdlib:amd64 (2.7.12-1~16.04) ...
-Setting up python (2.7.12-1~16.04) ...
-Setting up python-all (2.7.12-1~16.04) ...
-Setting up libpython-dev:amd64 (2.7.12-1~16.04) ...
-Setting up libpython-all-dev:amd64 (2.7.12-1~16.04) ...
-Setting up python-dev (2.7.12-1~16.04) ...
-Setting up python-all-dev (2.7.12-1~16.04) ...
-Setting up libelf1:amd64 (0.165-3ubuntu1.1) ...
-Setting up libglib2.0-data (2.48.2-0ubuntu4.1) ...
-Setting up libglib2.0-0:amd64 (2.48.2-0ubuntu4.1) ...
-No schema files found: doing nothing.
-Setting up libglib2.0-bin (2.48.2-0ubuntu4.1) ...
-Setting up libglib2.0-dev (2.48.2-0ubuntu4.1) ...
-Setting up libjpeg-turbo8:amd64 (1.4.2-0ubuntu3.1) ...
-Setting up libprocps4:amd64 (2:3.3.10-4ubuntu2.4) ...
-Setting up procps (2:3.3.10-4ubuntu2.4) ...
-update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
-Setting up tzdata (2018g-0ubuntu0.16.04) ...
-debconf: unable to initialize frontend: Dialog
-debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
-debconf: falling back to frontend: Readline
-
-Current default time zone: 'Etc/UTC'
-Local time is now:      Fri Dec 21 19:46:47 UTC 2018.
-Universal Time is now:  Fri Dec 21 19:46:47 UTC 2018.
-Run 'dpkg-reconfigure tzdata' if you wish to change it.
-
-Setting up distro-info-data (0.28ubuntu0.9) ...
-Setting up libmagic1:amd64 (1:5.25-2ubuntu1.1) ...
-Setting up file (1:5.25-2ubuntu1.1) ...
-Setting up libisc-export160 (1:9.10.3.dfsg.P4-8ubuntu1.11) ...
-Setting up libdns-export162 (1:9.10.3.dfsg.P4-8ubuntu1.11) ...
-Setting up isc-dhcp-client (4.3.3-5ubuntu12.10) ...
-Setting up isc-dhcp-common (4.3.3-5ubuntu12.10) ...
-Setting up libpng12-0:amd64 (1.2.54-1ubuntu1.1) ...
-Setting up libpng12-dev:amd64 (1.2.54-1ubuntu1.1) ...
-Setting up libslang2:amd64 (2.3.0-2ubuntu1.1) ...
-Setting up libslang2-dev:amd64 (2.3.0-2ubuntu1.1) ...
-Setting up libtasn1-6:amd64 (4.7-3ubuntu0.16.04.3) ...
-Setting up libasprintf0v5:amd64 (0.19.7-2ubuntu3.1) ...
-Setting up gettext-base (0.19.7-2ubuntu3.1) ...
-Setting up libsasl2-modules-db:amd64 (2.1.26.dfsg1-14ubuntu0.1) ...
-Setting up libsasl2-2:amd64 (2.1.26.dfsg1-14ubuntu0.1) ...
-Setting up libldap-2.4-2:amd64 (2.4.42+dfsg-2ubuntu3.4) ...
-Setting up libldap2-dev:amd64 (2.4.42+dfsg-2ubuntu3.4) ...
-Setting up libcurl3-gnutls:amd64 (7.47.0-1ubuntu2.11) ...
-Setting up libdrm-common (2.4.91-2~16.04.1) ...
-Setting up libdrm2:amd64 (2.4.91-2~16.04.1) ...
-Setting up libdrm-intel1:amd64 (2.4.91-2~16.04.1) ...
-Setting up libdrm-radeon1:amd64 (2.4.91-2~16.04.1) ...
-Setting up libdrm-nouveau2:amd64 (2.4.91-2~16.04.1) ...
-Setting up libdrm-amdgpu1:amd64 (2.4.91-2~16.04.1) ...
-Setting up libdrm-dev:amd64 (2.4.91-2~16.04.1) ...
-Setting up libicu55:amd64 (55.1-7ubuntu0.4) ...
-Setting up icu-devtools (55.1-7ubuntu0.4) ...
-Setting up libicu-dev:amd64 (55.1-7ubuntu0.4) ...
-Setting up libsasl2-modules:amd64 (2.1.26.dfsg1-14ubuntu0.1) ...
-Setting up libx11-data (2:1.6.3-1ubuntu2.1) ...
-Setting up libx11-doc (2:1.6.3-1ubuntu2.1) ...
-Setting up libx11-6:amd64 (2:1.6.3-1ubuntu2.1) ...
-Setting up libx11-dev:amd64 (2:1.6.3-1ubuntu2.1) ...
-Setting up libxml2:amd64 (2.9.3+dfsg1-1ubuntu0.6) ...
-Setting up openssh-client (1:7.2p2-4ubuntu2.6) ...
-Setting up openssl (1.0.2g-1ubuntu4.14) ...
-Setting up shared-mime-info (1.5-2ubuntu0.2) ...
-Setting up wget (1.17.1-1ubuntu1.4) ...
-Setting up xdg-user-dirs (0.15-2ubuntu6.16.04.1) ...
-Setting up libavahi-common-data:amd64 (0.6.32~rc+dfsg-1ubuntu2.2) ...
-Setting up libavahi-common3:amd64 (0.6.32~rc+dfsg-1ubuntu2.2) ...
-Setting up libavahi-client3:amd64 (0.6.32~rc+dfsg-1ubuntu2.2) ...
-Setting up libcups2:amd64 (2.1.3-4ubuntu0.6) ...
-Setting up liblcms2-2:amd64 (2.6-3ubuntu2.1) ...
-Setting up openjdk-8-jre-headless:amd64 (8u191-b12-0ubuntu0.16.04.1) ...
-Installing new version of config file /etc/java-8-openjdk/security/java.security ...
-Setting up ant (1.9.6-1ubuntu1.1) ...
-Setting up ant-optional (1.9.6-1ubuntu1.1) ...
-Setting up mesa-common-dev:amd64 (18.0.5-0ubuntu0~16.04.1) ...
-Setting up libglapi-mesa:amd64 (18.0.5-0ubuntu0~16.04.1) ...
-Setting up libx11-xcb1:amd64 (2:1.6.3-1ubuntu2.1) ...
-Setting up libgl1-mesa-glx:amd64 (18.0.5-0ubuntu0~16.04.1) ...
-Setting up libx11-xcb-dev:amd64 (2:1.6.3-1ubuntu2.1) ...
-Setting up libgl1-mesa-dev:amd64 (18.0.5-0ubuntu0~16.04.1) ...
-Setting up libpulse0:amd64 (1:8.0-0ubuntu3.10) ...
-Setting up libpulse-mainloop-glib0:amd64 (1:8.0-0ubuntu3.10) ...
-Setting up libpulse-dev:amd64 (1:8.0-0ubuntu3.10) ...
-Setting up openjdk-8-jre:amd64 (8u191-b12-0ubuntu0.16.04.1) ...
-Setting up openjdk-8-jdk-headless:amd64 (8u191-b12-0ubuntu0.16.04.1) ...
-Setting up openjdk-8-jdk:amd64 (8u191-b12-0ubuntu0.16.04.1) ...
-Setting up libdpkg-perl (1.18.4ubuntu1.5) ...
-Setting up patch (2.7.5-1ubuntu0.16.04.1) ...
-Setting up dpkg-dev (1.18.4ubuntu1.5) ...
-Setting up git-man (1:2.7.4-0ubuntu1.6) ...
-Setting up git (1:2.7.4-0ubuntu1.6) ...
-Setting up guile-2.0-libs:amd64 (2.0.11+1-10ubuntu0.1) ...
-Setting up guile-2.0 (2.0.11+1-10ubuntu0.1) ...
-Setting up guile-2.0-dev (2.0.11+1-10ubuntu0.1) ...
-Setting up hicolor-icon-theme (0.15-0ubuntu1.1) ...
-Setting up libarchive13:amd64 (3.1.2-11ubuntu0.16.04.4) ...
-Setting up libcurl3:amd64 (7.47.0-1ubuntu2.11) ...
-Setting up libtiff5:amd64 (4.0.6-1ubuntu0.4) ...
-Setting up libgdk-pixbuf2.0-common (2.32.2-1ubuntu1.5) ...
-Setting up libgdk-pixbuf2.0-0:amd64 (2.32.2-1ubuntu1.5) ...
-Setting up mysql-common (5.7.24-0ubuntu0.16.04.1) ...
-Setting up libmysqlclient20:amd64 (5.7.24-0ubuntu0.16.04.1) ...
-Setting up libpq5:amd64 (9.5.14-0ubuntu0.16.04) ...
-Setting up libpq-dev (9.5.14-0ubuntu0.16.04) ...
-Setting up libvorbis0a:amd64 (1.3.5-3ubuntu0.2) ...
-Setting up libvorbisenc2:amd64 (1.3.5-3ubuntu0.2) ...
-Setting up libxcursor1:amd64 (1:1.1.14-1ubuntu0.16.04.2) ...
-Setting up linux-libc-dev:amd64 (4.4.0-141.167) ...
-Setting up memcached (1.4.25-2ubuntu1.4) ...
-invoke-rc.d: could not determine current runlevel
-invoke-rc.d: policy-rc.d denied execution of start.
-Setting up postgresql-client-common (173ubuntu0.2) ...
-Setting up postgresql-client-9.5 (9.5.14-0ubuntu0.16.04) ...
-Setting up postgresql-client (9.5+173ubuntu0.2) ...
-Setting up python-tk (2.7.12-1~16.04) ...
-Setting up x11-common (1:7.7+13ubuntu3.1) ...
-debconf: unable to initialize frontend: Dialog
-debconf: (Dialog frontend will not work on a dumb terminal, an emacs shell buffer, or without a controlling terminal.)
-debconf: falling back to frontend: Readline
-update-rc.d: warning: start and stop actions are no longer supported; falling back to defaults
-invoke-rc.d: could not determine current runlevel
-invoke-rc.d: policy-rc.d denied execution of start.
-Processing triggers for libc-bin (2.23-0ubuntu10) ...
-+ DSTATUS=BUILDPASS
-+ echo DSTATUS is BUILDPASS
-DSTATUS is BUILDPASS
-+ [ BUILDPASS = BUILDPASS ]
-+ cat
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-*****
-*****  opencog Setup 
-*****
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-
-+ echo **** 
-**** 
-+ echo ****  14a034d0c4446251a3a1a46b772fb849134426c17321fe468978896ed6cf7c17
-****  14a034d0c4446251a3a1a46b772fb849134426c17321fe468978896ed6cf7c17
-+ cat
-+ docker exec --user jenkins 14a034d0c4446251a3a1a46b772fb849134426c17321fe468978896ed6cf7c17 bash dependencies/job1
-+ git clone https://github.com/opencog/opencog.git
-Cloning into 'opencog'...
-+ git clone https://github.com/opencog/atomspace.git
-Cloning into 'atomspace'...
-+ git clone https://github.com/opencog/cogutil.git
-Cloning into 'cogutil'...
-+ git clone https://github.com/opencog/moses.git
-Cloning into 'moses'...
-+ DSTATUS=BUILDPASS
-+ echo DSTATUS is BUILDPASS
-DSTATUS is BUILDPASS
-+ [ BUILDPASS = BUILDPASS ]
-+ curl -X POST --insecure --netrc https://10.0.0.103:8480/job/OpenCOG_U1604_CogUtil/build
-  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
-                                 Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
-+ cat
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-*****
-*****  guile Setup 
-*****
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604/builds/460/log
-+ GUILEVERSION=guile-2.2.3
-+ cat
-+ chmod +x dependencies/job1
-+ docker exec --user jenkins 14a034d0c4446251a3a1a46b772fb849134426c17321fe468978896ed6cf7c17 bash dependencies/job1
-+ rm -rf 'guile-2.2.3*'
-+ wget https://ftp.gnu.org/gnu/guile/guile-2.2.3.tar.gz
---2018-12-21 19:48:11--  https://ftp.gnu.org/gnu/guile/guile-2.2.3.tar.gz
-Resolving ftp.gnu.org (ftp.gnu.org)... 208.118.235.20, 2001:4830:134:3::b
-Connecting to ftp.gnu.org (ftp.gnu.org)|208.118.235.20|:443... connected.
-Unable to establish SSL connection.
-+ tar -xvf guile-2.2.3.tar.gz
-tar: guile-2.2.3.tar.gz: Cannot open: No such file or directory
-tar: Error is not recoverable: exiting now
-+ cd guile-2.2.3
-dependencies/job1: line 8: cd: guile-2.2.3: No such file or directory
-+ mkdir build
-+ cd build
-+ ../configure
-dependencies/job1: line 11: ../configure: No such file or directory
-+ make -j8
-make: *** No targets specified and no makefile found.  Stop.
-+ sudo make install
-make: *** No rule to make target 'install'.  Stop.
-+ sudo ldconfig
-+ DSTATUS=BUILDPASSNOTEST
-+ /var/lib/jenkins/status/updateStatus BUILDPASSNOTEST /var/lib/jenkins/jobs/OpenCOG_U1604/builds/460/log OpenCOG_U1604_Guile
-Auto packing the repository in background for optimum performance.
-See "git help gc" for manual housekeeping.
-error: The last gc run reported the following. Please correct the root cause
-and remove .git/gc.log.
-Automatic cleanup will not be performed until the file is removed.
-
-error: pack-objects died of signal 15
-error: failed to run repack
-
-Already up-to-date.
-[master 657e844] OpenCOG_U1604_Guile BUILDPASSNOTEST
- 2 files changed, 1481 insertions(+), 12911 deletions(-)
- rewrite jobs/OpenCOG_U1604_Guile.log (83%)
-To git@github.com:edguy3/CenStatus.git
-   66b1b93..657e844  master -> master
-+ [ BUILDPASSNOTEST = BUILDPASSNOTEST ]
-[OpenCOG_U1604] $ /bin/sh -xe /tmp/jenkins2945663113914833191.sh
-+ . build.docker/docker.env
-+ CID=14a034d0c4446251a3a1a46b772fb849134426c17321fe468978896ed6cf7c17
-+ DKRUNROOT=docker exec --user root   14a034d0c4446251a3a1a46b772fb849134426c17321fe468978896ed6cf7c17
-+ DKRUNUSER=docker exec --user jenkins  14a034d0c4446251a3a1a46b772fb849134426c17321fe468978896ed6cf7c17
-+ UID=125
-+ GID=132
-+ cat
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-*****
-*****  cogutil BUILD
-*****
-**********************************************************
-**********************************************************
-**********************************************************
-**********************************************************
-
++ echo GIT_COMMIT=
+GIT_COMMIT=
++ echo GIT_BRANCH=
+GIT_BRANCH=
++ echo GIT_URL=
+GIT_URL=
 + WDIR=cogutil
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1604/builds/460/log
++ JOBDIR=../OpenCOG_U1604/dependencies
 + cat
-+ chmod +x dependencies/job1
++ chmod +x ../OpenCOG_U1604/dependencies/job1
 + docker exec --user jenkins 14a034d0c4446251a3a1a46b772fb849134426c17321fe468978896ed6cf7c17 bash dependencies/job1
 /home/opencog
-atomspace
-build
-cogutil
-dependencies
-moses
-octool
-opencog
-* master
-commit f85718c60e7ee6f594666fe1186b6780cce4ebaf
-Merge: 1b59d8a 5776719
-Author: Nil Geisweiller <ngeiswei@gmail.com>
-Date:   Thu Dec 20 20:18:41 2018 +0200
-
-    Merge pull request #157 from ngeiswei/install-cogutil-opencog
-    
-    Install cogutil lib under PREFIX/lib/opencog intead of PREDIX/lib
-
-commit 1b59d8ab3315d018b9246a3d0a4dbc7828039ee4
 + pwd
-+ ls
 + cd cogutil
-+ git branch
-+ git log
-+ head
-+ rm -fr build
-+ mkdir build
 + cd build
-+ cmake ..
--- The C compiler identification is GNU 5.4.0
--- The CXX compiler identification is GNU 5.4.0
--- Check for working C compiler: /usr/bin/cc
--- Check for working C compiler: /usr/bin/cc -- works
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Detecting C compile features
--- Detecting C compile features - done
--- Check for working CXX compiler: /usr/bin/c++
--- Check for working CXX compiler: /usr/bin/c++ -- works
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Build type: Release
--- Looking for pthread.h
--- Looking for pthread.h - found
--- Looking for pthread_create
--- Looking for pthread_create - not found
--- Looking for pthread_create in pthreads
--- Looking for pthread_create in pthreads - not found
--- Looking for pthread_create in pthread
--- Looking for pthread_create in pthread - found
--- Found Threads: TRUE  
--- Boost version: 1.58.0
--- Found the following Boost libraries:
---   date_time
---   filesystem
---   program_options
---   regex
---   serialization
---   system
---   thread
---   chrono
---   atomic
--- Found PythonInterp: /usr/bin/python (found version "2.7.12") 
--- Looking for include file bfd.h
--- Looking for include file bfd.h - found
--- Found libbfd: /usr/lib/x86_64-linux-gnu/libbfd.so
--- Binutils found.
--- Looking for include file libiberty.h
--- Looking for include file libiberty.h - found
--- Found libiberty: /usr/lib/x86_64-linux-gnu/libiberty.a
--- Libiberty found.
--- Found Doxygen: /usr/bin/doxygen (found version "1.8.11") 
++ make -j8 test
+[ 33%] Built target cogutil
+[ 36%] Generating numericUTest.cpp
+[ 38%] Generating lru_cacheUTest.cpp
+[ 43%] Generating comprehensionUTest.cpp
+[ 43%] Generating lazy_selectorUTest.cpp
+[ 43%] Generating StringTokenizerUTest.cpp
+[ 43%] Generating rankingUTest.cpp
+[ 46%] Generating LoggerUTest.cpp
+[ 46%] Generating functionalUTest.cpp
+Scanning dependencies of target rankingUTest
+Scanning dependencies of target StringTokenizerUTest
+Scanning dependencies of target comprehensionUTest
+Scanning dependencies of target functionalUTest
+Scanning dependencies of target lru_cacheUTest
+[ 48%] Building CXX object tests/util/CMakeFiles/rankingUTest.dir/rankingUTest.cpp.o
+Scanning dependencies of target lazy_selectorUTest
+Scanning dependencies of target LoggerUTest
+[ 50%] Building CXX object tests/util/CMakeFiles/StringTokenizerUTest.dir/StringTokenizerUTest.cpp.o
+[ 51%] Building CXX object tests/util/CMakeFiles/functionalUTest.dir/functionalUTest.cpp.o
+[ 53%] Building CXX object tests/util/CMakeFiles/lru_cacheUTest.dir/lru_cacheUTest.cpp.o
+Scanning dependencies of target numericUTest
+[ 55%] Building CXX object tests/util/CMakeFiles/comprehensionUTest.dir/comprehensionUTest.cpp.o
+[ 56%] Building CXX object tests/util/CMakeFiles/lazy_selectorUTest.dir/lazy_selectorUTest.cpp.o
+[ 58%] Building CXX object tests/util/CMakeFiles/LoggerUTest.dir/LoggerUTest.cpp.o
+[ 60%] Building CXX object tests/util/CMakeFiles/numericUTest.dir/numericUTest.cpp.o
+[ 61%] Linking CXX executable StringTokenizerUTest
+[ 61%] Built target StringTokenizerUTest
+[ 63%] Generating CounterUTest.cpp
+Scanning dependencies of target CounterUTest
+[ 65%] Building CXX object tests/util/CMakeFiles/CounterUTest.dir/CounterUTest.cpp.o
+[ 66%] Linking CXX executable lazy_selectorUTest
+[ 66%] Built target lazy_selectorUTest
+[ 68%] Generating KLDUTest.cpp
+Scanning dependencies of target KLDUTest
+[ 70%] Building CXX object tests/util/CMakeFiles/KLDUTest.dir/KLDUTest.cpp.o
+[ 71%] Linking CXX executable rankingUTest
+[ 73%] Linking CXX executable numericUTest
+[ 73%] Built target rankingUTest
+[ 75%] Generating iostreamContainerUTest.cpp
+Scanning dependencies of target iostreamContainerUTest
+[ 76%] Building CXX object tests/util/CMakeFiles/iostreamContainerUTest.dir/iostreamContainerUTest.cpp.o
+[ 76%] Built target numericUTest
+[ 78%] Generating ConfigUTest.cpp
+Scanning dependencies of target ConfigUTest
+[ 80%] Building CXX object tests/util/CMakeFiles/ConfigUTest.dir/ConfigUTest.cpp.o
+[ 81%] Linking CXX executable functionalUTest
+[ 81%] Built target functionalUTest
+[ 83%] Generating randomUTest.cpp
+Scanning dependencies of target randomUTest
+[ 85%] Building CXX object tests/util/CMakeFiles/randomUTest.dir/randomUTest.cpp.o
+[ 86%] Linking CXX executable LoggerUTest
+[ 86%] Built target LoggerUTest
+[ 88%] Linking CXX executable KLDUTest
+[ 90%] Linking CXX executable ConfigUTest
+[ 90%] Built target KLDUTest
+[ 90%] Built target ConfigUTest
+[ 91%] Linking CXX executable CounterUTest
+[ 93%] Linking CXX executable lru_cacheUTest
+[ 93%] Built target CounterUTest
+[ 95%] Linking CXX executable comprehensionUTest
+[ 95%] Built target lru_cacheUTest
+[ 95%] Built target comprehensionUTest
+[ 96%] Linking CXX executable iostreamContainerUTest
+[ 96%] Built target iostreamContainerUTest
+[ 98%] Linking CXX executable randomUTest
+[ 98%] Built target randomUTest
+Scanning dependencies of target tests
+[ 98%] Built target tests
+Scanning dependencies of target test
+[100%] Running tests...
+Test project /home/opencog/cogutil/build/tests
+      Start  1: ConfigUTest
+ 1/13 Test  #1: ConfigUTest ......................   Passed    0.01 sec
+      Start  2: LoggerUTest
+ 2/13 Test  #2: LoggerUTest ......................   Passed    0.33 sec
+      Start  3: StringTokenizerUTest
+ 3/13 Test  #3: StringTokenizerUTest .............   Passed    0.00 sec
+      Start  4: lazy_selectorUTest
+ 4/13 Test  #4: lazy_selectorUTest ...............   Passed    0.00 sec
+      Start  5: lru_cacheUTest
+ 5/13 Test  #5: lru_cacheUTest ...................   Passed    0.00 sec
+      Start  6: iostreamContainerUTest
+ 6/13 Test  #6: iostreamContainerUTest ...........   Passed    0.01 sec
+      Start  7: numericUTest
+ 7/13 Test  #7: numericUTest .....................   Passed    0.08 sec
+      Start  8: functionalUTest
+ 8/13 Test  #8: functionalUTest ..................   Passed    0.00 sec
+      Start  9: KLDUTest
+ 9/13 Test  #9: KLDUTest .........................   Passed    3.41 sec
+      Start 10: randomUTest
+10/13 Test #10: randomUTest ......................   Passed    1.56 sec
+      Start 11: comprehensionUTest
+11/13 Test #11: comprehensionUTest ...............   Passed    0.00 sec
+      Start 12: CounterUTest
+12/13 Test #12: CounterUTest .....................   Passed    0.00 sec
+      Start 13: rankingUTest
+13/13 Test #13: rankingUTest .....................   Passed    0.00 sec
 
-Building for Ubuntu 16.04.5 LTS
+100% tests passed, 0 tests failed out of 13
 
-The following components will be built:
------------------------------------------------
-   Doxygen     - Code documentation.
-   StackPrint  - Pretty printing of stack traces.
-   Unit tests  - Unit tests.
-   Util        - General utility library.
-
--- Configuring done
--- Generating done
--- Build files have been written to: /home/opencog/cogutil/build
-+ make -j8
-Scanning dependencies of target cogutil
-[ 10%] Building C object opencog/util/CMakeFiles/cogutil.dir/backtrace-symbols.c.o
-[ 10%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/ansi.cc.o
-[ 20%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/Config.cc.o
-[ 25%] Building C object opencog/util/CMakeFiles/cogutil.dir/cluster.c.o
-[ 25%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/exceptions.cc.o
-[ 30%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/files.cc.o
-[ 35%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_normal_selector.cc.o
-[ 40%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_random_selector.cc.o
-[ 45%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/lazy_selector.cc.o
-[ 50%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/log_prog_name.cc.o
-[ 55%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/Logger.cc.o
-[ 60%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/misc.cc.o
-[ 65%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/mt19937ar.cc.o
-[ 70%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/oc_assert.cc.o
-[ 75%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/oc_omp.cc.o
-[ 80%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/octime.cc.o
-[ 85%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/platform.cc.o
-[ 90%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/StringTokenizer.cc.o
-[ 95%] Building CXX object opencog/util/CMakeFiles/cogutil.dir/tree.cc.o
-[100%] Linking CXX shared library libcogutil.so
-[100%] Built target cogutil
-+ sudo make install
-[100%] Built target cogutil
-Install the project...
--- Install configuration: "Release"
--- Installing: /usr/local/share/opencog/cmake/AddCxxtest.cmake
--- Installing: /usr/local/share/opencog/cmake/FindBFD.cmake
--- Installing: /usr/local/share/opencog/cmake/FindCxxtest.cmake
--- Installing: /usr/local/share/opencog/cmake/FindCython.cmake
--- Installing: /usr/local/share/opencog/cmake/FindGTK3.cmake
--- Installing: /usr/local/share/opencog/cmake/FindGuile.cmake
--- Installing: /usr/local/share/opencog/cmake/FindHyperTable.cmake
--- Installing: /usr/local/share/opencog/cmake/FindIberty.cmake
--- Installing: /usr/local/share/opencog/cmake/FindLibGearman.cmake
--- Installing: /usr/local/share/opencog/cmake/FindMsgPack.cmake
--- Installing: /usr/local/share/opencog/cmake/FindPthreads.cmake
--- Installing: /usr/local/share/opencog/cmake/FindStack.cmake
--- Installing: /usr/local/share/opencog/cmake/FindSTLPort.cmake
--- Installing: /usr/local/share/opencog/cmake/FindVALGRIND.cmake
--- Installing: /usr/local/share/opencog/cmake/FindZMQ.cmake
--- Installing: /usr/local/share/opencog/cmake/FindSIGAR.cmake
--- Installing: /usr/local/share/opencog/cmake/FindPython3Interp.cmake
--- Installing: /usr/local/share/opencog/cmake/FindPGSQL.cmake
--- Installing: /usr/local/share/opencog/cmake/FindTBB.cmake
--- Installing: /usr/local/share/opencog/cmake/FindGHC.cmake
--- Installing: /usr/local/share/opencog/cmake/FindLinkGrammar.cmake
--- Installing: /usr/local/share/opencog/cmake/FindMOSES.cmake
--- Installing: /usr/local/share/opencog/cmake/FindOctomap.cmake
--- Installing: /usr/local/share/opencog/cmake/FindUUID.cmake
--- Installing: /usr/local/share/opencog/cmake/Findcpprest.cmake
--- Installing: /usr/local/share/opencog/cmake/Summary.cmake
--- Installing: /usr/local/share/opencog/cmake/COPYING-CMAKE-SCRIPTS
--- Installing: /usr/local/lib/cmake/CogUtil/CogUtilConfigVersion.cmake
--- Installing: /usr/local/lib/cmake/CogUtil/CogUtilConfig.cmake
--- Installing: /usr/local/include/opencog/util/ansi.h
--- Installing: /usr/local/include/opencog/util/algorithm.h
--- Installing: /usr/local/include/opencog/util/async_buffer.h
--- Installing: /usr/local/include/opencog/util/async_method_caller.h
--- Installing: /usr/local/include/opencog/util/backtrace-symbols.h
--- Installing: /usr/local/include/opencog/util/based_variant.h
--- Installing: /usr/local/include/opencog/util/cluster.h
--- Installing: /usr/local/include/opencog/util/cogutil.h
--- Installing: /usr/local/include/opencog/util/comprehension.h
--- Installing: /usr/local/include/opencog/util/Config.h
--- Installing: /usr/local/include/opencog/util/Counter.h
--- Installing: /usr/local/include/opencog/util/Cover_Tree.h
--- Installing: /usr/local/include/opencog/util/concurrent_queue.h
--- Installing: /usr/local/include/opencog/util/concurrent_set.h
--- Installing: /usr/local/include/opencog/util/concurrent_stack.h
--- Installing: /usr/local/include/opencog/util/digraph.h
--- Installing: /usr/local/include/opencog/util/dorepeat.h
--- Installing: /usr/local/include/opencog/util/exceptions.h
--- Installing: /usr/local/include/opencog/util/files.h
--- Installing: /usr/local/include/opencog/util/functional.h
--- Installing: /usr/local/include/opencog/util/hashing.h
--- Installing: /usr/local/include/opencog/util/iostreamContainer.h
--- Installing: /usr/local/include/opencog/util/KLD.h
--- Installing: /usr/local/include/opencog/util/lazy_normal_selector.h
--- Installing: /usr/local/include/opencog/util/lazy_random_selector.h
--- Installing: /usr/local/include/opencog/util/lazy_selector.h
--- Installing: /usr/local/include/opencog/util/log_prog_name.h
--- Installing: /usr/local/include/opencog/util/Logger.h
--- Installing: /usr/local/include/opencog/util/lru_cache.h
--- Installing: /usr/local/include/opencog/util/macros.h
--- Installing: /usr/local/include/opencog/util/MannWhitneyU.h
--- Installing: /usr/local/include/opencog/util/misc.h
--- Installing: /usr/local/include/opencog/util/mt19937ar.h
--- Installing: /usr/local/include/opencog/util/numeric.h
--- Installing: /usr/local/include/opencog/util/jaccard_index.h
--- Installing: /usr/local/include/opencog/util/oc_assert.h
--- Installing: /usr/local/include/opencog/util/oc_omp.h
--- Installing: /usr/local/include/opencog/util/octime.h
--- Installing: /usr/local/include/opencog/util/platform.h
--- Installing: /usr/local/include/opencog/util/pool.h
--- Installing: /usr/local/include/opencog/util/RandGen.h
--- Installing: /usr/local/include/opencog/util/random.h
--- Installing: /usr/local/include/opencog/util/ranking.h
--- Installing: /usr/local/include/opencog/util/recent_val.h
--- Installing: /usr/local/include/opencog/util/selection.h
--- Installing: /usr/local/include/opencog/util/sigslot.h
--- Installing: /usr/local/include/opencog/util/StringTokenizer.h
--- Installing: /usr/local/include/opencog/util/tbb.h
--- Installing: /usr/local/include/opencog/util/tree.h
--- Installing: /usr/local/include/opencog/util/empty_string.h
--- Installing: /usr/local/lib/opencog/libcogutil.so
--- Set runtime path of "/usr/local/lib/opencog/libcogutil.so" to "/usr/local/lib/opencog"
--- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean.h
--- Installing: /usr/local/include/opencog/util/boost_ext/accumulators/statistics/geometric_mean_mirror.h
-+ DSTATUS=BUILDPASS
-+ /var/lib/jenkins/status/updateStatus BUILDPASS /var/lib/jenkins/jobs/OpenCOG_U1604/builds/460/log OpenCOG_U1604_CogUtil
+Total Test time (real) =   5.42 sec
+[100%] Built target test
++ DSTATUS=TESTPASS
++ /var/lib/jenkins/status/updateStatus TESTPASS /var/lib/jenkins/jobs/OpenCOG_U1604_CogUtil/builds/376/log OpenCOG_U1604_CogUtil
 Auto packing the repository in background for optimum performance.
 See "git help gc" for manual housekeeping.
 error: The last gc run reported the following. Please correct the root cause
