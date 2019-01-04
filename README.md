@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Fri Jan  4 02:37:13 EST 2019.
+This file shows the status of public cen.ai tracked projects as of Fri Jan  4 02:38:34 EST 2019.
 
 ## Modules 
 
@@ -20,7 +20,7 @@ This file shows the status of public cen.ai tracked projects as of Fri Jan  4 02
 | [OpenCOG_U1404_Moses](jobs/OpenCOG_U1404_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 2018-09-10 | 2018-09-09 | 2018-09-10  | 2018-09-10 |
 | [OpenCOG_U1404_Opencog](jobs/OpenCOG_U1404_Opencog.log) | ![Status](/images/BUILDFAIL.svg) |  |  | 2018-09-09 | 2018-05-14  | 2018-09-10 |
 | [OpenCOG_U1404__Core_Build](jobs/OpenCOG_U1404__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 2018-05-14 |
-| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/TESTPASS.svg) | [99% tests passed, 1 tests failed out of 130](#opencog_u1604_atomspace) | 01:48 | 2018-09-09 | 01:26  | 01:48 |
+| [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 01:48 | 2018-09-09 | 02:38  | 02:38 |
 | [OpenCOG_U1604_CogUtil](jobs/OpenCOG_U1604_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 01:45 | 2018-12-12 | 02:37  | 02:37 |
 | [OpenCOG_U1604_Guile](jobs/OpenCOG_U1604_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 02:37 |
 | [OpenCOG_U1604_Moses](jobs/OpenCOG_U1604_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 01:55 | 2018-12-20 | 01:28  | 01:55 |
@@ -46,14 +46,6 @@ This file shows the status of public cen.ai tracked projects as of Fri Jan  4 02
 See the log file at this link: [OpenCOG_DebStab_AtomSpace](jobs/OpenCOG_DebStab_AtomSpace.log) for more detail.
 
 
-###  OpenCOG_U1604_AtomSpace
-```
- 60/130 Test  #60: VectorAPIUTest ...................***Failed    5.26 sec
-```
-
-See the log file at this link: [OpenCOG_U1604_AtomSpace](jobs/OpenCOG_U1604_AtomSpace.log) for more detail.
-
-
 ###  OpenCOG_U1710_AtomSpace
 ```
  25/106 Test  #25: PutLinkUTest .....................***Exception: SegFault  0.55 sec
@@ -76,16 +68,6 @@ See the log file at this link: [OpenCOG_U1710_Opencog](jobs/OpenCOG_U1710_Openco
 
 
 ## Benchmarks
-
-
-###  OpenCOG_U1604_AtomSpace
-```
-Uptime:  06:48:47 up 116 days, 13:07,  0 users,  load average: 2.69, 4.89, 5.13
-python: can't open file '../opencog/benchmark/benchmark.py': [Errno 2] No such file or directory
-
-( This is not a dedicated machine)
-```
-
 
 
 ## Contributors
