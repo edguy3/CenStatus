@@ -1,14 +1,14 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Tue Jan 15 16:29:59 EST 2019.
+This file shows the status of public cen.ai tracked projects as of Tue Jan 15 16:31:23 EST 2019.
 
 ## Modules 
 
 | MODULE & Logfile | Status | Detail | Test Pass | Test Fail| Build | Attempt|
 | --- | --- | --- | --- | ---  | --- | --- | 
 | [OpenCOG_DebOld__Core_Build](jobs/OpenCOG_DebOld__Core_Build.log) | ![Status](/images/BUILDPASS.svg) |  |  |  | 2018-01-15  | 2018-01-15 |
-| [OpenCOG_DebStab_AtomSpace](jobs/OpenCOG_DebStab_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | [99% tests passed, 1 tests failed out of 130](#opencog_debstab_atomspace) | 2018-05-14 | 2019-01-11 | 2019-01-11  | 2019-01-11 |
+| [OpenCOG_DebStab_AtomSpace](jobs/OpenCOG_DebStab_AtomSpace.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-05-14 | 2019-01-11 | 16:31  | 16:31 |
 | [OpenCOG_DebStab_CogUtil](jobs/OpenCOG_DebStab_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 2019-01-11 | 2018-12-12 | 16:29  | 16:29 |
 | [OpenCOG_DebStab_Guile](jobs/OpenCOG_DebStab_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 16:29 |
 | [OpenCOG_DebStab_Moses](jobs/OpenCOG_DebStab_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 35 | 2019-01-11 | 2019-01-11 | 2019-01-11  | 2019-01-11 |
@@ -36,14 +36,6 @@ This file shows the status of public cen.ai tracked projects as of Tue Jan 15 16
 ( Times are currently EST/EDT GMT-5/-4) 
 
 ## Error Detail
-
-
-###  OpenCOG_DebStab_AtomSpace
-```
- 60/130 Test  #60: VectorAPIUTest ...................***Failed    5.24 sec
-```
-
-See the log file at this link: [OpenCOG_DebStab_AtomSpace](jobs/OpenCOG_DebStab_AtomSpace.log) for more detail.
 
 
 ###  OpenCOG_U1710_AtomSpace
