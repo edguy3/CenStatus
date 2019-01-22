@@ -1,7 +1,7 @@
 
 ## Synopsis
 
-This file shows the status of public cen.ai tracked projects as of Tue Jan 22 13:37:19 EST 2019.
+This file shows the status of public cen.ai tracked projects as of Tue Jan 22 13:37:24 EST 2019.
 
 ## Modules 
 
@@ -26,7 +26,7 @@ This file shows the status of public cen.ai tracked projects as of Tue Jan 22 13
 | [OpenCOG_U1604_Moses](jobs/OpenCOG_U1604_Moses.log) | ![Status](/images/BUILDPASS.svg) |  | 12:10 | 2018-12-20 | 13:28  | 13:28 |
 | [OpenCOG_U1604_Opencog](jobs/OpenCOG_U1604_Opencog.log) | ![Status](/images/BUILDPASS.svg) |  | 12:13 | 2019-01-21 | 13:29  | 13:29 |
 | [OpenCOG_U1604__Core_Build](jobs/OpenCOG_U1604__Core_Build.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  | 2018-01-22  | 13:29 |
-| [OpenCOG_U1710_AtomSpace](jobs/OpenCOG_U1710_AtomSpace.log) | ![Status](/images/TESTFAIL.svg) | [98% tests passed, 2 tests failed out of 106](#opencog_u1710_atomspace) | 2018-02-05 | 2018-02-23 | 2018-02-23  | 2018-02-23 |
+| [OpenCOG_U1710_AtomSpace](jobs/OpenCOG_U1710_AtomSpace.log) | ![Status](/images/BUILDFAIL.svg) |  | 2018-02-05 | 2018-02-23 | 2018-02-23  | 13:37 |
 | [OpenCOG_U1710_CogUtil](jobs/OpenCOG_U1710_CogUtil.log) | ![Status](/images/BUILDPASS.svg) |  | 2018-02-23 |  | 13:37  | 13:37 |
 | [OpenCOG_U1710_Guile](jobs/OpenCOG_U1710_Guile.log) | ![Status](/images/BUILDPASSNOTEST.svg) |  |  |  |   | 13:37 |
 | [OpenCOG_U1710_Moses](jobs/OpenCOG_U1710_Moses.log) | ![Status](/images/TESTPASS.svg) | 100% tests passed, 0 tests failed out of 34 | 2018-02-23 |  | 2018-02-23  | 2018-02-23 |
@@ -44,15 +44,6 @@ This file shows the status of public cen.ai tracked projects as of Tue Jan 22 13
 ```
 
 See the log file at this link: [OpenCOG_DebStab_AtomSpace](jobs/OpenCOG_DebStab_AtomSpace.log) for more detail.
-
-
-###  OpenCOG_U1710_AtomSpace
-```
- 25/106 Test  #25: PutLinkUTest .....................***Exception: SegFault  0.55 sec
- 40/106 Test  #40: AttentionUTest ...................***Failed    0.01 sec
-```
-
-See the log file at this link: [OpenCOG_U1710_AtomSpace](jobs/OpenCOG_U1710_AtomSpace.log) for more detail.
 
 
 ###  OpenCOG_U1710_Opencog
