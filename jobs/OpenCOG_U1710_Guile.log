@@ -1,8 +1,7 @@
 Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
-Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
-Started by user [8mha:////4L2jTPWu9zIb56dnp8RqVObesKKV2DVGI0jJXlam1DqAAAAAlx+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzWEgZu/dLi1CL9xJTczDwAj6GcLcAAAAA=[0madmin
+Running as SYSTEM
 Building in workspace /var/lib/jenkins/workspace/OpenCOG_U1710
-[OpenCOG_U1710] $ /bin/sh -xe /tmp/jenkins8079557704112244307.sh
+[OpenCOG_U1710] $ /bin/sh -xe /tmp/jenkins1030931542576506784.sh
 + pwd
 /var/lib/jenkins/workspace/OpenCOG_U1710
 + whoami
@@ -12,45 +11,45 @@ jenkins
 + cd build.docker
 + cp /home/edguy/OCDOCK/DOCKER.OpenCOG_U1710 docker.buildfile
 + docker build --no-cache=true -f docker.buildfile -t edguy/opencog:OpenCOG_U1710 .
-Sending build context to Docker daemon 4.096 kB
+Sending build context to Docker daemon  4.096kB
 Step 1/24 : FROM ubuntu:17.10
  ---> 26d147d2310f
 Step 2/24 : MAINTAINER Ed Guy "edguy@eguy.org"
- ---> Running in 190eb2574a28
- ---> 51bcc1df4bfc
-Removing intermediate container 190eb2574a28
+ ---> Running in fd1db04f4872
+Removing intermediate container fd1db04f4872
+ ---> 007e0dc20514
 Step 3/24 : ENV DEBIAN_FRONTEND noninteractive
- ---> Running in f0878d7130b1
- ---> ae74fd109b3a
-Removing intermediate container f0878d7130b1
+ ---> Running in a8baf0446c0b
+Removing intermediate container a8baf0446c0b
+ ---> 74c0142b61b5
 Step 4/24 : ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64
- ---> Running in f164748f4a29
- ---> 8e86ed65c7f6
-Removing intermediate container f164748f4a29
+ ---> Running in d23bb54a4544
+Removing intermediate container d23bb54a4544
+ ---> d0d98d61322f
 Step 5/24 : RUN apt-get -y update && apt-get -y upgrade || echo done
- ---> Running in e4deba033c5b
+ ---> Running in 38657ba3a610
 Get:1 http://archive.ubuntu.com/ubuntu artful InRelease [237 kB]
-Get:2 http://security.ubuntu.com/ubuntu artful-security InRelease [83.2 kB]
-Get:3 http://security.ubuntu.com/ubuntu artful-security/universe Sources [22.3 kB]
-Get:4 http://archive.ubuntu.com/ubuntu artful-updates InRelease [88.7 kB]
-Get:5 http://archive.ubuntu.com/ubuntu artful-backports InRelease [74.6 kB]
-Get:6 http://security.ubuntu.com/ubuntu artful-security/multiverse amd64 Packages [1817 B]
-Get:7 http://security.ubuntu.com/ubuntu artful-security/universe amd64 Packages [88.0 kB]
-Get:8 http://security.ubuntu.com/ubuntu artful-security/main amd64 Packages [224 kB]
-Get:9 http://archive.ubuntu.com/ubuntu artful/universe Sources [11.1 MB]
+Get:2 http://archive.ubuntu.com/ubuntu artful-updates InRelease [88.7 kB]
+Get:3 http://archive.ubuntu.com/ubuntu artful-backports InRelease [74.6 kB]
+Get:4 http://security.ubuntu.com/ubuntu artful-security InRelease [83.2 kB]
+Get:5 http://archive.ubuntu.com/ubuntu artful/universe Sources [11.1 MB]
+Get:6 http://security.ubuntu.com/ubuntu artful-security/universe Sources [22.3 kB]
+Get:7 http://security.ubuntu.com/ubuntu artful-security/main amd64 Packages [224 kB]
+Get:8 http://archive.ubuntu.com/ubuntu artful/restricted amd64 Packages [14.7 kB]
+Get:9 http://archive.ubuntu.com/ubuntu artful/universe amd64 Packages [10.8 MB]
 Get:10 http://security.ubuntu.com/ubuntu artful-security/restricted amd64 Packages [2933 B]
-Get:11 http://archive.ubuntu.com/ubuntu artful/multiverse amd64 Packages [185 kB]
-Get:12 http://archive.ubuntu.com/ubuntu artful/restricted amd64 Packages [14.7 kB]
-Get:13 http://archive.ubuntu.com/ubuntu artful/universe amd64 Packages [10.8 MB]
-Get:14 http://archive.ubuntu.com/ubuntu artful/main amd64 Packages [1416 kB]
+Get:11 http://security.ubuntu.com/ubuntu artful-security/multiverse amd64 Packages [1817 B]
+Get:12 http://security.ubuntu.com/ubuntu artful-security/universe amd64 Packages [88.0 kB]
+Get:13 http://archive.ubuntu.com/ubuntu artful/main amd64 Packages [1416 kB]
+Get:14 http://archive.ubuntu.com/ubuntu artful/multiverse amd64 Packages [185 kB]
 Get:15 http://archive.ubuntu.com/ubuntu artful-updates/universe Sources [47.5 kB]
-Get:16 http://archive.ubuntu.com/ubuntu artful-updates/restricted amd64 Packages [2933 B]
-Get:17 http://archive.ubuntu.com/ubuntu artful-updates/main amd64 Packages [351 kB]
-Get:18 http://archive.ubuntu.com/ubuntu artful-updates/universe amd64 Packages [154 kB]
+Get:16 http://archive.ubuntu.com/ubuntu artful-updates/main amd64 Packages [351 kB]
+Get:17 http://archive.ubuntu.com/ubuntu artful-updates/universe amd64 Packages [154 kB]
+Get:18 http://archive.ubuntu.com/ubuntu artful-updates/restricted amd64 Packages [2933 B]
 Get:19 http://archive.ubuntu.com/ubuntu artful-updates/multiverse amd64 Packages [4373 B]
-Get:20 http://archive.ubuntu.com/ubuntu artful-backports/main amd64 Packages [1462 B]
-Get:21 http://archive.ubuntu.com/ubuntu artful-backports/universe amd64 Packages [4359 B]
-Fetched 24.8 MB in 3s (6742 kB/s)
+Get:20 http://archive.ubuntu.com/ubuntu artful-backports/universe amd64 Packages [4359 B]
+Get:21 http://archive.ubuntu.com/ubuntu artful-backports/main amd64 Packages [1462 B]
+Fetched 24.8 MB in 2s (8424 kB/s)
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -97,7 +96,7 @@ Get:29 http://archive.ubuntu.com/ubuntu artful-updates/main amd64 sensible-utils
 Get:30 http://archive.ubuntu.com/ubuntu artful-updates/main amd64 gnupg amd64 2.1.15-1ubuntu8.1 [780 kB]
 Get:31 http://archive.ubuntu.com/ubuntu artful-updates/main amd64 gnupg-agent amd64 2.1.15-1ubuntu8.1 [255 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 11.4 MB in 2s (5334 kB/s)
+[0mFetched 11.4 MB in 2s (5489 kB/s)
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4111 files and directories currently installed.)
 Preparing to unpack .../bsdutils_1%3a2.30.1-0ubuntu4.2_amd64.deb ...
 Unpacking bsdutils (1:2.30.1-0ubuntu4.2) over (1:2.30.1-0ubuntu4) ...
@@ -219,13 +218,13 @@ Setting up sensible-utils (0.0.10ubuntu0.1) ...
 Processing triggers for libc-bin (2.26-0ubuntu2.1) ...
 Setting up gnupg-agent (2.1.15-1ubuntu8.1) ...
 Setting up gnupg (2.1.15-1ubuntu8.1) ...
- ---> 9dbe2a1a924d
-Removing intermediate container e4deba033c5b
+Removing intermediate container 38657ba3a610
+ ---> acb5bc87c8cc
 Step 6/24 : RUN apt-get update && apt-get -y install screen telnet netcat-openbsd byobu wget vim unzip gcc g++ make sudo lsb-release net-tools apt-utils
- ---> Running in 9fff6e76d0bf
-Hit:1 http://security.ubuntu.com/ubuntu artful-security InRelease
-Hit:2 http://archive.ubuntu.com/ubuntu artful InRelease
-Hit:3 http://archive.ubuntu.com/ubuntu artful-updates InRelease
+ ---> Running in fb84b77baeb0
+Hit:1 http://archive.ubuntu.com/ubuntu artful InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu artful-updates InRelease
+Hit:3 http://security.ubuntu.com/ubuntu artful-security InRelease
 Hit:4 http://archive.ubuntu.com/ubuntu artful-backports InRelease
 Reading package lists...
 Reading package lists...
@@ -358,7 +357,7 @@ Get:84 http://archive.ubuntu.com/ubuntu artful/main amd64 unzip amd64 6.0-21ubun
 Get:85 http://archive.ubuntu.com/ubuntu artful/main amd64 vim-runtime all 2:8.0.0197-4ubuntu5 [5317 kB]
 Get:86 http://archive.ubuntu.com/ubuntu artful/main amd64 vim amd64 2:8.0.0197-4ubuntu5 [1077 kB]
 [91mdebconf: delaying package configuration, since apt-utils is not installed
-[0mFetched 55.8 MB in 6s (8364 kB/s)
+[0mFetched 55.8 MB in 6s (8213 kB/s)
 Selecting previously unselected package libssl1.0.0:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 4111 files and directories currently installed.)
 Preparing to unpack .../libssl1.0.0_1.0.2g-1ubuntu13.6_amd64.deb ...
@@ -732,14 +731,14 @@ Updating certificates in /etc/ssl/certs...
 0 added, 0 removed; done.
 Running hooks in /etc/ca-certificates/update.d...
 done.
- ---> 890e6f8531be
-Removing intermediate container 9fff6e76d0bf
+Removing intermediate container fb84b77baeb0
+ ---> 586a082434a8
 Step 7/24 : RUN apt-get update && apt-get -y install openjdk-8-jdk ant libcommons-logging-java
- ---> Running in 5096d7a9b5ce
-Hit:1 http://security.ubuntu.com/ubuntu artful-security InRelease
-Hit:2 http://archive.ubuntu.com/ubuntu artful InRelease
-Hit:3 http://archive.ubuntu.com/ubuntu artful-updates InRelease
-Hit:4 http://archive.ubuntu.com/ubuntu artful-backports InRelease
+ ---> Running in 15f9006da9f3
+Hit:1 http://archive.ubuntu.com/ubuntu artful InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu artful-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu artful-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu artful-security InRelease
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -981,7 +980,7 @@ Get:157 http://archive.ubuntu.com/ubuntu artful-updates/main amd64 openjdk-8-jdk
 Get:158 http://archive.ubuntu.com/ubuntu artful/main amd64 tcpd amd64 7.6.q-26 [23.5 kB]
 Get:159 http://archive.ubuntu.com/ubuntu artful/main amd64 libtxc-dxtn-s2tc amd64 1.0+git20151227-2 [48.4 kB]
 Preconfiguring packages ...
-Fetched 91.7 MB in 9s (9537 kB/s)
+Fetched 91.7 MB in 16s (5544 kB/s)
 Selecting previously unselected package libxau6:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 13328 files and directories currently installed.)
 Preparing to unpack .../000-libxau6_1%3a1.0.8-1_amd64.deb ...
@@ -1836,17 +1835,18 @@ Running hooks in /etc/ca-certificates/update.d...
 
 done.
 done.
- ---> 584cd78ddf51
-Removing intermediate container 5096d7a9b5ce
+Removing intermediate container 15f9006da9f3
+ ---> 42f2724f1b3b
 Step 8/24 : RUN test -e /usr/local/share/java || mkdir /usr/local/share/java
- ---> Running in b740e0056de0
- ---> a5b288456646
-Removing intermediate container b740e0056de0
+ ---> Running in 471f1bec4e9e
+Removing intermediate container 471f1bec4e9e
+ ---> 8da30818558e
 Step 9/24 : WORKDIR /home/opencog
- ---> 062e71d9c4c4
-Removing intermediate container 1b31a418c18f
+ ---> Running in 77cd0aa3b2aa
+Removing intermediate container 77cd0aa3b2aa
+ ---> e90d1d5fa206
 Step 10/24 : RUN apt-get update && apt-get -y install build-essential  cmake  cxxtest  rlwrap  guile-2.0-dev  libiberty-dev  libicu-dev  libbz2-dev  cython  python-dev  python-zmq  python-simplejson  libboost-date-time-dev  libboost-filesystem-dev  libboost-math-dev  libboost-program-options-dev  libboost-regex-dev  libboost-serialization-dev  libboost-thread-dev  libboost-system-dev  libboost-random-dev  libzmq3-dev  libtbb-dev  binutils-dev  unixodbc-dev  libpq-dev uuid-dev  libprotoc-dev  protobuf-compiler  libsdl-gfx1.2-dev  libssl-dev  tcl-dev  tcsh  libfreetype6-dev  libatlas-base-dev  gfortran  gearman  libgearman-dev  ccache  libgsasl7  libldap2-dev  krb5-multidev  wordnet  wordnet-dev  wordnet-sense-index
- ---> Running in b8ef9e730916
+ ---> Running in 9ec648998289
 Hit:1 http://security.ubuntu.com/ubuntu artful-security InRelease
 Hit:2 http://archive.ubuntu.com/ubuntu artful InRelease
 Hit:3 http://archive.ubuntu.com/ubuntu artful-updates InRelease
@@ -2200,7 +2200,7 @@ Get:225 http://archive.ubuntu.com/ubuntu artful/main amd64 protobuf-compiler amd
 Get:226 http://archive.ubuntu.com/ubuntu artful/main amd64 unixodbc-dev amd64 2.3.4-1 [215 kB]
 Get:227 http://archive.ubuntu.com/ubuntu artful-updates/main amd64 uuid-dev amd64 2.30.1-0ubuntu4.2 [26.9 kB]
 Preconfiguring packages ...
-Fetched 131 MB in 30s (4344 kB/s)
+Fetched 131 MB in 14s (8732 kB/s)
 Selecting previously unselected package liblocale-gettext-perl.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 30290 files and directories currently installed.)
 Preparing to unpack .../00-liblocale-gettext-perl_1.07-3build2_amd64.deb ...
@@ -2919,8 +2919,8 @@ Setting up wordnet-sense-index (1:3.0-33) ...
 Setting up tzdata (2017c-0ubuntu0.17.10) ...
 
 Current default time zone: 'Etc/UTC'
-Local time is now:      Sun Apr 21 00:34:23 UTC 2019.
-Universal Time is now:  Sun Apr 21 00:34:23 UTC 2019.
+Local time is now:      Mon Apr 22 23:45:23 UTC 2019.
+Universal Time is now:  Mon Apr 22 23:45:23 UTC 2019.
 Run 'dpkg-reconfigure tzdata' if you wish to change it.
 
 Setting up libtbb2:amd64 (2017~U7-6) ...
@@ -3138,10 +3138,10 @@ Setting up odbcinst1debian2:amd64 (2.3.4-1) ...
 Setting up unixodbc-dev (2.3.4-1) ...
 Setting up odbcinst (2.3.4-1) ...
 Processing triggers for libc-bin (2.26-0ubuntu2.1) ...
- ---> d94b6223da24
-Removing intermediate container b8ef9e730916
+Removing intermediate container 9ec648998289
+ ---> 76f5bb54d659
 Step 11/24 : RUN apt-get update && apt-get -y install unixodbc odbc-postgresql postgresql-client
- ---> Running in 6061deb85845
+ ---> Running in d1e9bac189cc
 Hit:1 http://security.ubuntu.com/ubuntu artful-security InRelease
 Hit:2 http://archive.ubuntu.com/ubuntu artful InRelease
 Hit:3 http://archive.ubuntu.com/ubuntu artful-updates InRelease
@@ -3165,7 +3165,7 @@ Get:2 http://archive.ubuntu.com/ubuntu artful-updates/main amd64 postgresql-clie
 Get:3 http://archive.ubuntu.com/ubuntu artful-updates/main amd64 postgresql-client-9.6 amd64 9.6.9-0ubuntu0.17.10 [905 kB]
 Get:4 http://archive.ubuntu.com/ubuntu artful-updates/main amd64 postgresql-client all 9.6+184ubuntu1.1 [5296 B]
 Get:5 http://archive.ubuntu.com/ubuntu artful/universe amd64 unixodbc amd64 2.3.4-1 [21.4 kB]
-Fetched 1301 kB in 0s (1518 kB/s)
+Fetched 1301 kB in 0s (1492 kB/s)
 Selecting previously unselected package odbc-postgresql:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 60223 files and directories currently installed.)
 Preparing to unpack .../odbc-postgresql_1%3a09.06.0410-1_amd64.deb ...
@@ -3192,14 +3192,14 @@ odbcinst: Driver installed. Usage count increased to 1.
 Setting up postgresql-client-9.6 (9.6.9-0ubuntu0.17.10) ...
 update-alternatives: using /usr/share/postgresql/9.6/man/man1/psql.1.gz to provide /usr/share/man/man1/psql.1.gz (psql.1.gz) in auto mode
 Setting up postgresql-client (9.6+184ubuntu1.1) ...
- ---> f98804b6155a
-Removing intermediate container 6061deb85845
+Removing intermediate container d1e9bac189cc
+ ---> 570f779d69c0
 Step 12/24 : RUN apt-get update && apt-get -y install python-pip git
- ---> Running in 4aff85ee7931
+ ---> Running in 12d2da1f0f07
 Hit:1 http://archive.ubuntu.com/ubuntu artful InRelease
-Hit:2 http://security.ubuntu.com/ubuntu artful-security InRelease
-Hit:3 http://archive.ubuntu.com/ubuntu artful-updates InRelease
-Hit:4 http://archive.ubuntu.com/ubuntu artful-backports InRelease
+Hit:2 http://archive.ubuntu.com/ubuntu artful-updates InRelease
+Hit:3 http://archive.ubuntu.com/ubuntu artful-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu artful-security InRelease
 Reading package lists...
 Reading package lists...
 Building dependency tree...
@@ -3263,7 +3263,7 @@ Get:29 http://archive.ubuntu.com/ubuntu artful/main amd64 python-pkg-resources a
 Get:30 http://archive.ubuntu.com/ubuntu artful/main amd64 python-setuptools all 36.2.7-2 [260 kB]
 Get:31 http://archive.ubuntu.com/ubuntu artful/universe amd64 python-wheel all 0.29.0-2 [48.3 kB]
 Get:32 http://archive.ubuntu.com/ubuntu artful/universe amd64 python-xdg all 0.25-4 [31.4 kB]
-Fetched 8185 kB in 6s (1245 kB/s)
+Fetched 8185 kB in 1s (4188 kB/s)
 Selecting previously unselected package libcurl3-gnutls:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 60513 files and directories currently installed.)
 Preparing to unpack .../00-libcurl3-gnutls_7.55.1-1ubuntu2.6_amd64.deb ...
@@ -3396,10 +3396,10 @@ Setting up python-all-dev (2.7.14-2ubuntu1) ...
 Setting up python-cryptography (1.9-1) ...
 Setting up python-secretstorage (2.3.1-2) ...
 Setting up python-keyring (10.4.0-1) ...
- ---> 53992bbf0178
-Removing intermediate container 4aff85ee7931
+Removing intermediate container 12d2da1f0f07
+ ---> 799c9947b761
 Step 13/24 : RUN apt-get update && apt-get -y install libcpprest  #1604
- ---> Running in 600b75038fa2
+ ---> Running in 89b59ffff9fb
 Hit:1 http://archive.ubuntu.com/ubuntu artful InRelease
 Hit:2 http://security.ubuntu.com/ubuntu artful-security InRelease
 Hit:3 http://archive.ubuntu.com/ubuntu artful-updates InRelease
@@ -3414,7 +3414,7 @@ The following NEW packages will be installed:
 Need to get 637 kB of archives.
 After this operation, 3140 kB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu artful-updates/universe amd64 libcpprest2.9 amd64 2.9.1-1ubuntu2 [637 kB]
-Fetched 637 kB in 0s (935 kB/s)
+Fetched 637 kB in 0s (932 kB/s)
 Selecting previously unselected package libcpprest2.9:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 62319 files and directories currently installed.)
 Preparing to unpack .../libcpprest2.9_2.9.1-1ubuntu2_amd64.deb ...
@@ -3422,12 +3422,12 @@ Unpacking libcpprest2.9:amd64 (2.9.1-1ubuntu2) ...
 Processing triggers for libc-bin (2.26-0ubuntu2.1) ...
 Setting up libcpprest2.9:amd64 (2.9.1-1ubuntu2) ...
 Processing triggers for libc-bin (2.26-0ubuntu2.1) ...
- ---> dd6c8457dcbf
-Removing intermediate container 600b75038fa2
+Removing intermediate container 89b59ffff9fb
+ ---> b4f985e2e9a3
 Step 14/24 : RUN apt-get update && apt-get -y install doxygen
- ---> Running in 5c2c8befc3c7
-Hit:1 http://security.ubuntu.com/ubuntu artful-security InRelease
-Hit:2 http://archive.ubuntu.com/ubuntu artful InRelease
+ ---> Running in 8b07a1aac22a
+Hit:1 http://archive.ubuntu.com/ubuntu artful InRelease
+Hit:2 http://security.ubuntu.com/ubuntu artful-security InRelease
 Hit:3 http://archive.ubuntu.com/ubuntu artful-updates InRelease
 Hit:4 http://archive.ubuntu.com/ubuntu artful-backports InRelease
 Reading package lists...
@@ -3446,7 +3446,7 @@ After this operation, 44.9 MB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu artful/main amd64 libclang1-5.0 amd64 1:5.0-3 [6820 kB]
 Get:2 http://archive.ubuntu.com/ubuntu artful-updates/main amd64 libxapian30 amd64 1.4.4-2ubuntu0.1 [628 kB]
 Get:3 http://archive.ubuntu.com/ubuntu artful/main amd64 doxygen amd64 1.8.13-9 [3879 kB]
-Fetched 11.3 MB in 2s (5657 kB/s)
+Fetched 11.3 MB in 1s (9768 kB/s)
 Selecting previously unselected package libclang1-5.0:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 62323 files and directories currently installed.)
 Preparing to unpack .../libclang1-5.0_1%3a5.0-3_amd64.deb ...
@@ -3461,10 +3461,10 @@ Setting up libxapian30:amd64 (1.4.4-2ubuntu0.1) ...
 Setting up libclang1-5.0:amd64 (1:5.0-3) ...
 Processing triggers for libc-bin (2.26-0ubuntu2.1) ...
 Setting up doxygen (1.8.13-9) ...
- ---> 5d4788bc0b17
-Removing intermediate container 5c2c8befc3c7
+Removing intermediate container 8b07a1aac22a
+ ---> 5dff0fe71d96
 Step 15/24 : RUN apt-get update && apt-get -y install fonts-lyx python-cairo python-decorator python-glade2 python-gobject-2 python-gtk2 python-imaging python-matplotlib python-matplotlib-data python-numpy python-pyparsing python-scipy python-tk python-tz
- ---> Running in 34ea4f272d5d
+ ---> Running in 6e9fd2f5232b
 Hit:1 http://security.ubuntu.com/ubuntu artful-security InRelease
 Hit:2 http://archive.ubuntu.com/ubuntu artful InRelease
 Hit:3 http://archive.ubuntu.com/ubuntu artful-updates InRelease
@@ -3527,7 +3527,7 @@ Get:27 http://archive.ubuntu.com/ubuntu artful/universe amd64 python-subprocess3
 Get:28 http://archive.ubuntu.com/ubuntu artful/universe amd64 python-matplotlib amd64 2.0.0+dfsg1-2ubuntu3 [1494 kB]
 Get:29 http://archive.ubuntu.com/ubuntu artful/main amd64 python-tk amd64 2.7.14-1 [25.8 kB]
 Get:30 http://archive.ubuntu.com/ubuntu artful/universe amd64 python-scipy amd64 0.18.1-2ubuntu5 [8898 kB]
-Fetched 20.1 MB in 4s (4975 kB/s)
+Fetched 20.1 MB in 3s (6566 kB/s)
 Selecting previously unselected package libglade2-0:amd64.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 62354 files and directories currently installed.)
 Preparing to unpack .../00-libglade2-0_1%3a2.6.4-2_amd64.deb ...
@@ -3652,17 +3652,17 @@ Setting up python-tk (2.7.14-1) ...
 Setting up python-pil:amd64 (4.1.1-3build2) ...
 Setting up python-imaging (4.1.1-3build2) ...
 Processing triggers for libc-bin (2.26-0ubuntu2.1) ...
- ---> 1df2fbd309f2
-Removing intermediate container 34ea4f272d5d
+Removing intermediate container 6e9fd2f5232b
+ ---> a5c9dd5fb926
 Step 16/24 : RUN useradd -ms /bin/bash  jenkins --uid 125 && echo "jenkins:jenkins" | chpasswd && adduser jenkins sudo
- ---> Running in 695a5aa731b2
+ ---> Running in b9ecbca3b9c7
 Adding user `jenkins' to group `sudo' ...
 Adding user jenkins to group sudo
 Done.
- ---> 68faa7453bca
-Removing intermediate container 695a5aa731b2
+Removing intermediate container b9ecbca3b9c7
+ ---> 402a220d8663
 Step 17/24 : RUN apt-get update && apt-get -y install locales
- ---> Running in 1fde5f10458e
+ ---> Running in 8e522abff79c
 Hit:1 http://security.ubuntu.com/ubuntu artful-security InRelease
 Hit:2 http://archive.ubuntu.com/ubuntu artful InRelease
 Hit:3 http://archive.ubuntu.com/ubuntu artful-updates InRelease
@@ -3678,7 +3678,7 @@ Need to get 3128 kB of archives.
 After this operation, 10.7 MB of additional disk space will be used.
 Get:1 http://archive.ubuntu.com/ubuntu artful-updates/main amd64 locales all 2.26-0ubuntu2.1 [3128 kB]
 Preconfiguring packages ...
-Fetched 3128 kB in 1s (2911 kB/s)
+Fetched 3128 kB in 1s (2999 kB/s)
 Selecting previously unselected package locales.
 (Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 65247 files and directories currently installed.)
 Preparing to unpack .../locales_2.26-0ubuntu2.1_all.deb ...
@@ -3686,42 +3686,43 @@ Unpacking locales (2.26-0ubuntu2.1) ...
 Setting up locales (2.26-0ubuntu2.1) ...
 Generating locales (this might take a while)...
 Generation complete.
- ---> 697087f7ebf9
-Removing intermediate container 1fde5f10458e
+Removing intermediate container 8e522abff79c
+ ---> 4d3d8931efd7
 Step 18/24 : RUN echo 'en_US.UTF-8 UTF-8' >> /etc/locale.gen
- ---> Running in a868a197ca77
- ---> b1803eb0a5b8
-Removing intermediate container a868a197ca77
+ ---> Running in 320c4e42f1d8
+Removing intermediate container 320c4e42f1d8
+ ---> 61aded094cdd
 Step 19/24 : RUN locale-gen
- ---> Running in 2d82451091f7
+ ---> Running in faf9f3635dd6
 Generating locales (this might take a while)...
   en_US.UTF-8... done
 Generation complete.
- ---> bb4a1d03867c
-Removing intermediate container 2d82451091f7
+Removing intermediate container faf9f3635dd6
+ ---> f62f98f9fdd6
 Step 20/24 : RUN update-locale LANG=en_US.UTF-8 && cat /etc/default/locale
- ---> Running in 2df31bb8fea4
+ ---> Running in 13e6f3085338
 #  File generated by update-locale
 LANG=en_US.UTF-8
- ---> 5840948cec10
-Removing intermediate container 2df31bb8fea4
+Removing intermediate container 13e6f3085338
+ ---> 28f7abb2e388
 Step 21/24 : RUN echo "jenkins	ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
- ---> Running in 5040f63a7fea
- ---> 8e4f83f239c2
-Removing intermediate container 5040f63a7fea
+ ---> Running in af05c9b522b1
+Removing intermediate container af05c9b522b1
+ ---> 44c434d8de90
 Step 22/24 : RUN chown jenkins:jenkins /home/opencog
- ---> Running in d03d76002348
- ---> 365f4595bd3b
-Removing intermediate container d03d76002348
+ ---> Running in f8528c33ca09
+Removing intermediate container f8528c33ca09
+ ---> 1e6c9927ec07
 Step 23/24 : USER jenkins
- ---> Running in e1469f8982de
- ---> 8aecf41b8cdf
-Removing intermediate container e1469f8982de
+ ---> Running in 20aa9273b5d6
+Removing intermediate container 20aa9273b5d6
+ ---> 2282dc23dae8
 Step 24/24 : CMD tail -f /dev/null
- ---> Running in 2a9949f3341f
- ---> 0e9f089f33e4
-Removing intermediate container 2a9949f3341f
-Successfully built 0e9f089f33e4
+ ---> Running in 638de2502403
+Removing intermediate container 638de2502403
+ ---> 935a4efba061
+Successfully built 935a4efba061
+Successfully tagged edguy/opencog:OpenCOG_U1710
 + echo ******  CID=
 ******  CID=
 + CIDFILENAME=/tmp/OpenCOG_U1710.cid
@@ -3729,17 +3730,19 @@ Successfully built 0e9f089f33e4
 + CIDFILENAME=/tmp/OpenCOG_U1710.cid
 + [ -e /tmp/OpenCOG_U1710.cid ]
 + cat /tmp/OpenCOG_U1710.cid
-+ CID=063776c93d6b6b477ab3691ad0d37c71bc867af569ba3318d274ed20a6a6aa05
-+ docker container kill 063776c93d6b6b477ab3691ad0d37c71bc867af569ba3318d274ed20a6a6aa05
-063776c93d6b6b477ab3691ad0d37c71bc867af569ba3318d274ed20a6a6aa05
-+ docker container rm 063776c93d6b6b477ab3691ad0d37c71bc867af569ba3318d274ed20a6a6aa05
-063776c93d6b6b477ab3691ad0d37c71bc867af569ba3318d274ed20a6a6aa05
++ CID=b3f7e614769d2572c8a3efdbdad3b16cc996bb392d1d2448fe7cf026de4d6246
++ docker container kill b3f7e614769d2572c8a3efdbdad3b16cc996bb392d1d2448fe7cf026de4d6246
+Error response from daemon: Cannot kill container: b3f7e614769d2572c8a3efdbdad3b16cc996bb392d1d2448fe7cf026de4d6246: Container b3f7e614769d2572c8a3efdbdad3b16cc996bb392d1d2448fe7cf026de4d6246 is not running
++ echo not killed
+not killed
++ docker container rm b3f7e614769d2572c8a3efdbdad3b16cc996bb392d1d2448fe7cf026de4d6246
+b3f7e614769d2572c8a3efdbdad3b16cc996bb392d1d2448fe7cf026de4d6246
 + rm -f /tmp/OpenCOG_U1710.cid
 + docker run --cidfile /tmp/OpenCOG_U1710.cid -v /var/lib/jenkins/workspace/OpenCOG_U1710/dependencies:/home/opencog/dependencies -w /home/opencog -d edguy/opencog:OpenCOG_U1710 tail -f /dev/null
-b3f7e614769d2572c8a3efdbdad3b16cc996bb392d1d2448fe7cf026de4d6246
+336c623418320556a74b687e64c74c921043358415317bc1f27d98a1486910e1
 + cat /tmp/OpenCOG_U1710.cid
-+ CID=b3f7e614769d2572c8a3efdbdad3b16cc996bb392d1d2448fe7cf026de4d6246
-+ DKRUN=docker exec b3f7e614769d2572c8a3efdbdad3b16cc996bb392d1d2448fe7cf026de4d6246 
++ CID=336c623418320556a74b687e64c74c921043358415317bc1f27d98a1486910e1
++ DKRUN=docker exec 336c623418320556a74b687e64c74c921043358415317bc1f27d98a1486910e1 
 + grep jenkins /etc/passwd
 + awk -F: {print $3}
 + UID=125
@@ -3747,11 +3750,11 @@ b3f7e614769d2572c8a3efdbdad3b16cc996bb392d1d2448fe7cf026de4d6246
 + awk -F: {print $4}
 + GID=132
 + cat
-[OpenCOG_U1710] $ /bin/sh -xe /tmp/jenkins8001751340728480726.sh
+[OpenCOG_U1710] $ /bin/sh -xe /tmp/jenkins8340163719258741026.sh
 + . build.docker/docker.env
-+ CID=b3f7e614769d2572c8a3efdbdad3b16cc996bb392d1d2448fe7cf026de4d6246
-+ DKRUNROOT=docker exec --user root   b3f7e614769d2572c8a3efdbdad3b16cc996bb392d1d2448fe7cf026de4d6246
-+ DKRUNUSER=docker exec --user jenkins  b3f7e614769d2572c8a3efdbdad3b16cc996bb392d1d2448fe7cf026de4d6246
++ CID=336c623418320556a74b687e64c74c921043358415317bc1f27d98a1486910e1
++ DKRUNROOT=docker exec --user root   336c623418320556a74b687e64c74c921043358415317bc1f27d98a1486910e1
++ DKRUNUSER=docker exec --user jenkins  336c623418320556a74b687e64c74c921043358415317bc1f27d98a1486910e1
 + UID=125
 + GID=132
 + cat
@@ -3769,35 +3772,35 @@ b3f7e614769d2572c8a3efdbdad3b16cc996bb392d1d2448fe7cf026de4d6246
 
 + cat
 + chmod +x dependencies/job1
-+ docker exec --user jenkins b3f7e614769d2572c8a3efdbdad3b16cc996bb392d1d2448fe7cf026de4d6246 bash dependencies/job1
++ docker exec --user jenkins 336c623418320556a74b687e64c74c921043358415317bc1f27d98a1486910e1 bash dependencies/job1
 + wget http://raw.github.com/opencog/ocpkg/master/ocpkg -O octool
---2019-04-21 00:36:35--  http://raw.github.com/opencog/ocpkg/master/ocpkg
+--2019-04-22 23:47:15--  http://raw.github.com/opencog/ocpkg/master/ocpkg
 Resolving raw.github.com (raw.github.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
 Connecting to raw.github.com (raw.github.com)|151.101.0.133|:80... connected.
 HTTP request sent, awaiting response... 301 Moved Permanently
 Location: https://raw.github.com/opencog/ocpkg/master/ocpkg [following]
---2019-04-21 00:36:35--  https://raw.github.com/opencog/ocpkg/master/ocpkg
+--2019-04-22 23:47:15--  https://raw.github.com/opencog/ocpkg/master/ocpkg
 Connecting to raw.github.com (raw.github.com)|151.101.0.133|:443... connected.
 HTTP request sent, awaiting response... 301 Moved Permanently
 Location: https://raw.githubusercontent.com/opencog/ocpkg/master/ocpkg [following]
---2019-04-21 00:36:35--  https://raw.githubusercontent.com/opencog/ocpkg/master/ocpkg
+--2019-04-22 23:47:15--  https://raw.githubusercontent.com/opencog/ocpkg/master/ocpkg
 Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.0.133, 151.101.64.133, 151.101.128.133, ...
 Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.0.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 43864 (43K) [text/plain]
 Saving to: 'octool'
 
-     0K .......... .......... .......... .......... ..        100% 2.02M=0.02s
+     0K .......... .......... .......... .......... ..        100% 2.11M=0.02s
 
-2019-04-21 00:36:35 (2.02 MB/s) - 'octool' saved [43864/43864]
+2019-04-22 23:47:15 (2.11 MB/s) - 'octool' saved [43864/43864]
 
 + chmod +rx octool
 + ./octool -rdp
 [1;34m[octool] Adding software repositories...[0m
 Warning: apt-key output should not be parsed (stdout is not a terminal)
-Executing: /tmp/apt-key-gpghome.xVg97pxn6w/gpg.1.sh --keyserver keyserver.ubuntu.com --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
+Executing: /tmp/apt-key-gpghome.KBEPZ84Jle/gpg.1.sh --keyserver keyserver.ubuntu.com --recv-key 421C365BD9FF1F717815A3895523BAEEB01FA116
 gpg: failed to start the dirmngr '/usr/bin/dirmngr': No such file or directory
-gpg: connecting dirmngr at '/tmp/apt-key-gpghome.xVg97pxn6w/S.dirmngr' failed: No such file or directory
+gpg: connecting dirmngr at '/tmp/apt-key-gpghome.KBEPZ84Jle/S.dirmngr' failed: No such file or directory
 gpg: keyserver receive failed: No dirmngr
 + sudo apt-get upgrade -y
 Reading package lists...
@@ -3824,10 +3827,10 @@ DSTATUS is BUILDPASS
 
 + echo **** 
 **** 
-+ echo ****  b3f7e614769d2572c8a3efdbdad3b16cc996bb392d1d2448fe7cf026de4d6246
-****  b3f7e614769d2572c8a3efdbdad3b16cc996bb392d1d2448fe7cf026de4d6246
++ echo ****  336c623418320556a74b687e64c74c921043358415317bc1f27d98a1486910e1
+****  336c623418320556a74b687e64c74c921043358415317bc1f27d98a1486910e1
 + cat
-+ docker exec --user jenkins b3f7e614769d2572c8a3efdbdad3b16cc996bb392d1d2448fe7cf026de4d6246 bash dependencies/job1
++ docker exec --user jenkins 336c623418320556a74b687e64c74c921043358415317bc1f27d98a1486910e1 bash dependencies/job1
 + git clone https://github.com/opencog/opencog.git
 Cloning into 'opencog'...
 + git clone https://github.com/opencog/atomspace.git
@@ -3843,7 +3846,7 @@ DSTATUS is BUILDPASS
 + curl -X POST --insecure --netrc https://10.0.0.103:8480/job/OpenCOG_U1710_CogUtil/build
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
-  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
 + cat
 **********************************************************
 **********************************************************
@@ -3857,360 +3860,360 @@ DSTATUS is BUILDPASS
 **********************************************************
 **********************************************************
 
-+ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1710/builds/411/log
++ LOGFILE=/var/lib/jenkins/jobs/OpenCOG_U1710/builds/412/log
 + GUILEVERSION=guile-2.2.3
 + cat
 + chmod +x dependencies/job1
-+ docker exec --user jenkins b3f7e614769d2572c8a3efdbdad3b16cc996bb392d1d2448fe7cf026de4d6246 bash dependencies/job1
++ docker exec --user jenkins 336c623418320556a74b687e64c74c921043358415317bc1f27d98a1486910e1 bash dependencies/job1
 + rm -rf 'guile-2.2.3*'
 + wget https://ftp.gnu.org/gnu/guile/guile-2.2.3.tar.gz
---2019-04-21 00:37:58--  https://ftp.gnu.org/gnu/guile/guile-2.2.3.tar.gz
+--2019-04-22 23:48:24--  https://ftp.gnu.org/gnu/guile/guile-2.2.3.tar.gz
 Resolving ftp.gnu.org (ftp.gnu.org)... 209.51.188.20, 2001:470:142:3::b
 Connecting to ftp.gnu.org (ftp.gnu.org)|209.51.188.20|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 17266587 (16M) [application/x-gzip]
 Saving to: 'guile-2.2.3.tar.gz'
 
-     0K .......... .......... .......... .......... ..........  0% 1.46M 11s
-    50K .......... .......... .......... .......... ..........  0% 3.31M 8s
+     0K .......... .......... .......... .......... ..........  0% 1.49M 11s
+    50K .......... .......... .......... .......... ..........  0% 3.30M 8s
    100K .......... .......... .......... .......... ..........  0% 11.7M 6s
-   150K .......... .......... .......... .......... ..........  1% 4.71M 5s
-   200K .......... .......... .......... .......... ..........  1% 11.3M 4s
-   250K .......... .......... .......... .......... ..........  1% 2.42M 5s
-   300K .......... .......... .......... .......... ..........  2%  490M 4s
-   350K .......... .......... .......... .......... ..........  2%  396M 4s
-   400K .......... .......... .......... .......... ..........  2% 8.15M 3s
-   450K .......... .......... .......... .......... ..........  2% 5.39M 3s
-   500K .......... .......... .......... .......... ..........  3% 7.44M 3s
-   550K .......... .......... .......... .......... ..........  3% 6.33M 3s
-   600K .......... .......... .......... .......... ..........  3% 8.51M 3s
-   650K .......... .......... .......... .......... ..........  4% 8.09M 3s
-   700K .......... .......... .......... .......... ..........  4% 5.90M 3s
-   750K .......... .......... .......... .......... ..........  4% 8.82M 3s
-   800K .......... .......... .......... .......... ..........  5% 5.04M 3s
-   850K .......... .......... .......... .......... ..........  5% 8.35M 3s
-   900K .......... .......... .......... .......... ..........  5% 6.50M 3s
-   950K .......... .......... .......... .......... ..........  5% 8.39M 3s
-  1000K .......... .......... .......... .......... ..........  6% 7.49M 3s
-  1050K .......... .......... .......... .......... ..........  6% 5.93M 3s
-  1100K .......... .......... .......... .......... ..........  6% 8.70M 3s
-  1150K .......... .......... .......... .......... ..........  7% 5.36M 3s
-  1200K .......... .......... .......... .......... ..........  7% 8.75M 3s
-  1250K .......... .......... .......... .......... ..........  7% 6.29M 3s
-  1300K .......... .......... .......... .......... ..........  8% 7.84M 3s
-  1350K .......... .......... .......... .......... ..........  8% 6.72M 3s
-  1400K .......... .......... .......... .......... ..........  8% 6.37M 3s
-  1450K .......... .......... .......... .......... ..........  8% 7.39M 2s
-  1500K .......... .......... .......... .......... ..........  9% 6.68M 2s
-  1550K .......... .......... .......... .......... ..........  9% 10.5M 2s
-  1600K .......... .......... .......... .......... ..........  9% 4.60M 2s
-  1650K .......... .......... .......... .......... .......... 10% 11.1M 2s
-  1700K .......... .......... .......... .......... .......... 10% 5.19M 2s
-  1750K .......... .......... .......... .......... .......... 10% 9.50M 2s
-  1800K .......... .......... .......... .......... .......... 10% 5.14M 2s
-  1850K .......... .......... .......... .......... .......... 11% 10.3M 2s
-  1900K .......... .......... .......... .......... .......... 11% 5.65M 2s
-  1950K .......... .......... .......... .......... .......... 11% 9.73M 2s
-  2000K .......... .......... .......... .......... .......... 12% 5.20M 2s
-  2050K .......... .......... .......... .......... .......... 12% 9.01M 2s
-  2100K .......... .......... .......... .......... .......... 12% 9.37M 2s
-  2150K .......... .......... .......... .......... .......... 13% 6.08M 2s
-  2200K .......... .......... .......... .......... .......... 13% 8.77M 2s
-  2250K .......... .......... .......... .......... .......... 13% 8.31M 2s
-  2300K .......... .......... .......... .......... .......... 13% 8.44M 2s
-  2350K .......... .......... .......... .......... .......... 14% 5.65M 2s
-  2400K .......... .......... .......... .......... .......... 14% 6.98M 2s
-  2450K .......... .......... .......... .......... .......... 14% 6.21M 2s
-  2500K .......... .......... .......... .......... .......... 15% 8.17M 2s
-  2550K .......... .......... .......... .......... .......... 15% 7.95M 2s
-  2600K .......... .......... .......... .......... .......... 15% 6.16M 2s
-  2650K .......... .......... .......... .......... .......... 16% 8.40M 2s
-  2700K .......... .......... .......... .......... .......... 16% 6.15M 2s
-  2750K .......... .......... .......... .......... .......... 16% 12.0M 2s
-  2800K .......... .......... .......... .......... .......... 16% 4.81M 2s
-  2850K .......... .......... .......... .......... .......... 17% 10.4M 2s
-  2900K .......... .......... .......... .......... .......... 17% 6.02M 2s
-  2950K .......... .......... .......... .......... .......... 17% 9.11M 2s
-  3000K .......... .......... .......... .......... .......... 18% 9.30M 2s
-  3050K .......... .......... .......... .......... .......... 18% 5.39M 2s
-  3100K .......... .......... .......... .......... .......... 18% 11.8M 2s
-  3150K .......... .......... .......... .......... .......... 18% 5.72M 2s
-  3200K .......... .......... .......... .......... .......... 19% 7.00M 2s
-  3250K .......... .......... .......... .......... .......... 19% 6.50M 2s
-  3300K .......... .......... .......... .......... .......... 19% 9.16M 2s
-  3350K .......... .......... .......... .......... .......... 20% 6.25M 2s
-  3400K .......... .......... .......... .......... .......... 20% 9.03M 2s
-  3450K .......... .......... .......... .......... .......... 20% 9.03M 2s
-  3500K .......... .......... .......... .......... .......... 21% 7.04M 2s
-  3550K .......... .......... .......... .......... .......... 21% 7.68M 2s
-  3600K .......... .......... .......... .......... .......... 21% 6.03M 2s
-  3650K .......... .......... .......... .......... .......... 21% 8.91M 2s
-  3700K .......... .......... .......... .......... .......... 22% 8.00M 2s
-  3750K .......... .......... .......... .......... .......... 22% 7.96M 2s
-  3800K .......... .......... .......... .......... .......... 22% 6.63M 2s
-  3850K .......... .......... .......... .......... .......... 23% 9.22M 2s
-  3900K .......... .......... .......... .......... .......... 23% 9.10M 2s
-  3950K .......... .......... .......... .......... .......... 23% 8.62M 2s
-  4000K .......... .......... .......... .......... .......... 24% 5.89M 2s
-  4050K .......... .......... .......... .......... .......... 24% 8.59M 2s
-  4100K .......... .......... .......... .......... .......... 24% 9.05M 2s
-  4150K .......... .......... .......... .......... .......... 24% 5.81M 2s
-  4200K .......... .......... .......... .......... .......... 25% 6.31M 2s
-  4250K .......... .......... .......... .......... .......... 25% 11.7M 2s
-  4300K .......... .......... .......... .......... .......... 25% 9.01M 2s
-  4350K .......... .......... .......... .......... .......... 26% 6.71M 2s
-  4400K .......... .......... .......... .......... .......... 26% 7.07M 2s
-  4450K .......... .......... .......... .......... .......... 26% 7.19M 2s
-  4500K .......... .......... .......... .......... .......... 26% 8.12M 2s
-  4550K .......... .......... .......... .......... .......... 27% 6.92M 2s
-  4600K .......... .......... .......... .......... .......... 27% 8.15M 2s
-  4650K .......... .......... .......... .......... .......... 27% 9.47M 2s
-  4700K .......... .......... .......... .......... .......... 28% 8.35M 2s
-  4750K .......... .......... .......... .......... .......... 28% 9.06M 2s
-  4800K .......... .......... .......... .......... .......... 28% 6.05M 2s
-  4850K .......... .......... .......... .......... .......... 29% 8.45M 2s
-  4900K .......... .......... .......... .......... .......... 29% 7.39M 2s
-  4950K .......... .......... .......... .......... .......... 29% 8.19M 2s
-  5000K .......... .......... .......... .......... .......... 29% 9.50M 2s
-  5050K .......... .......... .......... .......... .......... 30% 8.32M 2s
-  5100K .......... .......... .......... .......... .......... 30% 8.18M 2s
-  5150K .......... .......... .......... .......... .......... 30% 6.95M 2s
-  5200K .......... .......... .......... .......... .......... 31% 7.51M 2s
-  5250K .......... .......... .......... .......... .......... 31% 10.4M 2s
-  5300K .......... .......... .......... .......... .......... 31% 6.10M 2s
-  5350K .......... .......... .......... .......... .......... 32% 10.2M 2s
-  5400K .......... .......... .......... .......... .......... 32% 7.61M 2s
-  5450K .......... .......... .......... .......... .......... 32% 9.27M 2s
-  5500K .......... .......... .......... .......... .......... 32% 7.48M 2s
-  5550K .......... .......... .......... .......... .......... 33% 8.34M 2s
-  5600K .......... .......... .......... .......... .......... 33% 6.98M 2s
-  5650K .......... .......... .......... .......... .......... 33% 7.07M 2s
-  5700K .......... .......... .......... .......... .......... 34% 9.41M 2s
-  5750K .......... .......... .......... .......... .......... 34% 8.74M 2s
-  5800K .......... .......... .......... .......... .......... 34% 8.42M 2s
-  5850K .......... .......... .......... .......... .......... 34% 8.73M 2s
-  5900K .......... .......... .......... .......... .......... 35% 7.58M 1s
-  5950K .......... .......... .......... .......... .......... 35% 8.32M 1s
-  6000K .......... .......... .......... .......... .......... 35% 7.81M 1s
-  6050K .......... .......... .......... .......... .......... 36% 6.93M 1s
-  6100K .......... .......... .......... .......... .......... 36% 9.77M 1s
-  6150K .......... .......... .......... .......... .......... 36% 7.09M 1s
-  6200K .......... .......... .......... .......... .......... 37% 8.27M 1s
-  6250K .......... .......... .......... .......... .......... 37% 10.5M 1s
-  6300K .......... .......... .......... .......... .......... 37% 8.22M 1s
-  6350K .......... .......... .......... .......... .......... 37% 9.01M 1s
-  6400K .......... .......... .......... .......... .......... 38% 6.01M 1s
-  6450K .......... .......... .......... .......... .......... 38% 8.64M 1s
-  6500K .......... .......... .......... .......... .......... 38% 9.93M 1s
-  6550K .......... .......... .......... .......... .......... 39% 7.47M 1s
-  6600K .......... .......... .......... .......... .......... 39% 8.33M 1s
-  6650K .......... .......... .......... .......... .......... 39% 9.06M 1s
-  6700K .......... .......... .......... .......... .......... 40% 8.78M 1s
-  6750K .......... .......... .......... .......... .......... 40% 10.5M 1s
-  6800K .......... .......... .......... .......... .......... 40% 5.21M 1s
-  6850K .......... .......... .......... .......... .......... 40% 11.9M 1s
-  6900K .......... .......... .......... .......... .......... 41% 7.92M 1s
-  6950K .......... .......... .......... .......... .......... 41% 9.45M 1s
-  7000K .......... .......... .......... .......... .......... 41% 8.59M 1s
-  7050K .......... .......... .......... .......... .......... 42% 7.44M 1s
-  7100K .......... .......... .......... .......... .......... 42% 8.85M 1s
-  7150K .......... .......... .......... .......... .......... 42% 8.85M 1s
-  7200K .......... .......... .......... .......... .......... 42% 6.91M 1s
-  7250K .......... .......... .......... .......... .......... 43% 7.54M 1s
-  7300K .......... .......... .......... .......... .......... 43% 10.0M 1s
-  7350K .......... .......... .......... .......... .......... 43% 8.93M 1s
-  7400K .......... .......... .......... .......... .......... 44% 10.1M 1s
-  7450K .......... .......... .......... .......... .......... 44% 8.80M 1s
-  7500K .......... .......... .......... .......... .......... 44% 8.38M 1s
-  7550K .......... .......... .......... .......... .......... 45% 7.48M 1s
-  7600K .......... .......... .......... .......... .......... 45% 6.74M 1s
-  7650K .......... .......... .......... .......... .......... 45% 10.9M 1s
-  7700K .......... .......... .......... .......... .......... 45% 7.50M 1s
-  7750K .......... .......... .......... .......... .......... 46% 7.67M 1s
-  7800K .......... .......... .......... .......... .......... 46% 10.9M 1s
-  7850K .......... .......... .......... .......... .......... 46% 8.80M 1s
-  7900K .......... .......... .......... .......... .......... 47% 7.88M 1s
-  7950K .......... .......... .......... .......... .......... 47% 9.55M 1s
-  8000K .......... .......... .......... .......... .......... 47% 6.25M 1s
-  8050K .......... .......... .......... .......... .......... 48% 9.34M 1s
-  8100K .......... .......... .......... .......... .......... 48% 8.57M 1s
-  8150K .......... .......... .......... .......... .......... 48% 10.2M 1s
-  8200K .......... .......... .......... .......... .......... 48% 6.53M 1s
-  8250K .......... .......... .......... .......... .......... 49% 7.96M 1s
-  8300K .......... .......... .......... .......... .......... 49% 11.8M 1s
-  8350K .......... .......... .......... .......... .......... 49% 7.34M 1s
-  8400K .......... .......... .......... .......... .......... 50% 7.99M 1s
-  8450K .......... .......... .......... .......... .......... 50% 7.32M 1s
-  8500K .......... .......... .......... .......... .......... 50% 9.71M 1s
-  8550K .......... .......... .......... .......... .......... 51% 8.84M 1s
-  8600K .......... .......... .......... .......... .......... 51% 9.00M 1s
-  8650K .......... .......... .......... .......... .......... 51% 9.18M 1s
-  8700K .......... .......... .......... .......... .......... 51% 11.1M 1s
-  8750K .......... .......... .......... .......... .......... 52% 7.67M 1s
-  8800K .......... .......... .......... .......... .......... 52% 6.87M 1s
-  8850K .......... .......... .......... .......... .......... 52% 7.91M 1s
-  8900K .......... .......... .......... .......... .......... 53% 11.1M 1s
-  8950K .......... .......... .......... .......... .......... 53% 8.87M 1s
-  9000K .......... .......... .......... .......... .......... 53% 9.55M 1s
-  9050K .......... .......... .......... .......... .......... 53% 9.03M 1s
-  9100K .......... .......... .......... .......... .......... 54% 8.15M 1s
-  9150K .......... .......... .......... .......... .......... 54% 7.85M 1s
-  9200K .......... .......... .......... .......... .......... 54% 9.20M 1s
-  9250K .......... .......... .......... .......... .......... 55% 9.00M 1s
-  9300K .......... .......... .......... .......... .......... 55% 8.20M 1s
-  9350K .......... .......... .......... .......... .......... 55% 9.54M 1s
-  9400K .......... .......... .......... .......... .......... 56% 7.86M 1s
-  9450K .......... .......... .......... .......... .......... 56% 9.39M 1s
-  9500K .......... .......... .......... .......... .......... 56% 9.25M 1s
-  9550K .......... .......... .......... .......... .......... 56% 9.44M 1s
-  9600K .......... .......... .......... .......... .......... 57% 7.19M 1s
-  9650K .......... .......... .......... .......... .......... 57% 8.90M 1s
-  9700K .......... .......... .......... .......... .......... 57% 8.55M 1s
-  9750K .......... .......... .......... .......... .......... 58% 9.12M 1s
-  9800K .......... .......... .......... .......... .......... 58% 9.47M 1s
-  9850K .......... .......... .......... .......... .......... 58% 8.27M 1s
-  9900K .......... .......... .......... .......... .......... 59% 11.1M 1s
-  9950K .......... .......... .......... .......... .......... 59% 8.56M 1s
- 10000K .......... .......... .......... .......... .......... 59% 5.60M 1s
- 10050K .......... .......... .......... .......... .......... 59% 11.1M 1s
- 10100K .......... .......... .......... .......... .......... 60% 7.09M 1s
- 10150K .......... .......... .......... .......... .......... 60% 9.58M 1s
- 10200K .......... .......... .......... .......... .......... 60% 10.9M 1s
- 10250K .......... .......... .......... .......... .......... 61% 8.19M 1s
- 10300K .......... .......... .......... .......... .......... 61% 8.23M 1s
- 10350K .......... .......... .......... .......... .......... 61% 12.3M 1s
- 10400K .......... .......... .......... .......... .......... 61% 4.24M 1s
- 10450K .......... .......... .......... .......... .......... 62% 11.6M 1s
- 10500K .......... .......... .......... .......... .......... 62% 6.40M 1s
- 10550K .......... .......... .......... .......... .......... 62% 10.6M 1s
- 10600K .......... .......... .......... .......... .......... 63% 11.6M 1s
- 10650K .......... .......... .......... .......... .......... 63% 6.87M 1s
- 10700K .......... .......... .......... .......... .......... 63% 8.45M 1s
- 10750K .......... .......... .......... .......... .......... 64% 11.8M 1s
- 10800K .......... .......... .......... .......... .......... 64% 6.31M 1s
- 10850K .......... .......... .......... .......... .......... 64% 8.64M 1s
- 10900K .......... .......... .......... .......... .......... 64% 9.10M 1s
- 10950K .......... .......... .......... .......... .......... 65% 8.78M 1s
- 11000K .......... .......... .......... .......... .......... 65% 9.71M 1s
- 11050K .......... .......... .......... .......... .......... 65% 11.1M 1s
- 11100K .......... .......... .......... .......... .......... 66% 6.36M 1s
- 11150K .......... .......... .......... .......... .......... 66% 10.8M 1s
- 11200K .......... .......... .......... .......... .......... 66% 3.55M 1s
- 11250K .......... .......... .......... .......... .......... 67% 62.7M 1s
- 11300K .......... .......... .......... .......... .......... 67% 14.5M 1s
- 11350K .......... .......... .......... .......... .......... 67% 3.70M 1s
- 11400K .......... .......... .......... .......... .......... 67% 11.8M 1s
- 11450K .......... .......... .......... .......... .......... 68% 1.99M 1s
- 11500K .......... .......... .......... .......... .......... 68%  383M 1s
- 11550K .......... .......... .......... .......... .......... 68%  366M 1s
- 11600K .......... .......... .......... .......... .......... 69% 4.44M 1s
- 11650K .......... .......... .......... .......... .......... 69% 7.90M 1s
- 11700K .......... .......... .......... .......... .......... 69% 5.07M 1s
- 11750K .......... .......... .......... .......... .......... 69% 5.56M 1s
- 11800K .......... .......... .......... .......... .......... 70% 7.92M 1s
- 11850K .......... .......... .......... .......... .......... 70% 5.33M 1s
- 11900K .......... .......... .......... .......... .......... 70% 8.14M 1s
- 11950K .......... .......... .......... .......... .......... 71% 5.57M 1s
- 12000K .......... .......... .......... .......... .......... 71% 5.62M 1s
- 12050K .......... .......... .......... .......... .......... 71% 6.94M 1s
- 12100K .......... .......... .......... .......... .......... 72% 6.23M 1s
- 12150K .......... .......... .......... .......... .......... 72% 7.18M 1s
- 12200K .......... .......... .......... .......... .......... 72% 5.99M 1s
- 12250K .......... .......... .......... .......... .......... 72% 7.49M 1s
- 12300K .......... .......... .......... .......... .......... 73% 6.45M 1s
- 12350K .......... .......... .......... .......... .......... 73% 7.13M 1s
- 12400K .......... .......... .......... .......... .......... 73% 5.28M 1s
- 12450K .......... .......... .......... .......... .......... 74% 4.87M 1s
- 12500K .......... .......... .......... .......... .......... 74% 7.91M 1s
- 12550K .......... .......... .......... .......... .......... 74% 5.49M 1s
- 12600K .......... .......... .......... .......... .......... 75% 8.37M 1s
- 12650K .......... .......... .......... .......... .......... 75% 5.34M 1s
- 12700K .......... .......... .......... .......... .......... 75% 9.32M 1s
- 12750K .......... .......... .......... .......... .......... 75% 5.21M 1s
- 12800K .......... .......... .......... .......... .......... 76% 7.54M 1s
- 12850K .......... .......... .......... .......... .......... 76% 5.45M 1s
- 12900K .......... .......... .......... .......... .......... 76% 8.74M 1s
- 12950K .......... .......... .......... .......... .......... 77% 5.57M 1s
- 13000K .......... .......... .......... .......... .......... 77% 9.10M 0s
- 13050K .......... .......... .......... .......... .......... 77% 5.35M 0s
- 13100K .......... .......... .......... .......... .......... 77% 9.01M 0s
- 13150K .......... .......... .......... .......... .......... 78% 5.23M 0s
- 13200K .......... .......... .......... .......... .......... 78% 4.28M 0s
- 13250K .......... .......... .......... .......... .......... 78% 8.61M 0s
- 13300K .......... .......... .......... .......... .......... 79% 5.96M 0s
- 13350K .......... .......... .......... .......... .......... 79% 7.91M 0s
- 13400K .......... .......... .......... .......... .......... 79% 5.84M 0s
- 13450K .......... .......... .......... .......... .......... 80% 7.75M 0s
- 13500K .......... .......... .......... .......... .......... 80% 6.04M 0s
- 13550K .......... .......... .......... .......... .......... 80% 7.38M 0s
- 13600K .......... .......... .......... .......... .......... 80% 5.39M 0s
- 13650K .......... .......... .......... .......... .......... 81% 7.59M 0s
- 13700K .......... .......... .......... .......... .......... 81% 6.09M 0s
- 13750K .......... .......... .......... .......... .......... 81% 8.63M 0s
- 13800K .......... .......... .......... .......... .......... 82% 5.48M 0s
- 13850K .......... .......... .......... .......... .......... 82% 8.20M 0s
+   150K .......... .......... .......... .......... ..........  1% 5.15M 5s
+   200K .......... .......... .......... .......... ..........  1% 8.67M 4s
+   250K .......... .......... .......... .......... ..........  1% 10.6M 4s
+   300K .......... .......... .......... .......... ..........  2% 5.86M 4s
+   350K .......... .......... .......... .......... ..........  2% 8.02M 4s
+   400K .......... .......... .......... .......... ..........  2% 5.26M 3s
+   450K .......... .......... .......... .......... ..........  2% 9.05M 3s
+   500K .......... .......... .......... .......... ..........  3% 7.81M 3s
+   550K .......... .......... .......... .......... ..........  3% 7.16M 3s
+   600K .......... .......... .......... .......... ..........  3% 6.48M 3s
+   650K .......... .......... .......... .......... ..........  4% 12.0M 3s
+   700K .......... .......... .......... .......... ..........  4% 4.90M 3s
+   750K .......... .......... .......... .......... ..........  4% 12.2M 3s
+   800K .......... .......... .......... .......... ..........  5% 3.66M 3s
+   850K .......... .......... .......... .......... ..........  5% 11.2M 3s
+   900K .......... .......... .......... .......... ..........  5% 11.9M 3s
+   950K .......... .......... .......... .......... ..........  5% 4.99M 3s
+  1000K .......... .......... .......... .......... ..........  6% 11.6M 3s
+  1050K .......... .......... .......... .......... ..........  6% 5.31M 3s
+  1100K .......... .......... .......... .......... ..........  6% 11.4M 3s
+  1150K .......... .......... .......... .......... ..........  7% 12.5M 3s
+  1200K .......... .......... .......... .......... ..........  7% 5.51M 3s
+  1250K .......... .......... .......... .......... ..........  7% 8.41M 2s
+  1300K .......... .......... .......... .......... ..........  8% 6.96M 2s
+  1350K .......... .......... .......... .......... ..........  8% 8.95M 2s
+  1400K .......... .......... .......... .......... ..........  8% 10.4M 2s
+  1450K .......... .......... .......... .......... ..........  8% 8.10M 2s
+  1500K .......... .......... .......... .......... ..........  9% 10.5M 2s
+  1550K .......... .......... .......... .......... ..........  9% 6.66M 2s
+  1600K .......... .......... .......... .......... ..........  9% 8.85M 2s
+  1650K .......... .......... .......... .......... .......... 10% 4.40M 2s
+  1700K .......... .......... .......... .......... .......... 10% 11.1M 2s
+  1750K .......... .......... .......... .......... .......... 10% 11.5M 2s
+  1800K .......... .......... .......... .......... .......... 10% 6.35M 2s
+  1850K .......... .......... .......... .......... .......... 11% 10.4M 2s
+  1900K .......... .......... .......... .......... .......... 11% 7.48M 2s
+  1950K .......... .......... .......... .......... .......... 11% 8.73M 2s
+  2000K .......... .......... .......... .......... .......... 12% 8.96M 2s
+  2050K .......... .......... .......... .......... .......... 12% 8.74M 2s
+  2100K .......... .......... .......... .......... .......... 12% 10.5M 2s
+  2150K .......... .......... .......... .......... .......... 13% 7.97M 2s
+  2200K .......... .......... .......... .......... .......... 13% 11.4M 2s
+  2250K .......... .......... .......... .......... .......... 13% 9.95M 2s
+  2300K .......... .......... .......... .......... .......... 13% 6.80M 2s
+  2350K .......... .......... .......... .......... .......... 14% 11.5M 2s
+  2400K .......... .......... .......... .......... .......... 14% 7.76M 2s
+  2450K .......... .......... .......... .......... .......... 14% 8.30M 2s
+  2500K .......... .......... .......... .......... .......... 15% 10.9M 2s
+  2550K .......... .......... .......... .......... .......... 15% 9.80M 2s
+  2600K .......... .......... .......... .......... .......... 15% 9.84M 2s
+  2650K .......... .......... .......... .......... .......... 16% 8.64M 2s
+  2700K .......... .......... .......... .......... .......... 16% 11.7M 2s
+  2750K .......... .......... .......... .......... .......... 16% 8.70M 2s
+  2800K .......... .......... .......... .......... .......... 16% 8.86M 2s
+  2850K .......... .......... .......... .......... .......... 17% 7.29M 2s
+  2900K .......... .......... .......... .......... .......... 17% 11.7M 2s
+  2950K .......... .......... .......... .......... .......... 17% 11.8M 2s
+  3000K .......... .......... .......... .......... .......... 18% 7.68M 2s
+  3050K .......... .......... .......... .......... .......... 18% 11.0M 2s
+  3100K .......... .......... .......... .......... .......... 18% 12.5M 2s
+  3150K .......... .......... .......... .......... .......... 18% 11.0M 2s
+  3200K .......... .......... .......... .......... .......... 19% 6.54M 2s
+  3250K .......... .......... .......... .......... .......... 19% 11.8M 2s
+  3300K .......... .......... .......... .......... .......... 19% 11.7M 2s
+  3350K .......... .......... .......... .......... .......... 20% 10.4M 2s
+  3400K .......... .......... .......... .......... .......... 20% 8.20M 2s
+  3450K .......... .......... .......... .......... .......... 20% 12.0M 2s
+  3500K .......... .......... .......... .......... .......... 21% 11.8M 2s
+  3550K .......... .......... .......... .......... .......... 21% 11.8M 2s
+  3600K .......... .......... .......... .......... .......... 21% 7.19M 2s
+  3650K .......... .......... .......... .......... .......... 21% 11.2M 2s
+  3700K .......... .......... .......... .......... .......... 22% 11.5M 2s
+  3750K .......... .......... .......... .......... .......... 22% 11.8M 2s
+  3800K .......... .......... .......... .......... .......... 22% 10.4M 2s
+  3850K .......... .......... .......... .......... .......... 23% 11.7M 2s
+  3900K .......... .......... .......... .......... .......... 23% 9.49M 2s
+  3950K .......... .......... .......... .......... .......... 23% 11.8M 2s
+  4000K .......... .......... .......... .......... .......... 24% 8.05M 2s
+  4050K .......... .......... .......... .......... .......... 24% 12.4M 2s
+  4100K .......... .......... .......... .......... .......... 24% 9.92M 2s
+  4150K .......... .......... .......... .......... .......... 24% 11.8M 2s
+  4200K .......... .......... .......... .......... .......... 25% 11.6M 2s
+  4250K .......... .......... .......... .......... .......... 25% 11.1M 2s
+  4300K .......... .......... .......... .......... .......... 25% 11.0M 2s
+  4350K .......... .......... .......... .......... .......... 26% 11.7M 1s
+  4400K .......... .......... .......... .......... .......... 26% 8.85M 1s
+  4450K .......... .......... .......... .......... .......... 26% 10.5M 1s
+  4500K .......... .......... .......... .......... .......... 26% 11.8M 1s
+  4550K .......... .......... .......... .......... .......... 27% 11.6M 1s
+  4600K .......... .......... .......... .......... .......... 27% 11.4M 1s
+  4650K .......... .......... .......... .......... .......... 27% 11.8M 1s
+  4700K .......... .......... .......... .......... .......... 28% 10.6M 1s
+  4750K .......... .......... .......... .......... .......... 28% 11.5M 1s
+  4800K .......... .......... .......... .......... .......... 28% 8.95M 1s
+  4850K .......... .......... .......... .......... .......... 29% 11.0M 1s
+  4900K .......... .......... .......... .......... .......... 29% 11.8M 1s
+  4950K .......... .......... .......... .......... .......... 29% 11.8M 1s
+  5000K .......... .......... .......... .......... .......... 29% 11.4M 1s
+  5050K .......... .......... .......... .......... .......... 30% 11.6M 1s
+  5100K .......... .......... .......... .......... .......... 30% 11.5M 1s
+  5150K .......... .......... .......... .......... .......... 30% 11.3M 1s
+  5200K .......... .......... .......... .......... .......... 31% 9.16M 1s
+  5250K .......... .......... .......... .......... .......... 31% 11.2M 1s
+  5300K .......... .......... .......... .......... .......... 31% 12.3M 1s
+  5350K .......... .......... .......... .......... .......... 32% 10.5M 1s
+  5400K .......... .......... .......... .......... .......... 32% 12.2M 1s
+  5450K .......... .......... .......... .......... .......... 32% 11.1M 1s
+  5500K .......... .......... .......... .......... .......... 32% 12.4M 1s
+  5550K .......... .......... .......... .......... .......... 33% 11.1M 1s
+  5600K .......... .......... .......... .......... .......... 33% 8.82M 1s
+  5650K .......... .......... .......... .......... .......... 33% 11.8M 1s
+  5700K .......... .......... .......... .......... .......... 34% 11.7M 1s
+  5750K .......... .......... .......... .......... .......... 34% 11.7M 1s
+  5800K .......... .......... .......... .......... .......... 34% 11.5M 1s
+  5850K .......... .......... .......... .......... .......... 34% 11.8M 1s
+  5900K .......... .......... .......... .......... .......... 35% 11.3M 1s
+  5950K .......... .......... .......... .......... .......... 35% 11.5M 1s
+  6000K .......... .......... .......... .......... .......... 35% 9.23M 1s
+  6050K .......... .......... .......... .......... .......... 36% 11.7M 1s
+  6100K .......... .......... .......... .......... .......... 36% 11.6M 1s
+  6150K .......... .......... .......... .......... .......... 36% 11.8M 1s
+  6200K .......... .......... .......... .......... .......... 37% 11.5M 1s
+  6250K .......... .......... .......... .......... .......... 37% 11.6M 1s
+  6300K .......... .......... .......... .......... .......... 37% 11.8M 1s
+  6350K .......... .......... .......... .......... .......... 37% 11.7M 1s
+  6400K .......... .......... .......... .......... .......... 38% 8.79M 1s
+  6450K .......... .......... .......... .......... .......... 38% 11.5M 1s
+  6500K .......... .......... .......... .......... .......... 38% 1.85M 1s
+  6550K .......... .......... .......... .......... .......... 39% 51.3M 1s
+  6600K .......... .......... .......... .......... .......... 39% 45.8M 1s
+  6650K .......... .......... .......... .......... .......... 39% 46.9M 1s
+  6700K .......... .......... .......... .......... .......... 40% 48.6M 1s
+  6750K .......... .......... .......... .......... .......... 40% 46.9M 1s
+  6800K .......... .......... .......... .......... .......... 40% 7.17M 1s
+  6850K .......... .......... .......... .......... .......... 40% 4.71M 1s
+  6900K .......... .......... .......... .......... .......... 41% 10.9M 1s
+  6950K .......... .......... .......... .......... .......... 41% 11.8M 1s
+  7000K .......... .......... .......... .......... .......... 41% 1.80M 1s
+  7050K .......... .......... .......... .......... .......... 42% 43.9M 1s
+  7100K .......... .......... .......... .......... .......... 42% 55.2M 1s
+  7150K .......... .......... .......... .......... .......... 42% 61.0M 1s
+  7200K .......... .......... .......... .......... .......... 42% 6.69M 1s
+  7250K .......... .......... .......... .......... .......... 43% 4.18M 1s
+  7300K .......... .......... .......... .......... .......... 43% 12.0M 1s
+  7350K .......... .......... .......... .......... .......... 43% 5.04M 1s
+  7400K .......... .......... .......... .......... .......... 44% 9.13M 1s
+  7450K .......... .......... .......... .......... .......... 44% 5.83M 1s
+  7500K .......... .......... .......... .......... .......... 44% 8.31M 1s
+  7550K .......... .......... .......... .......... .......... 45% 6.09M 1s
+  7600K .......... .......... .......... .......... .......... 45% 6.19M 1s
+  7650K .......... .......... .......... .......... .......... 45% 6.55M 1s
+  7700K .......... .......... .......... .......... .......... 45% 7.24M 1s
+  7750K .......... .......... .......... .......... .......... 46% 6.65M 1s
+  7800K .......... .......... .......... .......... .......... 46% 9.65M 1s
+  7850K .......... .......... .......... .......... .......... 46% 5.50M 1s
+  7900K .......... .......... .......... .......... .......... 47% 8.89M 1s
+  7950K .......... .......... .......... .......... .......... 47% 5.56M 1s
+  8000K .......... .......... .......... .......... .......... 47% 6.27M 1s
+  8050K .......... .......... .......... .......... .......... 48% 5.79M 1s
+  8100K .......... .......... .......... .......... .......... 48% 11.3M 1s
+  8150K .......... .......... .......... .......... .......... 48% 5.32M 1s
+  8200K .......... .......... .......... .......... .......... 48% 8.16M 1s
+  8250K .......... .......... .......... .......... .......... 49% 5.95M 1s
+  8300K .......... .......... .......... .......... .......... 49% 9.42M 1s
+  8350K .......... .......... .......... .......... .......... 49% 5.67M 1s
+  8400K .......... .......... .......... .......... .......... 50% 7.14M 1s
+  8450K .......... .......... .......... .......... .......... 50% 5.45M 1s
+  8500K .......... .......... .......... .......... .......... 50% 9.20M 1s
+  8550K .......... .......... .......... .......... .......... 51% 6.30M 1s
+  8600K .......... .......... .......... .......... .......... 51% 7.53M 1s
+  8650K .......... .......... .......... .......... .......... 51% 6.38M 1s
+  8700K .......... .......... .......... .......... .......... 51% 7.58M 1s
+  8750K .......... .......... .......... .......... .......... 52% 6.41M 1s
+  8800K .......... .......... .......... .......... .......... 52% 6.60M 1s
+  8850K .......... .......... .......... .......... .......... 52% 5.92M 1s
+  8900K .......... .......... .......... .......... .......... 53% 9.08M 1s
+  8950K .......... .......... .......... .......... .......... 53% 5.91M 1s
+  9000K .......... .......... .......... .......... .......... 53% 8.03M 1s
+  9050K .......... .......... .......... .......... .......... 53% 9.25M 1s
+  9100K .......... .......... .......... .......... .......... 54% 6.17M 1s
+  9150K .......... .......... .......... .......... .......... 54% 8.37M 1s
+  9200K .......... .......... .......... .......... .......... 54% 5.39M 1s
+  9250K .......... .......... .......... .......... .......... 55% 8.11M 1s
+  9300K .......... .......... .......... .......... .......... 55% 6.17M 1s
+  9350K .......... .......... .......... .......... .......... 55% 7.97M 1s
+  9400K .......... .......... .......... .......... .......... 56% 5.89M 1s
+  9450K .......... .......... .......... .......... .......... 56% 8.36M 1s
+  9500K .......... .......... .......... .......... .......... 56% 5.04M 1s
+  9550K .......... .......... .......... .......... .......... 56% 7.21M 1s
+  9600K .......... .......... .......... .......... .......... 57% 5.99M 1s
+  9650K .......... .......... .......... .......... .......... 57% 8.55M 1s
+  9700K .......... .......... .......... .......... .......... 57% 6.16M 1s
+  9750K .......... .......... .......... .......... .......... 58% 8.92M 1s
+  9800K .......... .......... .......... .......... .......... 58% 5.70M 1s
+  9850K .......... .......... .......... .......... .......... 58% 9.87M 1s
+  9900K .......... .......... .......... .......... .......... 59% 8.22M 1s
+  9950K .......... .......... .......... .......... .......... 59% 7.03M 1s
+ 10000K .......... .......... .......... .......... .......... 59% 5.91M 1s
+ 10050K .......... .......... .......... .......... .......... 59% 6.35M 1s
+ 10100K .......... .......... .......... .......... .......... 60% 7.84M 1s
+ 10150K .......... .......... .......... .......... .......... 60% 8.10M 1s
+ 10200K .......... .......... .......... .......... .......... 60% 6.86M 1s
+ 10250K .......... .......... .......... .......... .......... 61% 6.53M 1s
+ 10300K .......... .......... .......... .......... .......... 61% 10.3M 1s
+ 10350K .......... .......... .......... .......... .......... 61% 5.48M 1s
+ 10400K .......... .......... .......... .......... .......... 61% 6.24M 1s
+ 10450K .......... .......... .......... .......... .......... 62% 6.59M 1s
+ 10500K .......... .......... .......... .......... .......... 62% 6.60M 1s
+ 10550K .......... .......... .......... .......... .......... 62% 6.71M 1s
+ 10600K .......... .......... .......... .......... .......... 63% 12.2M 1s
+ 10650K .......... .......... .......... .......... .......... 63% 5.59M 1s
+ 10700K .......... .......... .......... .......... .......... 63% 8.35M 1s
+ 10750K .......... .......... .......... .......... .......... 64% 6.14M 1s
+ 10800K .......... .......... .......... .......... .......... 64% 7.36M 1s
+ 10850K .......... .......... .......... .......... .......... 64% 5.57M 1s
+ 10900K .......... .......... .......... .......... .......... 64% 8.68M 1s
+ 10950K .......... .......... .......... .......... .......... 65% 6.65M 1s
+ 11000K .......... .......... .......... .......... .......... 65% 7.88M 1s
+ 11050K .......... .......... .......... .......... .......... 65% 9.29M 1s
+ 11100K .......... .......... .......... .......... .......... 66% 6.01M 1s
+ 11150K .......... .......... .......... .......... .......... 66% 8.82M 1s
+ 11200K .......... .......... .......... .......... .......... 66% 5.40M 1s
+ 11250K .......... .......... .......... .......... .......... 67% 8.99M 1s
+ 11300K .......... .......... .......... .......... .......... 67% 7.82M 1s
+ 11350K .......... .......... .......... .......... .......... 67% 6.70M 1s
+ 11400K .......... .......... .......... .......... .......... 67% 7.98M 1s
+ 11450K .......... .......... .......... .......... .......... 68% 7.93M 1s
+ 11500K .......... .......... .......... .......... .......... 68% 6.66M 1s
+ 11550K .......... .......... .......... .......... .......... 68% 8.00M 1s
+ 11600K .......... .......... .......... .......... .......... 69% 5.21M 1s
+ 11650K .......... .......... .......... .......... .......... 69% 10.0M 1s
+ 11700K .......... .......... .......... .......... .......... 69% 6.41M 1s
+ 11750K .......... .......... .......... .......... .......... 69% 7.53M 1s
+ 11800K .......... .......... .......... .......... .......... 70% 10.2M 1s
+ 11850K .......... .......... .......... .......... .......... 70% 5.41M 1s
+ 11900K .......... .......... .......... .......... .......... 70% 11.0M 1s
+ 11950K .......... .......... .......... .......... .......... 71% 7.41M 1s
+ 12000K .......... .......... .......... .......... .......... 71% 5.85M 1s
+ 12050K .......... .......... .......... .......... .......... 71% 7.94M 1s
+ 12100K .......... .......... .......... .......... .......... 72% 6.43M 1s
+ 12150K .......... .......... .......... .......... .......... 72% 7.33M 1s
+ 12200K .......... .......... .......... .......... .......... 72% 9.52M 1s
+ 12250K .......... .......... .......... .......... .......... 72% 6.48M 1s
+ 12300K .......... .......... .......... .......... .......... 73% 8.15M 1s
+ 12350K .......... .......... .......... .......... .......... 73% 9.33M 1s
+ 12400K .......... .......... .......... .......... .......... 73% 5.35M 1s
+ 12450K .......... .......... .......... .......... .......... 74% 5.66M 1s
+ 12500K .......... .......... .......... .......... .......... 74% 9.30M 1s
+ 12550K .......... .......... .......... .......... .......... 74% 8.27M 1s
+ 12600K .......... .......... .......... .......... .......... 75% 7.39M 1s
+ 12650K .......... .......... .......... .......... .......... 75% 6.96M 1s
+ 12700K .......... .......... .......... .......... .......... 75% 6.11M 1s
+ 12750K .......... .......... .......... .......... .......... 75% 9.58M 1s
+ 12800K .......... .......... .......... .......... .......... 76% 4.85M 0s
+ 12850K .......... .......... .......... .......... .......... 76% 8.62M 0s
+ 12900K .......... .......... .......... .......... .......... 76% 8.60M 0s
+ 12950K .......... .......... .......... .......... .......... 77% 6.85M 0s
+ 13000K .......... .......... .......... .......... .......... 77% 7.27M 0s
+ 13050K .......... .......... .......... .......... .......... 77% 7.49M 0s
+ 13100K .......... .......... .......... .......... .......... 77% 10.9M 0s
+ 13150K .......... .......... .......... .......... .......... 78% 5.50M 0s
+ 13200K .......... .......... .......... .......... .......... 78% 6.32M 0s
+ 13250K .......... .......... .......... .......... .......... 78% 6.71M 0s
+ 13300K .......... .......... .......... .......... .......... 79% 7.23M 0s
+ 13350K .......... .......... .......... .......... .......... 79% 7.07M 0s
+ 13400K .......... .......... .......... .......... .......... 79% 10.8M 0s
+ 13450K .......... .......... .......... .......... .......... 80% 5.60M 0s
+ 13500K .......... .......... .......... .......... .......... 80% 10.0M 0s
+ 13550K .......... .......... .......... .......... .......... 80% 6.19M 0s
+ 13600K .......... .......... .......... .......... .......... 80% 7.43M 0s
+ 13650K .......... .......... .......... .......... .......... 81% 6.91M 0s
+ 13700K .......... .......... .......... .......... .......... 81% 8.26M 0s
+ 13750K .......... .......... .......... .......... .......... 81% 7.01M 0s
+ 13800K .......... .......... .......... .......... .......... 82% 7.12M 0s
+ 13850K .......... .......... .......... .......... .......... 82% 10.5M 0s
  13900K .......... .......... .......... .......... .......... 82% 6.13M 0s
- 13950K .......... .......... .......... .......... .......... 83% 7.70M 0s
- 14000K .......... .......... .......... .......... .......... 83% 5.26M 0s
- 14050K .......... .......... .......... .......... .......... 83% 7.17M 0s
- 14100K .......... .......... .......... .......... .......... 83% 6.40M 0s
- 14150K .......... .......... .......... .......... .......... 84% 8.29M 0s
- 14200K .......... .......... .......... .......... .......... 84% 5.96M 0s
- 14250K .......... .......... .......... .......... .......... 84% 8.05M 0s
- 14300K .......... .......... .......... .......... .......... 85% 6.44M 0s
- 14350K .......... .......... .......... .......... .......... 85% 7.26M 0s
- 14400K .......... .......... .......... .......... .......... 85% 5.19M 0s
- 14450K .......... .......... .......... .......... .......... 85% 6.53M 0s
- 14500K .......... .......... .......... .......... .......... 86% 8.98M 0s
- 14550K .......... .......... .......... .......... .......... 86% 5.78M 0s
- 14600K .......... .......... .......... .......... .......... 86% 8.14M 0s
- 14650K .......... .......... .......... .......... .......... 87% 5.83M 0s
- 14700K .......... .......... .......... .......... .......... 87% 9.00M 0s
- 14750K .......... .......... .......... .......... .......... 87% 5.33M 0s
- 14800K .......... .......... .......... .......... .......... 88% 5.27M 0s
- 14850K .......... .......... .......... .......... .......... 88% 7.53M 0s
- 14900K .......... .......... .......... .......... .......... 88% 10.5M 0s
- 14950K .......... .......... .......... .......... .......... 88% 5.43M 0s
- 15000K .......... .......... .......... .......... .......... 89% 7.95M 0s
- 15050K .......... .......... .......... .......... .......... 89% 6.41M 0s
- 15100K .......... .......... .......... .......... .......... 89% 7.06M 0s
- 15150K .......... .......... .......... .......... .......... 90% 7.08M 0s
- 15200K .......... .......... .......... .......... .......... 90% 5.50M 0s
- 15250K .......... .......... .......... .......... .......... 90% 6.48M 0s
- 15300K .......... .......... .......... .......... .......... 91% 8.01M 0s
- 15350K .......... .......... .......... .......... .......... 91% 5.63M 0s
- 15400K .......... .......... .......... .......... .......... 91% 8.28M 0s
- 15450K .......... .......... .......... .......... .......... 91% 7.12M 0s
- 15500K .......... .......... .......... .......... .......... 92% 7.47M 0s
- 15550K .......... .......... .......... .......... .......... 92% 6.79M 0s
- 15600K .......... .......... .......... .......... .......... 92% 4.96M 0s
- 15650K .......... .......... .......... .......... .......... 93% 8.56M 0s
- 15700K .......... .......... .......... .......... .......... 93% 6.15M 0s
- 15750K .......... .......... .......... .......... .......... 93% 7.65M 0s
- 15800K .......... .......... .......... .......... .......... 93% 6.93M 0s
- 15850K .......... .......... .......... .......... .......... 94% 7.22M 0s
- 15900K .......... .......... .......... .......... .......... 94% 6.45M 0s
- 15950K .......... .......... .......... .......... .......... 94% 7.58M 0s
- 16000K .......... .......... .......... .......... .......... 95% 5.29M 0s
- 16050K .......... .......... .......... .......... .......... 95% 7.73M 0s
- 16100K .......... .......... .......... .......... .......... 95% 6.99M 0s
- 16150K .......... .......... .......... .......... .......... 96% 7.43M 0s
- 16200K .......... .......... .......... .......... .......... 96% 6.39M 0s
- 16250K .......... .......... .......... .......... .......... 96% 7.68M 0s
- 16300K .......... .......... .......... .......... .......... 96% 6.82M 0s
- 16350K .......... .......... .......... .......... .......... 97% 8.06M 0s
- 16400K .......... .......... .......... .......... .......... 97% 5.29M 0s
- 16450K .......... .......... .......... .......... .......... 97% 6.65M 0s
- 16500K .......... .......... .......... .......... .......... 98% 6.89M 0s
- 16550K .......... .......... .......... .......... .......... 98% 8.24M 0s
- 16600K .......... .......... .......... .......... .......... 98% 5.98M 0s
- 16650K .......... .......... .......... .......... .......... 99% 7.87M 0s
- 16700K .......... .......... .......... .......... .......... 99% 6.16M 0s
- 16750K .......... .......... .......... .......... .......... 99% 8.06M 0s
- 16800K .......... .......... .......... .......... .......... 99% 4.74M 0s
- 16850K .......... .                                          100% 81.7M=2.3s
+ 13950K .......... .......... .......... .......... .......... 83% 8.37M 0s
+ 14000K .......... .......... .......... .......... .......... 83% 6.13M 0s
+ 14050K .......... .......... .......... .......... .......... 83% 7.16M 0s
+ 14100K .......... .......... .......... .......... .......... 83% 9.96M 0s
+ 14150K .......... .......... .......... .......... .......... 84% 6.13M 0s
+ 14200K .......... .......... .......... .......... .......... 84% 9.77M 0s
+ 14250K .......... .......... .......... .......... .......... 84% 5.49M 0s
+ 14300K .......... .......... .......... .......... .......... 85% 10.1M 0s
+ 14350K .......... .......... .......... .......... .......... 85% 8.88M 0s
+ 14400K .......... .......... .......... .......... .......... 85% 5.55M 0s
+ 14450K .......... .......... .......... .......... .......... 85% 9.37M 0s
+ 14500K .......... .......... .......... .......... .......... 86% 6.51M 0s
+ 14550K .......... .......... .......... .......... .......... 86% 7.88M 0s
+ 14600K .......... .......... .......... .......... .......... 86% 6.57M 0s
+ 14650K .......... .......... .......... .......... .......... 87% 11.1M 0s
+ 14700K .......... .......... .......... .......... .......... 87% 5.52M 0s
+ 14750K .......... .......... .......... .......... .......... 87% 11.3M 0s
+ 14800K .......... .......... .......... .......... .......... 88% 4.63M 0s
+ 14850K .......... .......... .......... .......... .......... 88% 11.8M 0s
+ 14900K .......... .......... .......... .......... .......... 88% 5.45M 0s
+ 14950K .......... .......... .......... .......... .......... 88% 9.42M 0s
+ 15000K .......... .......... .......... .......... .......... 89% 7.85M 0s
+ 15050K .......... .......... .......... .......... .......... 89% 9.52M 0s
+ 15100K .......... .......... .......... .......... .......... 89% 7.65M 0s
+ 15150K .......... .......... .......... .......... .......... 90% 6.78M 0s
+ 15200K .......... .......... .......... .......... .......... 90% 6.94M 0s
+ 15250K .......... .......... .......... .......... .......... 90% 3.92M 0s
+ 15300K .......... .......... .......... .......... .......... 91% 55.7M 0s
+ 15350K .......... .......... .......... .......... .......... 91% 3.06M 0s
+ 15400K .......... .......... .......... .......... .......... 91% 10.7M 0s
+ 15450K .......... .......... .......... .......... .......... 91% 1.45M 0s
+ 15500K .......... .......... .......... .......... .......... 92% 47.8M 0s
+ 15550K .......... .......... .......... .......... .......... 92% 48.6M 0s
+ 15600K .......... .......... .......... .......... .......... 92% 9.88M 0s
+ 15650K .......... .......... .......... .......... .......... 93% 3.49M 0s
+ 15700K .......... .......... .......... .......... .......... 93% 11.7M 0s
+ 15750K .......... .......... .......... .......... .......... 93% 3.94M 0s
+ 15800K .......... .......... .......... .......... .......... 93% 4.04M 0s
+ 15850K .......... .......... .......... .......... .......... 94% 10.3M 0s
+ 15900K .......... .......... .......... .......... .......... 94% 4.52M 0s
+ 15950K .......... .......... .......... .......... .......... 94% 6.44M 0s
+ 16000K .......... .......... .......... .......... .......... 95% 4.80M 0s
+ 16050K .......... .......... .......... .......... .......... 95% 4.60M 0s
+ 16100K .......... .......... .......... .......... .......... 95% 5.90M 0s
+ 16150K .......... .......... .......... .......... .......... 96% 5.82M 0s
+ 16200K .......... .......... .......... .......... .......... 96% 4.63M 0s
+ 16250K .......... .......... .......... .......... .......... 96% 8.26M 0s
+ 16300K .......... .......... .......... .......... .......... 96% 5.16M 0s
+ 16350K .......... .......... .......... .......... .......... 97% 6.62M 0s
+ 16400K .......... .......... .......... .......... .......... 97% 3.82M 0s
+ 16450K .......... .......... .......... .......... .......... 97% 5.44M 0s
+ 16500K .......... .......... .......... .......... .......... 98% 8.50M 0s
+ 16550K .......... .......... .......... .......... .......... 98% 4.07M 0s
+ 16600K .......... .......... .......... .......... .......... 98% 5.69M 0s
+ 16650K .......... .......... .......... .......... .......... 99% 6.81M 0s
+ 16700K .......... .......... .......... .......... .......... 99% 5.45M 0s
+ 16750K .......... .......... .......... .......... .......... 99% 8.25M 0s
+ 16800K .......... .......... .......... .......... .......... 99% 3.66M 0s
+ 16850K .......... .                                          100% 93.4M=2.2s
 
-2019-04-21 00:38:00 (7.26 MB/s) - 'guile-2.2.3.tar.gz' saved [17266587/17266587]
+2019-04-22 23:48:26 (7.47 MB/s) - 'guile-2.2.3.tar.gz' saved [17266587/17266587]
 
 + tar -xvf guile-2.2.3.tar.gz
 guile-2.2.3/
@@ -6576,8 +6579,8 @@ checking for special C compiler options needed for large files... no
 checking for _FILE_OFFSET_BITS value needed for large files... no
 configure: autobuild project... GNU Guile
 configure: autobuild revision... 2.2.3
-configure: autobuild hostname... b3f7e614769d
-configure: autobuild timestamp... 20190421T003802Z
+configure: autobuild hostname... 336c62341832
+configure: autobuild timestamp... 20190422T234828Z
 checking how to run the C preprocessor... gcc -std=gnu11 -E
 checking for a sed that does not truncate output... /bin/sed
 checking for gawk... (cached) gawk
@@ -7526,7 +7529,7 @@ make: *** No targets specified and no makefile found.  Stop.
 make: *** No rule to make target 'install'.  Stop.
 + sudo ldconfig
 + DSTATUS=BUILDPASSNOTEST
-+ /var/lib/jenkins/status/updateStatus BUILDPASSNOTEST /var/lib/jenkins/jobs/OpenCOG_U1710/builds/411/log OpenCOG_U1710_Guile
++ /var/lib/jenkins/status/updateStatus BUILDPASSNOTEST /var/lib/jenkins/jobs/OpenCOG_U1710/builds/412/log OpenCOG_U1710_Guile
 Auto packing the repository in background for optimum performance.
 See "git help gc" for manual housekeeping.
 error: The last gc run reported the following. Please correct the root cause
